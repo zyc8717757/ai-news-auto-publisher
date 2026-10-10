@@ -15,7 +15,16 @@
   "ai_test_attempts": {
     "2026-10-10-am": 1
   },
-  "ai_audit": [],
+  "ai_audit": [
+    {
+      "at": "2026-10-10T08:47:15.145135Z",
+      "issue": "2026-10-10-am",
+      "model": "gemini-2.5-flash-lite",
+      "stage": "provider_error",
+      "reason": "ai_provider_http_404",
+      "extra_test": true
+    }
+  ],
   "ai_reserved_tokens": [
     [
       "2026-10-10T08:47:14.007341Z",
