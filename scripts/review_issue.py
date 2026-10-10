@@ -37,7 +37,11 @@ async def originals(stories):
     for story in stories:
         evidence = []
         for ref in story.sources:
-            page = await http.get(ref.url)
+            try:
+                page = await http.get(ref.url)
+            except Exception:
+                print(json.dumps({"status": "correction_source_unavailable", "evidence_id": ref.id}))
+                raise
             title, excerpt, *_ = article_metadata(page.text)
             if not title or not excerpt:
                 raise ValueError("Original evidence unavailable")
@@ -55,6 +59,10 @@ async def originals(stories):
 def main():
     issue = os.environ["REQUESTED_ISSUE"]
     settings, _ = load_config(Path("config"))
+    if "AI_ENABLED" in os.environ:
+        settings.ai_enabled = os.environ["AI_ENABLED"] == "true"
+    if os.getenv("PUBLISHER_PAUSED") == "true":
+        raise ValueError("Publisher paused")
     if os.getenv("AI_FREE_TIER_CONFIRMED") != "true" or not settings.ai_enabled:
         raise ValueError("Free AI project confirmation required")
     store = Store(Path(".runtime/data"), remote=True)
