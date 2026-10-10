@@ -37,6 +37,13 @@ class AIUnavailable(RuntimeError):
     pass
 
 
+def json_output(text: str) -> str:
+    """Remove only an enclosing Markdown fence, never extract/rewrite embedded claims."""
+    text = text.strip()
+    match = re.fullmatch(r"```(?:json)?\s*\n([\s\S]*?)\n```", text, re.I)
+    return match[1].strip() if match else text
+
+
 def provider_failure(exc: Exception) -> str:
     # Classify in memory; never emit provider bodies, echoed API keys or full exceptions.
     message = str(exc).lower()
@@ -269,6 +276,9 @@ class Enhancer:
             contents=prompt,
             config=config,
         )
+        candidates = getattr(output, "candidates", None) or []
+        reason = getattr(candidates[0], "finish_reason", None) if candidates else None
+        self.last_finish_reason = str(getattr(reason, "value", reason) or "unknown")
         return output.text or ""
 
     def enhance(self, events: list[NewsEvent]) -> AIResponse:
@@ -356,7 +366,7 @@ class Enhancer:
                         continue
                     raise AIUnavailable(provider_failure(exc)) from None
                 try:
-                    parsed = AIResponse.model_validate_json(output_text)
+                    parsed = AIResponse.model_validate_json(json_output(output_text))
                     validate_response(parsed, batch)
                     self.audit(active_model, "accepted")
                     result.extend(parsed.stories)

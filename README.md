@@ -4,7 +4,7 @@
 
 ## 能力与公开边界
 
-- 30 个候选信源：RSS、官方 GitHub Release、小范围官方 HTML 适配器。
+- 41个配置来源（含3个默认停用的普通论文源）：RSS、官方 GitHub Release、小范围官方 HTML 适配器。
 - 时间校验、规则评分、转载识别、事件归并、48 小时历史去重与版本更新关联。
 - Gemini 结构化中文摘要、影响分析、证据引用检查；免费条件不明或调用失败时明确降级。
 - 每期最多 15 条；响应式日报、固定期号、版本保留、历史/月度归档。
@@ -73,7 +73,7 @@ ai-news send --issue 2026-10-10-am --resend
 
 使用公共仓库的标准 GitHub Actions 运行器和 GitHub Pages，不使用收费运行器、付费采集、X API 或外部数据库。经用户确认，当前默认 `gemini-3.5-flash-lite`、备用 `gemini-3.8-flash`，官方价格页列有免费层。兼容白名单保留 2.5 系列及 3.1 Flash-Lite；固定 Developer API 地址并明确关闭 Vertex AI。统一使用已通过云端最小测试的 `v1beta/models/{model}:generateContent`，不启用工具，不维护服务器会话。
 
-**同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。正常每期优先一次批量处理，正常约 6–10 次（按需）；包括备用、重试及格式修复在内硬上限 20 次、按当前 3.5 免费项目每日最多 500 次（太平洋时间零点重置）。RPM/TPM/RPD 按实际项目配额执行，不足就降级，不切换付费项目。
+**同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。正常每期按需分阶段处理，正常约 6–10 次（按需）；包括备用、重试及格式修复在内硬上限 20 次、按当前 3.5 免费项目每日最多 500 次（太平洋时间零点重置）。RPM/TPM/RPD 按实际项目配额执行，不足就降级，不切换付费项目。
 
 官方参考：[Gemini 价格](https://ai.google.dev/gemini-api/docs/pricing)、[额度](https://ai.google.dev/gemini-api/docs/rate-limits)、[Actions 调度](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)、[Pages](https://docs.github.com/en/pages/getting-started-with-github-pages)。
 

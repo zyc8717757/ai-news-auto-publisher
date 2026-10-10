@@ -7,7 +7,7 @@ from typing import Literal
 
 from pydantic import Field
 
-from .ai import AIUnavailable, Enhancer, provider_failure, validate_response
+from .ai import AIUnavailable, Enhancer, json_output, provider_failure, validate_response
 from .diagnostics import provider_error_details
 from .models import AIResponse, StrictModel
 from .selection import independent_groups
@@ -101,14 +101,30 @@ class EditorialEnhancer(Enhancer):
                     continue
                 raise AIUnavailable(provider_failure(exc)) from None
             try:
-                result = schema.model_validate_json(text)
+                result = schema.model_validate_json(json_output(text))
                 self.audit(self.settings.model, "accepted", "editorial_" + phase)
                 return result
-            except ValueError:
+            except ValueError as exc:
+                errors = getattr(exc, "errors", lambda **k: [])(
+                    include_input=False, include_context=False, include_url=False
+                )
+                print(
+                    json.dumps(
+                        {
+                            "status": "ai_output_diagnostic",
+                            "phase": phase,
+                            "characters": len(text),
+                            "finish_reason": getattr(self, "last_finish_reason", "unknown"),
+                            "validation_types": [e["type"] for e in errors[:8]],
+                        }
+                    )
+                )
                 self.audit(self.settings.model, "output_rejected", "ai_output_validation_failed")
                 if repair:
                     raise AIUnavailable("ai_output_invalid") from None
                 repair += 1
+                if getattr(self, "last_finish_reason", "") in {"MAX_TOKENS", "max_tokens"}:
+                    output_limit = min(12000, output_limit * 2)
                 prompt += "\n上次结构错误。严格按照JSON字段与类型重新输出完整结果，不要代码围栏。"
 
     def edit(self, events, cutoff, recent_counts=None):

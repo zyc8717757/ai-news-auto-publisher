@@ -28,3 +28,6 @@ def test_live_workflow_gated_and_private_data_not_uploaded():
     assert "inputs.mode != 'send'" in build["if"]
     uploads = [s for s in publish["steps"] if "upload" in s.get("uses", "")]
     assert all(s.get("with", {}).get("path") in {"site", "${{ runner.temp }}/artifact.tar"} for s in uploads)
+    assert "inputs.mode != 'validate-news'" in build["if"]
+    notify = next(s for s in publish["steps"] if s.get("name") == "Verify deployment and send private email")
+    assert "inputs.mode != 'validate-news'" in notify["if"]

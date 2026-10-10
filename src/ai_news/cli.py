@@ -103,7 +103,9 @@ def execute(args) -> int:
                 "trust": s.trust,
                 "status": caches[s.id].status,
                 "error_code": caches[s.id].error_code,
-                "items": sum(i.source_id == s.id for i in items),
+                "items": caches[s.id].verified
+                if s.kind == "discovery"
+                else sum(i.source_id == s.id for i in items),
             }
             for s in enabled
         ]

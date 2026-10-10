@@ -7,7 +7,7 @@ import pytest
 from google import genai
 from google.genai import types
 
-from ai_news.ai import AIUnavailable, Budget
+from ai_news.ai import AIUnavailable, Budget, json_output
 from ai_news.collector import Collector, article_metadata
 from ai_news.discovery import discover
 from ai_news.editorial import EditorialEnhancer
@@ -24,6 +24,11 @@ def test_arxiv_cannot_win_by_freshness_or_model_keyword(source_item, official, n
         update={"source_id": "arxiv-ai", "trust": "research", "title": "A new AI model benchmark paper"}
     )
     assert not select_events([paper], [source], now - timedelta(hours=48), now, [])
+
+
+def test_json_enclosing_fence_is_removed_without_rewriting_content():
+    assert json_output('```json\n{"ok":true}\n```') == '{"ok":true}'
+    assert json_output('preface {"ok":true}') == 'preface {"ok":true}'
 
 
 def test_single_media_is_observation_and_community_is_rejected(source_item, official, now):
