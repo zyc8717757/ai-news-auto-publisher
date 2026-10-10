@@ -194,7 +194,7 @@
   },
   "issues": {
     "2026-10-10-am-r1": {
-      "deployment": "pending",
+      "deployment": "ready",
       "email": "pending",
       "email_attempts": 0
     }
