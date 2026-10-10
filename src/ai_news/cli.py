@@ -34,6 +34,7 @@ def parser() -> argparse.ArgumentParser:
     upgrade = sub.add_parser("enhance-issue")
     upgrade.add_argument("--issue", required=True)
     upgrade.add_argument("--result", type=Path, default=Path(".runtime/result.json"))
+    upgrade.add_argument("--test-extra-requests", type=int, choices=[0, 1, 2], default=0)
     ai_check = sub.add_parser("check-ai")
     ai_check.add_argument(
         "--issue", required=True, help="Check frozen public evidence without deploying or emailing"
@@ -123,7 +124,9 @@ def execute(args) -> int:
     store = Store(args.data, remote=args.remote)
     if args.command == "enhance-issue":
         cutoff_for(args.issue)
-        digest, created = enhance_frozen(settings, store, args.issue)
+        digest, created = enhance_frozen(
+            settings, store, args.issue, test_extra_limit=args.test_extra_requests
+        )
         result = {
             "status": "ready",
             "issue": digest.issue,
@@ -226,6 +229,12 @@ def main() -> int:
     args = parser().parse_args()
     try:
         return execute(args)
+    except AIUnavailable as exc:
+        print(
+            json.dumps({"status": "failed", "error_type": "AIUnavailable", "reason": str(exc)}),
+            file=sys.stderr,
+        )
+        return 1
     except Exception as exc:
         # Public logs receive only exception type, never private content/config or HTTP response text.
         print(json.dumps({"status": "failed", "error_type": type(exc).__name__}), file=sys.stderr)

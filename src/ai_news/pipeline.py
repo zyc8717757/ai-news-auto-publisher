@@ -79,7 +79,7 @@ def ai_stories(response, events) -> list[Story]:
 
 
 def enhance_frozen(
-    settings: Settings, store: Store, issue: str, enhancer=None, now=None
+    settings: Settings, store: Store, issue: str, enhancer=None, now=None, test_extra_limit: int = 0
 ) -> tuple[Digest, bool]:
     """Upgrade frozen source information without recollecting, moving coverage or clearing budgets."""
     existing = store.latest(issue)
@@ -106,7 +106,7 @@ def enhance_frozen(
         )
         for s in existing.stories
     ]
-    processor = enhancer or Enhancer(settings, store, issue=issue)
+    processor = enhancer or Enhancer(settings, store, issue=issue, test_extra_limit=test_extra_limit)
     response = processor.enhance(events)
     stories = sorted(ai_stories(response, events), key=lambda story: (-story.score, story.id))
     digest = existing.model_copy(

@@ -26,17 +26,21 @@ def main():
             raise ValueError("Missing frozen digest")
         result = {"status": "ready", "issue": issue}
         atomic_write(Path(".runtime/result.json"), json.dumps(result))
-    elif mode in {"run", "regenerate", "enhance-issue"}:
+    elif mode in {"run", "regenerate", "enhance-issue", "test-enhance"}:
         command = [
             "ai-news",
             "--data",
             ".runtime/data",
             "--remote",
-            "enhance-issue" if mode == "enhance-issue" else "generate",
+            "enhance-issue" if mode in {"enhance-issue", "test-enhance"} else "generate",
         ]
         command += ["--schedule", schedule] if schedule else ["--issue", issue]
         if mode == "regenerate":
             command += ["--regenerate"]
+        if mode == "test-enhance":
+            if os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != issue:
+                raise ValueError("This test issue was not explicitly authorized")
+            command += ["--test-extra-requests", "2"]
         subprocess.run(command, check=True)
         result = json.loads(Path(".runtime/result.json").read_text("utf-8"))
     else:

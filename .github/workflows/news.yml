@@ -1,4 +1,5 @@
 name: News Publisher
+run-name: News · ${{ inputs.mode || 'scheduled' }} · ${{ inputs.issue || github.event.schedule }}
 on:
   schedule:
     - cron: '30 8 * * *'
@@ -10,7 +11,7 @@ on:
       mode:
         description: 'run / preview / redeploy / send / regenerate / check-sources'
         type: choice
-        options: [run, preview, redeploy, send, regenerate, check-sources, check-ai, enhance-issue]
+        options: [run, preview, redeploy, send, regenerate, check-sources, check-ai, enhance-issue, test-enhance]
         default: preview
       issue:
         description: 'Manual live operations require YYYY-MM-DD-am or YYYY-MM-DD-pm'
@@ -99,6 +100,7 @@ jobs:
           GEMINI_RPM: ${{ vars.GEMINI_RPM || '5' }}
           GEMINI_TPM: ${{ vars.GEMINI_TPM || '250000' }}
           GEMINI_RPD: ${{ vars.GEMINI_RPD || '20' }}
+          AI_TEST_AUTHORIZED_ISSUE: ${{ github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner && inputs.mode == 'test-enhance' && vars.AI_TEST_AUTHORIZED_ISSUE || '' }}
         run: python scripts/workflow_issue.py
       - name: Build public site
         id: build

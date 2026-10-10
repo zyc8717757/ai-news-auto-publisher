@@ -177,6 +177,41 @@ def test_provider_failure_never_echoes_secret():
     assert provider_failure(error) == "ai_key_invalid"
 
 
+def test_two_authorized_test_calls_do_not_reset_production_budget(settings, tmp_path, now, monkeypatch):
+    issue = "2026-10-10-am"
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
+    monkeypatch.setenv("GEMINI_RPM", "20")
+    store = Store(tmp_path)
+    store.state.ai_issue_attempts[issue] = 5
+    store.state.ai_attempts = [now] * 5
+    store.save_state()
+    for _ in range(2):
+        Budget(settings, Store(tmp_path), now=lambda: now, issue=issue, test_extra_limit=2).reserve(100)
+    recovered = Store(tmp_path)
+    assert recovered.state.ai_issue_attempts[issue] == 5
+    assert recovered.state.ai_test_attempts[issue] == 2
+    assert len(recovered.state.ai_attempts) == 7
+    with pytest.raises(AIUnavailable):
+        Budget(settings, recovered, now=lambda: now, issue=issue, test_extra_limit=2).reserve(100)
+
+
+def test_test_allowance_requires_exact_authorized_issue(settings, tmp_path, now, monkeypatch):
+    monkeypatch.delenv("AI_TEST_AUTHORIZED_ISSUE", raising=False)
+    store = Store(tmp_path)
+    with pytest.raises(AIUnavailable, match="not_authorized"):
+        Budget(settings, store, now=lambda: now, issue="2026-10-10-am", test_extra_limit=2).reserve(100)
+    assert store.state.ai_attempts == []
+
+
+def test_extra_tests_still_obey_daily_limit(settings, tmp_path, now, monkeypatch):
+    issue = "2026-10-10-am"
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
+    store = Store(tmp_path)
+    store.state.ai_attempts = [now] * 10
+    with pytest.raises(AIUnavailable):
+        Budget(settings, store, now=lambda: now, issue=issue, test_extra_limit=2).reserve(100)
+
+
 def test_date_claims_use_the_supplied_publication_evidence(source_item):
     event = NewsEvent(id="event", evidence=[source_item])
     result = response(event)

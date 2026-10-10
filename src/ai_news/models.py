@@ -193,11 +193,22 @@ class IssueState(StrictModel):
     email_attempts: int = 0
 
 
+class AIRequestAudit(StrictModel):
+    at: datetime
+    issue: str | None = None
+    model: Literal["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+    stage: Literal["provider_error", "output_rejected", "accepted", "budget_blocked"]
+    reason: str = Field(default="", pattern=r"^[a-z0-9_]*$")
+    extra_test: bool = False
+
+
 class RunState(StrictModel):
     schema_version: Literal[1] = 1
     last_covered_at: datetime | None = None
     ai_attempts: list[datetime] = Field(default_factory=list)
     ai_issue_attempts: dict[str, int] = Field(default_factory=dict)
+    ai_test_attempts: dict[str, int] = Field(default_factory=dict)
+    ai_audit: list[AIRequestAudit] = Field(default_factory=list)
     ai_reserved_tokens: list[tuple[datetime, int]] = Field(default_factory=list)
     source_cache: dict[str, SourceCache] = Field(default_factory=dict)
     issues: dict[str, IssueState] = Field(default_factory=dict)

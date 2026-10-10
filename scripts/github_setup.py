@@ -8,6 +8,8 @@ import json
 import os
 import re
 import subprocess
+import time
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
@@ -134,6 +136,64 @@ class GitHub:
                 "inputs": {"mode": mode, "issue": issue},
             },
         )
+
+    def dispatch_verified(self, mode: str, issue: str, timeout: int = 600):
+        started = datetime.now(UTC)
+        self.dispatch(mode, issue)
+        expected = f"News · {mode} · {issue}"
+        deadline = time.monotonic() + timeout
+        run_url = ""
+        while time.monotonic() < deadline:
+            runs = self.request(
+                "GET", f"/repos/{self.repo}/actions/workflows/news.yml/runs?branch=main&per_page=10"
+            )["workflow_runs"]
+            candidates = [
+                r
+                for r in runs
+                if r.get("display_title") == expected
+                and datetime.fromisoformat(r["created_at"].replace("Z", "+00:00"))
+                >= started.replace(microsecond=0)
+            ]
+            if candidates:
+                run = candidates[0]
+                run_url = run["html_url"]
+                if run["status"] == "completed":
+                    return self.verification_result(run, issue)
+            time.sleep(5)
+        return {"verified": False, "reason": "verification_pending", "run_url": run_url}
+
+    def verification_result(self, run, issue):
+        result = {"verified": False, "reason": "workflow_failed", "run_url": run["html_url"]}
+        state_file = self.request(
+            "GET", f"/repos/{self.repo}/contents/state.json?ref=news-data", allow_404=True
+        )
+        if not state_file:
+            return result
+        state = json.loads(base64.b64decode(state_file["content"]))
+        result["remaining_requests"] = max(0, 5 - state.get("ai_issue_attempts", {}).get(issue, 0))
+        audits = [a for a in state.get("ai_audit", []) if a["issue"] == issue]
+        if audits and audits[-1]["reason"]:
+            result["reason"] = audits[-1]["reason"]
+        files = self.request("GET", f"/repos/{self.repo}/contents/digests?ref=news-data")
+        versions = [f for f in files if re.fullmatch(re.escape(issue) + r"-r\d+\.json", f["name"])]
+        if not versions:
+            return result
+        latest = max(versions, key=lambda f: int(f["name"].rsplit("-r", 1)[1][:-5]))
+        content = self.request("GET", f"/repos/{self.repo}/contents/{latest['path']}?ref=news-data")
+        digest = json.loads(base64.b64decode(content["content"]))
+        key = f"{issue}-r{digest['revision']}"
+        status = state["issues"].get(key, {})
+        result.update(mode=digest["mode"], deployment=status.get("deployment"), email=status.get("email"))
+        if (
+            run["conclusion"] == "success"
+            and digest["mode"] == "ai"
+            and status.get("deployment") == "ready"
+            and status.get("email") == "sent"
+        ):
+            result.update(verified=True, reason="")
+        elif run["conclusion"] == "success" and digest["mode"] == "rules":
+            result["reason"] = "ai_degraded"
+        return result
 
     def admission(self) -> bool:
         head = self.request("GET", f"/repos/{self.repo}/branches/main")["commit"]["sha"]

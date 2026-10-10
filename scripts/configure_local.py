@@ -62,6 +62,13 @@ def sync_schedule(api, morning, evening):
     raise RuntimeError("New schedule cloud checks have not passed")
 
 
+def dispatch_verified(api, mode, issue):
+    if hasattr(api, "dispatch_verified"):
+        return api.dispatch_verified(mode, issue)
+    api.dispatch(mode, issue)
+    return None
+
+
 def apply_configuration(api: GitHub, fields: dict[str, list[str]]) -> None:
     def value(name):
         values = fields.get(name, [])
@@ -116,7 +123,7 @@ def apply_configuration(api: GitHub, fields: dict[str, list[str]]) -> None:
     current = local.strftime("%H:%M")
     day = local.date() - timedelta(days=1) if current < morning else local.date()
     slot = "am" if morning <= current < evening else "pm"
-    api.dispatch("run", f"{day.isoformat()}-{slot}")
+    return dispatch_verified(api, "run", f"{day.isoformat()}-{slot}")
 
 
 def apply_schedule(api, fields):
@@ -138,7 +145,7 @@ def apply_ai_key(api, fields):
     api.secret("GEMINI_API_KEY", values[0].strip())
     api.variable("AI_FREE_TIER_CONFIRMED", "true")
     api.variable("AI_ENABLED", "true")
-    api.dispatch("enhance-issue", api.latest_issue())
+    return dispatch_verified(api, "enhance-issue", api.latest_issue())
 
 
 def create_server(
@@ -181,11 +188,19 @@ def create_server(
                 elif job["state"] == "success":
                     self.respond(
                         200,
-                        "<meta charset='utf-8'><h1>配置已加密保存</h1><p>云端配置已更新。首次完整运行和实际收信请查看 GitHub Actions。</p>",
+                        "<meta charset='utf-8'><h1>配置已加密保存</h1><p>云端验证已完成。邮箱实际到达仍需检查收件箱。</p>",
                     )
                     closer = threading.Timer(15, self.server.shutdown)
                     closer.daemon = True
                     closer.start()
+                elif job["state"] == "verification_failed":
+                    verification = job["verification"]
+                    reason = html.escape(verification.get("reason", "workflow_failed"))
+                    run_url = html.escape(verification.get("run_url", ""), quote=True)
+                    self.respond(
+                        200,
+                        f"<meta charset='utf-8'><h1>配置已保存，但云端验证未通过</h1><p>诊断：{reason}</p><p>密钥已经保存，请勿重复输入。需按诊断修复后补测。</p><a href='{run_url}'>查看本次云端运行</a>",
+                    )
                 else:
                     self.respond(
                         400,
@@ -253,10 +268,15 @@ def create_server(
 
             def worker():
                 try:
-                    (apply_ai_key if ai_key_only else apply_schedule if schedule_only else configure)(
-                        api, fields
+                    result = (
+                        apply_ai_key if ai_key_only else apply_schedule if schedule_only else configure
+                    )(api, fields)
+                    job["verification"] = result
+                    job["state"] = (
+                        "verification_failed"
+                        if isinstance(result, dict) and not result.get("verified")
+                        else "success"
                     )
-                    job["state"] = "success"
                 except Exception:
                     try:
                         api.variable("PUBLISHER_ENABLED", "false")

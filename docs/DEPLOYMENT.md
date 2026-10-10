@@ -18,6 +18,8 @@ Gemini 2.5系列目前限制给过去实际使用过这些模型的项目/用户
 
 内置浏览器的表单 Origin 可能为 `null` 或缺失。配置服务仍要求精确回环 Host 和不可猜测的会话表单令牌，明确的外站 Origin 始终拒绝。提交后立即显示进度页，不会在浏览器中长时间无反馈；不记录表单正文。
 
+保存密钥后，配置页继续等待对应云端运行，并核对日报模式为AI、Pages已确认、SMTP已接受三个条件。仅保存成功或规则版工作流成功不会显示全流程通过；失败时展示固定诊断码和运行链接，已保存的Key无需重复输入。
+
 已登录 Git Credential Manager 时，`python scripts/github_setup.py --owner zyc8717757 --publish` 可上传指定白名单代码并配置 Pages；不会修改系统 GitHub 认证、系统代理或全局 Git 配置。`--check-sources` 启动云端信源检查。
 
 ## 1. 准备仓库

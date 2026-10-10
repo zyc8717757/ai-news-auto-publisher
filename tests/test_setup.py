@@ -115,3 +115,30 @@ def test_ai_key_rotation_only_changes_ai_credentials():
     assert [op for op in operations if op[0] == "secret"] == [("secret", "GEMINI_API_KEY")]
     assert not any("SMTP" in str(op) or "TIME" in str(op) for op in operations)
     assert operations[-1] == ("dispatch", "enhance-issue", "2026-10-10-am")
+
+
+def test_verification_requires_ai_pages_and_smtp_not_just_dispatch():
+    import json
+
+    api = object.__new__(github_setup.GitHub)
+    api.repo = "test/no-write"
+    issue = "2026-10-10-am"
+    state = {
+        "ai_issue_attempts": {issue: 5},
+        "ai_audit": [],
+        "issues": {issue + "-r1": {"deployment": "ready", "email": "sent"}},
+    }
+    digest = {"revision": 1, "mode": "rules"}
+
+    def request(method, path, **kwargs):
+        if "state.json" in path:
+            return {"content": encoding.Base64Encoder.encode(json.dumps(state).encode()).decode()}
+        if "/contents/digests?" in path:
+            return [{"name": issue + "-r1.json", "path": "digests/" + issue + "-r1.json"}]
+        return {"content": encoding.Base64Encoder.encode(json.dumps(digest).encode()).decode()}
+
+    api.request = request
+    run = {"conclusion": "success", "html_url": "https://github.com/test/no-write/actions/runs/1"}
+    assert api.verification_result(run, issue)["verified"] is False
+    digest["mode"] = "ai"
+    assert api.verification_result(run, issue)["verified"] is True
