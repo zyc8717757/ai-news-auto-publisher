@@ -41,6 +41,14 @@
       "stage": "provider_error",
       "reason": "ai_provider_http_404",
       "extra_test": true
+    },
+    {
+      "at": "2026-10-10T09:09:56.959871Z",
+      "issue": "2026-10-10-am",
+      "model": "gemini-3.8-flash",
+      "stage": "budget_blocked",
+      "reason": "ai_issue_budget_exhausted",
+      "extra_test": true
     }
   ],
   "ai_reserved_tokens": [
