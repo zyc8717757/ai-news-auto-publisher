@@ -71,7 +71,7 @@ ai-news send --issue 2026-10-10-am --resend
 
 ## 免费约束
 
-使用公共仓库的标准 GitHub Actions 运行器和 GitHub Pages，不使用收费运行器、付费采集、X API 或外部数据库。经用户确认，当前默认 `gemini-3.5-flash-lite`、备用 `gemini-3.8-flash`，官方价格页列有免费层。兼容白名单保留 2.5 系列及 3.1 Flash-Lite；固定 Developer API 地址并明确关闭 Vertex AI。新模型使用官方 Interactions API，`store=false`，不启用工具。
+使用公共仓库的标准 GitHub Actions 运行器和 GitHub Pages，不使用收费运行器、付费采集、X API 或外部数据库。经用户确认，当前默认 `gemini-3.5-flash-lite`、备用 `gemini-3.8-flash`，官方价格页列有免费层。兼容白名单保留 2.5 系列及 3.1 Flash-Lite；固定 Developer API 地址并明确关闭 Vertex AI。统一使用已通过云端最小测试的 `v1beta/models/{model}:generateContent`，不启用工具，不维护服务器会话。
 
 **同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。正常每期优先一次批量处理，尽量 1–3 次；包括备用、重试及格式修复在内硬上限 5 次、滚动 24 小时最多 10 次。RPM/TPM/RPD 按实际项目配额执行，不足就降级，不切换付费项目。
 
@@ -80,3 +80,6 @@ ai-news send --issue 2026-10-10-am --resend
 ## 当前交付状态
 
 代码、离线样例、自动测试和工作流已提供。真实 Gemini 项目、QQ/163 收件箱、GitHub 云端部署、信源上线门槛及连续 7 天观察必须分别验收；本地测试通过不代表这些外部链路已经启用。具体证据见验收记录。
+
+
+Gemini 最小诊断：Actions 手动选择 `probe-gemini`。只要求 `gemini-3.5-flash-lite` 回复 OK，不采集新闻、不部署、不发邮件；输出 SDK 版本、Key 是否存在、HTTP 状态和脱敏错误字段。默认恰好一次请求，调用前持久化预算，受独立测试授权和滚动 24 小时 10 次上限保护。诊断结果不等于结构化新闻处理验收通过。400/403/404 不自动重试或切换模型，429/503 仅有限退避重试，全部计入预算。AI 不可用或预算不足时，正常 `run` 继续生成明确标注的基础规则日报。

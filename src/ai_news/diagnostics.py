@@ -12,6 +12,30 @@ MODEL = "gemini-3.5-flash-lite"
 ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 
 
+def provider_error_details(exc):
+    """Extract only provider error fields, never exception/request reprs."""
+    code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
+    body = getattr(exc, "response_json", None)
+    response = getattr(exc, "response", None)
+    if response is not None:
+        try:
+            body = response.json()
+        except (ValueError, AttributeError):
+            pass
+    if not isinstance(body, dict):
+        body = getattr(exc, "body", {})
+    error = body.get("error", body) if isinstance(body, dict) else {}
+    if not isinstance(error, dict):
+        error = {}
+    secrets = [v for k, v in os.environ.items() if re.search(
+        r"KEY|TOKEN|PASSWORD|SECRET|SMTP|EMAIL", k, re.I
+    )]
+    return {"http_status": code, "error": redact({
+        "status": error.get("status", error.get("code")),
+        "message": error.get("message"), "details": error.get("details", []),
+    }, secrets)}
+
+
 def redact(value, secrets=()):
     if isinstance(value, dict):
         return {

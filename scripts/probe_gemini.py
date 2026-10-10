@@ -16,7 +16,7 @@ def main():
     settings, _ = load_config(Path("config"))
     key = os.getenv("GEMINI_API_KEY")
     print(json.dumps({"model": MODEL, "production_model": settings.model,
-                      "production_api": "v1beta/interactions", "probe_endpoint": ENDPOINT,
+                      "production_api": "v1beta/models/{model}:generateContent", "probe_endpoint": ENDPOINT,
                       "sdk_version": importlib.metadata.version("google-genai"),
                       "key_present": bool(key), "transport": "REST; no SDK retries"}))
     if not key or os.getenv("AI_FREE_TIER_CONFIRMED") != "true":

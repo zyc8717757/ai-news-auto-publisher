@@ -158,6 +158,31 @@ def test_absolute_five_request_ceiling(settings, tmp_path, monkeypatch, now):
     assert len(Store(tmp_path).state.ai_attempts) == 5
 
 
+@pytest.mark.parametrize("code", [400, 403, 404])
+def test_terminal_provider_errors_never_retry_or_switch_model(settings, tmp_path, monkeypatch, source_item, code):
+    settings.ai_enabled = True
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    calls = []
+
+    class ProviderError(Exception):
+        pass
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["model"])
+            exc = ProviderError()
+            exc.code = code
+            raise exc
+
+    with pytest.raises(AIUnavailable):
+        Enhancer(settings, Store(tmp_path), Client()).enhance([NewsEvent(id="event", evidence=[source_item])])
+    assert calls == [settings.model]
+
+
 def test_issue_ceiling_survives_regeneration_and_legacy_migration(settings, tmp_path, now, monkeypatch):
     monkeypatch.setenv("GEMINI_RPM", "20")
     store = Store(tmp_path)
@@ -228,8 +253,8 @@ def test_new_single_grant_keeps_old_two_test_calls(settings, tmp_path, now, monk
         Budget(settings, Store(tmp_path), now=lambda: now, issue=issue, test_extra_limit=3).reserve(100)
 
 
-@pytest.mark.parametrize("response_kind", ["success", "legacy_outputs", "http_503", "connection_error"])
-def test_modern_sdk_is_stateless_and_never_retries_invisibly(settings, tmp_path, source_item, response_kind):
+@pytest.mark.parametrize("response_kind", ["success", "http_503", "connection_error"])
+def test_modern_generate_content_has_no_hidden_retry(settings, tmp_path, source_item, response_kind):
     import httpx
     from google import genai
     from google.genai import types
@@ -240,44 +265,19 @@ def test_modern_sdk_is_stateless_and_never_retries_invisibly(settings, tmp_path,
     def handler(request):
         captured.append(request)
         if response_kind == "http_503":
-            return httpx.Response(503, json={"error": {"code": 503, "message": "Offline mock"}})
+            return httpx.Response(503, json={"error": {"code": 503, "message": "Offline"}})
         if response_kind == "connection_error":
-            raise httpx.ConnectError("Offline mock", request=request)
-        if response_kind == "legacy_outputs":
-            return httpx.Response(
-                200,
-                json={
-                    "id": "int_dummy",
-                    "status": "completed",
-                    "outputs": [{"type": "text", "text": response(event).model_dump_json()}],
-                },
-            )
-        return httpx.Response(
-            200,
-            json={
-                "id": "int_dummy",
-                "model": "gemini-3.5-flash-lite",
-                "status": "completed",
-                "steps": [
-                    {
-                        "type": "model_output",
-                        "status": "done",
-                        "content": [{"type": "text", "text": response(event).model_dump_json()}],
-                    }
-                ],
-            },
-        )
+            raise httpx.ConnectError("Offline", request=request)
+        return httpx.Response(200, json={"candidates": [{"content": {
+            "parts": [{"text": response(event).model_dump_json()}]
+        }}]})
 
-    client = genai.Client(
-        api_key="DUMMY_NOT_REAL",
-        vertexai=False,
-        http_options=types.HttpOptions(
+    client = genai.Client(api_key="DUMMY_NOT_REAL", vertexai=False,
+        http_options=types.HttpOptions(api_version="v1beta",
             httpx_client=httpx.Client(transport=httpx.MockTransport(handler)),
-            retry_options=types.HttpRetryOptions(attempts=1),
-        ),
-    )
+            retry_options=types.HttpRetryOptions(attempts=1)))
     enhancer = Enhancer(settings, Store(tmp_path))
-    if response_kind in {"success", "legacy_outputs"}:
+    if response_kind == "success":
         assert AIResponse.model_validate_json(
             enhancer.generate_text(client, "gemini-3.5-flash-lite", "Offline", 6000)
         ).stories
@@ -285,9 +285,11 @@ def test_modern_sdk_is_stateless_and_never_retries_invisibly(settings, tmp_path,
         with pytest.raises(Exception):
             enhancer.generate_text(client, "gemini-3.5-flash-lite", "Offline", 6000)
     assert len(captured) == 1
+    assert captured[0].url.path == "/v1beta/models/gemini-3.5-flash-lite:generateContent"
     body = json.loads(captured[0].content)
-    assert body["store"] is False and not body.get("tools")
-    assert captured[0].url.path == "/v1beta/interactions"
+    assert not body.get("tools")
+    assert "thinkingConfig" not in body["generationConfig"]
+    assert "responseJsonSchema" in body["generationConfig"]
 
 
 def test_date_claims_use_the_supplied_publication_evidence(source_item):
