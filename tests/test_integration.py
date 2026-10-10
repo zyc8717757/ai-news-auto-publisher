@@ -92,7 +92,7 @@ def test_real_tls_smtp_capture(digest, tmp_path, monkeypatch):
         assert len(captured) == 1
         message = BytesParser(policy=policy.default).parsebytes(captured[0])
         assert digest.stories[0].summary in message.get_body(preferencelist=("plain",)).get_content()
-        assert len(list(message.iter_attachments())) == 2
+        assert len(list(message.iter_attachments())) == 3
     finally:
         server.shutdown()
         server.server_close()

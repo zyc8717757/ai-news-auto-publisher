@@ -6,6 +6,7 @@ import re
 import time
 from datetime import UTC, datetime, timedelta
 from typing import Callable
+from zoneinfo import ZoneInfo
 
 from google import genai
 from google.genai import types
@@ -75,10 +76,17 @@ class Budget:
             raise ValueError("Cumulative test allowance must be within 0..5")
         self.test_extra_limit = test_extra_limit
 
-    def reserve(self, estimated_tokens: int) -> None:
-        rpm = int(os.environ.get("GEMINI_RPM", "5"))
+    def reserve(self, estimated_tokens: int, model: str | None = None) -> None:
+        model = model or self.settings.model
+        # Only the owner-verified 3.5 model receives its higher project limits.
+        model_rpm, model_rpd = (
+            (15, 500)
+            if model == "gemini-3.5-flash-lite"
+            else (10 if model == "gemini-2.5-flash-lite" else 5, 20)
+        )
+        rpm = min(model_rpm, int(os.environ.get("GEMINI_RPM", str(model_rpm))))
         tpm = int(os.environ.get("GEMINI_TPM", "250000"))
-        rpd = min(self.settings.ai_day_limit, int(os.environ.get("GEMINI_RPD", "20")))
+        rpd = min(model_rpd, self.settings.ai_day_limit, int(os.environ.get("GEMINI_RPD", str(model_rpd))))
         if min(rpm, tpm, rpd) <= 0 or estimated_tokens > tpm:
             raise AIUnavailable("ai_budget_unavailable")
         now = self.now()
@@ -92,12 +100,12 @@ class Budget:
         if self.issue and not state.ai_issue_attempts and state.ai_attempts:
             # Upgrade old ledgers conservatively; don't reset already consumed calls during testing.
             state.ai_issue_attempts[self.issue] = len(state.ai_attempts)
-        state.ai_attempts = [t for t in state.ai_attempts if t > now - timedelta(hours=24)]
+        state.ai_attempts = [t for t in state.ai_attempts if t > now - timedelta(hours=48)]
         state.ai_reserved_tokens = [
             (t, n) for t, n in state.ai_reserved_tokens if t > now - timedelta(minutes=1)
         ]
         run_limit = self.test_extra_limit or self.settings.ai_run_limit
-        if self.run_calls >= run_limit or len(state.ai_attempts) >= rpd:
+        if self.run_calls >= run_limit or quota_used(state, now, model) >= rpd:
             raise AIUnavailable("ai_budget_exhausted")
         counters = state.ai_test_attempts if self.test_extra_limit else state.ai_issue_attempts
         if self.issue and counters.get(self.issue, 0) >= run_limit:
@@ -121,6 +129,22 @@ class Budget:
         # If persistence fails, the request must never happen.
         self.store.save_state()
         self.run_calls += 1
+
+
+def quota_used(state, now: datetime, model: str) -> int:
+    """Keep attempt history intact; provider reconciliation affects only daily admission.
+
+    AI Studio screenshot is a manual baseline, not live quota telemetry. Subsequent
+    failures also reserve quota conservatively. Google resets RPD in Pacific time.
+    """
+    pacific = ZoneInfo("America/Los_Angeles")
+    day = now.astimezone(pacific).date()
+    snapshot = state.ai_quota_snapshot
+    attempts = [t for t in state.ai_attempts if t.astimezone(pacific).date() == day]
+    if snapshot and snapshot.model == model and snapshot.observed_at <= now:
+        if snapshot.observed_at.astimezone(pacific).date() == day:
+            return snapshot.used + sum(t > snapshot.observed_at for t in attempts)
+    return len(attempts)
 
 
 def validate_response(response: AIResponse, events: list[NewsEvent]) -> None:
@@ -251,7 +275,7 @@ class Enhancer:
                 # UTF-8 bytes are a deliberately conservative upper bound for input tokens.
                 estimate = len(prompt.encode("utf-8")) + output_limit
                 try:
-                    self.budget.reserve(estimate)
+                    self.budget.reserve(estimate, model=active_model)
                 except AIUnavailable as exc:
                     self.audit(active_model, "budget_blocked", str(exc))
                     raise
@@ -260,8 +284,16 @@ class Enhancer:
                     output_text = self.generate_text(client, active_model, prompt, output_limit)
                 except Exception as exc:
                     code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
-                    print(json.dumps({"status": "ai_provider_diagnostic", "model": active_model,
-                                      **provider_error_details(exc)}, ensure_ascii=False))
+                    print(
+                        json.dumps(
+                            {
+                                "status": "ai_provider_diagnostic",
+                                "model": active_model,
+                                **provider_error_details(exc),
+                            },
+                            ensure_ascii=False,
+                        )
+                    )
                     self.audit(active_model, "provider_error", provider_failure(exc))
                     if code in {429, 503} and active_model == self.settings.model:
                         self.budget.sleep(2)

@@ -229,6 +229,7 @@ def test_test_allowance_requires_exact_authorized_issue(settings, tmp_path, now,
 
 
 def test_extra_tests_still_obey_daily_limit(settings, tmp_path, now, monkeypatch):
+    settings.ai_day_limit = 10
     issue = "2026-10-10-am"
     monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
     store = Store(tmp_path)

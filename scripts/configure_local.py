@@ -113,9 +113,9 @@ def apply_configuration(api: GitHub, fields: dict[str, list[str]]) -> None:
         "AI_ENABLED": "true",
         "EMAIL_ENABLED": "true",
         "PUBLISHER_PAUSED": "false",
-        "GEMINI_RPM": "5",
+        "GEMINI_RPM": "15",
         "GEMINI_TPM": "250000",
-        "GEMINI_RPD": "20",
+        "GEMINI_RPD": "500",
         "PUBLISHER_ENABLED": "true",
     }.items():
         api.variable(name, text)

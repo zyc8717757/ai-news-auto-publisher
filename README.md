@@ -73,7 +73,7 @@ ai-news send --issue 2026-10-10-am --resend
 
 使用公共仓库的标准 GitHub Actions 运行器和 GitHub Pages，不使用收费运行器、付费采集、X API 或外部数据库。经用户确认，当前默认 `gemini-3.5-flash-lite`、备用 `gemini-3.8-flash`，官方价格页列有免费层。兼容白名单保留 2.5 系列及 3.1 Flash-Lite；固定 Developer API 地址并明确关闭 Vertex AI。统一使用已通过云端最小测试的 `v1beta/models/{model}:generateContent`，不启用工具，不维护服务器会话。
 
-**同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。正常每期优先一次批量处理，尽量 1–3 次；包括备用、重试及格式修复在内硬上限 5 次、滚动 24 小时最多 10 次。RPM/TPM/RPD 按实际项目配额执行，不足就降级，不切换付费项目。
+**同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。正常每期优先一次批量处理，尽量 1–3 次；包括备用、重试及格式修复在内硬上限 5 次、按当前 3.5 免费项目每日最多 500 次（太平洋时间零点重置）。RPM/TPM/RPD 按实际项目配额执行，不足就降级，不切换付费项目。
 
 官方参考：[Gemini 价格](https://ai.google.dev/gemini-api/docs/pricing)、[额度](https://ai.google.dev/gemini-api/docs/rate-limits)、[Actions 调度](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)、[Pages](https://docs.github.com/en/pages/getting-started-with-github-pages)。
 
@@ -82,4 +82,9 @@ ai-news send --issue 2026-10-10-am --resend
 代码、离线样例、自动测试和工作流已提供。真实 Gemini 项目、QQ/163 收件箱、GitHub 云端部署、信源上线门槛及连续 7 天观察必须分别验收；本地测试通过不代表这些外部链路已经启用。具体证据见验收记录。
 
 
-Gemini 最小诊断：Actions 手动选择 `probe-gemini`。只要求 `gemini-3.5-flash-lite` 回复 OK，不采集新闻、不部署、不发邮件；输出 SDK 版本、Key 是否存在、HTTP 状态和脱敏错误字段。默认恰好一次请求，调用前持久化预算，受独立测试授权和滚动 24 小时 10 次上限保护。诊断结果不等于结构化新闻处理验收通过。400/403/404 不自动重试或切换模型，429/503 仅有限退避重试，全部计入预算。AI 不可用或预算不足时，正常 `run` 继续生成明确标注的基础规则日报。
+Gemini 最小诊断：Actions 手动选择 `probe-gemini`。只要求 `gemini-3.5-flash-lite` 回复 OK，不采集新闻、不部署、不发邮件；输出 SDK 版本、Key 是否存在、HTTP 状态和脱敏错误字段。默认恰好一次请求，调用前持久化预算，受独立测试授权和每日 500 次上限保护。诊断结果不等于结构化新闻处理验收通过。400/403/404 不自动重试或切换模型，429/503 仅有限退避重试，全部计入预算。AI 不可用或预算不足时，正常 `run` 继续生成明确标注的基础规则日报。
+
+
+2026-10-10 配额校准：按所有者 AI Studio 截图，Gemini 3.5 Flash-Lite 为 15 RPM / 250,000 TPM / 500 RPD，后台显示当日用量 2。历史 10 次请求尝试完整保留，另记有时间和证据类型的 `ai_quota_snapshot`，不将失败尝试直接解释为后台计费或配额用量。校准后每次尝试（包括失败）继续保守占用配额；429 仍是服务端最终约束。此快照不是实时遥测，其他应用共享项目时也会消耗额度。每期 5 次限制不变，备用模型不继承 3.5 的提高后配额。
+
+每期汇总图由 `overview` 使用 Pillow 与系统中文字体从公开定稿生成，包含全部精选标题和真实分类，不额外请求 AI。PNG 随公开站点发布，邮件附上两个私有 TXT 草稿和一张公开 PNG。Linux 运行器安装 fonts-noto-cjk；本机使用微软雅黑。图片不包含邮箱、草稿或认证信息。

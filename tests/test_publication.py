@@ -47,7 +47,7 @@ def test_public_site_escape_archive_and_privacy(digest, tmp_path):
     assert (tmp_path / "revisions/2026-10-10-am-r1.html").exists()
     data = json.loads((tmp_path / "data/2026-10-10-am-r2.json").read_text("utf-8"))
     assert "short" not in data and "excerpt" not in data["stories"][0]["sources"][0]
-    assert all("版本 A" not in p.read_text("utf-8") for p in tmp_path.rglob("*") if p.is_file())
+    assert all("版本 A".encode() not in p.read_bytes() for p in tmp_path.rglob("*") if p.is_file())
     (tmp_path / "private.eml").write_text("PRIVATE_MAIL")
     with pytest.raises(ValueError):
         audit_site(tmp_path)

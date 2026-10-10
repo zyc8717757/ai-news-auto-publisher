@@ -42,7 +42,7 @@ class Settings(StrictModel):
     timeout_seconds: int = Field(default=20, ge=1, le=60)
     source_retries: int = Field(default=2, ge=0, le=2)
     ai_run_limit: int = Field(default=5, ge=1, le=5)
-    ai_day_limit: int = Field(default=10, ge=1, le=10)
+    ai_day_limit: int = Field(default=500, ge=1, le=500)
     dedup_hours: int = Field(default=48, ge=1, le=48)
     history_days: int = Field(default=90, ge=2, le=365)
 
@@ -210,10 +210,18 @@ class AIRequestAudit(StrictModel):
     extra_test: bool = False
 
 
+class QuotaSnapshot(StrictModel):
+    observed_at: datetime
+    model: Literal["gemini-3.5-flash-lite"]
+    used: int = Field(ge=0, le=500)
+    evidence: Literal["owner_ai_studio_screenshot"] = "owner_ai_studio_screenshot"
+
+
 class RunState(StrictModel):
     schema_version: Literal[1] = 1
     last_covered_at: datetime | None = None
     ai_attempts: list[datetime] = Field(default_factory=list)
+    ai_quota_snapshot: QuotaSnapshot | None = None
     ai_issue_attempts: dict[str, int] = Field(default_factory=dict)
     ai_test_attempts: dict[str, int] = Field(default_factory=dict)
     ai_audit: list[AIRequestAudit] = Field(default_factory=list)

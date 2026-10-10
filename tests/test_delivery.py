@@ -26,8 +26,10 @@ def test_mime_full_content_and_attachments(digest):
     assert digest.stories[0].summary in parsed.get_body(preferencelist=("plain",)).get_content()
     assert "版本 A" in parsed.get_body(preferencelist=("html",)).get_content()
     attachments = list(parsed.iter_attachments())
-    assert len(attachments) == 2
-    assert all(a.get_filename().endswith(".txt") for a in attachments)
+    assert len(attachments) == 3
+    assert all(a.get_filename().endswith(".txt") for a in attachments[:2])
+    assert attachments[2].get_content_type() == "image/png"
+    assert attachments[2].get_payload(decode=True).startswith(b"\x89PNG")
     assert "演示" in attachments[0].get_content()
     assert (
         parsed["Message-ID"]

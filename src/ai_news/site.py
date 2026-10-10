@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 from jinja2 import Environment, select_autoescape
 
 from .models import Digest
+from .overview import overview_png
 from .store import atomic_write
 
 CSS = """:root{color-scheme:light;--ink:#182c35;--muted:#52666e;--line:#d5e0e2;--accent:#006d77}
@@ -33,6 +34,8 @@ TEMPLATE = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 {% if digest %}<p class="meta">截止 {{ local(digest.cutoff) }} · 更新 {{ local(digest.created_at) }} · 第 {{ digest.revision }} 版 · {{ digest.stories|length }} 条</p>
 {% if digest.mode == 'rules' %}<p class="notice">基础规则版，AI 增强未完成。保留来源原文信息，不编造中文翻译或影响分析。</p>{% endif %}
 {% if digest.warnings %}<p class="notice">{{ warnings }}</p>{% endif %}
+<p><a href="{{ root }}/assets/{{ digest.key }}-overview.png">下载本期资讯汇总图</a></p>
+<img src="{{ root }}/assets/{{ digest.key }}-overview.png" alt="本期资讯分类概览" style="width:100%;height:auto;border-radius:12px">
 {% for story in digest.stories %}<article><span class="tag">{{ story.category }}</span><h2>{{ loop.index }}. {{ story.title }}</h2>
 <p>{{ story.summary }}</p>{% if story.impact %}<p class="impact"><strong>为什么重要：</strong>{{ story.impact }}</p>{% endif %}
 {% if story.uncertainty %}<p class="notice">{{ story.uncertainty }}</p>{% endif %}
@@ -64,8 +67,10 @@ def digest_url(base_url: str, digest: Digest) -> str:
 def build_site(digests: list[Digest], output: Path, base_url: str, repository: str = "") -> None:
     if not digests:
         raise ValueError("No digests to render")
+    (output / "assets").mkdir(parents=True, exist_ok=True)
     latest = {}
     for digest in digests:
+        (output / "assets" / f"{digest.key}-overview.png").write_bytes(overview_png(digest))
         if digest.issue not in latest or latest[digest.issue].revision < digest.revision:
             latest[digest.issue] = digest
     ordered = sorted(latest.values(), key=lambda digest: digest.cutoff)
@@ -119,6 +124,7 @@ def build_site(digests: list[Digest], output: Path, base_url: str, repository: s
 def audit_site(output: Path) -> None:
     allowed = re.compile(
         r"^(index\.html|about\.html|\.nojekyll|assets/style\.css|"
+        r"assets/\d{4}-\d{2}-\d{2}-(am|pm)-r\d+-overview\.png|"
         r"issues/\d{4}-\d{2}-\d{2}-(am|pm)\.html|"
         r"revisions/\d{4}-\d{2}-\d{2}-(am|pm)-r\d+\.html|"
         r"data/\d{4}-\d{2}-\d{2}-(am|pm)-r\d+\.json|"

@@ -14,7 +14,7 @@ concurrency: 5
 timeout_seconds: 20
 source_retries: 2
 ai_run_limit: 5
-ai_day_limit: 10
+ai_day_limit: 500
 dedup_hours: 48
 history_days: 90
 # Replace the sample URL before any deployment or email.

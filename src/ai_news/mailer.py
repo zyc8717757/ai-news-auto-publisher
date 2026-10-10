@@ -13,6 +13,7 @@ from typing import Protocol
 
 from .drafts import make_drafts
 from .models import Digest, IssueState
+from .overview import overview_png
 from .site import digest_url
 from .store import Store
 
@@ -91,6 +92,9 @@ def make_message(digest: Digest, config: MailConfig, base_url: str, deployment_r
     message.add_alternative(f"<!doctype html><html lang='zh-CN'><body>{blocks}</body></html>", subtype="html")
     for kind, text in (("short", drafts.short), ("premium", drafts.long)):
         message.add_attachment(text, subtype="plain", charset="utf-8", filename=f"{digest.key}-{kind}.txt")
+    message.add_attachment(
+        overview_png(digest), maintype="image", subtype="png", filename=f"{digest.key}-overview.png"
+    )
     return message
 
 
