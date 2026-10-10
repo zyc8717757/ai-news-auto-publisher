@@ -195,7 +195,7 @@
   "issues": {
     "2026-10-10-am-r1": {
       "deployment": "ready",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
