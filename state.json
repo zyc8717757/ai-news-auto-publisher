@@ -76,6 +76,14 @@
       "stage": "provider_error",
       "reason": "ai_provider_http_400",
       "extra_test": false
+    },
+    {
+      "at": "2026-10-10T13:43:20.250335Z",
+      "issue": "2026-10-10-pm",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "accepted",
+      "reason": "",
+      "extra_test": false
     }
   ],
   "ai_reserved_tokens": [
