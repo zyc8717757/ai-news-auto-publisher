@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-10-pm",
+  "revision": 2,
+  "created_at": "2026-10-10T13:43:08.352077Z",
+  "cutoff": "2026-10-10T12:30:00Z",
+  "window_start": "2026-10-10T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "795b51132cf40a82f8c9",
+      "title": "EvoSim：用于物理建模的自演化AI科学家",
+      "summary": "论文声称，基于物理的模型连接了科学解释与定量预测，但现有的AI系统在自主做出模型结构决策方面仍然存在局限。为此，该研究引入了EvoSim，这是一个用于物理建模的自演化AI科学家，它利用实验差异来驱动模型结构的优化与构建。",
+      "impact": "展示了AI在自主科学发现和复杂物理建模方面的潜力，有助于加速科学研究进程。",
+      "category": "科研",
+      "score": 78.14,
+      "sources": [
+        {
+          "id": "795b51132cf40a82f8c9",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11344",
+          "title": "EvoSim: Learning to Model, Modeling to Learn",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 属于未同行评审的科研论文，其实际解决复杂物理问题的泛化能力尚需更多实验验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "f27da46463754f114a59",
+      "title": "RaReCache：基于秩分歧的选择性重新计算以弥合跨模型KV缓存复用差距",
+      "summary": "论文声称，跨模型KV缓存复用仍然是现代大语言模型服务中的一个关键挑战。由于KV缓存包含模型特定的每次切换都会迫使接收模型从头开始预训练整个上下文。该研究针对这一问题提出了RaReCache，旨在通过基于秩分歧的选择性重新计算来弥合这一差距。",
+      "impact": "有望降低多模型系统和编码智能体在频繁切换模型时的计算开销和预填充延迟。",
+      "category": "科研",
+      "score": 77.84,
+      "sources": [
+        {
+          "id": "f27da46463754f114a59",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11358",
+          "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 属于未同行评审的研究成果，具体的缓存转换效率和损耗有待实际生产环境验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "de3301f4821ae8ca18c2",
+      "title": "Plan-and-Patch：用于智能体规划的扩散语言模型",
+      "summary": "论文声称，规划对于长视野智能体日益重要，但在执行期间假设可能失效，工具可能返回意外结果。因此有效的智能体不仅要生成计划，还要对其进行修改。该研究引入了扩散语言模型Plan-and-Patch，旨在只修改计划的一部分，从而更好地处理规划过程中的动态变化。",
+      "impact": "增强了长视野AI智能体在面对环境突变或工具调用失败时的动态规划修正能力。",
+      "category": "科研",
+      "score": 77.54,
+      "sources": [
+        {
+          "id": "de3301f4821ae8ca18c2",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.10786",
+          "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 论文未经过同行评审，其实际执行效率和复杂环境鲁棒性有待进一步检验。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "ce6ca28e99a1250e2145",
+      "title": "LLM-IDEA：基于可辨识性驱动的实验智能体",
+      "summary": "论文声称，大语言模型智能体正越来越多地被部署为自主科学家。然而可辨识性常常被忽视：当达到平台期时，智能体需要知道是自身能力不足还是模型本身无法从数据中辨识。为此，该研究提出了一个实验智能体，用于自主发现机械世界模型并关注可辨识性问题。",
+      "impact": "推动了AI作为自主科学家的理论严谨性，有助于避免盲目实验造成的资源浪费。",
+      "category": "科研",
+      "score": 77.24,
+      "sources": [
+        {
+          "id": "ce6ca28e99a1250e2145",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11253",
+          "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 论文未经同行评审，该框架在复杂真实科研环境中的有效性尚不明确。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "bce449da7a2298faee9e",
+      "title": "Harness Compilation：优化小型视觉语言模型的工作分工",
+      "summary": "论文声称，小型视觉语言模型可能能够阅读外部证据但难以获取它。为此引入了Harness Compilation离线程序，用以调整被冻结的小型VLM与其外部支持之间的工作分工。大型教师模型利用学生执行轨迹来修改可复用内容，部署时既不需要权重更新也不需要调用教师模型。",
+      "impact": "为提升小型多模态模型在外部检索任务中的效率提供了一种无需更新权重的新思路。",
+      "category": "科研",
+      "score": 76.94,
+      "sources": [
+        {
+          "id": "bce449da7a2298faee9e",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11231",
+          "title": "Harness Compilation: Which Decisions Should a Small Vision-Language Model Keep?",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 属于未同行评审的学术论文，其在多样化真实场景下的通用性有待进一步证实。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "000ed3bf33caa6ac14e2",
+      "title": "RL-ARC：通过推理引导的不确定性校准大推理模型",
+      "summary": "论文声称，语言模型通常使用带有可验证奖励的强化学习进行训练以增强推理能力。然而，由于这类训练在过程中未明确考虑校准，会导致严重的校准退化和过度自信。该研究针对大语言模型的校准感知训练方法进行了探讨，旨在解决不确定性估计的不足。",
+      "impact": "有助于改善大模型推理过程中的过度自信问题，提升不确定性估计的准确性。",
+      "category": "科研",
+      "score": 76.64,
+      "sources": [
+        {
+          "id": "000ed3bf33caa6ac14e2",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11352",
+          "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 论文结果未经过同行评审，具体性能提升幅度和实际应用效果尚待进一步验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "ca2a654b6e9f9d2e037e",
+      "title": "TypedBench：评估系统一级决策模型的校准与成本基准",
+      "summary": "论文声称，系统一级模型通过非生成式接口输出针对类型化答案的校准概率。软件可以通过阈值和成本加权选择等对这些概率采取行动。如果这些概率校准不当或对措辞敏感，软件可能会采取非预期行动。因此，该研究推出了一个用于评估校准、框架敏感性和成本的基准TypedBench。",
+      "impact": "有助于规范和评估系统级AI决策模型的校准质量，减少自动化决策中的潜在风险。",
+      "category": "科研",
+      "score": 76.34,
+      "sources": [
+        {
+          "id": "ca2a654b6e9f9d2e037e",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11392",
+          "title": "TypedBench: A Benchmark for Calibration, Framing Sensitivity, and Cost in System One Decision Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 论文尚未经过同行评审，基准测试的全面性和公平性需要行业更广泛的测试。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "d552aa93099035d01308",
+      "title": "将LLM智能体常驻上下文策划建模为受限品类问题",
+      "summary": "论文声称，LLM智能体在每个会话开始时都会加载固定的上下文文件，但随着文件增长可能会降低性能。为此，该研究将上下文策划问题公式化为一个具有受限反馈的品类选择问题，旨在优化指令在有限注意力下的标记消耗。",
+      "impact": "为优化大语言模型智能体的长上下文管理和提示词效率提供了新的建模方法。",
+      "category": "科研",
+      "score": 76.04,
+      "sources": [
+        {
+          "id": "d552aa93099035d01308",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11007",
+          "title": "Curating Always-Loaded Context for LLM Agents: A Capacitated Assortment Model with Censored Feedback",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 论文尚未经过同行评审，其模型在实际智能体交互中的表现仍需实测。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "50dffc340fef0b39faea",
+      "title": "研究探讨GPT模型中的防御性写作现象",
+      "summary": "论文声称，研究人员越来越多地使用ChatGPT来修改论文，而近期的GPT版本经常会缩小甚至收回作者的原始声明。当给定材料不支持时，这种现象被称为防御性写作。研究测试了两种解释：模型纠正了作者的过度声称，或者模型迎合了预期的审稿人。",
+      "impact": "揭示了AI在辅助学术润色时可能改变原意的倾向，对规范AI辅助写作工具的使用具有警示意义。",
+      "category": "科研",
+      "score": 75.89,
+      "sources": [
+        {
+          "id": "50dffc340fef0b39faea",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11355",
+          "title": "Writing for the Reviewer: Defensive Writing in GPT Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 该研究属于未同行评审的论文，其结论和对模型动机的解释可能具有主观性或局限性。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "dc9248cb5ace6d3f4648",
+      "title": "重新思考智能体事后自蒸馏中的环境反馈建模",
+      "summary": "论文声称，强化学习常用于在交互环境中训练语言智能体，但在无奖励时无法直接应用。虽然近期方法使用环境反馈作为事后自蒸馏的特权上下文，但该研究分析认为简单地将教师条件化于反馈是不够的，因此有必要重新思考环境反馈在智能体自蒸馏中的使用方式。",
+      "impact": "对提升无奖励环境下语言智能体的训练效果和自蒸馏方法提供了有价值的审视。",
+      "category": "科研",
+      "score": 75.74,
+      "sources": [
+        {
+          "id": "dc9248cb5ace6d3f4648",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11384",
+          "title": "Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 属于未同行评审的学术论文，提出的新思路尚需更多实验验证其优越性。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "cca18e5b06768269fc32",
+      "title": "利用势函数提高自回归语言模型期望估计效率",
+      "summary": "论文声称，语言模型的许多应用取决于测试泛函在模型下的期望，而可靠地估计这些期望在计算上可能非常昂贵。该研究展示了如何通过利用作为采样副产物的下一个标记条件概率来使估计更高效，具体方法是使用前缀上的实值势函数来分解测试泛函。",
+      "impact": "为降低语言模型在复杂计算和采样任务中的开销提供了高效的数学估算方法。",
+      "category": "科研",
+      "score": 75.44,
+      "sources": [
+        {
+          "id": "cca18e5b06768269fc32",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11399",
+          "title": "Estimating great expectations under autoregressive language models with potentials",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 属于未同行评审的理论研究，其实际计算性能提升幅度取决于具体应用场景。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "8b70838dccddef4d04f5",
+      "title": "理解扩散模型中的扰动传播与输出影响",
+      "summary": "论文声称，扩散模型在生成建模中取得了显著成功，其采样程序经常被修改以控制生成并提高效率。然而，这些修改会在采样轨迹沿线引入扰动。为了探究这些扰动如何影响生成的输出，该研究结合动态分析开发了一个理论框架来研究扰动传播。",
+      "impact": "加深了对扩散模型采样机制的理论理解，为更精确控制生成过程提供了理论支撑。",
+      "category": "科研",
+      "score": 75.14,
+      "sources": [
+        {
+          "id": "8b70838dccddef4d04f5",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11380",
+          "title": "Equal Path Cost, Unequal Output Effects: Understanding Perturbation Propagation in Diffusion Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 该成果为理论研究，论文未经过同行评审，具体指导意义需要实际应用检验。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "159bdd18a62dbad86214",
+      "title": "AgentHorizon：评估长视野计算机使用任务的智能体裁判",
+      "summary": "论文声称，计算机使用智能体能够完成复杂任务，这促使自动裁判的使用增加，以在无人类干预的情况下判定成功与否。尽管它们具有灵活性，但其在跨多个应用程序的长任务上的可靠性仍不清楚，因为长轨迹可能表面完整却违反了指令约束。",
+      "impact": "为评估长周期、复杂计算机操作智能体的可靠性提供了一个基准评测框架。",
+      "category": "科研",
+      "score": 68.69,
+      "sources": [
+        {
+          "id": "159bdd18a62dbad86214",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11050",
+          "title": "AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 该论文尚未经过同行评审，评测基准的有效性和裁判本身的公正性仍需观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "04a3afe8fc92fa04289a",
+      "title": "面向大规模语义表解释的可解释表头中心化框架",
+      "summary": "论文声称，知识图谱的质量不仅取决于下游图验证，还取决于集成前使用的表格元数据质量。在单元格不可用或嘈杂的元数据语义表解释中，列标题成为可追溯知识图谱准备的关键语义证据。为此，该研究提出了一个用于元数据列类型注释的可解释表头中心化框架。",
+      "impact": "提升了知识图谱构建前夕对表格元数据解析的准确性和可解释性。",
+      "category": "科研",
+      "score": 67.19,
+      "sources": [
+        {
+          "id": "04a3afe8fc92fa04289a",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.10541",
+          "title": "An Explainable Header-Centric Framework for Large-Scale Semantic Table Interpretation and Data Quality Assessment",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 该论文未经同行评审，其框架在大规模复杂异构数据集上的表现尚需测试。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "1322a304a3c5e6527676",
+      "title": "探讨智能体AI中验证与自我改进的基础与局限",
+      "summary": "论文声称，智能体AI系统可以通过更长时间搜索、获得额外支持或修改输出提议与验证方式来改进，但单一的性能分数无法区分这些机制。该研究通过带有隐藏终端随机性的有界验证，对这些机制进行了形式化的对比和基础分析。",
+      "impact": "加深了行业对智能体自我提升机制理论极限的理解，有助于指导更合理的评估设计。",
+      "category": "科研",
+      "score": 66.89,
+      "sources": [
+        {
+          "id": "1322a304a3c5e6527676",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.10611",
+          "title": "Verification and Self-Improvement in Agentic AI: Foundations and Limits",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "预印本，尚未确认同行评审；论文声称的结果需独立验证。 属于理论性质的未同行评审论文，对实际工程落地的直接指导作用需要时间验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1
+}
