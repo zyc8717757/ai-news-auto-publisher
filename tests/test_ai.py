@@ -93,3 +93,66 @@ def test_persistence_failure_blocks_request(settings, tmp_path, monkeypatch, sou
 
     with pytest.raises(RuntimeError):
         Enhancer(settings, store, Client()).enhance([NewsEvent(id="event", evidence=[source_item])])
+
+
+def test_thirty_candidates_use_one_request_and_backup_on_quota(settings, tmp_path, monkeypatch, source_item):
+    settings.ai_enabled = True
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    events = [NewsEvent(id=f"event-{i}", evidence=[source_item]) for i in range(30)]
+    calls = []
+
+    class QuotaError(Exception):
+        code = 429
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["model"])
+            if len(calls) == 1:
+                raise QuotaError()
+            stories = [response(event).stories[0] for event in events]
+            return SimpleNamespace(text=AIResponse(stories=stories).model_dump_json())
+
+    output = Enhancer(settings, Store(tmp_path), Client()).enhance(events)
+    assert len(output.stories) == 30
+    assert calls == ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+
+
+def test_fallback_retry_and_repair_share_configured_ceiling(settings, tmp_path, monkeypatch, source_item):
+    settings.ai_enabled = True
+    settings.ai_run_limit = 3
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    calls = []
+
+    class ServiceError(Exception):
+        code = 503
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["model"])
+            if len(calls) <= 2:
+                raise ServiceError()
+            return SimpleNamespace(text="invalid JSON")
+
+    store = Store(tmp_path)
+    with pytest.raises(AIUnavailable):
+        Enhancer(settings, store, Client()).enhance([NewsEvent(id="event", evidence=[source_item])])
+    assert len(calls) == 3 and len(Store(tmp_path).state.ai_attempts) == 3
+
+
+def test_absolute_five_request_ceiling(settings, tmp_path, monkeypatch, now):
+    monkeypatch.setenv("GEMINI_RPM", "10")
+    store = Store(tmp_path)
+    budget = Budget(settings, store, now=lambda: now)
+    for _ in range(5):
+        budget.reserve(100)
+    with pytest.raises(AIUnavailable):
+        budget.reserve(100)
+    assert len(Store(tmp_path).state.ai_attempts) == 5

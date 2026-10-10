@@ -3,12 +3,18 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
+import re
 import subprocess
 from pathlib import Path
 
 import httpx
+import yaml
+
+from ai_news.models import Settings
+from ai_news.pipeline import cron_for
 
 ROOT = Path(__file__).resolve().parents[1]
 REPO_NAME = "ai-news-auto-publisher"
@@ -148,6 +154,63 @@ class GitHub:
             if any(job["name"] == "source-health" and job["conclusion"] == "success" for job in jobs["jobs"]):
                 return True
         return False
+
+    def schedule(self) -> tuple[str, str]:
+        content = self.request("GET", f"/repos/{self.repo}/contents/config/settings.yaml?ref=main")
+        settings = Settings.model_validate(yaml.safe_load(base64.b64decode(content["content"])))
+        return settings.morning_time, settings.evening_time
+
+    def update_schedule(self, morning: str, evening: str) -> bool:
+        Settings(base_url="https://example.com", morning_time=morning, evening_time=evening)
+        branch = self.request("GET", f"/repos/{self.repo}/git/ref/heads/main")
+        head = branch["object"]["sha"]
+        commit = self.request("GET", f"/repos/{self.repo}/git/commits/{head}")
+        files = {}
+        for path in ("config/settings.yaml", ".github/workflows/news.yml"):
+            content = self.request("GET", f"/repos/{self.repo}/contents/{path}?ref={head}")
+            files[path] = base64.b64decode(content["content"]).decode("utf-8")
+        settings = Settings.model_validate(yaml.safe_load(files["config/settings.yaml"]))
+        if (settings.morning_time, settings.evening_time) == (morning, evening):
+            return False
+        for field, value in (("morning_time", morning), ("evening_time", evening)):
+            files["config/settings.yaml"], count = re.subn(
+                rf"(?m)^{field}:.*$", f"{field}: '{value}'", files["config/settings.yaml"]
+            )
+            if count != 1:
+                raise RuntimeError("Unexpected schedule configuration layout")
+        crons = iter((cron_for(morning), cron_for(evening)))
+        files[".github/workflows/news.yml"], count = re.subn(
+            r"(?m)^(    - cron:) '[^']*'$",
+            lambda match: f"{match[1]} '{next(crons)}'",
+            files[".github/workflows/news.yml"],
+        )
+        if count != 2:
+            raise RuntimeError("Unexpected workflow schedule layout")
+        tree = self.request(
+            "POST",
+            f"/repos/{self.repo}/git/trees",
+            {
+                "base_tree": commit["tree"]["sha"],
+                "tree": [
+                    {"path": path, "mode": "100644", "type": "blob", "content": text}
+                    for path, text in files.items()
+                ],
+            },
+        )
+        updated = self.request(
+            "POST",
+            f"/repos/{self.repo}/git/commits",
+            {
+                "message": f"Set Beijing report schedule to {morning} / {evening}",
+                "tree": tree["sha"],
+                "parents": [head],
+            },
+        )
+        # A concurrent main change rejects this non-forced update rather than overwriting it.
+        self.request(
+            "PATCH", f"/repos/{self.repo}/git/refs/heads/main", {"sha": updated["sha"], "force": False}
+        )
+        return True
 
 
 def git(*args, proxy=None):

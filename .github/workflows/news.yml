@@ -96,9 +96,9 @@ jobs:
           SCHEDULE_CRON: ${{ github.event.schedule }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AI_FREE_TIER_CONFIRMED: ${{ vars.AI_FREE_TIER_CONFIRMED || 'false' }}
-          GEMINI_RPM: ${{ vars.GEMINI_RPM || '1' }}
-          GEMINI_TPM: ${{ vars.GEMINI_TPM || '16000' }}
-          GEMINI_RPD: ${{ vars.GEMINI_RPD || '10' }}
+          GEMINI_RPM: ${{ vars.GEMINI_RPM || '5' }}
+          GEMINI_TPM: ${{ vars.GEMINI_TPM || '250000' }}
+          GEMINI_RPD: ${{ vars.GEMINI_RPD || '20' }}
         run: python scripts/workflow_issue.py
       - name: Build public site
         id: build

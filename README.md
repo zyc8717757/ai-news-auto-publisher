@@ -1,6 +1,6 @@
 # AI News Auto Publisher v1.0 · Free Edition
 
-每天北京时间 08:00 / 20:00 采集全球 AI 公开资讯，规则筛选与 Gemini 免费增强，发布 GitHub Pages 日报，并将完整日报和两版 X 文案发送到私人邮箱。**X 始终由人工审核、手动发布；没有 X API 或自动点击发帖功能。**
+默认每天北京时间 08:00 / 20:00 采集全球 AI 公开资讯，时间可在本机配置页调整。规则筛选与 Gemini 免费增强后发布 GitHub Pages 日报，并将完整日报和两版 X 文案发送到私人邮箱。**X 始终由人工审核、手动发布；没有 X API 或自动点击发帖功能。**
 
 ## 能力与公开边界
 
@@ -71,9 +71,9 @@ ai-news send --issue 2026-10-10-am --resend
 
 ## 免费约束
 
-使用公共仓库的标准 GitHub Actions 运行器和 GitHub Pages，不使用收费运行器、付费采集、X API 或外部数据库。Gemini 仅允许 `gemini-2.5-flash-lite`，固定 Developer API 地址并明确关闭 Vertex AI。
+使用公共仓库的标准 GitHub Actions 运行器和 GitHub Pages，不使用收费运行器、付费采集、X API 或外部数据库。Gemini 默认 `gemini-2.5-flash-lite`，备用 `gemini-2.5-flash`；只允许这两个已确认免费模型，固定 Developer API 地址并明确关闭 Vertex AI。
 
-**同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。每次最多 5 次请求、滚动 24 小时最多 10 次，实际账户限制更低时按更低值执行。
+**同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。正常每期优先一次批量处理，尽量 1–3 次；包括备用、重试及格式修复在内硬上限 5 次、滚动 24 小时最多 10 次。RPM/TPM/RPD 按实际项目配额执行，不足就降级，不切换付费项目。
 
 官方参考：[Gemini 价格](https://ai.google.dev/gemini-api/docs/pricing)、[额度](https://ai.google.dev/gemini-api/docs/rate-limits)、[Actions 调度](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)、[Pages](https://docs.github.com/en/pages/getting-started-with-github-pages)。
 

@@ -6,7 +6,13 @@
 
 配置页先要求当前代码的云端 Tests 与信源 20/8 门槛通过，再使用 GitHub 公钥 sealed-box 加密写入 Secrets。全部配置成功才启用任务并启动第一期运行。原始密钥只在本机进程内存使用，不进入项目文件或日志；页面提交后服务自动关闭。
 
-本机启动方式：`python scripts/configure_local.py --owner zyc8717757`。打开输出的本机地址，不要把带 token 的配置地址转发给别人。配置页默认仅绑定 `127.0.0.1:8766`。
+本机启动方式：`python scripts/configure_local.py --owner zyc8717757`。打开输出的本机地址，不要把带 token 的配置地址转发给别人。配置页仅绑定 `127.0.0.1`，自动选择空闲端口，避免与旧入口冲突。
+
+页面可设置早报、晚报时间（北京时间），默认 `08:00`、`20:00`。两项须为同一天内从早到晚的不同时间。保存时原子更新 `config/settings.yaml` 和 GitHub workflow 的两个 cron，并等待新提交的云端检查通过后启用。不会要求你手工编辑 cron。
+
+以后只调整时间可使用 `python scripts/configure_local.py --owner zyc8717757 --schedule-only`，无需重新输入邮箱授权码和 Gemini Key。该操作只修改远程的两份调度配置，使用非强制提交保护并发改动；本地开发前同步最新 main。
+
+内置浏览器的表单 Origin 可能为 `null` 或缺失。配置服务仍要求精确回环 Host 和不可猜测的会话表单令牌，明确的外站 Origin 始终拒绝。提交后立即显示进度页，不会在浏览器中长时间无反馈；不记录表单正文。
 
 已登录 Git Credential Manager 时，`python scripts/github_setup.py --owner zyc8717757 --publish` 可上传指定白名单代码并配置 Pages；不会修改系统 GitHub 认证、系统代理或全局 Git 配置。`--check-sources` 启动云端信源检查。
 
@@ -30,11 +36,13 @@ Settings → Secrets and variables → Actions → Variables：
 | `AI_ENABLED` | 初始 `false` |
 | `EMAIL_ENABLED` | 初始 `false` |
 | `AI_FREE_TIER_CONFIRMED` | 初始 `false`；仅人工确认专用免费项目无付费账单后改 `true` |
-| `GEMINI_RPM` | AI Studio 核实值，项目默认保守值 1 |
-| `GEMINI_TPM` | AI Studio 核实值，默认 16000；低于单次预留需求时会安全降级 |
+| `GEMINI_RPM` | 当前截图 Lite 为 10、Flash 为 5；系统对两者合计保守设为 5 |
+| `GEMINI_TPM` | 当前截图两模型均为 250000；低于单次预留需求时会安全降级 |
 | `GEMINI_RPD` | AI Studio 核实值，程序仍限制在滚动 24 小时最多 10 次 |
 
 配额按项目共享，不是按 Key 单独计算。建议此免费项目只服务本系统。程序采用输入 UTF-8 大小加最大输出长度保守预留，不调用额外计数 API。
+
+当前截图两模型 RPD 均为 20；系统仍保守限制滚动 24 小时合计 10 次，每期最多 5 次。默认 Lite 失败遇到限额、模型不可用或暂时服务错误时切换 Flash；认证/免费条件错误不会通过换模型绕过。正常最多 30 个候选用一次请求批量处理，修复/重试也计入同一额度账本。
 
 ## 3. 配置 Secrets
 

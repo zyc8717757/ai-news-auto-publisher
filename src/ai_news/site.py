@@ -80,7 +80,9 @@ def build_site(digests: list[Digest], output: Path, base_url: str, repository: s
             previous=previous,
             following=following,
             months=months,
-            versions=sorted((d for d in digests if digest and d.issue == digest.issue), key=lambda d: d.revision),
+            versions=sorted(
+                (d for d in digests if digest and d.issue == digest.issue), key=lambda d: d.revision
+            ),
             root=root,
             warnings=" ".join(
                 WARNING_TEXT.get(code, "本期部分处理能力受限。")

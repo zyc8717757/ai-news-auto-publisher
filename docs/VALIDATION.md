@@ -14,6 +14,8 @@
 
 ## 云端检查
 
+后续修复增加了回环 HTTP 实测：兼容标准、缺失与 `null` Origin，仍拒绝外站 Origin、伪造 Host 及缺失/错误会话令牌。内置浏览器用虚构信息实际提交成功，记录的来源类型为 opaque，没有向 GitHub 写入测试密钥。可调时间、双模型切换和硬配额回归合计 62 项本地测试通过；真实密钥仍需用户在新的配置页提交。
+
 仓库：[zyc8717757/ai-news-auto-publisher](https://github.com/zyc8717757/ai-news-auto-publisher)。
 
 查看 [Actions 实时结果](https://github.com/zyc8717757/ai-news-auto-publisher/actions)。Tests 与 News Publisher/check-sources 是独立检查。配置向导只接受**当前 main 提交**同时满足 Tests 成功与 source-health 成功的情况；旧提交通过不能解锁新提交的正式运行。

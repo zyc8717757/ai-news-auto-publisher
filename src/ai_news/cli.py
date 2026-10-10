@@ -40,7 +40,7 @@ def parser() -> argparse.ArgumentParser:
     preview.add_argument("--output", type=Path, default=Path(".local/preview"))
     gen = sub.add_parser("generate")
     gen.add_argument("--issue")
-    gen.add_argument("--schedule", choices=["0 8 * * *", "0 20 * * *"])
+    gen.add_argument("--schedule", help="Cron matching one of the configured Beijing report times")
     gen.add_argument("--regenerate", action="store_true")
     gen.add_argument("--result", type=Path, default=Path(".runtime/result.json"))
     site = sub.add_parser("build-site")
@@ -95,7 +95,9 @@ def execute(args) -> int:
         atomic_write(args.report, json.dumps(report, indent=2))
         healthy = sum(r["status"] == "ok" for r in report)
         primary = sum(r["status"] == "ok" and r["trust"] in {"official", "research"} for r in report)
-        print(json.dumps({"healthy": healthy, "primary": primary, "configured": len(report), "sources": report}))
+        print(
+            json.dumps({"healthy": healthy, "primary": primary, "configured": len(report), "sources": report})
+        )
         return 1 if args.enforce and (healthy < 20 or primary < 8) else 0
     if args.command == "preview":
         # Preview never invokes Gemini, sends mail, or touches persistent/remote state.
@@ -112,7 +114,11 @@ def execute(args) -> int:
         return 0
     store = Store(args.data, remote=args.remote)
     if args.command == "generate":
-        issue = args.issue or (scheduled_issue(args.schedule, datetime.now(UTC)) if args.schedule else None)
+        issue = args.issue or (
+            scheduled_issue(args.schedule, datetime.now(UTC), settings.morning_time, settings.evening_time)
+            if args.schedule
+            else None
+        )
         if not issue:
             atomic_write(args.result, '{"status":"skipped"}')
             print('{"status":"skipped"}')

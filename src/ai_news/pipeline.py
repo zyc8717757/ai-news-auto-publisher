@@ -13,26 +13,34 @@ from .store import Store
 SHANGHAI = ZoneInfo("Asia/Shanghai")
 
 
-def cutoff_for(issue: str) -> datetime:
+def cron_for(value: str) -> str:
+    hour, minute = map(int, value.split(":"))
+    return f"{minute} {hour} * * *"
+
+
+def cutoff_for(issue: str, morning_time: str = "08:00", evening_time: str = "20:00") -> datetime:
     # Digest validation also constrains path input; reject impossible dates before any writes.
     if len(issue) != 13 or issue[-2:] not in {"am", "pm"} or issue[10] != "-":
         raise ValueError("Expected YYYY-MM-DD-am or YYYY-MM-DD-pm")
     day = datetime.strptime(issue[:10], "%Y-%m-%d")
-    return day.replace(hour=8 if issue.endswith("am") else 20, tzinfo=SHANGHAI).astimezone(UTC)
+    hour, minute = map(int, (morning_time if issue.endswith("am") else evening_time).split(":"))
+    return day.replace(hour=hour, minute=minute, tzinfo=SHANGHAI).astimezone(UTC)
 
 
-def scheduled_issue(cron: str, now: datetime) -> str | None:
-    slot = {"0 8 * * *": "am", "0 20 * * *": "pm"}.get(cron)
+def scheduled_issue(
+    cron: str, now: datetime, morning_time: str = "08:00", evening_time: str = "20:00"
+) -> str | None:
+    slot = {cron_for(morning_time): "am", cron_for(evening_time): "pm"}.get(cron)
     if not slot:
         raise ValueError("Unknown schedule")
     local = now.astimezone(SHANGHAI)
     day = local.date()
     issue = f"{day.isoformat()}-{slot}"
-    cutoff = cutoff_for(issue)
+    cutoff = cutoff_for(issue, morning_time, evening_time)
     if cutoff > now:
         day -= timedelta(days=1)
         issue = f"{day.isoformat()}-{slot}"
-        cutoff = cutoff_for(issue)
+        cutoff = cutoff_for(issue, morning_time, evening_time)
     return issue if now - cutoff <= timedelta(hours=6) else None
 
 
@@ -47,7 +55,7 @@ def generate(
     enhancer=None,
 ) -> tuple[Digest, bool]:
     now = now or datetime.now(UTC)
-    cutoff = cutoff_for(issue)
+    cutoff = cutoff_for(issue, settings.morning_time, settings.evening_time)
     if cutoff > now:
         raise ValueError("Cannot generate an unfinished future period")
     existing = store.latest(issue)

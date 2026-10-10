@@ -172,7 +172,9 @@ class Collector:
         try:
             page = await self.fetch(source.url, headers)
             if page.status == 304:
-                return [], (cache or SourceCache()).model_copy(update={"status": "unchanged", "error_code": ""})
+                return [], (cache or SourceCache()).model_copy(
+                    update={"status": "unchanged", "error_code": ""}
+                )
             if source.kind == "github":
                 values = parse_releases(source, page.text, now, self.settings.source_limit)
             elif source.kind == "html":

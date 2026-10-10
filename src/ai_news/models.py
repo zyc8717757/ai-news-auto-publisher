@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import Literal
 from urllib.parse import urlsplit
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 class StrictModel(BaseModel):
@@ -29,6 +29,9 @@ class Settings(StrictModel):
     email_enabled: bool = False
     base_url: str
     model: Literal["gemini-2.5-flash-lite"] = "gemini-2.5-flash-lite"
+    backup_model: Literal["gemini-2.5-flash"] = "gemini-2.5-flash"
+    morning_time: str = Field(default="08:00", pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
+    evening_time: str = Field(default="20:00", pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
     max_items: int = Field(default=15, ge=1, le=15)
     max_candidates: int = Field(default=300, ge=1, le=300)
     ai_candidates: int = Field(default=30, ge=1, le=30)
@@ -42,6 +45,12 @@ class Settings(StrictModel):
     history_days: int = Field(default=90, ge=2, le=365)
 
     _base = field_validator("base_url")(web_url)
+
+    @model_validator(mode="after")
+    def ordered_schedule(self):
+        if self.morning_time >= self.evening_time:
+            raise ValueError("Morning time must be earlier than evening time on the same Beijing date")
+        return self
 
 
 class Source(StrictModel):

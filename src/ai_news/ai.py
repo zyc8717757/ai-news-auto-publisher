@@ -21,6 +21,7 @@ PROMPT = """你是中文AI新闻编辑，面向普通AI兴趣读者。输入是�
 每个输入事件输出且只输出一项，每项只能引用该事件提供的evidence_ids；
 重复建议只针对本批次其他event_id，不能用重复建议给无证据新闻背书。
 不要把不同版本或同公司不同事件合并。不要添加无关议题。返回严格符合schema的JSON。
+每条摘要尽量60–100个中文字，影响分析20–50个字，标题简洁。
 """
 
 
@@ -42,9 +43,9 @@ class Budget:
         self.run_calls = 0
 
     def reserve(self, estimated_tokens: int) -> None:
-        rpm = int(os.environ.get("GEMINI_RPM", "1"))
-        tpm = int(os.environ.get("GEMINI_TPM", "16000"))
-        rpd = min(self.settings.ai_day_limit, int(os.environ.get("GEMINI_RPD", "10")))
+        rpm = int(os.environ.get("GEMINI_RPM", "5"))
+        tpm = int(os.environ.get("GEMINI_TPM", "250000"))
+        rpd = min(self.settings.ai_day_limit, int(os.environ.get("GEMINI_RPD", "20")))
         if min(rpm, tpm, rpd) <= 0 or estimated_tokens > tpm:
             raise AIUnavailable("ai_budget_unavailable")
         now = self.now()
@@ -119,9 +120,10 @@ class Enhancer:
             ),
         )
         result = []
-        # At most two normal batches; leave budget for bounded transient retry/format repair.
-        for offset in range(0, len(events), 15):
-            batch = events[offset : offset + 15]
+        active_model = self.settings.model
+        # One normal batch for up to 30 candidates. Fallback, retry and repair all share the run cap.
+        for offset in range(0, len(events), 30):
+            batch = events[offset : offset + 30]
             payload = [
                 {
                     "event_id": event.id,
@@ -140,7 +142,8 @@ class Enhancer:
             ]
             prompt = PROMPT + "\n输入数据：\n" + json.dumps(payload, ensure_ascii=False)
             # Fit the verified TPM budget before reserving. Never make an unaccounted count_tokens call.
-            capacity = int(os.environ.get("GEMINI_TPM", "16000")) - 6500
+            output_limit = 12000 if len(batch) > 15 else 6000
+            capacity = int(os.environ.get("GEMINI_TPM", "250000")) - output_limit - 500
             for excerpt_limit in (500, 300, 150, 60, 0):
                 if len(prompt.encode("utf-8")) <= capacity:
                     break
@@ -152,21 +155,25 @@ class Enhancer:
             transient_retries = 0
             while True:
                 # UTF-8 bytes are a deliberately conservative upper bound for input tokens.
-                estimate = len(prompt.encode("utf-8")) + 6000
+                estimate = len(prompt.encode("utf-8")) + output_limit
                 self.budget.reserve(estimate)
                 try:
                     output = client.models.generate_content(
-                        model=self.settings.model,
+                        model=active_model,
                         contents=prompt,
                         config=types.GenerateContentConfig(
                             response_mime_type="application/json",
                             response_schema=AIResponse,
                             temperature=0.1,
-                            max_output_tokens=6000,
+                            max_output_tokens=output_limit,
+                            thinking_config=types.ThinkingConfig(thinking_budget=0),
                         ),
                     )
                 except Exception as exc:
                     code = getattr(exc, "code", None)
+                    if code in {404, 429, 500, 502, 503, 504} and active_model == self.settings.model:
+                        active_model = self.settings.backup_model
+                        continue
                     if code in {500, 502, 503, 504} and transient_retries < 1:
                         transient_retries += 1
                         continue

@@ -64,6 +64,10 @@ def test_configuration_minimal_fields_and_order():
         def admission(self):
             return True
 
+        def update_schedule(self, morning, evening):
+            assert (morning, evening) == ("08:00", "20:00")
+            return False
+
         def variable(self, name, value):
             operations.append(("variable", name, value))
 
