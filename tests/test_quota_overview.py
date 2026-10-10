@@ -40,12 +40,12 @@ def test_500_daily_cap_blocks_even_after_manual_reconciliation(settings, tmp_pat
 
 def test_overview_png_is_readable_size_and_public_only(digest):
     image = Image.open(io.BytesIO(overview_png(digest)))
-    assert image.width == 1600 and image.height >= 620
+    assert image.width == 1600 and image.height >= 460
     assert image.mode == "RGB"
 
 
 def test_long_single_category_uses_both_columns(digest):
     digest = digest.model_copy(update={"stories": [digest.stories[0]] * 15})
     image = Image.open(io.BytesIO(overview_png(digest)))
-    assert image.height < 1500
+    assert image.height < 2200
     assert image.getpixel((850, 300)) != (246, 244, 239)

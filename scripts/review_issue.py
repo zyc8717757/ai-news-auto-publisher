@@ -148,6 +148,8 @@ def main():
     rejected = [r.event_id for r in review.reviews if not r.approved]
     if rejected:
         print(json.dumps({"status": "correction_review_veto", "event_ids": rejected}))
+        if spec.get("require_all", False):
+            raise ValueError("Layout verification requires unchanged approved content")
         stories = [s for s in stories if s.id not in rejected]
     if not stories:
         raise ValueError("No stories passed correction review")
@@ -157,7 +159,7 @@ def main():
             "revision": base.revision + 1,
             "created_at": datetime.now(UTC),
             "stories": stories,
-            "warnings": [*base.warnings, "fact_correction_reviewed"],
+            "warnings": list(dict.fromkeys([*base.warnings, "fact_correction_reviewed"])),
         }
     )
     store.state.issues[digest.key] = IssueState()
