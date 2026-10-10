@@ -50,6 +50,14 @@
       "stage": "budget_blocked",
       "reason": "ai_issue_budget_exhausted",
       "extra_test": true
+    },
+    {
+      "at": "2026-10-10T09:28:58.917889Z",
+      "issue": "2026-10-10-am",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "provider_error",
+      "reason": "ai_provider_http_400",
+      "extra_test": true
     }
   ],
   "ai_reserved_tokens": [
