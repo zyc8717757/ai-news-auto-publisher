@@ -47,4 +47,4 @@
 
 实现代码独立编写，使用 MIT。参考 TrendRadar / Hot News Radar 的功能组织，不直接复制 GPL 代码；参考 AI News Brief 的来源覆盖方向，当前来源列表独立维护。AI Digest 未确认明确许可，不复制代码。Python/npm 依赖保留各自许可证，`twitter-text` 为 Apache-2.0。
 
-官方接口参考：Gemini Developer API `generate_content` + `response_schema`、RSS/Atom、GitHub Releases REST、SMTP、GitHub Pages 部署。没有 OpenAI API、X API 或私人账号浏览器自动化依赖。
+官方接口参考：Gemini Developer API `generate_content` + `response_json_schema`、RSS/Atom、GitHub Releases REST、SMTP、GitHub Pages 部署。严格JSON Schema通过新参数直接传送，避免SDK将additionalProperties等字段放入旧版protobuf responseSchema；响应仍经过Pydantic及证据检查。没有 OpenAI API、X API 或私人账号浏览器自动化依赖。

@@ -175,3 +175,42 @@ def test_provider_failure_never_echoes_secret():
 
     error = RuntimeError("API key not valid: PRIVATE_SHOULD_NEVER_APPEAR")
     assert provider_failure(error) == "ai_key_invalid"
+
+
+def test_real_sdk_sends_json_schema_instead_of_legacy_proto_schema(
+    settings, tmp_path, monkeypatch, source_item
+):
+    import httpx
+    from google import genai
+    from google.genai import types
+
+    settings.ai_enabled = True
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    event = NewsEvent(id="event", evidence=[source_item])
+    captured = []
+
+    def transport(request):
+        config = json.loads(request.content)["generationConfig"]
+        captured.append(config)
+        return httpx.Response(
+            200,
+            json={
+                "candidates": [
+                    {
+                        "content": {"role": "model", "parts": [{"text": response(event).model_dump_json()}]},
+                        "finishReason": "STOP",
+                    }
+                ]
+            },
+        )
+
+    client = genai.Client(
+        api_key="DUMMY_NOT_REAL",
+        vertexai=False,
+        http_options=types.HttpOptions(httpx_client=httpx.Client(transport=httpx.MockTransport(transport))),
+    )
+    output = Enhancer(settings, Store(tmp_path), client).enhance([event])
+    assert output.stories[0].event_id == "event"
+    assert "responseSchema" not in captured[0]
+    assert captured[0]["responseJsonSchema"]["additionalProperties"] is False
+    assert "additional_properties" not in json.dumps(captured[0]["responseJsonSchema"])

@@ -39,6 +39,7 @@ def provider_failure(exc: Exception) -> str:
         ("api_key_service_blocked", "ai_api_blocked"),
         ("location is not supported", "ai_region_unavailable"),
         ("additionalproperties", "ai_schema_unsupported"),
+        ("additional_properties", "ai_schema_unsupported"),
         ("thinking_budget", "ai_thinking_config_unsupported"),
     ):
         if marker in message:
@@ -203,7 +204,8 @@ class Enhancer:
                         contents=prompt,
                         config=types.GenerateContentConfig(
                             response_mime_type="application/json",
-                            response_schema=AIResponse,
+                            # The legacy responseSchema protobuf cannot represent strict JSON Schema.
+                            response_json_schema=AIResponse.model_json_schema(),
                             temperature=0.1,
                             max_output_tokens=output_limit,
                             thinking_config=types.ThinkingConfig(thinking_budget=0),
