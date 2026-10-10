@@ -16,7 +16,9 @@ def test_correction_cannot_change_evidence_or_base():
         module.corrected(base, {"base_key": "wrong", "updates": {}})
     with pytest.raises(ValueError):
         module.corrected(base, {"base_key": base.key, "updates": {story.id: {"sources": []}}})
-    updated = module.corrected(base, {"base_key": base.key, "updates": {story.id: {"title": "经原文核实的标题"}}})
+    updated = module.corrected(
+        base, {"base_key": base.key, "updates": {story.id: {"title": "经原文核实的标题"}}}
+    )
     assert updated[0].sources == story.sources
     assert updated[0].title != story.title
     assert base.stories[0].title == story.title

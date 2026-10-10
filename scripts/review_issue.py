@@ -6,11 +6,12 @@ import os
 from datetime import UTC, datetime
 from pathlib import Path
 
+from bs4 import BeautifulSoup
 from google import genai
 from google.genai import types
 
 from ai_news.ai import validate_response
-from ai_news.collector import article_metadata
+from ai_news.collector import article_metadata, plain
 from ai_news.config import load_config
 from ai_news.editorial import EditorialEnhancer, Reviews, evidence_payload
 from ai_news.models import AIResponse, AIStory, Digest, IssueState, NewsEvent, SourceItem, Story
@@ -34,6 +35,7 @@ def corrected(base, spec):
 async def originals(stories):
     http = PublicHTTP(20)
     events = []
+    review_texts = {}
     for story in stories:
         evidence = []
         for ref in story.sources:
@@ -43,6 +45,20 @@ async def originals(stories):
                 print(json.dumps({"status": "correction_source_unavailable", "evidence_id": ref.id}))
                 raise
             title, excerpt, *_ = article_metadata(page.text)
+            body = page.text
+            # Discourse's HTML shell often omits the actual announcement. Use
+            # its public first-post JSON, preserving the frozen evidence URL/ID.
+            if ref.source_id == "primary-openai-community" or "community.openai.com/t/" in ref.url:
+                topic = await http.get(ref.url.rstrip("/") + ".json")
+                body = json.loads(topic.text)["post_stream"]["posts"][0]["cooked"]
+                excerpt = plain(body, 1600)
+            soup = BeautifulSoup(body, "html.parser")
+            for node in soup(["script", "style", "nav", "footer", "header"]):
+                node.decompose()
+            article = soup.find("article") or soup.find("main") or soup
+            # Full evidence is transient review input only, never public state,
+            # logs, artifacts or copied original-text archives.
+            review_texts[ref.id] = plain(str(article), 12000)
             if not title or not excerpt:
                 raise ValueError("Original evidence unavailable")
             evidence.append(
@@ -53,7 +69,7 @@ async def originals(stories):
                 )
             )
         events.append(NewsEvent(id=story.id, evidence=evidence))
-    return events
+    return events, review_texts
 
 
 def main():
@@ -76,7 +92,7 @@ def main():
         atomic_write(Path(".runtime/result.json"), json.dumps(result))
         return
     stories = corrected(base, spec)
-    events = asyncio.run(originals(stories))
+    events, review_texts = asyncio.run(originals(stories))
     summaries = [
         AIStory(
             event_id=s.id,
@@ -113,11 +129,17 @@ def main():
         if len(result.reviews) != len(expected) or {r.event_id for r in result.reviews} != expected:
             raise ValueError("Review event mismatch")
 
+    payload = []
+    for summary, event in zip(summaries, events):
+        source_input = evidence_payload(event)
+        for evidence in source_input["evidence"]:
+            evidence["excerpt"] = review_texts[evidence["id"]]
+        payload.append({"story": summary.model_dump(), "input": source_input})
     review = enhancer.call(
         client,
         "\n只做事实终审，逐条检查数字、币种、数量级、发布时态、归因和前瞻标记。不要重新选稿。"
         "影响分析可以为合理的可能性；官方声明可有归因地报道。每个外层event_id给approved及原因。",
-        [{"story": s.model_dump(), "input": evidence_payload(e)} for s, e in zip(summaries, events)],
+        payload,
         Reviews,
         "correction_review",
         3000,
@@ -126,7 +148,9 @@ def main():
     rejected = [r.event_id for r in review.reviews if not r.approved]
     if rejected:
         print(json.dumps({"status": "correction_review_veto", "event_ids": rejected}))
-        raise ValueError("Correction must pass review before publication")
+        stories = [s for s in stories if s.id not in rejected]
+    if not stories:
+        raise ValueError("No stories passed correction review")
     digest = Digest.model_validate(
         {
             **base.model_dump(),
