@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-10-pm",
+  "revision": 3,
+  "created_at": "2026-10-10T18:28:42.925828Z",
+  "cutoff": "2026-10-10T12:30:00Z",
+  "window_start": "2026-10-08T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "fb900a38eb855015e847",
+      "title": "Introducing Microsoft-Decision-1, our model for fast decision-making",
+      "summary": "Our new decision-scoring model delivers top performance in latency and quality on structured decision tasks to outperform both LLMs and other decision models. Input tokens cost $0.042 USD per million tokens. Output tokens are free. Deep Dive Share in r x f Introducing Microsoft-Decision-1, our model for fast decision-making Introducing Microsoft-Decision-1, our model for fast decision-making Our new decision-scoring model delivers top performance in latency and quality on structured decision tas",
+      "impact": "",
+      "category": "来源原文",
+      "score": 81.59,
+      "sources": [
+        {
+          "id": "fb900a38eb855015e847",
+          "source_id": "primary-microsoft",
+          "source_name": "Microsoft",
+          "group": "microsoft",
+          "trust": "official",
+          "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+          "title": "Introducing Microsoft-Decision-1, our model for fast decision-making",
+          "published_at": "2026-10-10T01:35:51Z",
+          "time_precision": "exact",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "microsoft"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "5f1594e91430d81933b8",
+      "title": "Project Beacon: Bringing safety signals to open models at scale",
+      "summary": "Baseten partners with Goodfire AI to bring safety controls to open model inference. Published October 9, 2026 The breadth and depth of what AI touches across an organization is growing. Models and agents read internal documents, call tools, push to production systems, and run multi-step workflows autonomously. At the same time, new frontier models are released weekly (sometimes daily), with most teams regularly swapping the old for the new and running different constellations of models side-by-s",
+      "impact": "",
+      "category": "来源原文",
+      "score": 78.92,
+      "sources": [
+        {
+          "id": "5f1594e91430d81933b8",
+          "source_id": "primary-baseten",
+          "source_name": "Baseten",
+          "group": "baseten",
+          "trust": "official",
+          "url": "https://www.baseten.co/blog/safe-open-models-baseten-goodfire/",
+          "title": "Project Beacon: Bringing safety signals to open models at scale",
+          "published_at": "2026-10-09T17:01:47Z",
+          "time_precision": "exact",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "e53d362bf380fa3a299a",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. Alignment Investigating unintended model actions in our evaluations and internal use Oct 9, 2026 This report describes examples of unintended model actions we’ve observed during evaluations and internal use of Claude. It is part of our effort to publish more frequent standalone reports on model behavior and alignment beyond our system cards, which we publish with each model r",
+      "impact": "",
+      "category": "来源原文",
+      "score": 78.64,
+      "sources": [
+        {
+          "id": "e53d362bf380fa3a299a",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+          "title": "Investigating unintended model actions in our evaluations and internal use",
+          "published_at": "2026-10-09T16:09:00Z",
+          "time_precision": "exact",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "07b0b6702e7dac0cddad",
+      "title": "Investing in TypeSafe AI",
+      "summary": "a16z leads investment in TypeSafe AI The $1 Trillion AI Buildout | State of Markets David George, Sarah Wang, Alex Immerman, and Santiago Rodriguez Infra Investing in TypeSafe AI Jennifer Li , Sarah Wang , Martin Casado , Marc Andreessen , and Ben Horowitz Posted October 9, 2026 Subscribe Share Share Email X LinkedIn Facebook Hacker News WhatsApp Flipboard Reddit Share Share Email X LinkedIn Facebook Hacker News WhatsApp Flipboard Reddit The Jev launch is the biggest narrative violation we’ve se",
+      "impact": "",
+      "category": "来源原文",
+      "score": 74.24,
+      "sources": [
+        {
+          "id": "f249031f0f0688c60506",
+          "source_id": "primary-a16z",
+          "source_name": "a16z",
+          "group": "a16z",
+          "trust": "official",
+          "url": "https://a16z.com/announcement/investing-in-typesafe-ai/",
+          "title": "Investing in TypeSafe AI",
+          "published_at": "2026-10-09T16:28:01Z",
+          "time_precision": "exact",
+          "source_date": ""
+        },
+        {
+          "id": "917825c0315309567de6",
+          "source_id": "primary-typesafe",
+          "source_name": "TypeSafe AI",
+          "group": "typesafe",
+          "trust": "official",
+          "url": "https://typesafe.ai/blog/series-ai",
+          "title": "TypeSafe A raises Series AI",
+          "published_at": null,
+          "time_precision": "unknown",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "typesafe"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "b3808fecf6462b6a3538",
+      "title": "Fresh dots updates: Create in the mobile app, delegate to Codex",
+      "summary": "First up: you can now create your dot straight from your phone in the ChatGPT app on iOS and Android. Delegate work in Codex to your dot. Your dot can now start work in Codex and follow up on existing threads, drawing on your ChatGPT conversations, Codex threads, and automations. It’s also better at deciding when to keep a thread going or start fresh. Your dot can also review and edit Scheduled Tasks in ChatGPT Work , too. Ask what’s scheduled or update a recurring task as plans change. And fina",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.74,
+      "sources": [
+        {
+          "id": "b3808fecf6462b6a3538",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/fresh-dots-updates-create-in-the-mobile-app-delegate-to-codex/1404834",
+          "title": "Fresh dots updates: Create in the mobile app, delegate to Codex",
+          "published_at": "2026-10-09T19:40:23.566000Z",
+          "time_precision": "exact",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "4a9f5b72faa10f5cb24b",
+      "title": "Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash",
+      "summary": "We are expanding the Clef decision model family with Clef-omni, natively processing audio, video, images, and text in a single pipeline. We’ve also lowered Clef-flash pricing and boosted Clef inference speeds by up to 2.0x.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.36,
+      "sources": [
+        {
+          "id": "4a9f5b72faa10f5cb24b",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
+          "title": "Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash",
+          "published_at": "2026-10-09T18:27:34Z",
+          "time_precision": "exact",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "e05551817b225bef5e8c",
+      "title": "Impactful scheduling for GPU clusters",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.39,
+      "sources": [
+        {
+          "id": "e05551817b225bef5e8c",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/allenai/impactful-scheduling",
+          "title": "Impactful scheduling for GPU clusters",
+          "published_at": "2026-10-09T15:20:29Z",
+          "time_precision": "exact",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "3854715ee3f870a4d32a",
+      "title": "Deno is joining Cloudflare",
+      "summary": "The Deno team is joining Cloudflare to radically simplify self-hosting Workers and Durable Objects, so developers can use the same primitives in more places. Blog Acquisitions Durable Objects JavaScript +1 Show 1 more tags 4 Tags Show 4 tags Post Tags Acquisitions Durable Objects JavaScript Workers All tags Matching tags No tags found 1.1.1.1 2FA Abuse Access Access Control Lists (ACLs) Accessibility Account Takeover Acquisitions Addressing Advanced Certificate Manager Advanced DDoS Advertising ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.6,
+      "sources": [
+        {
+          "id": "3854715ee3f870a4d32a",
+          "source_id": "primary-cloudflare",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/deno-joins-cloudflare/",
+          "title": "Deno is joining Cloudflare",
+          "published_at": "2026-10-09T12:50:00Z",
+          "time_precision": "exact",
+          "source_date": ""
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
