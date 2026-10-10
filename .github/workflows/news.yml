@@ -1,9 +1,9 @@
 name: News Publisher
 on:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '30 8 * * *'
       timezone: Asia/Shanghai
-    - cron: '0 20 * * *'
+    - cron: '30 20 * * *'
       timezone: Asia/Shanghai
   workflow_dispatch:
     inputs:

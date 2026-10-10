@@ -4,8 +4,8 @@ email_enabled: false
 base_url: https://example.github.io/ai-news-auto-publisher
 model: gemini-2.5-flash-lite
 backup_model: gemini-2.5-flash
-morning_time: '08:00'
-evening_time: '20:00'
+morning_time: '08:30'
+evening_time: '20:30'
 max_items: 15
 max_candidates: 300
 ai_candidates: 30
