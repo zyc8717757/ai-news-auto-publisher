@@ -25,6 +25,9 @@ PROMPT = """你是中文AI新闻编辑，面向普通AI兴趣读者。输入是�
 不要把不同版本或同公司不同事件合并。不要添加无关议题。返回严格符合schema的JSON。
 每条摘要尽量60–100个中文字，影响分析20–50个字，标题简洁。
 """
+PROMPT += "\n只输出JSON，不要Markdown代码围栏。JSON结构：\n" + json.dumps(
+    AIResponse.model_json_schema(), ensure_ascii=False
+)
 
 
 class AIUnavailable(RuntimeError):
@@ -206,18 +209,24 @@ class Enhancer:
     def generate_text(self, client, model: str, prompt: str, output_limit: int) -> str:
         # Use the same stateless endpoint proven by the one-request cloud probe.
         # New models choose their own thinking defaults; 2.5 retains its supported budget.
+        # This project's 3.5 endpoint accepts plain generation but rejects the configured
+        # structured request with generic INVALID_ARGUMENT. Keep the contract in the
+        # prompt and validate locally; never silently resend a rejected 400 request.
+        config = (
+            types.GenerateContentConfig(max_output_tokens=output_limit)
+            if model.startswith("gemini-3.")
+            else types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_json_schema=AIResponse.model_json_schema(),
+                temperature=0.1,
+                max_output_tokens=output_limit,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+            )
+        )
         output = client.models.generate_content(
             model=model,
             contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                response_json_schema=AIResponse.model_json_schema(),
-                temperature=1.0 if model.startswith("gemini-3.") else 0.1,
-                max_output_tokens=output_limit,
-                thinking_config=(
-                    None if model.startswith("gemini-3.") else types.ThinkingConfig(thinking_budget=0)
-                ),
-            ),
+            config=config,
         )
         return output.text or ""
 

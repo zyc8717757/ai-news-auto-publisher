@@ -57,3 +57,6 @@ Gemini 调用统一使用 SDK 2.29 的 generateContent，固定 Developer API v1
 2026-10-10 配额校准：按所有者 AI Studio 截图，Gemini 3.5 Flash-Lite 为 15 RPM / 250,000 TPM / 500 RPD，后台显示当日用量 2。历史 10 次请求尝试完整保留，另记有时间和证据类型的 `ai_quota_snapshot`，不将失败尝试直接解释为后台计费或配额用量。校准后每次尝试（包括失败）继续保守占用配额；429 仍是服务端最终约束。此快照不是实时遥测，其他应用共享项目时也会消耗额度。每期 5 次限制不变，备用模型不继承 3.5 的提高后配额。
 
 每期汇总图由 `overview` 使用 Pillow 与系统中文字体从公开定稿生成，包含全部精选标题和真实分类，不额外请求 AI。PNG 随公开站点发布，邮件附上两个私有 TXT 草稿和一张公开 PNG。Linux 运行器安装 fonts-noto-cjk；本机使用微软雅黑。图片不包含邮箱、草稿或认证信息。
+
+
+3.5 结构化请求兼容修复：2026-10-10 晚报实测带 responseJsonSchema 等配置的 generateContent 返回 HTTP 400 / INVALID_ARGUMENT，message仅“Request contains an invalid argument.”，details为空；因此无法精确归因某个字段。针对当前项目，3.x改用普通文本生成，仅保留输出token上限，完整JSON契约放在提示中；Pydantic字段、中文、事件集合、证据ID和数字校验全部保留。非法输出不进入日报，最多一次格式修复。2.5保留原结构化输出参数。并非自动重试400，而是修复代码后显式升级冻结日报。

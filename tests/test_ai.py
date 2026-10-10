@@ -290,7 +290,7 @@ def test_modern_generate_content_has_no_hidden_retry(settings, tmp_path, source_
     body = json.loads(captured[0].content)
     assert not body.get("tools")
     assert "thinkingConfig" not in body["generationConfig"]
-    assert "responseJsonSchema" in body["generationConfig"]
+    assert body["generationConfig"] == {"maxOutputTokens": 6000}
 
 
 def test_date_claims_use_the_supplied_publication_evidence(source_item):
