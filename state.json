@@ -13,6 +13,12 @@
     "2026-10-10T09:28:56.782080Z",
     "2026-10-10T13:11:29.083862Z"
   ],
+  "ai_quota_snapshot": {
+    "observed_at": "2026-10-10T13:31:46.230464Z",
+    "model": "gemini-3.5-flash-lite",
+    "used": 2,
+    "evidence": "owner_ai_studio_screenshot"
+  },
   "ai_issue_attempts": {
     "2026-10-10-am": 5
   },
