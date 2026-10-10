@@ -174,14 +174,14 @@ class GitHub:
             return False
         for field, value in (("morning_time", morning), ("evening_time", evening)):
             files["config/settings.yaml"], count = re.subn(
-                rf"(?m)^{field}:.*$", f"{field}: '{value}'", files["config/settings.yaml"]
+                rf"(?m)^{field}:[^\r\n]*(\r?)$", lambda match: f"{field}: '{value}'{match[1]}", files["config/settings.yaml"]
             )
             if count != 1:
                 raise RuntimeError("Unexpected schedule configuration layout")
         crons = iter((cron_for(morning), cron_for(evening)))
         files[".github/workflows/news.yml"], count = re.subn(
-            r"(?m)^(    - cron:) '[^']*'$",
-            lambda match: f"{match[1]} '{next(crons)}'",
+            r"(?m)^(    - cron:) '[^'\r\n]*'(\r?)$",
+            lambda match: f"{match[1]} '{next(crons)}'{match[2]}",
             files[".github/workflows/news.yml"],
         )
         if count != 2:
