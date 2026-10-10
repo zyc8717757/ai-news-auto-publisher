@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-10-pm",
+  "revision": 1,
+  "created_at": "2026-10-10T13:37:42.664239Z",
+  "cutoff": "2026-10-10T12:30:00Z",
+  "window_start": "2026-10-10T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "000ed3bf33caa6ac14e2",
+      "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
+      "summary": "arXiv:2610.11352v1 Announce Type: new Abstract: Language models (LMs) are commonly trained with Reinforcement Learning with Verifiable Rewards (RLVR) to enhance their reasoning capabilities. However, since RLVR does not explicitly account for calibration during training, it can lead to severe calibration degradation, including overconfidence. Recent calibration-aware training methods for LMs, which incorporate objectives for uncertainty estimation into training, improve calibration but still exh",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "000ed3bf33caa6ac14e2",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11352",
+          "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "50dffc340fef0b39faea",
+      "title": "Writing for the Reviewer: Defensive Writing in GPT Models",
+      "summary": "arXiv:2610.11355v1 Announce Type: new Abstract: Researchers increasingly use ChatGPT to revise their papers, and recent GPT versions often narrow or even retract the authors' claims. We call such changes defensive writing when the given material does not support them, and we test two explanations: the model corrects the authors' overclaiming, or it writes for an anticipated reviewer. We ask GPT versions and models from other developers to rewrite paragraphs from papers written before ChatGPT, or",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "50dffc340fef0b39faea",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11355",
+          "title": "Writing for the Reviewer: Defensive Writing in GPT Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "795b51132cf40a82f8c9",
+      "title": "EvoSim: Learning to Model, Modeling to Learn",
+      "summary": "arXiv:2610.11344v1 Announce Type: new Abstract: Physics-based models connect scientific explanation with quantitative prediction. Constructing them requires selecting physical processes, defining states and governing equations, specifying couplings, and identifying parameters from experiments. Existing AI systems remain limited in making these model structure decisions autonomously. We introduce EvoSim, a self-evolving AI scientist for physical modeling. It uses experimental discrepancies to dri",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "795b51132cf40a82f8c9",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11344",
+          "title": "EvoSim: Learning to Model, Modeling to Learn",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "8b70838dccddef4d04f5",
+      "title": "Equal Path Cost, Unequal Output Effects: Understanding Perturbation Propagation in Diffusion Models",
+      "summary": "arXiv:2610.11380v1 Announce Type: new Abstract: Diffusion models have achieved remarkable success in generative modeling, with their sampling procedures routinely modified to control generation and improve efficiency. These modifications introduce perturbations along the sampling trajectory, raising a central question: how do such perturbations affect generated output? To address this question, we develop a theoretical framework to investigate perturbation propagation, combining dynamical analys",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "8b70838dccddef4d04f5",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11380",
+          "title": "Equal Path Cost, Unequal Output Effects: Understanding Perturbation Propagation in Diffusion Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "bce449da7a2298faee9e",
+      "title": "Harness Compilation: Which Decisions Should a Small Vision-Language Model Keep?",
+      "summary": "arXiv:2610.11231v1 Announce Type: new Abstract: Small vision-language models may be able to read external evidence yet struggle to obtain it. We introduce Harness Compilation (HC), an offline procedure that adapts the division of work between a frozen small VLM and its external harness. A large teacher uses student execution traces to revise reusable content and control, while a separate validation set selects the deployed harness. Deployment requires neither weight updates nor teacher calls. Ac",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "bce449da7a2298faee9e",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11231",
+          "title": "Harness Compilation: Which Decisions Should a Small Vision-Language Model Keep?",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "ca2a654b6e9f9d2e037e",
+      "title": "TypedBench: A Benchmark for Calibration, Framing Sensitivity, and Cost in System One Decision Models",
+      "summary": "arXiv:2610.11392v1 Announce Type: new Abstract: System One models output calibrated probabilities over typed answers such as categorical choices, ordinal levels, or binary outcomes, via a non-generative interface. Software can act on these probabilities through thresholds, cost-weighted choices, and escalation rules. Consequently, if these probabilities are miscalibrated or wording-sensitive, the software ma take unintended actions leaving human operators with no textual rationale to inspect. Cu",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "ca2a654b6e9f9d2e037e",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11392",
+          "title": "TypedBench: A Benchmark for Calibration, Framing Sensitivity, and Cost in System One Decision Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "cca18e5b06768269fc32",
+      "title": "Estimating great expectations under autoregressive language models with potentials",
+      "summary": "arXiv:2610.11399v1 Announce Type: new Abstract: Many applications of language models hinge not on individual samples but on the expectation of a test functional under the model. Estimating such expectations reliably can be computationally expensive. In this paper, we show how to make estimation more efficient by exploiting the next-token conditional probabilities which are available as a by-product of sampling. We do so through potentials: real-valued functions on prefixes that decompose the tes",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "cca18e5b06768269fc32",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11399",
+          "title": "Estimating great expectations under autoregressive language models with potentials",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "ce6ca28e99a1250e2145",
+      "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
+      "summary": "arXiv:2610.11253v1 Announce Type: new Abstract: Large language model agents are being increasingly deployed as autonomous scientists, designing experiments and inferring mechanistic world models with minimal human oversight. Yet identifiability is often overlooked: when a plateau is reached, the agent needs to know whether it is not yet capable enough or the model simply is not identifiable from the data, in which case no amount of further experimentation of the same kind can help. We propose th",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "ce6ca28e99a1250e2145",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11253",
+          "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "d552aa93099035d01308",
+      "title": "Curating Always-Loaded Context for LLM Agents: A Capacitated Assortment Model with Censored Feedback",
+      "summary": "arXiv:2610.11007v1 Announce Type: new Abstract: At the start of every session, LLM agents load a fixed context file, such as $\\texttt{AGENTS.md}$. Each loaded token in the file is charged again in every later round of the session, and these files can degrade performance as they grow in size. However, in practice, human or automated curators usually grow these files by appending. We formulate context curation as a capacitated assortment problem. Instructions consume tokens under a finite attentio",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "d552aa93099035d01308",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11007",
+          "title": "Curating Always-Loaded Context for LLM Agents: A Capacitated Assortment Model with Censored Feedback",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "dc9248cb5ace6d3f4648",
+      "title": "Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation",
+      "summary": "arXiv:2610.11384v1 Announce Type: new Abstract: Reinforcement learning is commonly used to train language agents in interactive environments, but cannot be directly applied when rewards are unavailable. Recent methods use environmental feedback as privileged context for hindsight self-distillation, but our analysis suggests that simply conditioning the teacher on feedback is insufficient, motivating us to rethink how environmental feedback is used in agentic self-distillation. Given that environ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "dc9248cb5ace6d3f4648",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11384",
+          "title": "Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "de3301f4821ae8ca18c2",
+      "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
+      "summary": "arXiv:2610.10786v1 Announce Type: new Abstract: Planning is increasingly important for long-horizon agents, where successful execution requires coordinating subgoals, tool use, and intermediate outcomes over many steps. Yet assumptions made during planning may be invalidated by the environment, tools may return unexpected results, or actions may fail. Effective agents must therefore not only generate plans, but also revise them. Such revisions often affect only part of a plan, leaving the preced",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "de3301f4821ae8ca18c2",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.10786",
+          "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "f27da46463754f114a59",
+      "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+      "summary": "arXiv:2610.11358v1 Announce Type: new Abstract: Cross-model KV-cache reuse remains a key challenge in modern LLM serving. Coding agents and multi-model systems increasingly route a shared context across models: a user may switch models mid-session, or a cascade may escalate a difficult query. Because KV caches contain model-specific representations, each switch typically forces the receiving model to prefill the entire context from scratch. Recent work shows that closed-form linear maps can tran",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.34,
+      "sources": [
+        {
+          "id": "f27da46463754f114a59",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11358",
+          "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "04a3afe8fc92fa04289a",
+      "title": "An Explainable Header-Centric Framework for Large-Scale Semantic Table Interpretation and Data Quality Assessment",
+      "summary": "arXiv:2610.10541v1 Announce Type: new Abstract: Knowledge Graph (KG) quality depends not only on downstream graph validation, but also on the quality of tabular metadata used before integration. In metadata-only Semantic Table Interpretation (STI), where cell values are unavailable, noisy, or unsuitable, column headers become a critical source of semantic evidence for traceable KG preparation. We present an explainable, header-centric framework for metadata-only Column Type Annotation (CTA) and ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.34,
+      "sources": [
+        {
+          "id": "04a3afe8fc92fa04289a",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.10541",
+          "title": "An Explainable Header-Centric Framework for Large-Scale Semantic Table Interpretation and Data Quality Assessment",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "1322a304a3c5e6527676",
+      "title": "Verification and Self-Improvement in Agentic AI: Foundations and Limits",
+      "summary": "arXiv:2610.10611v1 Announce Type: new Abstract: Agentic AI systems can improve by searching longer, receiving additional support, or modifying how they propose and verify outputs. A performance score does not distinguish these mechanisms. We compare these changes through bounded verification with hidden terminal randomness. A stage specifies admissible transcripts, polynomial bounds, an alternating verification protocol, and a terminal checker. Its native reach uses default support; its closure ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.34,
+      "sources": [
+        {
+          "id": "1322a304a3c5e6527676",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.10611",
+          "title": "Verification and Self-Improvement in Agentic AI: Foundations and Limits",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "159bdd18a62dbad86214",
+      "title": "AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks",
+      "summary": "arXiv:2610.11050v1 Announce Type: new Abstract: Computer-use agents are capable of completing complex tasks, increasing the use of automatic judges to determine success, either for training or for evaluation without human involvement. Despite their flexibility, their reliability on long tasks spanning multiple applications remains unclear. A trajectory, composed of long sequences of screenshots and actions, may appear complete, but in reality violates constraints from the instruction or introduc",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.34,
+      "sources": [
+        {
+          "id": "159bdd18a62dbad86214",
+          "source_id": "arxiv-ai",
+          "source_name": "arXiv Artificial Intelligence",
+          "group": "arxiv",
+          "trust": "research",
+          "url": "https://arxiv.org/abs/2610.11050",
+          "title": "AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks",
+          "published_at": "2026-10-10T04:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1
+}

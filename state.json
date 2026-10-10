@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-10-10T00:30:00Z",
+  "last_covered_at": "2026-10-10T12:30:00Z",
   "ai_attempts": [
     "2026-10-10T06:47:17.108587Z",
     "2026-10-10T06:56:40.647061Z",
@@ -115,15 +115,15 @@
       "error_code": "connection_failed"
     },
     "microsoft-research": {
-      "etag": "\"19b69f068456ef295d53656730f9bad3\"",
-      "modified": "Sat, 10 Oct 2026 03:22:56 GMT",
+      "etag": "\"bf68bb5c4d5f88d21c61433fe95db1a6\"",
+      "modified": "Sat, 10 Oct 2026 10:45:33 GMT",
       "status": "ok",
       "error_code": ""
     },
     "nvidia": {
       "etag": "\"164a6d18b55bb2370f43ce628fd72ae4-gzip\"",
       "modified": "Thu, 08 Oct 2026 21:07:24 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "mistral": {
@@ -139,7 +139,7 @@
       "error_code": "connection_failed"
     },
     "pytorch": {
-      "etag": "W/\"718626ad516fb0f327905376dc5c95f355df1ef92fb8eedc2c956f65c9b0f778\"",
+      "etag": "W/\"6178f0eae55e6bc56208c7833ce6d70d0f1c480b1996d492fdd0a13b6fbb7e33\"",
       "modified": "",
       "status": "ok",
       "error_code": ""
@@ -147,23 +147,23 @@
     "transformers": {
       "etag": "W/\"f9cca1edbc92b77f8ae83c8a0e3997a083b420e868ab9772622f2bc37db3f264\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "diffusers": {
       "etag": "W/\"9f29cbb89543fce87135b9bf9d5a2df0a056c50e11b696dd8fc097a4204951c1\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "vllm": {
-      "etag": "W/\"47330189f2f57a634d4a913c5dc38f03488ccb92e5dcfff854b43e8ac843c2e4\"",
+      "etag": "W/\"05fa76bd70dcfe86ddad4baf3c21d4ec8542e579683d5b2e6344eb65865f0a9f\"",
       "modified": "",
       "status": "ok",
       "error_code": ""
     },
     "ollama": {
-      "etag": "W/\"fdf9a975c02088a4bdc6fa21851a09b4f93a4365b8ab537255c1f381f839ad66\"",
+      "etag": "W/\"b4832270dff4f05c80e424a16e0ca9966ea625a801acb13bb083af10c31d99d3\"",
       "modified": "",
       "status": "ok",
       "error_code": ""
@@ -175,7 +175,7 @@
       "error_code": "parse_failed"
     },
     "langchain": {
-      "etag": "W/\"26e2d9f7afbd04799929155692b16085c911574808bcd5267d2dc14533e4edb2\"",
+      "etag": "W/\"3f0c50a4e308358f91bcca8de779d099d76d777c44aa9b562d46c6692d775f46\"",
       "modified": "",
       "status": "ok",
       "error_code": ""
@@ -183,17 +183,17 @@
     "langgraph": {
       "etag": "W/\"e793e73a6b7fc4438aa94554e409b3abaf958355e12470d8eabb133e14d53649\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "litellm": {
       "etag": "W/\"901b082b1331689113c9197d1b152109844a687eb3eee505706b71e4c23e86f1\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "arxiv-ai": {
-      "etag": "",
+      "etag": "f21fc5f04cec1e3e72f6460833ef71297d534333549866f6d61221d851362d41",
       "modified": "",
       "status": "ok",
       "error_code": ""
@@ -201,13 +201,13 @@
     "arxiv-cl": {
       "etag": "85ca85c86e157f02b0cce9af08f59d23efba7f7716bbe7b89a069c0040834aac",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "arxiv-lg": {
       "etag": "6c3210ac4485cc5d568289a9f1a87be55f216f2be1fa75f53d39934750a74487",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "berkeley-bair": {
@@ -225,7 +225,7 @@
     "techcrunch-ai": {
       "etag": "W/\"35e060e953d729657ac825bd58519583\"",
       "modified": "Sat, 10 Oct 2026 05:47:16 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": ""
     },
     "venturebeat-ai": {
@@ -236,12 +236,12 @@
     },
     "ars": {
       "etag": "",
-      "modified": "Sat, 10 Oct 2026 00:52:47 GMT",
+      "modified": "Sat, 10 Oct 2026 12:08:36 GMT",
       "status": "ok",
       "error_code": ""
     },
     "theverge-ai": {
-      "etag": "W/\"31d53264d1bb23a0545aad1f4090312c\"",
+      "etag": "",
       "modified": "",
       "status": "ok",
       "error_code": ""
@@ -261,8 +261,8 @@
     "hackernews": {
       "etag": "",
       "modified": "",
-      "status": "ok",
-      "error_code": ""
+      "status": "error",
+      "error_code": "http_502"
     }
   },
   "issues": {
@@ -270,6 +270,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-10-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -300,6 +305,186 @@
       "entities": [
         "openai"
       ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "000ed3bf33caa6ac14e2",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
+      "urls": [
+        "https://arxiv.org/abs/2610.11352"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "50dffc340fef0b39faea",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Writing for the Reviewer: Defensive Writing in GPT Models",
+      "urls": [
+        "https://arxiv.org/abs/2610.11355"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "795b51132cf40a82f8c9",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "EvoSim: Learning to Model, Modeling to Learn",
+      "urls": [
+        "https://arxiv.org/abs/2610.11344"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "8b70838dccddef4d04f5",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Equal Path Cost, Unequal Output Effects: Understanding Perturbation Propagation in Diffusion Models",
+      "urls": [
+        "https://arxiv.org/abs/2610.11380"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "bce449da7a2298faee9e",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Harness Compilation: Which Decisions Should a Small Vision-Language Model Keep?",
+      "urls": [
+        "https://arxiv.org/abs/2610.11231"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "ca2a654b6e9f9d2e037e",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "TypedBench: A Benchmark for Calibration, Framing Sensitivity, and Cost in System One Decision Models",
+      "urls": [
+        "https://arxiv.org/abs/2610.11392"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "cca18e5b06768269fc32",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Estimating great expectations under autoregressive language models with potentials",
+      "urls": [
+        "https://arxiv.org/abs/2610.11399"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "ce6ca28e99a1250e2145",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
+      "urls": [
+        "https://arxiv.org/abs/2610.11253"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "d552aa93099035d01308",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Curating Always-Loaded Context for LLM Agents: A Capacitated Assortment Model with Censored Feedback",
+      "urls": [
+        "https://arxiv.org/abs/2610.11007"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "dc9248cb5ace6d3f4648",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation",
+      "urls": [
+        "https://arxiv.org/abs/2610.11384"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "de3301f4821ae8ca18c2",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
+      "urls": [
+        "https://arxiv.org/abs/2610.10786"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "f27da46463754f114a59",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+      "urls": [
+        "https://arxiv.org/abs/2610.11358"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "04a3afe8fc92fa04289a",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "An Explainable Header-Centric Framework for Large-Scale Semantic Table Interpretation and Data Quality Assessment",
+      "urls": [
+        "https://arxiv.org/abs/2610.10541"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "1322a304a3c5e6527676",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "Verification and Self-Improvement in Agentic AI: Foundations and Limits",
+      "urls": [
+        "https://arxiv.org/abs/2610.10611"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "159bdd18a62dbad86214",
+      "issue": "2026-10-10-pm",
+      "cutoff": "2026-10-10T12:30:00Z",
+      "title": "AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks",
+      "urls": [
+        "https://arxiv.org/abs/2610.11050"
+      ],
+      "entities": [],
       "versions": [],
       "event_type": "announcement"
     }
