@@ -185,8 +185,7 @@ class Enhancer:
             # The public resource configuration is pinned and protected by physical HTTP-count tests.
             interactions.sdk_configuration.retry_config.strategy = "none"
             interactions.sdk_configuration.retry_config.retry_connection_errors = False
-            output = interactions.create(
-                api_version="v1beta2",
+            raw = interactions.with_raw_response.create(
                 model=model,
                 input=prompt,
                 store=False,
@@ -202,7 +201,18 @@ class Enhancer:
                     "thinking_level": "low" if model == "gemini-3.8-flash" else "minimal",
                 },
             )
-            return output.output_text or ""
+            # Follow the SDK's stable default API version. Preserve compatibility with both
+            # legacy `outputs` and current `steps` response shapes without a second request.
+            body = raw.json()
+            parts = []
+            if isinstance(body.get("output_text"), str):
+                return body["output_text"]
+            for step in body.get("steps", []):
+                if step.get("type") == "model_output":
+                    parts.extend(step.get("content", []))
+            if not parts:
+                parts = body.get("outputs", [])
+            return "".join(part.get("text", "") for part in parts if part.get("type") == "text")
         output = client.models.generate_content(
             model=model,
             contents=prompt,

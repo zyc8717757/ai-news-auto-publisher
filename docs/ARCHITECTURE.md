@@ -49,4 +49,4 @@
 
 官方接口参考：Gemini Developer API `generate_content` + `response_json_schema`、RSS/Atom、GitHub Releases REST、SMTP、GitHub Pages 部署。严格JSON Schema通过新参数直接传送，避免SDK将additionalProperties等字段放入旧版protobuf responseSchema；响应仍经过Pydantic及证据检查。没有 OpenAI API、X API 或私人账号浏览器自动化依赖。
 
-免费新模型改用SDK 2.29的Interactions API（v1beta2）：完整JSON Schema、最小/低思考、显式 `store=false`，无工具、无服务器会话。生成式资源公开retry配置设为none，关闭连接错误重试；实测503及连接错误均只有一次HTTP请求。该契约由真实SDK+MockTransport测试保护，不能仅凭逻辑调用数假定没有SDK隐式重试。2.5兼容路径继续使用generateContent。
+免费新模型改用SDK 2.29的Interactions API，跟随官方SDK默认v1beta：完整JSON Schema、最小/低思考、显式 `store=false`，无工具、无服务器会话。使用官方raw-response接口在内存兼容outputs和steps两种响应，不另发请求。生成式资源公开retry配置设为none，关闭连接错误重试；实测503及连接错误均只有一次HTTP请求。该契约由真实SDK+MockTransport测试保护，不能仅凭逻辑调用数假定没有SDK隐式重试。2.5兼容路径继续使用generateContent。
