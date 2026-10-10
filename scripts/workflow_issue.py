@@ -15,7 +15,10 @@ def main():
     schedule = os.environ.get("SCHEDULE_CRON", "")
     if not schedule:
         cutoff_for(issue)
-    if mode == "check-ai":
+    if mode == "review-issue":
+        subprocess.run(["python", "scripts/review_issue.py"], check=True)
+        result = json.loads(Path(".runtime/result.json").read_text("utf-8"))
+    elif mode == "check-ai":
         subprocess.run(
             ["ai-news", "--data", ".runtime/data", "--remote", "check-ai", "--issue", issue], check=True
         )

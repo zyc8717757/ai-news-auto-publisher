@@ -58,6 +58,7 @@ TEMPLATE = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 </main><footer>来源版权归原作者。本站提供摘要与来源链接，不归档原站全文。更新时间不代表事件发生时间。</footer></body></html>"""
 
 WARNING_TEXT = {
+    "fact_correction_reviewed": "本版已根据原始来源更正金额和事件表述，并完成事实终审。",
     "source_errors": "部分新闻源暂不可用，本期覆盖可能不完整。",
     "ai_unavailable": "免费 AI 增强未完成。",
     "no_new_items": "本期没有符合要求的新资讯。",

@@ -11,7 +11,7 @@ on:
       mode:
         description: 'run / preview / redeploy / send / regenerate / check-sources'
         type: choice
-        options: [run, preview, redeploy, send, regenerate, check-sources, check-ai, enhance-issue, test-enhance, probe-gemini, validate-news]
+        options: [run, preview, redeploy, send, regenerate, check-sources, check-ai, enhance-issue, test-enhance, probe-gemini, validate-news, review-issue]
         default: preview
       issue:
         description: 'Manual live operations require YYYY-MM-DD-am or YYYY-MM-DD-pm'
@@ -136,7 +136,7 @@ jobs:
         run: python scripts/workflow_issue.py
       - name: Build public site
         id: build
-        if: steps.issue.outputs.ready == 'true' && inputs.mode != 'send' && inputs.mode != 'validate-news'
+        if: steps.issue.outputs.ready == 'true' && inputs.mode != 'send' && inputs.mode != 'validate-news' && inputs.mode != 'review-issue'
         env:
           RUN_MODE: ${{ inputs.mode || 'run' }}
         run: ai-news --data .runtime/data build-site
@@ -160,7 +160,7 @@ jobs:
         if: steps.upload.outcome == 'success'
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
       - name: Verify deployment and send private email
-        if: always() && !cancelled() && steps.issue.outputs.ready == 'true' && inputs.mode != 'validate-news'
+        if: always() && !cancelled() && steps.issue.outputs.ready == 'true' && inputs.mode != 'validate-news' && inputs.mode != 'review-issue'
         env:
           ISSUE: ${{ steps.issue.outputs.issue }}
           RUN_MODE: ${{ inputs.mode || 'run' }}

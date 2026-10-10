@@ -217,6 +217,15 @@ def test_money_translation_preserves_units_and_cited_evidence(source_item):
         evidence_ids=[source_item.id],
     )
     validate_response(AIResponse(stories=[story]), [event])
+    story.summary = "该公司宣布融资8.7亿美元，估值达到7.5亿美元。"
+    with pytest.raises(ValueError, match="magnitude"):
+        validate_response(AIResponse(stories=[story]), [event])
+    story.summary = "该公司宣布融资8.7亿欧元，估值达到75亿美元。"
+    with pytest.raises(ValueError, match="currency"):
+        validate_response(AIResponse(stories=[story]), [event])
+    story.summary = "该公司宣布融资八点七亿美元，估值达到七十五亿美元。"
+    with pytest.raises(ValueError, match="Arabic"):
+        validate_response(AIResponse(stories=[story]), [event])
     story.summary = "该公司宣布融资9.7亿美元，估值达到75亿美元。"
     with pytest.raises(ValueError, match="numeric"):
         validate_response(AIResponse(stories=[story]), [event])

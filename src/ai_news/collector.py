@@ -192,6 +192,7 @@ def article_metadata(body: str) -> tuple[str, str, datetime | None, str, str]:
     # Financial details often live in a footnote; retain whole public paragraphs,
     # rather than a mid-number tail or an unrelated navigation/footer fragment.
     financial = []
+    actions = []
     for node in article.find_all(["p", "h5", "h6", "li"]) if article else []:
         paragraph = plain(str(node), 600)
         if (
@@ -199,10 +200,14 @@ def article_metadata(body: str) -> tuple[str, str, datetime | None, str, str]:
             and paragraph not in financial
         ):
             financial.append(paragraph)
+        if re.search(r"expand.*all internal|paused? .*internet|suspend.*access", paragraph, re.I):
+            actions.append(paragraph)
     excerpt = (
         plain(description.get("content", "") if description else "", 250)
         + " "
         + " ".join(financial[:2])[:600]
+        + " "
+        + " ".join(actions[:1])[:500]
         + " "
         + text[:740]
     )
