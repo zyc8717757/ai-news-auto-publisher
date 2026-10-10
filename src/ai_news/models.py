@@ -197,6 +197,7 @@ class RunState(StrictModel):
     schema_version: Literal[1] = 1
     last_covered_at: datetime | None = None
     ai_attempts: list[datetime] = Field(default_factory=list)
+    ai_issue_attempts: dict[str, int] = Field(default_factory=dict)
     ai_reserved_tokens: list[tuple[datetime, int]] = Field(default_factory=list)
     source_cache: dict[str, SourceCache] = Field(default_factory=dict)
     issues: dict[str, IssueState] = Field(default_factory=dict)

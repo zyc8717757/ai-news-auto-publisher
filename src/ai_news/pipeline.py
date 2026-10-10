@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import logging
 from datetime import UTC, datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -80,7 +81,7 @@ def generate(
     mode = "rules"
     if events and settings.ai_enabled:
         try:
-            response = (enhancer or Enhancer(settings, store)).enhance(events)
+            response = (enhancer or Enhancer(settings, store, issue=issue)).enhance(events)
             by_event = {event.id: event for event in events}
             for value in response.stories:
                 event = by_event[value.event_id]
@@ -116,7 +117,8 @@ def generate(
                     )
                 )
             mode = "ai"
-        except AIUnavailable:
+        except AIUnavailable as exc:
+            logging.getLogger(__name__).warning("AI degraded: %s", exc)
             warnings.append("ai_unavailable")
     if mode == "rules":
         for event in events:

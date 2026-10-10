@@ -29,6 +29,28 @@ class AIUnavailable(RuntimeError):
     pass
 
 
+def provider_failure(exc: Exception) -> str:
+    # Classify in memory; never emit provider bodies, echoed API keys or full exceptions.
+    message = str(exc).lower()
+    for marker, reason in (
+        ("api_key_invalid", "ai_key_invalid"),
+        ("api key not valid", "ai_key_invalid"),
+        ("service_disabled", "ai_api_disabled"),
+        ("api_key_service_blocked", "ai_api_blocked"),
+        ("location is not supported", "ai_region_unavailable"),
+        ("additionalproperties", "ai_schema_unsupported"),
+        ("thinking_budget", "ai_thinking_config_unsupported"),
+    ):
+        if marker in message:
+            return reason
+    code = getattr(exc, "code", None)
+    return (
+        f"ai_provider_http_{code}"
+        if isinstance(code, int) and 100 <= code <= 599
+        else "ai_transport_or_client_error"
+    )
+
+
 class Budget:
     def __init__(
         self,
@@ -36,11 +58,13 @@ class Budget:
         store: Store,
         now: Callable[[], datetime] | None = None,
         sleep: Callable[[float], None] = time.sleep,
+        issue: str | None = None,
     ):
         self.settings, self.store = settings, store
         self.now = now or (lambda: datetime.now(UTC))
         self.sleep = sleep
         self.run_calls = 0
+        self.issue = issue
 
     def reserve(self, estimated_tokens: int) -> None:
         rpm = int(os.environ.get("GEMINI_RPM", "5"))
@@ -50,12 +74,17 @@ class Budget:
             raise AIUnavailable("ai_budget_unavailable")
         now = self.now()
         state = self.store.state
+        if self.issue and not state.ai_issue_attempts and state.ai_attempts:
+            # Upgrade old ledgers conservatively; don't reset already consumed calls during testing.
+            state.ai_issue_attempts[self.issue] = len(state.ai_attempts)
         state.ai_attempts = [t for t in state.ai_attempts if t > now - timedelta(hours=24)]
         state.ai_reserved_tokens = [
             (t, n) for t, n in state.ai_reserved_tokens if t > now - timedelta(minutes=1)
         ]
         if self.run_calls >= self.settings.ai_run_limit or len(state.ai_attempts) >= rpd:
             raise AIUnavailable("ai_budget_exhausted")
+        if self.issue and state.ai_issue_attempts.get(self.issue, 0) >= self.settings.ai_run_limit:
+            raise AIUnavailable("ai_issue_budget_exhausted")
         recent = [t for t in state.ai_attempts if t > now - timedelta(minutes=1)]
         if len(recent) >= rpm or sum(n for _, n in state.ai_reserved_tokens) + estimated_tokens > tpm:
             wait_times = [t for t in recent] + [t for t, _ in state.ai_reserved_tokens]
@@ -69,6 +98,8 @@ class Budget:
             if len(recent) >= rpm or sum(n for _, n in state.ai_reserved_tokens) + estimated_tokens > tpm:
                 raise AIUnavailable("ai_rate_limit")
         state.ai_attempts.append(now)
+        if self.issue:
+            state.ai_issue_attempts[self.issue] = state.ai_issue_attempts.get(self.issue, 0) + 1
         state.ai_reserved_tokens.append((now, estimated_tokens))
         # If persistence fails, the request must never happen.
         self.store.save_state()
@@ -98,10 +129,18 @@ def validate_response(response: AIResponse, events: list[NewsEvent]) -> None:
 
 
 class Enhancer:
-    def __init__(self, settings: Settings, store: Store, client=None, budget: Budget | None = None):
+    def __init__(
+        self,
+        settings: Settings,
+        store: Store,
+        client=None,
+        budget: Budget | None = None,
+        issue: str | None = None,
+    ):
         self.settings, self.store = settings, store
         self.client = client
-        self.budget = budget or Budget(settings, store)
+        self.budget = budget or Budget(settings, store, issue=issue)
+        self.used_model = settings.model
 
     def enhance(self, events: list[NewsEvent]) -> AIResponse:
         if not self.settings.ai_enabled or os.environ.get("AI_FREE_TIER_CONFIRMED") != "true":
@@ -157,6 +196,7 @@ class Enhancer:
                 # UTF-8 bytes are a deliberately conservative upper bound for input tokens.
                 estimate = len(prompt.encode("utf-8")) + output_limit
                 self.budget.reserve(estimate)
+                self.used_model = active_model
                 try:
                     output = client.models.generate_content(
                         model=active_model,
@@ -177,7 +217,7 @@ class Enhancer:
                     if code in {500, 502, 503, 504} and transient_retries < 1:
                         transient_retries += 1
                         continue
-                    raise AIUnavailable("ai_service_unavailable") from None
+                    raise AIUnavailable(provider_failure(exc)) from None
                 try:
                     parsed = AIResponse.model_validate_json(output.text or "")
                     validate_response(parsed, batch)

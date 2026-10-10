@@ -15,7 +15,12 @@ def main():
     schedule = os.environ.get("SCHEDULE_CRON", "")
     if not schedule:
         cutoff_for(issue)
-    if mode in {"redeploy", "send"}:
+    if mode == "check-ai":
+        subprocess.run(
+            ["ai-news", "--data", ".runtime/data", "--remote", "check-ai", "--issue", issue], check=True
+        )
+        result = {"status": "checked"}
+    elif mode in {"redeploy", "send"}:
         digest = Store(Path(".runtime/data")).latest(issue)
         if digest is None:
             raise ValueError("Missing frozen digest")

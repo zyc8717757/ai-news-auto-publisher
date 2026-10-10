@@ -8,10 +8,11 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
+from .ai import AIUnavailable, Enhancer
 from .collector import Collector
 from .config import load_config
 from .mailer import MailConfig, deliver
-from .models import Digest, IssueState
+from .models import Digest, IssueState, NewsEvent, SourceItem
 from .network import PublicHTTP
 from .pipeline import cutoff_for, generate, scheduled_issue
 from .site import audit_site, build_site, digest_url
@@ -30,6 +31,10 @@ def parser() -> argparse.ArgumentParser:
     root.add_argument("--remote", action="store_true", help="Push public state through a news-data checkout")
     sub = root.add_subparsers(dest="command", required=True)
     sub.add_parser("check-config")
+    ai_check = sub.add_parser("check-ai")
+    ai_check.add_argument(
+        "--issue", required=True, help="Check frozen public evidence without deploying or emailing"
+    )
     sources = sub.add_parser("check-sources")
     sources.add_argument("--report", type=Path, default=Path(".local/source-health.json"))
     sources.add_argument(
@@ -113,6 +118,33 @@ def execute(args) -> int:
         print('{"status":"paused"}')
         return 0
     store = Store(args.data, remote=args.remote)
+    if args.command == "check-ai":
+        cutoff_for(args.issue)
+        digest = store.latest(args.issue)
+        if not digest or not digest.stories:
+            raise ValueError("A nonempty frozen digest is required")
+        events = [
+            NewsEvent(
+                id=s.id,
+                evidence=[
+                    SourceItem(**ref.model_dump(), collected_at=datetime.now(UTC), excerpt=s.summary[:1600])
+                    for ref in s.sources
+                ],
+            )
+            for s in digest.stories
+        ]
+        enhancer = Enhancer(settings, store, issue=args.issue)
+        try:
+            response = enhancer.enhance(events)
+        except AIUnavailable as exc:
+            print(json.dumps({"status": "ai_check_failed", "reason": str(exc), "model": enhancer.used_model}))
+            return 1
+        print(
+            json.dumps(
+                {"status": "ai_check_passed", "model": enhancer.used_model, "count": len(response.stories)}
+            )
+        )
+        return 0
     if args.command == "generate":
         issue = args.issue or (
             scheduled_issue(args.schedule, datetime.now(UTC), settings.morning_time, settings.evening_time)

@@ -10,7 +10,7 @@ on:
       mode:
         description: 'run / preview / redeploy / send / regenerate / check-sources'
         type: choice
-        options: [run, preview, redeploy, send, regenerate, check-sources]
+        options: [run, preview, redeploy, send, regenerate, check-sources, check-ai]
         default: preview
       issue:
         description: 'Manual live operations require YYYY-MM-DD-am or YYYY-MM-DD-pm'

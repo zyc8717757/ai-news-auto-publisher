@@ -156,3 +156,22 @@ def test_absolute_five_request_ceiling(settings, tmp_path, monkeypatch, now):
     with pytest.raises(AIUnavailable):
         budget.reserve(100)
     assert len(Store(tmp_path).state.ai_attempts) == 5
+
+
+def test_issue_ceiling_survives_regeneration_and_legacy_migration(settings, tmp_path, now, monkeypatch):
+    monkeypatch.setenv("GEMINI_RPM", "20")
+    store = Store(tmp_path)
+    store.state.ai_attempts = [now]
+    store.save_state()
+    for _ in range(4):
+        Budget(settings, Store(tmp_path), now=lambda: now, issue="2026-10-10-am").reserve(100)
+    with pytest.raises(AIUnavailable, match="issue_budget"):
+        Budget(settings, Store(tmp_path), now=lambda: now, issue="2026-10-10-am").reserve(100)
+    assert Store(tmp_path).state.ai_issue_attempts["2026-10-10-am"] == 5
+
+
+def test_provider_failure_never_echoes_secret():
+    from ai_news.ai import provider_failure
+
+    error = RuntimeError("API key not valid: PRIVATE_SHOULD_NEVER_APPEAR")
+    assert provider_failure(error) == "ai_key_invalid"
