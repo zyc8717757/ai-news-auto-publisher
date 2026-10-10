@@ -1,5 +1,10 @@
 {
   "base_key": "2026-10-10-pm-r6",
-  "updates": {},
+  "updates": {
+    "1b54d3f5c40677b14956": {
+      "summary": "据媒体报道，Anthropic推出Cyber Mission，并提供面向开源项目的免费OSS扫描服务，可定期识别、解释漏洞并建议补丁。扫描报告未经人工审核，可能包含错误，维护者仍需复核。",
+      "uncertainty": "扫描报告未经人工审核，可能包含错误，不能视为项目安全保证。"
+    }
+  },
   "require_all": true
 }
