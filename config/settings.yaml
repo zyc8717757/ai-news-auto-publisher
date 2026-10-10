@@ -1,0 +1,17 @@
+paused: false
+ai_enabled: false
+email_enabled: false
+base_url: https://example.github.io/ai-news-auto-publisher
+model: gemini-2.5-flash-lite
+max_items: 15
+max_candidates: 300
+ai_candidates: 30
+source_limit: 50
+concurrency: 5
+timeout_seconds: 20
+source_retries: 2
+ai_run_limit: 5
+ai_day_limit: 10
+dedup_hours: 48
+history_days: 90
+# Replace the sample URL before any deployment or email.

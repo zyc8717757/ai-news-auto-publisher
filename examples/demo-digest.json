@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-10-am",
+  "revision": 1,
+  "created_at": "2026-10-10T00:05:00Z",
+  "cutoff": "2026-10-10T00:00:00Z",
+  "window_start": "2026-10-09T00:00:00Z",
+  "mode": "ai",
+  "warnings": [],
+  "template_version": 1,
+  "stories": [
+    {
+      "id": "demo-model",
+      "title": "演示：如何解读一项模型更新",
+      "summary": "这是用于验证系统页面和邮件的虚构演示数据，不是今日新闻。正式运行时，系统依据官方公告生成中文摘要，并保留产品名称、版本及必要限定。",
+      "impact": "帮助普通读者区分厂商声明和独立验证结果，避免把宣传指标当作已经证实的结论。",
+      "category": "模型",
+      "score": 90,
+      "uncertainty": "演示样例，请勿作为真实新闻发布。",
+      "sources": [{"id": "demo-source-1", "source_id": "openai", "source_name": "OpenAI 公告入口（演示链接）", "group": "openai", "trust": "official", "url": "https://openai.com/news/", "title": "演示来源入口，不对应虚构新闻", "published_at": "2026-10-09T20:00:00Z"}]
+    },
+    {
+      "id": "demo-open-source",
+      "title": "演示：开源项目更新如何进入日报",
+      "summary": "正式系统会读取官方 GitHub Release，过滤预发布版本，并结合版本信息、发布时间和历史记录判断是否属于新进展。此条仅说明系统能力。",
+      "impact": "读者能够找到原始更新记录，了解变化是否与自己的实际使用有关。",
+      "category": "开源",
+      "score": 85,
+      "uncertainty": "演示样例，不代表该项目在此日期发布了更新。",
+      "sources": [{"id": "demo-source-2", "source_id": "pytorch", "source_name": "PyTorch Release 入口（演示链接）", "group": "pytorch", "trust": "official", "url": "https://github.com/pytorch/pytorch/releases", "title": "演示来源入口", "published_at": "2026-10-09T18:00:00Z"}]
+    },
+    {
+      "id": "demo-research",
+      "title": "演示：科研结论保留必要限定",
+      "summary": "论文类内容会区分研究者的结论与已经广泛验证的事实。正式摘要保留论文声称、验证范围和未同行评审等限定，读者可以点击原始链接继续阅读。",
+      "impact": "让科研进展更易理解，同时避免用单篇论文夸大整个领域的技术成熟度。",
+      "category": "科研",
+      "score": 80,
+      "uncertainty": "演示样例，不对应具体论文。",
+      "sources": [{"id": "demo-source-3", "source_id": "arxiv-ai", "source_name": "arXiv AI 入口（演示链接）", "group": "arxiv", "trust": "research", "url": "https://arxiv.org/list/cs.AI/recent", "title": "演示研究入口", "published_at": "2026-10-09T16:00:00Z"}]
+    }
+  ]
+}
