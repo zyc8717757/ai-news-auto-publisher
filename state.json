@@ -2542,8 +2542,8 @@
     },
     "2026-10-10-pm-r7": {
       "deployment": "ready",
-      "email": "pending",
-      "email_attempts": 0
+      "email": "sending",
+      "email_attempts": 1
     }
   },
   "history": [
