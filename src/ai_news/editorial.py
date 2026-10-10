@@ -24,7 +24,9 @@ class Decision(StrictModel):
 
 
 class Screening(StrictModel):
-    decisions: list[Decision] = Field(max_length=24)
+    # Bound untrusted output independently of the input batch. Extra IDs are
+    # discarded, never admitted; all actual input events must still be present.
+    decisions: list[Decision] = Field(max_length=120)
 
 
 class Merge(StrictModel):
@@ -75,6 +77,7 @@ def evidence_payload(event):
                 "trust": x.trust,
                 "published_at": x.published_at.isoformat() if x.published_at else None,
                 "time_precision": x.time_precision,
+                "time_basis": x.time_basis,
                 "source_date": x.source_date,
             }
             for x in event.evidence[:4]
@@ -83,7 +86,7 @@ def evidence_payload(event):
 
 
 class EditorialEnhancer(Enhancer):
-    def call(self, client, task, data, schema, phase, output_limit=5000):
+    def call(self, client, task, data, schema, phase, output_limit=5000, validator=None):
         prompt = RULES + task + "\nJSON结构：" + json.dumps(schema.model_json_schema(), ensure_ascii=False)
         prompt += "\n只返回JSON，不要代码围栏。输入：" + json.dumps(data, ensure_ascii=False)
         transient = repair = 0
@@ -102,6 +105,8 @@ class EditorialEnhancer(Enhancer):
                 raise AIUnavailable(provider_failure(exc)) from None
             try:
                 result = schema.model_validate_json(json_output(text))
+                if validator:
+                    validator(result)
                 self.audit(self.settings.model, "accepted", "editorial_" + phase)
                 return result
             except ValueError as exc:
@@ -115,7 +120,7 @@ class EditorialEnhancer(Enhancer):
                             "phase": phase,
                             "characters": len(text),
                             "finish_reason": getattr(self, "last_finish_reason", "unknown"),
-                            "validation_types": [e["type"] for e in errors[:8]],
+                            "validation_types": [e["type"] for e in errors[:8]] or ["event_set_mismatch"],
                         }
                     )
                 )
@@ -125,7 +130,7 @@ class EditorialEnhancer(Enhancer):
                 repair += 1
                 if getattr(self, "last_finish_reason", "") in {"MAX_TOKENS", "max_tokens"}:
                     output_limit = min(12000, output_limit * 2)
-                prompt += "\n上次结构错误。严格按照JSON字段与类型重新输出完整结果，不要代码围栏。"
+                prompt += "\n上次结构或事件集合错误。仅按最外层event_id逐条输出完整结果，绝不将evidence[].id当成事件，不增加也不遗漏事件；理由一句话，不要示例或代码围栏。"
 
     def edit(self, events, cutoff, recent_counts=None):
         import os
@@ -151,12 +156,31 @@ class EditorialEnhancer(Enhancer):
         by_id = {x.id: x for x in events}
         for offset in range(0, len(events), 24):
             batch = events[offset : offset + 24]
+            expected = {e.id for e in batch}
+
+            def validate_screen(result):
+                by_event = {}
+                for decision in result.decisions:
+                    if decision.event_id not in expected:
+                        continue
+                    old = by_event.get(decision.event_id)
+                    # Conflicting duplicates are resolved toward exclusion/lower importance.
+                    if old is None or (decision.include, decision.importance) < (old.include, old.importance):
+                        by_event[decision.event_id] = decision
+                if set(by_event) != expected:
+                    raise ValueError("Input event set mismatch")
+                extra = len(result.decisions) - len(by_event)
+                result.decisions = list(by_event.values())
+                if extra:
+                    print(json.dumps({"status": "editorial_discarded_extra_decisions", "count": extra}))
+
             result = self.call(
                 client,
-                "\n阶段1：逐条初筛。每个输入ID必须输出一个决定，include=false表示淘汰。importance按行业影响给分，65分以下不入选，不要给全部条目高分。",
+                "\n阶段1：逐条初筛。只为最外层event_id输出一个决定，绝不将evidence[].id当事件。每个输入event_id都必须出现一次，include=false表示淘汰，不增加事件或示例。importance按行业影响给分，65分以下不入选，不要给全部条目高分。",
                 [evidence_payload(x) for x in batch],
                 Screening,
                 "screen",
+                validator=validate_screen,
             )
             if len(result.decisions) != len(batch) or {x.event_id for x in result.decisions} != {
                 x.id for x in batch

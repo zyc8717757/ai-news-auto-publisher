@@ -191,7 +191,11 @@ def select_events(
             ),
             None,
         )
-        age = max(0, (cutoff - max(x.published_at for x in cluster if x.published_at is not None)).total_seconds() / 3600)
+        age = max(
+            0,
+            (cutoff - max(x.published_at for x in cluster if x.published_at is not None)).total_seconds()
+            / 3600,
+        )
         impact = (
             30 if re.search(r"model|模型|regulat|政策|fund|融资|security|安全", primary.title, re.I) else 18
         )
@@ -207,8 +211,10 @@ def select_events(
                 entities=entities,
                 versions=versions,
                 event_type=kind,
-                observation=bool(PREVIEW.search(primary.title)) or (not trusted and groups < 2),
-                uncertain=bool(PREVIEW.search(primary.title)),
+                observation=bool(PREVIEW.search(primary.title))
+                or primary.time_basis == "repository_created"
+                or (not trusted and groups < 2),
+                uncertain=bool(PREVIEW.search(primary.title)) or primary.time_basis == "repository_created",
                 backfill=primary.published_at <= cutoff - timedelta(hours=24),
                 previous_issue=previous.issue if previous else None,
                 update_note="与上一期相比，来源公布了新的明确版本。" if previous else "",

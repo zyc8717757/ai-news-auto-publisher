@@ -71,6 +71,11 @@ def digest_url(base_url: str, digest: Digest) -> str:
 def source_time(source) -> str:
     if source.published_at is None or source.time_precision == "unknown":
         return "原文未注明发布时间（仅辅助核实）"
+    if source.time_basis == "repository_created":
+        return (
+            source.published_at.astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M 北京时间")
+            + "（仓库创建记录，非正式发布时间）"
+        )
     if source.time_precision == "day":
         return (source.source_date or source.published_at.date().isoformat()) + "（仅日期，时区未知）"
     return source.published_at.astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M 北京时间")

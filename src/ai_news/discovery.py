@@ -115,7 +115,10 @@ async def resolve(collector, url, now):
             source = Source(
                 id="hf-" + group, name=parts[0] + " 官方模型仓库", url=url, trust="official", group=group
             )
-            return item(source, url, model_id + " 模型仓库上线", plain(readme.text), date, now)
+            value = item(source, url, model_id + " 官方模型仓库新建记录", plain(readme.text), date, now)
+            if value:
+                value.time_basis = "repository_created"
+            return value
         source = publisher(url)
         if source is None:
             return None

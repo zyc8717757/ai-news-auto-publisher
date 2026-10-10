@@ -109,6 +109,7 @@ class SourceRef(StrictModel):
     published_at: datetime | None
     time_precision: Literal["exact", "day", "unknown"] = "exact"
     source_date: str = Field(default="", max_length=40)
+    time_basis: Literal["publication", "repository_created"] = "publication"
 
     _url = field_validator("url")(web_url)
 

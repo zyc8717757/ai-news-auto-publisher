@@ -26,6 +26,7 @@ PROMPT = """你是中文AI新闻编辑，面向普通AI兴趣读者。输入是�
 不要把不同版本或同公司不同事件合并。不要添加无关议题。返回严格符合schema的JSON。
 每条摘要尽量60–100个中文字，影响分析20–50个字，标题简洁。
 time_precision=day的零点只是日期锚点，不是发布时间；unknown表示未注明时间。
+time_basis=repository_created仅表示平台仓库创建记录，不等于正式发布或上线，必须保留限定。
 不要在正文猜测精确发布时间。正文无需重复时间，由程序根据原始来源渲染。
 """
 PROMPT += "\n只输出JSON，不要Markdown代码围栏。JSON结构：\n" + json.dumps(
@@ -333,6 +334,7 @@ class Enhancer:
                             "kind": e.trust,
                             "published_at": e.published_at.isoformat() if e.published_at else None,
                             "time_precision": e.time_precision,
+                            "time_basis": e.time_basis,
                         }
                         for e in event.evidence[:3]
                     ],

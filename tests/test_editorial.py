@@ -122,6 +122,15 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
                     for i, e in enumerate(events)
                 ]
             }
+            result["decisions"].append(
+                {
+                    "event_id": "not_an_input_event",
+                    "include": True,
+                    "category": "产品",
+                    "importance": 100,
+                    "reason": "必须被过滤的额外决定",
+                }
+            )
         elif "阶段2：" in prompt:
             phases.append("rank")
             result = {"ordered_ids": ["2", "3", "4", "5"], "merges": []}
@@ -276,3 +285,9 @@ def test_undated_source_and_observation_are_rendered_honestly(digest, tmp_path):
     drafts = make_drafts(revised, "https://reader.github.io/news")
     assert "尚未确认的模型" not in drafts.short
     assert "前瞻观察·未经官方确认" in drafts.long
+
+
+def test_repository_creation_cannot_be_formal_publication(source_item, official, now):
+    value = source_item.model_copy(update={"time_basis": "repository_created"})
+    events = select_events([value], [official], now - timedelta(hours=48), now, [])
+    assert events[0].observation and events[0].uncertain
