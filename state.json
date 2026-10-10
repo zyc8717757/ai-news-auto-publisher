@@ -175,6 +175,14 @@
       "stage": "accepted",
       "reason": "",
       "extra_test": false
+    },
+    {
+      "at": "2026-10-10T18:51:29.505105Z",
+      "issue": "2026-10-10-pm",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "output_rejected",
+      "reason": "ai_numeric_claim_unsupported",
+      "extra_test": false
     }
   ],
   "ai_reserved_tokens": [
