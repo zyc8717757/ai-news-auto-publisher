@@ -127,7 +127,23 @@ def apply_schedule(api, fields):
     api.variable("PUBLISHER_ENABLED", was_enabled)
 
 
-def create_server(api, token: str, port: int = 0, configure=apply_configuration, schedule_only=False):
+def apply_ai_key(api, fields):
+    values = fields.get("gemini_key", [])
+    if len(values) != 1 or not values[0].strip() or "\n" in values[0] or "\r" in values[0]:
+        raise ValueError("A single valid key is required")
+    if fields.get("free_confirmed") != ["yes"]:
+        raise ValueError("An eligible free project must be confirmed")
+    if not api.admission():
+        raise ValueError("Cloud admission required")
+    api.secret("GEMINI_API_KEY", values[0].strip())
+    api.variable("AI_FREE_TIER_CONFIRMED", "true")
+    api.variable("AI_ENABLED", "true")
+    api.dispatch("enhance-issue", api.latest_issue())
+
+
+def create_server(
+    api, token: str, port: int = 0, configure=apply_configuration, schedule_only=False, ai_key_only=False
+):
     submitted = threading.Lock()
     job = {"state": "idle"}
 
@@ -197,6 +213,15 @@ def create_server(api, token: str, port: int = 0, configure=apply_configuration,
                     + schedule_fields
                     + "<button type='submit'>保存时间</button></form>"
                 )
+            if ai_key_only:
+                page = (
+                    "<meta charset='utf-8'><title>更新 Gemini 免费项目 Key</title><h1>只更新 Gemini Key</h1>"
+                    "<p>保持 Gemini 2.5 主备模型，复用已保存的邮箱和定时设置。更新后直接补做已冻结日报的AI修订并发信，不额外诊断、不重置请求计数。</p>"
+                    f"<form method='post' action='/configure' autocomplete='off'><input type='hidden' name='csrf' value='{token}'>"
+                    "<p><label>旧免费项目的 Gemini API Key <input name='gemini_key' type='password' required autocomplete='new-password'></label></p>"
+                    "<p><label><input name='free_confirmed' type='checkbox' value='yes' required>我确认该项目未关联付费账单、有免费额度，并且以前成功调用过 Gemini 2.5 模型。</label></p>"
+                    "<button type='submit'>安全更新 Key 并补测全流程</button></form>"
+                )
             self.respond(200, page)
 
         def do_POST(self):
@@ -228,7 +253,9 @@ def create_server(api, token: str, port: int = 0, configure=apply_configuration,
 
             def worker():
                 try:
-                    (apply_schedule if schedule_only else configure)(api, fields)
+                    (apply_ai_key if ai_key_only else apply_schedule if schedule_only else configure)(
+                        api, fields
+                    )
                     job["state"] = "success"
                 except Exception:
                     try:
@@ -262,10 +289,17 @@ def main():
     parser.add_argument("--owner", required=True)
     parser.add_argument("--port", type=int, default=0, help="0 selects a free loopback port")
     parser.add_argument("--schedule-only", action="store_true", help="Change times without re-entering keys")
+    parser.add_argument(
+        "--ai-key-only", action="store_true", help="Update the free Gemini key and enhance frozen news"
+    )
     args = parser.parse_args()
     api = GitHub(args.owner)
     token = secrets.token_urlsafe(32)
-    server = create_server(api, token, args.port, schedule_only=args.schedule_only)
+    if args.schedule_only and args.ai_key_only:
+        raise ValueError("Choose one configuration mode")
+    server = create_server(
+        api, token, args.port, schedule_only=args.schedule_only, ai_key_only=args.ai_key_only
+    )
     print(json.dumps({"setup_url": f"http://127.0.0.1:{server.server_port}/?token={token}"}), flush=True)
     server.serve_forever()
     server.server_close()

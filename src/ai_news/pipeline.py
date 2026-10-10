@@ -7,7 +7,7 @@ from zoneinfo import ZoneInfo
 
 from .ai import AIUnavailable, Enhancer
 from .collector import Collector
-from .models import Digest, HistoryEvent, IssueState, Settings, Source, Story
+from .models import Digest, HistoryEvent, IssueState, NewsEvent, Settings, Source, SourceItem, Story
 from .selection import select_events
 from .store import Store
 
@@ -43,6 +43,87 @@ def scheduled_issue(
         issue = f"{day.isoformat()}-{slot}"
         cutoff = cutoff_for(issue, morning_time, evening_time)
     return issue if now - cutoff <= timedelta(hours=6) else None
+
+
+def ai_stories(response, events) -> list[Story]:
+    by_event = {event.id: event for event in events}
+    stories = []
+    for value in response.stories:
+        event = by_event[value.event_id]
+        if event.evidence[0].trust == "research":
+            caveat = (
+                "预印本，尚未确认同行评审；论文声称的结果需独立验证。"
+                if event.evidence[0].source_id.startswith("arxiv-")
+                else "研究机构提供的信息；研究结论需独立验证。"
+            )
+        else:
+            caveat = "来自官方声明，性能与效果尚需独立验证。" if event.evidence[0].trust == "official" else ""
+        stories.append(
+            Story(
+                id=event.id,
+                title=value.title,
+                summary=value.summary,
+                impact=value.impact,
+                category=value.category,
+                score=round(0.7 * event.rule_score + 0.3 * value.value_score, 2),
+                sources=[e.public_ref() for e in event.evidence if e.id in value.evidence_ids],
+                uncertainty=" ".join(x for x in [caveat, value.uncertainty] if x),
+                entities=event.entities,
+                versions=event.versions,
+                event_type=event.event_type,
+                previous_issue=event.previous_issue,
+                update_note=event.update_note,
+            )
+        )
+    return stories
+
+
+def enhance_frozen(
+    settings: Settings, store: Store, issue: str, enhancer=None, now=None
+) -> tuple[Digest, bool]:
+    """Upgrade frozen source information without recollecting, moving coverage or clearing budgets."""
+    existing = store.latest(issue)
+    if not existing or not existing.stories:
+        raise ValueError("A nonempty frozen digest is required")
+    if existing.mode == "ai":
+        return existing, False
+    if settings.paused:
+        raise ValueError("publisher_paused")
+    now = now or datetime.now(UTC)
+    events = [
+        NewsEvent(
+            id=s.id,
+            rule_score=s.score,
+            entities=s.entities,
+            versions=s.versions,
+            event_type=s.event_type,
+            previous_issue=s.previous_issue,
+            update_note=s.update_note,
+            evidence=[
+                SourceItem(**ref.model_dump(), collected_at=now, excerpt=s.summary if index == 0 else "")
+                for index, ref in enumerate(s.sources)
+            ],
+        )
+        for s in existing.stories
+    ]
+    processor = enhancer or Enhancer(settings, store, issue=issue)
+    response = processor.enhance(events)
+    stories = sorted(ai_stories(response, events), key=lambda story: (-story.score, story.id))
+    digest = existing.model_copy(
+        update={
+            "revision": existing.revision + 1,
+            "created_at": now,
+            "mode": "ai",
+            "stories": stories,
+            "warnings": [w for w in existing.warnings if w != "ai_unavailable"],
+        }
+    )
+    store.state.issues[digest.key] = IssueState()
+    store.save_digest(digest)
+    logging.getLogger(__name__).warning(
+        "AI model accepted: %s", getattr(processor, "used_model", settings.model)
+    )
+    return digest, True
 
 
 def generate(
@@ -82,40 +163,7 @@ def generate(
     if events and settings.ai_enabled:
         try:
             response = (enhancer or Enhancer(settings, store, issue=issue)).enhance(events)
-            by_event = {event.id: event for event in events}
-            for value in response.stories:
-                event = by_event[value.event_id]
-                # AI duplicate suggestions are only advisory; rule identity controls suppression.
-                caveat = (
-                    (
-                        "预印本，尚未确认同行评审；论文声称的结果需独立验证。"
-                        if event.evidence[0].source_id.startswith("arxiv-")
-                        else "研究机构提供的信息；研究结论需独立验证。"
-                    )
-                    if event.evidence[0].trust == "research"
-                    else (
-                        "来自官方声明，性能与效果尚需独立验证。"
-                        if event.evidence[0].trust == "official"
-                        else ""
-                    )
-                )
-                stories.append(
-                    Story(
-                        id=event.id,
-                        title=value.title,
-                        summary=value.summary,
-                        impact=value.impact,
-                        category=value.category,
-                        score=round(0.7 * event.rule_score + 0.3 * value.value_score, 2),
-                        sources=[e.public_ref() for e in event.evidence if e.id in value.evidence_ids],
-                        uncertainty=" ".join(x for x in [caveat, value.uncertainty] if x),
-                        entities=event.entities,
-                        versions=event.versions,
-                        event_type=event.event_type,
-                        previous_issue=event.previous_issue,
-                        update_note=event.update_note,
-                    )
-                )
+            stories = ai_stories(response, events)
             mode = "ai"
         except AIUnavailable as exc:
             logging.getLogger(__name__).warning("AI degraded: %s", exc)

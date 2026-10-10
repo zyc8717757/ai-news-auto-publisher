@@ -90,3 +90,28 @@ def test_configuration_minimal_fields_and_order():
     assert ("secret", "MAIL_TO", "demo@qq.com") in operations
     assert operations[-2] == ("variable", "PUBLISHER_ENABLED", "true")
     assert operations[-1][0:2] == ("dispatch", "run")
+
+
+def test_ai_key_rotation_only_changes_ai_credentials():
+    operations = []
+
+    class API:
+        def admission(self):
+            return True
+
+        def latest_issue(self):
+            return "2026-10-10-am"
+
+        def secret(self, name, value):
+            operations.append(("secret", name))
+
+        def variable(self, name, value):
+            operations.append(("variable", name))
+
+        def dispatch(self, mode, issue):
+            operations.append(("dispatch", mode, issue))
+
+    configure_local.apply_ai_key(API(), {"gemini_key": ["DUMMY_OLD_PROJECT_KEY"], "free_confirmed": ["yes"]})
+    assert [op for op in operations if op[0] == "secret"] == [("secret", "GEMINI_API_KEY")]
+    assert not any("SMTP" in str(op) or "TIME" in str(op) for op in operations)
+    assert operations[-1] == ("dispatch", "enhance-issue", "2026-10-10-am")

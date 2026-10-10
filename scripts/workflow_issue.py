@@ -26,8 +26,14 @@ def main():
             raise ValueError("Missing frozen digest")
         result = {"status": "ready", "issue": issue}
         atomic_write(Path(".runtime/result.json"), json.dumps(result))
-    elif mode in {"run", "regenerate"}:
-        command = ["ai-news", "--data", ".runtime/data", "--remote", "generate"]
+    elif mode in {"run", "regenerate", "enhance-issue"}:
+        command = [
+            "ai-news",
+            "--data",
+            ".runtime/data",
+            "--remote",
+            "enhance-issue" if mode == "enhance-issue" else "generate",
+        ]
         command += ["--schedule", schedule] if schedule else ["--issue", issue]
         if mode == "regenerate":
             command += ["--regenerate"]

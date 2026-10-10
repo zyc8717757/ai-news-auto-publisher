@@ -95,3 +95,42 @@ def test_total_source_failure_does_not_advance_coverage(settings, official, now,
     with pytest.raises(RuntimeError, match="all_sources"):
         generate(settings, [official], store, "2026-10-10-am", now=now, collector=Collector())
     assert store.state.last_covered_at is None and not store.digests()
+
+
+def test_frozen_ai_upgrade_preserves_period_and_is_idempotent(digest, settings, tmp_path, now):
+    from ai_news.models import AIResponse, AIStory
+    from ai_news.pipeline import enhance_frozen
+
+    store = Store(tmp_path)
+    old = digest.model_copy(update={"mode": "rules", "warnings": ["ai_unavailable", "source_errors"]})
+    store.state.last_covered_at = old.cutoff
+    store.state.ai_attempts = [now]
+    store.state.ai_issue_attempts[old.issue] = 4
+    store.save_digest(old)
+    calls = []
+
+    class AI:
+        def enhance(self, events):
+            calls.append(events)
+            return AIResponse(
+                stories=[
+                    AIStory(
+                        event_id=e.id,
+                        title="模型消息",
+                        summary="依据已经冻结的来源信息生成中文摘要，保留事实归因。",
+                        impact="便于读者理解消息的实际意义。",
+                        category="模型",
+                        value_score=80,
+                        evidence_ids=[e.evidence[0].id],
+                    )
+                    for e in events
+                ]
+            )
+
+    result, created = enhance_frozen(settings, store, old.issue, AI(), now)
+    assert created and result.revision == 2 and result.mode == "ai"
+    assert result.cutoff == old.cutoff and result.window_start == old.window_start
+    assert store.state.last_covered_at == old.cutoff and store.state.ai_issue_attempts[old.issue] == 4
+    assert result.warnings == ["source_errors"]
+    again, created = enhance_frozen(settings, store, old.issue, AI(), now)
+    assert not created and again.key == result.key and len(calls) == 1

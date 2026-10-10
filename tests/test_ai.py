@@ -177,6 +177,15 @@ def test_provider_failure_never_echoes_secret():
     assert provider_failure(error) == "ai_key_invalid"
 
 
+def test_date_claims_use_the_supplied_publication_evidence(source_item):
+    event = NewsEvent(id="event", evidence=[source_item])
+    result = response(event)
+    result.stories[
+        0
+    ].summary = f"来源于{source_item.published_at.month}月{source_item.published_at.day}日公布该模型消息，效果尚待独立验证。"
+    validate_response(result, [event])
+
+
 def test_real_sdk_sends_json_schema_instead_of_legacy_proto_schema(
     settings, tmp_path, monkeypatch, source_item
 ):

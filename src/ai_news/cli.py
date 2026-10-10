@@ -14,7 +14,7 @@ from .config import load_config
 from .mailer import MailConfig, deliver
 from .models import Digest, IssueState, NewsEvent, SourceItem
 from .network import PublicHTTP
-from .pipeline import cutoff_for, generate, scheduled_issue
+from .pipeline import cutoff_for, enhance_frozen, generate, scheduled_issue
 from .site import audit_site, build_site, digest_url
 from .store import Store, atomic_write
 
@@ -31,6 +31,9 @@ def parser() -> argparse.ArgumentParser:
     root.add_argument("--remote", action="store_true", help="Push public state through a news-data checkout")
     sub = root.add_subparsers(dest="command", required=True)
     sub.add_parser("check-config")
+    upgrade = sub.add_parser("enhance-issue")
+    upgrade.add_argument("--issue", required=True)
+    upgrade.add_argument("--result", type=Path, default=Path(".runtime/result.json"))
     ai_check = sub.add_parser("check-ai")
     ai_check.add_argument(
         "--issue", required=True, help="Check frozen public evidence without deploying or emailing"
@@ -118,6 +121,20 @@ def execute(args) -> int:
         print('{"status":"paused"}')
         return 0
     store = Store(args.data, remote=args.remote)
+    if args.command == "enhance-issue":
+        cutoff_for(args.issue)
+        digest, created = enhance_frozen(settings, store, args.issue)
+        result = {
+            "status": "ready",
+            "issue": digest.issue,
+            "key": digest.key,
+            "mode": digest.mode,
+            "created": created,
+            "count": len(digest.stories),
+        }
+        atomic_write(args.result, json.dumps(result))
+        print(json.dumps(result))
+        return 0
     if args.command == "check-ai":
         cutoff_for(args.issue)
         digest = store.latest(args.issue)

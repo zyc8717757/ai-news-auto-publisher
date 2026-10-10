@@ -123,8 +123,12 @@ def validate_response(response: AIResponse, events: list[NewsEvent]) -> None:
             raise ValueError("Expected Chinese summary")
         if story.duplicate_of and (story.duplicate_of not in ids or story.duplicate_of == story.event_id):
             raise ValueError("Invalid duplicate suggestion")
-        evidence_text = " ".join(e.title + " " + e.excerpt for e in ids[story.event_id].evidence)
+        evidence_text = " ".join(
+            e.title + " " + e.excerpt + " " + e.published_at.isoformat() for e in ids[story.event_id].evidence
+        )
         numbers = set(re.findall(r"\d+(?:\.\d+)*", evidence_text))
+        for evidence in ids[story.event_id].evidence:
+            numbers.update(str(int(n)) for n in re.findall(r"\d+", evidence.published_at.isoformat()))
         if not set(re.findall(r"\d+(?:\.\d+)*", text)) <= numbers:
             raise ValueError("Unsupported numeric claim")
 

@@ -12,6 +12,10 @@
 
 以后只调整时间可使用 `python scripts/configure_local.py --owner zyc8717757 --schedule-only`，无需重新输入邮箱授权码和 Gemini Key。该操作只修改远程的两份调度配置，使用非强制提交保护并发改动；本地开发前同步最新 main。
 
+只更换Gemini Key可使用 `python scripts/configure_local.py --owner zyc8717757 --ai-key-only`。该入口只更新Gemini密钥和免费确认，复用邮箱与时间，直接对已冻结规则日报生成AI修订再部署/发信；成功AI期号重跑不会再次调用模型。所有请求仍计入原期号上限。
+
+Gemini 2.5系列目前限制给过去实际使用过这些模型的项目/用户，新项目即使显示配额也可能返回404。保持2.5模型时必须使用以前成功调用过2.5的免费项目Key。[官方模型可用性说明](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite.md)
+
 内置浏览器的表单 Origin 可能为 `null` 或缺失。配置服务仍要求精确回环 Host 和不可猜测的会话表单令牌，明确的外站 Origin 始终拒绝。提交后立即显示进度页，不会在浏览器中长时间无反馈；不记录表单正文。
 
 已登录 Git Credential Manager 时，`python scripts/github_setup.py --owner zyc8717757 --publish` 可上传指定白名单代码并配置 Pages；不会修改系统 GitHub 认证、系统代理或全局 Git 配置。`--check-sources` 启动云端信源检查。

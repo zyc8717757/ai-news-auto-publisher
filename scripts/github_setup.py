@@ -160,6 +160,17 @@ class GitHub:
         settings = Settings.model_validate(yaml.safe_load(base64.b64decode(content["content"])))
         return settings.morning_time, settings.evening_time
 
+    def latest_issue(self) -> str:
+        files = self.request("GET", f"/repos/{self.repo}/contents/digests?ref=news-data")
+        issues = [
+            file["name"][:13]
+            for file in files
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}-(am|pm)-r\d+\.json", file["name"])
+        ]
+        if not issues:
+            raise RuntimeError("No frozen digest available")
+        return max(issues)
+
     def update_schedule(self, morning: str, evening: str) -> bool:
         Settings(base_url="https://example.com", morning_time=morning, evening_time=evening)
         branch = self.request("GET", f"/repos/{self.repo}/git/ref/heads/main")
@@ -174,7 +185,9 @@ class GitHub:
             return False
         for field, value in (("morning_time", morning), ("evening_time", evening)):
             files["config/settings.yaml"], count = re.subn(
-                rf"(?m)^{field}:[^\r\n]*(\r?)$", lambda match: f"{field}: '{value}'{match[1]}", files["config/settings.yaml"]
+                rf"(?m)^{field}:[^\r\n]*(\r?)$",
+                lambda match: f"{field}: '{value}'{match[1]}",
+                files["config/settings.yaml"],
             )
             if count != 1:
                 raise RuntimeError("Unexpected schedule configuration layout")
