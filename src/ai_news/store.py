@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import subprocess
+import time
 from pathlib import Path
 
 from .models import Digest, RunState
@@ -41,31 +42,56 @@ class Store:
             stderr=subprocess.DEVNULL,
         )
         changed = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=self.root).returncode
-        if changed == 0:
-            return
-        subprocess.run(
-            [
-                "git",
-                "-c",
-                "user.name=ai-news-bot",
-                "-c",
-                "user.email=ai-news-bot@users.noreply.github.com",
-                "commit",
-                "-m",
-                "Update public digest state",
-            ],
-            cwd=self.root,
-            check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-        subprocess.run(
-            ["git", "push", "origin", "HEAD:news-data"],
-            cwd=self.root,
-            check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
+        if changed not in {0, 1}:
+            raise RuntimeError("public_data_git_diff_failed")
+        if changed:
+            subprocess.run(
+                [
+                    "git",
+                    "-c",
+                    "user.name=ai-news-bot",
+                    "-c",
+                    "user.email=ai-news-bot@users.noreply.github.com",
+                    "commit",
+                    "-m",
+                    "Update public digest state",
+                ],
+                cwd=self.root,
+                check=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+        # A previous push may have failed after committing locally. Even with
+        # no staged diff, durability requires pushing that pending commit.
+        for attempt in range(3):
+            result = subprocess.run(
+                ["git", "push", "origin", "HEAD:news-data"],
+                cwd=self.root,
+                capture_output=True,
+                text=True,
+            )
+            if result.returncode == 0:
+                return
+            transient = any(
+                marker in result.stderr.lower()
+                for marker in (
+                    "timed out",
+                    "timeout",
+                    "connection reset",
+                    "could not resolve",
+                    "remote end hung up",
+                    "http 429",
+                    "error: 429",
+                    "error: 500",
+                    "error: 502",
+                    "error: 503",
+                    "error: 504",
+                    "tls connection",
+                )
+            )
+            if not transient or attempt == 2:
+                raise RuntimeError("public_data_git_push_failed")
+            time.sleep(2 ** (attempt + 1))
 
     def save_state(self) -> None:
         # Validate again in case a caller mutated a nested container in place.
