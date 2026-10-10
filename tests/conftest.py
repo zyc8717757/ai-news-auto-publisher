@@ -13,7 +13,12 @@ def now():
 
 @pytest.fixture
 def settings():
-    return Settings(base_url="https://reader.github.io/ai-news-auto-publisher", source_retries=0)
+    return Settings(
+        base_url="https://reader.github.io/ai-news-auto-publisher",
+        source_retries=0,
+        model="gemini-2.5-flash-lite",
+        backup_model="gemini-2.5-flash",
+    )
 
 
 @pytest.fixture

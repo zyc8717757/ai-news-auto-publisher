@@ -34,7 +34,13 @@ def parser() -> argparse.ArgumentParser:
     upgrade = sub.add_parser("enhance-issue")
     upgrade.add_argument("--issue", required=True)
     upgrade.add_argument("--result", type=Path, default=Path(".runtime/result.json"))
-    upgrade.add_argument("--test-extra-requests", type=int, choices=[0, 1, 2], default=0)
+    upgrade.add_argument(
+        "--test-extra-requests",
+        type=int,
+        choices=[0, 1, 2, 3, 4, 5],
+        default=0,
+        help="Explicit cumulative test ceiling; all historical counters remain",
+    )
     ai_check = sub.add_parser("check-ai")
     ai_check.add_argument(
         "--issue", required=True, help="Check frozen public evidence without deploying or emailing"

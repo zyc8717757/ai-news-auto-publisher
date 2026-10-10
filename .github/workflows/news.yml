@@ -101,6 +101,7 @@ jobs:
           GEMINI_TPM: ${{ vars.GEMINI_TPM || '250000' }}
           GEMINI_RPD: ${{ vars.GEMINI_RPD || '20' }}
           AI_TEST_AUTHORIZED_ISSUE: ${{ github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner && inputs.mode == 'test-enhance' && vars.AI_TEST_AUTHORIZED_ISSUE || '' }}
+          AI_TEST_AUTHORIZED_TOTAL: ${{ github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner && inputs.mode == 'test-enhance' && vars.AI_TEST_AUTHORIZED_TOTAL || '0' }}
         run: python scripts/workflow_issue.py
       - name: Build public site
         id: build

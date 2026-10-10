@@ -40,7 +40,10 @@ def main():
         if mode == "test-enhance":
             if os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != issue:
                 raise ValueError("This test issue was not explicitly authorized")
-            command += ["--test-extra-requests", "2"]
+            total = int(os.environ.get("AI_TEST_AUTHORIZED_TOTAL", "0"))
+            if not 1 <= total <= 5:
+                raise ValueError("Explicit cumulative test ceiling required")
+            command += ["--test-extra-requests", str(total)]
         subprocess.run(command, check=True)
         result = json.loads(Path(".runtime/result.json").read_text("utf-8"))
     else:

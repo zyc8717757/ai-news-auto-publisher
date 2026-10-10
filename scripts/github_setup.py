@@ -105,6 +105,10 @@ class GitHub:
     def variable(self, name: str, value: str):
         path = f"/repos/{self.repo}/actions/variables/{name}"
         existing = self.request("GET", path, allow_404=True)
+        if value == "":
+            if existing:
+                self.request("DELETE", path)
+            return
         self.request(
             "PATCH" if existing else "POST",
             path if existing else f"/repos/{self.repo}/actions/variables",
@@ -230,6 +234,12 @@ class GitHub:
         if not issues:
             raise RuntimeError("No frozen digest available")
         return max(issues)
+
+    def key_retest_mode(self, issue: str) -> str:
+        grant = self.request(
+            "GET", f"/repos/{self.repo}/actions/variables/AI_TEST_AUTHORIZED_ISSUE", allow_404=True
+        )
+        return "test-enhance" if grant and grant["value"] == issue else "enhance-issue"
 
     def update_schedule(self, morning: str, evening: str) -> bool:
         Settings(base_url="https://example.com", morning_time=morning, evening_time=evening)

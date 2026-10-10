@@ -47,7 +47,7 @@ def provider_failure(exc: Exception) -> str:
     ):
         if marker in message:
             return reason
-    code = getattr(exc, "code", None)
+    code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
     return (
         f"ai_provider_http_{code}"
         if isinstance(code, int) and 100 <= code <= 599
@@ -70,8 +70,8 @@ class Budget:
         self.sleep = sleep
         self.run_calls = 0
         self.issue = issue
-        if not 0 <= test_extra_limit <= 2:
-            raise ValueError("Test allowance must be within 0..2")
+        if not 0 <= test_extra_limit <= 5:
+            raise ValueError("Cumulative test allowance must be within 0..5")
         self.test_extra_limit = test_extra_limit
 
     def reserve(self, estimated_tokens: int) -> None:
@@ -83,7 +83,9 @@ class Budget:
         now = self.now()
         state = self.store.state
         if self.test_extra_limit and (
-            not self.issue or os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != self.issue
+            not self.issue
+            or os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != self.issue
+            or self.test_extra_limit > int(os.environ.get("AI_TEST_AUTHORIZED_TOTAL", "2"))
         ):
             raise AIUnavailable("ai_test_not_authorized")
         if self.issue and not state.ai_issue_attempts and state.ai_attempts:
@@ -176,6 +178,44 @@ class Enhancer:
         self.store.save_state()
         print(json.dumps({"status": "ai_request_result", "model": model, "stage": stage, "reason": reason}))
 
+    def generate_text(self, client, model: str, prompt: str, output_limit: int) -> str:
+        if model.startswith("gemini-3."):
+            interactions = client.interactions
+            # SDK 2.29's generated resource otherwise retries even when HttpRetryOptions(attempts=0).
+            # The public resource configuration is pinned and protected by physical HTTP-count tests.
+            interactions.sdk_configuration.retry_config.strategy = "none"
+            interactions.sdk_configuration.retry_config.retry_connection_errors = False
+            output = interactions.create(
+                api_version="v1beta2",
+                model=model,
+                input=prompt,
+                store=False,
+                stream=False,
+                response_format={
+                    "type": "text",
+                    "mime_type": "application/json",
+                    "schema": AIResponse.model_json_schema(),
+                },
+                generation_config={
+                    "temperature": 1.0,
+                    "max_output_tokens": output_limit,
+                    "thinking_level": "low" if model == "gemini-3.8-flash" else "minimal",
+                },
+            )
+            return output.output_text or ""
+        output = client.models.generate_content(
+            model=model,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_json_schema=AIResponse.model_json_schema(),
+                temperature=0.1,
+                max_output_tokens=output_limit,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+            ),
+        )
+        return output.text or ""
+
     def enhance(self, events: list[NewsEvent]) -> AIResponse:
         if not self.settings.ai_enabled or os.environ.get("AI_FREE_TIER_CONFIRMED") != "true":
             raise AIUnavailable("ai_disabled_or_free_tier_unconfirmed")
@@ -236,20 +276,9 @@ class Enhancer:
                     raise
                 self.used_model = active_model
                 try:
-                    output = client.models.generate_content(
-                        model=active_model,
-                        contents=prompt,
-                        config=types.GenerateContentConfig(
-                            response_mime_type="application/json",
-                            # The legacy responseSchema protobuf cannot represent strict JSON Schema.
-                            response_json_schema=AIResponse.model_json_schema(),
-                            temperature=0.1,
-                            max_output_tokens=output_limit,
-                            thinking_config=types.ThinkingConfig(thinking_budget=0),
-                        ),
-                    )
+                    output_text = self.generate_text(client, active_model, prompt, output_limit)
                 except Exception as exc:
-                    code = getattr(exc, "code", None)
+                    code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
                     self.audit(active_model, "provider_error", provider_failure(exc))
                     if code in {404, 429, 500, 502, 503, 504} and active_model == self.settings.model:
                         active_model = self.settings.backup_model
@@ -259,7 +288,7 @@ class Enhancer:
                         continue
                     raise AIUnavailable(provider_failure(exc)) from None
                 try:
-                    parsed = AIResponse.model_validate_json(output.text or "")
+                    parsed = AIResponse.model_validate_json(output_text)
                     validate_response(parsed, batch)
                     self.audit(active_model, "accepted")
                     result.extend(parsed.stories)

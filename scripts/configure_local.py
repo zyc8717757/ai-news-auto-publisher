@@ -145,7 +145,9 @@ def apply_ai_key(api, fields):
     api.secret("GEMINI_API_KEY", values[0].strip())
     api.variable("AI_FREE_TIER_CONFIRMED", "true")
     api.variable("AI_ENABLED", "true")
-    return dispatch_verified(api, "enhance-issue", api.latest_issue())
+    issue = api.latest_issue()
+    mode = api.key_retest_mode(issue) if hasattr(api, "key_retest_mode") else "enhance-issue"
+    return dispatch_verified(api, mode, issue)
 
 
 def create_server(
@@ -231,10 +233,10 @@ def create_server(
             if ai_key_only:
                 page = (
                     "<meta charset='utf-8'><title>更新 Gemini 免费项目 Key</title><h1>只更新 Gemini Key</h1>"
-                    "<p>保持 Gemini 2.5 主备模型，复用已保存的邮箱和定时设置。更新后直接补做已冻结日报的AI修订并发信，不额外诊断、不重置请求计数。</p>"
+                    "<p>复用当前免费模型、邮箱和定时设置。更新后直接补做已冻结日报的AI修订并发信，不额外诊断、不重置请求计数。</p>"
                     f"<form method='post' action='/configure' autocomplete='off'><input type='hidden' name='csrf' value='{token}'>"
-                    "<p><label>旧免费项目的 Gemini API Key <input name='gemini_key' type='password' required autocomplete='new-password'></label></p>"
-                    "<p><label><input name='free_confirmed' type='checkbox' value='yes' required>我确认该项目未关联付费账单、有免费额度，并且以前成功调用过 Gemini 2.5 模型。</label></p>"
+                    "<p><label>免费项目的 Gemini API Key <input name='gemini_key' type='password' required autocomplete='new-password'></label></p>"
+                    "<p><label><input name='free_confirmed' type='checkbox' value='yes' required>我确认该项目未关联付费账单，目标模型具有可用免费额度。</label></p>"
                     "<button type='submit'>安全更新 Key 并补测全流程</button></form>"
                 )
             self.respond(200, page)

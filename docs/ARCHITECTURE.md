@@ -12,7 +12,7 @@
 | `network` | DNS 结果必须全部为公网地址；固定连接到已验证 IP，用原主机名做 Host/SNI；逐次检查重定向 |
 | `collector` | RSS/Release/官方 HTML 采集、时间校验、纯文本清洗、条件请求、单源异常隔离 |
 | `selection` | 稳定 URL、标题/实体/版本/事件类型、SimHash 转载识别、独立来源门槛与历史去重 |
-| `ai` | 免费条件与 Lite/Flash 双模型白名单、固定 Developer API、结构化输出、输入证据 ID/数字检查、调用前持久化配额 |
+| `ai` | 免费条件与明确模型白名单、固定 Developer API、结构化输出、输入证据 ID/数字检查、调用前持久化配额 |
 | `pipeline` | 确定期号与窗口、正常/降级日报、冻结修订、覆盖和历史索引维护 |
 | `store` | 原子 JSON 写入、模型二次校验、只暂存 state.json/digests、仅 news-data 分支可远程推送 |
 | `site` | 自动转义、项目基础路径、当前/历史/修订网页、产物路径白名单 |
@@ -48,3 +48,5 @@
 实现代码独立编写，使用 MIT。参考 TrendRadar / Hot News Radar 的功能组织，不直接复制 GPL 代码；参考 AI News Brief 的来源覆盖方向，当前来源列表独立维护。AI Digest 未确认明确许可，不复制代码。Python/npm 依赖保留各自许可证，`twitter-text` 为 Apache-2.0。
 
 官方接口参考：Gemini Developer API `generate_content` + `response_json_schema`、RSS/Atom、GitHub Releases REST、SMTP、GitHub Pages 部署。严格JSON Schema通过新参数直接传送，避免SDK将additionalProperties等字段放入旧版protobuf responseSchema；响应仍经过Pydantic及证据检查。没有 OpenAI API、X API 或私人账号浏览器自动化依赖。
+
+免费新模型改用SDK 2.29的Interactions API（v1beta2）：完整JSON Schema、最小/低思考、显式 `store=false`，无工具、无服务器会话。生成式资源公开retry配置设为none，关闭连接错误重试；实测503及连接错误均只有一次HTTP请求。该契约由真实SDK+MockTransport测试保护，不能仅凭逻辑调用数假定没有SDK隐式重试。2.5兼容路径继续使用generateContent。

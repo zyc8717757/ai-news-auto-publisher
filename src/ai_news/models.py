@@ -28,8 +28,10 @@ class Settings(StrictModel):
     ai_enabled: bool = False
     email_enabled: bool = False
     base_url: str
-    model: Literal["gemini-2.5-flash-lite"] = "gemini-2.5-flash-lite"
-    backup_model: Literal["gemini-2.5-flash"] = "gemini-2.5-flash"
+    model: Literal["gemini-2.5-flash-lite", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"] = (
+        "gemini-3.5-flash-lite"
+    )
+    backup_model: Literal["gemini-2.5-flash", "gemini-3.8-flash"] = "gemini-3.8-flash"
     morning_time: str = Field(default="08:00", pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
     evening_time: str = Field(default="20:00", pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
     max_items: int = Field(default=15, ge=1, le=15)
@@ -196,7 +198,13 @@ class IssueState(StrictModel):
 class AIRequestAudit(StrictModel):
     at: datetime
     issue: str | None = None
-    model: Literal["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+    model: Literal[
+        "gemini-2.5-flash-lite",
+        "gemini-2.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.8-flash",
+        "gemini-3.1-flash-lite",
+    ]
     stage: Literal["provider_error", "output_rejected", "accepted", "budget_blocked"]
     reason: str = Field(default="", pattern=r"^[a-z0-9_]*$")
     extra_test: bool = False
