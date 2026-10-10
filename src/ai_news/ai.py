@@ -278,7 +278,27 @@ class Enhancer:
         )
         candidates = getattr(output, "candidates", None) or []
         reason = getattr(candidates[0], "finish_reason", None) if candidates else None
-        self.last_finish_reason = str(getattr(reason, "value", reason) or "unknown")
+        finish = str(getattr(reason, "value", reason) or "unknown")
+        self.last_finish_reason = (
+            finish
+            if finish
+            in {
+                "STOP",
+                "MAX_TOKENS",
+                "SAFETY",
+                "RECITATION",
+                "OTHER",
+                "FINISH_REASON_UNSPECIFIED",
+                "MALFORMED_FUNCTION_CALL",
+                "BLOCKLIST",
+                "PROHIBITED_CONTENT",
+                "SPII",
+                "LANGUAGE",
+                "IMAGE_SAFETY",
+                "UNEXPECTED_TOOL_CALL",
+            }
+            else "unknown"
+        )
         return output.text or ""
 
     def enhance(self, events: list[NewsEvent]) -> AIResponse:

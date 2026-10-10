@@ -14,6 +14,25 @@ def test_private_dns_rejected(address, monkeypatch):
         public_addresses("untrusted.example")
 
 
+def test_public_ipv4_is_preferred_but_mixed_private_answers_still_fail(monkeypatch):
+    monkeypatch.setattr(
+        socket,
+        "getaddrinfo",
+        lambda *a, **k: [
+            (None, None, None, None, ("2606:4700:4700::1111", 0)),
+            (None, None, None, None, ("34.1.1.1", 0)),
+        ],
+    )
+    assert public_addresses("public.example")[0] == "34.1.1.1"
+    monkeypatch.setattr(
+        socket,
+        "getaddrinfo",
+        lambda *a, **k: [(None, None, None, None, ("::1", 0)), (None, None, None, None, ("34.1.1.1", 0))],
+    )
+    with pytest.raises(UnsafeURL):
+        public_addresses("mixed.example")
+
+
 def test_pinned_host_and_redirect_revalidation(monkeypatch):
     requests = []
 

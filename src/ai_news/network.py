@@ -22,7 +22,10 @@ def public_addresses(host: str) -> list[str]:
     addresses = sorted({entry[4][0] for entry in answers})
     if not addresses or any(not ipaddress.ip_address(address).is_global for address in addresses):
         raise UnsafeURL("Target does not resolve exclusively to public addresses")
-    return addresses
+    # Some standard hosted runners have no IPv6 route. String sorting may choose
+    # a 2600:: address before 34.x and fail an otherwise reachable public source.
+    # Validate EVERY answer first; address preference must not weaken SSRF checks.
+    return sorted(addresses, key=lambda address: (ipaddress.ip_address(address).version, address))
 
 
 @dataclass
