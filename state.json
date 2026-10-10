@@ -24,6 +24,14 @@
       "stage": "provider_error",
       "reason": "ai_provider_http_404",
       "extra_test": true
+    },
+    {
+      "at": "2026-10-10T08:47:17.158688Z",
+      "issue": "2026-10-10-am",
+      "model": "gemini-2.5-flash",
+      "stage": "provider_error",
+      "reason": "ai_provider_http_404",
+      "extra_test": true
     }
   ],
   "ai_reserved_tokens": [
