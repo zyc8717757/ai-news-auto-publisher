@@ -13,7 +13,8 @@
     "2026-10-10T09:28:56.782080Z",
     "2026-10-10T13:11:29.083862Z",
     "2026-10-10T13:37:48.966468Z",
-    "2026-10-10T13:43:08.410012Z"
+    "2026-10-10T13:43:08.410012Z",
+    "2026-10-10T18:29:12.617728Z"
   ],
   "ai_quota_snapshot": {
     "observed_at": "2026-10-10T13:31:46.230464Z",
@@ -23,7 +24,7 @@
   },
   "ai_issue_attempts": {
     "2026-10-10-am": 5,
-    "2026-10-10-pm": 2
+    "2026-10-10-pm": 3
   },
   "ai_test_attempts": {
     "2026-10-10-am": 5
@@ -88,8 +89,8 @@
   ],
   "ai_reserved_tokens": [
     [
-      "2026-10-10T13:43:08.410012Z",
-      19681
+      "2026-10-10T18:29:12.617728Z",
+      36630
     ]
   ],
   "source_cache": {
@@ -97,181 +98,271 @@
       "etag": "",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "anthropic": {
       "etag": "",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "deepmind": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "connection_failed"
+      "error_code": "connection_failed",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "google-ai": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "connection_failed"
+      "error_code": "connection_failed",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "huggingface": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "connection_failed"
+      "error_code": "connection_failed",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "microsoft-research": {
       "etag": "\"bf68bb5c4d5f88d21c61433fe95db1a6\"",
       "modified": "Sat, 10 Oct 2026 10:45:33 GMT",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "nvidia": {
       "etag": "\"164a6d18b55bb2370f43ce628fd72ae4-gzip\"",
       "modified": "Thu, 08 Oct 2026 21:07:24 GMT",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "mistral": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "parse_failed"
+      "error_code": "parse_failed",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "meta-ai": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "connection_failed"
+      "error_code": "connection_failed",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "pytorch": {
       "etag": "W/\"6178f0eae55e6bc56208c7833ce6d70d0f1c480b1996d492fdd0a13b6fbb7e33\"",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "transformers": {
       "etag": "W/\"f9cca1edbc92b77f8ae83c8a0e3997a083b420e868ab9772622f2bc37db3f264\"",
       "modified": "",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "diffusers": {
       "etag": "W/\"9f29cbb89543fce87135b9bf9d5a2df0a056c50e11b696dd8fc097a4204951c1\"",
       "modified": "",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "vllm": {
       "etag": "W/\"05fa76bd70dcfe86ddad4baf3c21d4ec8542e579683d5b2e6344eb65865f0a9f\"",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "ollama": {
       "etag": "W/\"b4832270dff4f05c80e424a16e0ca9966ea625a801acb13bb083af10c31d99d3\"",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "llama-cpp": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "parse_failed"
+      "error_code": "parse_failed",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "langchain": {
       "etag": "W/\"3f0c50a4e308358f91bcca8de779d099d76d777c44aa9b562d46c6692d775f46\"",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "langgraph": {
       "etag": "W/\"e793e73a6b7fc4438aa94554e409b3abaf958355e12470d8eabb133e14d53649\"",
       "modified": "",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "litellm": {
       "etag": "W/\"901b082b1331689113c9197d1b152109844a687eb3eee505706b71e4c23e86f1\"",
       "modified": "",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "arxiv-ai": {
       "etag": "f21fc5f04cec1e3e72f6460833ef71297d534333549866f6d61221d851362d41",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "arxiv-cl": {
       "etag": "85ca85c86e157f02b0cce9af08f59d23efba7f7716bbe7b89a069c0040834aac",
       "modified": "",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "arxiv-lg": {
       "etag": "6c3210ac4485cc5d568289a9f1a87be55f216f2be1fa75f53d39934750a74487",
       "modified": "",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "berkeley-bair": {
       "etag": "\"46973-657c8b456a0bd-gzip\"",
       "modified": "Wed, 29 Jul 2026 23:56:30 GMT",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "mit-ai": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "http_403"
+      "error_code": "http_403",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "techcrunch-ai": {
       "etag": "W/\"35e060e953d729657ac825bd58519583\"",
       "modified": "Sat, 10 Oct 2026 05:47:16 GMT",
       "status": "unchanged",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "venturebeat-ai": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "http_429"
+      "error_code": "http_429",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "ars": {
       "etag": "",
       "modified": "Sat, 10 Oct 2026 12:08:36 GMT",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "theverge-ai": {
       "etag": "",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "wired-ai": {
       "etag": "",
       "modified": "",
       "status": "ok",
-      "error_code": ""
+      "error_code": "",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "machineheart": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "parse_failed"
+      "error_code": "parse_failed",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "hackernews": {
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "http_502"
+      "error_code": "http_502",
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     }
   },
   "issues": {
