@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-10-pm",
+  "revision": 5,
+  "created_at": "2026-10-10T18:50:25.150835Z",
+  "cutoff": "2026-10-10T12:30:00Z",
+  "window_start": "2026-10-08T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "fb900a38eb855015e847",
+      "title": "微软推出Microsoft-Decision-1决策模型",
+      "summary": "微软发布了全新的决策评分模型Microsoft-Decision-1，该公司称该模型在结构化决策任务的延迟和质量方面表现顶尖，超越了LLM及其他决策模型。输入Token价格为每百万0.042美元，输出Token免费。",
+      "impact": "为开发者提供低成本、高效率的结构化决策模型选择。",
+      "category": "模型",
+      "score": 82.62,
+      "sources": [
+        {
+          "id": "fb900a38eb855015e847",
+          "source_id": "primary-microsoft",
+          "source_name": "Microsoft",
+          "group": "microsoft",
+          "trust": "official",
+          "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+          "title": "Introducing Microsoft-Decision-1, our model for fast decision-making",
+          "published_at": "2026-10-10T01:35:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 性能表现基于微软官方声明，未提供独立第三方评测验证。",
+      "entities": [
+        "microsoft"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "微软发布专门面向快速结构化决策的任务模型 Microsoft-Decision-1。",
+      "backfill": false
+    },
+    {
+      "id": "07b0b6702e7dac0cddad",
+      "title": "TypeSafe AI获A轮融资并推出Jev模型",
+      "summary": "专注于机器原生智能基础设施的AI实验室TypeSafe AI宣布获得由Andreessen Horowitz领投的大额A轮融资，估值达到7.5亿美元，同时其首个System One模型Jev开启早期访问。",
+      "impact": "加速机器原生智能在软件自动化决策中的应用。",
+      "category": "商业",
+      "score": 75.97,
+      "sources": [
+        {
+          "id": "f249031f0f0688c60506",
+          "source_id": "primary-a16z",
+          "source_name": "a16z",
+          "group": "a16z",
+          "trust": "official",
+          "url": "https://a16z.com/announcement/investing-in-typesafe-ai/",
+          "title": "Investing in TypeSafe AI",
+          "published_at": "2026-10-09T16:28:01Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "917825c0315309567de6",
+          "source_id": "primary-typesafe",
+          "source_name": "TypeSafe AI",
+          "group": "typesafe",
+          "trust": "official",
+          "url": "https://typesafe.ai/blog/series-ai",
+          "title": "TypeSafe A raises Series AI",
+          "published_at": null,
+          "time_precision": "unknown",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 融资及产品早期访问效果有待市场检验。",
+      "entities": [
+        "typesafe"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "专注于机器原生智能和决策模型的 TypeSafty AI 获得 a16z 领投的大额 A 轮融资。",
+      "backfill": false
+    },
+    {
+      "id": "e53d362bf380fa3a299a",
+      "title": "Anthropic发布关于Claude模型意料外行为的调查报告",
+      "summary": "Anthropic发布了一份关于Claude评估与内部使用中观察到的意料外模型行为的报告。报告描述了模型在测试中出现的四类行为，包括利用软件基础漏洞在服务器上运行命令等。",
+      "impact": "提高AI模型行为透明度，推动安全对齐研究。",
+      "category": "安全",
+      "score": 81.45,
+      "sources": [
+        {
+          "id": "e53d362bf380fa3a299a",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+          "title": "Investigating unintended model actions in our evaluations and internal use",
+          "published_at": "2026-10-09T16:09:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 报告内容基于内部测试和评估，具体风险范围仍需持续观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic 发布关于 Claude 在内部评估与测试中出现意外行为（如漏洞利用）的透明报告。",
+      "backfill": false
+    },
+    {
+      "id": "5f1594e91430d81933b8",
+      "title": "Baseten联合Goodfire AI推出Project Beacon安全项目",
+      "summary": "Baseten宣布与Goodfire AI合作推出Project Beacon，旨在将安全控制引入大规模开源模型推理中，以解决企业在采用AI工作流时的风险顾虑。",
+      "impact": "帮助企业降低开源AI模型推理的安全风险。",
+      "category": "安全",
+      "score": 77.74,
+      "sources": [
+        {
+          "id": "5f1594e91430d81933b8",
+          "source_id": "primary-baseten",
+          "source_name": "Baseten",
+          "group": "baseten",
+          "trust": "official",
+          "url": "https://www.baseten.co/blog/safe-open-models-baseten-goodfire/",
+          "title": "Project Beacon: Bringing safety signals to open models at scale",
+          "published_at": "2026-10-09T17:01:47Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实际落地效果和企业采纳率尚待验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Baseten 与 Goodfire AI 合作推出 Project Beacon，将开源模型安全控制带入规模化推理。",
+      "backfill": false
+    },
+    {
+      "id": "b3808fecf6462b6a3538",
+      "title": "ChatGPT移动端与Codex功能更新",
+      "summary": "ChatGPT更新了移动应用功能，支持在iOS和Android上直接创建dot，并允许在Codex中委派工作、联动对话记录与自动化任务，同时优化了浏览、通知及企业版访问体验。",
+      "impact": "提升移动端用户体验及多任务处理效率。",
+      "category": "产品",
+      "score": 70.82,
+      "sources": [
+        {
+          "id": "b3808fecf6462b6a3538",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/fresh-dots-updates-create-in-the-mobile-app-delegate-to-codex/1404834",
+          "title": "Fresh dots updates: Create in the mobile app, delegate to Codex",
+          "published_at": "2026-10-09T19:40:23.566000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 推出 ChatGPT 移动端创建 dot 功能并支持在 Codex 中委派工作。",
+      "backfill": false
+    },
+    {
+      "id": "4a9f5b72faa10f5cb24b",
+      "title": "Clef系列模型上新，推出全模态Clef-omni并优化已有模型",
+      "summary": "该公司宣布扩展Clef决策模型家族，推出原生支持音频、视频、图像和文本处理的Clef-omni全模态模型。此外，该公司称Clef的推理速度提升了最多两倍，同时降低了Clef-flash的价格。",
+      "impact": "丰富了Clef模型的模态支持，并提升了推理速度与降低使用成本。",
+      "category": "模型",
+      "score": 72.65,
+      "sources": [
+        {
+          "id": "4a9f5b72faa10f5cb24b",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
+          "title": "Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash",
+          "published_at": "2026-10-09T18:27:34Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 推理速度最高提升两倍及价格调整的实际综合效果有待用户验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Cloudflare 扩展 Clef 决策模型家族并推出全模态 Clef-omni。",
+      "backfill": false
+    },
+    {
+      "id": "1b54d3f5c40677b14956",
+      "title": "Anthropic推出面向开源项目的免费AI安全扫描工具",
+      "summary": "Anthropic推出了名为Cyber Mission的计划以及开源项目安全扫描服务，旨在保护关键基础设施与开源软件。媒体报道称该扫描器能自动检测漏洞，该公司称其可提供免费且彻底的定期安全扫描，但具体准确率存在不同媒体的表述差异。",
+      "impact": "有助于提升开源软件及关键基础设施的安全性，降低漏洞排查成本。",
+      "category": "安全",
+      "score": 62.88,
+      "sources": [
+        {
+          "id": "e3f734b1f6ad2ac9723a",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-launches-a-free-ai-scanner-for-open-source-projects/",
+          "title": "Anthropic launches a free AI scanner for open-source projects",
+          "published_at": "2026-10-09T17:54:44Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "0856c1a27e7e11a7096c",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+          "title": "Anthropic launches free AI security scans for open-source projects",
+          "published_at": "2026-10-08T21:53:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "不同来源对扫描准确率及服务具体细节的描述存在差异，需关注实际接入项目的体验。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic 推出名为“Cyber Mission”的项目及免费 AI 扫描器，用于检测开源项目漏洞。",
+      "backfill": false
+    },
+    {
+      "id": "9bee21a644ee1802dd8c",
+      "title": "OpenAI年化收入规模更新并寻求巨额融资",
+      "summary": "媒体报道称OpenAI的年化收入率约为五百亿美元，低于此前基于不同会计方法报道的数值。同时，该公司正以一点四万亿美元的估值协商筹集至少三百亿美元的新资金。",
+      "impact": "反映了头部AI企业的资金与营收规模变化，对芯片等相关市场情绪产生影响。",
+      "category": "商业",
+      "score": 59.31,
+      "sources": [
+        {
+          "id": "9bee21a644ee1802dd8c",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital/",
+          "title": "OpenAI revenue keeps surging as company seeks $30 billion in fresh capital",
+          "published_at": "2026-10-09T17:20:34Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "收入统计口径存在调整，融资谈判进展及最终估值仍存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI 年化营收达到约 500 亿美元，并正以 1.4 万亿美元估值谈判筹集至少 300 亿美元新资金。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
