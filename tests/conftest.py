@@ -16,6 +16,7 @@ def settings():
     return Settings(
         base_url="https://reader.github.io/ai-news-auto-publisher",
         source_retries=0,
+        ai_run_limit=5,
         model="gemini-2.5-flash-lite",
         backup_model="gemini-2.5-flash",
     )

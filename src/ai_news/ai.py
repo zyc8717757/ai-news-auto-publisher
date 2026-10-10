@@ -5,6 +5,7 @@ import os
 import re
 import time
 from datetime import UTC, datetime, timedelta
+from decimal import Decimal
 from typing import Callable
 from zoneinfo import ZoneInfo
 
@@ -24,6 +25,8 @@ PROMPT = """你是中文AI新闻编辑，面向普通AI兴趣读者。输入是�
 重复建议只针对本批次其他event_id，不能用重复建议给无证据新闻背书。
 不要把不同版本或同公司不同事件合并。不要添加无关议题。返回严格符合schema的JSON。
 每条摘要尽量60–100个中文字，影响分析20–50个字，标题简洁。
+time_precision=day的零点只是日期锚点，不是发布时间；unknown表示未注明时间。
+不要在正文猜测精确发布时间。正文无需重复时间，由程序根据原始来源渲染。
 """
 PROMPT += "\n只输出JSON，不要Markdown代码围栏。JSON结构：\n" + json.dumps(
     AIResponse.model_json_schema(), ensure_ascii=False
@@ -150,7 +153,9 @@ def quota_used(state, now: datetime, model: str) -> int:
     return len(attempts)
 
 
-def validate_response(response: AIResponse, events: list[NewsEvent]) -> None:
+def validate_response(
+    response: AIResponse, events: list[NewsEvent], additional_text: dict[str, str] | None = None
+) -> None:
     ids = {event.id: event for event in events}
     outputs = [story.event_id for story in response.stories]
     if len(outputs) != len(set(outputs)) or set(outputs) != set(ids):
@@ -159,7 +164,15 @@ def validate_response(response: AIResponse, events: list[NewsEvent]) -> None:
         allowed = {evidence.id for evidence in ids[story.event_id].evidence}
         if not set(story.evidence_ids) <= allowed:
             raise ValueError("Unknown evidence reference")
-        text = " ".join([story.title, story.summary, story.impact, story.uncertainty])
+        text = " ".join(
+            [
+                story.title,
+                story.summary,
+                story.impact,
+                story.uncertainty,
+                (additional_text or {}).get(story.event_id, ""),
+            ]
+        )
         if re.search(r"https?://|www\.|[\w.+-]+@[\w.-]+\.[a-z]{2,}", text, re.I):
             raise ValueError("AI must not generate links or email addresses")
         if not re.search(r"[\u4e00-\u9fff]", story.summary):
@@ -167,12 +180,40 @@ def validate_response(response: AIResponse, events: list[NewsEvent]) -> None:
         if story.duplicate_of and (story.duplicate_of not in ids or story.duplicate_of == story.event_id):
             raise ValueError("Invalid duplicate suggestion")
         evidence_text = " ".join(
-            e.title + " " + e.excerpt + " " + e.published_at.isoformat() for e in ids[story.event_id].evidence
+            e.title + " " + e.excerpt + " " + (e.published_at.isoformat() if e.published_at else "")
+            for e in ids[story.event_id].evidence
+            if e.id in story.evidence_ids
         )
         numbers = set(re.findall(r"\d+(?:\.\d+)*", evidence_text))
         for evidence in ids[story.event_id].evidence:
-            numbers.update(str(int(n)) for n in re.findall(r"\d+", evidence.published_at.isoformat()))
-        if not set(re.findall(r"\d+(?:\.\d+)*", text)) <= numbers:
+            if evidence.id in story.evidence_ids and evidence.published_at is not None:
+                numbers.update(str(int(n)) for n in re.findall(r"\d+", evidence.published_at.isoformat()))
+        unsupported = set(re.findall(r"\d+(?:\.\d+)*", text)) - numbers
+        # Permit exact, unit-preserving translations such as $870 million -> 8.7亿美元.
+        # Arbitrary new bare numbers, percentages, or inferred metrics remain forbidden.
+        scales = {
+            "thousand": 1000,
+            "million": 1000000,
+            "billion": 1000000000,
+            "trillion": 1000000000000,
+            "千": 1000,
+            "万": 10000,
+            "亿": 100000000,
+            "k": 1000,
+            "m": 1000000,
+            "b": 1000000000,
+            "bn": 1000000000,
+        }
+        pattern = (
+            r"(\d+(?:\.\d+)?)\s*(thousand|million|billion|trillion|bn|[kmb]|千|万|亿)(?=\b|美|元|人|个|参)"
+        )
+        originals = {
+            Decimal(n) * scales[unit.lower()] for n, unit in re.findall(pattern, evidence_text, re.I)
+        }
+        translated = {
+            n for n, unit in re.findall(pattern, text, re.I) if Decimal(n) * scales[unit.lower()] in originals
+        }
+        if not unsupported <= translated:
             raise ValueError("Unsupported numeric claim")
 
 
@@ -258,9 +299,10 @@ class Enhancer:
                         {
                             "id": e.id,
                             "title": e.title[:200],
-                            "text": e.excerpt[:800],
+                            "text": e.excerpt,
                             "kind": e.trust,
-                            "published_at": e.published_at.isoformat(),
+                            "published_at": e.published_at.isoformat() if e.published_at else None,
+                            "time_precision": e.time_precision,
                         }
                         for e in event.evidence[:3]
                     ],

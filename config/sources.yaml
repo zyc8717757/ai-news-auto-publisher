@@ -19,9 +19,9 @@ sources:
   - {id: langchain, name: LangChain Releases, url: 'https://api.github.com/repos/langchain-ai/langchain/releases', kind: github, trust: official, group: langchain}
   - {id: langgraph, name: LangGraph Releases, url: 'https://api.github.com/repos/langchain-ai/langgraph/releases', kind: github, trust: official, group: langchain}
   - {id: litellm, name: LiteLLM Releases, url: 'https://api.github.com/repos/BerriAI/litellm/releases', kind: github, trust: official, group: berriai}
-  - {id: arxiv-ai, name: arXiv Artificial Intelligence, url: 'https://rss.arxiv.org/rss/cs.AI', trust: research, group: arxiv}
-  - {id: arxiv-cl, name: arXiv Computation and Language, url: 'https://rss.arxiv.org/rss/cs.CL', trust: research, group: arxiv}
-  - {id: arxiv-lg, name: arXiv Machine Learning, url: 'https://rss.arxiv.org/rss/cs.LG', trust: research, group: arxiv}
+  - {id: arxiv-ai, name: arXiv Artificial Intelligence, url: 'https://rss.arxiv.org/rss/cs.AI', trust: research, group: arxiv, enabled: false}
+  - {id: arxiv-cl, name: arXiv Computation and Language, url: 'https://rss.arxiv.org/rss/cs.CL', trust: research, group: arxiv, enabled: false}
+  - {id: arxiv-lg, name: arXiv Machine Learning, url: 'https://rss.arxiv.org/rss/cs.LG', trust: research, group: arxiv, enabled: false}
   - {id: berkeley-bair, name: Berkeley BAIR, url: 'https://bair.berkeley.edu/blog/feed.xml', trust: research, group: berkeley}
   - {id: mit-ai, name: MIT News AI, url: 'https://news.mit.edu/rss/topic/artificial-intelligence2', trust: research, group: mit}
   - {id: techcrunch-ai, name: TechCrunch AI, url: 'https://techcrunch.com/category/artificial-intelligence/feed/', trust: media, group: techcrunch}
@@ -31,3 +31,16 @@ sources:
   - {id: wired-ai, name: WIRED AI, url: 'https://www.wired.com/feed/tag/ai/latest/rss', trust: media, group: conde-nast}
   - {id: machineheart, name: 机器之心, url: 'https://www.jiqizhixin.com/rss', language: zh, trust: media, group: machineheart}
   - {id: hackernews, name: Hacker News, url: 'https://hnrss.org/newest?q=AI+OR+LLM+OR+GPT&count=50', trust: community, group: hackernews}
+
+  # Discovery is a lead route, never independent corroboration or an event timestamp.
+  - {id: juya-discovery, name: 橘鸦日刊线索, url: 'https://daily.juya.uk/rss.xml', kind: discovery, language: zh, trust: community, group: juya}
+  - {id: openai-community, name: OpenAI 官方开发者公告, url: 'https://community.openai.com/c/announcements/6.rss', kind: discourse, trust: official, group: openai}
+  - {id: anthropic-research, name: Anthropic Research, url: 'https://www.anthropic.com/research', kind: html, link_pattern: '/research/[^/?#]+$', trust: official, group: anthropic}
+  - {id: openai-learn, name: OpenAI 产品更新, url: 'https://learn.chatgpt.com/docs/whats-new', kind: html, link_pattern: '/docs/whats-new/[^/?#]+$', trust: official, group: openai}
+  - {id: decoder, name: The Decoder, url: 'https://the-decoder.com/feed/', trust: media, group: decoder}
+  - {id: cloudflare-ai, name: Cloudflare, url: 'https://blog.cloudflare.com/rss/', trust: official, group: cloudflare, ai_only: false}
+  - {id: google-developers, name: Google Developers, url: 'https://developers.googleblog.com/feeds/posts/default', trust: official, group: google, ai_only: false}
+  - {id: qwen-blog, name: Qwen, url: 'https://qwenlm.github.io/blog/', kind: html, link_pattern: '/blog/[^/?#]+/?$', trust: official, group: qwen}
+  - {id: deepseek-news, name: DeepSeek 官方更新, url: 'https://api-docs.deepseek.com/news', kind: html, link_pattern: '/news/news[^/?#]+$', trust: official, group: deepseek}
+  - {id: minimax-news, name: MiniMax, url: 'https://www.minimax.io/news', kind: html, link_pattern: '/news/[^/?#]+$', trust: official, group: minimax}
+  - {id: z-ai, name: Z.ai, url: 'https://z.ai/blog', kind: html, link_pattern: '/blog/[^/?#]+$', trust: official, group: zhipu}

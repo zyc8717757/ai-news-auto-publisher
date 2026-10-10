@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+from collections import Counter
 from datetime import UTC, datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -45,11 +46,14 @@ def scheduled_issue(
     return issue if now - cutoff <= timedelta(hours=6) else None
 
 
-def ai_stories(response, events) -> list[Story]:
+def ai_stories(response, events, decisions=None) -> list[Story]:
     by_event = {event.id: event for event in events}
     stories = []
     for value in response.stories:
+        if value.duplicate_of:
+            continue
         event = by_event[value.event_id]
+        decision = decisions.get(event.id) if decisions else None
         if event.evidence[0].trust == "research":
             caveat = (
                 "预印本，尚未确认同行评审；论文声称的结果需独立验证。"
@@ -64,10 +68,24 @@ def ai_stories(response, events) -> list[Story]:
                 title=value.title,
                 summary=value.summary,
                 impact=value.impact,
-                category=value.category,
+                category=decision.category if decision else value.category,
                 score=round(0.7 * event.rule_score + 0.3 * value.value_score, 2),
                 sources=[e.public_ref() for e in event.evidence if e.id in value.evidence_ids],
-                uncertainty=" ".join(x for x in [caveat, value.uncertainty] if x),
+                uncertainty=" ".join(
+                    x
+                    for x in [
+                        caveat,
+                        value.uncertainty,
+                        "未经官方确认，仅供前瞻观察。" if decision and decision.observation else "",
+                        "来源仅提供日期，时区及准确发布时间未知。"
+                        if any(e.time_precision == "day" for e in event.evidence)
+                        else "",
+                    ]
+                    if x
+                ),
+                section="observation" if decision and decision.observation else "news",
+                selection_reason=decision.reason if decision else "",
+                backfill=event.backfill,
                 entities=event.entities,
                 versions=event.versions,
                 event_type=event.event_type,
@@ -145,13 +163,14 @@ def generate(
         return existing, False
     if settings.paused:
         raise ValueError("publisher_paused")
-    previous = [d for d in store.digests() if d.cutoff < cutoff]
-    covered = max((d.cutoff for d in previous), default=None)
-    # Rebuilding an old issue must not use a later global coverage watermark.
-    start = max(covered, cutoff - timedelta(hours=48)) if covered else cutoff - timedelta(hours=24)
+    # Both editions revisit 24h plus the 24–48h important-backfill pool. History is
+    # authoritative for already-published events; a coverage watermark is not rejection.
+    start = cutoff - timedelta(hours=48)
     backfill = bool(store.state.last_covered_at and cutoff < store.state.last_covered_at)
     cache = {} if regenerate or backfill else store.state.source_cache
-    items, caches = asyncio.run((collector or Collector(settings)).collect(sources, cache, now))
+    items, caches = asyncio.run(
+        (collector or Collector(settings, cutoff=cutoff)).collect(sources, cache, now)
+    )
     if not caches or all(cache.status == "error" for cache in caches.values()):
         raise RuntimeError("all_sources_unavailable")
     history = [h for h in store.state.history if h.issue != issue]
@@ -162,15 +181,45 @@ def generate(
     mode = "rules"
     if events and settings.ai_enabled:
         try:
-            response = (enhancer or Enhancer(settings, store, issue=issue)).enhance(events)
-            stories = ai_stories(response, events)
+            if settings.editorial_enabled and enhancer is None:
+                from .editorial import EditorialEnhancer
+
+                latest = {}
+                for d in store.digests():
+                    if (
+                        d.issue != issue
+                        and d.cutoff >= cutoff - timedelta(days=30)
+                        and d.editorial_version == 2
+                    ):
+                        if d.issue not in latest or d.revision > latest[d.issue].revision:
+                            latest[d.issue] = d
+                counts = Counter(s.category for d in latest.values() for s in d.news)
+                response, decisions, selected = EditorialEnhancer(settings, store, issue=issue).edit(
+                    events, cutoff, dict(counts)
+                )
+                stories = ai_stories(response, selected, decisions)
+            else:
+                response = (enhancer or Enhancer(settings, store, issue=issue)).enhance(events)
+                stories = ai_stories(response, events)
             mode = "ai"
         except AIUnavailable as exc:
             logging.getLogger(__name__).warning("AI degraded: %s", exc)
             warnings.append("ai_unavailable")
     if mode == "rules":
+        observers = 0
         for event in events:
             primary = event.evidence[0]
+            if settings.editorial_enabled:
+                if (
+                    primary.trust == "research"
+                    or event.rule_score < settings.importance_threshold
+                    or event.backfill
+                    and event.rule_score < 80
+                ):
+                    continue
+                if event.observation and observers >= settings.max_observations:
+                    continue
+                observers += event.observation
             stories.append(
                 Story(
                     id=event.id,
@@ -186,9 +235,15 @@ def generate(
                     event_type=event.event_type,
                     previous_issue=event.previous_issue,
                     update_note=event.update_note,
+                    section="observation" if event.observation else "news",
+                    backfill=event.backfill,
                 )
             )
-    stories = sorted(stories, key=lambda story: (-story.score, story.id))[: settings.max_items]
+    # Preserve AI's global importance order; observations never displace formal Top3.
+    if mode == "rules" or not settings.editorial_enabled or enhancer is not None:
+        stories.sort(key=lambda story: (-story.score, story.id))
+    stories.sort(key=lambda story: story.section == "observation")
+    stories = stories[: settings.max_items]
     if not stories:
         warnings.append("no_new_items")
     digest = Digest(
@@ -200,12 +255,13 @@ def generate(
         mode=mode,
         stories=stories,
         warnings=warnings,
+        editorial_version=2 if settings.editorial_enabled else 1,
     )
     store.state.issues[digest.key] = IssueState()
     # Backfills must not consume ETags or move coverage for later live periods.
     if store.state.last_covered_at is None or cutoff >= store.state.last_covered_at:
         for value in items:
-            if value.published_at > cutoff and value.source_id in caches:
+            if value.published_at is not None and value.published_at > cutoff and value.source_id in caches:
                 caches[value.source_id].etag = ""
                 caches[value.source_id].modified = ""
         store.state.source_cache.update(caches)

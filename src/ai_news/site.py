@@ -34,14 +34,18 @@ TEMPLATE = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 {% if digest %}<p class="meta">截止 {{ local(digest.cutoff) }} · 更新 {{ local(digest.created_at) }} · 第 {{ digest.revision }} 版 · {{ digest.stories|length }} 条</p>
 {% if digest.mode == 'rules' %}<p class="notice">基础规则版，AI 增强未完成。保留来源原文信息，不编造中文翻译或影响分析。</p>{% endif %}
 {% if digest.warnings %}<p class="notice">{{ warnings }}</p>{% endif %}
+{% if digest.editorial_version == 2 %}<p class="meta">综合重要新闻版 · {{ digest.news|length }} 条正式新闻 · {{ digest.observations|length }} 条前瞻观察 · 普通论文不入选</p>
+{% if digest.news %}<h2>本期重点（最多三条）</h2><ol>{% for story in digest.news[:3] %}<li>{{ story.title }}</li>{% endfor %}</ol>{% endif %}{% endif %}
 <p><a href="{{ root }}/assets/{{ digest.key }}-overview.png">下载本期资讯汇总图</a></p>
 <img src="{{ root }}/assets/{{ digest.key }}-overview.png" alt="本期资讯分类概览" style="width:100%;height:auto;border-radius:12px">
-{% for story in digest.stories %}<article><span class="tag">{{ story.category }}</span><h2>{{ loop.index }}. {{ story.title }}</h2>
+{% for story in digest.stories %}{% if story.section == 'observation' and (loop.first or digest.stories[loop.index0-1].section != 'observation') %}<h2>前瞻观察</h2><p class="notice">以下未经官方确认，不属于正式 Top 3，不能视为已发布或已验证的能力。</p>{% endif %}
+<article><span class="tag">{{ story.category }}{% if story.backfill %} · 重要补录{% endif %}</span><h2>{{ loop.index }}. {{ story.title }}</h2>
 <p>{{ story.summary }}</p>{% if story.impact %}<p class="impact"><strong>为什么重要：</strong>{{ story.impact }}</p>{% endif %}
+{% if story.selection_reason %}<p class="meta">入选理由：{{ story.selection_reason }}</p>{% endif %}
 {% if story.uncertainty %}<p class="notice">{{ story.uncertainty }}</p>{% endif %}
 {% if story.previous_issue %}<p>新增进展：{{ story.update_note }} <a href="{{ root }}/issues/{{ story.previous_issue }}.html">此前报道</a></p>{% endif %}
 <ul>{% for source in story.sources %}<li><a href="{{ source.url }}" rel="noopener noreferrer">{{ source.source_name }} · {{ source.title }}</a>
-<small>{{ local(source.published_at) }}</small></li>{% endfor %}</ul></article>{% else %}<p>本期暂无达到来源与时效要求的新资讯。</p>{% endfor %}
+<small>{{ source_time(source) }}</small></li>{% endfor %}</ul></article>{% else %}<p>本期暂无达到来源与时效要求的新资讯。</p>{% endfor %}
 <nav>{% if previous %}<a href="{{ root }}/issues/{{ previous }}.html">上一期</a>{% endif %}
 {% if following %}<a href="{{ root }}/issues/{{ following }}.html">下一期</a>{% endif %}</nav>
 <nav>{% for revision in versions %}<a href="{{ root }}/revisions/{{ revision.key }}.html">历史版本 r{{ revision.revision }}</a>{% endfor %}</nav>
@@ -62,6 +66,14 @@ WARNING_TEXT = {
 
 def digest_url(base_url: str, digest: Digest) -> str:
     return f"{base_url.rstrip('/')}/issues/{digest.issue}.html"
+
+
+def source_time(source) -> str:
+    if source.published_at is None or source.time_precision == "unknown":
+        return "原文未注明发布时间（仅辅助核实）"
+    if source.time_precision == "day":
+        return (source.source_date or source.published_at.date().isoformat()) + "（仅日期，时区未知）"
+    return source.published_at.astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M 北京时间")
 
 
 def build_site(digests: list[Digest], output: Path, base_url: str, repository: str = "") -> None:
@@ -96,6 +108,7 @@ def build_site(digests: list[Digest], output: Path, base_url: str, repository: s
             local=lambda value: value.astimezone(ZoneInfo("Asia/Shanghai")).strftime(
                 "%Y-%m-%d %H:%M 北京时间"
             ),
+            source_time=source_time,
             issue_url=f"https://github.com/{repository}/issues" if repository else "https://github.com/",
         )
 

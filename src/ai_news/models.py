@@ -36,15 +36,29 @@ class Settings(StrictModel):
     evening_time: str = Field(default="20:00", pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
     max_items: int = Field(default=15, ge=1, le=15)
     max_candidates: int = Field(default=300, ge=1, le=300)
-    ai_candidates: int = Field(default=30, ge=1, le=30)
+    ai_candidates: int = Field(default=120, ge=1, le=120)
     source_limit: int = Field(default=50, ge=1, le=50)
     concurrency: int = Field(default=5, ge=1, le=5)
     timeout_seconds: int = Field(default=20, ge=1, le=60)
     source_retries: int = Field(default=2, ge=0, le=2)
-    ai_run_limit: int = Field(default=5, ge=1, le=5)
+    ai_run_limit: int = Field(default=20, ge=1, le=20)
     ai_day_limit: int = Field(default=500, ge=1, le=500)
     dedup_hours: int = Field(default=48, ge=1, le=48)
     history_days: int = Field(default=90, ge=2, le=365)
+    editorial_enabled: bool = True
+    importance_threshold: int = Field(default=65, ge=50, le=95)
+    max_observations: int = Field(default=2, ge=0, le=2)
+    max_research: int = Field(default=2, ge=0, le=2)
+    topic_weights: dict[str, int] = Field(
+        default_factory=lambda: {
+            "产品": 28,
+            "模型": 25,
+            "开发": 16,
+            "商业": 13,
+            "安全": 9,
+            "评测": 9,
+        }
+    )
 
     _base = field_validator("base_url")(web_url)
 
@@ -52,6 +66,12 @@ class Settings(StrictModel):
     def ordered_schedule(self):
         if self.morning_time >= self.evening_time:
             raise ValueError("Morning time must be earlier than evening time on the same Beijing date")
+        if (
+            set(self.topic_weights) != {"产品", "模型", "开发", "商业", "安全", "评测"}
+            or sum(self.topic_weights.values()) != 100
+            or min(self.topic_weights.values()) < 0
+        ):
+            raise ValueError("Six nonnegative editorial weights must sum to 100")
         return self
 
 
@@ -59,7 +79,7 @@ class Source(StrictModel):
     id: str = Field(pattern=r"^[a-z0-9-]+$")
     name: str
     url: str
-    kind: Literal["rss", "github", "html"] = "rss"
+    kind: Literal["rss", "github", "html", "discovery", "discourse"] = "rss"
     language: str = "en"
     trust: Literal["official", "research", "media", "community"]
     group: str
@@ -86,14 +106,16 @@ class SourceRef(StrictModel):
     trust: Literal["official", "research", "media", "community"]
     url: str
     title: str = Field(max_length=400)
-    published_at: datetime
+    published_at: datetime | None
+    time_precision: Literal["exact", "day", "unknown"] = "exact"
+    source_date: str = Field(default="", max_length=40)
 
     _url = field_validator("url")(web_url)
 
     @field_validator("published_at")
     @classmethod
-    def aware(cls, value: datetime) -> datetime:
-        if value.tzinfo is None:
+    def aware(cls, value: datetime | None) -> datetime | None:
+        if value is not None and value.tzinfo is None:
             raise ValueError("Timestamp must include timezone")
         return value
 
@@ -102,6 +124,7 @@ class SourceItem(SourceRef):
     collected_at: datetime
     excerpt: str = Field(default="", max_length=1600)
     event_at: datetime | None = None
+    supporting: list["SourceItem"] = Field(default_factory=list, max_length=2)
 
     def public_ref(self) -> SourceRef:
         return SourceRef.model_validate(self.model_dump(include=set(SourceRef.model_fields)))
@@ -114,6 +137,9 @@ class NewsEvent(StrictModel):
     entities: list[str] = Field(default_factory=list)
     versions: list[str] = Field(default_factory=list)
     event_type: str = "announcement"
+    observation: bool = False
+    uncertain: bool = False
+    backfill: bool = False
     previous_issue: str | None = None
     update_note: str = ""
 
@@ -123,7 +149,7 @@ class AIStory(StrictModel):
     title: str = Field(min_length=2, max_length=120)
     summary: str = Field(min_length=10, max_length=500)
     impact: str = Field(min_length=5, max_length=240)
-    category: Literal["模型", "产品", "开源", "科研", "商业", "政策"]
+    category: Literal["模型", "产品", "开源", "科研", "商业", "政策", "开发", "安全", "评测"]
     value_score: float = Field(ge=0, le=100)
     evidence_ids: list[str] = Field(min_length=1)
     uncertainty: str = Field(default="", max_length=240)
@@ -148,6 +174,9 @@ class Story(StrictModel):
     event_type: str = "announcement"
     previous_issue: str | None = None
     update_note: str = ""
+    section: Literal["news", "observation"] = "news"
+    selection_reason: str = Field(default="", max_length=200)
+    backfill: bool = False
 
 
 class Digest(StrictModel):
@@ -161,6 +190,15 @@ class Digest(StrictModel):
     stories: list[Story] = Field(max_length=15)
     warnings: list[str] = Field(default_factory=list)
     template_version: Literal[1] = 1
+    editorial_version: Literal[1, 2] = 1
+
+    @property
+    def news(self) -> list[Story]:
+        return [s for s in self.stories if s.section == "news"]
+
+    @property
+    def observations(self) -> list[Story]:
+        return [s for s in self.stories if s.section == "observation"]
 
     @property
     def key(self) -> str:
@@ -187,6 +225,10 @@ class SourceCache(StrictModel):
     modified: str = ""
     status: Literal["ok", "unchanged", "error"] = "ok"
     error_code: str = Field(default="", pattern=r"^[a-z0-9_]*$")
+    # Bounded public excerpts, never credentials, drafts or original full articles.
+    items: list[SourceItem] = Field(default_factory=list, max_length=12)
+    discovered: int = 0
+    verified: int = 0
 
 
 class IssueState(StrictModel):

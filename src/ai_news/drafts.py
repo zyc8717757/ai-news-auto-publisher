@@ -34,7 +34,7 @@ class TextCounter:
 def make_drafts(digest: Digest, url: str, counter: TextCounter | None = None) -> DraftBundle:
     counter = counter or TextCounter()
     header = digest.label + ("｜基础规则版" if digest.mode == "rules" else "")
-    titles = [story.title for story in digest.stories[:3]]
+    titles = [story.title for story in digest.news[:3]]
     for budget in (55, 45, 35, 25, 15):
         clipped = counter.shorten(titles, budget)
         short = "\n".join([header, *[f"{i}. {t}" for i, t in enumerate(clipped, 1)], "完整日报：", url])
@@ -54,7 +54,9 @@ def make_drafts(digest: Digest, url: str, counter: TextCounter | None = None) ->
         for index, (story, summary, impact) in enumerate(
             zip(digest.stories, summaries, impacts, strict=True), 1
         ):
-            section = f"{index}. {story.title}\n{summary}"
+            prefix = "【前瞻观察·未经官方确认】" if story.section == "observation" else ""
+            prefix += "【重要补录】" if story.backfill else ""
+            section = f"{index}. {prefix}{story.title}\n{summary}"
             if impact:
                 section += f"\n为什么重要：{impact}"
             if story.uncertainty:

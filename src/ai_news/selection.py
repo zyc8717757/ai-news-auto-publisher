@@ -24,12 +24,39 @@ ALIASES = {
     "pytorch": r"pytorch",
     "langchain": r"langchain|langgraph",
     "litellm": r"litellm",
+    "typesafe": r"typesafe|\bjev\b",
 }
 AI_TERMS = re.compile(
     r"\b(ai|llm|gpt|agent|chatbot|diffusion|transformer|inference|robot|machine learning)\b"
-    r"|artificial intelligence|人工智能|大模型|智能体|机器学习|生成式|深度学习",
+    r"|artificial intelligence|人工智能|大模型|智能体|机器学习|生成式|深度学习|chatgpt|claude|gemini|codex|deepseek|qwen|grok|kimi|doubao",
     re.I,
 )
+PREVIEW = re.compile(
+    r"reportedly|rumou?r|sources? say|alleged|might|消息称|报道称|据报|被曝|疑似|或将|即将|将于|预计|内测|灰度测试",
+    re.I,
+)
+MAJOR = re.compile(
+    r"model|模型|launch|releas|introduc|发布|推出|融资|fund|rais|安全|privacy|security|policy|政策|订阅|额度|价格|plan|pricing|新功能|更新|agent|智能体|codex|claude|gemini|deepseek",
+    re.I,
+)
+
+
+def ordinary_update(value: SourceItem) -> bool:
+    if value.source_id.startswith("arxiv-"):
+        return True  # Papers alone are not general-interest news evidence.
+    if re.search(r"releases/tag/", value.url):
+        patch = re.search(r"\bv?(\d+)\.(\d+)\.(\d+)\b", value.title)
+        if (
+            patch
+            and int(patch[3])
+            and not re.search(
+                r"breaking|security|critical|重大|安全", value.title + " " + value.excerpt, re.I
+            )
+        ):
+            return True
+    return False
+
+
 VERSION = re.compile(
     r"\b(?:v?\d+\.\d+(?:\.\d+)?(?:-[a-z]+)?|(?:gpt|gemini|claude|llama|qwen)[- ]\d[\w.-]*)\b", re.I
 )
@@ -108,11 +135,14 @@ def select_events(
     rank = {"official": 0, "research": 1, "media": 2, "community": 3}
     unique: dict[str, SourceItem] = {}
     for value in items:
-        if not start < value.published_at <= cutoff:
+        if value.published_at is None or not start < value.published_at <= cutoff:
+            continue
+        if ordinary_update(value):
             continue
         source = config.get(value.source_id)
-        if not source or (
-            not source.ai_only
+        resolved = value.source_id.startswith(("primary-", "media-", "hf-"))
+        if (not source and not resolved) or (
+            (not source or not source.ai_only)
             and not AI_TERMS.search(value.title + " " + value.excerpt)
             and not features(value.title)[0]
         ):
@@ -123,16 +153,17 @@ def select_events(
     for value in sorted(unique.values(), key=lambda x: (rank[x.trust], -x.published_at.timestamp())):
         matching = next((cluster for cluster in clusters if same_event(value.title, cluster[0].title)), None)
         if matching is None:
-            clusters.append([value])
+            clusters.append([value, *value.supporting])
         else:
             matching.append(value)
+            matching.extend(value.supporting)
     events = []
     recent = [h for h in history if cutoff - timedelta(hours=dedup_hours) <= h.cutoff <= cutoff]
     for cluster in clusters:
         primary = cluster[0]
         trusted = any(value.trust in {"official", "research"} for value in cluster)
         groups = independent_groups(cluster)
-        if not trusted and groups < 2:
+        if not trusted and not any(x.trust == "media" for x in cluster):
             continue
         entities, versions, kind = features(primary.title)
         prior = next(
@@ -160,8 +191,10 @@ def select_events(
             ),
             None,
         )
-        age = max(0, (cutoff - max(x.published_at for x in cluster)).total_seconds() / 3600)
-        impact = 30 if re.search(r"model|模型|regulat|政策|fund|融资", primary.title, re.I) else 18
+        age = max(0, (cutoff - max(x.published_at for x in cluster if x.published_at is not None)).total_seconds() / 3600)
+        impact = (
+            30 if re.search(r"model|模型|regulat|政策|fund|融资|security|安全", primary.title, re.I) else 18
+        )
         score = 30 if primary.trust == "official" else 25 if primary.trust == "research" else 15
         score += impact + min(15, max(0, groups - 1) * 7.5) + max(0, 15 * (1 - age / 48))
         score += 10 if primary.trust in {"official", "research"} else 5
@@ -174,6 +207,9 @@ def select_events(
                 entities=entities,
                 versions=versions,
                 event_type=kind,
+                observation=bool(PREVIEW.search(primary.title)) or (not trusted and groups < 2),
+                uncertain=bool(PREVIEW.search(primary.title)),
+                backfill=primary.published_at <= cutoff - timedelta(hours=24),
                 previous_issue=previous.issue if previous else None,
                 update_note="与上一期相比，来源公布了新的明确版本。" if previous else "",
             )

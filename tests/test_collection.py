@@ -53,16 +53,18 @@ def test_releases_skip_prerelease(official, now):
     assert len(values) == 1
 
 
-def test_source_failure_and_304_are_isolated(settings, official, now):
+def test_source_failure_and_304_are_isolated(settings, official, now, source_item):
     class FakeHTTP:
         async def get(self, url, headers=None):
             assert headers["If-None-Match"] == "old"
             return Page(304, "", {}, url)
 
     values, cache = asyncio.run(
-        Collector(settings, FakeHTTP()).collect_source(official, SourceCache(etag="old"), now)
+        Collector(settings, FakeHTTP()).collect_source(
+            official, SourceCache(etag="old", items=[source_item]), now
+        )
     )
-    assert values == [] and cache.status == "unchanged" and cache.etag == "old"
+    assert values == [source_item] and cache.status == "unchanged" and cache.etag == "old"
 
     class FailedHTTP:
         async def get(self, *args):

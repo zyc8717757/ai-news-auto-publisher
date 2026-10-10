@@ -17,6 +17,9 @@ HEADINGS = {
     "科研": "技术与洞察",
     "商业": "行业动态",
     "政策": "政策与治理",
+    "开发": "开发工具与Agent",
+    "安全": "安全与政策",
+    "评测": "技术评测与洞察",
 }
 COLORS = ["#B75936", "#27666A", "#AE822A", "#A74454", "#466879", "#72608C"]
 
@@ -50,14 +53,17 @@ def overview_png(digest: Digest) -> bytes:
     measure = ImageDraw.Draw(canvas)
     groups = {}
     for index, story in enumerate(digest.stories, 1):
-        groups.setdefault(story.category, []).append((index, story))
+        groups.setdefault(
+            "前瞻观察·未经官方确认" if story.section == "observation" else story.category, []
+        ).append((index, story))
     cards, bottoms = [], [254, 254]
     for category, entries in groups.items():
         # Split long categories across both columns instead of leaving half the image blank.
         for offset in range(0, len(entries), 8):
             rows = []
             for index, story in entries[offset : offset + 8]:
-                rows.append(wrap(f"{index:02d}  {story.title}", measure, regular, card_width - 64))
+                title_text = ("[补录] " if story.backfill else "") + story.title
+                rows.append(wrap(f"{index:02d}  {title_text}", measure, regular, card_width - 64))
             height = 118 + sum(len(lines) * 45 + 22 for lines in rows)
             column = 0 if bottoms[0] <= bottoms[1] else 1
             x, y = margin + column * (card_width + gap), bottoms[column]

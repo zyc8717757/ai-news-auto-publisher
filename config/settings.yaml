@@ -8,13 +8,19 @@ morning_time: '08:30'
 evening_time: '20:30'
 max_items: 15
 max_candidates: 300
-ai_candidates: 30
+ai_candidates: 120
 source_limit: 50
 concurrency: 5
 timeout_seconds: 20
 source_retries: 2
-ai_run_limit: 5
+ai_run_limit: 20
 ai_day_limit: 500
 dedup_hours: 48
 history_days: 90
 # Replace the sample URL before any deployment or email.
+
+editorial_enabled: true
+importance_threshold: 65
+max_observations: 2
+max_research: 2
+topic_weights: {产品: 28, 模型: 25, 开发: 16, 商业: 13, 安全: 9, 评测: 9}

@@ -14,7 +14,7 @@ from typing import Protocol
 from .drafts import make_drafts
 from .models import Digest, IssueState
 from .overview import overview_png
-from .site import digest_url
+from .site import digest_url, source_time
 from .store import Store
 
 
@@ -54,17 +54,32 @@ def make_message(digest: Digest, config: MailConfig, base_url: str, deployment_r
         f"{'AI增强版' if digest.mode == 'ai' else '基础规则版：AI增强未完成'} · {len(digest.stories)}条",
     ]
     sections.append(f"完整日报：{url}" if deployment_ready else "网页部署尚未确认，以下邮件内容可独立阅读。")
+    if digest.editorial_version == 2:
+        sections.append(
+            f"综合重要新闻版：正式新闻{len(digest.news)}条，前瞻观察{len(digest.observations)}条。"
+        )
+        if digest.news:
+            sections.append(
+                "本期重点（最多三条）：\n"
+                + "\n".join(f"{i}. {s.title}" for i, s in enumerate(digest.news[:3], 1))
+            )
     if digest.warnings:
         sections.append("本期处理提示：" + ", ".join(digest.warnings))
     for i, story in enumerate(digest.stories, 1):
-        body = f"{i}. {story.title}\n{story.summary}"
+        prefix = "【前瞻观察·未经官方确认】" if story.section == "observation" else ""
+        prefix += "【重要补录】" if story.backfill else ""
+        body = f"{i}. {prefix}{story.title}\n{story.summary}"
         if story.impact:
             body += "\n为什么重要：" + story.impact
         if story.uncertainty:
             body += "\n说明：" + story.uncertainty
         if story.update_note:
             body += "\n新增进展：" + story.update_note
-        body += "\n" + "\n".join(f"{source.source_name}: {source.url}" for source in story.sources)
+        if story.selection_reason:
+            body += "\n入选理由：" + story.selection_reason
+        body += "\n" + "\n".join(
+            f"{source.source_name}: {source.url} · {source_time(source)}" for source in story.sources
+        )
         sections.append(body)
     sections.append("以下两版为待人工审核草稿。复制区块内正文或使用附件；系统不会自动发布到 X。")
     if not deployment_ready:

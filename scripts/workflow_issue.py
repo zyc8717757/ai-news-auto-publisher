@@ -26,7 +26,7 @@ def main():
             raise ValueError("Missing frozen digest")
         result = {"status": "ready", "issue": issue}
         atomic_write(Path(".runtime/result.json"), json.dumps(result))
-    elif mode in {"run", "regenerate", "enhance-issue", "test-enhance"}:
+    elif mode in {"run", "regenerate", "enhance-issue", "test-enhance", "validate-news"}:
         command = [
             "ai-news",
             "--data",
@@ -35,7 +35,7 @@ def main():
             "enhance-issue" if mode in {"enhance-issue", "test-enhance"} else "generate",
         ]
         command += ["--schedule", schedule] if schedule else ["--issue", issue]
-        if mode == "regenerate":
+        if mode in {"regenerate", "validate-news"}:
             command += ["--regenerate"]
         if mode == "test-enhance":
             if os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != issue:
