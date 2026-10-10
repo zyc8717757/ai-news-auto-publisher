@@ -205,7 +205,7 @@ def article_metadata(body: str) -> tuple[str, str, datetime | None, str, str]:
     excerpt = (
         plain(description.get("content", "") if description else "", 250)
         + " "
-        + " ".join(financial[:2])[:600]
+        + " ".join(financial[:3])[:1000]
         + " "
         + " ".join(actions[:1])[:500]
         + " "

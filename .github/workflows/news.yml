@@ -139,7 +139,8 @@ jobs:
         if: steps.issue.outputs.ready == 'true' && inputs.mode != 'send' && inputs.mode != 'validate-news' && inputs.mode != 'review-issue'
         env:
           RUN_MODE: ${{ inputs.mode || 'run' }}
-        run: ai-news --data .runtime/data build-site
+          ISSUE: ${{ steps.issue.outputs.issue }}
+        run: ai-news --data .runtime/data build-site --issue "$ISSUE"
       - name: Package only audited public site
         id: package
         if: steps.issue.outputs.ready == 'true' && steps.build.outcome == 'success'

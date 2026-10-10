@@ -14,7 +14,7 @@ from .config import load_config
 from .mailer import MailConfig, deliver
 from .models import Digest, IssueState, NewsEvent, SourceItem
 from .network import PublicHTTP
-from .pipeline import cutoff_for, enhance_frozen, generate, scheduled_issue
+from .pipeline import cutoff_for, enhance_frozen, generate, published_digests, scheduled_issue
 from .site import audit_site, build_site, digest_url
 from .store import Store, atomic_write
 
@@ -61,6 +61,7 @@ def parser() -> argparse.ArgumentParser:
     site = sub.add_parser("build-site")
     site.add_argument("--output", type=Path, default=Path("site"))
     site.add_argument("--allow-sample-url", action="store_true")
+    site.add_argument("--issue", help="Publish only this pending issue plus previously published revisions")
     audit = sub.add_parser("audit-site")
     audit.add_argument("--output", type=Path, default=Path("site"))
     deploy = sub.add_parser("mark-deployment")
@@ -197,7 +198,14 @@ def execute(args) -> int:
     elif args.command == "build-site":
         if not args.allow_sample_url:
             check_base(settings.base_url)
-        build_site(store.digests(), args.output, settings.base_url, os.environ.get("GITHUB_REPOSITORY", ""))
+        digests = store.digests()
+        if args.issue:
+            cutoff_for(args.issue)
+            target = store.latest(args.issue)
+            if target is None:
+                raise ValueError("Missing publication target")
+            digests = list({d.key: d for d in [*published_digests(store), target]}.values())
+        build_site(digests, args.output, settings.base_url, os.environ.get("GITHUB_REPOSITORY", ""))
         print('{"status":"site_ready"}')
     elif args.command in {"mark-deployment", "send"}:
         cutoff_for(args.issue)
