@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": null,
+  "last_covered_at": "2026-10-10T00:30:00Z",
   "ai_attempts": [
     "2026-10-10T06:47:17.108587Z"
   ],
@@ -10,7 +10,225 @@
       7744
     ]
   ],
-  "source_cache": {},
-  "issues": {},
-  "history": []
+  "source_cache": {
+    "openai": {
+      "etag": "",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "anthropic": {
+      "etag": "",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "deepmind": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "connection_failed"
+    },
+    "google-ai": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "connection_failed"
+    },
+    "huggingface": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "connection_failed"
+    },
+    "microsoft-research": {
+      "etag": "\"19b69f068456ef295d53656730f9bad3\"",
+      "modified": "Sat, 10 Oct 2026 03:22:56 GMT",
+      "status": "ok",
+      "error_code": ""
+    },
+    "nvidia": {
+      "etag": "\"164a6d18b55bb2370f43ce628fd72ae4-gzip\"",
+      "modified": "Thu, 08 Oct 2026 21:07:24 GMT",
+      "status": "ok",
+      "error_code": ""
+    },
+    "mistral": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "parse_failed"
+    },
+    "meta-ai": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "connection_failed"
+    },
+    "pytorch": {
+      "etag": "W/\"718626ad516fb0f327905376dc5c95f355df1ef92fb8eedc2c956f65c9b0f778\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "transformers": {
+      "etag": "W/\"f9cca1edbc92b77f8ae83c8a0e3997a083b420e868ab9772622f2bc37db3f264\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "diffusers": {
+      "etag": "W/\"9f29cbb89543fce87135b9bf9d5a2df0a056c50e11b696dd8fc097a4204951c1\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "vllm": {
+      "etag": "W/\"47330189f2f57a634d4a913c5dc38f03488ccb92e5dcfff854b43e8ac843c2e4\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "ollama": {
+      "etag": "W/\"fdf9a975c02088a4bdc6fa21851a09b4f93a4365b8ab537255c1f381f839ad66\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "llama-cpp": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "parse_failed"
+    },
+    "langchain": {
+      "etag": "W/\"26e2d9f7afbd04799929155692b16085c911574808bcd5267d2dc14533e4edb2\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "langgraph": {
+      "etag": "W/\"e793e73a6b7fc4438aa94554e409b3abaf958355e12470d8eabb133e14d53649\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "litellm": {
+      "etag": "W/\"901b082b1331689113c9197d1b152109844a687eb3eee505706b71e4c23e86f1\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "arxiv-ai": {
+      "etag": "",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "arxiv-cl": {
+      "etag": "85ca85c86e157f02b0cce9af08f59d23efba7f7716bbe7b89a069c0040834aac",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "arxiv-lg": {
+      "etag": "6c3210ac4485cc5d568289a9f1a87be55f216f2be1fa75f53d39934750a74487",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "berkeley-bair": {
+      "etag": "\"46973-657c8b456a0bd-gzip\"",
+      "modified": "Wed, 29 Jul 2026 23:56:30 GMT",
+      "status": "ok",
+      "error_code": ""
+    },
+    "mit-ai": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "http_403"
+    },
+    "techcrunch-ai": {
+      "etag": "W/\"35e060e953d729657ac825bd58519583\"",
+      "modified": "Sat, 10 Oct 2026 05:47:16 GMT",
+      "status": "ok",
+      "error_code": ""
+    },
+    "venturebeat-ai": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "http_429"
+    },
+    "ars": {
+      "etag": "",
+      "modified": "Sat, 10 Oct 2026 00:52:47 GMT",
+      "status": "ok",
+      "error_code": ""
+    },
+    "theverge-ai": {
+      "etag": "W/\"31d53264d1bb23a0545aad1f4090312c\"",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "wired-ai": {
+      "etag": "",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    },
+    "machineheart": {
+      "etag": "",
+      "modified": "",
+      "status": "error",
+      "error_code": "parse_failed"
+    },
+    "hackernews": {
+      "etag": "",
+      "modified": "",
+      "status": "ok",
+      "error_code": ""
+    }
+  },
+  "issues": {
+    "2026-10-10-am-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
+    }
+  },
+  "history": [
+    {
+      "id": "9bf93d58cc35db9987f8",
+      "issue": "2026-10-10-am",
+      "cutoff": "2026-10-10T00:30:00Z",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "urls": [
+        "https://openai.com/index/asana-browser-agent"
+      ],
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6.1"
+      ],
+      "event_type": "announcement"
+    },
+    {
+      "id": "570fe3204556675e8dd9",
+      "issue": "2026-10-10-am",
+      "cutoff": "2026-10-10T00:30:00Z",
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "urls": [
+        "https://openai.com/index/sophos"
+      ],
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    }
+  ]
 }

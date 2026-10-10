@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-10-am",
+  "revision": 1,
+  "created_at": "2026-10-10T06:47:09.946543Z",
+  "cutoff": "2026-10-10T00:30:00Z",
+  "window_start": "2026-10-09T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "9bf93d58cc35db9987f8",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 79.53,
+      "sources": [
+        {
+          "id": "9bf93d58cc35db9987f8",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/asana-browser-agent",
+          "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+          "published_at": "2026-10-09T07:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6.1"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    },
+    {
+      "id": "570fe3204556675e8dd9",
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.53,
+      "sources": [
+        {
+          "id": "570fe3204556675e8dd9",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/sophos",
+          "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+          "published_at": "2026-10-09T07:00:00Z"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": ""
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1
+}
