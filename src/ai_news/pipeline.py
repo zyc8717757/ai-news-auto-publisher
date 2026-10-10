@@ -15,6 +15,20 @@ from .store import Store
 SHANGHAI = ZoneInfo("Asia/Shanghai")
 
 
+def published_digests(store: Store) -> list[Digest]:
+    """Pending validation revisions must not become 'already sent' news.
+
+    An ambiguous SMTP outcome is conservatively treated as potentially sent,
+    matching the explicit-resend policy; a never-deployed pending revision isn't.
+    """
+    result = []
+    for digest in store.digests():
+        state = store.state.issues.get(digest.key)
+        if state and (state.deployment == "ready" or state.email in {"sent", "unknown", "sending"}):
+            result.append(digest)
+    return result
+
+
 def cron_for(value: str) -> str:
     hour, minute = map(int, value.split(":"))
     return f"{minute} {hour} * * *"
@@ -173,7 +187,24 @@ def generate(
     )
     if not caches or all(cache.status == "error" for cache in caches.values()):
         raise RuntimeError("all_sources_unavailable")
-    history = [h for h in store.state.history if h.issue != issue]
+    public = published_digests(store)
+    known_issues = {d.issue for d in store.digests()}
+    history = [h for h in store.state.history if h.issue not in known_issues and h.issue != issue]
+    history.extend(
+        HistoryEvent(
+            id=s.id,
+            issue=d.issue,
+            cutoff=d.cutoff,
+            title=s.sources[0].title,
+            urls=[r.url for r in s.sources],
+            entities=s.entities,
+            versions=s.versions,
+            event_type=s.event_type,
+        )
+        for d in public
+        if d.issue != issue
+        for s in d.stories
+    )
     events = select_events(items, sources, start, cutoff, history, settings.dedup_hours)
     events = events[: settings.ai_candidates]
     warnings = ["source_errors"] if any(cache.status == "error" for cache in caches.values()) else []
@@ -185,7 +216,7 @@ def generate(
                 from .editorial import EditorialEnhancer
 
                 latest = {}
-                for d in store.digests():
+                for d in public:
                     if (
                         d.issue != issue
                         and d.cutoff >= cutoff - timedelta(days=30)

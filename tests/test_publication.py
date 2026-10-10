@@ -97,6 +97,40 @@ def test_total_source_failure_does_not_advance_coverage(settings, official, now,
     assert store.state.last_covered_at is None and not store.digests()
 
 
+def test_unpublished_revision_does_not_swallow_unreported_news(
+    settings, official, source_item, now, tmp_path
+):
+    class Collector:
+        def __init__(self, items):
+            self.items = items
+
+        async def collect(self, *args):
+            return self.items, {official.id: SourceCache()}
+
+    store = Store(tmp_path)
+    first, _ = generate(
+        settings, [official], store, "2026-10-10-am", now=now, collector=Collector([source_item])
+    )
+    store.state.issues[first.key].deployment = "ready"
+    store.save_state()
+    new = source_item.model_copy(
+        update={"id": "new", "url": "https://example.com/new-v3", "title": "Example AI model v3.0 released"}
+    )
+    pending, _ = generate(
+        settings, [official], store, "2026-10-10-am", True, now=now, collector=Collector([new])
+    )
+    assert store.state.issues[pending.key].deployment == "pending"
+    evening, _ = generate(
+        settings,
+        [official],
+        store,
+        "2026-10-10-pm",
+        now=now + timedelta(hours=12),
+        collector=Collector([source_item, new]),
+    )
+    assert [s.title for s in evening.stories] == [new.title]
+
+
 def test_frozen_ai_upgrade_preserves_period_and_is_idempotent(digest, settings, tmp_path, now):
     from ai_news.models import AIResponse, AIStory
     from ai_news.pipeline import enhance_frozen
