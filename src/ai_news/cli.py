@@ -95,7 +95,7 @@ def execute(args) -> int:
         atomic_write(args.report, json.dumps(report, indent=2))
         healthy = sum(r["status"] == "ok" for r in report)
         primary = sum(r["status"] == "ok" and r["trust"] in {"official", "research"} for r in report)
-        print(json.dumps({"healthy": healthy, "primary": primary, "configured": len(report)}))
+        print(json.dumps({"healthy": healthy, "primary": primary, "configured": len(report), "sources": report}))
         return 1 if args.enforce and (healthy < 20 or primary < 8) else 0
     if args.command == "preview":
         # Preview never invokes Gemini, sends mail, or touches persistent/remote state.

@@ -18,6 +18,8 @@
 
 查看 [Actions 实时结果](https://github.com/zyc8717757/ai-news-auto-publisher/actions)。Tests 与 News Publisher/check-sources 是独立检查。配置向导只接受**当前 main 提交**同时满足 Tests 成功与 source-health 成功的情况；旧提交通过不能解锁新提交的正式运行。
 
+首次云端验收：45 项 Python 测试、官方字数库测试、样例构建及公开产物检查通过。真实来源检查为 **21/30 可用，其中 16 个官方或研究来源**，达到 20/8 门槛。证据：[Tests](https://github.com/zyc8717757/ai-news-auto-publisher/actions/runs/38021434055)、[信源检查](https://github.com/zyc8717757/ai-news-auto-publisher/actions/runs/38021486851)。后续提交仍需通过当前提交的独立验收。
+
 信源准入要求传输/格式正常的来源至少 20 个，其中官方或研究来源至少 8 个；不是承诺每期一定有 20 条新闻。源变更后需要重新检查。
 
 ## 尚需真实配置完成的验收

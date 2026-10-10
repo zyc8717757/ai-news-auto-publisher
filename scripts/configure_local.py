@@ -119,6 +119,9 @@ def main():
             if not self.valid_host() or query.get("token") != [token]:
                 self.respond(403, "配置入口无效。")
                 return
+            if not api.admission():
+                self.respond(200, "<meta charset='utf-8'><meta http-equiv='refresh' content='10'><h1>正在完成云端准入检查</h1><p>当前代码的测试与信源检查通过后，会自动显示安全配置表单。无需重复操作。</p>")
+                return
             # Escape before using a plain template; CSS braces are intentionally not format placeholders.
             page = FORM.replace("{repository}", html.escape(api.repo)).replace("{csrf}", token)
             self.respond(200, page)
