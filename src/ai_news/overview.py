@@ -53,14 +53,17 @@ def overview_png(digest: Digest) -> bytes:
         groups.setdefault(story.category, []).append((index, story))
     cards, bottoms = [], [254, 254]
     for category, entries in groups.items():
-        rows = []
-        for index, story in entries:
-            rows.append(wrap(f"{index:02d}  {story.title}", measure, regular, card_width - 64))
-        height = 118 + sum(len(lines) * 45 + 22 for lines in rows)
-        column = 0 if bottoms[0] <= bottoms[1] else 1
-        x, y = margin + column * (card_width + gap), bottoms[column]
-        cards.append((x, y, height, category, rows))
-        bottoms[column] += height + gap
+        # Split long categories across both columns instead of leaving half the image blank.
+        for offset in range(0, len(entries), 8):
+            rows = []
+            for index, story in entries[offset : offset + 8]:
+                rows.append(wrap(f"{index:02d}  {story.title}", measure, regular, card_width - 64))
+            height = 118 + sum(len(lines) * 45 + 22 for lines in rows)
+            column = 0 if bottoms[0] <= bottoms[1] else 1
+            x, y = margin + column * (card_width + gap), bottoms[column]
+            label = HEADINGS.get(category, category or "精选要闻") + ("（续）" if offset else "")
+            cards.append((x, y, height, label, rows))
+            bottoms[column] += height + gap
     height = max(620, max(bottoms) + 140)
     canvas = Image.new("RGB", (width, height), "#F6F4EF")
     draw = ImageDraw.Draw(canvas)
@@ -80,7 +83,7 @@ def overview_png(digest: Digest) -> bytes:
         draw.rounded_rectangle((x, y + 5, x + card_width, y + card_height + 5), radius=26, fill="#E9E6DF")
         draw.rounded_rectangle((x, y, x + card_width, y + card_height), radius=26, fill="white")
         draw.rounded_rectangle((x + 28, y + 32, x + 34, y + 72), radius=3, fill=color)
-        draw.text((x + 50, y + 23), HEADINGS.get(category, category or "精选要闻"), font=heading, fill=color)
+        draw.text((x + 50, y + 23), category, font=heading, fill=color)
         position = y + 95
         for lines in rows:
             for line in lines:
