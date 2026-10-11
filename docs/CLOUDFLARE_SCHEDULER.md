@@ -6,4 +6,10 @@ Cloudflare Cron独立于GitHub定时事件，但实际新闻处理仍依赖GitHu
 
 部署前须完成：Cloudflare登录并确认目标账户使用Workers Free；创建专用KV命名空间，替换配置中的占位ID；创建仅授权本仓库的GitHub fine-grained token，权限仅Actions读写（以及默认Metadata读取），作为Worker Secret `GITHUB_DISPATCH_TOKEN` 输入。不要复用Git Credential Manager的广泛登录凭据，不要在聊天、源码或日志中输入Token。Worker不接收Gemini或SMTP凭据。
 
-默认 `ENABLED=false`，完成真实部署、云端手动测试（已完成期号应返回completed）、Cron触发日志验证后才启用。Cron更改传播可能需要时间，以Cloudflare实际事件日志为准；尚未完成账号授权及部署时，不能宣称独立调度已上线。
+初次部署使用 `ENABLED=false`。完成免费计划核验、OAuth和限权GitHub Token的无AI/无邮件preview触发验证后，改为 `ENABLED=true` 部署，再核对真实Cron事件。生产配置现为已启用；凭据只保存为Worker Secret，不提交Git。
+
+`scripts/configure_watchdog.py` 提供仅监听127.0.0.1的一次性安全录入页：Host、Origin、CSRF及显式保存确认校验，通过preview验证Actions写权限，再经标准输入交给固定版本Wrangler写入Secret。Token不作为命令行参数，不写本地文件或日志。GitHub Token只显示一次，生成后立即复制到安全页；过期前需人工更新（建议90天有效期）。禁止复用宽权限Git登录凭据。
+
+部署CLI固定Wrangler 4.149.0，OAuth使用account:read、user:read、workers_scripts:write、workers_kv:write及客户端刷新登录所需offline_access。OAuth凭据通过官方keyring选项存入Windows凭据库密钥保护的加密文件。现有域名、Worker和其他KV不修改。
+
+Cron更改传播可能需要时间，以Cloudflare实际事件日志为准；部署成功不等于已验证真实Cron触发。代码测试及Token的preview验证也不等于未来每期一定投递。
