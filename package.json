@@ -4,6 +4,6 @@
   "private": true,
   "description": "Local official twitter-text bridge; no X API calls",
   "dependencies": { "twitter-text": "3.1.0" },
-  "scripts": { "test": "node --test scripts/text.test.cjs" },
+  "scripts": { "test": "node --test scripts/text.test.cjs infra/cloudflare-scheduler/worker.test.mjs" },
   "engines": { "node": ">=22" }
 }

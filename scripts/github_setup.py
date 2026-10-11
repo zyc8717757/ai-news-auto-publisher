@@ -335,6 +335,7 @@ def publish(api: GitHub):
         "src",
         "tests",
         "scripts",
+        "infra",
     ]
     git("add", "--", *paths)
     staged = git("diff", "--cached", "--name-only").splitlines()

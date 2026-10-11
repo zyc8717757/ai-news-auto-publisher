@@ -12,6 +12,7 @@ dist/
 !.env.example
 .local/
 .runtime/
+.wrangler/
 site/
 coverage.xml
 .coverage

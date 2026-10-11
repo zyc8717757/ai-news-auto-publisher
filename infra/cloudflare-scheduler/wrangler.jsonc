@@ -1,0 +1,11 @@
+{
+  "name": "ai-news-schedule-watchdog",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-11",
+  "workers_dev": false,
+  "preview_urls": false,
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "vars": { "ENABLED": "false" },
+  "kv_namespaces": [{ "binding": "DISPATCH_STATE", "id": "REPLACE_WITH_CREATED_NAMESPACE_ID" }],
+  "observability": { "enabled": true }
+}
