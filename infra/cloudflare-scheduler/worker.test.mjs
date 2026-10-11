@@ -1,11 +1,20 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { check, dueIssue } from "./worker.mjs";
+import worker, { check, dueIssue } from "./worker.mjs";
 
 test("Beijing cutoff and previous-day mapping", () => {
   assert.equal(dueIssue(new Date("2026-10-11T00:29Z"), "08:30", "20:30"), "2026-10-10-pm");
   assert.equal(dueIssue(new Date("2026-10-11T00:30Z"), "08:30", "20:30"), "2026-10-11-am");
   assert.equal(dueIssue(new Date("2026-10-11T12:30Z"), "08:30", "20:30"), "2026-10-11-pm");
+});
+
+test("scheduled event leaves a credential-free durable heartbeat", async () => {
+  let pending, saved;
+  worker.scheduled({ scheduledTime: Date.parse("2026-10-11T06:10Z") },
+    { ENABLED: "false", DISPATCH_STATE: { put: async (key, value) => { saved = [key, JSON.parse(value)]; } } },
+    { waitUntil(promise) { pending = promise; } });
+  await pending;
+  assert.deepEqual(saved, ["heartbeat", { at: "2026-10-11T06:10:00.000Z", status: "paused" }]);
 });
 
 test("completed/ambiguous mail never dispatched; missing issue dispatched with cooldown", async () => {
@@ -25,4 +34,10 @@ test("completed/ambiguous mail never dispatched; missing issue dispatched with c
   mail = null; assert.equal(await check(env, now, request), "dispatched");
   assert.equal(await check(env, now, request), "cooldown");
   assert.equal(dispatches, 1);
+  mail = "sent"; env.VERIFY_PREVIEW = "true";
+  assert.equal(await check(env, now, request), "completed");
+  assert.equal(dispatches, 2);
+  assert.equal(JSON.parse(values.get("preview_verified")).status, "verified");
+  assert.equal(await check(env, now, request), "completed");
+  assert.equal(dispatches, 2);
 });

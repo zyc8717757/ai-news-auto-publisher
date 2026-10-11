@@ -2,6 +2,17 @@
 const REPO = "zyc8717757/ai-news-auto-publisher";
 const RAW = `https://raw.githubusercontent.com/${REPO}`;
 
+async function dispatch(env, request, inputs) {
+  const response = await request(`https://api.github.com/repos/${REPO}/actions/workflows/news.yml/dispatches`, {
+    method: "POST", redirect: "error",
+    headers: { "User-Agent": "AI-News-Cloudflare-Watchdog", "Accept": "application/vnd.github+json",
+      "Authorization": `Bearer ${env.GITHUB_DISPATCH_TOKEN}`, "Content-Type": "application/json",
+      "X-GitHub-Api-Version": "2022-11-28" },
+    body: JSON.stringify({ ref: "main", inputs }),
+  });
+  if (response.status !== 204) throw new Error("github_dispatch_failed");
+}
+
 export function dueIssue(now, morning, evening) {
   const local = new Date(now.getTime() + 8 * 3600000);
   const day = local.toISOString().slice(0, 10);
@@ -14,6 +25,12 @@ export function dueIssue(now, morning, evening) {
 export async function check(env, now = new Date(), request = fetch) {
   if (env.ENABLED !== "true") return "paused";
   if (!env.GITHUB_DISPATCH_TOKEN || !env.DISPATCH_STATE) throw new Error("configuration_missing");
+  // Optional one-off live credential/egress proof. Preview cannot collect, call AI,
+  // deploy Pages or send mail. Only a successful 204 leaves a verified marker.
+  if (env.VERIFY_PREVIEW === "true" && !(await env.DISPATCH_STATE.get("preview_verified", "json"))) {
+    await dispatch(env, request, { mode: "preview" });
+    await env.DISPATCH_STATE.put("preview_verified", JSON.stringify({ at: now.toISOString(), status: "verified" }));
+  }
   async function read(path, json) {
     const response = await request(`${RAW}/${path}?t=${now.getTime()}`, { redirect: "error" });
     if (!response.ok) throw new Error("public_state_unavailable");
@@ -39,22 +56,21 @@ export async function check(env, now = new Date(), request = fetch) {
   // group and frozen-period/mail idempotency remain the final duplicate guard.
   await env.DISPATCH_STATE.put(issue, JSON.stringify({ count: (previous?.count || 0) + 1, at: now.getTime() }),
     { expirationTtl: 259200 });
-  const response = await request(`https://api.github.com/repos/${REPO}/actions/workflows/news.yml/dispatches`, {
-    method: "POST", redirect: "error",
-    headers: { "User-Agent": "AI-News-Cloudflare-Watchdog", "Accept": "application/vnd.github+json",
-      "Authorization": `Bearer ${env.GITHUB_DISPATCH_TOKEN}`, "Content-Type": "application/json",
-      "X-GitHub-Api-Version": "2022-11-28" },
-    body: JSON.stringify({ ref: "main", inputs: { mode: "run", issue } }),
-  });
-  if (response.status !== 204) throw new Error("github_dispatch_failed");
+  await dispatch(env, request, { mode: "run", issue });
   return "dispatched";
 }
 
 export default {
   async scheduled(controller, env, ctx) {
     ctx.waitUntil(check(env, new Date(controller.scheduledTime)).then(
-      status => console.log(JSON.stringify({ status })),
-      () => { console.error('{"status":"watchdog_failed"}'); throw new Error("watchdog_failed"); },
+      async status => {
+        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date(controller.scheduledTime).toISOString(), status }), { expirationTtl: 86400 });
+        console.log(JSON.stringify({ status }));
+      },
+      async () => {
+        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date(controller.scheduledTime).toISOString(), status: "watchdog_failed" }), { expirationTtl: 86400 });
+        console.error('{"status":"watchdog_failed"}'); throw new Error("watchdog_failed");
+      },
     ));
   },
   fetch() { return new Response("Not found", { status: 404 }); },

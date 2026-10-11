@@ -13,3 +13,5 @@ Cloudflare Cron独立于GitHub定时事件，但实际新闻处理仍依赖GitHu
 部署CLI固定Wrangler 4.149.0，OAuth使用account:read、user:read、workers_scripts:write、workers_kv:write及客户端刷新登录所需offline_access。OAuth凭据通过官方keyring选项存入Windows凭据库密钥保护的加密文件。现有域名、Worker和其他KV不修改。
 
 Cron更改传播可能需要时间，以Cloudflare实际事件日志为准；部署成功不等于已验证真实Cron触发。代码测试及Token的preview验证也不等于未来每期一定投递。
+
+每次真实Cron执行向专用KV的 `heartbeat` 写入计划时间及固定状态，保留24小时，不含任何Token或正文。每5分钟约288次写入/天，另加最多8次早晚触发预留，仍须与同账户其他应用共用免费KV日配额。可用固定版本Wrangler的KV get命令只读检查心跳，日志界面不可用时仍能核验执行证据。
