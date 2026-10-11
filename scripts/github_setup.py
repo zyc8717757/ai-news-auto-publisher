@@ -266,6 +266,7 @@ class GitHub:
             r"(?m)^(    - cron:) '[^'\r\n]*'(\r?)$",
             lambda match: f"{match[1]} '{next(crons)}'{match[2]}",
             files[".github/workflows/news.yml"],
+            count=2,
         )
         if count != 2:
             raise RuntimeError("Unexpected workflow schedule layout")

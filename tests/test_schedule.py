@@ -51,6 +51,6 @@ def test_schedule_and_workflow_updated_in_one_nonforced_commit():
     settings = yaml.safe_load(files["config/settings.yaml"])
     workflow = yaml.load(files[".github/workflows/news.yml"], Loader=yaml.BaseLoader)
     assert (settings["morning_time"], settings["evening_time"]) == ("09:10", "21:25")
-    assert [s["cron"] for s in workflow["on"]["schedule"]] == ["10 9 * * *", "25 21 * * *"]
+    assert [s["cron"] for s in workflow["on"]["schedule"]] == ["10 9 * * *", "25 21 * * *", "17 * * * *"]
     assert writes[1][2]["parents"] == ["original-head"]
     assert writes[-1][2]["force"] is False

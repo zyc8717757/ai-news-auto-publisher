@@ -184,6 +184,13 @@ def execute(args) -> int:
             atomic_write(args.result, '{"status":"skipped"}')
             print('{"status":"skipped"}')
             return 0
+        if args.schedule == "17 * * * *":
+            existing = store.latest(issue)
+            state = store.state.issues.get(existing.key) if existing else None
+            if state and state.deployment == "ready" and state.email in {"sent", "disabled"}:
+                atomic_write(args.result, '{"status":"skipped"}')
+                print('{"status":"already_completed"}')
+                return 0
         digest, created = generate(settings, sources, store, issue, args.regenerate)
         result = {
             "status": "ready",

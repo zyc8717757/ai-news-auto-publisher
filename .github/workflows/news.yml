@@ -6,6 +6,9 @@ on:
       timezone: Asia/Shanghai
     - cron: '30 20 * * *'
       timezone: Asia/Shanghai
+    # Recovery opportunities when a primary schedule is delayed or dropped.
+    - cron: '17 * * * *'
+      timezone: Asia/Shanghai
   workflow_dispatch:
     inputs:
       mode:

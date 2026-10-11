@@ -46,6 +46,15 @@ def cutoff_for(issue: str, morning_time: str = "08:00", evening_time: str = "20:
 def scheduled_issue(
     cron: str, now: datetime, morning_time: str = "08:00", evening_time: str = "20:00"
 ) -> str | None:
+    if cron == "17 * * * *":
+        local = now.astimezone(SHANGHAI)
+        candidates = [
+            f"{(local.date() - timedelta(days=days)).isoformat()}-{slot}"
+            for days in (0, 1)
+            for slot in ("am", "pm")
+        ]
+        due = [i for i in candidates if cutoff_for(i, morning_time, evening_time) <= now]
+        return max(due, key=lambda i: cutoff_for(i, morning_time, evening_time))
     slot = {cron_for(morning_time): "am", cron_for(evening_time): "pm"}.get(cron)
     if not slot:
         raise ValueError("Unknown schedule")

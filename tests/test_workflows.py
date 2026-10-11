@@ -22,7 +22,7 @@ def test_live_workflow_gated_and_private_data_not_uploaded():
     publish = workflow["jobs"]["publish"]
     assert "PUBLISHER_ENABLED" in publish["if"] and "default_branch" in publish["if"]
     assert workflow["concurrency"]["cancel-in-progress"] == "false"
-    assert len(workflow["on"]["schedule"]) == 2
+    assert len(workflow["on"]["schedule"]) == 3
     assert all(s["timezone"] == "Asia/Shanghai" for s in workflow["on"]["schedule"])
     build = next(s for s in publish["steps"] if s.get("id") == "build")
     assert "inputs.mode != 'send'" in build["if"]
