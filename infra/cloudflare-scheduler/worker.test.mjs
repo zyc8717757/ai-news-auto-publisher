@@ -112,3 +112,22 @@ test("completed/ambiguous mail never dispatched; missing issue dispatched with c
   assert.equal(await check(env, now, request), "completed");
   assert.equal(dispatches, 2);
 });
+
+test("288 daily checks use only 49 heartbeat writes on a fresh namespace", async t => {
+  t.mock.method(console, "log", () => {});
+  const start = Date.parse("2026-10-12T00:00:00Z");
+  t.mock.timers.enable({ apis: ["Date"], now: start });
+  let stored = null, writes = 0, pending;
+  const env = { ENABLED: "false", DISPATCH_STATE: {
+    get: async () => stored,
+    put: async (key, value) => { stored = JSON.parse(value); writes++; },
+  } };
+  for (let i = 0; i < 288; i++) {
+    t.mock.timers.setTime(start + i * 300000);
+    worker.scheduled({ scheduledTime: Date.now() }, env, { waitUntil(p) { pending = p; } });
+    await pending;
+  }
+  assert.equal(writes, 49); // 48 half-hour records plus the first start marker.
+  assert.equal(stored.heartbeat_interval_minutes, 30);
+  assert.equal(stored.at, "2026-10-12T23:30:00.000Z");
+});

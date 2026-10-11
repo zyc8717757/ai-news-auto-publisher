@@ -6,7 +6,7 @@
   "workers_dev": false,
   "preview_urls": false,
   "triggers": { "crons": ["0,5,10,15,20,25,30,35,40,45,50,55 * * * *"] },
-  "vars": { "ENABLED": "true", "VERIFY_PREVIEW": "true" },
+  "vars": { "ENABLED": "true", "VERIFY_PREVIEW": "false" },
   "kv_namespaces": [{ "binding": "DISPATCH_STATE", "id": "c25e53180f90487988370eace9916e90" }],
   "observability": { "enabled": true }
 }
