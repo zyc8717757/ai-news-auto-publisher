@@ -62,13 +62,15 @@ export async function check(env, now = new Date(), request = fetch) {
 
 export default {
   async scheduled(controller, env, ctx) {
-    ctx.waitUntil(check(env, new Date(controller.scheduledTime)).then(
+    // A delayed platform event must repair the latest due period at execution
+    // time, rather than repeatedly checking the period of its old planned tick.
+    ctx.waitUntil(check(env).then(
       async status => {
-        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date(controller.scheduledTime).toISOString(), status }), { expirationTtl: 86400 });
+        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date().toISOString(), scheduled_at: new Date(controller.scheduledTime).toISOString(), status }), { expirationTtl: 86400 });
         console.log(JSON.stringify({ status }));
       },
       async () => {
-        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date(controller.scheduledTime).toISOString(), status: "watchdog_failed" }), { expirationTtl: 86400 });
+        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date().toISOString(), scheduled_at: new Date(controller.scheduledTime).toISOString(), status: "watchdog_failed" }), { expirationTtl: 86400 });
         console.error('{"status":"watchdog_failed"}'); throw new Error("watchdog_failed");
       },
     ));

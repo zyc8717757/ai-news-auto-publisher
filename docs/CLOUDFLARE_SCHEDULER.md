@@ -15,3 +15,7 @@ Cloudflare Cron独立于GitHub定时事件，但实际新闻处理仍依赖GitHu
 Cron更改传播可能需要时间，以Cloudflare实际事件日志为准；部署成功不等于已验证真实Cron触发。代码测试及Token的preview验证也不等于未来每期一定投递。
 
 每次真实Cron执行向专用KV的 `heartbeat` 写入计划时间及固定状态，保留24小时，不含任何Token或正文。每5分钟约288次写入/天，另加最多8次早晚触发预留，仍须与同账户其他应用共用免费KV日配额。可用固定版本Wrangler的KV get命令只读检查心跳，日志界面不可用时仍能核验执行证据。
+
+巡检按实际执行时间选择最近一期，延迟事件不能沿用过期的计划时间选期；心跳分别记录执行时间 `at` 与原计划时间 `scheduled_at`。当前Cron为等价的明确分钟列表（0、5、10…55）。无Cron配置变化的代码修复可通过 `wrangler versions upload` 和 `wrangler versions deploy <版本>@100% --yes` 更新，避免反复重新登记触发器。
+
+可选一次性 `VERIFY_PREVIEW=true` 自检由Worker自身调用GitHub preview，不采集、不调用AI、不发邮件，成功后保存 `preview_verified` 元数据，之后不再重复preview。该标记加真实心跳才能验证云端凭据及巡检链路；本机安全页的preview成功仅验证录入Token本身。

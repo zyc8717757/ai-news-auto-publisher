@@ -14,7 +14,32 @@ test("scheduled event leaves a credential-free durable heartbeat", async () => {
     { ENABLED: "false", DISPATCH_STATE: { put: async (key, value) => { saved = [key, JSON.parse(value)]; } } },
     { waitUntil(promise) { pending = promise; } });
   await pending;
-  assert.deepEqual(saved, ["heartbeat", { at: "2026-10-11T06:10:00.000Z", status: "paused" }]);
+  assert.equal(saved[0], "heartbeat");
+  assert.equal(saved[1].scheduled_at, "2026-10-11T06:10:00.000Z");
+  assert.equal(saved[1].status, "paused");
+  assert.ok(Number.isFinite(Date.parse(saved[1].at)));
+});
+
+test("delayed cron chooses execution-time period instead of stale planned tick", async t => {
+  const now = Date.parse("2026-10-11T05:00:00Z");
+  t.mock.timers.enable({ apis: ["Date"], now });
+  let pending, issue, heartbeat;
+  t.mock.method(globalThis, "fetch", async (url, options) => {
+    if (url.includes("api.github.com")) {
+      issue = JSON.parse(options.body).inputs.issue;
+      return new Response(null, { status: 204 });
+    }
+    if (url.includes("settings.yaml")) return new Response("morning_time: '08:30'\nevening_time: '20:30'\n");
+    return Response.json({ schema_version: 1, issues: {} });
+  });
+  worker.scheduled({ scheduledTime: Date.parse("2026-10-10T12:30Z") }, {
+    ENABLED: "true", GITHUB_DISPATCH_TOKEN: "TEST_ONLY",
+    DISPATCH_STATE: { get: async () => null, put: async (key, value) => { if (key === "heartbeat") heartbeat = JSON.parse(value); } },
+  }, { waitUntil(promise) { pending = promise; } });
+  await pending;
+  assert.equal(issue, "2026-10-11-am");
+  assert.equal(heartbeat.at, "2026-10-11T05:00:00.000Z");
+  assert.equal(heartbeat.scheduled_at, "2026-10-10T12:30:00.000Z");
 });
 
 test("completed/ambiguous mail never dispatched; missing issue dispatched with cooldown", async () => {
