@@ -21,3 +21,9 @@ Cron更改传播可能需要时间，以Cloudflare实际事件日志为准；部
 可选一次性 `VERIFY_PREVIEW=true` 自检由Worker自身调用GitHub preview，不采集、不调用AI、不发邮件，成功后保存 `preview_verified` 元数据，之后不再重复preview。该标记加真实心跳才能验证云端凭据及巡检链路；本机安全页的preview成功仅验证录入Token本身。
 
 首次执行在网络请求前记录 `started`，HTTP请求每次最多20秒，完成后更新为completed/dispatched等固定状态；失败仅记录脱敏错误码。首次额外启动记录增加1次KV写入，不能将只有started的记录当成完整巡检成功，也不能将本机模拟或手工写入当成真实Cron证据。
+
+## 2026-10-11运行时修复
+
+实测原Worker在Cloudflare发出网络请求前抛出TypeError，使用 `redirect: "error"` 的版本连续失败。改为 `manual` 并拒绝所有非预期状态（包括3xx），不跟随任何跳转、不向其他主机转发凭据后，18:20北京时间真实Cron完成，且Worker发起的GitHub preview验证成功。Node fetch可接受的参数不等于Workers运行时全部兼容，应以真实Cron心跳和云端preview作为发布验收证据。
+
+同时保留原生fetch调用上下文，并去除认证字符串首尾空白、拒绝内部空白；测试覆盖拒绝重定向、凭据不转发、网络超时脱敏、迟到按执行时间选期、自检只触发一次及已发期号跳过。运行时错误不属于Gemini调用，也不应通过重置AI计数处理。

@@ -3,10 +3,12 @@ const REPO = "zyc8717757/ai-news-auto-publisher";
 const RAW = `https://raw.githubusercontent.com/${REPO}`;
 
 async function dispatch(env, request, inputs) {
+  const credential = env.GITHUB_DISPATCH_TOKEN.trim();
+  if (!credential || /\s/.test(credential)) throw new Error("invalid_dispatch_credential");
   const response = await request(`https://api.github.com/repos/${REPO}/actions/workflows/news.yml/dispatches`, {
-    method: "POST", redirect: "error", signal: AbortSignal.timeout(20000),
+    method: "POST", redirect: "manual", signal: AbortSignal.timeout(20000),
     headers: { "User-Agent": "AI-News-Cloudflare-Watchdog", "Accept": "application/vnd.github+json",
-      "Authorization": `Bearer ${env.GITHUB_DISPATCH_TOKEN}`, "Content-Type": "application/json",
+      "Authorization": `Bearer ${credential}`, "Content-Type": "application/json",
       "X-GitHub-Api-Version": "2022-11-28" },
     body: JSON.stringify({ ref: "main", inputs }),
   });
@@ -22,7 +24,7 @@ export function dueIssue(now, morning, evening) {
   return `${new Date(local.getTime() - 86400000).toISOString().slice(0, 10)}-pm`;
 }
 
-export async function check(env, now = new Date(), request = fetch) {
+export async function check(env, now = new Date(), request = (url, options) => globalThis.fetch(url, options)) {
   if (env.ENABLED !== "true") return "paused";
   if (!env.GITHUB_DISPATCH_TOKEN || !env.DISPATCH_STATE) throw new Error("configuration_missing");
   // Optional one-off live credential/egress proof. Preview cannot collect, call AI,
@@ -32,7 +34,7 @@ export async function check(env, now = new Date(), request = fetch) {
     await env.DISPATCH_STATE.put("preview_verified", JSON.stringify({ at: now.toISOString(), status: "verified" }));
   }
   async function read(path, json) {
-    const response = await request(`${RAW}/${path}?t=${now.getTime()}`, { redirect: "error", signal: AbortSignal.timeout(20000) });
+    const response = await request(`${RAW}/${path}?t=${now.getTime()}`, { redirect: "manual", signal: AbortSignal.timeout(20000) });
     if (!response.ok) throw new Error(`public_state_http_${response.status}`);
     return json ? response.json() : response.text();
   }
@@ -73,8 +75,11 @@ export default {
         console.log(JSON.stringify({ status }));
       } catch (error) {
         const message = error?.message || "";
-        const reason = /^(github_dispatch_http_\d{3}|public_state_http_\d{3}|configuration_missing|invalid_schedule|invalid_public_state)$/.test(message)
-          ? message : ["TimeoutError", "AbortError"].includes(error?.name) ? "request_timeout" : "unexpected_failure";
+        const reason = /^(github_dispatch_http_\d{3}|public_state_http_\d{3}|configuration_missing|invalid_schedule|invalid_public_state|invalid_dispatch_credential)$/.test(message)
+          ? message : ["TimeoutError", "AbortError"].includes(error?.name) ? "request_timeout"
+          : /illegal invocation/i.test(message) ? "runtime_illegal_invocation"
+          : error?.name === "TypeError" && /header/i.test(message) ? "invalid_header_value"
+          : error?.name === "TypeError" ? "runtime_type_error" : "unexpected_failure";
         await record("watchdog_failed", reason);
         console.error(JSON.stringify({status: "watchdog_failed", reason}));
         throw new Error("watchdog_failed");

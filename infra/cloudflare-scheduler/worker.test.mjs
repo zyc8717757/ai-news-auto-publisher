@@ -8,6 +8,39 @@ test("Beijing cutoff and previous-day mapping", () => {
   assert.equal(dueIssue(new Date("2026-10-11T12:30Z"), "08:30", "20:30"), "2026-10-11-pm");
 });
 
+test("native fetch retains its receiver and stdin newline cannot poison auth header", async t => {
+  let previews = 0;
+  t.mock.method(globalThis, "fetch", async function(url, options) {
+    assert.equal(this, globalThis);
+    assert.equal(options.redirect, "manual");
+    if (url.includes("api.github.com")) {
+      assert.equal(options.headers.Authorization, "Bearer TEST_ONLY");
+      previews++;
+      return new Response(null, { status: 204 });
+    }
+    if (url.includes("settings.yaml")) return new Response("morning_time: '08:30'\nevening_time: '20:30'\n");
+    return Response.json({ schema_version: 1, issues: { "2026-10-11-am-r1": { deployment: "ready", email: "sent" } } });
+  });
+  const env = { ENABLED: "true", VERIFY_PREVIEW: "true", GITHUB_DISPATCH_TOKEN: " TEST_ONLY\r\n",
+    DISPATCH_STATE: { get: async () => null, put: async () => {} } };
+  assert.equal(await check(env, new Date("2026-10-11T05:00Z")), "completed");
+  assert.equal(previews, 1);
+});
+
+test("dispatch redirects are refused without forwarding credentials", async () => {
+  let calls = 0, writes = 0;
+  const env = { ENABLED: "true", VERIFY_PREVIEW: "true", GITHUB_DISPATCH_TOKEN: "TEST_ONLY",
+    DISPATCH_STATE: { get: async () => null, put: async () => writes++ } };
+  await assert.rejects(check(env, new Date(), async (url, options) => {
+    calls++;
+    assert.equal(url, "https://api.github.com/repos/zyc8717757/ai-news-auto-publisher/actions/workflows/news.yml/dispatches");
+    assert.equal(options.redirect, "manual");
+    return new Response(null, { status: 307, headers: { location: "https://example.com" } });
+  }), /github_dispatch_http_307/);
+  assert.equal(calls, 1);
+  assert.equal(writes, 0);
+});
+
 test("scheduled event leaves a credential-free durable heartbeat", async () => {
   let pending, saved;
   worker.scheduled({ scheduledTime: Date.parse("2026-10-11T06:10Z") },
