@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-11-am",
+  "revision": 1,
+  "created_at": "2026-10-11T05:07:22.282718Z",
+  "cutoff": "2026-10-11T00:30:00Z",
+  "window_start": "2026-10-09T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "9bee21a644ee1802dd8c",
+      "title": "OpenAI寻求300亿美元融资与估值动态",
+      "summary": "报道称OpenAI的年化收入率约为500亿美元，此前基于不同会计方法的700亿美元数据已被修正，这一调整导致芯片股下跌。同时，该公司正在进行新一轮谈判，拟以1.4万亿美元的估值寻求300亿美元的新资金。",
+      "impact": "影响芯片股市场波动，引发业界对该公司高额融资与估值的高度关注。",
+      "category": "商业",
+      "score": 55.78,
+      "sources": [
+        {
+          "id": "9bee21a644ee1802dd8c",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital/",
+          "title": "OpenAI revenue keeps surging as company seeks $30 billion in fresh capital",
+          "published_at": "2026-10-09T17:20:34Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "收入数据存在不同会计方法的修正，相关财务与融资细节尚未最终证实。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI年化营收达到500亿美元，并正以1.4万亿美元估值寻求至少300亿美元新融资。",
+      "backfill": true
+    },
+    {
+      "id": "d6f9a664be8eed06fd40",
+      "title": "Anthropic的Claude支持多智能体并行工作流",
+      "summary": "Anthropic正为Claude Managed Agents添加动态工作流，允许主智能体同时将任务分配给多达1,000个子智能体。测试显示，单智能体在代码库中最多发现了70个隐藏bug中的27个，而多智能体工作流稳定捕获了66个。",
+      "impact": "提升复杂代码排查效率，展现多智能体并行协作的技术潜力。",
+      "category": "开发",
+      "score": 55.13,
+      "sources": [
+        {
+          "id": "d6f9a664be8eed06fd40",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/",
+          "title": "Anthropic's Claude can now orchestrate up to 1,000 AI agents in parallel through dynamic workflows",
+          "published_at": "2026-10-09T18:28:25Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "测试效果基于特定代码库的内部测试，其实际应用表现仍需更多验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": true
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
