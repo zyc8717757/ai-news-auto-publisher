@@ -4,13 +4,13 @@ const RAW = `https://raw.githubusercontent.com/${REPO}`;
 
 async function dispatch(env, request, inputs) {
   const response = await request(`https://api.github.com/repos/${REPO}/actions/workflows/news.yml/dispatches`, {
-    method: "POST", redirect: "error",
+    method: "POST", redirect: "error", signal: AbortSignal.timeout(20000),
     headers: { "User-Agent": "AI-News-Cloudflare-Watchdog", "Accept": "application/vnd.github+json",
       "Authorization": `Bearer ${env.GITHUB_DISPATCH_TOKEN}`, "Content-Type": "application/json",
       "X-GitHub-Api-Version": "2022-11-28" },
     body: JSON.stringify({ ref: "main", inputs }),
   });
-  if (response.status !== 204) throw new Error("github_dispatch_failed");
+  if (response.status !== 204) throw new Error(`github_dispatch_http_${response.status}`);
 }
 
 export function dueIssue(now, morning, evening) {
@@ -32,8 +32,8 @@ export async function check(env, now = new Date(), request = fetch) {
     await env.DISPATCH_STATE.put("preview_verified", JSON.stringify({ at: now.toISOString(), status: "verified" }));
   }
   async function read(path, json) {
-    const response = await request(`${RAW}/${path}?t=${now.getTime()}`, { redirect: "error" });
-    if (!response.ok) throw new Error("public_state_unavailable");
+    const response = await request(`${RAW}/${path}?t=${now.getTime()}`, { redirect: "error", signal: AbortSignal.timeout(20000) });
+    if (!response.ok) throw new Error(`public_state_http_${response.status}`);
     return json ? response.json() : response.text();
   }
   const settings = await read("main/config/settings.yaml", false);
@@ -64,16 +64,22 @@ export default {
   async scheduled(controller, env, ctx) {
     // A delayed platform event must repair the latest due period at execution
     // time, rather than repeatedly checking the period of its old planned tick.
-    ctx.waitUntil(check(env).then(
-      async status => {
-        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date().toISOString(), scheduled_at: new Date(controller.scheduledTime).toISOString(), status }), { expirationTtl: 86400 });
+    ctx.waitUntil((async () => {
+      const record = async (status, reason) => env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date().toISOString(), scheduled_at: new Date(controller.scheduledTime).toISOString(), status, ...(reason ? {reason} : {}) }), { expirationTtl: 86400 });
+      try {
+        if (!(await env.DISPATCH_STATE.get("heartbeat"))) await record("started");
+        const status = await check(env);
+        await record(status);
         console.log(JSON.stringify({ status }));
-      },
-      async () => {
-        await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: new Date().toISOString(), scheduled_at: new Date(controller.scheduledTime).toISOString(), status: "watchdog_failed" }), { expirationTtl: 86400 });
-        console.error('{"status":"watchdog_failed"}'); throw new Error("watchdog_failed");
-      },
-    ));
+      } catch (error) {
+        const message = error?.message || "";
+        const reason = /^(github_dispatch_http_\d{3}|public_state_http_\d{3}|configuration_missing|invalid_schedule|invalid_public_state)$/.test(message)
+          ? message : ["TimeoutError", "AbortError"].includes(error?.name) ? "request_timeout" : "unexpected_failure";
+        await record("watchdog_failed", reason);
+        console.error(JSON.stringify({status: "watchdog_failed", reason}));
+        throw new Error("watchdog_failed");
+      }
+    })());
   },
   fetch() { return new Response("Not found", { status: 404 }); },
 };

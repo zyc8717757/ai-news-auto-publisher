@@ -11,13 +11,26 @@ test("Beijing cutoff and previous-day mapping", () => {
 test("scheduled event leaves a credential-free durable heartbeat", async () => {
   let pending, saved;
   worker.scheduled({ scheduledTime: Date.parse("2026-10-11T06:10Z") },
-    { ENABLED: "false", DISPATCH_STATE: { put: async (key, value) => { saved = [key, JSON.parse(value)]; } } },
+    { ENABLED: "false", DISPATCH_STATE: { get: async () => null, put: async (key, value) => { saved = [key, JSON.parse(value)]; } } },
     { waitUntil(promise) { pending = promise; } });
   await pending;
   assert.equal(saved[0], "heartbeat");
   assert.equal(saved[1].scheduled_at, "2026-10-11T06:10:00.000Z");
   assert.equal(saved[1].status, "paused");
   assert.ok(Number.isFinite(Date.parse(saved[1].at)));
+});
+
+test("request failure leaves start proof and a sanitized reason", async t => {
+  const records = []; let pending;
+  t.mock.method(globalThis, "fetch", async () => { throw Object.assign(new Error("PRIVATE_MARKER"), { name: "TimeoutError" }); });
+  worker.scheduled({ scheduledTime: Date.now() }, {
+    ENABLED: "true", GITHUB_DISPATCH_TOKEN: "TEST_ONLY",
+    DISPATCH_STATE: { get: async () => null, put: async (key, value) => records.push(JSON.parse(value)) },
+  }, { waitUntil(promise) { pending = promise; } });
+  await assert.rejects(pending, /^Error: watchdog_failed$/);
+  assert.equal(records[0].status, "started");
+  assert.equal(records.at(-1).reason, "request_timeout");
+  assert.equal(JSON.stringify(records).includes("PRIVATE_MARKER"), false);
 });
 
 test("delayed cron chooses execution-time period instead of stale planned tick", async t => {
