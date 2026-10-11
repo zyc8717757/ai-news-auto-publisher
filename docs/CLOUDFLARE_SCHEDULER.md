@@ -20,7 +20,7 @@ Cron更改传播可能需要时间，以Cloudflare实际事件日志为准；部
 
 可选一次性 `VERIFY_PREVIEW=true` 自检由Worker自身调用GitHub preview，不采集、不调用AI、不发邮件，成功后保存 `preview_verified` 元数据，之后不再重复preview。该标记加真实心跳才能验证云端凭据及巡检链路；本机安全页的preview成功仅验证录入Token本身。
 
-首次执行在网络请求前记录 `started`，HTTP请求每次最多20秒，完成后更新为completed/dispatched等固定状态；失败仅记录脱敏错误码。首次额外启动记录增加1次KV写入，不能将只有started的记录当成完整巡检成功，也不能将本机模拟或手工写入当成真实Cron证据。
+HTTP请求每次最多20秒；每个持久化周期只保存一次completed/dispatched等终态，失败记录脱敏错误码。取消首次started与终态连续写同一键，避免触及KV单键每秒写入限制。不能将本机模拟或手工写入当成真实Cron证据。
 
 ## 2026-10-11运行时修复
 

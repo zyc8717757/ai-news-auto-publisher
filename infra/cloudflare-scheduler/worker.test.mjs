@@ -53,7 +53,7 @@ test("scheduled event leaves a credential-free durable heartbeat", async () => {
   assert.ok(Number.isFinite(Date.parse(saved[1].at)));
 });
 
-test("request failure leaves start proof and a sanitized reason", async t => {
+test("request failure leaves a single sanitized terminal record", async t => {
   const records = []; let pending;
   t.mock.method(globalThis, "fetch", async () => { throw Object.assign(new Error("PRIVATE_MARKER"), { name: "TimeoutError" }); });
   worker.scheduled({ scheduledTime: Date.now() }, {
@@ -61,7 +61,8 @@ test("request failure leaves start proof and a sanitized reason", async t => {
     DISPATCH_STATE: { get: async () => null, put: async (key, value) => records.push(JSON.parse(value)) },
   }, { waitUntil(promise) { pending = promise; } });
   await assert.rejects(pending, /^Error: watchdog_failed$/);
-  assert.equal(records[0].status, "started");
+  assert.equal(records.length, 1);
+  assert.equal(records[0].status, "watchdog_failed");
   assert.equal(records.at(-1).reason, "request_timeout");
   assert.equal(JSON.stringify(records).includes("PRIVATE_MARKER"), false);
 });
@@ -113,7 +114,7 @@ test("completed/ambiguous mail never dispatched; missing issue dispatched with c
   assert.equal(dispatches, 2);
 });
 
-test("288 daily checks use only 49 heartbeat writes on a fresh namespace", async t => {
+test("288 daily checks use only 48 heartbeat writes on a fresh namespace", async t => {
   t.mock.method(console, "log", () => {});
   const start = Date.parse("2026-10-12T00:00:00Z");
   t.mock.timers.enable({ apis: ["Date"], now: start });
@@ -127,7 +128,7 @@ test("288 daily checks use only 49 heartbeat writes on a fresh namespace", async
     worker.scheduled({ scheduledTime: Date.now() }, env, { waitUntil(p) { pending = p; } });
     await pending;
   }
-  assert.equal(writes, 49); // 48 half-hour records plus the first start marker.
+  assert.equal(writes, 48);
   assert.equal(stored.heartbeat_interval_minutes, 30);
   assert.equal(stored.at, "2026-10-12T23:30:00.000Z");
 });

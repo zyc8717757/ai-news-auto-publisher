@@ -67,18 +67,18 @@ export default {
     // A delayed platform event must repair the latest due period at execution
     // time, rather than repeatedly checking the period of its old planned tick.
     ctx.waitUntil((async () => {
-      let previous, first = false;
+      let previous;
       // Keep the five-minute checks, but share the account's scarce KV writes
       // responsibly: persist a heartbeat every 30 minutes, log every invocation.
       const record = async (status, reason) => {
         const now = new Date();
-        if (!first && previous?.heartbeat_interval_minutes === 30 && now.getTime() - Date.parse(previous.at) < 1800000) return;
+        if (previous?.heartbeat_interval_minutes === 30 && now.getTime() - Date.parse(previous.at) < 1800000) return;
         await env.DISPATCH_STATE.put("heartbeat", JSON.stringify({ at: now.toISOString(), scheduled_at: new Date(controller.scheduledTime).toISOString(), heartbeat_interval_minutes: 30, status, ...(reason ? {reason} : {}) }), { expirationTtl: 86400 });
       };
       try {
         previous = await env.DISPATCH_STATE.get("heartbeat", "json");
-        first = !previous;
-        if (first) await record("started");
+        // Write only the terminal result: two immediate writes to the same KV
+        // key can exceed KV's per-key write rate even on the first invocation.
         const status = await check(env);
         await record(status);
         console.log(JSON.stringify({ status }));
