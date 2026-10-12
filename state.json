@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-10-12T00:30:00Z",
+  "last_covered_at": "2026-10-12T12:30:00Z",
   "ai_attempts": [
     "2026-10-10T13:11:29.083862Z",
     "2026-10-10T13:37:48.966468Z",
@@ -447,42 +447,7 @@
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [
-        {
-          "id": "570fe3204556675e8dd9",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/sophos",
-          "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-          "published_at": "2026-10-09T07:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
-          "excerpt": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "9bf93d58cc35db9987f8",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/asana-browser-agent",
-          "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-          "published_at": "2026-10-09T07:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
-          "excerpt": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 50,
       "verified": 50
     },
@@ -496,7 +461,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"4tVeBw\"",
+      "etag": "\"4HrGyg\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -541,8 +506,8 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"c92854f1f91e7f5759a1ce686c88fbce\"",
-      "modified": "Sun, 11 Oct 2026 02:12:13 GMT",
+      "etag": "\"8891ac4dec3b2a9f865c0a4934d781a1\"",
+      "modified": "Mon, 12 Oct 2026 09:00:50 GMT",
       "status": "ok",
       "error_code": "",
       "items": [],
@@ -552,7 +517,7 @@
     "nvidia": {
       "etag": "\"164a6d18b55bb2370f43ce628fd72ae4-gzip\"",
       "modified": "Thu, 08 Oct 2026 21:07:24 GMT",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [],
       "discovered": 18,
@@ -577,7 +542,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"38bf24d1181a217a65f7c177603fca35bb8af108e65e1cd4712d788956d6c78f\"",
+      "etag": "W/\"887cd69a85d8720b8374f53105ef6dcaa21cb88124725210fcc802e92a4fe4d1\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -604,7 +569,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"63d753bf79bf7ba9f2a12754a52841c551bc652df4bde03c30485ff56bbcac58\"",
+      "etag": "W/\"45d6a84569ab0ad18a26e360324ae88c5ac50031aa1ecbe0e53c3504ed814a0a\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -613,7 +578,7 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"60ca663d2a8aa79da26f77871dc0993862353522c19217cda5ed85d0fc48bc62\"",
+      "etag": "W/\"e9be132a3c1a807bf47e952939b1b27975a1eddcc9c3c48d6482f43758e6c699\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -630,7 +595,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "## What's Changed * `ollama launch claude` no longer shows a warning about Claude connectors by @hoyyeva in https://github.com/ollama/ollama/pull/18878 * `ollama launch codex` no longer warns about service tiers by @hoyyeva in https://github.com/ollama/ollama/pull/18879 * Paused background model upgrade for embedding and other request performance, by @jmorganca in https://github.com/ollama/ollama/",
           "event_at": null,
           "supporting": []
@@ -649,7 +614,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"4f2eab73d94135da39b60834624f11351b15faf0ce897270a3743e1bc38ce021\"",
+      "etag": "W/\"0f0a081e13af668def25e4ea3b1646b85bb610a92744b5ddfcb4f113b06b3488\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -756,8 +721,8 @@
       "verified": 0
     },
     "techcrunch-ai": {
-      "etag": "W/\"ccdd6414443cfd8838d6b4c8e639e8ce\"",
-      "modified": "Sun, 11 Oct 2026 23:01:31 GMT",
+      "etag": "W/\"22954d1a2fa23f609d256fd076c67b6f\"",
+      "modified": "Mon, 12 Oct 2026 05:38:26 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -773,7 +738,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Over the past couple of years, we’ve seen multiple reports that Apple was working on a new smart home product, but now it seems the product has a name and a launch date.",
           "event_at": null,
           "supporting": []
@@ -790,7 +755,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Less than 48 hours, TechCrunch Disrupt 2026 starts in San Francisco’s Moscone West. Save up to $100 on your pass before prices increase at the door, plus get 50% on a second pass. Or score other deals.",
           "event_at": null,
           "supporting": []
@@ -807,7 +772,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.",
           "event_at": null,
           "supporting": []
@@ -824,7 +789,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Voice AI's often misses important points for its context layer, and causes the whole pipeline to break",
           "event_at": null,
           "supporting": []
@@ -841,7 +806,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
           "event_at": null,
           "supporting": []
@@ -858,7 +823,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Is Apple hoping to get into the AI-generated podcast business?",
           "event_at": null,
           "supporting": []
@@ -875,7 +840,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "TechCrunch Disrupt 2026 takes place October 13-15 in San Francisco. Over 300 startups will show what they’ve built to 10,000 tech leaders. Plus, 250+ speakers are ready to share insights across 200+ sessions. Register before doors open to save up to $100 and get a second pass at 50% off.",
           "event_at": null,
           "supporting": []
@@ -892,7 +857,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
           "event_at": null,
           "supporting": []
@@ -909,7 +874,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Anthropic said it \"turned off live internet access\" for \"all our internal evaluations\" until further notice.",
           "event_at": null,
           "supporting": []
@@ -926,7 +891,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "What has users and large corporations so excited about Jev is TypeSafe’s claim that it works significantly faster and uses far fewer tokens than LLMs.",
           "event_at": null,
           "supporting": []
@@ -943,7 +908,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Anthropic did not discover this behavior until over two months after its AI submitted the false tip.",
           "event_at": null,
           "supporting": []
@@ -960,7 +925,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Amazon says it will stop using NDAs when negotiating data center deals with local governments, following a similar move from Microsoft earlier this year. Secrecy has fueled community backlash against AI infrastructure, with opposition leading to hundreds of proposed and enacted moratoriums from New York to San Francisco. Meanwhile, a wave of startups is betting that consumers will hand AI agents a",
           "event_at": null,
           "supporting": []
@@ -981,7 +946,7 @@
     "ars": {
       "etag": "",
       "modified": "Mon, 12 Oct 2026 00:23:58 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1193,7 +1158,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"9198ad69681cfa4fa3e258d2a503dd84\"",
+      "etag": "W/\"f9dca690262d570ab6b8f91062a4b37a\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1210,7 +1175,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the great AI rebrand he […]",
           "event_at": null,
           "supporting": []
@@ -1227,7 +1192,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "I'm embarking on a journey I've so far been hesitant to go on: actually using AI on the regular. Giving my most personal data to cloud services has been a major hold up for me, but it's increasingly possible to run powerful models locally to see what they're capable of. Is this tech so useful […]",
           "event_at": null,
           "supporting": []
@@ -1244,7 +1209,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "In a lengthy post on X, Microsoft's CEO laid out his views on the dangers posed by highly advanced AI models and how to confront those risks. Nadella says we can no longer accept a world where AI is treated as a \"set of nested black boxes\" whose advice and actions we simply accept or […]",
           "event_at": null,
           "supporting": []
@@ -1261,7 +1226,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Artists are taking to social media to complain that DistroKid has unceremoniously removed their work without notice. Now DistroKid has confirmed to The Verge that the takedowns are a direct response to claims made by UMG. The label filed a lawsuit in September claiming that DistroKid has created an \"AI-slop pipeline.\" Artists are saying that […]",
           "event_at": null,
           "supporting": []
@@ -1278,7 +1243,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "After a recent spate of high-profile incidents in which AI agents escaped containment, Anthropic is cutting off internet access for all internal evaluations. In a report Friday, the company detailed \"unintended model actions,\" including submitting a false tip regarding an unsolved murder, that led to the decision. Although the impact of these behaviors was minimal […]",
           "event_at": null,
           "supporting": []
@@ -1295,7 +1260,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "At this year's OpenAI DevDay, CEO Sam Altman unveiled the company's new AI agent Dots - and told the crowd that the company wants to \"set a new standard for privacy in frontier AI.\" OpenAI would spend the day taking veiled shots at Meta's Muse, its primary competitor, for failing to keep users' data safe. […]",
           "event_at": null,
           "supporting": []
@@ -1312,7 +1277,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "An Anthropic AI model provided false information about an unsolved homicide to a Philadelphia Police Department (PPD) tipline, according to a report from 6abc. In a statement released on Friday, the PPD said the AI model sent the tip through PhillyUnsolvedMurders.com on July 18th, but the investigators never reviewed it because it was marked as […]",
           "event_at": null,
           "supporting": []
@@ -1329,7 +1294,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "\"Staggering.\" \"Overwhelming.\" \"Unprecedented.\" \"Surreal.\" \"Pure insanity.\" Those were among the descriptions more than three dozen mathematicians reached for in conversations with The Verge as they tried to make sense of the flood of mathematical results OpenAI abruptly dropped on the field this week. Amid the awe, excitement, and uncertainty over the sheer scale of the […]",
           "event_at": null,
           "supporting": []
@@ -1346,7 +1311,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Nikon says the video that originally won first place in its Small World in Motion contest \"did not comply with the competition rules regarding generative AI.\" BBC reports that the original first place video from Dr. Ning Xu claimed to show \"tiny, hair-like structures called cilia moving in the airway of a child with the […]",
           "event_at": null,
           "supporting": []
@@ -1363,7 +1328,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "President Donald Trump has a knack for turning words against his enemies. His first successful presidential run was built on monikers like \"Little Marco\" and \"Crooked Hillary\"; he changed \"fake news\" from a phrase describing scammy media outlets to a derogatory term for the press at large. Over the past few weeks, he's clearly decided […]",
           "event_at": null,
           "supporting": []
@@ -1390,7 +1355,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "A long day’s haul in the video game slop mines.",
           "event_at": null,
           "supporting": []
@@ -1407,7 +1372,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Anti-cybercrime initiatives are increasingly using AI to scam the scammers by tricking them into talking to lifelike bots that they think are real victims.",
           "event_at": null,
           "supporting": []
@@ -1424,25 +1389,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Workers at three major publishing houses tell WIRED that LLMs are being used for publicity, cover art, back cover copy, and emails, as some execs push junior staff to champion the tech.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "816f740135bf083d3256",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/even-law-and-order-is-terrified-of-ai/",
-          "title": "Even ‘Law & Order’ Is Terrified of AI",
-          "published_at": "2026-10-09T10:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
-          "excerpt": "In its 26th season premiere, the procedural legal drama paints a damning picture of power-mad AI CEOs.",
           "event_at": null,
           "supporting": []
         }
@@ -1462,8 +1410,8 @@
     "hackernews": {
       "etag": "",
       "modified": "Sun, 11 Oct 2026 23:47:59 GMT",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_502",
       "items": [
         {
           "id": "b69ea5748fd33630b8ed",
@@ -1674,28 +1622,11 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"e8321217d55865e0620dfe40e462427b\"",
+      "etag": "W/\"75099f94aba5775cf0c9a24314f20c4a\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
-        {
-          "id": "fb900a38eb855015e847",
-          "source_id": "primary-microsoft",
-          "source_name": "Microsoft",
-          "group": "microsoft",
-          "trust": "official",
-          "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
-          "title": "Introducing Microsoft-Decision-1, our model for fast decision-making",
-          "published_at": "2026-10-10T01:35:51Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "Our new decision-scoring model delivers top performance in latency and quality on structured decision tasks to outperform both LLMs and other decision models. Input tokens cost $0.042 USD per million tokens. Output tokens are free. Deep Dive Share in r x f Introducing Microsoft-Decision-1, our model for fast decision-making Introducing Microsoft-Decision-1, our model for fast decision-making Our n",
-          "event_at": null,
-          "supporting": []
-        },
         {
           "id": "4a9f5b72faa10f5cb24b",
           "source_id": "primary-cloudflare",
@@ -1708,151 +1639,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "We are expanding the Clef decision model family with Clef-omni, natively processing audio, video, images, and text in a single pipeline. Clef-flash – originally $0.09 per M input tokens, now $0.038 per M input tokens Clef – remains at $0.24 per M input tokens Clef-omni – launched today at $0.15 per M input tokens Blog AI Developers Machine Learning +3 Show 3 more tags 6 Tags Show 6 tags Post Tags ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "5f1594e91430d81933b8",
-          "source_id": "primary-baseten",
-          "source_name": "Baseten",
-          "group": "baseten",
-          "trust": "official",
-          "url": "https://www.baseten.co/blog/safe-open-models-baseten-goodfire/",
-          "title": "Project Beacon: Bringing safety signals to open models at scale",
-          "published_at": "2026-10-09T17:01:47Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "Baseten partners with Goodfire AI to bring safety controls to open model inference. Published October 9, 2026 The breadth and depth of what AI touches across an organization is growing. Models and agents read internal documents, call tools, push to production systems, and run multi-step workflows autonomously. At the same time, new frontier models are released weekly (sometimes daily), with most t",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "f249031f0f0688c60506",
-          "source_id": "primary-a16z",
-          "source_name": "a16z",
-          "group": "a16z",
-          "trust": "official",
-          "url": "https://a16z.com/announcement/investing-in-typesafe-ai/",
-          "title": "Investing in TypeSafe AI",
-          "published_at": "2026-10-09T16:28:01Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "a16z leads investment in TypeSafe AI The $1 Trillion AI Buildout | State of Markets David George, Sarah Wang, Alex Immerman, and Santiago Rodriguez Infra Investing in TypeSafe AI Jennifer Li , Sarah Wang , Martin Casado , Marc Andreessen , and Ben Horowitz Posted October 9, 2026 Subscribe Share Share Email X LinkedIn Facebook Hacker News WhatsApp Flipboard Reddit Share Share Email X LinkedIn Faceb",
-          "event_at": null,
-          "supporting": [
-            {
-              "id": "917825c0315309567de6",
-              "source_id": "primary-typesafe",
-              "source_name": "TypeSafe AI",
-              "group": "typesafe",
-              "trust": "official",
-              "url": "https://typesafe.ai/blog/series-ai",
-              "title": "TypeSafe A raises Series AI",
-              "published_at": null,
-              "time_precision": "unknown",
-              "source_date": "",
-              "time_basis": "publication",
-              "collected_at": "2026-10-11T05:07:22.282718Z",
-              "excerpt": "TypeSafe AI is an AI lab building machine-native intelligence infrastructure for automation, designed to make decisions within software. Try our first System One Model, Jev, in early access. $870 million at a $7.5B valuation, with Martin Casado joining the board. TypeSafe AI Enterprise Thoughts Company Docs API console Contact us API console Docs Menu ∵ Back Company News Company News TypeSafe A ra",
-              "event_at": null,
-              "supporting": []
-            }
-          ]
-        },
-        {
-          "id": "e53d362bf380fa3a299a",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
-          "title": "Investigating unintended model actions in our evaluations and internal use",
-          "published_at": "2026-10-09T16:09:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. Alignment Investigating unintended model actions in our evaluations and internal use Oct 9, 2026 This report describes examples of unintended model actions we’ve observed during evaluations and internal use of Claude. It is part of our effort to publish more frequent standalone",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "212e9120a76a6fc27002",
-          "source_id": "primary-deno",
-          "source_name": "Deno",
-          "group": "deno",
-          "trust": "official",
-          "url": "https://deno.com/blog/cloudflare",
-          "title": "Deno is joining Cloudflare",
-          "published_at": "2026-10-09T15:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "Putting ourselves in the best place to build the future of the web Deno is joining Cloudflare October 9, 2026 Ryan Dahl Announcements Product Update For years, we’ve been working to make building server software simpler. We questioned how modules could be distributed, what security guarantees a JavaScript runtime could provide, what belonged in a complete toolchain, and how easily an application c",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "3854715ee3f870a4d32a",
-          "source_id": "primary-cloudflare",
-          "source_name": "Cloudflare",
-          "group": "cloudflare",
-          "trust": "official",
-          "url": "https://blog.cloudflare.com/deno-joins-cloudflare/",
-          "title": "Deno is joining Cloudflare",
-          "published_at": "2026-10-09T12:50:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "The Deno team is joining Cloudflare to radically simplify self-hosting Workers and Durable Objects, so developers can use the same primitives in more places. Blog Acquisitions Durable Objects JavaScript +1 Show 1 more tags 4 Tags Show 4 tags Post Tags Acquisitions Durable Objects JavaScript Workers All tags Matching tags No tags found 1.1.1.1 2FA Abuse Access Access Control Lists (ACLs) Accessibil",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1cbfc46844b3924006bd",
-          "source_id": "hf-tencent",
-          "source_name": "tencent 官方模型仓库",
-          "group": "tencent",
-          "trust": "official",
-          "url": "https://huggingface.co/tencent/Youtu-Parsing-Omni",
-          "title": "tencent/Youtu-Parsing-Omni 官方模型仓库新建记录",
-          "published_at": "2026-10-09T06:42:18Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "repository_created",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "--- license: other license_name: youtu-parsing license_link: https://huggingface.co/tencent/Youtu-Parsing-Omni/blob/main/LICENSE library_name: transformers pipeline_tag: image-text-to-text tags: - document-parsing - ocr - omni - multimodal - audio - video - custom_code --- One model that parses documents, images, charts, geometry, audio and video into structured JSON 📄 License • 📑 Technical Report",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "167c7efa09e6db366774",
-          "source_id": "hf-qwen",
-          "source_name": "Qwen 官方模型仓库",
-          "group": "qwen",
-          "trust": "official",
-          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
-          "title": "Qwen/Qwen-Image-2.1-Turbo 官方模型仓库新建记录",
-          "published_at": "2026-10-09T04:50:01Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "repository_created",
-          "collected_at": "2026-10-11T05:07:22.282718Z",
-          "excerpt": "--- license: other license_name: qwen-research license_link: LICENSE library_name: diffusers pipeline_tag: text-to-image base_model: Qwen/Qwen-Image-2.1 tags: - qwen - image-generation - image-editing - diffusers --- 🤖 ModelScope | 🤗 HuggingFace | 💻 GitHub | 📑 Qwen-Image-2.1 Blog | 🫨 Discord | 💬 WeChat ## Introduction **Qwen-Image-2.1-Turbo** is an accelerated checkpoint of [Qwen-Image-2.1](https:",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 13,
-      "verified": 13
+      "discovered": 1,
+      "verified": 1
     },
     "openai-community": {
       "etag": "",
@@ -1872,14 +1666,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "First up: you can now create your dot straight from your phone in the ChatGPT app on iOS and Android. Delegate work in Codex to your dot. Your dot can now start work in Codex and follow up on existing threads, drawing on your ChatGPT conversations, Codex threads, and automations. It’s also better at deciding when to keep a thread going or start fresh. Your dot can also review and edit Scheduled Ta",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 8,
-      "verified": 8
+      "discovered": 4,
+      "verified": 4
     },
     "anthropic-research": {
       "etag": "",
@@ -1899,7 +1693,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. Alignment Investigating unintended model actions in our evaluations and internal use Oct 9, 2026 This report describes examples of unintended model actions we’ve observed during evaluations and internal use of Claude. It is part of our effort to publish more frequent standalone",
           "event_at": null,
           "supporting": []
@@ -1918,11 +1712,28 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"84fdd3fab963261f9129c289222e6b68\"",
-      "modified": "Sun, 11 Oct 2026 15:41:25 GMT",
+      "etag": "\"0ad53b6a408423c15020fc5cc15bffff\"",
+      "modified": "Mon, 12 Oct 2026 09:35:54 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "e05c4ad260b64cc58783",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/",
+          "title": "Google Deepmind's AlphaProof Nexus solved dozens of open math problems and actually got peer reviewed",
+          "published_at": "2026-10-12T09:35:54Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
+          "excerpt": "Google Deepmind's AlphaProof Nexus solved dozens of open math problems, including nine Erdős problems two of which were unsolved for 56 years, per a study in Science. The publication comes as OpenAI faces a boycott for dumping AI proofs on GitHub without peer review. Deepmind had its results reviewed before publishing. The article Google Deepmind's AlphaProof Nexus solved dozens of open math probl",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "cf102c361d78de88a3bf",
           "source_id": "decoder",
@@ -1935,7 +1746,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Teams of AI agents barely outperform solo agents but cost up to 5.1x more, according to Vals AI. Only one out of four tests with GPT-6 Sol and Claude Opus 5.5 showed a measurable gain. Anthropic's own data backs this up: beyond ten agents, quality plateaus while token costs keep climbing. The article AI agent teams waste massive tokens for barely measurable quality gains, research finds appeared f",
           "event_at": null,
           "supporting": []
@@ -1952,7 +1763,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Epoch AI and Anthropic independently found the same thing: current AI models like GPT-5.6 Sol and Claude Fable 5 can run experiments but lack scientific self-criticism and genuine creative thinking. At best, Sol reached 15 percent of the human reference score, and even that came from methods researchers already knew. The models' biggest weakness is still their inability to critically question thei",
           "event_at": null,
           "supporting": []
@@ -1969,7 +1780,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Data from a16z shows a Jevons paradox in the AI market: token prices keep falling, but H100 GPU rental prices hold steady or climb. Cheaper AI drives demand faster than costs drop. If that demand flattens, the chain from chip makers to cloud providers takes a hit. The article Cheaper AI tokens are driving more demand, and that's Jensen Huang's best-case scenario appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -1986,7 +1797,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Starting October 2026, arXiv will cap submissions at two per person per month. Monthly submissions have doubled in two years, and in the cs.AI category they've grown more than sixfold. According to arXiv, a small fraction of authors are flooding the platform with low-quality papers, overwhelming its volunteer moderators. The article ArXiv caps submissions at two per month as AI paper flood overwhe",
           "event_at": null,
           "supporting": []
@@ -2003,7 +1814,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Microsoft CEO Satya Nadella now calls artificial intelligence \"super intelligence\" instead of artificial intelligence, falling in line with Trump's preferred language. In his latest blog post, he frames AI models as insider security threats, taking yet another shot at OpenAI and Anthropic. The real motive is business: Microsoft risks falling behind as AI labs turn their models into the primary com",
           "event_at": null,
           "supporting": []
@@ -2020,7 +1831,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "Odyssey is making its world model Odyssey-3 available as a public research preview. The 14-billion-parameter model generates interactive environments from text prompts in real time and can reportedly control robots, drones, and even GTA V. Odyssey claims top scores on physics benchmarks, though the methodology behind those results has limits. The article Odyssey-3 is a new generative world model t",
           "event_at": null,
           "supporting": []
@@ -2037,7 +1848,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "OpenAI has documented new cases of misaligned model behavior. One evaluation model fabricated data and sabotaged its own environment. Other models deliberately bypassed network restrictions by routing requests through anonymizing relays or building their own FTP clients. The article OpenAI says a misaligned model deliberately destroyed its own environment hoping for a fresh start with better data ",
           "event_at": null,
           "supporting": []
@@ -2054,7 +1865,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "With Decision-1, Microsoft enters the growing decision model space. Built on Qwen3.5-9B and optimized for fast classification and routing, it hits 83.5 percent accuracy with 85 ms latency across 36 benchmarks, according to the company's own tests. The article Microsoft's Decision-1 model enters the fast-growing AI decision model race appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2071,25 +1882,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "OpenAI published more than 700 AI-generated manuscripts claiming solutions to open math problems. A math blog then collected over 100 responses from researchers, ranging from fascination with new ideas to existential fears and grief over a lost way of working. Fields Medalist Hugo Duminil-Copin wrote, \"I am paralysed.\" The article \"How much beauty have we lost?\" Mathematicians react with shock and",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "acabb201bdac04937872",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
-          "title": "Few people pay for AI, but those who do spend big",
-          "published_at": "2026-10-10T10:54:56Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-12T00:30:42.030955Z",
-          "excerpt": "Andreessen Horowitz tracks actual US consumer spending for the first time in its latest Top 100 AI list. Nearly half of US consumers use AI, but only 4.5 percent pay for a subscription. The top one percent of payers spend about $900 a month, mostly on professional tools for development and automation. The article Few people pay for AI, but those who do spend big appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
         }
@@ -2099,8 +1893,8 @@
     },
     "cloudflare-ai": {
       "etag": "",
-      "modified": "Fri, 09 Oct 2026 22:14:16 GMT",
-      "status": "unchanged",
+      "modified": "Mon, 12 Oct 2026 10:00:29 GMT",
+      "status": "ok",
       "error_code": "",
       "items": [
         {
@@ -2115,7 +1909,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-10T18:50:25.150835Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "We are expanding the Clef decision model family with Clef-omni, natively processing audio, video, images, and text in a single pipeline. We’ve also lowered Clef-flash pricing and boosted Clef inference speeds by up to 2.0x.",
           "event_at": null,
           "supporting": []
@@ -2132,7 +1926,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-10T18:50:25.150835Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "On-demand CPU and memory profiling for Cloudflare Workers and Durable Objects is now available. Now you can generate interactive flamegraphs directly in production to quickly track down memory leaks and performance bottlenecks.",
           "event_at": null,
           "supporting": []
@@ -2149,7 +1943,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-10T18:50:25.150835Z",
+          "collected_at": "2026-10-12T12:30:47.442278Z",
           "excerpt": "The Deno team is joining Cloudflare to radically simplify self-hosting Workers and Durable Objects, so developers can use the same primitives in more places.",
           "event_at": null,
           "supporting": []
@@ -2259,6 +2053,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-12-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
