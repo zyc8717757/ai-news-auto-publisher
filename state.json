@@ -386,6 +386,14 @@
       "stage": "accepted",
       "reason": "editorial_rank",
       "extra_test": false
+    },
+    {
+      "at": "2026-10-12T12:31:46.649861Z",
+      "issue": "2026-10-12-pm",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "provider_error",
+      "reason": "ai_provider_http_503",
+      "extra_test": false
     }
   ],
   "ai_reserved_tokens": [
