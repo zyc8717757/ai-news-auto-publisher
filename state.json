@@ -413,6 +413,14 @@
       "stage": "output_rejected",
       "reason": "ai_numeric_claim_unsupported",
       "extra_test": false
+    },
+    {
+      "at": "2026-10-12T12:32:47.095572Z",
+      "issue": "2026-10-12-pm",
+      "model": "gemini-3.8-flash",
+      "stage": "output_rejected",
+      "reason": "ai_numeric_claim_unsupported",
+      "extra_test": false
     }
   ],
   "ai_reserved_tokens": [
