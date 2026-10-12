@@ -368,6 +368,14 @@
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
       "extra_test": false
+    },
+    {
+      "at": "2026-10-12T12:31:29.620703Z",
+      "issue": "2026-10-12-pm",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "accepted",
+      "reason": "editorial_screen",
+      "extra_test": false
     }
   ],
   "ai_reserved_tokens": [
