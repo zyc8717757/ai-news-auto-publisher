@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-13-am",
+  "revision": 1,
+  "created_at": "2026-10-13T00:30:57.829612Z",
+  "cutoff": "2026-10-13T00:30:00Z",
+  "window_start": "2026-10-11T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "c044b31b2af17828644e",
+      "title": "AI models may be capable of self-replicating without access to a datacenter",
+      "summary": "Small AI models may be only months away from being able to self-replicate across cheap IoT devices like Android TV boxes, with no datacenter needed. We run Gemma4-26B-A4B, distributed over 15 inexpensive off-brand Android TV boxes (~$55 each) that we bought and networked together, at 0.39 tokens per second. Each tile below shows one physical TV box holding two of the model’s layers as the model runs. The number of devices infected by the Kimwolf botnet at its peak, reported by Synthient , is som",
+      "impact": "",
+      "category": "来源原文",
+      "score": 83.44,
+      "sources": [
+        {
+          "id": "c044b31b2af17828644e",
+          "source_id": "anthropic-research",
+          "source_name": "Anthropic Research",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/self-replicating-ai",
+          "title": "AI models may be capable of self-replicating without access to a datacenter",
+          "published_at": "2026-10-12T19:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "257773abd2bde1fc9036",
+      "title": "LangGraph Releases: langgraph-checkpoint==4.3.0",
+      "summary": "Changes since checkpoint==4.2.0 * fix(checkpoint): default InMemorySaver delta history to the latest checkpoint (#9257) * test(checkpoint): run the delta conformance suite against InMemorySaver in CI (#9261) * fix(checkpoint,checkpoint-postgres,checkpoint-sqlite): validate namespace labels before store dispatch (#9217) * fix(checkpoint): keep serialized data when an object can't be rebuilt (#9251) * fix(langgraph): replay a resumed exit-mode run's delta writes in live order (#9114) * fix: order ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 72.36,
+      "sources": [
+        {
+          "id": "257773abd2bde1fc9036",
+          "source_id": "langgraph",
+          "source_name": "LangGraph Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpoint%3D%3D4.3.0",
+          "title": "LangGraph Releases: langgraph-checkpoint==4.3.0",
+          "published_at": "2026-10-12T22:26:41Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "4.3.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "cb1d8044b50f43a24e9c",
+      "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+      "summary": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more reliably. At the Open Compute Project (OCP) Global Summit, taking place in the San Jose McEnery Convention Center, NVIDIA announced new partnerships and contributions aimed at […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.03,
+      "sources": [
+        {
+          "id": "cb1d8044b50f43a24e9c",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+          "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+          "published_at": "2026-10-12T15:00:25Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "80f26b2bd8fbb1d1085c",
+      "title": "Filter, reshape, and redact logs before export with Transformers",
+      "summary": "Logpush now supports Transformers, allowing teams to filter, redact, and reshape log streams using SQL before export. Powered by Apache DataFusion and Apache Arrow, Transformers apply those changes directly to log data before it reaches the destination.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.95,
+      "sources": [
+        {
+          "id": "80f26b2bd8fbb1d1085c",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/transformers-on-logpush/",
+          "title": "Filter, reshape, and redact logs before export with Transformers",
+          "published_at": "2026-10-12T14:44:59Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "4204414603744d963967",
+      "title": "Strengthening our defenses against distillation attacks",
+      "summary": "Illicit distillation allows model developers to copy frontier AI capabilities without creating proportionally robust safeguards. Here, we describe how we’ve reduced the rate of distillation by more than 90%. Strengthening our defenses against distillation attacks Oct 12, 2026 In recent months, we’ve made substantial progress on reducing the effectiveness of distillation attacks on Claude using new methods, as we outline in this blog. Early evidence suggests that these methods have reduced the am",
+      "impact": "",
+      "category": "来源原文",
+      "score": 68.31,
+      "sources": [
+        {
+          "id": "4204414603744d963967",
+          "source_id": "anthropic-research",
+          "source_name": "Anthropic Research",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/distillation-defenses",
+          "title": "Strengthening our defenses against distillation attacks",
+          "published_at": "2026-10-12T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
