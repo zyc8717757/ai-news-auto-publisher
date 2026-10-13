@@ -84,6 +84,7 @@ REVIEW_TASK = """\n阶段4：事实、数字和中文翻译终审。逐条核对
 降低到与降低了、百分比与百分点、相对与绝对变化、约数/超过/至少、预测与实际必须保持原义。
 不允许自行算出来源未给出的比例；精确等值单位转换可以，不能换币或错误四舍五入。
 翻译符合中国大陆简体中文新闻习惯，信达雅，不夸张、生硬直译或制造术语歧义。
+机构与品牌名保留官方名称，例如Artificial Analysis不能译成通用名词“人工分析”；技术术语首次出现用准确中文，必要时保留英文。
 open architecture应为开放架构，不代表整个产品开源；产品名与版本不可随意改动；保留公司称、研究显示、可能等限定。
 遇到可修正的问题，用replacement输出修正后的全部文字字段（含selection_reason）；不改事件ID、证据ID、分类或评分。
 approved/translation_ok针对修正后的最终文本；无法依据证据修正核心结论则approved=false，填写failure。
@@ -178,6 +179,11 @@ class EditorialEnhancer(Enhancer):
             )
             corrected = AIStory.model_validate(corrected.model_dump())
             event = by_id[review.event_id]
+            if any(
+                "Artificial Analysis" in (e.source_name + " " + e.title + " " + e.excerpt)
+                for e in event.evidence
+            ) and "人工分析" in " ".join(fields.values()):
+                raise ValueError("Mainland translation terminology mismatch")
             validate_response(
                 AIResponse(stories=[corrected.model_copy(update={"duplicate_of": None})]),
                 [event],
@@ -340,6 +346,7 @@ class EditorialEnhancer(Enhancer):
                     "Numeric anchor change basis mismatch": "numeric_anchor_basis_mismatch",
                     "Numeric claim missing semantic audit": "numeric_audit_incomplete",
                     "Review approval inconsistent": "review_approval_inconsistent",
+                    "Mainland translation terminology mismatch": "translation_terminology_mismatch",
                 }.get(str(exc), "ai_output_validation_failed")
                 print(
                     json.dumps(

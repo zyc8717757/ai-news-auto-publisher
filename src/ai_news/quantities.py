@@ -54,9 +54,38 @@ TOKEN = re.compile(
     r"|(?<![a-z0-9_.])\d+(?:\.\d+){2,}(?![a-z0-9_.])"
     r"|(?<![A-Za-z0-9_.-])[A-Za-z][A-Za-z0-9_.-]*\d[A-Za-z0-9_.-]*(?![A-Za-z0-9_.-])"
     r"|(?<![\d.])\d+(?:,\d{3})*(?:\.\d+)?"
+    r"|(?<![零一二两三四五六七八九十百千万亿点数几])(?:[零二两三四五六七八九十百千万亿][零一二两三四五六七八九十百千万亿]*|一)(?:点[零一二三四五六七八九]+)?(?=次|台|倍|人|秒|毫秒|分钟|小时|成)"
     r"|\b(?:" + "|".join(WORDS) + r")\b",
     re.I,
 )
+
+
+def chinese_number(text: str) -> Decimal:
+    digits = dict(zip("零一二两三四五六七八九", (0, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9)))
+    whole, _, fraction = text.partition("点")
+    if len(whole) > 1 and not any(char in whole for char in "十百千万亿"):
+        # '三四次' is an approximate range, not the scalar four. Do not invent
+        # a normalization; let the reviewer rewrite it against explicit evidence.
+        raise ValueError("Unsupported numeric claim")
+    total = section = number = 0
+    for char in whole:
+        if char in digits:
+            number = digits[char]
+        else:
+            scale = {"十": 10, "百": 100, "千": 1000, "万": 10000, "亿": 10**8}[char]
+            if scale < 10000:
+                section += (number or 1) * scale
+            else:
+                section += number
+                total = (total + section) * scale if scale >= 10**8 else total + section * scale
+                section = 0
+            number = 0
+    value = Decimal(total + section + number)
+    if fraction:
+        value += Decimal("0." + "".join(str(digits[c]) for c in fraction))
+    return value
+
+
 SCALE = re.compile(r"\s*(trillion|billion|million|thousand|万亿|亿|万|千|bn|[kmbt])(?=$|[^a-z])", re.I)
 
 
@@ -89,7 +118,13 @@ def quantities(text: str) -> list[Quantity]:
         if token.lower() not in WORDS and (re.search(r"[a-z]", token, re.I) or token.count(".") > 1):
             result.append(Quantity(start, end, token.casefold(), "identifier"))
             continue
-        value = Decimal(WORDS[token.lower()]) if token.lower() in WORDS else Decimal(token.replace(",", ""))
+        value = (
+            chinese_number(token)
+            if re.search(r"[零一二两三四五六七八九十百千万亿]", token)
+            else Decimal(WORDS[token.lower()])
+            if token.lower() in WORDS
+            else Decimal(token.replace(",", ""))
+        )
         unit = "number"
         scale = SCALE.match(text[end:])
         if scale:
@@ -117,6 +152,8 @@ def quantities(text: str) -> list[Quantity]:
         elif re.match(r"\s*(?:倍|[x×](?![a-z]))", suffix, re.I):
             unit = "multiple"
             end += re.match(r"\s*(?:倍|[x×](?![a-z]))", suffix, re.I).end()
+        elif suffix.startswith("成"):
+            unit, value, end = "ratio", value / 10, end + 1
         else:
             storage = re.match(r"\s*(TiB|GiB|MiB|KiB|TB|GB|MB|KB|bytes?\b|字节)", text[match.end() :], re.I)
             if storage:

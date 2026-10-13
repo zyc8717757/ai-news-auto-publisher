@@ -167,3 +167,38 @@ def test_numbered_source_passages_resolve_to_immutable_original_text(
     monkeypatch.setattr(editor, "generate_text", generate)
     assert editor.review_summaries(object(), [story], [event])[0].summary == story.summary
     assert len(Store(tmp_path).state.ai_attempts) == 1
+
+
+def test_institution_name_mistranslation_must_be_corrected_before_approval(
+    settings, tmp_path, source_item, now, monkeypatch
+):
+    editor, store, event, story = editor_case(settings, tmp_path, source_item, now, monkeypatch)
+    event.evidence[0].source_name = "Artificial Analysis"
+    story = story.model_copy(
+        update={"title": "人工分析发布新评测", "summary": "该机构发布新的模型评测结果，实际效果仍需复核。"}
+    )
+    row = {
+        "event_id": "fund",
+        "approved": True,
+        "translation_ok": True,
+        "failure": "none",
+        "reason": "通过",
+        "numeric_checks": [],
+    }
+    calls = []
+
+    def generate(*args):
+        calls.append(args)
+        if len(calls) == 2:
+            row["replacement"] = {
+                "title": "Artificial Analysis发布新评测",
+                "summary": story.summary,
+                "impact": story.impact,
+                "uncertainty": "",
+                "selection_reason": "",
+            }
+        return json.dumps({"reviews": [row]})
+
+    monkeypatch.setattr(editor, "generate_text", generate)
+    assert editor.review_summaries(object(), [story], [event])[0].title.startswith("Artificial Analysis")
+    assert len(Store(tmp_path).state.ai_attempts) == 2

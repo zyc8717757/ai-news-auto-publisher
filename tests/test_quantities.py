@@ -15,6 +15,9 @@ from ai_news.quantities import validate_anchors, validate_quantities
         ("The error rate fell by 90 percent.", "错误率降低百分之90。"),
         ("Data harvested fell by 90 to 99 percent.", "数据采集量降低90%至99%。"),
         ("Two devices run the model.", "使用2台设备运行模型。"),
+        ("Four tests showed one improvement.", "四次测试中仅一次显示提升。"),
+        ("Eleven tests were run.", "进行了十一次测试。"),
+        ("Error rate is 90 percent.", "错误率为九成。"),
         ("checkpoint==4.3.0", "checkpoint 4.3.0版本发布。"),
         ("2026-10-09", "于10月9日发布。"),
         ("Storage is 1 GB.", "存储容量为1000 MB。"),
@@ -35,6 +38,7 @@ def test_exact_translations_and_unit_conversions(source, translation):
         ("Speed increased 2x.", "速度提高2%。"),
         ("Latency is 2 seconds.", "延迟为2毫秒。"),
         ("Memory is 1 GB.", "内存容量为1 TB。"),
+        ("Four tests were run.", "进行了三四次测试。"),
     ],
 )
 def test_digits_cannot_cross_date_currency_scale_or_dimension(source, unsupported):
