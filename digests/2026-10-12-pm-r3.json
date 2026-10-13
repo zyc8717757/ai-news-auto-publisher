@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-12-pm",
+  "revision": 3,
+  "created_at": "2026-10-13T03:04:57.346877Z",
+  "cutoff": "2026-10-12T12:30:00Z",
+  "window_start": "2026-10-10T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "1772bb3eaf1415bdab1e",
+      "title": "Artificial Analysis发布FrontierCode 1.1代码能力评测",
+      "summary": "Artificial Analysis推出了Cognition的FrontierCode 1.1评测，测试AI模型能否编写出真实开源仓库维护者愿意合并的代码。结果显示领先模型失败率仍超过40%。各模型的任务成本与得分差异显著，GPT-6.1 Sol (max)等四款模型处于帕累托前沿。",
+      "impact": "为评估AI模型的实际编程能力提供了成本与性能对照基准。",
+      "category": "评测",
+      "score": 82.27,
+      "sources": [
+        {
+          "id": "1772bb3eaf1415bdab1e",
+          "source_id": "primary-artificialanalysis",
+          "source_name": "Artificial Analysis",
+          "group": "artificialanalysis",
+          "trust": "official",
+          "url": "https://artificialanalysis.ai/articles/frontiercode",
+          "title": "Announcing FrontierCode on Artificial Analysis: can AI models write code maintainers would merge?",
+          "published_at": "2026-10-12T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-10-12",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 评测结果基于特定任务与版本，实际应用中的表现可能因场景而异。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Artificial Analysis 发布了针对编程代理的 FrontierCode 1.1 评测，评估了大模型的代码维护合并能力。",
+      "backfill": false
+    },
+    {
+      "id": "4204414603744d963967",
+      "title": "Anthropic称采用新方法打击模型蒸馏攻击",
+      "summary": "Anthropic发布博客称，近期通过采用新方法强化了对Claude的防御，大幅降低了蒸馏攻击的有效性。早期证据表明，这些方法使蒸馏者采集的数据量减少了大约90%到99%。此类攻击通常以隐蔽、工业化规模复制前沿模型能力。",
+      "impact": "有助于保护前沿AI模型能力免受未经授权的复制与滥用。",
+      "category": "安全",
+      "score": 76.84,
+      "sources": [
+        {
+          "id": "4204414603744d963967",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/distillation-defenses",
+          "title": "Strengthening our defenses against distillation attacks",
+          "published_at": "2026-10-12T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 早期证据显示的数据减少比例仍需长期实际效果验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic 宣布通过新方法将 Claude 模型遭遇的蒸馏攻击数据窃取率大幅降低 90% 以上。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
