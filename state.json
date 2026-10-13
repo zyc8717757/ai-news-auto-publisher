@@ -2252,7 +2252,7 @@
       "email_attempts": 1
     },
     "2026-10-13-am-r2": {
-      "deployment": "pending",
+      "deployment": "ready",
       "email": "pending",
       "email_attempts": 0
     }
