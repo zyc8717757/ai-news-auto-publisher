@@ -2438,6 +2438,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-12-pm-r2": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -2672,6 +2677,54 @@
       "entities": [],
       "versions": [],
       "event_type": "announcement"
+    },
+    {
+      "id": "4204414603744d963967",
+      "issue": "2026-10-12-pm",
+      "cutoff": "2026-10-12T12:30:00Z",
+      "title": "Strengthening our defenses against distillation attacks",
+      "urls": [
+        "https://www.anthropic.com/research/distillation-defenses"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "1772bb3eaf1415bdab1e",
+      "issue": "2026-10-12-pm",
+      "cutoff": "2026-10-12T12:30:00Z",
+      "title": "Announcing FrontierCode on Artificial Analysis: can AI models write code maintainers would merge?",
+      "urls": [
+        "https://artificialanalysis.ai/articles/frontiercode"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "cf102c361d78de88a3bf",
+      "issue": "2026-10-12-pm",
+      "cutoff": "2026-10-12T12:30:00Z",
+      "title": "AI agent teams waste massive tokens for barely measurable quality gains, research finds",
+      "urls": [
+        "https://the-decoder.com/ai-agent-teams-waste-massive-tokens-for-barely-measurable-quality-gains-research-finds/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "research"
+    },
+    {
+      "id": "e8265bd0e25a684d6028",
+      "issue": "2026-10-12-pm",
+      "cutoff": "2026-10-12T12:30:00Z",
+      "title": "AI agents overstate their results and remain far from autonomous research, study finds",
+      "urls": [
+        "https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "research"
     }
   ]
 }

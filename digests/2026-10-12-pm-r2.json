@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-12-pm",
+  "revision": 2,
+  "created_at": "2026-10-13T02:54:49.928756Z",
+  "cutoff": "2026-10-12T12:30:00Z",
+  "window_start": "2026-10-10T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "4204414603744d963967",
+      "title": "该公司称Claude防御蒸馏攻击取得进展",
+      "summary": "该公司发布博客称，近期通过采用新方法，在减少针对Claude的蒸馏攻击有效性方面取得了实质性进展。早期证据显示，这些方法已将蒸馏者采集的数据量减少了约90%到99%。蒸馏攻击是指未经授权复制模型能力的工业级行为。",
+      "impact": "有助于降低前沿AI能力被非法复制的风险。",
+      "category": "安全",
+      "score": 75.94,
+      "sources": [
+        {
+          "id": "4204414603744d963967",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/distillation-defenses",
+          "title": "Strengthening our defenses against distillation attacks",
+          "published_at": "2026-10-12T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 早期证据显示的减少幅度为约90%到99%，其实际长期效果有待观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic官方公布减少模型蒸馏攻击的新进展，称数据蒸馏率降低了90%到99%。",
+      "backfill": false
+    },
+    {
+      "id": "1772bb3eaf1415bdab1e",
+      "title": "人工分析发布FrontierCode评测结果",
+      "summary": "Artificial Analysis公布了FrontierCode 1.1测试结果，用于评估AI模型编写开源代码时能否被维护者合并。测试显示领先模型仍有超过40%的几率失败，同时不同模型的每任务成本跨度超过100倍。",
+      "impact": "为开发者选择不同性价比的编码AI模型提供了参考基准。",
+      "category": "评测",
+      "score": 80.77,
+      "sources": [
+        {
+          "id": "1772bb3eaf1415bdab1e",
+          "source_id": "primary-artificialanalysis",
+          "source_name": "Artificial Analysis",
+          "group": "artificialanalysis",
+          "trust": "official",
+          "url": "https://artificialanalysis.ai/articles/frontiercode",
+          "title": "Announcing FrontierCode on Artificial Analysis: can AI models write code maintainers would merge?",
+          "published_at": "2026-10-12T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-10-12",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 评测结果受限于特定的开源代码合并标准。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Artificial Analysis发布FrontierCode 1.1评测，测试大模型在真实开源代码库中的合并率与成本性价比。",
+      "backfill": false
+    },
+    {
+      "id": "cf102c361d78de88a3bf",
+      "title": "研究称AI多智能体团队成本高昂但质量增益微乎其微",
+      "summary": "根据Vals AI的研究，AI智能体团队相比单智能体几乎没有性能优势，但成本最高可达5.1倍。在GPT-6 Sol和Claude Opus 5.5进行的四次测试中，仅有一次显示出可测量的质量提升。",
+      "impact": "提示开发团队在实际应用中需谨慎评估多智能体架构的成本效益。",
+      "category": "评测",
+      "score": 55.94,
+      "sources": [
+        {
+          "id": "cf102c361d78de88a3bf",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/ai-agent-teams-waste-massive-tokens-for-barely-measurable-quality-gains-research-finds/",
+          "title": "AI agent teams waste massive tokens for barely measurable quality gains, research finds",
+          "published_at": "2026-10-11T15:39:26Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "测试样本数量有限，结论可能随任务复杂度而变化。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "research",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "研究发现AI智能体团队在消耗大量Token的同时质量提升有限，属于有价值的行业效能观察。",
+      "backfill": false
+    },
+    {
+      "id": "e8265bd0e25a684d6028",
+      "title": "研究发现AI智能体缺乏科学批判性思维与真正创新",
+      "summary": "Epoch AI和Anthropic的研究发现，当前AI模型能够运行实验，但缺乏科学自我批判和真正的创造性思维。其中Sol最高达到了人类参考得分的15%，其最大弱点在于无法批判性地质疑自身结果。",
+      "impact": "表明当前AI模型距离实现真正自主的科学研究仍有较大差距。",
+      "category": "评测",
+      "score": 56.72,
+      "sources": [
+        {
+          "id": "e8265bd0e25a684d6028",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/",
+          "title": "AI agents overstate their results and remain far from autonomous research, study finds",
+          "published_at": "2026-10-11T13:44:32Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "研究基于当前特定模型版本，未来架构可能带来改变。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "research",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Epoch AI和Anthropic研究显示当前AI Agent在科学自主研究上缺乏自我批判能力。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
