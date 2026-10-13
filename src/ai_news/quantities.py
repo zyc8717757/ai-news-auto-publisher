@@ -194,10 +194,25 @@ def validate_quantities(text: str, evidence_texts: list[str]) -> None:
 
 def numeric_spans(fields: dict[str, str]) -> dict[str, list[dict]]:
     return {
-        name: [{"text": text[q.start : q.end], "start": q.start, "end": q.end} for q in quantities(text)]
+        name: [
+            {"index": i, "text": text[q.start : q.end], "start": q.start, "end": q.end}
+            for i, q in enumerate(quantities(text))
+        ]
         for name, text in fields.items()
         if quantities(text)
     }
+
+
+def claim_clause(text: str, index: int) -> str:
+    spans = quantities(text)
+    if not 0 <= index < len(spans):
+        raise ValueError("Unverified numeric anchor")
+    q = spans[index]
+    before = list(re.finditer(r"[，。；;!?！？]|(?<!\d)\.(?!\d)", text[: q.start]))
+    start = before[-1].end() if before else 0
+    after = re.search(r"[，。；;!?！？]|(?<!\d)\.(?!\d)", text[q.end :])
+    end = q.end + after.start() if after else len(text)
+    return text[start:end].strip()
 
 
 METRICS = {
@@ -277,3 +292,29 @@ def validate_anchors(fields: dict[str, str], sources: dict[str, str], anchors) -
     for field, text in fields.items():
         if {(q.start, q.end) for q in quantities(text)} - covered[field]:
             raise ValueError("Numeric claim missing semantic audit")
+
+
+def source_passages(sources: dict[str, str]) -> list[dict[str, str]]:
+    """Supply immutable evidence references instead of asking a model to recopy source text."""
+    passages = []
+    for evidence_id, text in sources.items():
+        # Keep decimals and version identifiers intact. 'at a' separates the
+        # common funding/valuation sentence into independent metric passages.
+        chunks = re.split(r"(?<=[.!?。！？])\s+|[；;]\s*|\s+\*\s+|\s+(?=at an?\s)", text)
+        for chunk in chunks:
+            chunk = chunk.strip()
+            if not quantities(chunk):
+                continue
+            # Long excerpts are bounded already; a window includes nearby metric
+            # context without having a multi-page passage certify a single value.
+            spans = quantities(chunk)
+            windows = (
+                [chunk]
+                if len(chunk) <= 600
+                else [chunk[max(0, q.start - 160) : min(len(chunk), q.end + 160)] for q in spans]
+            )
+            for window in dict.fromkeys(windows):
+                passages.append(
+                    {"passage_id": f"p{len(passages)}", "evidence_id": evidence_id, "text": window}
+                )
+    return passages

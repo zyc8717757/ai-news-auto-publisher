@@ -132,3 +132,38 @@ def test_bad_numeric_audit_does_not_erase_an_independently_verified_sibling(
     monkeypatch.setattr(editor, "generate_text", lambda *args: json.dumps({"reviews": rows}))
     assert [s.event_id for s in editor.review_summaries(object(), [story, safe], [event, other])] == ["other"]
     assert len(Store(tmp_path).state.ai_attempts) == 2
+
+
+def test_numbered_source_passages_resolve_to_immutable_original_text(
+    settings, tmp_path, source_item, now, monkeypatch
+):
+    editor, store, event, story = editor_case(settings, tmp_path, source_item, now, monkeypatch)
+    story = story.model_copy(update={"summary": "该公司宣布融资8.7亿美元，产品进展仍需持续观察。"})
+
+    def generate(*args):
+        data = json.JSONDecoder().raw_decode(args[2].split("\n只返回JSON，不要代码围栏。输入：")[1])[0]
+        passage = next(p for p in data[0]["source_passages"] if "Raised $870 million" in p["text"])
+        return json.dumps(
+            {
+                "reviews": [
+                    {
+                        "event_id": "fund",
+                        "approved": True,
+                        "translation_ok": True,
+                        "reason": "引用程序提供的融资原文片段",
+                        "failure": "none",
+                        "numeric_checks": [
+                            {
+                                "field": "summary",
+                                "output_index": 0,
+                                "source_passage": passage["passage_id"],
+                            }
+                        ],
+                    }
+                ]
+            }
+        )
+
+    monkeypatch.setattr(editor, "generate_text", generate)
+    assert editor.review_summaries(object(), [story], [event])[0].summary == story.summary
+    assert len(Store(tmp_path).state.ai_attempts) == 1

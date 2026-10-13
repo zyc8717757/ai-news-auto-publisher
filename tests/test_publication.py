@@ -168,3 +168,37 @@ def test_frozen_ai_upgrade_preserves_period_and_is_idempotent(digest, settings, 
     assert result.warnings == ["source_errors"]
     again, created = enhance_frozen(settings, store, old.issue, AI(), now)
     assert not created and again.key == result.key and len(calls) == 1
+
+
+@pytest.mark.parametrize("incomplete", [False, True])
+def test_explicit_frozen_base_requires_all_events_and_keeps_revision_history(
+    digest, settings, tmp_path, now, incomplete
+):
+    from ai_news.ai import AIUnavailable
+    from ai_news.models import AIResponse, AIStory
+    from ai_news.pipeline import enhance_frozen
+
+    store = Store(tmp_path)
+    base = digest.model_copy(update={"mode": "rules", "stories": [digest.stories[0],
+                                    digest.stories[0].model_copy(update={"id": "second"})]})
+    store.save_digest(base)
+    store.save_digest(digest.model_copy(update={"revision": 2}))
+
+    class AI:
+        def enhance(self, events):
+            return AIResponse(stories=[AIStory(event_id=e.id, title="已核实的新闻",
+                summary="这是根据冻结证据生成的中文摘要，保留原始事实。", impact="便于读者理解已发布的消息。",
+                category="模型", value_score=80, evidence_ids=[e.evidence[0].id])
+                for e in (events[:1] if incomplete else events)])
+
+    if incomplete:
+        with pytest.raises(AIUnavailable, match="coverage_incomplete"):
+            enhance_frozen(settings, store, base.issue, AI(), now, base_key=base.key)
+        assert store.latest(base.issue).revision == 2
+    else:
+        result, created = enhance_frozen(settings, store, base.issue, AI(), now, base_key=base.key)
+        assert created and result.revision == 3 and len(result.stories) == 2
+        assert {s.id for s in result.stories} == {s.id for s in base.stories}
+        again, created = enhance_frozen(settings, store, base.issue, AI(), now, base_key=base.key)
+        assert not created and again.key == result.key
+        assert len(store.digests()) == 3

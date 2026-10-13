@@ -24,6 +24,10 @@ on:
         description: 'Explicitly resend, including already accepted or uncertain mail'
         type: boolean
         default: false
+      base_key:
+        description: 'Optional enhance-issue frozen base, e.g. YYYY-MM-DD-am-r1; preserves all base events'
+        type: string
+        default: ''
 permissions:
   contents: read
 concurrency:
@@ -128,6 +132,7 @@ jobs:
         env:
           RUN_MODE: ${{ inputs.mode || 'run' }}
           REQUESTED_ISSUE: ${{ inputs.issue }}
+          REQUESTED_BASE_KEY: ${{ inputs.base_key }}
           SCHEDULE_CRON: ${{ github.event.schedule }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AI_FREE_TIER_CONFIRMED: ${{ vars.AI_FREE_TIER_CONFIRMED || 'false' }}

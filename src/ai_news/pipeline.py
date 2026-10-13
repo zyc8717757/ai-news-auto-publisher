@@ -130,13 +130,33 @@ def ai_stories(response, events, decisions=None) -> list[Story]:
 
 
 def enhance_frozen(
-    settings: Settings, store: Store, issue: str, enhancer=None, now=None, test_extra_limit: int = 0
+    settings: Settings,
+    store: Store,
+    issue: str,
+    enhancer=None,
+    now=None,
+    test_extra_limit: int = 0,
+    base_key: str | None = None,
 ) -> tuple[Digest, bool]:
     """Upgrade frozen source information without recollecting, moving coverage or clearing budgets."""
-    existing = store.latest(issue)
+    latest = store.latest(issue)
+    existing = (
+        next((d for d in store.digests() if d.issue == issue and d.key == base_key), None)
+        if base_key
+        else latest
+    )
     if not existing or not existing.stories:
         raise ValueError("A nonempty frozen digest is required")
-    if existing.mode == "ai":
+    if (
+        base_key
+        and latest
+        and latest.mode == "ai"
+        and latest.revision > existing.revision
+        and latest.cutoff == existing.cutoff
+        and {s.id for s in latest.stories} == {s.id for s in existing.stories}
+    ):
+        return latest, False
+    if existing.mode == "ai" and not base_key:
         return existing, False
     if settings.paused:
         raise ValueError("publisher_paused")
@@ -167,10 +187,12 @@ def enhance_frozen(
                 settings, store, client=processor.client, budget=processor.budget
             ).review_summaries(processor.client, response.stories, events)
         )
+    if base_key and {s.event_id for s in response.stories if not s.duplicate_of} != {e.id for e in events}:
+        raise AIUnavailable("ai_frozen_coverage_incomplete")
     stories = sorted(ai_stories(response, events), key=lambda story: (-story.score, story.id))
     digest = existing.model_copy(
         update={
-            "revision": existing.revision + 1,
+            "revision": latest.revision + 1,
             "created_at": now,
             "mode": "ai",
             "stories": stories,

@@ -33,6 +33,9 @@ def parser() -> argparse.ArgumentParser:
     sub.add_parser("check-config")
     upgrade = sub.add_parser("enhance-issue")
     upgrade.add_argument("--issue", required=True)
+    upgrade.add_argument(
+        "--base-key", help="Explicit frozen revision; require full event coverage, no reselection"
+    )
     upgrade.add_argument("--result", type=Path, default=Path(".runtime/result.json"))
     upgrade.add_argument(
         "--test-extra-requests",
@@ -134,7 +137,7 @@ def execute(args) -> int:
     if args.command == "enhance-issue":
         cutoff_for(args.issue)
         digest, created = enhance_frozen(
-            settings, store, args.issue, test_extra_limit=args.test_extra_requests
+            settings, store, args.issue, test_extra_limit=args.test_extra_requests, base_key=args.base_key
         )
         result = {
             "status": "ready",

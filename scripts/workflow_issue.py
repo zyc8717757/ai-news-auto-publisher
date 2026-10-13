@@ -38,6 +38,8 @@ def main():
             "enhance-issue" if mode in {"enhance-issue", "test-enhance"} else "generate",
         ]
         command += ["--schedule", schedule] if schedule else ["--issue", issue]
+        if mode == "enhance-issue" and os.environ.get("REQUESTED_BASE_KEY"):
+            command += ["--base-key", os.environ["REQUESTED_BASE_KEY"]]
         if mode in {"regenerate", "validate-news"}:
             command += ["--regenerate"]
         if mode == "test-enhance":

@@ -10,7 +10,7 @@ from pydantic import Field
 from .ai import AIUnavailable, Enhancer, json_output, provider_failure, validate_response
 from .diagnostics import provider_error_details
 from .models import AIResponse, AIStory, StrictModel
-from .quantities import numeric_spans, validate_anchors
+from .quantities import claim_clause, numeric_spans, source_passages, validate_anchors
 from .selection import independent_groups
 
 
@@ -52,9 +52,11 @@ class Reviews(StrictModel):
 
 class NumericAnchor(StrictModel):
     field: Literal["title", "summary", "impact", "uncertainty", "selection_reason"]
-    output_quote: str = Field(min_length=1, max_length=600)
-    evidence_id: str
-    source_quote: str = Field(min_length=1, max_length=800)
+    output_index: int | None = Field(default=None, ge=0, le=100)
+    output_quote: str = Field(default="", max_length=600)
+    source_passage: str = Field(default="", max_length=20)
+    evidence_id: str = ""
+    source_quote: str = Field(default="", max_length=800)
 
 
 class ReviewedText(StrictModel):
@@ -85,11 +87,12 @@ REVIEW_TASK = """\n阶段4：事实、数字和中文翻译终审。逐条核对
 open architecture应为开放架构，不代表整个产品开源；产品名与版本不可随意改动；保留公司称、研究显示、可能等限定。
 遇到可修正的问题，用replacement输出修正后的全部文字字段（含selection_reason）；不改事件ID、证据ID、分类或评分。
 approved/translation_ok针对修正后的最终文本；无法依据证据修正核心结论则approved=false，填写failure。
-每个数字、比例、金额、日期、型号版本都必须在numeric_checks中给出：字段名、最终正文中的连续原文output_quote、
-该事件已引用的evidence_id、证据中连续原文source_quote。引用必须逐字复制，不翻译、不省略、不编造；
+每个数字、比例、金额、日期、型号版本都必须在numeric_checks中给出：字段名、该字段最终文字中数字的从0开始的序号output_index、
+本条source_passages中支持该结论的passage_id填入source_passage。evidence_id与source_quote留空，程序根据编号读取原文，禁止改写或编造引文；
 一条检查的引文应尽量短且包含指标主体；不同指标必须拆成不同检查，例如融资与估值分别引用，禁止用同时包含两者的整段引文背书。
 日期可引用证据的publication_date，不用日期数字支持其他指标。
 检查每个字段（包括标题和入选理由），可以用一条引文覆盖同句多个数值，不能漏掉正文任何数字。
+output_quote也留空。程序按output_index从最终文字取出包含该数字和指标的分句，避免重抄文字。若有replacement，序号按修正后的字段重新从0计数。
 先判断每一数值与原文具有相同语义，再提供引用；没有数字时numeric_checks为空。
 保留原有事实门槛：拒绝证据不支持的核心结论、时态、错误归因和把传闻当事实；
 影响可明确表达为可能性。不要仅因缺少第二来源而拒绝有归因的官方声明。
@@ -139,6 +142,18 @@ class EditorialEnhancer(Enhancer):
         by_id = {e.id: e for e in events}
         original = {s.event_id: s for s in summaries}
         reasons = {key: decisions[key].reason if decisions else "" for key in original}
+        sources_by_id = {
+            key: {
+                e.id: e.title
+                + " "
+                + (review_texts or {}).get(e.id, e.excerpt)
+                + (" " + e.published_at.date().isoformat() if e.published_at else "")
+                for e in by_id[key].evidence
+                if e.id in story.evidence_ids
+            }
+            for key, story in original.items()
+        }
+        passages_by_id = {key: source_passages(sources) for key, sources in sources_by_id.items()}
 
         def final_fields(story, reason):
             return {name: getattr(story, name) for name in ("title", "summary", "impact", "uncertainty")} | {
@@ -169,15 +184,22 @@ class EditorialEnhancer(Enhancer):
                 {event.id: fields["selection_reason"]},
                 evidence_text_overrides=review_texts,
             )
-            sources = {
-                e.id: e.title
-                + " "
-                + (review_texts or {}).get(e.id, e.excerpt)
-                + (" " + e.published_at.date().isoformat() if e.published_at else "")
-                for e in event.evidence
-                if e.id in corrected.evidence_ids
-            }
-            validate_anchors(fields, sources, review.numeric_checks)
+            passages = {p["passage_id"]: p for p in passages_by_id[review.event_id]}
+            anchors = []
+            for anchor in review.numeric_checks:
+                if anchor.output_index is not None:
+                    anchor = anchor.model_copy(
+                        update={"output_quote": claim_clause(fields[anchor.field], anchor.output_index)}
+                    )
+                if anchor.source_passage:
+                    passage = passages.get(anchor.source_passage)
+                    if passage is None:
+                        raise ValueError("Unverified numeric anchor")
+                    anchor = anchor.model_copy(
+                        update={"evidence_id": passage["evidence_id"], "source_quote": passage["text"]}
+                    )
+                anchors.append(anchor)
+            validate_anchors(fields, sources_by_id[review.event_id], anchors)
 
         def check(result):
             ids = [r.event_id for r in result.reviews]
@@ -215,6 +237,7 @@ class EditorialEnhancer(Enhancer):
                     "story": story.model_dump(),
                     "selection_reason": reasons[story.event_id],
                     "numeric_spans": numeric_spans(final_fields(story, reasons[story.event_id])),
+                    "source_passages": passages_by_id[story.event_id],
                     "input": source_input,
                 }
             )
