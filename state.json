@@ -2495,8 +2495,8 @@
     },
     "2026-10-12-pm-r3": {
       "deployment": "ready",
-      "email": "pending",
-      "email_attempts": 0
+      "email": "sending",
+      "email_attempts": 1
     }
   },
   "history": [
