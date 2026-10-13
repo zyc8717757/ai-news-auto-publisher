@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-13-am",
+  "revision": 4,
+  "created_at": "2026-10-13T02:53:29.219848Z",
+  "cutoff": "2026-10-13T00:30:00Z",
+  "window_start": "2026-10-11T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "c044b31b2af17828644e",
+      "title": "小型AI模型或具备跨廉价物联网设备自我复制能力",
+      "summary": "有研究显示，小型AI模型可能在短短几个月内具备跨廉价物联网设备（如安卓电视盒）进行自我复制的能力，且无需数据中心支持。该实验在分布式连接的15台廉价安卓电视盒上运行了Gemma4-26B-A4B模型。",
+      "impact": "引发对边缘设备安全与AI自我复制风险的关注。",
+      "category": "科研",
+      "score": 80.91,
+      "sources": [
+        {
+          "id": "c044b31b2af17828644e",
+          "source_id": "anthropic-research",
+          "source_name": "Anthropic Research",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/self-replicating-ai",
+          "title": "AI models may be capable of self-replicating without access to a datacenter",
+          "published_at": "2026-10-12T19:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实验结果基于特定假设和早期探讨，相关风险仍需进一步验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "cb1d8044b50f43a24e9c",
+      "title": "英伟达在OCP全球峰会上宣布开放Vera Rubin架构",
+      "summary": "在OCP全球峰会上，英伟达宣布采用开放架构并推出新的合作伙伴关系与贡献，旨在帮助全球AI工厂在规模从兆瓦级向吉瓦级增长时，实现更快、更高效和更可靠的AI基础设施扩展。",
+      "impact": "推动AI基础设施标准化与生态系统发展。",
+      "category": "商业",
+      "score": 73.02,
+      "sources": [
+        {
+          "id": "cb1d8044b50f43a24e9c",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+          "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+          "published_at": "2026-10-12T15:00:25Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实际生态落地效果取决于行业接受度。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "4204414603744d963967",
+      "title": "Anthropic称已大幅减少蒸馏攻击采集的数据量",
+      "summary": "该公司称，通过采用新方法，在过去几个月中在减少Claude模型的蒸馏攻击效果方面取得了实质性进展。早期证据显示，这些方法将蒸馏者采集的数据量减少了90%以上。",
+      "impact": "有助于保护前沿AI模型的能力免遭非法复制。",
+      "category": "安全",
+      "score": 72.42,
+      "sources": [
+        {
+          "id": "4204414603744d963967",
+          "source_id": "anthropic-research",
+          "source_name": "Anthropic Research",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/distillation-defenses",
+          "title": "Strengthening our defenses against distillation attacks",
+          "published_at": "2026-10-12T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 防御效果依赖于早期证据，未来可能面临新的对抗手段。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "257773abd2bde1fc9036",
+      "title": "LangGraph发布checkpoint 4.3.0版本",
+      "summary": "LangGraph发布了langgraph-checkpoint==4.3.0版本。更新内容包括修复InMemorySaver的delta历史记录默认值、在CI中运行delta一致性套件、在存储分发前验证命名空间标签等。",
+      "impact": "提升了状态检查点机制的稳定性和数据处理的准确性。",
+      "category": "开发",
+      "score": 68.65,
+      "sources": [
+        {
+          "id": "257773abd2bde1fc9036",
+          "source_id": "langgraph",
+          "source_name": "LangGraph Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpoint%3D%3D4.3.0",
+          "title": "LangGraph Releases: langgraph-checkpoint==4.3.0",
+          "published_at": "2026-10-12T22:26:41Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "4.3.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "80f26b2bd8fbb1d1085c",
+      "title": "Logpush新增支持Transformers日志处理功能",
+      "summary": "Logpush现在支持Transformers，允许团队在导出前使用SQL对日志流进行过滤、脱敏和重塑。该功能由Apache DataFusion和Apache Arrow驱动，在日志到达目的地之前直接应用变更。",
+      "impact": "提升了日志处理的灵活性与安全性。",
+      "category": "产品",
+      "score": 68.47,
+      "sources": [
+        {
+          "id": "80f26b2bd8fbb1d1085c",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/transformers-on-logpush/",
+          "title": "Filter, reshape, and redact logs before export with Transformers",
+          "published_at": "2026-10-12T14:44:59Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
