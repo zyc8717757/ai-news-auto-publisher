@@ -4,7 +4,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from ai_news.ai import AIUnavailable, Budget, Enhancer, validate_response
+from ai_news.ai import AIUnavailable, Budget, Enhancer, checked_stories, validate_response
 from ai_news.models import AIResponse, AIStory, NewsEvent
 from ai_news.store import Store
 
@@ -23,6 +23,56 @@ def response(event):
             )
         ]
     )
+
+
+@pytest.mark.parametrize("bad_kind", ["number", "field", "evidence", "missing", "duplicate"])
+def test_partial_summary_keeps_only_independently_valid_events(source_item, bad_kind):
+    events = [NewsEvent(id=k, evidence=[source_item]) for k in ("good", "bad")]
+    rows = [response(e).stories[0].model_dump() for e in events]
+    if bad_kind == "number":
+        rows[1]["summary"] += "性能提升999倍。"
+    elif bad_kind == "field":
+        rows[1]["impact"] = ""
+    elif bad_kind == "evidence":
+        rows[1]["evidence_ids"] = ["invented"]
+    elif bad_kind == "missing":
+        rows.pop()
+    else:
+        rows.append(rows[1].copy())
+    rows.append({**rows[0], "event_id": "injected"})
+    valid, failures = checked_stories(json.dumps({"stories": rows}), events)
+    assert set(valid) == {"good"}
+    assert set(failures) == {"bad"}
+
+
+@pytest.mark.parametrize("repair_kind", ["invalid_number", "malformed", "fixed"])
+def test_summary_repair_retains_good_siblings_and_persistent_budget(
+    settings, tmp_path, monkeypatch, source_item, repair_kind
+):
+    settings.ai_enabled = True
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    events = [NewsEvent(id=k, evidence=[source_item]) for k in ("good", "bad")]
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["contents"])
+            if len(calls) == 2 and repair_kind == "malformed":
+                return SimpleNamespace(text="invalid JSON")
+            stories = [response(e).stories[0] for e in events]
+            if len(calls) == 1 or repair_kind != "fixed":
+                stories[1].summary += "性能提升999倍。"
+            return SimpleNamespace(text=AIResponse(stories=stories).model_dump_json())
+
+    store = Store(tmp_path)
+    output = Enhancer(settings, store, Client()).enhance(events, allow_partial=True)
+    assert [s.event_id for s in output.stories] == (["good", "bad"] if repair_kind == "fixed" else ["good"])
+    assert len(Store(tmp_path).state.ai_attempts) == 2
+    assert "ai_numeric_claim_unsupported" in calls[1]
 
 
 def test_reject_unknown_evidence_and_numbers(source_item):

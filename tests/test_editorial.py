@@ -91,8 +91,9 @@ def test_old_cache_304_is_refetched(settings, official, now):
     assert calls == [{"If-None-Match": "old"}, None] and cache.status == "ok"
 
 
+@pytest.mark.parametrize("bad_summary", [False, True])
 def test_editorial_rejects_low_value_and_final_review_vetoes(
-    settings, tmp_path, source_item, now, monkeypatch
+    settings, tmp_path, source_item, now, monkeypatch, bad_summary
 ):
     settings.ai_enabled = True
     settings.model = "gemini-3.5-flash-lite"
@@ -138,12 +139,13 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
             phases.append("review")
             result = {
                 "reviews": [
-                    {"event_id": str(i), "approved": i != 3, "reason": "证据足够"} for i in range(2, 6)
+                    {"event_id": str(i), "approved": i != 3, "reason": "证据足够"}
+                    for i in range(2, 6) if i != 2 or not bad_summary
                 ]
             }
         else:
             phases.append("summary")
-            data = json.loads(prompt.split("\n输入数据：\n")[1])
+            data = json.JSONDecoder().raw_decode(prompt.split("\n输入数据：\n")[1])[0]
             result = {
                 "stories": [
                     {
@@ -160,6 +162,8 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
                     for x in data
                 ]
             }
+            if bad_summary:
+                result["stories"][0]["summary"] += "性能提升999倍。"
         return httpx.Response(
             200,
             json={"candidates": [{"content": {"parts": [{"text": json.dumps(result, ensure_ascii=False)}]}}]},
@@ -177,11 +181,11 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
         settings, store, client=client, budget=Budget(settings, store, now=lambda: now, issue="2026-10-10-pm")
     )
     response, decisions, selected = editor.edit(events, now)
-    assert phases == ["screen", "rank", "summary", "review"]
-    assert [s.event_id for s in response.stories] == ["2", "4", "5"]
-    assert len(Store(tmp_path).state.ai_attempts) == 4
+    assert phases == ["screen", "rank", "summary", *(["summary"] if bad_summary else []), "review"]
+    assert [s.event_id for s in response.stories] == (["4", "5"] if bad_summary else ["2", "4", "5"])
+    assert len(Store(tmp_path).state.ai_attempts) == (5 if bad_summary else 4)
     stories = ai_stories(response, selected, decisions)
-    assert [s.section for s in stories] == ["news", "news", "observation"]
+    assert [s.section for s in stories] == (["news", "observation"] if bad_summary else ["news", "news", "observation"])
 
 
 def test_twenty_request_cap_is_persistent(settings, tmp_path, now, monkeypatch):

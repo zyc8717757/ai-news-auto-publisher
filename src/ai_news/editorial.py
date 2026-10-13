@@ -271,9 +271,17 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
         for offset in range(0, len(chosen), 5):
             # Reuse the existing validated summary path and the SAME persistent budget.
             summarizer = Enhancer(self.settings, self.store, client=client, budget=self.budget)
-            response = summarizer.enhance(chosen[offset : offset + 5])
+            try:
+                response = summarizer.enhance(chosen[offset : offset + 5], allow_partial=True)
+            except AIUnavailable as exc:
+                if str(exc) != "ai_output_invalid":
+                    raise
+                # A malformed batch must not discard other independently checked batches.
+                continue
             summaries.extend(response.stories)
         if not summaries:
+            if chosen:
+                raise AIUnavailable("ai_output_invalid")
             return AIResponse(stories=[]), decisions, chosen
         for story in summaries:
             try:
