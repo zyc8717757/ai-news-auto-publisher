@@ -139,7 +139,9 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
             phases.append("review")
             result = {
                 "reviews": [
-                    {"event_id": str(i), "approved": i != 3, "reason": "证据足够"}
+                    {"event_id": str(i), "approved": i != 3, "reason": "证据足够",
+                     "translation_ok": True, "failure": "none" if i != 3 else "fact",
+                     "replacement": None, "numeric_checks": []}
                     for i in range(2, 6) if i != 2 or not bad_summary
                 ]
             }

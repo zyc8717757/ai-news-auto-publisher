@@ -5,6 +5,7 @@ import json
 import os
 from datetime import UTC, datetime
 from pathlib import Path
+from types import SimpleNamespace
 
 from bs4 import BeautifulSoup
 from google import genai
@@ -13,7 +14,7 @@ from google.genai import types
 from ai_news.ai import validate_response
 from ai_news.collector import article_metadata, plain
 from ai_news.config import load_config
-from ai_news.editorial import EditorialEnhancer, Reviews, evidence_payload
+from ai_news.editorial import EditorialEnhancer
 from ai_news.models import AIResponse, AIStory, Digest, IssueState, NewsEvent, SourceItem, Story
 from ai_news.network import PublicHTTP
 from ai_news.store import Store, atomic_write
@@ -108,7 +109,7 @@ def main():
     ]
     for summary, event in zip(summaries, events):
         try:
-            validate_response(AIResponse(stories=[summary]), [event])
+            validate_response(AIResponse(stories=[summary]), [event], evidence_text_overrides=review_texts)
         except ValueError:
             print(json.dumps({"status": "correction_local_rejected", "event_id": event.id}))
             raise
@@ -123,34 +124,25 @@ def main():
             retry_options=types.HttpRetryOptions(attempts=1),
         ),
     )
-    expected = {s.id for s in stories}
-
-    def check(result):
-        if len(result.reviews) != len(expected) or {r.event_id for r in result.reviews} != expected:
-            raise ValueError("Review event mismatch")
-
-    payload = []
-    for summary, event in zip(summaries, events):
-        source_input = evidence_payload(event)
-        for evidence in source_input["evidence"]:
-            evidence["excerpt"] = review_texts[evidence["id"]]
-        payload.append({"story": summary.model_dump(), "input": source_input})
-    review = enhancer.call(
-        client,
-        "\n只做事实终审，逐条检查数字、币种、数量级、发布时态、归因和前瞻标记。不要重新选稿。"
-        "影响分析可以为合理的可能性；官方声明可有归因地报道。每个外层event_id给approved及原因。",
-        payload,
-        Reviews,
-        "correction_review",
-        3000,
-        validator=check,
-    )
-    rejected = [r.event_id for r in review.reviews if not r.approved]
+    decisions = {s.id: SimpleNamespace(reason=s.selection_reason) for s in stories}
+    reviewed = enhancer.review_summaries(client, summaries, events, decisions, review_texts)
+    accepted = {s.event_id: s for s in reviewed}
+    rejected = [s.id for s in stories if s.id not in accepted]
     if rejected:
         print(json.dumps({"status": "correction_review_veto", "event_ids": rejected}))
         if spec.get("require_all", False):
             raise ValueError("Layout verification requires unchanged approved content")
-        stories = [s for s in stories if s.id not in rejected]
+    stories = [
+        Story.model_validate(
+            {
+                **s.model_dump(),
+                **{k: getattr(accepted[s.id], k) for k in ("title", "summary", "impact", "uncertainty")},
+                "selection_reason": decisions[s.id].reason,
+            }
+        )
+        for s in stories
+        if s.id in accepted
+    ]
     if not stories:
         raise ValueError("No stories passed correction review")
     digest = Digest.model_validate(

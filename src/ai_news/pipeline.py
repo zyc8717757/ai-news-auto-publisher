@@ -8,7 +8,17 @@ from zoneinfo import ZoneInfo
 
 from .ai import AIUnavailable, Enhancer
 from .collector import Collector
-from .models import Digest, HistoryEvent, IssueState, NewsEvent, Settings, Source, SourceItem, Story
+from .models import (
+    AIResponse,
+    Digest,
+    HistoryEvent,
+    IssueState,
+    NewsEvent,
+    Settings,
+    Source,
+    SourceItem,
+    Story,
+)
 from .selection import select_events
 from .store import Store
 
@@ -149,6 +159,14 @@ def enhance_frozen(
     ]
     processor = enhancer or Enhancer(settings, store, issue=issue, test_extra_limit=test_extra_limit)
     response = processor.enhance(events)
+    if enhancer is None:
+        from .editorial import EditorialEnhancer
+
+        response = AIResponse(
+            stories=EditorialEnhancer(
+                settings, store, client=processor.client, budget=processor.budget
+            ).review_summaries(processor.client, response.stories, events)
+        )
     stories = sorted(ai_stories(response, events), key=lambda story: (-story.score, story.id))
     digest = existing.model_copy(
         update={
@@ -239,7 +257,16 @@ def generate(
                 )
                 stories = ai_stories(response, selected, decisions)
             else:
-                response = (enhancer or Enhancer(settings, store, issue=issue)).enhance(events)
+                processor = enhancer or Enhancer(settings, store, issue=issue)
+                response = processor.enhance(events)
+                if enhancer is None:
+                    from .editorial import EditorialEnhancer
+
+                    response = AIResponse(
+                        stories=EditorialEnhancer(
+                            settings, store, client=processor.client, budget=processor.budget
+                        ).review_summaries(processor.client, response.stories, events)
+                    )
                 stories = ai_stories(response, events)
             mode = "ai"
         except AIUnavailable as exc:
