@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-13-pm",
+  "revision": 1,
+  "created_at": "2026-10-13T12:30:37.952804Z",
+  "cutoff": "2026-10-13T12:30:00Z",
+  "window_start": "2026-10-11T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "8bb1da51925f69396745",
+      "title": "All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
+      "summary": "NVIDIA RTX Spark is a new beginning for the PC — a reinvention combining the capabilities of a gaming PC, a creative studio and a personal AI supercomputer into a single superchip. With up to 128GB of unified memory and 1 petaflop of AI compute, RTX Spark delivers the full stack of NVIDIA RTX and […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 72.85,
+      "sources": [
+        {
+          "id": "8bb1da51925f69396745",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
+          "title": "All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
+          "published_at": "2026-10-13T12:00:49Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "293b85c97d55fe8c4e9e",
+      "title": "From Earth to Orbit, France’s Ecosystem Delivers Agentic Computing at Scale With NVIDIA",
+      "summary": "Companies in France are deploying agentic computing across industries spanning space, financial services, the public sector and scientific research, demonstrating how the country’s ecosystem has moved from ambition to application. France’s progress sits on deliberate groundwork. The AI Action Summit in February 2025 and Choose France Summits in 2025 and 2026 anchored major compute commitments […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.66,
+      "sources": [
+        {
+          "id": "293b85c97d55fe8c4e9e",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/",
+          "title": "From Earth to Orbit, France’s Ecosystem Delivers Agentic Computing at Scale With NVIDIA",
+          "published_at": "2026-10-13T05:00:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "b43fc89aefdae0f55a56",
+      "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
+      "summary": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027 As we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, ma Microsoft to expand Azure Maia system to multi-gigawatt deployments Oct 12, 2026 | Scott Guthrie - Executive Vice President, Cloud + AI Azure Maia 20",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.66,
+      "sources": [
+        {
+          "id": "b43fc89aefdae0f55a56",
+          "source_id": "primary-microsoft",
+          "source_name": "Microsoft",
+          "group": "microsoft",
+          "trust": "official",
+          "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
+          "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
+          "published_at": "2026-10-12T13:01:29Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "microsoft"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
