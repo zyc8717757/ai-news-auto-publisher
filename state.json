@@ -2583,7 +2583,7 @@
     },
     "2026-10-13-pm-r1": {
       "deployment": "ready",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
