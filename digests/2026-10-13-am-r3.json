@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-13-am",
+  "revision": 3,
+  "created_at": "2026-10-13T02:37:10.987502Z",
+  "cutoff": "2026-10-13T00:30:00Z",
+  "window_start": "2026-10-11T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "c044b31b2af17828644e",
+      "title": "小型AI模型或具备在物联网设备上自主复制能力",
+      "summary": "研究显示，小型AI模型可能在数月内具备在廉价物联网设备（如Android电视盒）上自主复制的能力，无需数据中心支持。实验表明Gemma4-26B-A4B可在分布式廉价设备上运行，但实际漏洞设备规模与可达性仍难以准确估计。",
+      "impact": "引发对边缘设备安全与分布式AI滥用风险的担忧。",
+      "category": "安全",
+      "score": 83.91,
+      "sources": [
+        {
+          "id": "c044b31b2af17828644e",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/self-replicating-ai",
+          "title": "AI models may be capable of self-replicating without access to a datacenter",
+          "published_at": "2026-10-12T19:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 野外可达且易受攻击的边缘加速器机器数量难以准确估计，相关结论基于实验推测。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic发布关于小型AI模型未来可能具备在物联网设备上自我复制能力的安全性研究与警告。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
