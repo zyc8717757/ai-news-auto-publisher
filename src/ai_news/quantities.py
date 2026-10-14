@@ -191,6 +191,17 @@ def quantities(text: str) -> list[Quantity]:
     # In ranges such as 90 to 99 percent, the trailing unit applies to both bounds.
     for index in range(len(result) - 1):
         left, right = result[index : index + 2]
+        if left.unit == "seconds" and right.unit == "number":
+            if re.fullmatch(
+                r"\s*(?:to|through|[-–—~～至到])\s*(?:over|about|超过|约)?\s*",
+                text[left.end : right.start],
+                re.I,
+            ):
+                raw = TOKEN.match(text, left.start)
+                if raw and re.fullmatch(r"\d+(?:\.\d+)?", raw.group()) and Decimal(raw.group()):
+                    result[index + 1] = Quantity(
+                        right.start, right.end, right.value * left.value / Decimal(raw.group()), "seconds"
+                    )
         if left.unit == "number" and right.unit not in {"number", "date", "version", "identifier"}:
             if re.fullmatch(r"\s*(?:to|through|[-–—~～至到])\s*", text[left.end : right.start], re.I):
                 raw = TOKEN.match(text, right.start)

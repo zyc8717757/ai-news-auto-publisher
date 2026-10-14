@@ -56,7 +56,9 @@ def test_frozen_github_release_uses_its_exact_tag_not_latest(settings, source_it
 
 
 def test_unavailable_original_stops_before_any_ai_request(settings, source_item, monkeypatch):
-    event = NewsEvent(id="frozen", evidence=[source_item])
+    event = NewsEvent(
+        id="frozen", evidence=[source_item.model_copy(update={"excerpt": "来源未提供可用摘要，请阅读原文。"})]
+    )
 
     async def get(self, url):
         raise RuntimeError("network offline")
@@ -64,3 +66,17 @@ def test_unavailable_original_stops_before_any_ai_request(settings, source_item,
     monkeypatch.setattr("ai_news.pipeline.PublicHTTP.get", get)
     with pytest.raises(AIUnavailable, match="evidence_unavailable"):
         asyncio.run(refresh_frozen_evidence([event], settings))
+
+
+def test_unavailable_original_retains_verified_nonempty_snapshot_without_inventing_evidence(
+    settings, source_item, monkeypatch
+):
+    event = NewsEvent(id="frozen", evidence=[source_item])
+    before = event.evidence[0].model_dump()
+
+    async def get(self, url):
+        raise RuntimeError("offline")
+
+    monkeypatch.setattr("ai_news.pipeline.PublicHTTP.get", get)
+    asyncio.run(refresh_frozen_evidence([event], settings))
+    assert event.evidence[0].model_dump() == before

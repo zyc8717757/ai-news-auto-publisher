@@ -11,6 +11,7 @@ from ai_news.quantities import validate_anchors, validate_quantities
         ("Raised $870 million at a $7.5 billion valuation.", "融资8.7亿美元，估值75亿美元。"),
         ("Raised US$1,200,000.", "融资120万美元。"),
         ("Latency is 2 seconds.", "延迟为2000毫秒。"),
+        ("Video length from 1 minute to over 10.", "视频时长从1分钟延长至超过10分钟。"),
         ("The error rate fell by 90 percent.", "错误率降低90%。"),
         ("The error rate fell by 90 percent.", "错误率降低百分之90。"),
         ("Data harvested fell by 90 to 99 percent.", "数据采集量降低90%至99%。"),

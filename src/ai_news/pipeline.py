@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
 from collections import Counter
 from datetime import UTC, datetime, timedelta
@@ -136,6 +137,7 @@ async def refresh_frozen_evidence(events, settings):
     http = PublicHTTP(settings.timeout_seconds)
     for event in events:
         for evidence in event.evidence:
+            frozen_excerpt = evidence.excerpt
             parsed = urlsplit(evidence.url)
             parts = parsed.path.split("/")
             try:
@@ -144,8 +146,6 @@ async def refresh_frozen_evidence(events, settings):
                         unquote("/".join(parts[5:])), safe=""
                     )
                     page = await http.get(endpoint)
-                    import json
-
                     excerpt = plain(json.loads(page.text).get("body", ""))
                 else:
                     page = await http.get(evidence.url)
@@ -163,8 +163,32 @@ async def refresh_frozen_evidence(events, settings):
                     raise AIUnavailable("ai_frozen_evidence_empty")
                 evidence.excerpt = excerpt
             except AIUnavailable:
+                if frozen_excerpt and "来源未提供可用摘要" not in frozen_excerpt:
+                    print(
+                        json.dumps(
+                            {
+                                "status": "frozen_evidence_refresh",
+                                "event_id": event.id,
+                                "source": evidence.source_id,
+                                "reason": "frozen_excerpt_retained",
+                            }
+                        )
+                    )
+                    continue
                 raise
             except Exception:
+                if frozen_excerpt and "来源未提供可用摘要" not in frozen_excerpt:
+                    print(
+                        json.dumps(
+                            {
+                                "status": "frozen_evidence_refresh",
+                                "event_id": event.id,
+                                "source": evidence.source_id,
+                                "reason": "frozen_excerpt_retained",
+                            }
+                        )
+                    )
+                    continue
                 raise AIUnavailable("ai_frozen_evidence_unavailable") from None
     return events
 
