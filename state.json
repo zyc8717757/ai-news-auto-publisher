@@ -2928,6 +2928,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-14-am-r3": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [

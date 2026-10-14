@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-14-am",
+  "revision": 3,
+  "created_at": "2026-10-14T09:28:46.734926Z",
+  "cutoff": "2026-10-14T00:30:00Z",
+  "window_start": "2026-10-12T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "8603bdf3ee3848d5faa3",
+      "title": "谷歌发布前沿模型Gemini 4 Argon并全球上线",
+      "summary": "谷歌面向开发者、企业和科研人员全球发布前沿模型Gemini 4 Argon。该模型推出时的介绍价格为每百万输入token 2美元、每百万输出token 10美元，且缓存输入token享受95%的折扣。该公司称其帮助Chrome团队完成了复杂代码重构。",
+      "impact": "为企业和开发者提供了处理高难度工程任务的新工具，有望加速复杂软件重构与开发工作。",
+      "category": "模型",
+      "score": 76.24,
+      "sources": [
+        {
+          "id": "851107eacfc8ba0f286d",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "published_at": "2026-10-13T16:01:52Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "74c9e10c02543c499970",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "published_at": "2026-10-13T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 大规模应用中的稳定性和综合性价比仍需市场检验。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8b1ab1df41ac00d8450a",
+      "title": "谷歌推出Gemini 4 Argon并阐述安全应用",
+      "summary": "谷歌DeepMind团队推出Gemini 4 Argon模型，具备前沿的网络防御能力。该公司称，该模型在有限访问期间被Wiz等安全团队用于发现医院软件及内部系统的关键漏洞。目前该模型正逐步向全球广泛推出，并扩展Fairwind项目以邀请更多受信任的网络防御者参与。",
+      "impact": "有助于提升网络防御者在复杂任务中的效率，推动关键软件漏洞的发现与修复。",
+      "category": "安全",
+      "score": 75.56,
+      "sources": [
+        {
+          "id": "8b1ab1df41ac00d8450a",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+          "title": "Developing Gemini 4 Argon responsibly and safely",
+          "published_at": "2026-10-13T19:43:07Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 安全漏洞修复及防御效果仍取决于实际应用场景与持续验证。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "94cc08977f17740f09c1",
+      "title": "谷歌发布面向机器人的Gemini 4 Argon",
+      "summary": "谷歌发布面向机器人的Gemini 4 Argon，具备物理推理、零样本控制、Real2Sim以及智能体工作流等能力。该公司称，该模型在具身推理基准测试（ERQA）中以87%的纯推理得分超越了其他前沿模型。",
+      "impact": "推动了机器人技术栈在物理理解与代码生成方面的进展，加速实现物理通用人工智能。",
+      "category": "模型",
+      "score": 75.04,
+      "sources": [
+        {
+          "id": "94cc08977f17740f09c1",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+          "title": "Gemini 4 Argon for Robotics",
+          "published_at": "2026-10-13T16:01:58Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 机器人在真实物理环境中的泛化表现仍需长期观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "53911f98c21c784fce1a",
+      "title": "LiquidAI发布端侧推理模型LFM2.5-24B-A2B",
+      "summary": "LiquidAI发布了LFM2.5-24B-A2B模型，这是一款拥有240亿参数、但每个token仅有20亿活跃参数的推理模型，专为在设备上运行快速、私密的智能体而设计。该模型具备思考、调用工具并在主流智能体框架中处理多步骤任务的能力。",
+      "impact": "降低了端侧智能体运行的计算成本，提升了本地私密任务处理的灵活性。",
+      "category": "模型",
+      "score": 74.08,
+      "sources": [
+        {
+          "id": "53911f98c21c784fce1a",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+          "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+          "published_at": "2026-10-13T17:05:48Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 其实际端侧运行性能和综合推理表现尚待更多基准测试验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8d45898e533e591d4241",
+      "title": "Higgsfield利用多项新技术将AI视频时长提升至10分钟以上",
+      "summary": "Higgsfield宣布利用GPT-6 Astra为创作者提供超过10分钟的更长视频生成能力，同时结合GPT-Image-2.5提供精准视觉效果，并为语音电影制作铺平道路。",
+      "impact": "扩展了AI视频创作的时长与视觉精度，为长视频及语音电影制作提供了新路径。",
+      "category": "产品",
+      "score": 71.76,
+      "sources": [
+        {
+          "id": "8d45898e533e591d4241",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+          "title": "Higgsfield takes AI video from 1 minute to over 10",
+          "published_at": "2026-10-13T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 提及的相关技术未提供详细参数及同行评审数据。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
