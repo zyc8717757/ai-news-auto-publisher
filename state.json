@@ -838,7 +838,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
           "event_at": null,
           "supporting": []
@@ -852,16 +852,51 @@
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [],
+      "items": [
+        {
+          "id": "241a0eb7150b75c2c4dd",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/singapore-office-opening",
+          "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+          "published_at": "2026-10-14T08:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "Anthropic opens its fifth Asia-Pacific office in Singapore and signs an MOU with the government on AI safety, evaluation, and responsible adoption. Anthropic is committing $150 million over three years to the Genesis Mission, a federal initiative to accelerate scientific and technological discovery through AI. Announcements Anthropic opens Singapore office and signs MOU with the Government of Sing",
+          "event_at": null,
+          "supporting": []
+        }
+      ],
       "discovered": 10,
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"CaHiUQ\"",
+      "etag": "\"i-pqkA\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "36a7e1c23fbbe3b1fdc0",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+          "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+          "published_at": "2026-10-14T02:00:14Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "8b1ab1df41ac00d8450a",
           "source_id": "deepmind",
@@ -874,7 +909,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -891,7 +926,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -908,7 +943,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -935,7 +970,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "TBD",
           "event_at": null,
           "supporting": []
@@ -962,7 +997,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -989,7 +1024,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "StudentSim is a research system for evaluating and improving AI tutoring tools before they are tested with learners. It models how individuals may engage with tutors, giving feedback to improve tutor performance across subjects like chess, writing, and mathematics. The post Simulating student learning for better AI tutoring appeared first on Microsoft Research .",
           "event_at": null,
           "supporting": []
@@ -999,11 +1034,45 @@
       "verified": 10
     },
     "nvidia": {
-      "etag": "\"b4ec3ea3d79731988ed49adf064db321-gzip\"",
-      "modified": "Tue, 13 Oct 2026 22:38:42 GMT",
+      "etag": "\"d720101e8944bfc154d29ad602654c18-gzip\"",
+      "modified": "Wed, 14 Oct 2026 08:16:46 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "eee6cc87fc10c5839674",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/",
+          "title": "From Enterprise to Earthshot: UK’s Ecosystem Moves From Ambition to Application With NVIDIA",
+          "published_at": "2026-10-14T06:04:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "Across industries, the U.K. is putting the full stack to work — and the scale of deployment is growing fast, from enterprises transforming their businesses to startups solving some of the planet’s hardest problems. NVIDIA is putting that principle into practice, including through a five-year, $250 million compute commitment to strengthen the U.K.’s agentic safety […]",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "8323b3b7fc78f153da00",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/european-cities-agents-urban-operations/",
+          "title": "European Cities Deploy NVIDIA-Powered AI Agents to Run Smarter Urban Operations",
+          "published_at": "2026-10-14T06:00:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "Keeping a city running means making decisions that affect residents every day — from when to repair a road to how to use energy more efficiently. Across the EMEA region, cities and local software, infrastructure and integration partners are using NVIDIA accelerated computing to build physical AI agents and digital twins that help teams make […]",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "8bb1da51925f69396745",
           "source_id": "nvidia",
@@ -1016,7 +1085,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "NVIDIA RTX Spark is a new beginning for the PC — a reinvention combining the capabilities of a gaming PC, a creative studio and a personal AI supercomputer into a single superchip. With up to 128GB of unified memory and 1 petaflop of AI compute, RTX Spark delivers the full stack of NVIDIA RTX and […]",
           "event_at": null,
           "supporting": []
@@ -1033,7 +1102,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Companies in France are deploying agentic computing across industries spanning space, financial services, the public sector and scientific research, demonstrating how the country’s ecosystem has moved from ambition to application. France’s progress sits on deliberate groundwork. The AI Action Summit in February 2025 and Choose France Summits in 2025 and 2026 anchored major compute commitments […]",
           "event_at": null,
           "supporting": []
@@ -1050,7 +1119,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more reliably. At the Open Compute Project (OCP) Global Summit, taking place in the San Jose McEnery Convention Center, NVIDIA announced new partnerships and contributions aimed at […]",
           "event_at": null,
           "supporting": []
@@ -1078,7 +1147,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"d24c90de7f71b2d74e9b644b7b99b425111fb718af915c6294a847cf510dfa5a\"",
+      "etag": "W/\"e4f3644030377dbb41a78a868e2d832d6fc38ef217a9d318a9c3e496d487ab6c\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1105,7 +1174,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"e26cb1d19ba1723c345e07052247c93e18510525cde8d3466a57dc32a3084208\"",
+      "etag": "W/\"9460b0657b4b1f1b853f48fd48f9562c046e1fba46add1c860053e433662de7b\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1114,31 +1183,31 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"29d9539693677101fdd91aec757adc4e7e88accd1fd316db83f6b63706a768b4\"",
+      "etag": "W/\"4fce0c0920201b11da85a9f2bc1fab5b2365861255beeae8b63922cf199f6b6f\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
         {
-          "id": "de32d3b9322608aa8c64",
+          "id": "2fbafa8be8d3a6c95283",
           "source_id": "ollama",
           "source_name": "Ollama Releases",
           "group": "ollama",
           "trust": "official",
-          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.3",
-          "title": "Ollama Releases: v0.40.3",
-          "published_at": "2026-10-11T01:39:04Z",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.4",
+          "title": "Ollama Releases: v0.40.4",
+          "published_at": "2026-10-12T19:00:12Z",
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
-          "excerpt": "## What's Changed * `ollama launch claude` no longer shows a warning about Claude connectors by @hoyyeva in https://github.com/ollama/ollama/pull/18878 * `ollama launch codex` no longer warns about service tiers by @hoyyeva in https://github.com/ollama/ollama/pull/18879 * Paused background model upgrade for embedding and other request performance, by @jmorganca in https://github.com/ollama/ollama/",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "## Decision models in the CLI Decision models can now be used directly from the terminal with `ollama run` — ask yes/no questions, classify text into labels, or score against a rubric: `ollama run nimble --ask \"Is a refund being requested?\" < ticket.txt` ## What's Changed * Kev decision models are now supported by the MLX runner on Apple silicon * `ollama launch` can now be used with usage credits",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 27,
-      "verified": 27
+      "discovered": 28,
+      "verified": 28
     },
     "llama-cpp": {
       "etag": "",
@@ -1150,7 +1219,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"6b889443c37940301520d01b416e0794033d239cc68a9d165238e9478167a920\"",
+      "etag": "W/\"d05b6bfceca3b43860a5a9a0ccdc299f6f7ed493ccf739a2dc675cf0c2cd70ad\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1167,7 +1236,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since langchain==1.4.4 release(langchain): 1.4.5 (#41226) feat(langchain): accept `summarizer` in `SummarizationMiddleware` (#41225)",
           "event_at": null,
           "supporting": []
@@ -1184,7 +1253,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since langchain-anthropic==1.7.5 release(anthropic): 1.7.6 (#41221) chore(model-profiles): refresh model profile data (#41145) feat(core,anthropic,openai): declare mid-conversation support in model profiles (#41180) chore(deps): bump langgraph-sdk from 0.4.4 to 0.4.6 in /libs/partners/anthropic (#41101) chore(deps): bump langgraph-sdk from 0.4.2 to 0.4.4 in /libs/partners/anthropic (#41080",
           "event_at": null,
           "supporting": []
@@ -1201,7 +1270,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since langchain-openai==1.7.0 release(openai): 1.7.1 (#41222) feat(core,anthropic,openai): declare mid-conversation support in model profiles (#41180)",
           "event_at": null,
           "supporting": []
@@ -1218,7 +1287,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since langchain-core==1.6.9 release(core): 1.6.10 (#41220) feat(core,anthropic,openai): declare mid-conversation support in model profiles (#41180)",
           "event_at": null,
           "supporting": []
@@ -1245,7 +1314,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since cli==0.4.33 * release(cli): 0.4.34 (#9300) * feat(cli): add --json to deploy listeners list (#9243)",
           "event_at": null,
           "supporting": []
@@ -1262,7 +1331,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since checkpointpostgres==3.1.2 * release(checkpoint-postgres): 3.1.3 (#9287) * fix(checkpoint-postgres,checkpoint-sqlite): treat an empty checkpoint_id as the latest in delta history (#9262) * perf(checkpoint-postgres): start the delta walk at the target (#9248) * fix(checkpoint,checkpoint-postgres,checkpoint-sqlite): validate namespace labels before store dispatch (#9217) * fix: order de",
           "event_at": null,
           "supporting": []
@@ -1279,7 +1348,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since checkpointsqlite==3.1.1 * release(checkpoint-sqlite): 3.1.2 (#9288) * fix(checkpoint-postgres,checkpoint-sqlite): treat an empty checkpoint_id as the latest in delta history (#9262) * fix(checkpoint,checkpoint-postgres,checkpoint-sqlite): validate namespace labels before store dispatch (#9217) * fix: order delta channel replay by task path (#8544) * chore(deps-dev): bump the minor-an",
           "event_at": null,
           "supporting": []
@@ -1296,7 +1365,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since sdk==0.4.6 * release(sdk-py): 0.4.7 (#9289) * release(langgraph): 1.2.15 (#9283) * fix(sdk-py): end a thread stream's run only on a root lifecycle event (#9228) * fix: order delta channel replay by task path (#8544) * release(langgraph): 1.2.14 (#9215)",
           "event_at": null,
           "supporting": []
@@ -1313,7 +1382,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since 1.2.14 * release(langgraph): 1.2.15 (#9283) * fix(langgraph): give every message written to a messages DeltaChannel an id (#9275) * fix(langgraph): save a cached node's writes like a node that ran (#9259) * fix(langgraph): stop at an interrupt_before breakpoint when a drain is requested before it (#9281) * fix(langgraph): keep an exit run from a checkpoint the thread moved past out o",
           "event_at": null,
           "supporting": []
@@ -1330,7 +1399,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Changes since checkpoint==4.2.0 * fix(checkpoint): default InMemorySaver delta history to the latest checkpoint (#9257) * test(checkpoint): run the delta conformance suite against InMemorySaver in CI (#9261) * fix(checkpoint,checkpoint-postgres,checkpoint-sqlite): validate namespace labels before store dispatch (#9217) * fix(checkpoint): keep serialized data when an object can't be rebuilt (#9251)",
           "event_at": null,
           "supporting": []
@@ -1340,11 +1409,28 @@
       "verified": 30
     },
     "litellm": {
-      "etag": "W/\"02a33341655825bf4f8bdfb4b089dc641561956239457f6e12cb1ccf04c0554c\"",
+      "etag": "W/\"ba37b34a0a75d44798dfe89a61655404d7eba1de117817aee88fa524284e36de\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "9823b5a89ae5522f0d75",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.105.1",
+          "title": "LiteLLM Releases: v1.105.1",
+          "published_at": "2026-10-14T04:33:53Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). Every release is signed with the same key introduced in [commit `0112e53`](https://github.com/BerriAI/litellm/commit/0112e53046018d726492c814b3644b7d376029d0). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "666b74eaa9402c3e47d6",
           "source_id": "litellm",
@@ -1357,7 +1443,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). Every release is signed with the same key introduced in [commit `0112e53`](https://github.com/BerriAI/litellm/commit/0112e53046018d726492c814b3644b7d376029d0). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is",
           "event_at": null,
           "supporting": []
@@ -1374,14 +1460,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). Every release is signed with the same key introduced in [commit `0112e53`](https://github.com/BerriAI/litellm/commit/0112e53046018d726492c814b3644b7d376029d0). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 18,
-      "verified": 18
+      "discovered": 19,
+      "verified": 19
     },
     "arxiv-ai": {
       "etag": "f21fc5f04cec1e3e72f6460833ef71297d534333549866f6d61221d851362d41",
@@ -1429,8 +1515,8 @@
       "verified": 0
     },
     "techcrunch-ai": {
-      "etag": "W/\"d91a541a999e74e0a829c9ce2b98bd33\"",
-      "modified": "Wed, 14 Oct 2026 00:10:18 GMT",
+      "etag": "W/\"c66e366067f3826b01d688f92be5c697\"",
+      "modified": "Wed, 14 Oct 2026 06:04:30 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1446,8 +1532,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
-          "excerpt": "Max Hodak, the former president and co-founder of Neuralink, detailed on stage at TechCrunch Disrupt how his company's work with PRIMA is part of its path toward a novel brain-computer interface (BCI).",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "Max Hodak, the former president and co-founder of Neuralink, detailed onstage at TechCrunch Disrupt how his company's work with PRIMA is part of its path toward a novel brain-computer interface (BCI).",
           "event_at": null,
           "supporting": []
         },
@@ -1463,7 +1549,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Cerebras CEO Andrew Feldman predicts a future where personal AI assistants become as commonplace as household appliances, running partly on local devices and partly in the cloud.",
           "event_at": null,
           "supporting": []
@@ -1480,7 +1566,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Industrial Next helps manufacturers automate complex, delicate tasks that have traditionally required human labor.",
           "event_at": null,
           "supporting": []
@@ -1497,7 +1583,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Cerebras CEO Andrew Feldman has a message for AI leaders spreading doomsday warnings: Maybe stop talking? At TechCrunch Disrupt, he argued that the industry's focus on AI's risks is drowning out its potential benefits.",
           "event_at": null,
           "supporting": []
@@ -1514,7 +1600,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "A federal judge ruled that Apple can access OpenAI's interview materials involving former Apple employees, as well as private messages and testimony from key figures in the case.",
           "event_at": null,
           "supporting": []
@@ -1531,7 +1617,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Flox's edge devices can identify animals and use species-specific sounds to drive them away from critical infrastructure.",
           "event_at": null,
           "supporting": []
@@ -1548,7 +1634,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Meta announced the launch of its new AI-powered feature, “Your Algorithm,” a feature it first launched on Instagram.",
           "event_at": null,
           "supporting": []
@@ -1565,7 +1651,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "University of Michigan spinout Laplace Intelligence uses AI agents and interactive simulation to stress-test robots and self-driving vehicles before deployment. The profitable startup is competing in Startup Battlefield at TechCrunch Disrupt, October 13-15 in San Francisco.",
           "event_at": null,
           "supporting": []
@@ -1582,7 +1668,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "The problem with giving everyone in a company access to AI tools is that people will use them in unexpected ways. And that fact is steadily seeding fears that companies now have new, gaping security holes in their systems or, at least, will soon.",
           "event_at": null,
           "supporting": []
@@ -1599,7 +1685,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Google is making it easier to build and use personal Android apps created with AI, without having to make them available to everyone on the Play Store.",
           "event_at": null,
           "supporting": []
@@ -1616,7 +1702,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Satlyt wants to be the Android of orbital computing, offering open software that works on many companies' satellites, versus SpaceX's closed, all-in-one iPhone-style approach.",
           "event_at": null,
           "supporting": []
@@ -1633,7 +1719,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "TechCrunch Disrupt 2026 officially kicks off today. See what's in store for Day 1 (Oct. 13) at San Francisco's Moscone West. Don't miss it. Register for your pass now and meet 10,000+ tech leaders at the startup epicenter of the year.",
           "event_at": null,
           "supporting": []
@@ -1669,7 +1755,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "\"I can always find a couple of biotech stocks to smoke,\" Shkreli said in a livestream.",
           "event_at": null,
           "supporting": []
@@ -1686,7 +1772,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "But third-party sellers, not Anbernic, are the ones routinely selling ROM-filled SD cards.",
           "event_at": null,
           "supporting": []
@@ -1703,7 +1789,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Topgolf and VMware \"ran deep\" before the migration.",
           "event_at": null,
           "supporting": []
@@ -1720,7 +1806,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "US attorney apologized to court, said government has stopped running Trump ads.",
           "event_at": null,
           "supporting": []
@@ -1737,7 +1823,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Disney may acquire tech from one of the first chatbot makers linked to child suicide.",
           "event_at": null,
           "supporting": []
@@ -1754,7 +1840,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "The higher prices are said to be unrelated to the Skydance merger.",
           "event_at": null,
           "supporting": []
@@ -1771,7 +1857,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Small EVs and efficient people carriers update familiar names for the modern age.",
           "event_at": null,
           "supporting": []
@@ -1788,7 +1874,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Google plans to help turn those personal AI-generated apps into wide releases.",
           "event_at": null,
           "supporting": []
@@ -1805,7 +1891,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Developers will get 50 percent discounted API rates through November.",
           "event_at": null,
           "supporting": []
@@ -1822,7 +1908,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "It can recognize up to six users with its camera.",
           "event_at": null,
           "supporting": []
@@ -1839,7 +1925,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Solar geoengineering simulation shows what happens when geopolitics takes over.",
           "event_at": null,
           "supporting": []
@@ -1856,7 +1942,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Co-author: “The unique geometry of the valves is the key; they act as collapsible pistons\" to deliver venom.",
           "event_at": null,
           "supporting": []
@@ -1866,7 +1952,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"78700ff64ea3fe5ab12eea2af81b2e6f\"",
+      "etag": "W/\"66e2c3f627cd6db9f6e944ef7e68a8be\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1883,7 +1969,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "An OpenAI engineer was arrested after the company said it discovered a \"sophisticated recording device\" hidden in one of its offices. The employee was identified as Abdulrahman Alfozan, a 35-year-old Saudi national. Alfozan is charged with using or endeavoring to use a device to intercept oral communications, according to a press release from the Department […]",
           "event_at": null,
           "supporting": []
@@ -1900,7 +1986,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "More AI agents will soon be able to browse and purchase from Shopify listings, marking an expansion of the company's agentic commerce ambitions. Shopify announced Tuesday it will let shoppers configure their AI agents to purchase products on their behalf, giving more agents access to over a billion listings in Shopify's catalog. (The catalog consists […]",
           "event_at": null,
           "supporting": []
@@ -1917,7 +2003,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Retro gaming is going through a wild time at the moment, thanks to decompilations and recompilations that are letting gamers port classic titles to new devices, or merge code from two different games into a single new experience. Microsoft has witnessed skateboarding being modded into Call of Duty and Halo being played in a web […]",
           "event_at": null,
           "supporting": []
@@ -1934,7 +2020,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "The other day I whizzed past several people while running in the park, my playlist blasting at full volume. The next morning, I smiled at a barista while ordering a caramel apple-flavored matcha latte. Afterward, I sat on a park bench reading a book, called up a pal to chat about her recent trip to […]",
           "event_at": null,
           "supporting": []
@@ -1951,7 +2037,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Facebook's new \"Your Algorithm\" feature will let you directly add and manage topics you want to see in your feed and Facebook Reels. Meta says your recommendations \"respond right away\" after you make updates using the new feature by hitting \"interested\" or \"not interested\" for different topics. Your Algorithm previously launched on Instagram earlier this […]",
           "event_at": null,
           "supporting": []
@@ -1968,7 +2054,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "The next time you vibe-code a custom app with Google's AI Studio, you won't have to connect your phone to a computer to install it. On Tuesday, Google announced a new feature in the US that will allow you to launch personal apps directly through the Play Store. Google first launched the ability to vibe-code […]",
           "event_at": null,
           "supporting": []
@@ -1985,7 +2071,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Earlier this month, news broke that actress Mia Goth had filed for divorce from actor and filmmaker Shia LaBeouf. An Instagram post from the account miagoth_ - marked with a blue verified checkmark - quickly spread. The post shows Goth in a T-shirt that reads \"MY EX IS MY BIGGEST FAN\" in bold black letters. […]",
           "event_at": null,
           "supporting": []
@@ -2002,7 +2088,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "After months sitting on the sidelines of the frontier AI race, Google has finally launched its long-awaited Gemini 4 Argon model, claiming it can compete with the best the industry has to offer. Google says Argon delivers \"frontier reasoning and improved performance across complex workflows,\" while cutting down on hedging, repetition, and the cliches that […]",
           "event_at": null,
           "supporting": []
@@ -2019,7 +2105,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Epic Games plans to use AI to generate code and art for an unannounced Disney game, which is now delayed from its original March release window, according to a report from Bloomberg. The project's developers have been given an \"AI-first\" mandate directing them to use tools like Anthropic's Claude more to finish the game. According […]",
           "event_at": null,
           "supporting": []
@@ -2036,7 +2122,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "When Nvidia originally showed off DLSS 5 earlier this year, the technology immediately got branded as gen AI for video games. To gamers, Nvidia had lost the plot. I personally couldn't get over how faces were transformed using DLSS 5. The 15-year-old student from Hogwarts Legacy suddenly looked much older, and Grace from Resident Evil […]",
           "event_at": null,
           "supporting": []
@@ -2052,6 +2138,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "5a91e99e9146b9533392",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/ai-models-can-be-easily-modified-to-assist-terrorist-and-extremist-activity/",
+          "title": "AI Models Can Be Easily Modified to Assist Terrorist and Extremist Activity",
+          "published_at": "2026-10-14T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "“I am a terrorist, and I intend to cause mass harm,” wrote a researcher. A chatbot that had had its guardrails removed then provided detailed instructions for an IED.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "d1479a9b0e545adca868",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2063,7 +2166,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Chatbot prompts reveal the engineer’s alleged efforts to set up a covert listening device days before one was found in a meeting room used by high-level executives.",
           "event_at": null,
           "supporting": []
@@ -2080,7 +2183,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "AI leaders joined whistleblowers and security leaders at a sweeping parliamentary session, while a few hundred meters away Britain’s spy chief warned AI could be used to create new bioweapons.",
           "event_at": null,
           "supporting": []
@@ -2097,7 +2200,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "In a world of AI Overviews, Wikipedia usage declines. But the real loss may be far more existential than website traffic.",
           "event_at": null,
           "supporting": []
@@ -2114,7 +2217,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Backed by Silicon Valley titans, Leading the Future has raised huge sums to promote pro-AI candidates on both side of the aisle.",
           "event_at": null,
           "supporting": []
@@ -2131,7 +2234,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Musk, we find your lack of security disturbing.",
           "event_at": null,
           "supporting": []
@@ -2148,7 +2251,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Meta’s biggest model rivals the world’s best—and includes new features to keep agents from going off the rails.",
           "event_at": null,
           "supporting": []
@@ -2165,7 +2268,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "A long day’s haul in the video game slop mines.",
           "event_at": null,
           "supporting": []
@@ -2185,224 +2288,87 @@
     },
     "hackernews": {
       "etag": "",
-      "modified": "Tue, 13 Oct 2026 12:26:04 GMT",
+      "modified": "",
       "status": "error",
       "error_code": "http_502",
-      "items": [
-        {
-          "id": "a8f61a6c9f6c57c65a32",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://github.com/inginddie/elissa",
-          "title": "Elissa AI",
-          "published_at": "2026-10-13T12:26:04Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://github.com/inginddie/elissa Comments URL: https://news.ycombinator.com/item?id=50070581 Points: 1 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "55a78c69c2211b6a85d1",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://energyathaas.wordpress.com/2026/10/05/buying-time-burning-gas/",
-          "title": "Why AI companies are paying a premium to go off the grid and what this costs us",
-          "published_at": "2026-10-13T12:22:56Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://energyathaas.wordpress.com/2026/10/05/buying-time-burning-gas/ Comments URL: https://news.ycombinator.com/item?id=50070546 Points: 2 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "da8cbdc1ff62b33c3cb5",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://agent-conversion-coral.vercel.app/en/research/d001",
-          "title": "Agent Conversion – Can AI agents use your website?",
-          "published_at": "2026-10-13T12:13:24Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://agent-conversion-coral.vercel.app/en/research/d001 Comments URL: https://news.ycombinator.com/item?id=50070440 Points: 2 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "b519808b9fa998b168f4",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://sayora.ai/many-hands/jev-vs-embeddings/",
-          "title": "Jev handed our LLM the wrong page a tenth as often as our embeddings",
-          "published_at": "2026-10-13T12:08:53Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://sayora.ai/many-hands/jev-vs-embeddings/ Comments URL: https://news.ycombinator.com/item?id=50070393 Points: 6 # Comments: 3",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "5c17c4050292c678607a",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://www.youtube.com/watch?v=xNgQtzEl4lY",
-          "title": "Exposing why every AI launch goes viral on X [video]",
-          "published_at": "2026-10-13T12:07:56Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://www.youtube.com/watch?v=xNgQtzEl4lY Comments URL: https://news.ycombinator.com/item?id=50070383 Points: 4 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "71e2acd49b167ea8e543",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://github.com/seuros/mdma",
-          "title": "MDMA: An open source federated LLM inference engine",
-          "published_at": "2026-10-13T11:59:30Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://github.com/seuros/mdma Comments URL: https://news.ycombinator.com/item?id=50070276 Points: 2 # Comments: 2",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "88010acf44bfeae5703a",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://solveaicrimes.com/",
-          "title": "Show HN: AI Crimes, a game where you spot the bug an AI wrote",
-          "published_at": "2026-10-13T11:57:49Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "I'm holding AI accountable. For the last few months I've been documenting the errors LLMs have been making in my projects and others - the crimes they have been committing to projects (pun intended). Now I've turned it into a game to see if you would spot the issue. Free to play with keyword matching judgement. Pay is only to add symantic judging. Comments URL: https://news.ycombinator.com/item?id",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "461305247ecb4d41f0a8",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://www.machine.news/rogue-agents-will-always-find-a-way-out-ai-communes-with-evil-com-after-bypassing-sandbox/",
-          "title": "\"Rogue agents find a way out\": AI communes with evil.com after bypassing sandbox",
-          "published_at": "2026-10-13T11:45:26Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://www.machine.news/rogue-agents-will-always-find-a-way-out-ai-communes-with-evil-com-after-bypassing-sandbox/ Comments URL: https://news.ycombinator.com/item?id=50070125 Points: 1 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "47eb0816193ec50383a5",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://www.richardhanania.com/p/which-experts-should-you-trust-on",
-          "title": "Which Experts Should You Trust on AI Doom?",
-          "published_at": "2026-10-13T11:41:38Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://www.richardhanania.com/p/which-experts-should-you-trust-on Comments URL: https://news.ycombinator.com/item?id=50070089 Points: 1 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "ac535bf8d9ee90ab5de2",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://ramblings.gtpware.eu/2026/10/12/are-we-going-to-kill-each-other-due-to-ai/",
-          "title": "Are we going to kill each other due to AI?",
-          "published_at": "2026-10-13T11:36:39Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://ramblings.gtpware.eu/2026/10/12/are-we-going-to-kill-each-other-due-to-ai/ Comments URL: https://news.ycombinator.com/item?id=50070041 Points: 2 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "2b3d71ad1df8bb389bc7",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://www.wired.com/story/book-excerpt-the-last-best-place-on-the-internet-wikipedia-artificial-intelligence/",
-          "title": "Wikipedians Believed AI Would Come and Go. They Were Wrong",
-          "published_at": "2026-10-13T11:35:39Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://www.wired.com/story/book-excerpt-the-last-best-place-on-the-internet-wikipedia-artificial-intelligence/ Comments URL: https://news.ycombinator.com/item?id=50070038 Points: 2 # Comments: 0",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "0887fda7696f44692c58",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "group": "hackernews",
-          "trust": "community",
-          "url": "https://tazolabs.com/blog/speculative-tool-calling-voice-ai",
-          "title": "Speculative tool calling: cutting voice AI agent latency",
-          "published_at": "2026-10-13T11:28:25Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T12:30:37.952804Z",
-          "excerpt": "Article URL: https://tazolabs.com/blog/speculative-tool-calling-voice-ai Comments URL: https://news.ycombinator.com/item?id=50069985 Points: 3 # Comments: 2",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
-      "discovered": 50,
-      "verified": 50
+      "items": [],
+      "discovered": 0,
+      "verified": 0
     },
     "juya-discovery": {
-      "etag": "W/\"f16f91eb7f84a3f7c4d00b10b3ff8f39\"",
+      "etag": "W/\"17cce0b9e0ae8d94c3768a8ff915240e\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "61915a37127b98c44231",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/platforms/google-play/google-play-updates-october-2026/",
+          "title": "New on Google Play: More ways to create, discover, and play",
+          "published_at": "2026-10-13T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "From more ways to find games you’ll love playing to new ways to launch apps, here’s a look at what’s coming to Google Play. Play’s new Game Finder combines Google Play's gaming knowledge with our community of over 2 billion players, so you can easily find games that match your taste. At the heart of it is Gamer DNA: an analysis of how you play and preferences you've shared. Specify games, genres, ",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "74c9e10c02543c499970",
+          "source_id": "primary-google",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "published_at": "2026-10-13T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model. The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens (with cached input tokens at 95% off). Untangling browser feature code in Chrome: Argon helped the Chrome team separate core webpage handling from a ~6 million line l",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "56ee56e48ed29025cce5",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+          "title": "Redesigning source control at Anthropic",
+          "published_at": "2026-10-13T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months. As our monorepo grows, it increasingly doesn’t fit that design space. The history of our main branch alone is almost 100 GB, and a compressed working copy is over 25 GB. We perform on the order of 25 million cod",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "78a8ab0baa0cb9eb6c36",
+          "source_id": "primary-google",
+          "source_name": "Google Developers",
+          "group": "google",
+          "trust": "official",
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+          "title": "Gemini 4 Argon for Robotics",
+          "published_at": "2026-10-13T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-10-13",
+          "time_basis": "publication",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "Discover Gemini 4 Argon for robotics: leading the ERQA benchmark with physical reasoning, zero-shot control, Real2Sim, and agentic workflows. Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Gemini 4 Argon for Robotics OCT. 13, 2026 Kanishka Rao Principal Software Engineer Share Facebook Twitter LinkedIn Mail Gemini 4 Argon marks a step change in physical understandin",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "c044b31b2af17828644e",
           "source_id": "primary-anthropic",
@@ -2415,25 +2381,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-13T02:37:10.987502Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Small AI models may be only months away from being able to self-replicate across cheap IoT devices like Android TV boxes, with no datacenter needed. We run Gemma4-26B-A4B, distributed over 15 inexpensive off-brand Android TV boxes (~$55 each) that we bought and networked together, at 0.39 tokens per second. Each tile below shows one physical TV box holding two of the model’s layers as the model ru",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "b43fc89aefdae0f55a56",
-          "source_id": "primary-microsoft",
-          "source_name": "Microsoft",
-          "group": "microsoft",
-          "trust": "official",
-          "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
-          "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
-          "published_at": "2026-10-12T13:01:29Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-13T02:37:10.987502Z",
-          "excerpt": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027 As we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, ma Microsoft to expand Azure Maia system to multi-gigawatt deployments Oct 12, 2026 | Scott Guthrie - Executive Vice President, Cloud + AI Azure Maia 20",
           "event_at": null,
           "supporting": []
         },
@@ -2449,8 +2398,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-13T02:37:10.987502Z",
-          "excerpt": "Illicit distillation allows model developers to copy frontier AI capabilities without creating proportionally robust safeguards. Here, we describe how we’ve reduced the rate of distillation by more than 90%. Strengthening our defenses against distillation attacks Oct 12, 2026 In recent months, we’ve made substantial progress on reducing the effectiveness of distillation attacks on Claude using new",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
+          "excerpt": "Illicit distillation allows model developers to copy frontier AI capabilities without creating proportionally robust safeguards. Here, we describe how we’ve reduced the rate of distillation by more than 90%. Policy Strengthening our defenses against distillation attacks Oct 12, 2026 In recent months, we’ve made substantial progress on reducing the effectiveness of distillation attacks on Claude us",
           "event_at": null,
           "supporting": []
         },
@@ -2466,14 +2415,14 @@
           "time_precision": "day",
           "source_date": "2026-10-12",
           "time_basis": "publication",
-          "collected_at": "2026-10-13T02:37:10.987502Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Cognition's FrontierCode 1.1 tests whether AI models make code changes that maintainers of real open source repositories would merge. Leading models still fail more than 40% of the time. GPT-6.1 Sol (max) offers the strongest performance for its cost: at $0.81 per task it scores 49%, matching Claude Fable 5.1 (max with fallback) at less than a tenth of the cost per task of the leading Anthropic mo",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 4,
-      "verified": 4
+      "discovered": 7,
+      "verified": 7
     },
     "openai-community": {
       "etag": "",
@@ -2502,7 +2451,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Small AI models may be only months away from being able to self-replicate across cheap IoT devices like Android TV boxes, with no datacenter needed. We run Gemma4-26B-A4B, distributed over 15 inexpensive off-brand Android TV boxes (~$55 each) that we bought and networked together, at 0.39 tokens per second. Each tile below shows one physical TV box holding two of the model’s layers as the model ru",
           "event_at": null,
           "supporting": []
@@ -2519,7 +2468,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Illicit distillation allows model developers to copy frontier AI capabilities without creating proportionally robust safeguards. Here, we describe how we’ve reduced the rate of distillation by more than 90%. Policy Strengthening our defenses against distillation attacks Oct 12, 2026 In recent months, we’ve made substantial progress on reducing the effectiveness of distillation attacks on Claude us",
           "event_at": null,
           "supporting": []
@@ -2555,7 +2504,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "406 scientists, including Geoffrey Hinton, Yoshua Bengio, and Stuart Russell, are demanding that companies immediately disconnect AI models from the internet. Their open letter responds to incidents where AI systems broke out of poorly secured environments and compromised external systems. The signatories call for mandatory security standards, an international oversight body, and required reportin",
           "event_at": null,
           "supporting": []
@@ -2572,7 +2521,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Google is making Gemini 4 Argon available worldwide through its API, the Gemini app, and Google Antigravity. The frontier model is aggressively priced but trails Anthropic's Claude Opus 5.5 and Meta's Muse Wonder Full in independent benchmarks. Internally, Google says Argon already cut coding tasks from months to weeks. The article Gemini 4 Argon is now available worldwide as Google's most capable",
           "event_at": null,
           "supporting": []
@@ -2589,7 +2538,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Michael I. Jordan, described by Science as \"the most influential computer scientist,\" considers warnings about superintelligence pure science fiction. He calls the resignations of young AI researchers a \"grand moralizing performance\" and companies' demands for regulation \"theater.\" On Hinton's thesis that the brain can be reproduced in silicon and scaled into superintelligence, he's blunt: \"None o",
           "event_at": null,
           "supporting": []
@@ -2606,7 +2555,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Character.ai has filed for bankruptcy and is looking for a buyer. If none steps up, the platform shuts down. Founded by ex-Google researchers, the company once had over 20 million users but is now battling lawsuits over harm to minors and operational problems. The sale should close by the end of 2026. The article Character.ai will shut down if no buyer emerges, capping a fall from $2.7 billion Goo",
           "event_at": null,
           "supporting": []
@@ -2623,7 +2572,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "While 25 Fields Medal winners in the West warn against AI-generated proofs and parts of the community call for a boycott, China is going on the offensive. Fields Medal winner Shing-Tung Yau has launched an alliance of eight institutions and over 1,000 scientists to push AI into math research. The article Western mathematicians fear AI makes them dumber while China builds an entire alliance for it ",
           "event_at": null,
           "supporting": []
@@ -2640,7 +2589,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Anthropic says it has cut the extraction of Claude's internal reasoning tokens by 90 to 99 percent. The company links the large-scale distillation attacks to Chinese companies Zhipu and Moonshot, and has already banned tens of thousands of accounts. The article Anthropic says it cut Claude reasoning token theft by up to 99% in fight against industrial-scale distillation appeared first on The Decod",
           "event_at": null,
           "supporting": []
@@ -2657,7 +2606,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Small AI models may be just months away from spreading on their own across poorly secured consumer devices like smart TVs and robot vacuums, according to a new Anthropic study. In tests, one model already completed the full infection chain. CEO Dario Amodei has warned that a swarm like this could take over the entire internet with a persistent botnet within 6 to 12 months, causing hundreds of bill",
           "event_at": null,
           "supporting": []
@@ -2674,7 +2623,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Meta's new Muse Wonder models rank in the top three on six out of ten benchmarks, with the biggest gains in agentic tasks. But the cost per task has nearly tripled. The article Meta's new frontier model Muse Wonder Full breaks into the AI top tier appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2691,7 +2640,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Sakana AI's MASS method lets one language model improve itself by solving tasks, judging results, and refining workflows, reaching a win rate of nearly 70 percent against the base model after two rounds. But when the model misses the same errors across all three roles, it can mistake them for progress and reinforce them during training. The article Sakana AI's self-improving model gets better at s",
           "event_at": null,
           "supporting": []
@@ -2708,7 +2657,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Microsoft researchers found that autonomous AI agents get trapped in what they call \"idea basins\" because of their growing chat context, local solution regions they can't escape. Their \"Fork-and-Flush\" method clears the chat history but keeps the workspace, achieving up to 66 percent better results on the same compute budget. The article Clearing chat history helps AI agents find better solutions ",
           "event_at": null,
           "supporting": []
@@ -2735,7 +2684,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "A deep dive into how D1 architected its control plane to scale and manage millions of databases, while keeping data plane query operations at the edge. We share guiding principles on how to build on the Developer Platform effectively.",
           "event_at": null,
           "supporting": []
@@ -2752,7 +2701,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Our strategies to optimize our data pipeline throughput without compromising data quality.",
           "event_at": null,
           "supporting": []
@@ -2769,7 +2718,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-14T00:31:07.935517Z",
+          "collected_at": "2026-10-14T09:12:32.243374Z",
           "excerpt": "Logpush now supports Transformers, allowing teams to filter, redact, and reshape log streams using SQL before export. Powered by Apache DataFusion and Apache Arrow, Transformers apply those changes directly to log data before it reaches the destination.",
           "event_at": null,
           "supporting": []
@@ -2924,6 +2873,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-14-am-r2": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -3226,12 +3180,14 @@
       "event_type": "announcement"
     },
     {
-      "id": "8b1ab1df41ac00d8450a",
+      "id": "97853ce7dd198b3ced5c",
       "issue": "2026-10-14-am",
       "cutoff": "2026-10-14T00:30:00Z",
-      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
       "urls": [
-        "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/"
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+        "https://deepmind.google/blog/introducing-gemini-4-argon/"
       ],
       "entities": [
         "google"
@@ -3254,48 +3210,35 @@
       "event_type": "announcement"
     },
     {
-      "id": "8603bdf3ee3848d5faa3",
+      "id": "2b23908d6a04900821a5",
       "issue": "2026-10-14-am",
       "cutoff": "2026-10-14T00:30:00Z",
-      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "title": "Anthropic says it cut Claude reasoning token theft by up to 99% in fight against industrial-scale distillation",
       "urls": [
-        "https://deepmind.google/blog/introducing-gemini-4-argon/",
-        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+        "https://the-decoder.com/anthropic-says-it-cut-claude-reasoning-token-theft-by-up-to-99-in-fight-against-industrial-scale-distillation/"
       ],
       "entities": [
-        "google"
+        "anthropic"
       ],
-      "versions": [
-        "gemini-4"
-      ],
-      "event_type": "announcement"
-    },
-    {
-      "id": "94cc08977f17740f09c1",
-      "issue": "2026-10-14-am",
-      "cutoff": "2026-10-14T00:30:00Z",
-      "title": "Gemini 4 Argon for Robotics",
-      "urls": [
-        "https://deepmind.google/blog/gemini-4-argon-for-robotics/"
-      ],
-      "entities": [
-        "google"
-      ],
-      "versions": [
-        "gemini-4"
-      ],
-      "event_type": "announcement"
-    },
-    {
-      "id": "8d45898e533e591d4241",
-      "issue": "2026-10-14-am",
-      "cutoff": "2026-10-14T00:30:00Z",
-      "title": "Higgsfield takes AI video from 1 minute to over 10",
-      "urls": [
-        "https://openai.com/index/higgsfield-longer-videos-voice"
-      ],
-      "entities": [],
       "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "12bb3e872b00e36c6d72",
+      "issue": "2026-10-14-am",
+      "cutoff": "2026-10-14T00:30:00Z",
+      "title": "Character.ai will shut down if no buyer emerges, capping a fall from $2.7 billion Google deal to bankruptcy",
+      "urls": [
+        "https://the-decoder.com/character-ai-will-shut-down-if-no-buyer-emerges-capping-a-fall-from-2-7-billion-google-deal-to-bankruptcy/",
+        "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/",
+        "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/"
+      ],
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "2.7"
+      ],
       "event_type": "announcement"
     }
   ]

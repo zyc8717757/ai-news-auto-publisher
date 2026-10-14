@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-14-am",
+  "revision": 2,
+  "created_at": "2026-10-14T09:12:32.243374Z",
+  "cutoff": "2026-10-14T00:30:00Z",
+  "window_start": "2026-10-12T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "97853ce7dd198b3ced5c",
+      "title": "Gemini 4 Argon发布：物理推理表现领先",
+      "summary": "该公司称，推出Gemini 4 Argon模型，旨在解决高难度物理与空间问题。在具身推理基准测试中，纯推理得分达到87%，在同类前沿模型中表现领先，有望加速物理通用人工智能的进展。",
+      "impact": "提升了AI模型在三维物理环境和机器人控制中的理解与推理能力。",
+      "category": "模型",
+      "score": 74.75,
+      "sources": [
+        {
+          "id": "74c9e10c02543c499970",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "published_at": "2026-10-13T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "78a8ab0baa0cb9eb6c36",
+          "source_id": "primary-google",
+          "source_name": "Google Developers",
+          "group": "google",
+          "trust": "official",
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+          "title": "Gemini 4 Argon for Robotics",
+          "published_at": "2026-10-13T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-10-13",
+          "time_basis": "publication"
+        },
+        {
+          "id": "851107eacfc8ba0f286d",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "published_at": "2026-10-13T16:01:52Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 基准测试结果由该公司称，实际各场景综合表现有待第三方进一步验证。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google DeepMind官方发布面向机器人的Gemini 4 Argon模型，物理推理能力表现突出。",
+      "backfill": false
+    },
+    {
+      "id": "53911f98c21c784fce1a",
+      "title": "LFM2.5-24B-A2B端侧智能体发布",
+      "summary": "该公司推出了LFM2.5-24B-A2B，旨在支持在设备本地运行快速且具隐私保护的智能体应用。",
+      "impact": "为端侧设备部署智能体提供了新的模型选项。",
+      "category": "模型",
+      "score": 71.98,
+      "sources": [
+        {
+          "id": "53911f98c21c784fce1a",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+          "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+          "published_at": "2026-10-13T17:05:48Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 输入未提供详细性能参数与具体技术细节。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Hugging Face推出可在终端运行的私有化代理模型LFM2.5-24B-A2B。",
+      "backfill": false
+    },
+    {
+      "id": "2b23908d6a04900821a5",
+      "title": "Anthropic称成功减少Claude推理token窃取",
+      "summary": "媒体报道称，Anthropic表示通过打击工业级蒸馏，已将Claude内部推理token的提取减少了90%到99%，并将大规模蒸馏攻击关联至智谱与月之暗面等中国公司，目前已封禁数万个账号。",
+      "impact": "加强了对大模型推理资产和内部数据蒸馏的防御保护。",
+      "category": "安全",
+      "score": 60.57,
+      "sources": [
+        {
+          "id": "2b23908d6a04900821a5",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-says-it-cut-claude-reasoning-token-theft-by-up-to-99-in-fight-against-industrial-scale-distillation/",
+          "title": "Anthropic says it cut Claude reasoning token theft by up to 99% in fight against industrial-scale distillation",
+          "published_at": "2026-10-13T11:06:46Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "数据和攻击来源归属基于该公司说法，未经独立证实。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic表示通过打击工业级蒸馏将其Claude推理token窃取减少高达99%，并指出涉及智谱和Kimi(Moonshot)，安全与合规影响重大。",
+      "backfill": false
+    },
+    {
+      "id": "12bb3e872b00e36c6d72",
+      "title": "Character.ai申请破产并寻求收购，迪士尼拟出资收购",
+      "summary": "媒体报道称，交互式聊天机器人平台Character.ai已申请破产并寻找买家，若无买家将面临关停。同时，迪士尼拟以2000万美元收购其部分技术资产。该平台此前曾面临未成年人伤害诉讼及运营问题。",
+      "impact": "标志着早期热门聊天机器人初创企业面临重大财务困境与业务重组。",
+      "category": "商业",
+      "score": 62.12,
+      "sources": [
+        {
+          "id": "12bb3e872b00e36c6d72",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/character-ai-will-shut-down-if-no-buyer-emerges-capping-a-fall-from-2-7-billion-google-deal-to-bankruptcy/",
+          "title": "Character.ai will shut down if no buyer emerges, capping a fall from $2.7 billion Google deal to bankruptcy",
+          "published_at": "2026-10-13T15:27:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "9452f98968f0cc709cd5",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/",
+          "title": "Disney offers $20M for Character.AI’s scandal-plagued chatbot tech",
+          "published_at": "2026-10-13T18:23:33Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "b2fa807e4b0dbdf2380f",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/",
+          "title": "Just 5 years in, interactive chatbot platform Character.AI files for bankruptcy",
+          "published_at": "2026-10-13T12:23:42Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "交易最终能否完成及最终资产去向仍存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "2.7"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Character.ai申请破产并寻找买家，若无接盘将面临关闭，标志着早期明星大模型公司的重大挫折。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
