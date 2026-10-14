@@ -7,7 +7,14 @@ from typing import Literal
 
 from pydantic import Field
 
-from .ai import AIUnavailable, Enhancer, json_output, provider_failure, validate_response
+from .ai import (
+    AIUnavailable,
+    Enhancer,
+    json_output,
+    provider_failure,
+    transient_provider_error,
+    validate_response,
+)
 from .diagnostics import provider_error_details
 from .models import AIResponse, AIStory, StrictModel
 from .quantities import claim_clause, numeric_spans, source_passages, validate_anchors
@@ -38,6 +45,45 @@ class Merge(StrictModel):
 class Ranking(StrictModel):
     ordered_ids: list[str] = Field(max_length=15)
     merges: list[Merge] = Field(default_factory=list, max_length=15)
+
+
+def validate_ranking(ranking: Ranking, candidates) -> None:
+    ordered = ranking.ordered_ids
+    if len(set(ordered)) != len(ordered) or not set(ordered) <= set(candidates):
+        print(
+            json.dumps(
+                {
+                    "status": "editorial_rank_diagnostic",
+                    "allowed": len(candidates),
+                    "ordered": len(ordered),
+                    "unknown": len(set(ordered) - set(candidates)),
+                    "duplicates": len(ordered) - len(set(ordered)),
+                }
+            )
+        )
+        raise ValueError("Ranking ordered IDs invalid")
+    consumed = set()
+    for merge in ranking.merges:
+        ids = [merge.keep_id, *merge.other_ids]
+        if (
+            merge.keep_id not in ordered
+            or len(ids) != len(set(ids))
+            or not set(ids) <= set(candidates)
+            or set(ids) & consumed
+            or set(merge.other_ids) & set(ordered)
+        ):
+            raise ValueError("Ranking merge IDs invalid")
+        members = [candidates[key] for key in ids]
+        versions = [set(e.versions) for e in members if e.versions]
+        entities = [set(e.entities) for e in members if e.entities]
+        if (
+            versions
+            and any(v != versions[0] for v in versions)
+            or entities
+            and not set.intersection(*entities)
+        ):
+            raise ValueError("Ranking merge evidence conflict")
+        consumed.update(ids)
 
 
 class Review(StrictModel):
@@ -314,23 +360,40 @@ class EditorialEnhancer(Enhancer):
         prompt += "\n只返回JSON，不要代码围栏。输入：" + json.dumps(data, ensure_ascii=False)
         transient = repair = 0
         while True:
-            self.budget.reserve(len(prompt.encode("utf-8")) + output_limit, model=self.settings.model)
+            model = self.used_model
             try:
-                text = self.generate_text(client, self.settings.model, prompt, output_limit)
+                self.budget.reserve(len(prompt.encode("utf-8")) + output_limit, model=model)
+            except AIUnavailable as exc:
+                self.audit(model, "budget_blocked", str(exc))
+                raise
+            try:
+                text = self.generate_text(client, model, prompt, output_limit)
             except Exception as exc:
-                self.audit(self.settings.model, "provider_error", provider_failure(exc))
-                print(json.dumps({"status": "ai_provider_diagnostic", **provider_error_details(exc)}))
-                code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
-                if code in {429, 503} and transient < 1:
+                self.audit(model, "provider_error", provider_failure(exc))
+                print(
+                    json.dumps(
+                        {
+                            "status": "ai_provider_diagnostic",
+                            "phase": phase,
+                            "model": model,
+                            **provider_error_details(exc),
+                        }
+                    )
+                )
+                if transient_provider_error(exc) and transient < 2:
                     transient += 1
-                    self.budget.sleep(4)
+                    # Keep the successful backup across phases; don't return each
+                    # phase to an overloaded primary. Every attempt reserves budget.
+                    if model == self.settings.model:
+                        self.used_model = self.settings.backup_model
+                    self.budget.sleep(2**transient)
                     continue
                 raise AIUnavailable(provider_failure(exc)) from None
             try:
                 result = schema.model_validate_json(json_output(text))
                 if validator:
                     validator(result)
-                self.audit(self.settings.model, "accepted", "editorial_" + phase)
+                self.audit(model, "accepted", "editorial_" + phase)
                 return result
             except ValueError as exc:
                 errors = getattr(exc, "errors", lambda **k: [])(
@@ -347,6 +410,9 @@ class EditorialEnhancer(Enhancer):
                     "Numeric claim missing semantic audit": "numeric_audit_incomplete",
                     "Review approval inconsistent": "review_approval_inconsistent",
                     "Mainland translation terminology mismatch": "translation_terminology_mismatch",
+                    "Ranking ordered IDs invalid": "ranking_order_ids_invalid",
+                    "Ranking merge IDs invalid": "ranking_merge_ids_invalid",
+                    "Ranking merge evidence conflict": "ranking_merge_conflict",
                 }.get(str(exc), "ai_output_validation_failed")
                 print(
                     json.dumps(
@@ -360,7 +426,7 @@ class EditorialEnhancer(Enhancer):
                         }
                     )
                 )
-                self.audit(self.settings.model, "output_rejected", safe_reason)
+                self.audit(model, "output_rejected", safe_reason)
                 if repair:
                     raise AIUnavailable("ai_output_invalid") from None
                 repair += 1
@@ -373,6 +439,10 @@ class EditorialEnhancer(Enhancer):
                         + safe_reason
                         + "。请修正对应文字或引文，引用必须来自该事件已引用证据的连续原文，numeric_checks必须覆盖最终每个字段的全部数字。不能只写approved=true。"
                     )
+                if phase == "rank":
+                    prompt += "\n排序校验失败：" + safe_reason
+                    prompt += "。ordered_ids仅能使用候选最外层event_id且不得重复；合并成员不能同时进入ordered_ids，不能跨产品或版本。允许省略低重要性条目。可用事件ID："
+                    prompt += json.dumps([c["event_id"] for c in data["candidates"]])
 
     def edit(self, events, cutoff, recent_counts=None):
         import os
@@ -476,6 +546,7 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
             Ranking,
             "rank",
             3000,
+            validator=lambda result: validate_ranking(result, {key: by_id[key] for key in decisions}),
         )
         ordered = ranking.ordered_ids
         if len(set(ordered)) != len(ordered) or not set(ordered) <= set(decisions):
@@ -563,6 +634,7 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
         for offset in range(0, len(chosen), 5):
             # Reuse the existing validated summary path and the SAME persistent budget.
             summarizer = Enhancer(self.settings, self.store, client=client, budget=self.budget)
+            summarizer.used_model = self.used_model
             try:
                 response = summarizer.enhance(chosen[offset : offset + 5], allow_partial=True)
             except AIUnavailable as exc:
@@ -570,6 +642,8 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
                     raise
                 # A malformed batch must not discard other independently checked batches.
                 continue
+            finally:
+                self.used_model = summarizer.used_model
             summaries.extend(response.stories)
         summarized = {s.event_id for s in summaries}
         for event in chosen:

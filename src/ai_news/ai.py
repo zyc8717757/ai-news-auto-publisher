@@ -8,6 +8,7 @@ from datetime import UTC, datetime, timedelta
 from typing import Callable
 from zoneinfo import ZoneInfo
 
+import httpx
 from google import genai
 from google.genai import types
 
@@ -41,6 +42,13 @@ PROMPT += "\n只输出JSON，不要Markdown代码围栏。JSON结构：\n" + jso
 
 class AIUnavailable(RuntimeError):
     pass
+
+
+def transient_provider_error(exc: Exception) -> bool:
+    code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
+    return code in {429, 500, 502, 503, 504} or isinstance(
+        exc, (httpx.TimeoutException, httpx.NetworkError, TimeoutError, ConnectionError)
+    )
 
 
 def json_output(text: str) -> str:
@@ -167,6 +175,10 @@ class Budget:
             # Upgrade old ledgers conservatively; don't reset already consumed calls during testing.
             state.ai_issue_attempts[self.issue] = len(state.ai_attempts)
         state.ai_attempts = [t for t in state.ai_attempts if t > now - timedelta(hours=48)]
+        state.ai_model_attempts = {
+            name: [t for t in times if t > now - timedelta(hours=48)]
+            for name, times in state.ai_model_attempts.items()
+        }
         state.ai_reserved_tokens = [
             (t, n) for t, n in state.ai_reserved_tokens if t > now - timedelta(minutes=1)
         ]
@@ -189,6 +201,7 @@ class Budget:
             if len(recent) >= rpm or sum(n for _, n in state.ai_reserved_tokens) + estimated_tokens > tpm:
                 raise AIUnavailable("ai_rate_limit")
         state.ai_attempts.append(now)
+        state.ai_model_attempts.setdefault(model, []).append(now)
         if self.issue:
             counters[self.issue] = counters.get(self.issue, 0) + 1
         state.ai_reserved_tokens.append((now, estimated_tokens))
@@ -206,7 +219,24 @@ def quota_used(state, now: datetime, model: str) -> int:
     pacific = ZoneInfo("America/Los_Angeles")
     day = now.astimezone(pacific).date()
     snapshot = state.ai_quota_snapshot
-    attempts = [t for t in state.ai_attempts if t.astimezone(pacific).date() == day]
+    attempts = []
+    all_attempts = sorted(state.ai_attempts)
+    for index, at in enumerate(all_attempts):
+        if at.astimezone(pacific).date() != day:
+            continue
+        known = {name for name, times in state.ai_model_attempts.items() if at in times}
+        if not known:
+            # Legacy reservation intervals can be attributed only when their
+            # completed-request audits agree on one model. Unknown reservations
+            # remain charged conservatively to every model; no counters reset.
+            end = all_attempts[index + 1] if index + 1 < len(all_attempts) else now
+            known = {
+                a.model
+                for a in state.ai_audit
+                if at <= a.at <= end and a.stage in {"provider_error", "output_rejected", "accepted"}
+            }
+        if len(known) != 1 or model in known:
+            attempts.append(at)
     if snapshot and snapshot.model == model and snapshot.observed_at <= now:
         if snapshot.observed_at.astimezone(pacific).date() == day:
             return snapshot.used + sum(t > snapshot.observed_at for t in attempts)
@@ -351,7 +381,7 @@ class Enhancer:
         )
         self.client = client
         result = []
-        active_model = self.settings.model
+        active_model = self.used_model
         # One normal batch for up to 30 candidates. Fallback, retry and repair all share the run cap.
         for offset in range(0, len(events), 30):
             batch = events[offset : offset + 30]
@@ -399,7 +429,6 @@ class Enhancer:
                 try:
                     output_text = self.generate_text(client, active_model, prompt, output_limit)
                 except Exception as exc:
-                    code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
                     print(
                         json.dumps(
                             {
@@ -411,11 +440,15 @@ class Enhancer:
                         )
                     )
                     self.audit(active_model, "provider_error", provider_failure(exc))
-                    if code in {429, 503} and active_model == self.settings.model:
+                    if (
+                        transient_provider_error(exc)
+                        and active_model == self.settings.model
+                        and active_model != self.settings.backup_model
+                    ):
                         self.budget.sleep(2)
                         active_model = self.settings.backup_model
                         continue
-                    if code in {429, 503} and transient_retries < 1:
+                    if transient_provider_error(exc) and transient_retries < 1:
                         transient_retries += 1
                         self.budget.sleep(4)
                         continue

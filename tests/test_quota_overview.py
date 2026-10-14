@@ -10,6 +10,24 @@ from ai_news.overview import overview_png
 from ai_news.store import Store
 
 
+def test_model_daily_admission_does_not_charge_primary_calls_to_backup(settings, tmp_path, now):
+    from ai_news.models import AIRequestAudit
+
+    store = Store(tmp_path)
+    primary, backup = "gemini-3.5-flash-lite", "gemini-3.8-flash"
+    times = [now - timedelta(minutes=30-i) for i in range(25)]
+    store.state.ai_attempts = times
+    store.state.ai_audit = [AIRequestAudit(at=t + timedelta(seconds=5), model=primary, stage="accepted") for t in times]
+    assert quota_used(store.state, now, primary) == 25
+    assert quota_used(store.state, now, backup) == 0
+    Budget(settings, store, now=lambda: now).reserve(100, model=backup)
+    restored = Store(tmp_path)
+    assert len(restored.state.ai_attempts) == 26
+    assert quota_used(restored.state, now + timedelta(seconds=1), backup) == 1
+    restored.state.ai_audit = []
+    assert quota_used(restored.state, now + timedelta(seconds=1), backup) == 26
+
+
 def test_quota_reconciliation_preserves_failed_attempts_and_issue_caps(settings, tmp_path):
     now = datetime(2026, 10, 10, 13, tzinfo=UTC)
     settings.model = "gemini-3.5-flash-lite"

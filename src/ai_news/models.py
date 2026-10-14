@@ -264,6 +264,7 @@ class RunState(StrictModel):
     schema_version: Literal[1] = 1
     last_covered_at: datetime | None = None
     ai_attempts: list[datetime] = Field(default_factory=list)
+    ai_model_attempts: dict[str, list[datetime]] = Field(default_factory=dict)
     ai_quota_snapshot: QuotaSnapshot | None = None
     ai_issue_attempts: dict[str, int] = Field(default_factory=dict)
     ai_test_attempts: dict[str, int] = Field(default_factory=dict)
