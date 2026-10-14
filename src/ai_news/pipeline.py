@@ -7,7 +7,7 @@ from datetime import UTC, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from .ai import AIUnavailable, Enhancer
-from .collector import Collector
+from .collector import Collector, article_metadata, plain
 from .models import (
     AIResponse,
     Digest,
@@ -19,6 +19,7 @@ from .models import (
     SourceItem,
     Story,
 )
+from .network import PublicHTTP
 from .selection import select_events
 from .store import Store
 
@@ -129,6 +130,45 @@ def ai_stories(response, events, decisions=None) -> list[Story]:
     return stories
 
 
+async def refresh_frozen_evidence(events, settings):
+    from urllib.parse import quote, unquote, urlsplit
+
+    http = PublicHTTP(settings.timeout_seconds)
+    for event in events:
+        for evidence in event.evidence:
+            parsed = urlsplit(evidence.url)
+            parts = parsed.path.split("/")
+            try:
+                if parsed.hostname == "github.com" and len(parts) >= 6 and parts[3:5] == ["releases", "tag"]:
+                    endpoint = f"https://api.github.com/repos/{parts[1]}/{parts[2]}/releases/tags/" + quote(
+                        unquote("/".join(parts[5:])), safe=""
+                    )
+                    page = await http.get(endpoint)
+                    import json
+
+                    excerpt = plain(json.loads(page.text).get("body", ""))
+                else:
+                    page = await http.get(evidence.url)
+                    _, excerpt, *_ = article_metadata(page.text)
+                    from bs4 import BeautifulSoup
+
+                    soup = BeautifulSoup(page.text, "html.parser")
+                    for node in soup(["script", "style", "nav", "footer", "header"]):
+                        node.decompose()
+                    article = soup.find("article") or soup.find("main")
+                    body = plain(str(article), 1600) if article else ""
+                    if len(body) > len(excerpt):
+                        excerpt = body
+                if not excerpt:
+                    raise AIUnavailable("ai_frozen_evidence_empty")
+                evidence.excerpt = excerpt
+            except AIUnavailable:
+                raise
+            except Exception:
+                raise AIUnavailable("ai_frozen_evidence_unavailable") from None
+    return events
+
+
 def enhance_frozen(
     settings: Settings,
     store: Store,
@@ -177,6 +217,11 @@ def enhance_frozen(
         )
         for s in existing.stories
     ]
+    if enhancer is None:
+        # Frozen rules output contains at most 500 characters and can even be
+        # a missing-excerpt placeholder. Re-read the SAME cited originals for
+        # verification; keep the event set, IDs and publication metadata frozen.
+        asyncio.run(refresh_frozen_evidence(events, settings))
     processor = enhancer or Enhancer(settings, store, issue=issue, test_extra_limit=test_extra_limit)
     response = processor.enhance(events)
     if enhancer is None:

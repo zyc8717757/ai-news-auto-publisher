@@ -263,7 +263,10 @@ def main() -> int:
         return 1
     except Exception as exc:
         # Public logs receive only exception type, never private content/config or HTTP response text.
-        print(json.dumps({"status": "failed", "error_type": type(exc).__name__}), file=sys.stderr)
+        result = {"status": "failed", "error_type": type(exc).__name__}
+        if str(exc) in {"public_data_git_push_failed", "public_data_git_diff_failed"}:
+            result["reason"] = str(exc)
+        print(json.dumps(result), file=sys.stderr)
         return 1
 
 
