@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-13-pm",
+  "revision": 2,
+  "created_at": "2026-10-14T09:30:25.803436Z",
+  "cutoff": "2026-10-13T12:30:00Z",
+  "window_start": "2026-10-11T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "8bb1da51925f69396745",
+      "title": "NVIDIA发布RTX Spark超级芯片并联手生态推出本地AI更新",
+      "summary": "该公司称，NVIDIA RTX Spark将游戏PC、创意工作室与个人AI超算融为一体，配备高达128GB统一内存与1 petaflop的AI算力。NVIDIA及其生态合作伙伴正推出新软件功能与性能优化，其中包括GitHub Copilot、Nemotron 3.5 Bolt 74B模型发布，以及Adobe应用性能的大幅提升。",
+      "impact": "推动本地AI代理与个人计算性能的全面升级。",
+      "category": "产品",
+      "score": 76.49,
+      "sources": [
+        {
+          "id": "8bb1da51925f69396745",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
+          "title": "All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
+          "published_at": "2026-10-13T12:00:49Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实际市场表现与应用兼容性仍有待观察。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "293b85c97d55fe8c4e9e",
+      "title": "法国生态系统借助NVIDIA基础设施实现大规模智能体计算",
+      "summary": "该公司称，法国企业正广泛应用NVIDIA基础设施与开源模型。首颗搭载NVIDIA Jetson模块与Mistral模型的Altair-1卫星已成功进入轨道，同时NVIDIA已在欧洲技术生态系统投入近100亿美元，并在法国推进多项投资。",
+      "impact": "展现了AI技术在航天及商业领域的规模化落地应用。",
+      "category": "商业",
+      "score": 73.46,
+      "sources": [
+        {
+          "id": "293b85c97d55fe8c4e9e",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/",
+          "title": "From Earth to Orbit, France’s Ecosystem Delivers Agentic Computing at Scale With NVIDIA",
+          "published_at": "2026-10-13T05:00:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 卫星长期在轨运行效果及各项投资回报仍存在不确定性。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "b43fc89aefdae0f55a56",
+      "title": "微软宣布将Azure Maia系统扩展至多吉瓦规模部署",
+      "summary": "该公司称，Azure Maia 200已投入生产，而Azure Maia 300计划于2027年推出。微软将从2027年开始将Azure Maia系列扩展至多吉瓦规模的部署，以迎接超智能时代的到来。",
+      "impact": "显著提升微软的云端AI基础设施承载能力。",
+      "category": "产品",
+      "score": 70.56,
+      "sources": [
+        {
+          "id": "b43fc89aefdae0f55a56",
+          "source_id": "primary-microsoft",
+          "source_name": "Microsoft",
+          "group": "microsoft",
+          "trust": "official",
+          "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
+          "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
+          "published_at": "2026-10-12T13:01:29Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 2027年大规模部署的实际进展可能受到供应链等因素影响。",
+      "entities": [
+        "microsoft"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
