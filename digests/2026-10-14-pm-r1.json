@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-14-pm",
+  "revision": 1,
+  "created_at": "2026-10-14T12:31:19.694113Z",
+  "cutoff": "2026-10-14T12:30:00Z",
+  "window_start": "2026-10-12T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "36a7e1c23fbbe3b1fdc0",
+      "title": "谷歌DeepMind与新加坡政府合作开发诈骗检测AI模型",
+      "summary": "谷歌DeepMind与新加坡政府科技局（GovTech Singapore）展开合作，利用轻量级端侧Gemma模型在私密聊天中拦截对话式诈骗，并实现了零云端数据外传。",
+      "impact": "有助于提升端侧防诈骗能力，保障用户隐私安全。",
+      "category": "模型",
+      "score": 79.7,
+      "sources": [
+        {
+          "id": "36a7e1c23fbbe3b1fdc0",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+          "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+          "published_at": "2026-10-14T02:00:14Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体模型的准确率与实际拦截效果尚待实际应用验证。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google DeepMind与新加坡政府合作，利用轻量级端侧Gemma模型拦截诈骗对话。",
+      "backfill": false
+    },
+    {
+      "id": "241a0eb7150b75c2c4dd",
+      "title": "Anthropic开设新加坡办事处并与新加坡政府签署备忘录",
+      "summary": "Anthropic在新加坡开设了其在亚太地区的第五个办事处，并与新加坡数字发展和新闻部签署了关于AI安全、评估及负责任应用的谅解备忘录。Anthropic还在三年内向一项旨在加速科学发现的联邦倡议Genesis Mission投入1.5亿美元。",
+      "impact": "进一步拓展了其在亚太市场的业务布局与生态合作。",
+      "category": "商业",
+      "score": 73.62,
+      "sources": [
+        {
+          "id": "241a0eb7150b75c2c4dd",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/singapore-office-opening",
+          "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+          "published_at": "2026-10-14T08:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 备忘录的实际落地效果及资金的具体执行细节存在不确定性。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic在新加坡开设亚太第五个办事处并签署AI安全合作谅解备忘录。",
+      "backfill": false
+    },
+    {
+      "id": "eee6cc87fc10c5839674",
+      "title": "英伟达在英国做出2.5亿美元算力承诺以支持代理式安全",
+      "summary": "英伟达宣布了一项为期五年、价值2.5亿美元的算力承诺，旨在加强英国的代理式安全（agentic safety）生态建设，推动英国从企业应用到解决重大地球挑战的生态发展。",
+      "impact": "将加速英国AI算力基础设施建设与相关安全研究。",
+      "category": "商业",
+      "score": 72.49,
+      "sources": [
+        {
+          "id": "eee6cc87fc10c5839674",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/",
+          "title": "From Enterprise to Earthshot: UK’s Ecosystem Moves From Ambition to Application With NVIDIA",
+          "published_at": "2026-10-14T06:04:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 长期算力投入的实际转化成果与安全性成效尚需观察。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA宣布向英国提供2.5亿美元算力承诺，用于加强Agent安全性。",
+      "backfill": false
+    },
+    {
+      "id": "8323b3b7fc78f153da00",
+      "title": "欧洲城市部署英伟达驱动的AI代理优化城市运营",
+      "summary": "欧洲中东和非洲（EMEA）地区的城市与本地软件、基础设施及集成伙伴合作，利用英伟达加速计算构建物理AI代理和数字孪生，以辅助团队进行道路维修和能源效率等日常城市运营决策。",
+      "impact": "提升了欧洲城市管理的智能化水平与运营决策效率。",
+      "category": "产品",
+      "score": 71.28,
+      "sources": [
+        {
+          "id": "8323b3b7fc78f153da00",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/european-cities-agents-urban-operations/",
+          "title": "European Cities Deploy NVIDIA-Powered AI Agents to Run Smarter Urban Operations",
+          "published_at": "2026-10-14T06:00:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 AI代理在复杂城市真实环境中的稳定性仍面临考验。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "欧洲城市部署NVIDIA驱动的物理AI Agent和数字孪生以优化城市运营。",
+      "backfill": false
+    },
+    {
+      "id": "200a5d3dd39c6bfb7a20",
+      "title": "分析显示欧盟企业正加速普及代理式AI",
+      "summary": "一项新分析显示，代理式AI在欧盟大企业和小企业中的应用正在不断增长，并指出了深化使用能够释放更多价值的具体方向。",
+      "impact": "反映出欧盟企业数字化转型正向智能化代理方向演进。",
+      "category": "产品",
+      "score": 68.77,
+      "sources": [
+        {
+          "id": "200a5d3dd39c6bfb7a20",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+          "title": "The EU’s next chapter in AI is agentic",
+          "published_at": "2026-10-14T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体行业落地的普及深度和实际经济效益未完全量化。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI发布新分析报告，展示Agentic AI在欧盟企业中的应用增长。",
+      "backfill": false
+    },
+    {
+      "id": "f9f5ac5db3b603f4975a",
+      "title": "谷歌发布Gemini 4 Argon模型",
+      "summary": "谷歌推出了Gemini 4 Argon模型。该公司称，该模型具备前沿推理能力，并提升了复杂工作流的表现，同时减少了含糊其辞、重复内容以及陈词滥调。",
+      "impact": "为开发者和用户提供了一款具备前沿推理能力的新模型选择。",
+      "category": "模型",
+      "score": 58.12,
+      "sources": [
+        {
+          "id": "f9f5ac5db3b603f4975a",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon",
+          "title": "Google finally releases Gemini 4 Argon",
+          "published_at": "2026-10-13T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "性能表现和竞争力声明仅来源于该公司称，尚待独立评测验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google正式发布其前沿大模型 Gemini 4 Argon，宣称具备前沿推理能力并减少幻觉与冗余。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
