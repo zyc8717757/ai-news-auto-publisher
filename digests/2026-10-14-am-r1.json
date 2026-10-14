@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-14-am",
+  "revision": 1,
+  "created_at": "2026-10-14T00:31:07.935517Z",
+  "cutoff": "2026-10-14T00:30:00Z",
+  "window_start": "2026-10-12T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "8b1ab1df41ac00d8450a",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.51,
+      "sources": [
+        {
+          "id": "8b1ab1df41ac00d8450a",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+          "title": "Developing Gemini 4 Argon responsibly and safely",
+          "published_at": "2026-10-13T19:43:07Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "53911f98c21c784fce1a",
+      "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.69,
+      "sources": [
+        {
+          "id": "53911f98c21c784fce1a",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+          "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+          "published_at": "2026-10-13T17:05:48Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8603bdf3ee3848d5faa3",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.35,
+      "sources": [
+        {
+          "id": "851107eacfc8ba0f286d",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "published_at": "2026-10-13T16:01:52Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "74c9e10c02543c499970",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "published_at": "2026-10-13T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "94cc08977f17740f09c1",
+      "title": "Gemini 4 Argon for Robotics",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.35,
+      "sources": [
+        {
+          "id": "94cc08977f17740f09c1",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+          "title": "Gemini 4 Argon for Robotics",
+          "published_at": "2026-10-13T16:01:58Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8d45898e533e591d4241",
+      "title": "Higgsfield takes AI video from 1 minute to over 10",
+      "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.09,
+      "sources": [
+        {
+          "id": "8d45898e533e591d4241",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+          "title": "Higgsfield takes AI video from 1 minute to over 10",
+          "published_at": "2026-10-13T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
