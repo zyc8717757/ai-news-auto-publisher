@@ -809,6 +809,14 @@
       "stage": "output_rejected",
       "reason": "ai_numeric_claim_unsupported",
       "extra_test": false
+    },
+    {
+      "at": "2026-10-14T09:16:19.068721Z",
+      "issue": "2026-10-14-am",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "output_rejected",
+      "reason": "ai_numeric_claim_unsupported",
+      "extra_test": false
     }
   ],
   "ai_reserved_tokens": [
