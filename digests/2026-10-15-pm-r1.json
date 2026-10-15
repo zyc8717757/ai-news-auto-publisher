@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-15-pm",
+  "revision": 1,
+  "created_at": "2026-10-15T12:31:04.564384Z",
+  "cutoff": "2026-10-15T12:30:00Z",
+  "window_start": "2026-10-13T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "57c3309db5bedcdec4e0",
+      "title": "Amp整合OpenAI模型扩展AI代理应用",
+      "summary": "Amp公司宣布利用GPT-6 Astra、Ultrafast、GPT-Live-1以及Sign in with ChatGPT等OpenAI模型，推动AI代理在代码编写之外的更多领域发挥作用，拓展了智能代理的应用边界。",
+      "impact": "拓宽了AI代理在代码编写之外的实际应用场景。",
+      "category": "模型",
+      "score": 76.64,
+      "sources": [
+        {
+          "id": "57c3309db5bedcdec4e0",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/amp-beyond-coding",
+          "title": "Amp puts AI agents to work beyond code with OpenAI models",
+          "published_at": "2026-10-14T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体功能和落地效果有待观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI发布了Amp和GPT-6 Astra、Ultrafast等新模型，扩展Agent应用边界。",
+      "backfill": true
+    },
+    {
+      "id": "12251940b3b4d2234012",
+      "title": "Grok Voice 3.0语音模型发布",
+      "summary": "该公司称推出了Grok Voice 3.0，该语音转语音模型在客服电话解决率上创下新高，延迟低于一秒。该模型目前已在Voice Agent API上线，价格为每分钟0.08美元（每小时4.80美元），与上一代保持一致。",
+      "impact": "为开发者提供了更高性能且价格保持不变的语音AI接口选择。",
+      "category": "模型",
+      "score": 67.72,
+      "sources": [
+        {
+          "id": "12251940b3b4d2234012",
+          "source_id": "primary-xai",
+          "source_name": "xAI",
+          "group": "xai",
+          "trust": "official",
+          "url": "https://x.ai/news/grok-voice-3",
+          "title": "Introducing Grok Voice 3.0",
+          "published_at": "2026-10-14T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 性能宣传来源于官方说法，实际表现需市场验证。",
+      "entities": [],
+      "versions": [
+        "3.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "xAI正式发布语音大模型Grok Voice 3.0，并在API上线保持价格不变。",
+      "backfill": true
+    },
+    {
+      "id": "18521ab849e45ccff746",
+      "title": "谷歌为欧洲科学家提供前沿模型与算力支持",
+      "summary": "谷歌深度学习与谷歌云宣布向至多200名欧洲顶尖科研人员提供前沿模型的直接访问权限，并提供300万美元的算力额度。研究人员可使用AlphaFold 3、WeatherNext等工具，以支持欧洲的科学研究。",
+      "impact": "加速欧洲科学研究，深化前沿AI在科研领域的应用。",
+      "category": "商业",
+      "score": 77.27,
+      "sources": [
+        {
+          "id": "18521ab849e45ccff746",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/were-powering-european-scientific-discovery-with-advanced-ai-compute-and-frontier-models/",
+          "title": "We’re powering European scientific discovery with advanced AI compute and frontier models.",
+          "published_at": "2026-10-14T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 入选的具体科研项目及最终成果尚待评估。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google DeepMind与Google Cloud向欧洲科研人员提供前沿模型及300万美元算力额度支持科学研究。",
+      "backfill": true
+    },
+    {
+      "id": "9194e801adbca278e9a4",
+      "title": "美国八州联合起诉OpenAI称其产品危害儿童",
+      "summary": "媒体报道称，美国艾奥瓦州、堪萨斯州、内布拉斯加州等八个州对OpenAI提起诉讼，指控该公司危害儿童安全并在ChatGPT安全性问题上误导消费者，指责其将利润置于安全之上。",
+      "impact": "OpenAI面临来自美国多州监管与法律层面的合规压力。",
+      "category": "安全",
+      "score": 59.25,
+      "sources": [
+        {
+          "id": "9194e801adbca278e9a4",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety",
+          "title": "Eight states sue OpenAI, saying ChatGPT isn’t safe for kids",
+          "published_at": "2026-10-14T21:11:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "诉讼尚在进行中，最终法律判决结果未定。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "八个美国州对OpenAI提起诉讼，指控其ChatGPT对儿童安全构成威胁并误导消费者，属重大法律安全事件。",
+      "backfill": false
+    },
+    {
+      "id": "52cefc42575c00abb39b",
+      "title": "OpenAI指控前员工窃取产品计划并泄露给苹果",
+      "summary": "媒体报道称，OpenAI在提交的文件中指控一名离职员工在加入苹果公司前私自下载并转移了100多份产品规划文件，并向苹果管理层进行了展示。",
+      "impact": "引发外界对科技巨头间商业机密与人才流动合规性的关注。",
+      "category": "商业",
+      "score": 56.17,
+      "sources": [
+        {
+          "id": "52cefc42575c00abb39b",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans",
+          "title": "OpenAI claims an ex-employee took its product plans and presented them to Apple",
+          "published_at": "2026-10-14T16:43:24Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "指控内容为单方说法，苹果公司的具体涉事情况有待查证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI指控前员工盗取产品规划文件并泄露给Apple高管，涉及头部大模型厂商机密泄露。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
