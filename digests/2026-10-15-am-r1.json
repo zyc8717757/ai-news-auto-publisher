@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-15-am",
+  "revision": 1,
+  "created_at": "2026-10-15T00:31:13.957172Z",
+  "cutoff": "2026-10-15T00:30:00Z",
+  "window_start": "2026-10-13T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "ad577cc4d385593cb7c0",
+      "title": "Anthropic加强选举防护并向Genesis Mission投资1.5亿美元",
+      "summary": "Anthropic公司称，为迎接2026年美国中期选举，公司持续强化选举防护措施，涵盖防止政治偏见、滥用检测及提供准确投票信息；同时宣布在三年内向旨在加速科技探索的联邦倡议Genesis Mission投入1.5亿美元。",
+      "impact": "提升政治对话安全性，推进AI在科研领域的应用。",
+      "category": "安全",
+      "score": 73.8,
+      "sources": [
+        {
+          "id": "ad577cc4d385593cb7c0",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/2026-us-midterms",
+          "title": "Preparing for the 2026 US midterms",
+          "published_at": "2026-10-14T18:33:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 防护措施的实际拦截效果及资金的具体落地细节尚待观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic公布美国中期选举安全保障措施，并向Genesis Mission承诺投资。",
+      "backfill": false
+    },
+    {
+      "id": "a50dc518bdedce5481a2",
+      "title": "LangGraph发布langgraph-checkpoint-postgres 3.2.0版本",
+      "summary": "LangGraph官方发布了langgraph-checkpoint-postgres==3.2.0版本。根据更新说明，该版本主要变化包括为PostgresSaver和AsyncPostgresSaver新增了prune（修剪）功能。",
+      "impact": "优化数据库检查点管理，提升开发效率。",
+      "category": "开发",
+      "score": 68.1,
+      "sources": [
+        {
+          "id": "a50dc518bdedce5481a2",
+          "source_id": "langgraph",
+          "source_name": "LangGraph Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpointpostgres%3D%3D3.2.0",
+          "title": "LangGraph Releases: langgraph-checkpoint-postgres==3.2.0",
+          "published_at": "2026-10-14T19:54:57Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "3.2.0"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-10-13-am",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "LangGraph发布checkpoint-postgres 3.2.0版本，增加了修剪功能。",
+      "backfill": false
+    },
+    {
+      "id": "94ee28b93f9d2d830319",
+      "title": "Block采用OpenAI技术构建AI安全能力",
+      "summary": "该公司称，Block正在利用OpenAI技术构建AI驱动的安全系统，其安全团队能够以更快的速度调查威胁，并在数分钟内提出修补方案。",
+      "impact": "显著提升企业安全威胁的响应与处理效率。",
+      "category": "产品",
+      "score": 76.67,
+      "sources": [
+        {
+          "id": "94ee28b93f9d2d830319",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/block-ai-powered-security",
+          "title": "How Block is building AI-powered security with OpenAI technology",
+          "published_at": "2026-10-14T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 未提供大规模复杂攻击下的具体表现数据。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Block公司利用OpenAI技术构建AI安全工具以加速威胁调查。",
+      "backfill": false
+    },
+    {
+      "id": "004cd593adabcd24c97d",
+      "title": "SentinelOne利用OpenAI技术将恶意软件分析时间缩短至数小时",
+      "summary": "该公司称，SentinelOne借助OpenAI Daybreak技术，将原本需要数周的恶意软件分析时间缩短至数小时，从而释放了调查更多威胁的能力。",
+      "impact": "大幅提升恶意软件分析效率，增强威胁应对容量。",
+      "category": "产品",
+      "score": 70.87,
+      "sources": [
+        {
+          "id": "004cd593adabcd24c97d",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/sentinelone",
+          "title": "SentinelOne cuts malware analysis from weeks to hours",
+          "published_at": "2026-10-14T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 未披露该技术的通用性与具体准确率指标。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "SentinelOne借助OpenAI Daybreak将恶意软件分析时间大幅缩短。",
+      "backfill": false
+    },
+    {
+      "id": "38b145b09b774091d6e1",
+      "title": "英伟达CEO黄仁勋宣布对欧洲及英国进行投资",
+      "summary": "英伟达CEO黄仁勋宣布向欧洲投资20亿美元，并对法国初创企业如Doctolib和Entalpic进行新投资。英国则获得价值2.5亿美元的算力，用于人工智能智能体安全与安全研究。黄仁勋提出开源权重模型是欧洲缩小人工智能差距的途径。",
+      "impact": "有助于推动欧洲人工智能基础设施建设和开源权重模型发展。",
+      "category": "商业",
+      "score": 59.49,
+      "sources": [
+        {
+          "id": "38b145b09b774091d6e1",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/nvidias-jensen-huang-pledges-2-billion-for-europe-250-million-in-compute-for-uk-safety-labs/",
+          "title": "Nvidia's Jensen Huang pledges $2 billion for Europe, $250 million in compute for UK safety labs",
+          "published_at": "2026-10-14T14:24:34Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "资金投入的具体落地时间和实施细节尚待观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "英伟达CEO黄仁勋宣布向欧洲投资20亿美元，并为英国安全实验室提供2.5亿美元算力支持，具有重大地缘商业与安全影响。",
+      "backfill": false
+    },
+    {
+      "id": "bddfffa0852196a7c048",
+      "title": "Square推出集成语音AI的新款点餐一体机",
+      "summary": "Square推出了一款名为Square Kiosk的新硬件，这是一款带有大触摸屏的点餐一体机，允许用户通过语音与人工智能进行交流以获得点餐帮助。Square称，该设备采用胶囊状外观，具备代理性质的对话语音层，能够完全理解卖家的菜单并进行倾听与响应。",
+      "impact": "提升了零售和餐饮场景下智能语音交互的便捷性。",
+      "category": "产品",
+      "score": 58.64,
+      "sources": [
+        {
+          "id": "bddfffa0852196a7c048",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1009086/square-kiosk",
+          "title": "Square’s new kiosk lets you talk to AI for help with your order",
+          "published_at": "2026-10-14T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "其实际商用环境下的识别准确率和用户体验有待市场检验。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Square发布带有对话式语音交互层的点餐硬件Square Kiosk，属于AI Agent在商业硬件落地的实际产品发布。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
