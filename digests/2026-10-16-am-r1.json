@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-16-am",
+  "revision": 1,
+  "created_at": "2026-10-16T00:31:05.824407Z",
+  "cutoff": "2026-10-16T00:30:00Z",
+  "window_start": "2026-10-14T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "ff0cf28c5d7530571030",
+      "title": "Meta发布Muse Spark Open多模态模型",
+      "summary": "Meta推出了全新的开源权重前沿多模态混合专家模型Muse Spark Open。据媒体报道，该模型拥有8160亿参数，支持处理文本、图像、视频和音频，上下文窗口达100万个token，在基准测试中表现与最强的开源中文AI模型大致相当，并已优化至可在苹果M5 Ultra上本地运行。",
+      "impact": "为开源社区提供了具备大规模参数和多模态能力的新选择，加剧了开源权重领域的竞争。",
+      "category": "模型",
+      "score": 80.54,
+      "sources": [
+        {
+          "id": "ff0cf28c5d7530571030",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/meta-muse-spark-open",
+          "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+          "published_at": "2026-10-15T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "f39f53c4c3ac48dcf09a",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/muse-spark-open-is-metas-answer-to-qwen-glm-and-kimi-in-the-open-weight-race/",
+          "title": "Muse Spark Open is Meta's answer to Qwen, GLM, and Kimi in the open-weight race",
+          "published_at": "2026-10-15T18:34:32Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 部分参数与性能表现来自媒体报道，官方原始公告暂未提供完整技术细节。",
+      "entities": [
+        "meta"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Meta 发布开源多模态混合专家模型 Muse Spark Open，具备超大上下文与多模态能力。",
+      "backfill": true
+    },
+    {
+      "id": "8616bc507fca93831f59",
+      "title": "ChatGPT推出GPT-Live-1.1语音更新",
+      "summary": "ChatGPT、Codex和dots迎来了GPT-Live-1.1更新，引入了13种新语音，显著提升了法语、德语、印地语、墨西哥西班牙语、韩语、日语等多种非英语语言的口音和整体表现，使语音委托和可控性更加自然。该更新当日向所有用户推出，并将很快登陆API。",
+      "impact": "大幅改善了多语言用户的语音交互体验，推动语音模型持续向自然化演进。",
+      "category": "产品",
+      "score": 73.94,
+      "sources": [
+        {
+          "id": "8616bc507fca93831f59",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/gpt-live-1-1-is-rolling-out-with-new-voices-and-better-accents/1406704",
+          "title": "GPT-Live-1.1 is rolling out with new voices and better accents",
+          "published_at": "2026-10-15T19:11:50.360000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 语音性能的具体提升幅度依赖官方声明，API的具体上线时间尚未最终确定。",
+      "entities": [],
+      "versions": [
+        "1.1"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 推出了 GPT-Live-1.1 更新，带来全新语音、更好的非英语语言支持及改进的交互体验。",
+      "backfill": false
+    },
+    {
+      "id": "c3f9aa1e97f35f2465d0",
+      "title": "Anthropic引入METR等独立评估机构",
+      "summary": "Anthropic宣布落实独立外部评估员计划，已向非营利前沿AI评估机构METR的团队授予类似员工的访问权限，允许其深入了解内部风险、事故及实践并自主发布评估结果，且该公司已放弃拦截权。同时，该公司还在与SecureBio、Accenture及Hugging Face等机构开展合作或讨论。",
+      "impact": "提升了前沿AI模型安全评估的透明度与独立性，强化了行业安全治理机制。",
+      "category": "安全",
+      "score": 74.13,
+      "sources": [
+        {
+          "id": "c3f9aa1e97f35f2465d0",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+          "title": "An update on independent evaluators",
+          "published_at": "2026-10-15T17:20:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "20dfecfa26f1e2fc7aa5",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+          "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+          "published_at": "2026-10-15T19:14:26Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 第三方机构发布的具体风险评估结果和时间尚待后续公开。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic 宣布与 METR 等独立评估机构合作，为前沿模型引入第三方安全风险评估。",
+      "backfill": false
+    },
+    {
+      "id": "e07170025272d6f16433",
+      "title": "ChatGPT谷歌浏览器扩展支持查看标签页",
+      "summary": "OpenAI对谷歌Chrome浏览器的ChatGPT扩展进行了升级，允许其在用户在网页或桌面应用中标记Chrome时，直接查看已打开的浏览器标签页。",
+      "impact": "增强了ChatGPT与浏览器环境的交互能力，简化了跨标签页的内容协作流程。",
+      "category": "产品",
+      "score": 59.21,
+      "sources": [
+        {
+          "id": "e07170025272d6f16433",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+          "title": "ChatGPT can peek at your Chrome tabs now",
+          "published_at": "2026-10-15T22:43:23Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "该功能的实际隐私安全保障与用户数据处理细节仍需长期观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "ChatGPT的Google Chrome扩展程序升级，支持查看当前打开的浏览器标签页，直接影响日常用户。",
+      "backfill": false
+    },
+    {
+      "id": "812403745052045f3fc1",
+      "title": "谷歌推出通用购物车购物工具",
+      "summary": "谷歌在美推出名为Universal Cart的新购物工具，该工具已在谷歌搜索及Gemini应用中上线，为用户提供便捷的购物支持。",
+      "impact": "提升用户的搜索与应用购物体验。",
+      "category": "产品",
+      "score": 54.41,
+      "sources": [
+        {
+          "id": "812403745052045f3fc1",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+          "title": "Google’s Universal Cart shopping tool launches in the US",
+          "published_at": "2026-10-15T14:29:33Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google的Universal Cart购物工具在美国Google Search和Gemini App中正式推出。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
