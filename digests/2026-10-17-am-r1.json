@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-17-am",
+  "revision": 1,
+  "created_at": "2026-10-17T00:31:40.837870Z",
+  "cutoff": "2026-10-17T00:30:00Z",
+  "window_start": "2026-10-15T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "8655f4cf26df3e215d7b",
+      "title": "ChatGPT推出Chrome扩展新功能，可读取并操作浏览器标签页",
+      "summary": "OpenAI更新了Chrome扩展程序，使ChatGPT能够访问开启的浏览器标签页、总结内容，并在工作模式下使用计算机使用功能跨多个标签页填写表单或比较产品。该功能向所有ChatGPT计划开放。",
+      "impact": "提升浏览器端AI助手的自动化交互与多标签页处理效率。",
+      "category": "产品",
+      "score": 58.22,
+      "sources": [
+        {
+          "id": "8655f4cf26df3e215d7b",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+          "title": "ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs",
+          "published_at": "2026-10-16T18:10:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "实际操作的准确性与跨标签页交互的安全性尚待验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI更新Chrome扩展让ChatGPT可读取开放标签页并支持计算机使用模式，对用户影响直接重大。",
+      "backfill": false
+    },
+    {
+      "id": "80ab6ac91ca5d150c803",
+      "title": "OpenAI推出Rosalind学术计划，向美国高校研究实验室提供免费席位",
+      "summary": "OpenAI推出了Rosalind学术计划，该免费产品目前仅向没有企业合同的美国大学研究实验室开放，一年内可提供最多30个免费席位。",
+      "impact": "降低美国高校实验室使用AI工具的成本，推动学术研究。",
+      "category": "商业",
+      "score": 55.64,
+      "sources": [
+        {
+          "id": "80ab6ac91ca5d150c803",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openais-new-rosalind-academic-plan-gives-research-labs-up-to-30-free-seats-for-a-year/",
+          "title": "OpenAI's new Rosalind Academic Plan gives research labs up to 30 free seats for a year",
+          "published_at": "2026-10-16T13:15:09Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "适用范围目前仅限美国大学且无企业合同的实验室，未来是否扩展未知。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "research",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI推出Rosalind学术计划，为美国大学研究实验室提供免费额度，涉及订阅与额度政策。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
