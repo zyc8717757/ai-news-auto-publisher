@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-17-pm",
+  "revision": 1,
+  "created_at": "2026-10-17T12:31:09.583474Z",
+  "cutoff": "2026-10-17T12:30:00Z",
+  "window_start": "2026-10-15T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "d0817155767aa3ab4345",
+      "title": "Claude自主设计量子电路大幅减少资源需求",
+      "summary": "该公司称，Claude独立设计了量子电路，在某些情况下性能比已发表的最佳版本提升了一个数量级或更多。通过一系列算法进展，估计的门数降至约3.4亿个，Claude还编写了高速模拟器来测量异常发生频率，从而大幅减少了量子计算资源。",
+      "impact": "有望大幅优化量子电路设计并降低未来硬件的资源消耗。",
+      "category": "模型",
+      "score": 72.44,
+      "sources": [
+        {
+          "id": "d0817155767aa3ab4345",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+          "title": "Designing more efficient quantum circuits with Claude",
+          "published_at": "2026-10-16T17:29:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 部分性能提升基于模拟测算，实际应用效果有待未来硬件验证。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Claude成功设计出大幅提升效率的量子电路，具有重要的科学研究和应用价值。",
+      "backfill": false
+    },
+    {
+      "id": "918cdd953ecffda0b678",
+      "title": "Claude揭示ECDSA曲线起源并捐赠奖金",
+      "summary": "该公司称，长期存在的加密标准ECDSA起源谜团已被解释，相关研究悬念得出结论。寻找到种子获得的36,864美元将捐赠给互联网安全研究组织，官方表示研究人员此前大多已信任这些曲线，读者无需采取额外行动。",
+      "impact": "厘清了主流密码学标准的历史起源，消除了多年猜测。",
+      "category": "安全",
+      "score": 69.34,
+      "sources": [
+        {
+          "id": "918cdd953ecffda0b678",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+          "title": "Claude reveals ECDSA curve origins",
+          "published_at": "2026-10-16T17:02:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 属于历史和密码学研究进展，不影响现行密码体系的实际安全性。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Claude揭示了流行密码学标准ECDSA曲线的起源，具有重要的密码学及安全研究影响。",
+      "backfill": false
+    },
+    {
+      "id": "4163cc0c9dd071c629fb",
+      "title": "Deepseek发布V4.1-Flash-1017与内部搜索API",
+      "summary": "Deepseek发布了开源权重的V4.1-Flash-1017模型，其基准测试表现更好、任务完成更快且输出更短。该公司还通过新的Search和Fetch API开放了内部搜索引擎，价格为每1,000次调用0.75美元，部分工具用户目前可免费访问。",
+      "impact": "为开发者提供了性能更强且成本更低的开源模型与搜索API选项。",
+      "category": "模型",
+      "score": 61.28,
+      "sources": [
+        {
+          "id": "4163cc0c9dd071c629fb",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/",
+          "title": "Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs",
+          "published_at": "2026-10-17T10:33:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "免费访问期限和具体适用范围可能随政策调整。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "deepseek"
+      ],
+      "versions": [
+        "v4.1"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "DeepSeek发布V4.1-Flash-1017开源模型，大幅削减成本并提升任务性能，备受瞩目。",
+      "backfill": false
+    },
+    {
+      "id": "33f25b1f0c8473711ce5",
+      "title": "中国计划收紧开源权重模型及关键AI技术出口管制",
+      "summary": "据媒体报道，中国计划限制23项关键AI技术的出口，包括达到10^26 FLOPs或2万亿参数系统的模型权重、源代码和训练方法。快车道规则仍将对注册后的开源发布放行，此举可能促使西方企业更倾向于美国开源权重模型。",
+      "impact": "将对全球AI技术的跨境共享与开源生态产生深远政策影响。",
+      "category": "安全",
+      "score": 67.79,
+      "sources": [
+        {
+          "id": "33f25b1f0c8473711ce5",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technologies/",
+          "title": "China plans to tighten export controls on open-weight models and 23 key AI technologies",
+          "published_at": "2026-10-16T17:42:47Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "相关出口管制政策的具体实施细则和最终影响尚待观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "中国计划收紧对开源模型及23项关键AI技术的出口管制，属于重大安全政策及地缘动向。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
