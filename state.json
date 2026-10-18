@@ -98,14 +98,6 @@
   },
   "ai_audit": [
     {
-      "at": "2026-10-13T02:37:54.286462Z",
-      "issue": "2026-10-13-am",
-      "model": "gemini-3.5-flash-lite",
-      "stage": "accepted",
-      "reason": "",
-      "extra_test": false
-    },
-    {
       "at": "2026-10-13T02:37:58.656479Z",
       "issue": "2026-10-13-am",
       "model": "gemini-3.5-flash-lite",
@@ -895,6 +887,14 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
+      "extra_test": false
+    },
+    {
+      "at": "2026-10-18T12:32:01.924459Z",
+      "issue": "2026-10-18-pm",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "accepted",
+      "reason": "editorial_rank",
       "extra_test": false
     }
   ],
