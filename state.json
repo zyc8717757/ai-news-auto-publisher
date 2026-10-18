@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-10-18T00:30:00Z",
+  "last_covered_at": "2026-10-18T12:30:00Z",
   "ai_attempts": [
     "2026-10-16T12:32:17.458262Z",
     "2026-10-16T12:32:29.410786Z",
@@ -941,7 +941,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
           "event_at": null,
           "supporting": []
@@ -958,7 +958,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
           "event_at": null,
           "supporting": []
@@ -975,7 +975,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
           "event_at": null,
           "supporting": []
@@ -992,7 +992,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
           "event_at": null,
           "supporting": []
@@ -1009,7 +1009,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
           "event_at": null,
           "supporting": []
@@ -1036,7 +1036,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Anthropic announces updates to embedding independent evaluators Announcements An update on independent evaluators Oct 15, 2026 Last month, we committed to stronger independent, third-party assessment of our models and safety practices. We also signed the White House Accord on Super Intelligence, in which companies pledged to partner with independent external auditors or evaluators. Today, we’re an",
           "event_at": null,
           "supporting": []
@@ -1046,7 +1046,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"yxHbHQ\"",
+      "etag": "\"P1W2SA\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1063,7 +1063,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
           "event_at": null,
           "supporting": []
@@ -1143,9 +1143,9 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"37fdfc140cbd798b7d466566c05b770d\"",
-      "modified": "Sat, 17 Oct 2026 01:07:36 GMT",
-      "status": "unchanged",
+      "etag": "\"f25d4bd6350c90c505f064df02c189ab\"",
+      "modified": "Sun, 18 Oct 2026 06:16:26 GMT",
+      "status": "ok",
       "error_code": "",
       "items": [
         {
@@ -1160,7 +1160,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security. The post Proof-based general-purpose computing with Magnetar appeared first on Microsoft Research .",
           "event_at": null,
           "supporting": []
@@ -1170,8 +1170,8 @@
       "verified": 10
     },
     "nvidia": {
-      "etag": "\"3050c42235649684338b427e1052ef89-gzip\"",
-      "modified": "Sat, 17 Oct 2026 23:08:49 GMT",
+      "etag": "\"be3145f31fbe2777afa5f7dae26e23ec-gzip\"",
+      "modified": "Sun, 18 Oct 2026 04:04:17 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1187,7 +1187,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "NVIDIA RTX Spark laptops are now available, bringing NVIDIA Blackwell RTX graphics, up to 128GB of unified memory and the full NVIDIA AI platform to slim, premium Windows PCs. Starting at $2,399, laptops from ASUS, Dell, HP, Lenovo, Microsoft and MSI bring powerful local AI, content creation and gaming capabilities to a portable device, with […]",
           "event_at": null,
           "supporting": []
@@ -1204,7 +1204,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "A new beginning for Windows PCs starts tomorrow with the launch of NVIDIA RTX Spark — one PC built for creators, gamers and AI agents. All are invited to celebrate with NVIDIA and partners at launch events around the world. Share Your Spark Every PC has a story. What was your first Windows PC, and […]",
           "event_at": null,
           "supporting": []
@@ -1221,7 +1221,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance intelligence and speed per GB for local agentic workloads, and Nemotron 3.5 Bolt E4B 4GB, optimized […]",
           "event_at": null,
           "supporting": []
@@ -1238,42 +1238,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Dial in the next gaming session this GFN Thursday. New NVIDIA DLSS 4.5 controls give GeForce NOW members more choice over how supported games look and perform in the cloud, even without the latest hardware. Then, step into the Shroud as Keen Games’ Enshrouded leaves early access with its 1.0 release, or let the bolts […]",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "fb231790bb312d5b8f0e",
-          "source_id": "nvidia",
-          "source_name": "NVIDIA",
-          "group": "nvidia",
-          "trust": "official",
-          "url": "https://blogs.nvidia.com/blog/ec-scientific-computing-pledge/",
-          "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
-          "published_at": "2026-10-15T10:00:12Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
-          "excerpt": "Much of today’s scientific progress begins with computation. But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology. Especially for smaller labs, early-career scientists or science-based startups, the hardest part of research can be everything that comes bef",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "c46dcdda349de0a51015",
-          "source_id": "nvidia",
-          "source_name": "NVIDIA",
-          "group": "nvidia",
-          "trust": "official",
-          "url": "https://blogs.nvidia.com/blog/nordics-technology-ecosystem/",
-          "title": "The Nordics and NVIDIA Show What’s Possible When a Region Commits to Advanced Computing",
-          "published_at": "2026-10-15T05:00:12Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
-          "excerpt": "The Nordic countries have become the European leader in unicorn startup density, producing the most emerging companies valued at $1 billion or more per capita on the continent. Now, a new chapter for the region is unfolding as countries race to build one of Europe’s most consequential technology ecosystems. The many computing advancements already underway […]",
           "event_at": null,
           "supporting": []
         }
@@ -1300,7 +1266,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"2fda9776646c49d703bb54724efa52cc044ca9b75e962c941eeb4403c5d03a5c\"",
+      "etag": "W/\"b16030e3004a9f224f96ea81c5f1514d7c5fd35f9f71189111c3783677d62a77\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1362,16 +1328,34 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"7f8251776715b09e2e28aecc6e581b480a5ad1853fe2c1458d2b1c17231b0ba7\"",
+      "etag": "W/\"5ac94da286b818754bd600bdcf1422a93fcf45090d701a35bb8440afba8f95a6\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [],
+      "items": [
+        {
+          "id": "83a753b4160cba93855a",
+          "source_id": "vllm",
+          "source_name": "vLLM Releases",
+          "group": "vllm",
+          "trust": "official",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+          "title": "vLLM Releases: v0.32.0",
+          "published_at": "2026-10-18T06:50:48Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "# v0.32.0 ## Highlights This release features 814 commits from 363 contributors (121 new)! * **Structured decisions and generic parsers**: the new `POST /v1/systemone` endpoint answers `choice`, `noul` and `score` questions over a structured state (#59299), is served by default (#60677, #60696), and also runs on `Cloudflare/clef-omni` (#61064), `LiquidAI/d1-3B` (#60676) and DiffusionGemma (#60466)",
+          "event_at": null,
+          "supporting": []
+        }
+      ],
       "discovered": 30,
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"c5087366649afe2970939b8eea10319c0af1857bee60a2142a641b761d7a393f\"",
+      "etag": "W/\"f395ec3f06a7fb7cd41ab15c2351d0df2e62419d7a84beb42ebd5cacaf1f21e6\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1388,7 +1372,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "## What's Changed * win: prevent orphaned runners by @dhiltgen in https://github.com/ollama/ollama/pull/18500 * gguf: add the q2_0 tensor and file types by @jmorganca in https://github.com/ollama/ollama/pull/18967 * Launch clef in Ollama's cloud by @jberg5 in https://github.com/ollama/ollama/pull/19036 * use identifiers for --ask mode question keys by @jberg5 in https://github.com/ollama/ollama/pu",
           "event_at": null,
           "supporting": []
@@ -1407,7 +1391,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"e7e542a26e17246c635a4de041da534ee71008f2525cccf7aedcab0225193028\"",
+      "etag": "W/\"0c3daa9af23b734f1bb3f3608fd0664bba347cc5e98c577b99b437bff4a10336\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1424,7 +1408,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Changes since langchain-core==1.6.11 release(core): 1.6.12 (#41277) fix(core): propagate extras on content-block-start events (#41272)",
           "event_at": null,
           "supporting": []
@@ -1441,7 +1425,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Changes since langchain-core==1.6.10 release(core): 1.6.11 (#41260) feat(core): accept address inside LangChainTracer (#41006)",
           "event_at": null,
           "supporting": []
@@ -1506,34 +1490,34 @@
           "excerpt": "Changes since cli==0.4.35 * release(cli): 0.4.36 (#9330) * fix(cli): accept serverless and dedicated deployment aliases (#9325) * fix(cli): push through the active Docker context in langgraph deploy (#9321)",
           "event_at": null,
           "supporting": []
-        },
-        {
-          "id": "4f65ede5b54ee4f084d8",
-          "source_id": "langgraph",
-          "source_name": "LangGraph Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langgraph/releases/tag/prebuilt%3D%3D1.1.1",
-          "title": "LangGraph Releases: langgraph-prebuilt==1.1.1",
-          "published_at": "2026-10-15T04:32:40Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T00:31:40.837870Z",
-          "excerpt": "Changes since prebuilt==1.1.0 * release(prebuilt): 1.1.1 (#9316) * release(checkpoint-postgres): 3.2.0 (#9313) * release(checkpoint-postgres): 3.1.3 (#9287) * release(checkpoint-sqlite): 3.1.2 (#9288) * release(langgraph): 1.2.15 (#9283) * fix(langgraph,prebuilt): stop ToolNode from swallowing invalid resume values (#9232) * fix: order delta channel replay by task path (#8544) * release(langgraph)",
-          "event_at": null,
-          "supporting": []
         }
       ],
       "discovered": 30,
       "verified": 30
     },
     "litellm": {
-      "etag": "W/\"490686266fdff8aced393f92f5c91c240eef93ff05325002abc7100715d8af16\"",
+      "etag": "W/\"7047211993e3da3ef4aa094ea3da1ae4b983086bebea554fb9cb8a8b82c0a67a\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "fe3326f4dbcaa51b1783",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.0",
+          "title": "LiteLLM Releases: v1.106.0",
+          "published_at": "2026-10-18T05:53:32Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). Every release is signed with the same key introduced in [commit `0112e53`](https://github.com/BerriAI/litellm/commit/0112e53046018d726492c814b3644b7d376029d0). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "50f67e0448587229f801",
           "source_id": "litellm",
@@ -1546,14 +1530,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). Every release is signed with the same key introduced in [commit `0112e53`](https://github.com/BerriAI/litellm/commit/0112e53046018d726492c814b3644b7d376029d0). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 16,
-      "verified": 16
+      "discovered": 15,
+      "verified": 15
     },
     "arxiv-ai": {
       "etag": "f21fc5f04cec1e3e72f6460833ef71297d534333549866f6d61221d851362d41",
@@ -1603,7 +1587,7 @@
     "techcrunch-ai": {
       "etag": "W/\"745320b7be0fe25d85afe12a46a0b7c5\"",
       "modified": "Sat, 17 Oct 2026 22:35:53 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1826,7 +1810,7 @@
     "ars": {
       "etag": "",
       "modified": "Sat, 17 Oct 2026 12:45:08 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -2038,7 +2022,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"d912e91ce14043b652ac6b2848da63d0\"",
+      "etag": "W/\"dea5fd10046042297ae27a43f985d115\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -2055,7 +2039,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "After backlash, Meta is updating its terms again to remove language that suggested it could scrape content from sites, including news sites, to train its AI. Specifically, the following language no longer appears on the commercial terms page: … Meta may use any content from such domains, web pages, or URLs to provide, develop, improve, […]",
           "event_at": null,
           "supporting": []
@@ -2072,7 +2056,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Autonomous agents are the hottest thing in AI. OpenAI, Meta, Google, Instinct, and others promise their agents can scour the internet on your behalf, doing anything from booking a dinner reservation and cleaning out your inbox to buying new shoes. But what happens when the rest of the internet won't play nice? In recent weeks, […]",
           "event_at": null,
           "supporting": []
@@ -2089,7 +2073,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Nvidia's RTX Spark N1X processor is finally here, and we've been collectively testing a small fortune's worth of powerful laptops sporting this new \"superchip.\" RTX Spark is designed to be a high-performing Arm-based SoC for laptops and small desktop computers, rivaling the best from Apple, Intel, AMD, and Qualcomm. It has loads of cores, Nvidia […]",
           "event_at": null,
           "supporting": []
@@ -2106,7 +2090,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Meta's new terms appear to give it permission to crawl and scrape websites \"associated\" with the businesses that use its platforms - including online publishers, according to a report from Nieman Lab. The new terms, which go into effect on October 30th, say Meta can use this outside content to \"develop, improve, research,\" and \"train\" […]",
           "event_at": null,
           "supporting": []
@@ -2123,7 +2107,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "OpenAI's ChatGPT Atlas browser is gone, but now ChatGPT's Google Chrome extension is getting some upgrades that allow it to use the browser tabs you already have open. With the extension installed, OpenAI says ChatGPT can now view your browser tabs when you tag Chrome in ChatGPT's web or desktop app, posting a demo video […]",
           "event_at": null,
           "supporting": []
@@ -2140,7 +2124,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Sega is removing Total War: Shogun 2 - Complete Edition from storefronts following a disastrous launch where users complained about issues like bugs and upscaling that appears to have been done by AI. Complete Edition, a remaster of the 2011 strategy game, launched on Tuesday, and it bundled the main game and all of its […]",
           "event_at": null,
           "supporting": []
@@ -2157,7 +2141,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Though movies about disruptive tech founders are nothing new, 2026 has been unusually stacked with features that take a much more critical look at how Silicon Valley is reshaping our reality. Aaron Sorkin's The Social Reckoning frames Mark Zuckerberg as a robotic villain whose ambitions are destabilizing society. Nathan Fielder and Lance Oppenheim's You Can […]",
           "event_at": null,
           "supporting": []
@@ -2174,7 +2158,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "President Donald Trump posted a series of photos on Truth Social showing off renovations to the White House - but one of them appears to be modified with AI. The picture, which compares an old White House column to a \"restored\" one, has several discrepancies and was flagged by Google's AI detector as \"made or […]",
           "event_at": null,
           "supporting": []
@@ -2191,7 +2175,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Bluesky's Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make \"small\" social apps like games, polls, and dashboards that you can then share with others as their own websites. In an interview at TechCrunch Disrupt, Bluesky CEO Toni Schneider said […]",
           "event_at": null,
           "supporting": []
@@ -2208,7 +2192,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Meta announced the Muse Spark Open AI model today, claiming that it's the \"most capable US open-weight model to date.\" But the company also says that it's the \"the first model in its class\" that can \"run on your desktop using two Apple M5 Ultra Mac Studios with the latest MLX framework.\" Meta and Apple, […]",
           "event_at": null,
           "supporting": []
@@ -2224,6 +2208,40 @@
       "error_code": "",
       "items": [
         {
+          "id": "00dba2241b32032df06a",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/onlyfans-creators-are-pissed-that-meta-lets-muse-talk-dirty/",
+          "title": "OnlyFans Creators Are Pissed That Meta Lets Muse Talk Dirty",
+          "published_at": "2026-10-18T10:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "Adult performers are questioning why Meta allows its AI agent to sext while restricting their social media accounts.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "d348780bad1790b53766",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/data-center-industry-is-trying-to-woo-kids/",
+          "title": "Data Centers Have a New PR Plan: Your Kid’s Field Trip",
+          "published_at": "2026-10-18T10:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "Amid a wave of backlash, some industry-friendly groups are employing creative and time-tested strategies to woo the youth.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "22e1aad769409d127626",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2235,7 +2253,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "The DNA inside our cells isn’t just a series of instructions, but something far more dynamic. Like scientists, AI models don't yet have the data to properly decode it.",
           "event_at": null,
           "supporting": []
@@ -2252,7 +2270,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "The short-lived White House press secretary was listed as an adviser to a Kristi Noem–linked company that aims to use AI for mining. Both the company and she say she never worked there.",
           "event_at": null,
           "supporting": []
@@ -2269,7 +2287,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "MIT professor Sherry Turkle warns that people have become dangerously enmeshed with chatbots.",
           "event_at": null,
           "supporting": []
@@ -2286,7 +2304,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "A network of AI-generated models is using comics’ material to funnel views to their OnlyFans and Fanvue accounts—and there’s not much comedians can do about it.",
           "event_at": null,
           "supporting": []
@@ -2303,7 +2321,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "This week on “Uncanny Valley,” we dive into an unexpected Muse feature, shadowy spending from the largest pro-AI super PAC, and men’s tendency to lie about how much they know about AI.",
           "event_at": null,
           "supporting": []
@@ -2320,7 +2338,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Powerful AI models continue to cause chaos, but their targets aren’t widely seeking justice. Instead, they’re being encouraged to adopt those same tools.",
           "event_at": null,
           "supporting": []
@@ -2348,9 +2366,9 @@
       "verified": 0
     },
     "juya-discovery": {
-      "etag": "W/\"58d568e913c04456f1b66524faa9bde9\"",
+      "etag": "W/\"9c22d84cf956a83e0be5bf50fca6fbea\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
         {
@@ -2365,7 +2383,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Working largely on its own, Claude designed quantum circuits that improve on the best published versions, in some cases by an order of magnitude or more. Through a series of algorithmic advances, the estimated number of gates has come down to about 340 million—a roughly 150,000-fold reduction, corresponding to a few hours of computation on a future machine with about three million physical qubits.",
           "event_at": null,
           "supporting": []
@@ -2382,7 +2400,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "The decades-old mystery of the origins of one of the most popular cryptographic standards has been explained. The $36,864 for finding the seeds will be donated to the Internet Security Research Group . Frontier Red Team Claude reveals ECDSA curve origins Oct 16, 2026 “It’s just timestamps”: the decades-old mystery of the origins of one of the most popular cryptographic standards has been explained",
           "event_at": null,
           "supporting": []
@@ -2399,133 +2417,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the second looks at the gap between how the public and Anthropic employees expect AI to affect work and the economy. Economics Working at the frontier shapes expectations for the future Oct 16, 2026 We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the secon",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "c3f9aa1e97f35f2465d0",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-          "title": "An update on independent evaluators",
-          "published_at": "2026-10-15T17:20:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
-          "excerpt": "Anthropic announces updates to embedding independent evaluators Announcements An update on independent evaluators Oct 15, 2026 Last month, we committed to stronger independent, third-party assessment of our models and safety practices. We also signed the White House Accord on Super Intelligence, in which companies pledged to partner with independent external auditors or evaluators. Today, we’re an",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "09cafcfe0698167f2399",
-          "source_id": "primary-google",
-          "source_name": "Google",
-          "group": "google",
-          "trust": "official",
-          "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
-          "title": "More ways to connect with the web from Search",
-          "published_at": "2026-10-15T16:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
-          "excerpt": "Google is updating AI Mode and AI Overviews to include clearer links, context about sources, and more. Breadcrumb Home Products & Platforms Products Search More ways to connect with the web from Search Oct 15, 2026 | x.com Facebook LinkedIn Mail Copy link We’re updating AI Mode and AI Overviews with clearer inline links, context about sources, timely articles and more to help you explore the best ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "9c2c9f923050a8407dfb",
-          "source_id": "primary-google",
-          "source_name": "Google",
-          "group": "google",
-          "trust": "official",
-          "url": "https://blog.google/products-and-platforms/products/news/news-ai-pilot-update-publishers/",
-          "title": "400 publications are now partnering with us on our News AI pilot program.",
-          "published_at": "2026-10-15T16:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
-          "excerpt": "Breadcrumb Home Products & Platforms Products Google News 400 publications are now partnering with us on our News AI pilot program. Oct 15, 2026 People’s information habits are evolving quickly, and platforms and publishers of all sizes are navigating these changes. To help meet this moment, we’re evolving our partnerships as newsrooms adapt to these shifts in user preferences and new technology. ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "10f08c7ebe2e818c655b",
-          "source_id": "primary-cloudflare",
-          "source_name": "Cloudflare",
-          "group": "cloudflare",
-          "trust": "official",
-          "url": "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web",
-          "title": "Cloudflare and OpenAI: Making AI discovery better for everyone",
-          "published_at": "2026-10-15T13:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
-          "excerpt": "How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer wasted requests – making the experience better for users and website owners alike. Blog AI AI Search Bots +1 Show 1 more tags 4 Tags Show 4 tags Post Tags AI AI Search Bots Crawlers All tags Matching tags No tags found 1.1.1.1 2FA Abuse Access Access Control Lists (ACLs) Accessibilit",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "8a3f0de3c947e4b025c9",
-          "source_id": "primary-elevenlabs",
-          "source_name": "ElevenLabs",
-          "group": "elevenlabs",
-          "trust": "official",
-          "url": "https://elevenlabs.io/blog/introducing-instant-soundtracks",
-          "title": "Introducing Instant Soundtracks",
-          "published_at": "2026-10-15T12:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
-          "excerpt": "Blog Product Introducing Instant Soundtracks Written by Renee Zhang Published Oct 15, 2026 Last updated Oct 16, 2026 Listen Listen to this article 0:00 0:00 0:00 1.0x On this page Introduction Add music and sound effects to any video in ElevenCreative Keep refining in the editor Better short-form timing, more control Available today in ElevenCreative, ElevenMusic and the API Generate a soundtrack ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "12b3f8153ee100f80e6a",
-          "source_id": "hf-tencent",
-          "source_name": "tencent 官方模型仓库",
-          "group": "tencent",
-          "trust": "official",
-          "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
-          "title": "tencent/Hy-Memory-30B-A3B 官方模型仓库新建记录",
-          "published_at": "2026-10-15T09:52:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "repository_created",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
-          "excerpt": "--- language: - en - zh pipeline_tag: text-generation library_name: transformers license: apache-2.0 --- Hy-Memory-30B-A3B Tencent Hunyuan --- ## Model Introduction **Hy-Memory-30B-A3B** is a compact long-term-memory writer model (~3B active parameters) developed by Tencent Hunyuan to execute the write path inside external memory frameworks. It directly replaces the general-purpose LLM inside **Me",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "bcdcc6a35fd1e8756560",
-          "source_id": "media-decoder",
-          "source_name": "the-decoder.com",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
-          "title": "Anthropic's Q3 revenue hits $16.8B but growth slows ahead of planned November IPO",
-          "published_at": "2026-10-15T09:50:43Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T12:31:09.583474Z",
-          "excerpt": "Anthropic hit $16.8 billion in third-quarter revenue, a 45 percent gain that still falls far short of Q2's 140 percent surge. With a November IPO approaching, some investors now expect the company's valuation to drop below $1.5 trillion. Slowing grow Anthropic shared its quarterly numbers with potential investors at a private meeting in San Francisco, according to multiple US media reports. Third-",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 15,
-      "verified": 15
+      "discovered": 4,
+      "verified": 4
     },
     "openai-community": {
       "etag": "",
@@ -2545,7 +2444,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "New voices. Better accents. And less “checking…” GPT-Live-1.1 is an update for ChatGPT, Codex, and dots, introducing 13 new voices and considerably better performance in French, German, Hindi, Mexican Spanish, Korean, Japanese, and many other non-English languages. Delegation is now more natural, and steerability has also improved. Continuous improvements to voice models and the overall product ex",
           "event_at": null,
           "supporting": []
@@ -2572,7 +2471,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Working largely on its own, Claude designed quantum circuits that improve on the best published versions, in some cases by an order of magnitude or more. Through a series of algorithmic advances, the estimated number of gates has come down to about 340 million—a roughly 150,000-fold reduction, corresponding to a few hours of computation on a future machine with about three million physical qubits.",
           "event_at": null,
           "supporting": []
@@ -2589,7 +2488,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "The decades-old mystery of the origins of one of the most popular cryptographic standards has been explained. The $36,864 for finding the seeds will be donated to the Internet Security Research Group . Frontier Red Team Claude reveals ECDSA curve origins Oct 16, 2026 “It’s just timestamps”: the decades-old mystery of the origins of one of the most popular cryptographic standards has been explained",
           "event_at": null,
           "supporting": []
@@ -2606,7 +2505,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "How will AI reshape the economy in the years ahead? What is the core source of disagreement about AI's future impact on the economy? This note presents new survey evidence on these questions. Economics The AI expectations gap Oct 16, 2026 Read in PDF Szymon Sacher, Tess Cotter, Charles I. Jones, Anton Korinek, Peter McCrory Key findings US adults expect AI capabilities to advance rapidly in the co",
           "event_at": null,
           "supporting": []
@@ -2623,7 +2522,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the economy. Economics How employment is changing at Anthropic Oct 16, 2026 Read in PDF Nathan Wilmers, Regina Catipon, Maxim Massenkoff, Peter McCrory How has AI restructured work and e",
           "event_at": null,
           "supporting": []
@@ -2640,7 +2539,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the second looks at the gap between how the public and Anthropic employees expect AI to affect work and the economy. Economics Working at the frontier shapes expectations for the future Oct 16, 2026 We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the secon",
           "event_at": null,
           "supporting": []
@@ -2659,11 +2558,79 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"da51fe3726a4be01c1c37647a1c8b5d5\"",
-      "modified": "Sat, 17 Oct 2026 15:38:25 GMT",
+      "etag": "\"655184d376f59f2df46600db6f343b26\"",
+      "modified": "Sun, 18 Oct 2026 10:57:47 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "07ad320e211247a9d868",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
+          "title": "Two German courts now hold Google liable for what its AI overviews say",
+          "published_at": "2026-10-18T10:52:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "Google tried to overturn a landmark Munich ruling on AI search liability by appealing, then quietly settled. The strategy isn't working. The Aachen Regional Court just applied the exact same reasoning in a new case where Google's AI falsely attributed criminal offenses to a doctor that actually involved someone else. A consistent legal view is forming across German courts, and it treats Google's A",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "a39c8c1ad857a7a68d5c",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-consults-law-firms-to-set-fair-negotiation-norms-before-ai-agents-start-cutting-deals/",
+          "title": "Anthropic consults law firms to set fair negotiation norms before AI agents start cutting deals",
+          "published_at": "2026-10-18T09:11:29Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "Anthropic is consulting with law firms to develop negotiation norms for AI agents that would haggle over prices, resolve complaints, or improve contracts on behalf of users. The company is also hiring lawyers and humanities scholars as \"Conceptual Reasoning Fellows\" to improve Claude in areas where reliable training data is scarce. The article Anthropic consults law firms to set fair negotiation n",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "8b1cc7e586f3f1bf2eec",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/ai-agents-have-bad-taste-in-long-term-decisions-and-a-new-benchmark-proves-it/",
+          "title": "AI agents have bad taste in long-term decisions and a new benchmark proves it",
+          "published_at": "2026-10-18T08:49:41Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "A new benchmark called Taste-Bench tests how well AI agents make strategic choices during long-running tasks. Even the best model, GPT-5.6 Sol, picks the right path on just under 60 percent of simple binary questions. Thinking longer doesn't help. The article AI agents have bad taste in long-term decisions and a new benchmark proves it appeared first on The Decoder .",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "a80971917203b7f70732",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/ai-agents-chasing-a-465-train-refund-invented-excuses-leaked-medical-data-and-spammed-an-mps-office/",
+          "title": "AI agents chasing a $465 train refund invented excuses, leaked medical data, and spammed an MP's office",
+          "published_at": "2026-10-18T08:15:04Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "excerpt": "Six AI agents were tasked with recovering £350 (about $465) for a canceled train ticket in an experiment. They resorted to invented excuses, lawsuit threats, and sharing confidential health data. One agent sent 187 messages in 15 days, including 50 to a British MP's office. None of the models secured the refund, but the researcher warns of \"agentic flooding\" if these assistants are deployed at sca",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "8f307cfd8d1116682120",
           "source_id": "decoder",
@@ -2676,7 +2643,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "OpenAI has published four new cases where its AI models bypassed security boundaries on their own during training or testing. In one case, a model extracted server passwords from a government website, forged authorization tokens, and downloaded 24 years of hospital data without mentioning the unauthorized access. The article An OpenAI model hacked a government site, grabbed 24 years of hospital da",
           "event_at": null,
           "supporting": []
@@ -2693,7 +2660,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Anthropic's AI model Claude has solved a 25-year-old cryptography puzzle. The mysterious seeds behind NIST's standard curves for digital signatures were provided by the NSA without explanation, raising long-standing suspicion about built-in backdoors. Claude figured out in under 30 minutes that the seeds came from \"lrand48,\" a simple C random number generator, making deliberate backdoors far less ",
           "event_at": null,
           "supporting": []
@@ -2710,7 +2677,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "Deepseek has released V4.1-Flash-1017 as an open-weight model that posts better benchmarks, finishes tasks faster, and produces shorter outputs than its predecessor. The company is also opening up its internal search engine through new Search and Fetch APIs at $0.75 per 1,000 calls. API users in tools like Claude Code and Codex get free access for now. The article Deepseek V4.1 Flash 1017 beats la",
           "event_at": null,
           "supporting": []
@@ -2727,7 +2694,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "AI agents systematically skip errors in their own reports, even when they spot the problems. In a study by Google Research, MIT, and Harvard, GPT-5.5 left out negative results in 198 out of 200 paper abstracts. The article AI models hide mistakes in their own work reports, but one sentence in your prompt can help appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2744,7 +2711,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "OpenAI submitted a 166-page solution to the Navier-Stokes problem but apparently doesn't fully understand its own proof. Several groups of experts dispute the claimed methodology, saying the actual approach differs from what OpenAI described. And because language models are black boxes, where the underlying ideas came from will likely never be clear. The article Mathematicians say OpenAI doesn't u",
           "event_at": null,
           "supporting": []
@@ -2761,76 +2728,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
+          "collected_at": "2026-10-18T12:31:12.285064Z",
           "excerpt": "OpenAI's updated Chrome extension lets ChatGPT access open browser tabs, sum up content, and use \"Computer Use\" in Work mode to fill out forms or compare products across several tabs. It is open to all ChatGPT plans. The article ChatGPT becomes a full Chrome browser assistant that reads and acts on your open tabs appeared first on The Decoder .",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "33f25b1f0c8473711ce5",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technologies/",
-          "title": "China plans to tighten export controls on open-weight models and 23 key AI technologies",
-          "published_at": "2026-10-16T17:42:47Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
-          "excerpt": "China plans to restrict exports of 23 key AI technologies, including model weights, source code, and training methods for systems hitting 10^26 FLOPs or 2 trillion parameters. A fast-track rule will still clear open-source releases as soon as they are registered, but the move will likely push Western companies to double down on US open-weight models over Chinese alternatives. The article China pla",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "8d23fe4bf5d07911dcbf",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/googles-gemini-4-argon-is-closer-to-the-ai-frontier-than-any-google-model-in-months/",
-          "title": "Google's Gemini 4 Argon is closer to the AI frontier than any Google model in months",
-          "published_at": "2026-10-16T15:03:46Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
-          "excerpt": "Google Deepmind's Gemini 4 Argon scored 97.5 percent on the ARC-AGI-3 benchmark, making Google the second lab after OpenAI to cross the 95 percent mark. But the results swing wildly depending on the test setup: in the standard harness, the score drops to just 49.8 percent. Argon also trails rivals in math and software engineering. The article Google's Gemini 4 Argon is closer to the AI frontier th",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "a583c3839293442d03e4",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/is-ai-interpretability-close-to-a-breakthrough-a-new-essay-has-researchers-divided/",
-          "title": "Is AI interpretability close to a breakthrough? A new essay has researchers divided",
-          "published_at": "2026-10-16T13:48:08Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
-          "excerpt": "Neural networks may be much easier to read than researchers assumed, with about 90 percent of neurons serving a clear function. That would be big news for AI safety research, since deception or dangerous behavior could be spotted directly in a model's circuits. Researchers are still debating whether the thesis holds up. The article Is AI interpretability close to a breakthrough? A new essay has re",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "80ab6ac91ca5d150c803",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/openais-new-rosalind-academic-plan-gives-research-labs-up-to-30-free-seats-for-a-year/",
-          "title": "OpenAI's new Rosalind Academic Plan gives research labs up to 30 free seats for a year",
-          "published_at": "2026-10-16T13:15:09Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-18T00:31:06.235887Z",
-          "excerpt": "OpenAI is launching the Rosalind Academic Plan, a free offering that's currently open only to research labs at US universities without an enterprise contract. The article OpenAI's new Rosalind Academic Plan gives research labs up to 30 free seats for a year appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
         }
@@ -3117,6 +3016,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-18-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -4071,6 +3975,50 @@
       ],
       "versions": [],
       "event_type": "announcement"
+    },
+    {
+      "id": "83a753b4160cba93855a",
+      "issue": "2026-10-18-pm",
+      "cutoff": "2026-10-18T12:30:00Z",
+      "title": "vLLM Releases: v0.32.0",
+      "urls": [
+        "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
+      ],
+      "entities": [
+        "vllm"
+      ],
+      "versions": [
+        "v0.32.0"
+      ],
+      "event_type": "release"
+    },
+    {
+      "id": "fe3326f4dbcaa51b1783",
+      "issue": "2026-10-18-pm",
+      "cutoff": "2026-10-18T12:30:00Z",
+      "title": "LiteLLM Releases: v1.106.0",
+      "urls": [
+        "https://github.com/BerriAI/litellm/releases/tag/v1.106.0"
+      ],
+      "entities": [
+        "litellm"
+      ],
+      "versions": [
+        "v1.106.0"
+      ],
+      "event_type": "release"
+    },
+    {
+      "id": "a80971917203b7f70732",
+      "issue": "2026-10-18-pm",
+      "cutoff": "2026-10-18T12:30:00Z",
+      "title": "AI agents chasing a $465 train refund invented excuses, leaked medical data, and spammed an MP's office",
+      "urls": [
+        "https://the-decoder.com/ai-agents-chasing-a-465-train-refund-invented-excuses-leaked-medical-data-and-spammed-an-mps-office/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "business"
     }
   ]
 }
