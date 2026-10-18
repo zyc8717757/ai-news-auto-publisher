@@ -3118,8 +3118,8 @@
     },
     "2026-10-18-am-r1": {
       "deployment": "ready",
-      "email": "pending",
-      "email_attempts": 0
+      "email": "sending",
+      "email_attempts": 1
     }
   },
   "history": [
