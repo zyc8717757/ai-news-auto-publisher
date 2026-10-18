@@ -3118,7 +3118,7 @@
     },
     "2026-10-18-am-r1": {
       "deployment": "ready",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
