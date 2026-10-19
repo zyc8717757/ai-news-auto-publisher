@@ -2548,7 +2548,7 @@
     },
     "2026-10-19-pm-r1": {
       "deployment": "ready",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
