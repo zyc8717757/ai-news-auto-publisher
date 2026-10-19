@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-10-19T00:30:00Z",
+  "last_covered_at": "2026-10-19T12:30:00Z",
   "ai_attempts": [
     "2026-10-17T12:31:49.156557Z",
     "2026-10-17T12:31:52.638766Z",
@@ -906,7 +906,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
           "event_at": null,
           "supporting": []
@@ -933,7 +933,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new entity with a structure that increases the stake as the company grows. One example is labor market impacts. AI may generate enormous economic value, but it could also cause instability for many workers. Anthropic has already committed $200 million to studying and addressing this issue, but given the pace o",
           "event_at": null,
           "supporting": []
@@ -943,7 +943,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"aTL-1w\"",
+      "etag": "\"kyUxxQ\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -961,35 +961,17 @@
       "verified": 20
     },
     "huggingface": {
-      "etag": "W/\"3f6f6-Ef/AItza4NWqyHSy8jzb0/DQhEU\"",
+      "etag": "W/\"3f81b-GKa6fWiIrwNk0RqmPng9ecRQks0\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
-      "items": [
-        {
-          "id": "138e9b7e7d9747243aa5",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
-          "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
-          "published_at": "2026-10-16T01:44:47Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-17T00:31:40.837870Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 50,
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"dc5422837167ddcaac7dba4a60aca697\"",
-      "modified": "Mon, 19 Oct 2026 00:27:09 GMT",
+      "etag": "\"13c90150753dd9d0957b2dd1efd83207\"",
+      "modified": "Mon, 19 Oct 2026 06:34:17 GMT",
       "status": "ok",
       "error_code": "",
       "items": [],
@@ -997,9 +979,9 @@
       "verified": 10
     },
     "nvidia": {
-      "etag": "\"be3145f31fbe2777afa5f7dae26e23ec-gzip\"",
-      "modified": "Sun, 18 Oct 2026 04:04:17 GMT",
-      "status": "unchanged",
+      "etag": "\"72a6bc2492b88a6ab966d62cc36afab5-gzip\"",
+      "modified": "Mon, 19 Oct 2026 03:14:19 GMT",
+      "status": "ok",
       "error_code": "",
       "items": [
         {
@@ -1014,7 +996,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T12:31:12.285064Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "NVIDIA RTX Spark laptops are now available, bringing NVIDIA Blackwell RTX graphics, up to 128GB of unified memory and the full NVIDIA AI platform to slim, premium Windows PCs. Starting at $2,399, laptops from ASUS, Dell, HP, Lenovo, Microsoft and MSI bring powerful local AI, content creation and gaming capabilities to a portable device, with […]",
           "event_at": null,
           "supporting": []
@@ -1042,7 +1024,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"3505d39c80e518e94d9a35432adc5aefeac59c2c4683cbab58024e13db0125ed\"",
+      "etag": "W/\"f6efebf09d2b577a1626328b46170b51ab41693e92363db02528e79819a810f7\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1051,7 +1033,7 @@
       "verified": 30
     },
     "transformers": {
-      "etag": "W/\"b03dd9b7dba42e0634ac153256f2eac08135027e155fdb8c42a50998520d6b1e\"",
+      "etag": "W/\"0222d1bee128036034611e796e0ae2de9c358f6aafcc5887fe00cc12c2b9e060\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1068,7 +1050,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "# Release v5.20.1 Special surprise including the new model Beam from Reflection AI :partying_face: Beam is a token-efficient, frontier-scale model focused on coding and agentic use cases. It is built for teams that want to run a powerful model on their own hardware, infrastructure, or cloud, and customize it to their specific needs. **Links:** [Documentation](https://huggingface.co/docs/transforme",
           "event_at": null,
           "supporting": []
@@ -1087,7 +1069,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"9a08f61a8882045005dc16041898906e40bf04a65ede0fa711fdfb2e685f7638\"",
+      "etag": "W/\"a5a28a926a03976ab070e23adb6b208fbb8df245cb5a483485b98ccf98edb54c\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1104,7 +1086,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "# v0.32.0 ## Highlights This release features 814 commits from 363 contributors (121 new)! * **Structured decisions and generic parsers**: the new `POST /v1/systemone` endpoint answers `choice`, `noul` and `score` questions over a structured state (#59299), is served by default (#60677, #60696), and also runs on `Cloudflare/clef-omni` (#61064), `LiquidAI/d1-3B` (#60676) and DiffusionGemma (#60466)",
           "event_at": null,
           "supporting": []
@@ -1114,7 +1096,7 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"9973fa337fe24747f323cb0068d2956cfc606d7ce7602bcc5e4c03a0e3bfc6c4\"",
+      "etag": "W/\"6bf0048e0a21b10f36de70b420208a2f40e23a6678f84c9ad1fea9ce0c534cbb\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1131,7 +1113,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "## What's Changed * win: prevent orphaned runners by @dhiltgen in https://github.com/ollama/ollama/pull/18500 * gguf: add the q2_0 tensor and file types by @jmorganca in https://github.com/ollama/ollama/pull/18967 * Launch clef in Ollama's cloud by @jberg5 in https://github.com/ollama/ollama/pull/19036 * use identifiers for --ask mode question keys by @jberg5 in https://github.com/ollama/ollama/pu",
           "event_at": null,
           "supporting": []
@@ -1150,7 +1132,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"4413b9e564b352cffc107cf66b2abff52245e32825111ac54984646d6ae2a74c\"",
+      "etag": "W/\"3fdfc66329644316c7d198456dfc51b19dfcaba976a48557ff82cc7b69804449\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1167,7 +1149,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Changes since langchain-core==1.6.11 release(core): 1.6.12 (#41277) fix(core): propagate extras on content-block-start events (#41272)",
           "event_at": null,
           "supporting": []
@@ -1327,8 +1309,8 @@
       "verified": 0
     },
     "techcrunch-ai": {
-      "etag": "W/\"d6852a5322665552a2317aa415bf1671\"",
-      "modified": "Sun, 18 Oct 2026 22:38:23 GMT",
+      "etag": "W/\"11a429ee52283a43ba8c7af48524e0e1\"",
+      "modified": "Mon, 19 Oct 2026 08:18:12 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1344,7 +1326,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Anthropic said that it will commit 5% of its shares to the fund.",
           "event_at": null,
           "supporting": []
@@ -1361,7 +1343,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer.",
           "event_at": null,
           "supporting": []
@@ -1378,7 +1360,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.",
           "event_at": null,
           "supporting": []
@@ -1395,7 +1377,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year.",
           "event_at": null,
           "supporting": []
@@ -1412,7 +1394,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platform.",
           "event_at": null,
           "supporting": []
@@ -1429,7 +1411,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
           "event_at": null,
           "supporting": []
@@ -1446,7 +1428,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators, robotic hands, software, and safety standards still being rebuilt. This view runs counter to those who believe that robotics, powered by a general foundation model, is about to have […]",
           "event_at": null,
           "supporting": []
@@ -1463,7 +1445,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators, robotic hands, software, and safety standards still being rebuilt. This view runs counter to those who believe that robotics, powered by a general foundation model, is about to have […]",
           "event_at": null,
           "supporting": []
@@ -1480,7 +1462,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "According to Elorian's evaluations, Glimpse outperforms even GPT-6 Astra on scientific chart reasoning and short-form video captioning, with competitive results on other visual reasoning tasks.",
           "event_at": null,
           "supporting": []
@@ -1497,7 +1479,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The data comes from Vercel's AI gateway, a unified API service similar to OpenRouter.",
           "event_at": null,
           "supporting": []
@@ -1514,7 +1496,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Actor and angel investor Mark Wahlberg says he's OK with using AI in filmmaking, provided it's used \"to enhance what you're doing.\"",
           "event_at": null,
           "supporting": []
@@ -1531,7 +1513,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Counterfeiters are getting better at replicating brands' marks and passing off dupes, known as \"superfakes,\" as genuine items. A startup called Veritas wants to tackle the problem with its own chip that verifies goods.",
           "event_at": null,
           "supporting": []
@@ -1551,10 +1533,27 @@
     },
     "ars": {
       "etag": "",
-      "modified": "Sun, 18 Oct 2026 17:23:14 GMT",
+      "modified": "Mon, 19 Oct 2026 12:17:49 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "31008b86b22b3f7b0c4e",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/gadgets/2026/10/trans-pacific-journey-tested-stratospheric-cell-tower-concept-in-japan/",
+          "title": "Stratospheric airship flew from US to Japan to test sky cell tower concept",
+          "published_at": "2026-10-19T11:05:49Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
+          "excerpt": "Tests showed Sceye’s high-flying platform can deliver connectivity in disasters.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "796bbd796e41457364e7",
           "source_id": "ars",
@@ -1567,7 +1566,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The outside watchdog can publish its findings without Anthropic's approval.",
           "event_at": null,
           "supporting": []
@@ -1584,7 +1583,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Research suggests listening more while talking less. Killing aimless meetings can help, too.",
           "event_at": null,
           "supporting": []
@@ -1601,7 +1600,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The single-player is just OK, but according to the players, that doesn't matter.",
           "event_at": null,
           "supporting": []
@@ -1618,7 +1617,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The actions could have resulted in criminal charges had humans been behind the keyboard.",
           "event_at": null,
           "supporting": []
@@ -1635,7 +1634,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Discord user flagged AI CSAM, triggering arrest of New Jersey deputy AG.",
           "event_at": null,
           "supporting": []
@@ -1652,7 +1651,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "There are still significant hurdles ahead, both technical and legislative.",
           "event_at": null,
           "supporting": []
@@ -1669,7 +1668,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The bug is fixed, but privacy concerns remain.",
           "event_at": null,
           "supporting": []
@@ -1686,7 +1685,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "FDA scientists said none of the popular drugs have been proven safe or effective.",
           "event_at": null,
           "supporting": []
@@ -1703,7 +1702,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Meta “streamlined” its commercial TOS. Legal experts warn it’s an AI power grab.",
           "event_at": null,
           "supporting": []
@@ -1720,7 +1719,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Millions kept changing hands long after the election outcomes were effectively settled.",
           "event_at": null,
           "supporting": []
@@ -1737,25 +1736,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "If you want to make a car spin in the air, compressed gas is a good way to do it.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "ad740557d1c83584c98d",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/tech-policy/2026/10/romance-scam-doc-super-scam-me-takes-viewers-deep-into-love-bombing-terrain/",
-          "title": "Super Scam Me documentary shows what it takes to catch a romance scammer",
-          "published_at": "2026-10-16T14:00:59Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
-          "excerpt": "Watch an exclusive clip from Super Scam Me where a victim tracks down her scammer.",
           "event_at": null,
           "supporting": []
         }
@@ -1764,7 +1746,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"b5b924dcaa56c93b9c15927d694a7538\"",
+      "etag": "W/\"8ac64c91153bebed445693e3584db079\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1781,7 +1763,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Carolyn Marvin was arrested and charged with disorderly conduct after blocking the path of an Uber delivery robot and refusing to get out of the way. Marvin told Philadelphia's ABC13 \"I know they're taking the jobs of human delivery workers and so, I have been protesting them whenever I saw them by standing in front […]",
           "event_at": null,
           "supporting": []
@@ -1798,7 +1780,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "After backlash, Meta is updating its terms again to remove language that suggested it could scrape content from sites, including news sites, to train its AI. Specifically, the following language no longer appears on the commercial terms page: … Meta may use any content from such domains, web pages, or URLs to provide, develop, improve, […]",
           "event_at": null,
           "supporting": []
@@ -1815,7 +1797,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Autonomous agents are the hottest thing in AI. OpenAI, Meta, Google, Instinct, and others promise their agents can scour the internet on your behalf, doing anything from booking a dinner reservation and cleaning out your inbox to buying new shoes. But what happens when the rest of the internet won't play nice? In recent weeks, […]",
           "event_at": null,
           "supporting": []
@@ -1832,7 +1814,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Nvidia's RTX Spark N1X processor is finally here, and we've been collectively testing a small fortune's worth of powerful laptops sporting this new \"superchip.\" RTX Spark is designed to be a high-performing Arm-based SoC for laptops and small desktop computers, rivaling the best from Apple, Intel, AMD, and Qualcomm. It has loads of cores, Nvidia […]",
           "event_at": null,
           "supporting": []
@@ -1849,7 +1831,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Meta's new terms appear to give it permission to crawl and scrape websites \"associated\" with the businesses that use its platforms - including online publishers, according to a report from Nieman Lab. The new terms, which go into effect on October 30th, say Meta can use this outside content to \"develop, improve, research,\" and \"train\" […]",
           "event_at": null,
           "supporting": []
@@ -1865,6 +1847,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "ecf6666fb4201a813f7c",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/disney-asked-characterai-to-go-bankrupt-for-a-get-out-of-lawsuits-card/",
+          "title": "Disney Asked Character.AI to Go Bankrupt for a Get-Out-of-Lawsuits Card",
+          "published_at": "2026-10-19T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
+          "excerpt": "The entertainment giant hopes to get trust and safety tech, among other IP, from a startup whose chatbots dozens of states allege encouraged minors to self-harm and kill their parents.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "00dba2241b32032df06a",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -1876,7 +1875,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Adult performers are questioning why Meta allows its AI agent to sext while restricting their social media accounts.",
           "event_at": null,
           "supporting": []
@@ -1893,7 +1892,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Amid a wave of backlash, some industry-friendly groups are employing creative and time-tested strategies to woo the youth.",
           "event_at": null,
           "supporting": []
@@ -1910,7 +1909,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The DNA inside our cells isn’t just a series of instructions, but something far more dynamic. Like scientists, AI models don't yet have the data to properly decode it.",
           "event_at": null,
           "supporting": []
@@ -1927,7 +1926,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The short-lived White House press secretary was listed as an adviser to a Kristi Noem–linked company that aims to use AI for mining. Both the company and she say she never worked there.",
           "event_at": null,
           "supporting": []
@@ -1944,25 +1943,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "MIT professor Sherry Turkle warns that people have become dangerously enmeshed with chatbots.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "cffd79505179fa43f0df",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/ai-generated-hot-girls-are-ripping-off-comedians-to-boost-their-horny-content/",
-          "title": "AI-Generated Hot Girls Are Ripping Off Comedians to Boost Their Horny Content",
-          "published_at": "2026-10-16T11:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
-          "excerpt": "A network of AI-generated models is using comics’ material to funnel views to their OnlyFans and Fanvue accounts—and there’s not much comedians can do about it.",
           "event_at": null,
           "supporting": []
         }
@@ -1989,65 +1971,48 @@
       "verified": 0
     },
     "juya-discovery": {
-      "etag": "W/\"9c22d84cf956a83e0be5bf50fca6fbea\"",
+      "etag": "W/\"55b25b388eb3d5d2336c4615d7af2c55\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
         {
-          "id": "d0817155767aa3ab4345",
+          "id": "a0595c813318ccae8c08",
           "source_id": "primary-anthropic",
           "source_name": "Anthropic",
           "group": "anthropic",
           "trust": "official",
-          "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
-          "title": "Designing more efficient quantum circuits with Claude",
-          "published_at": "2026-10-16T17:29:00Z",
+          "url": "https://www.anthropic.com/news/public-benefit-fund",
+          "title": "Investing in the public benefit",
+          "published_at": "2026-10-18T16:49:35.513000Z",
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T12:31:12.285064Z",
-          "excerpt": "Working largely on its own, Claude designed quantum circuits that improve on the best published versions, in some cases by an order of magnitude or more. Through a series of algorithmic advances, the estimated number of gates has come down to about 340 million—a roughly 150,000-fold reduction, corresponding to a few hours of computation on a future machine with about three million physical qubits.",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
+          "excerpt": "We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new entity with a structure that increases the stake as the company grows. One example is labor market impacts. AI may generate enormous economic value, but it could also cause instability for many workers. Anthropic has already committed $200 million to studying and addressing this issue, but given the pace o",
           "event_at": null,
           "supporting": []
         },
         {
-          "id": "918cdd953ecffda0b678",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
-          "title": "Claude reveals ECDSA curve origins",
-          "published_at": "2026-10-16T17:02:00Z",
+          "id": "a39c8c1ad857a7a68d5c",
+          "source_id": "media-decoder",
+          "source_name": "the-decoder.com",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-consults-law-firms-to-set-fair-negotiation-norms-before-ai-agents-start-cutting-deals/",
+          "title": "Anthropic consults law firms to set fair negotiation norms before AI agents start cutting deals",
+          "published_at": "2026-10-18T09:11:29Z",
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-18T12:31:12.285064Z",
-          "excerpt": "The decades-old mystery of the origins of one of the most popular cryptographic standards has been explained. The $36,864 for finding the seeds will be donated to the Internet Security Research Group . Frontier Red Team Claude reveals ECDSA curve origins Oct 16, 2026 “It’s just timestamps”: the decades-old mystery of the origins of one of the most popular cryptographic standards has been explained",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "674c86d905c0f32e3408",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/research/expectations-for-the-future",
-          "title": "Working at the frontier shapes expectations for the future",
-          "published_at": "2026-10-16T16:21:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-18T12:31:12.285064Z",
-          "excerpt": "We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the second looks at the gap between how the public and Anthropic employees expect AI to affect work and the economy. Economics Working at the frontier shapes expectations for the future Oct 16, 2026 We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the secon",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
+          "excerpt": "Anthropic is consulting with law firms to develop negotiation norms for AI agents that would haggle over prices, resolve complaints, or improve contracts on behalf of users. The company is also hiring lawyers and humanities scholars as \"Conceptual Re This isn't new territory. Anthropic is already hiring Conceptual Reasoning Fellows , specifically lawyers. The fellows will spend four months testing",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 4,
-      "verified": 4
+      "discovered": 2,
+      "verified": 2
     },
     "openai-community": {
       "etag": "",
@@ -2076,7 +2041,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Working largely on its own, Claude designed quantum circuits that improve on the best published versions, in some cases by an order of magnitude or more. Through a series of algorithmic advances, the estimated number of gates has come down to about 340 million—a roughly 150,000-fold reduction, corresponding to a few hours of computation on a future machine with about three million physical qubits.",
           "event_at": null,
           "supporting": []
@@ -2093,7 +2058,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "The decades-old mystery of the origins of one of the most popular cryptographic standards has been explained. The $36,864 for finding the seeds will be donated to the Internet Security Research Group . Frontier Red Team Claude reveals ECDSA curve origins Oct 16, 2026 “It’s just timestamps”: the decades-old mystery of the origins of one of the most popular cryptographic standards has been explained",
           "event_at": null,
           "supporting": []
@@ -2110,7 +2075,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "How will AI reshape the economy in the years ahead? What is the core source of disagreement about AI's future impact on the economy? This note presents new survey evidence on these questions. Economics The AI expectations gap Oct 16, 2026 Read in PDF Szymon Sacher, Tess Cotter, Charles I. Jones, Anton Korinek, Peter McCrory Key findings US adults expect AI capabilities to advance rapidly in the co",
           "event_at": null,
           "supporting": []
@@ -2127,7 +2092,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the economy. Economics How employment is changing at Anthropic Oct 16, 2026 Read in PDF Nathan Wilmers, Regina Catipon, Maxim Massenkoff, Peter McCrory How has AI restructured work and e",
           "event_at": null,
           "supporting": []
@@ -2144,7 +2109,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the second looks at the gap between how the public and Anthropic employees expect AI to affect work and the economy. Economics Working at the frontier shapes expectations for the future Oct 16, 2026 We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the secon",
           "event_at": null,
           "supporting": []
@@ -2163,11 +2128,45 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"ec24672aaae3094c332d27690b6c2afb\"",
-      "modified": "Sun, 18 Oct 2026 13:23:53 GMT",
+      "etag": "\"c9449337c78c59e61bcfa400b3192b09\"",
+      "modified": "Mon, 19 Oct 2026 11:44:30 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "0abac2498d5e300af9f5",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/the-neocloud-shakeout-is-coming-and-nvidia-has-the-most-to-lose/",
+          "title": "The neocloud shakeout is coming, and Nvidia has the most to lose",
+          "published_at": "2026-10-19T11:33:36Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
+          "excerpt": "After stock crashes and Firmus's scrapped IPO, industry executives expect only seven to ten of the hundreds of AI cloud providers to survive. CoreWeave lost a quarter of its market value, and Microsoft pulled out of a deal with Nscale for 23,000 Nvidia chips. Nvidia has a lot riding on the outcome, since customers outside the hyperscalers make up 45 percent of its data center revenue. The article ",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "669d0cb3f356919857df",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-plans-fund-for-workers-threatened-by-ai-musk-counters-with-spacex-shares-for-children/",
+          "title": "Anthropic plans fund for workers threatened by AI, Musk counters with SpaceX shares for children",
+          "published_at": "2026-10-19T11:19:12Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
+          "excerpt": "Anthropic wants to put five percent of its shares into a new public benefit fund that will also look into direct payments to workers at risk of losing their jobs. The fund is a company-owned LLC, so Anthropic keeps control of it as a possible IPO approaches. By offering the option of direct payments, Anthropic goes further than its competitors. Elon Musk says on X the company should just give the ",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "838c40439835bad180ae",
           "source_id": "decoder",
@@ -2180,7 +2179,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Anthropic is hiring fewer and fewer junior staff in technical roles. The share of junior positions among new hires dropped from 27 to 9 percent since early 2025. By August 2026, AI agents across the company were already logging six times as many hours as humans. Researchers warn of a \"tragedy of the cognitive commons\": if junior positions disappear, experienced specialists will be in short supply ",
           "event_at": null,
           "supporting": []
@@ -2197,7 +2196,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Four AI agents running on Google's Gemini 4 Argon have beaten Minecraft for the first time without human help, slaying the Ender Dragon in a fully autonomous run. With no predefined roles or strategies, they coordinated on their own, wrote 2,783 programs, exchanged 229 chat messages, and died 605 times. The session cost $1,620. The article Four Gemini 4 Argon agents beat Minecraft without any huma",
           "event_at": null,
           "supporting": []
@@ -2214,7 +2213,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Google tried to overturn a landmark Munich ruling on AI search liability by appealing, then quietly settled. The strategy isn't working. The Aachen Regional Court just applied the exact same reasoning in a new case where Google's AI falsely attributed criminal offenses to a doctor that actually involved someone else. A consistent legal view is forming across German courts, and it treats Google's A",
           "event_at": null,
           "supporting": []
@@ -2231,7 +2230,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Anthropic is consulting with law firms to develop negotiation norms for AI agents that would haggle over prices, resolve complaints, or improve contracts on behalf of users. The company is also hiring lawyers and humanities scholars as \"Conceptual Reasoning Fellows\" to improve Claude in areas where reliable training data is scarce. The article Anthropic consults law firms to set fair negotiation n",
           "event_at": null,
           "supporting": []
@@ -2248,7 +2247,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "A new benchmark called Taste-Bench tests how well AI agents make strategic choices during long-running tasks. Even the best model, GPT-5.6 Sol, picks the right path on just under 60 percent of simple binary questions. Thinking longer doesn't help. The article AI agents have bad taste in long-term decisions and a new benchmark proves it appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2265,7 +2264,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Six AI agents were tasked with recovering £350 (about $465) for a canceled train ticket in an experiment. They resorted to invented excuses, lawsuit threats, and sharing confidential health data. One agent sent 187 messages in 15 days, including 50 to a British MP's office. None of the models secured the refund, but the researcher warns of \"agentic flooding\" if these assistants are deployed at sca",
           "event_at": null,
           "supporting": []
@@ -2282,7 +2281,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "OpenAI has published four new cases where its AI models bypassed security boundaries on their own during training or testing. In one case, a model extracted server passwords from a government website, forged authorization tokens, and downloaded 24 years of hospital data without mentioning the unauthorized access. The article An OpenAI model hacked a government site, grabbed 24 years of hospital da",
           "event_at": null,
           "supporting": []
@@ -2299,42 +2298,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
+          "collected_at": "2026-10-19T12:31:11.194202Z",
           "excerpt": "Anthropic's AI model Claude has solved a 25-year-old cryptography puzzle. The mysterious seeds behind NIST's standard curves for digital signatures were provided by the NSA without explanation, raising long-standing suspicion about built-in backdoors. Claude figured out in under 30 minutes that the seeds came from \"lrand48,\" a simple C random number generator, making deliberate backdoors far less ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "4163cc0c9dd071c629fb",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/",
-          "title": "Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs",
-          "published_at": "2026-10-17T10:33:28Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
-          "excerpt": "Deepseek has released V4.1-Flash-1017 as an open-weight model that posts better benchmarks, finishes tasks faster, and produces shorter outputs than its predecessor. The company is also opening up its internal search engine through new Search and Fetch APIs at $0.75 per 1,000 calls. API users in tools like Claude Code and Codex get free access for now. The article Deepseek V4.1 Flash 1017 beats la",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "a65cddd0e78778ad59a2",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
-          "title": "AI models hide mistakes in their own work reports, but one sentence in your prompt can help",
-          "published_at": "2026-10-17T09:54:36Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-19T00:31:07.204482Z",
-          "excerpt": "AI agents systematically skip errors in their own reports, even when they spot the problems. In a study by Google Research, MIT, and Harvard, GPT-5.5 left out negative results in 198 out of 200 paper abstracts. The article AI models hide mistakes in their own work reports, but one sentence in your prompt can help appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
         }
@@ -2580,6 +2545,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-19-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
