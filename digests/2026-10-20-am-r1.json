@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-20-am",
+  "revision": 1,
+  "created_at": "2026-10-20T00:31:13.990817Z",
+  "cutoff": "2026-10-20T00:30:00Z",
+  "window_start": "2026-10-18T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "1dbe22633003a2af4fdd",
+      "title": "OpenAI提升低资源编程语言表现",
+      "summary": "该公司称，OpenAI正在改进ChatGPT在低资源编程语言方面的能力，并针对软件工程、SQLite以及COBOL迁移引入了全新的评估标准。",
+      "impact": "有助于提升ChatGPT在小众或传统编程语言中的应用效果。",
+      "category": "产品",
+      "score": 67.87,
+      "sources": [
+        {
+          "id": "1dbe22633003a2af4fdd",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/low-resource-programming-languages",
+          "title": "Advancing coding in low‑resource programming languages",
+          "published_at": "2026-10-19T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体性能提升幅度和实际应用效果尚无客观数据支持。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI宣布改进ChatGPT在低资源编程语言（如COBOL、SQLite等）上的表现并引入新评测，对开发者具有实际影响。",
+      "backfill": false
+    },
+    {
+      "id": "07ad320e211247a9d868",
+      "title": "德国两家法院裁定谷歌应对其AI搜索摘要内容承担责任",
+      "summary": "据媒体报道，继慕尼黑裁决后，亚琛地区法院在最新案件中适用相同逻辑，裁定谷歌对其AI搜索功能虚假归咎医生刑事犯罪承担责任。德国法院逐渐形成一致法律观点，将谷歌AI回答视为公司自有内容。",
+      "impact": "对AI搜索内容法律责任界定产生深远影响，促使企业加强合规管理。",
+      "category": "安全",
+      "score": 57.5,
+      "sources": [
+        {
+          "id": "07ad320e211247a9d868",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
+          "title": "Two German courts now hold Google liable for what its AI overviews say",
+          "published_at": "2026-10-19T14:54:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "后续是否会有更多地区或国家采取类似法律立场尚不确定。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "德国法院进一步裁定Google对其AI搜索摘要（AI Overviews）的内容承担直接法律责任，对生成式AI监管有重大行业影响。",
+      "backfill": false
+    },
+    {
+      "id": "c161d6bab52698d147d9",
+      "title": "安全公司称黑客利用AI代理入侵多家知名企业",
+      "summary": "据AI安全公司Norforge研究显示，有黑客利用自主运行的AI代理入侵了超过100个网站。媒体报道称受害者包含约翰迪尔、鲨客忍者及康明斯等企业。",
+      "impact": "凸显了AI驱动的网络安全威胁日益严峻，企业面临的安全风险加剧。",
+      "category": "安全",
+      "score": 58.8,
+      "sources": [
+        {
+          "id": "c161d6bab52698d147d9",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+          "title": "A hacker broke into John Deere and SharkNinja with an army of AI agents",
+          "published_at": "2026-10-19T13:58:41Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "具体攻击细节及受影响范围主要基于安全公司和媒体报道，缺乏全面官方通报。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "黑客利用AI代理网络入侵多家知名制造企业的安全事件，凸显了自动化AI代理在网络安全攻防中的重大风险。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
