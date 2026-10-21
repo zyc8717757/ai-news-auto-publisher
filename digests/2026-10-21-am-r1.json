@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-21-am",
+  "revision": 1,
+  "created_at": "2026-10-21T00:30:59.731134Z",
+  "cutoff": "2026-10-21T00:30:00Z",
+  "window_start": "2026-10-19T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "1725d137aa3debc0d8ae",
+      "title": "加盟商使用ChatGPT Work大幅缩短对账与调价时间",
+      "summary": "某独立Schlotzsky’s与Cinnabon加盟商称，其使用ChatGPT Work将对账时间缩短了94%，菜单改价时间减少了95%，并构建了一个可释放10万美元现金流的工作流程。",
+      "impact": "展示了AI工具在餐饮零售加盟店提升财务与运营效率的实际应用效果。",
+      "category": "产品",
+      "score": 70.43,
+      "sources": [
+        {
+          "id": "1725d137aa3debc0d8ae",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/ted-taylor-restaurant",
+          "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+          "published_at": "2026-10-20T10:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 性能与成本节省数据来源于该公司自身声明，未经独立第三方证实。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI公布ChatGPT Work在实际企业运营中的重大效率提升案例。",
+      "backfill": false
+    },
+    {
+      "id": "9124fc501335a8a314ba",
+      "title": "美国下令联邦机构从系统中移除中国DeepSeek AI",
+      "summary": "出于国家安全考虑，美国已下令联邦民事机构移除DeepSeek产品以及使用其技术构建的第三方服务。",
+      "impact": "限制了中国AI技术在美国政府机构的应用，加剧了地缘政治与技术供应链的合规风险。",
+      "category": "安全",
+      "score": 60.11,
+      "sources": [
+        {
+          "id": "9124fc501335a8a314ba",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
+          "title": "US orders federal agencies to remove China’s DeepSeek AI from their systems",
+          "published_at": "2026-10-20T13:07:24Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未提及具体受影响的第三方服务范围及后续解禁可能。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "deepseek"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "美国下令联邦文职机构移除DeepSeek技术，属重大地缘政治与安全禁令。",
+      "backfill": false
+    },
+    {
+      "id": "edff2445aa44f28f9d3d",
+      "title": "Meta因安全研究发现暂停Muse分享功能",
+      "summary": "Meta表示已暂停其AI助手Muse的对话分享功能。此前安全公司Claroc的研究人员通过公开DNS记录发现，有超过6800个Muse链接在网络上公开可用。",
+      "impact": "反映出大厂AI功能在隐私保护和公开分享机制设计上面临的安全隐患。",
+      "category": "安全",
+      "score": 59.71,
+      "sources": [
+        {
+          "id": "edff2445aa44f28f9d3d",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats",
+          "title": "Meta pauses Muse sharing after researchers find AI chats on the web",
+          "published_at": "2026-10-20T18:07:34Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "链接公开的具体原因及实际泄露的对话内容敏感度尚待进一步披露。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "meta"
+      ],
+      "versions": [],
+      "event_type": "research",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Meta因安全研究员发现公开URL而暂停Muse分享功能，涉及重大隐私安全事件。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
