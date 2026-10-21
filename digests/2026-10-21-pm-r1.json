@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-21-pm",
+  "revision": 1,
+  "created_at": "2026-10-21T12:31:12.190691Z",
+  "cutoff": "2026-10-21T12:30:00Z",
+  "window_start": "2026-10-19T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "2be2a1e2b737467e4a56",
+      "title": "OpenAI模型将登陆Google Cloud平台",
+      "summary": "OpenAI与Google Cloud达成合作，将OpenAI的前沿模型及Codex智能体工作流引入Google Cloud的Model Garden。此次整合结合了OpenAI的模型能力与Google Cloud的数据治理和高性能基础设施，旨在支持企业级复杂工作负载。此外，OpenAI模型还将登陆Google Antigravity与Gemini Agent。",
+      "impact": "为企业客户提供更多模型选择，支持在受监管行业中安全部署大规模智能体工作流。",
+      "category": "产品",
+      "score": 84.95,
+      "sources": [
+        {
+          "id": "2be2a1e2b737467e4a56",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/openai-models-are-coming-to-google-cloud/1408440",
+          "title": "OpenAI models are coming to Google Cloud",
+          "published_at": "2026-10-21T12:15:52.674000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 集成功能的具体全面上线时间尚不完全明确。",
+      "entities": [
+        "google",
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 与 Google Cloud 达成合作，将 OpenAI 前沿模型及 Codex 引入 Google Cloud Model Garden 与企业产品中。",
+      "backfill": false
+    },
+    {
+      "id": "ac67a5f12ec971da5378",
+      "title": "内部研究模型Claude成功设计蝎子神经毒素蛋白质结合物",
+      "summary": "在一项探索加速药物研发的实验中，研究人员让一个内部研究模型Claude针对蝎子神经毒素设计微型结合蛋白。在提示词及4次后续调整下，Claude完成了相关设计工作，相关研发与生物科技团队参与了后续验证。",
+      "impact": "展示了AI在加速针对被忽视热带疾病的药物发现方面的潜力。",
+      "category": "模型",
+      "score": 67.12,
+      "sources": [
+        {
+          "id": "ac67a5f12ec971da5378",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+          "title": "How Claude designed protein binders against scorpion neurotoxins",
+          "published_at": "2026-10-20T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实验结果尚处于研究探索阶段，实际临床转化效果有待进一步验证。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic发布技术报告展示其内部研究模型Claude成功设计出针对蝎子神经毒素的蛋白质结合体。",
+      "backfill": true
+    },
+    {
+      "id": "f2380296be9197f11910",
+      "title": "NVIDIA推出OpenShell参考架构并扩展机密计算",
+      "summary": "NVIDIA宣布推出OpenShell参考架构，作为其支持组织安全大规模部署智能体技术组合的一部分。同时，NVIDIA机密计算作为基础设施层，为其运行中的模型和智能体依赖的数据提供安全保护。",
+      "impact": "为前沿模型构建者在全球基础设施中安全扩展和部署智能体提供安全支持。",
+      "category": "安全",
+      "score": 81.56,
+      "sources": [
+        {
+          "id": "f2380296be9197f11910",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure/",
+          "title": "NVIDIA Confidential Computing Expands, Enabling Frontier Model Builders to Securely Scale Across Global Infrastructure",
+          "published_at": "2026-10-21T10:30:02Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体落地效果取决于企业自身系统的集成情况。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA 扩展机密计算并推出 OpenShell 参考架构，以保障多 Agent 部署的安全。",
+      "backfill": false
+    },
+    {
+      "id": "d46c8940730c093aa2d0",
+      "title": "NVIDIA扩展开源模型系列以支持欧洲主权智能",
+      "summary": "NVIDIA宣布扩展其开源模型系列，涵盖语言、机器人、生物学和量子计算等领域，推出包括NVIDIA Nemotron 3.5 Super VL、Nemotron 3.5 Bolt及Nemotron Retriever等新模型，以满足开发者、研究人员和企业构建本地化应用的需求。",
+      "impact": "为欧洲及全球各行业的开发者和企业提供了构建本地语言和特定行业应用的开源工具。",
+      "category": "模型",
+      "score": 83.55,
+      "sources": [
+        {
+          "id": "d46c8940730c093aa2d0",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/open-models-europe-industry/",
+          "title": "NVIDIA Open Models Advance Europe’s Sovereign Intelligence Across Industries",
+          "published_at": "2026-10-21T10:00:07Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 各行业实际采纳和应用效果存在差异。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA扩展开源模型家族，发布Nemotron 3.5 Super VL及Bolt等新模型。",
+      "backfill": false
+    },
+    {
+      "id": "3b0aecdab15bb5626e36",
+      "title": "TorchTPU在GitHub开源，实现PyTorch对TPU的原生支持",
+      "summary": "在PyTorch Conference 2026上，官方宣布TorchTPU作为谷歌TPU的原生PyTorch技术栈已在GitHub开源。开发者现在可以使用熟悉的工具（如vLLM、SGLang、Hugging Face等）在TPU上进行模型训练、服务和部署。",
+      "impact": "使TPU成为与GPU和CPU并列的原生PyTorch选项，丰富了AI基础设施生态。",
+      "category": "开发",
+      "score": 68.62,
+      "sources": [
+        {
+          "id": "3b0aecdab15bb5626e36",
+          "source_id": "primary-google",
+          "source_name": "Google Cloud",
+          "group": "google",
+          "trust": "official",
+          "url": "https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus",
+          "title": "TorchTPU is now open source: Run native PyTorch on TPUs",
+          "published_at": "2026-10-20T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-10-20",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 开源项目的生态成熟度和大规模迁移成本需要开发者在实践中评估。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [
+        "pytorch"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google Cloud在PyTorch Conference 2026上宣布其原生PyTorch TPU技术栈TorchTPU正式开源，并支持vLLM等工具。",
+      "backfill": true
+    },
+    {
+      "id": "1cfb6291fa158d05a5ba",
+      "title": "OpenAI宣布收购Orchestra Bio以拓展生物医药业务",
+      "summary": "OpenAI宣布收购初创公司Orchestra Bio，以将人工智能驱动的运营引入生命科学研发领域，帮助生物医药团队加速药物开发并推进新疗法的研究。OpenAI称其团队和技术将用于其生命科学研究模型Rosalind及相关工作台工具。",
+      "impact": "增强OpenAI在生命科学与生物医药研发领域的业务布局与技术实力。",
+      "category": "商业",
+      "score": 67.12,
+      "sources": [
+        {
+          "id": "1cfb6291fa158d05a5ba",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+          "title": "OpenAI acquires Orchestra Bio",
+          "published_at": "2026-10-20T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "fb5a585d63d0a7f5e41b",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+          "title": "OpenAI acquires startup Orchestra Bio to beef up its biotech business",
+          "published_at": "2026-10-20T20:35:10Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 收购整合的具体成效与对业务的长期推动作用尚待观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "business",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 宣布收购 Orchestra Bio，以将 AI 驱动的运营引入生命科学研发。",
+      "backfill": true
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
