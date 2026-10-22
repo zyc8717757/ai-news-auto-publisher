@@ -3636,7 +3636,7 @@
     },
     "2026-10-22-am-r1": {
       "deployment": "failed",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
