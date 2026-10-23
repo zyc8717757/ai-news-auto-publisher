@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-23-am",
+  "revision": 1,
+  "created_at": "2026-10-23T00:43:54.234662Z",
+  "cutoff": "2026-10-23T00:30:00Z",
+  "window_start": "2026-10-21T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "51888f116f5b083740bc",
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 72.35,
+      "sources": [
+        {
+          "id": "51888f116f5b083740bc",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+          "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+          "published_at": "2026-10-22T22:24:34Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "891b7e0bbf66f86d27b7",
+      "title": "Build more responsive apps with the Decisions API",
+      "summary": "Fast, focused, low-cost decisions for any application.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.28,
+      "sources": [
+        {
+          "id": "891b7e0bbf66f86d27b7",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/decisions-api",
+          "title": "Build more responsive apps with the Decisions API",
+          "published_at": "2026-10-22T19:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "b59dab6824688f368205",
+      "title": "LangChain Releases: langchain-core==1.7.0",
+      "summary": "Changes since langchain-core==1.6.13 release(core): 1.7.0 (#41418) feat(core): emit `tool-call-delta` for streamed tool-call args (#41257) ## Notes - Tool-call args now stream as `tool-call-delta` slices instead of `block-delta` snapshots of the args so far. If you read raw stream events and their `block-delta` args mid-stream, read `tool-call-delta` instead. `.tool_calls.get()` and `.output` are unchanged. To keep snapshots, pin `langchain-core<1.7`. - Since 1.6.13, iterating `ChatModelStream.t",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.9,
+      "sources": [
+        {
+          "id": "b59dab6824688f368205",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.0",
+          "title": "LangChain Releases: langchain-core==1.7.0",
+          "published_at": "2026-10-22T17:47:38Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.7.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "67297d2df9a3d7f196c3",
+      "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.4,
+      "sources": [
+        {
+          "id": "67297d2df9a3d7f196c3",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
+          "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+          "published_at": "2026-10-22T16:11:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [
+        "v1.3"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "af6b159eb6ea2f663c90",
+      "title": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
+      "summary": "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories productive. It brings together telemetry from infrastructure and AI workloads, then applies purpose-built AI models to turn that data into timely, actionable insight. AI factories are among the most complex operations in the world, with vast […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.03,
+      "sources": [
+        {
+          "id": "af6b159eb6ea2f663c90",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure/",
+          "title": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
+          "published_at": "2026-10-22T15:00:02Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "301925b8adfcebab105a",
+      "title": "Beyond tree cover: mapping the world’s forest types",
+      "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.88,
+      "sources": [
+        {
+          "id": "301925b8adfcebab105a",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+          "title": "Beyond tree cover: mapping the world’s forest types",
+          "published_at": "2026-10-22T14:30:24Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "6400feb681472530a689",
+      "title": "What FDE means at OpenAI",
+      "summary": "What forward deployed engineering means at OpenAI",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.22,
+      "sources": [
+        {
+          "id": "6400feb681472530a689",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/forward-deployed-engineering-means",
+          "title": "What FDE means at OpenAI",
+          "published_at": "2026-10-22T06:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
