@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-24-pm",
+  "revision": 1,
+  "created_at": "2026-10-24T13:36:17.502999Z",
+  "cutoff": "2026-10-24T12:30:00Z",
+  "window_start": "2026-10-22T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "ee4c22366ef7e7abd786",
+      "title": "OpenAI分享ChatGPT存储扩展技术细节",
+      "summary": "OpenAI发布文章介绍了如何快速扩展在线存储以服务超过10亿的ChatGPT用户。该公司称，通过采用可靠的多租户、全球缓存以及Azure Cosmos DB等技术扩展Habitat，实现了ChatGPT读取速度提升12倍。",
+      "impact": "提升了大规模用户的服务性能与存取效率。",
+      "category": "产品",
+      "score": 69.33,
+      "sources": [
+        {
+          "id": "ee4c22366ef7e7abd786",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+          "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+          "published_at": "2026-10-23T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "9fdd22fa30fbdf82a9dd",
+      "title": "优步将全公司3万名员工接入ChatGPT Work",
+      "summary": "网约车巨头优步此前曾部署较小规模的ChatGPT Work试点，目前已决定将该企业级智能体推广至全公司，使所有3万名员工均开始使用该工具。",
+      "impact": "推动了企业级AI工具在大型商业机构的全面应用。",
+      "category": "产品",
+      "score": 51.37,
+      "sources": [
+        {
+          "id": "9fdd22fa30fbdf82a9dd",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+          "title": "Uber puts all 30,000 employees on ChatGPT Work",
+          "published_at": "2026-10-22T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Uber将3万名员工全面部署ChatGPT Work企业版，是企业级AI Agent落地的标志性大单。",
+      "backfill": true
+    },
+    {
+      "id": "dfe5fb536ca517ba2b1e",
+      "title": "OpenAI称将不再使用实时互联网训练AI模型",
+      "summary": "OpenAI表示，由于存在“重大风险”，将不再利用实时互联网训练其AI模型，并计划切断前沿模型对互联网的访问，而此前几周其一位工程师曾称该方案无法行通。",
+      "impact": "调整了前沿AI模型的数据训练策略与安全边界。",
+      "category": "安全",
+      "score": 68.07,
+      "sources": [
+        {
+          "id": "dfe5fb536ca517ba2b1e",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+          "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+          "published_at": "2026-10-23T23:05:49Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "此前曾有工程师认为该解决方案行不通，其实际执行效果有待观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI宣布不再使用实时互联网训练其前沿AI模型，以防范重大安全风险，属于重大的安全与训练策略调整。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
