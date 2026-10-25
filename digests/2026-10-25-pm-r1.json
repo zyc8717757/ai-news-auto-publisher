@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-25-pm",
+  "revision": 1,
+  "created_at": "2026-10-25T12:31:31.077608Z",
+  "cutoff": "2026-10-25T12:30:00Z",
+  "window_start": "2026-10-23T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "d53292555cf319cb6b31",
+      "title": "OpenAI提供折扣争夺Anthropic客户",
+      "summary": "媒体报道称，OpenAI通过大幅折扣策略争取Anthropic的客户。Rippling、Replit和DataCamp等企业称在切换后将AI成本降低了最高90%。Anthropic的增长有所放缓，而OpenAI选择牺牲自身利润来换取市场份额，同时中国竞争对手如DeepSeek也带来了更多价格压力。",
+      "impact": "加剧AI市场价格竞争，迫使企业重新评估供应商并压缩厂商利润空间。",
+      "category": "商业",
+      "score": 58.51,
+      "sources": [
+        {
+          "id": "d53292555cf319cb6b31",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
+          "title": "OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers",
+          "published_at": "2026-10-25T07:30:11Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "降幅数据来源于部分客户表态，具体整体市场影响尚待观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic",
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI 通过高达 90% 的折扣积极争夺 Anthropic 的企业客户，反映激烈的商业竞争与价格战。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
