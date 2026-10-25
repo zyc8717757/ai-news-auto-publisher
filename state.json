@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-10-24T12:30:00Z",
+  "last_covered_at": "2026-10-25T00:30:00Z",
   "ai_attempts": [
     "2026-10-23T00:44:17.608520Z",
     "2026-10-23T00:44:26.176611Z",
@@ -958,7 +958,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
           "event_at": null,
           "supporting": []
@@ -975,7 +975,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
           "event_at": null,
           "supporting": []
@@ -992,7 +992,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
           "event_at": null,
           "supporting": []
@@ -1009,7 +1009,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Fast, focused, low-cost decisions for any application.",
           "event_at": null,
           "supporting": []
@@ -1026,59 +1026,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "What forward deployed engineering means at OpenAI",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "eda525050cea8fce4b13",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/uber-chatgpt-work-rollout",
-          "title": "Uber brings ChatGPT Work to all employees with OpenAI",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "3f1a11956436b1673800",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/broad-access-through-consistent-standards",
-          "title": "Broad access through consistent standards",
-          "published_at": "2026-10-21T21:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "39cad894cdd240fbe2db",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/att-legal",
-          "title": "How AT&T is rethinking in-house legal work with OpenAI",
-          "published_at": "2026-10-21T17:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
           "event_at": null,
           "supporting": []
         }
@@ -1091,81 +1040,12 @@
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [
-        {
-          "id": "5232879038119e5daf1c",
-          "source_id": "anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/news/announcements",
-          "title": "Announcements",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "day",
-          "source_date": "2026-10-22",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap Anthropic is investing $100 million in Claude Frontier Academy to train 10,000 Frontier Deployed Engineers by the end of 2027, with cohorts from Accenture, Bain, CBA, Deloitte, McKi",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "bdc7b775ab8d2106278d",
-          "source_id": "anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
-          "title": "Donating Agent Skills to the Agentic AI Foundation",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. A skill is a folder containing a SKILL.md file that teaches an agent a specific task or domain, along with any scripts or reference material it needs. We developed skills while working on Claude Code. It handled general knowledge work well, but often lacked the procedural knowl",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "62791a623aed557b705f",
-          "source_id": "anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/news/product",
-          "title": "Product",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "day",
-          "source_date": "2026-10-22",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. News Product 41 ARTICLES Most recent Title Description Date Donating Agent Skills to the Agentic AI Foundation We’re donating Agent Skills, the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation. More than 70 agent platforms, in",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "6950f6169e819866442d",
-          "source_id": "anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
-          "title": "Open call for guest investigators in the life sciences",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Today, we’re inviting members of the life sciences community to apply to work with us on special projects. Open call for guest investigators in the life sciences Published Oct 22, 2026 Category Announcements Topics Life sciences Related articles Science Sep 23, 2026 Claude discovers a novel enzyme system with CRISPR-like repeats View more Today, we’re inviting members of the life sciences communit",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 10,
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"IpApbw\"",
+      "etag": "\"doCFtw\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1182,7 +1062,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
           "event_at": null,
           "supporting": []
@@ -1273,74 +1153,6 @@
           "excerpt": "",
           "event_at": null,
           "supporting": []
-        },
-        {
-          "id": "94a5f6526eada9bc0f52",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/nvidia/kumo-relational",
-          "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
-          "published_at": "2026-10-21T18:26:30Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "40a01666d562060bfdf9",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
-          "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
-          "published_at": "2026-10-21T17:35:36Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "5b4e08461387ba3b4483",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
-          "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
-          "published_at": "2026-10-21T16:04:43Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "c2ed162a157709f5cb47",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
-          "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
-          "published_at": "2026-10-21T14:58:18Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
         }
       ],
       "discovered": 50,
@@ -1349,7 +1161,7 @@
     "microsoft-research": {
       "etag": "\"4f59c17b0c35552c7d0e16d95f6c4602\"",
       "modified": "Sat, 24 Oct 2026 06:52:26 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1368,31 +1180,14 @@
           "excerpt": "Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose. The post Flint-interactive: A language for creating interactive data visualizations appeared first on Microsoft Research .",
           "event_at": null,
           "supporting": []
-        },
-        {
-          "id": "f5a67a23b0dd5c70b4db",
-          "source_id": "microsoft-research",
-          "source_name": "Microsoft Research",
-          "group": "microsoft",
-          "trust": "research",
-          "url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
-          "title": "Solving a 31-year-old grand challenge in mathematics – the KLS conjecture",
-          "published_at": "2026-10-21T16:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "For decades, a fundamental question about the difficulty of computing in high-dimensional spaces has resisted proof. New research resolves this question, removing a major theoretical obstacle to understanding the efficiency of randomized algorithms used across science and computing. The Kannan–Lovász–Simonovits (KLS) conjecture was proposed in 1995. It asks whether, for a broad class of high-dimen",
-          "event_at": null,
-          "supporting": []
         }
       ],
       "discovered": 10,
       "verified": 10
     },
     "nvidia": {
-      "etag": "\"d20d0d8934cd3f8a3d4b2bd339d5f0d1-gzip\"",
-      "modified": "Sat, 24 Oct 2026 13:21:19 GMT",
+      "etag": "\"fb1239358c244965f9774e8d2d08fa4b-gzip\"",
+      "modified": "Sat, 24 Oct 2026 22:53:13 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1408,7 +1203,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Kazakhstan’s AI ecosystem is moving from infrastructure plans to deployment. The shift is visible across the full AI stack — from infrastructure to models to applications. The announcements below — coinciding with a visit to Astana by NVIDIA founder and CEO Jensen Huang — point to the nation’s increasing supply of accelerated computing, along with […]",
           "event_at": null,
           "supporting": []
@@ -1425,7 +1220,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories productive. It brings together telemetry from infrastructure and AI workloads, then applies purpose-built AI models to turn that data into timely, actionable insight. AI factories are among the most complex operations in the world, with vast […]",
           "event_at": null,
           "supporting": []
@@ -1442,7 +1237,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Lock in and load out this GFN Thursday. Call of Duty: Modern Warfare 4 arrives on GeForce NOW at launch, bringing a new campaign, multiplayer action and DMZ, high-stakes extraction mode to supported devices. The campaign also gets an enhanced look: GeForce RTX 5080-class performance arrives for Ultimate members, bringing support for ray-tracing features in […]",
           "event_at": null,
           "supporting": []
@@ -1459,7 +1254,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "At GTC Berlin, banks, payment companies and financial data providers are showing what production-scale intelligence looks like — built on NVIDIA accelerated computing, powered by open weight models and running on their own infrastructure. Revolut is rebuilding its technology stack on a single foundation model PRAGMA, powered by NVIDIA accelerated computing. Using the NVIDIA cuDF […]",
           "event_at": null,
           "supporting": []
@@ -1476,7 +1271,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "To help developers rapidly build world models, which help physical AI systems understand and simulate the real world, NVIDIA has expanded the Cosmos platform with new training tools, simulation checkpoints and Cosmos Data Factory blueprints. Ranking top five on six different open models leaderboards, the NVIDIA Cosmos platform gives world model builders the frontier open […]",
           "event_at": null,
           "supporting": []
@@ -1493,7 +1288,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Companies around the world are building on the NVIDIA DSX AI Factory Platform to plan, simulate and run the grid and the AI factory as one system, from the substation to the rack. Their adoption of the platform responds to an acute problem. Power is now the biggest bottleneck in infrastructure. More than $300 billion […]",
           "event_at": null,
           "supporting": []
@@ -1510,7 +1305,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "European retailers are using open models and physical intelligence across use cases — from a commerce platform cutting inference costs by 90% to to a fulfillment center where collaboration of different robotic fleets is simulated inside a digital twin. Frontier Results With Open Models Retail leaders and technology companies across Europe are using NVIDIA-accelerated open […]",
           "event_at": null,
           "supporting": []
@@ -1527,7 +1322,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Weather forecasts shape more than daily plans; timely weather information is crucial for energy producers, insurers and transport operators to plan around changing conditions. A global forecast can show a storm taking shape, but decisions about solar farms, shipping routes or insured property depend on what happens locally. NVIDIA Earth-2 gives developers and researchers a […]",
           "event_at": null,
           "supporting": []
@@ -1544,7 +1339,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Governments need modern solutions to serve the public while keeping sensitive information under their control. Open models provide a path forward, letting governments evaluate them, adapt them to local languages and public services, run them on infrastructure they control, apply their own safeguards and keep sensitive data within controlled environments. Some open models go further, […]",
           "event_at": null,
           "supporting": []
@@ -1572,7 +1367,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"7bbc48b7db221f16018ec1da7adb5f3d90795f4cb75e7bded97aeebbc7a72c88\"",
+      "etag": "W/\"d3eea670c2d9ed009fc4ff1e66dba91dcf9a9b09567ea7c7ea041b9340db0367\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1617,7 +1412,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"ec1cadcdb69d5a21e914033abf599963809eb7e58228e3b2bc1d19b81affb30b\"",
+      "etag": "W/\"6e0ad53ad901b9338fda067472840b2204afcdba239b237f873c7fd6fa4b1dee\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1626,11 +1421,28 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"96446da73cb124ae4c3da115600c4576cc84720bff60466891ff9793ef689848\"",
+      "etag": "W/\"81fff6a2e73948a733a3b7d008c7aa20e33bfb5e0d05759f8f73bc84bcc47bec\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "173b2ddf9d58603a1734",
+          "source_id": "ollama",
+          "source_name": "Ollama Releases",
+          "group": "ollama",
+          "trust": "official",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
+          "title": "Ollama Releases: v0.40.11",
+          "published_at": "2026-10-24T00:30:13Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "## Speech Ollama can now generate [speech](https://docs.ollama.com/capabilities/speech) on macOS. `ollama run` plays text or a chat model's reply aloud as the audio is generated, and apps can stream audio through the OpenAI-compatible `/v1/audio/speech` endpoint. ```sh ollama run phonon \"Hello from Ollama.\" ``` ## d3 decision models [d3](https://ollama.com/library/d3) brings vLLM Semantic Router's",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "8c177b37ece0d145f22f",
           "source_id": "ollama",
@@ -1643,7 +1455,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "## NVIDIA Nemotron 3.5 Bolt E4B [Nemotron 3.5 Bolt E4B](https://ollama.com/library/nemotron-3.5-bolt) is NVIDIA’s smaller, Gemma 4-based vision-language model for fast local conversations, image understanding, and tool use. It supports a 128K-token context window. The model includes a DFlash draft for speculative decoding. ollama run nemotron-3.5-bolt:e4b **Full Changelog**: https://github.com/oll",
           "event_at": null,
           "supporting": []
@@ -1660,31 +1472,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "## Speech Ollama can now generate [speech](https://docs.ollama.com/capabilities/speech) with Phonon on Apple Silicon. `ollama run` plays text or a chat model's reply aloud as the audio is generated, and apps can stream audio through the OpenAI-compatible `/v1/audio/speech` endpoint. ```sh ollama run phonon \"Hello from Ollama.\" ``` ## d3 decision models [d3](https://ollama.com/library/d3) brings vL",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "bb132bf741e1159b4d9c",
-          "source_id": "ollama",
-          "source_name": "Ollama Releases",
-          "group": "ollama",
-          "trust": "official",
-          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.8",
-          "title": "Ollama Releases: v0.40.8",
-          "published_at": "2026-10-21T16:20:30Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "## Recursive Flint [Flint](https://ollama.com/library/flint) brings Recursive's coding model to Ollama. It is designed for the work coding agents do across a repository: understanding unfamiliar code, tracing bugs, implementing features, and adding tests. Reasoning, multi-turn tool use, and a 262K-token context window support longer tasks across files and tool interactions. Flint is an Apache 2.0-",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "## Flint on Linux and Windows [Flint](https://ollama.com/library/flint) now runs on Linux and Windows as well as macOS. ## Other improvements - Streaming OpenAI Responses and Anthropic Messages requests now report generation failures instead of ending silently after partial output. - `ollama launch` now passes cloud models' context lengths and capabilities to coding tools, fixing incorrect context",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 28,
-      "verified": 28
+      "discovered": 29,
+      "verified": 29
     },
     "llama-cpp": {
       "etag": "",
@@ -1696,7 +1491,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"8493c27500a092649ff91507a94d1da5f029b663353077cf8f6fddb1763562e4\"",
+      "etag": "W/\"4948bccd5ba298dc46b20d4b28d65ad1081f4d10196dfd1f78b6641728f19a28\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1713,59 +1508,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Changes since langchain-core==1.6.13 release(core): 1.7.0 (#41418) feat(core): emit `tool-call-delta` for streamed tool-call args (#41257) ## Notes - Tool-call args now stream as `tool-call-delta` slices instead of `block-delta` snapshots of the args so far. If you read raw stream events and their `block-delta` args mid-stream, read `tool-call-delta` instead. `.tool_calls.get()` and `.output` are ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "ca1e9b27c57e709059a0",
-          "source_id": "langchain",
-          "source_name": "LangChain Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.7",
-          "title": "LangChain Releases: langchain==1.4.7",
-          "published_at": "2026-10-21T21:39:16Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Changes since langchain==1.4.6 chore(langchain): update lockfile (#41402) release(langchain): 1.4.7 (#41401) chore(deps): bump certifi from 2025.11.12 to 2026.10.19 in /libs/langchain_v1 (#41370) feat(core,langchain,standard-tests): read `tool-call-delta` in stream consumers (#41246) chore(deps): bump aiohttp from 3.14.4 to 3.14.5 in /libs/langchain_v1 (#41360) chore(deps): bump aiohttp from 3.14.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "d7f891d2a048125a896b",
-          "source_id": "langchain",
-          "source_name": "LangChain Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.13",
-          "title": "LangChain Releases: langchain-core==1.6.13",
-          "published_at": "2026-10-21T20:43:48Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Changes since langchain-core==1.6.12 release(core): 1.6.13 (#41397) chore(deps): bump certifi from 2025.11.12 to 2026.10.19 in /libs/core (#41373) feat(core,langchain,standard-tests): read `tool-call-delta` in stream consumers (#41246)",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "3b94502ba2eceec31233",
-          "source_id": "langchain",
-          "source_name": "LangChain Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.4.2",
-          "title": "LangChain Releases: langchain-perplexity==1.4.2",
-          "published_at": "2026-10-21T17:31:04Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Changes since langchain-perplexity==1.4.1 release(perplexity): 1.4.2 (#41392) chore(model-profiles): refresh model profile data (#41354) chore(deps): bump certifi from 2025.8.3 to 2026.10.19 in /libs/partners/perplexity (#41377) fix(perplexity): preserve Agent API search results (#41349) fix: fix dependencies in some partner packages (#41266) chore(deps): bump urllib3 from 2.7.0 to 2.8.0 in /libs/",
           "event_at": null,
           "supporting": []
         }
@@ -1776,7 +1520,7 @@
     "langgraph": {
       "etag": "W/\"c8f3935fd3db68a952a8075d7bcffe7a941e1338ef2d22b740ae88d5597c27a9\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1837,7 +1581,7 @@
     "litellm": {
       "etag": "W/\"9e1d81b3ec505627e8d1d2580d914fae4aba2dd4425ae60ae2a8862af4b61bf0\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1958,11 +1702,79 @@
       "verified": 0
     },
     "techcrunch-ai": {
-      "etag": "W/\"9d8788d01d67f1375b7e4f4104acfa0c\"",
-      "modified": "Sat, 24 Oct 2026 11:03:30 GMT",
+      "etag": "W/\"ee0149a13c5b65a722f8d4e2f27ac936\"",
+      "modified": "Sat, 24 Oct 2026 22:25:35 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "43fa73ddaf377eb53f4d",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+          "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+          "published_at": "2026-10-24T19:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "61ceba6cfe4981597ca2",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+          "title": "Block’s new voice model sounds eerily human",
+          "published_at": "2026-10-24T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "Block said that the voice model can run locally on a MacBook M4 Max",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "e7a80d87e8606cee69a8",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+          "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+          "published_at": "2026-10-24T15:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "ba1e969f5ed16b52b119",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+          "title": "Here are the top AI agents that can live in your text messages",
+          "published_at": "2026-10-24T14:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "dfe5fb536ca517ba2b1e",
           "source_id": "techcrunch-ai",
@@ -1975,7 +1787,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn't work.",
           "event_at": null,
           "supporting": []
@@ -1992,7 +1804,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.",
           "event_at": null,
           "supporting": []
@@ -2009,7 +1821,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, developing founder leadership, and scaling companies both inside and outside traditional startup hubs.",
           "event_at": null,
           "supporting": []
@@ -2026,7 +1838,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "The company plans to begin testing Pony.ai's robotaxis in Kazakhstan's capital in the first half of 2027.",
           "event_at": null,
           "supporting": []
@@ -2043,7 +1855,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "MIT researchers marooned 13 AIs on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs.",
           "event_at": null,
           "supporting": []
@@ -2060,7 +1872,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Should OpenAI command an over $1 trillion valuation with this round, it would break records as the most highly valued private company ever.",
           "event_at": null,
           "supporting": []
@@ -2077,7 +1889,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts.",
           "event_at": null,
           "supporting": []
@@ -2094,76 +1906,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Canva is making its new image model available to all users, promising better, more customizable performance at lower costs.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "9053b1f287d8b411ac91",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
-          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
-          "published_at": "2026-10-22T19:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "OpenAI is launching its decision model to the world. Can it compete with the original Jev?",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "5595c812cd34051e7101",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
-          "title": "Microsoft’s Mustafa Suleyman says its AI outperforms doctors on hard cases as he chases ‘medical superintelligence’",
-          "published_at": "2026-10-22T18:43:53Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Microsoft’s new AI diagnostic system beat generalist doctors on hard cases, according to a study in Science. But most of the improvement seems to come from the AI models underneath, not from Microsoft’s system itself.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "6af0fd42e696c932c3bb",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
-          "title": "Chinese hackers spied on thousands of companies after breaching IT giant ConnectWise",
-          "published_at": "2026-10-22T16:47:17Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Microsoft points the blame for ConnectWise's breach at a China-aligned hacker, which relied on AI agents to rapidly hack into thousands of its customers.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "9fdd22fa30fbdf82a9dd",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
-          "title": "Uber puts all 30,000 employees on ChatGPT Work",
-          "published_at": "2026-10-22T16:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "The ride-share giant previously deployed a much smaller pilot for ChatGPT Work but is now taking the enterprise agent company-wide.",
           "event_at": null,
           "supporting": []
         }
@@ -2182,7 +1926,7 @@
     },
     "ars": {
       "etag": "",
-      "modified": "Sat, 24 Oct 2026 12:37:02 GMT",
+      "modified": "Sat, 24 Oct 2026 15:08:07 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -2198,7 +1942,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "A new model suggests Mars may host ice-forming physics never directly observed before.",
           "event_at": null,
           "supporting": []
@@ -2215,7 +1959,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "The tiny remains of the Laurentide Ice Sheet began getting somewhat less tiny.",
           "event_at": null,
           "supporting": []
@@ -2232,7 +1976,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "\"We have the mandate, we have the resources, and the support from our stakeholders.\"",
           "event_at": null,
           "supporting": []
@@ -2249,7 +1993,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Pentagon memo: Insider trading gives US enemies key intel on military operations.",
           "event_at": null,
           "supporting": []
@@ -2266,7 +2010,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Turning on Personal Intelligence gives the company more data for ad targeting.",
           "event_at": null,
           "supporting": []
@@ -2283,7 +2027,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Space Force considering options: public-private, federal installation, state land.",
           "event_at": null,
           "supporting": []
@@ -2300,7 +2044,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "If you share Spotify sub with family, you may need to scan QR code to prove it.",
           "event_at": null,
           "supporting": []
@@ -2317,7 +2061,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Birds' compact nervous system seems to help them handle tasks very quickly.",
           "event_at": null,
           "supporting": []
@@ -2334,7 +2078,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Company says foreign-made robotic vehicles are crucial to US chip production.",
           "event_at": null,
           "supporting": []
@@ -2351,7 +2095,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "\"Trust is slow to build and quick to lose,\" board chair Jack Leslie said.",
           "event_at": null,
           "supporting": []
@@ -2368,7 +2112,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Corporate phishing tests are common, but this one was especially cruel.",
           "event_at": null,
           "supporting": []
@@ -2385,7 +2129,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Sound designer lets Half Life-related codename slip at a conference.",
           "event_at": null,
           "supporting": []
@@ -2395,11 +2139,45 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"86d7fda6091474a7a50a35013988982e\"",
+      "etag": "W/\"7d7340cb7d6ff5c2e95c7dbd3f43973a\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "36111d6bc6b4991f37ea",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
+          "title": "Blue Planet III is keeping the rough edges in the age of AI",
+          "published_at": "2026-10-24T21:29:12Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "BBC's Blue Planet III is looking to prove its authenticity by leaving in the less-than-perfect shots. Previous incarnations of the nature series were defined by their gorgeous, crystal-clear footage that seemed almost too good to be real. But one dead giveaway of AI is when things look too polished and seamless. To counter that, Blue […]",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "c7aa9b7dfeaf83bd70a0",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act",
+          "title": "Pennsylvania will require labels on AI-generated ads",
+          "published_at": "2026-10-24T18:32:21Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "On Thursday, Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law, requiring disclosures on AI-generated ads. The law requires any ad - whether it's a still image, video, audio, or text - that \"has been significantly modified or generated by artificial intelligence\" to include a label in the same format as […]",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "a6d2d5fdb7657f8a34ec",
           "source_id": "theverge-ai",
@@ -2412,7 +2190,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI paused training its frontier […]",
           "event_at": null,
           "supporting": []
@@ -2429,7 +2207,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Jack Dorsey's Block announced an AI model called Dessa that's trained \"from scratch on nothing but human conversation,\" and to show off the model, Block shared chats it has had with humans that can occasionally be a little awkward and uncanny. Take this one, for example, shared by Dessa lead Ragavan Thurairatnam. The conversation between […]",
           "event_at": null,
           "supporting": []
@@ -2446,7 +2224,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "We gave the iPhone Duo a 7 /10. But that wasn't always the score we planned, and it might not be the right score forever. Such are the challenges of reviewing - and assessing - a big, new idea about the most popular smartphone in history. On this episode of The Vergecast, David and Nilay […]",
           "event_at": null,
           "supporting": []
@@ -2463,7 +2241,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Google has updated its privacy policy in a way that could mean you'll start seeing targeted ads based on your personal data if you're using personalized AI features. The update, spotted by Android Authority, adds an exception to its promise about not using your Drive, Gmail, or Google Photos for personalized ads. While the previous […]",
           "event_at": null,
           "supporting": []
@@ -2480,7 +2258,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Meta is delaying the enforcement of its new business terms after publishers raised concerns that they could allow the company to scrape news sites for AI training, as reported earlier by Fast Company. In a statement to The Verge, Meta spokesperson Daniel Roberts says the terms will go into effect on November 20th \"to allow […]",
           "event_at": null,
           "supporting": []
@@ -2497,7 +2275,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Retro video games are everywhere lately - especially in places where they aren't supposed to be. Halo in a web browser, Wind Waker on the iPhone, Super Smash Bros. in mixed reality. Over the past month or so, these kinds of unexpected projects have gone viral with incredible frequency thanks to new AI tools, as […]",
           "event_at": null,
           "supporting": []
@@ -2514,7 +2292,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google. The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]",
           "event_at": null,
           "supporting": []
@@ -2531,42 +2309,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns. \"This does nothing to restrict the 'associated with your products or services' [language] that would let Meta scrape […]",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "50dd0c98f11d38b5c2cf",
-          "source_id": "theverge-ai",
-          "source_name": "The Verge AI",
-          "group": "vox",
-          "trust": "media",
-          "url": "https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts",
-          "title": "Meta turns Muse sharing back on",
-          "published_at": "2026-10-22T20:24:04Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Meta has re-enabled Muse sharing after security researchers had reported that public conversation links could be easy to find. The researchers said they had been able to find Muse pages like a marketing company's internal revenue review and a small business owner's loan application. Researchers at Claroc reported earlier this week that Muse the web […]",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1c3f6e8b2704e3fb6b2b",
-          "source_id": "theverge-ai",
-          "source_name": "The Verge AI",
-          "group": "vox",
-          "trust": "media",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
-          "title": "Sure, let’s smoosh SpaceX and Tesla together, who cares",
-          "published_at": "2026-10-22T19:45:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Oh sure, SpaceX's credit risk is pretty high because it's about to borrow another $40 billion to spend on Nvidia chips, but who cares about that? SpaceX and Tesla have formed special committees to discuss a merger! The degree to which you find this merger compelling likely has to do with the degree to which […]",
           "event_at": null,
           "supporting": []
         }
@@ -2592,7 +2336,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Security researchers used AI tools to help uncover years-old vulnerabilities in the PHP web scripting language. Then the AI-assisted attacks began.",
           "event_at": null,
           "supporting": []
@@ -2609,7 +2353,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "WIRED spoke with the founders of the Aged Intelligence Society, a fast-growing events startup that brings women together to “solve midlife problems using frontier tools.”",
           "event_at": null,
           "supporting": []
@@ -2626,7 +2370,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Step one in convincing people to live with robots with cameras on their faces? Disguise them as cute home decor.",
           "event_at": null,
           "supporting": []
@@ -2643,7 +2387,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "The new open-source model speaks the language of DNA and can help researchers understand the effects of any changes on gene activity and health.",
           "event_at": null,
           "supporting": []
@@ -2660,93 +2404,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Amazon Web Services logged attempts to leverage the internet-melting PHP2Shell bugs four days ago. They’re now being “broadly exploited” across the internet.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "daa7510564afd525e53c",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/mark-zuckerberg-agrees-to-stay-in-california-despite-billionaires-tax-ballot-measure/",
-          "title": "Mark Zuckerberg Agrees to Stay in California Despite Billionaires’ Tax Ballot Measure",
-          "published_at": "2026-10-21T22:39:50Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Meta’s board feared that its CEO’s departure could disrupt the company’s AI ambitions. A new stock agreement gives him financial incentives to stay put.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "3a17afaefa79e522dffd",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/recursive-self-improvement-flint-latest-model-scary-good/",
-          "title": "This Startup Is All In on Recursive Self-Improvement. Its Latest Model Is Scary Good",
-          "published_at": "2026-10-21T16:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Recursive makes the case that the benefits of using AI to build AI outweigh the risks.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "4d648a138e924c2e0a0a",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
-          "title": "Jensen Huang’s Vision for Europe Runs on Plug-In Data Centers",
-          "published_at": "2026-10-21T15:02:15Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "At Nvidia’s GTC in Berlin, Huang unveiled the company’s new plug-in data center—the DSX Pod—as the key to unlocking Europe’s AI infrastructure lag. Oh, and autonomous humanoid robotics.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "24b79b6be13d83a5f613",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/this-is-not-a-drill-2-php-vulnerabilities-are-setting-the-internet-on-fire/",
-          "title": "‘This Is Not a Drill’: Critical PHP Vulnerabilities Are Setting the Internet on Fire",
-          "published_at": "2026-10-21T14:26:19Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "The PHP Foundation has revealed two serious vulnerabilities that could impact millions of websites. Security experts warn that failure to quickly patch the flaws could have dire consequences.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "d16d77e4d2a6a28b086c",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/ai-guardrails-arent-stopping-criminal-hackers/",
-          "title": "AI Guardrails Aren’t Stopping Criminal Hackers",
-          "published_at": "2026-10-21T14:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Hackers around the world are all-in on using agentic AI to wage attacks—and manipulating tools like Anthropic’s Claude to help them carry out their crimes.",
           "event_at": null,
           "supporting": []
         }
@@ -2980,7 +2639,7 @@
     "juya-discovery": {
       "etag": "W/\"703e8ba4f49a862ac316ae76b32027c2\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -3016,75 +2675,6 @@
           "excerpt": "In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what they reveal about the model’s alignment. Chapter 01 : Alignment assessment summary An alignment assessment of the UK AISI cybertesting incident 01 Alignment assessment summary 02 Methods 03 Deep dive i",
           "event_at": null,
           "supporting": []
-        },
-        {
-          "id": "bdc7b775ab8d2106278d",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
-          "title": "Donating Agent Skills to the Agentic AI Foundation",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. A skill is a folder containing a SKILL.md file that teaches an agent a specific task or domain, along with any scripts or reference material it needs. We developed skills while working on Claude Code. It handled general knowledge work well, but often lacked the procedural knowl",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "b9843ad88f05a84c240b",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed",
-          "title": "The full Claude Platform, available on Google Cloud",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "day",
-          "source_date": "2026-10-22",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Use Claude Models on Google Cloud (Anthropic managed) to access Claude Platform features with Google Cloud authentication, billing, and commitment retirement. Fast Mode on Claude Opus 5.5 is also generally available for customers using Claude Models on Google Cloud (Anthropic managed). Fast mode prioritizes speed, offering up to 2.5x faster output token generation, for rapid iteration, live debugg",
-          "event_at": null,
-          "supporting": [
-            {
-              "id": "2774033818a1a1b2369d",
-              "source_id": "primary-anthropic",
-              "source_name": "Anthropic",
-              "group": "anthropic",
-              "trust": "official",
-              "url": "https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed",
-              "title": "Claude Models on Google Cloud (Anthropic managed)",
-              "published_at": null,
-              "time_precision": "unknown",
-              "source_date": "",
-              "time_basis": "publication",
-              "collected_at": "2026-10-24T13:36:17.502999Z",
-              "excerpt": "Claude Models on Google Cloud (Anthropic managed) is the Claude API, run by Anthropic and reached through your Google Cloud project. Claude Models on Google Cloud (Anthropic managed) bills through Google Cloud Marketplace. Anthropic meters your usage. It reports the usage to Google Cloud in Claude Consumption Units. One Claude Consumption Unit is $0.01 USD. The charges appear on your Google Cloud ",
-              "event_at": null,
-              "supporting": []
-            }
-          ]
-        },
-        {
-          "id": "f6a301346a05e615cdbc",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/research/formal-verification",
-          "title": "LLMs are making formal software verification feasible at a much larger scale",
-          "published_at": "2026-10-22T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Claude formally proved security properties in the compiled code of 123 open-source libraries. Along the way, it found bugs that had eluded detection for years. Over the span of a few weeks, Claude successfully patched the bugs it found and then proved that there are no crashes on any input (up to 64 MB) for 239 entry points across 123 different OSS-Fuzz libraries. These proofs operate on the compi",
-          "event_at": null,
-          "supporting": []
         }
       ],
       "discovered": 5,
@@ -3093,8 +2683,8 @@
     "openai-community": {
       "etag": "",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_429",
       "items": [],
       "discovered": 8,
       "verified": 8
@@ -3117,7 +2707,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what they reveal about the model’s alignment. Chapter 01 : Alignment assessment summary An alignment assessment of the UK AISI cybertesting incident 01 Alignment assessment summary 02 Methods 03 Deep dive i",
           "event_at": null,
           "supporting": []
@@ -3136,11 +2726,62 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"00a840986d9e8f39e16eb635eae65689\"",
-      "modified": "Sat, 24 Oct 2026 11:14:57 GMT",
+      "etag": "\"ee5f03f853f4aa65ae08941ecd41527a\"",
+      "modified": "Sat, 24 Oct 2026 15:20:59 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "45966a847299ab5b99d0",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually-leaked/",
+          "title": "Three fired OpenAI safety researchers say they were never told what they actually leaked",
+          "published_at": "2026-10-24T15:19:33Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "The three OpenAI safety researchers who were fired, Tomek Korbak, Mikita Balesni, and Jasmine Wang, are publicly pushing back against allegations from their former employer. They deny sharing confidential information and see a connection to their advocacy for AI systems that are easier to scrutinize. The researchers say OpenAI never told them in writing which information they allegedly mishandled.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "0d4f165cdbad641809bf",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/ai-makes-junior-patent-attorneys-instantly-better-but-may-quietly-stunt-their-professional-growth/",
+          "title": "AI makes junior patent attorneys instantly better but may quietly stunt their professional growth",
+          "published_at": "2026-10-24T14:34:05Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "A three-month field experiment with 133 patent attorneys shows that AI boosts immediate performance, with junior lawyers gaining the most. But when the AI is taken away, only senior attorneys retain the benefits, suggesting that baseline expertise is a prerequisite for turning AI-assisted practice into lasting skill. The article AI makes junior patent attorneys instantly better but may quietly stu",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "3f2ee2d5e634e272cb99",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/",
+          "title": "Block's new AI model Dessa was trained entirely on human speech to catch emotions text-based models miss",
+          "published_at": "2026-10-24T14:09:46Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "excerpt": "Block, the company behind Square and Cash App, has introduced Dessa, a speech model that processes audio directly instead of converting it to text first. Dessa is designed to recognize emotions, sarcasm, and pauses in real time. The model runs locally on a MacBook Pro M4 Max but isn't publicly available yet. The article Block's new AI model Dessa was trained entirely on human speech to catch emoti",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "2d7458168c2cc9a97201",
           "source_id": "decoder",
@@ -3153,7 +2794,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "OpenAI now trains its most powerful models without internet access, after an internal research model exploited a DNS misconfiguration in September and reached the open internet. In controlled tests, AI agents still found ways to communicate covertly through side channels. The incidents echo Sam Altman's warning: the more powerful the model, the harder it is to contain. The article OpenAI's isolate",
           "event_at": null,
           "supporting": []
@@ -3170,7 +2811,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "A controlled study shows that switching between coding-agent harnesses like Claude Code, OpenCode, or mini-SWE-agent barely moves pass rates more than rerunning the same setup. Cost per task, however, can triple, driven mainly by the system prompt that gets resent with every step. The article Fancy harnesses make coding agents more expensive but not better, study finds appeared first on The Decode",
           "event_at": null,
           "supporting": []
@@ -3187,7 +2828,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Moonshot AI's Kimi K3.1 Pro scores 55 points on the Artificial Analysis Intelligence Index, an 11-point jump over its predecessor that puts it in fourth place. Only three Anthropic and Meta models rank higher. If Moonshot releases the weights as planned, the gap between open and proprietary models shrinks to just three points. The article Chinese AI model Kimi K3.1 Pro is closing in on Anthropic's",
           "event_at": null,
           "supporting": []
@@ -3204,7 +2845,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "External auditors from METR and Redwood Research spent three weeks on-site at OpenAI examining the company's internal monitoring system for AI agents and found significant gaps, with up to 25 percent of agent traffic from models at the GPT-5.5 class and above going unmonitored. OpenAI redacted large portions of the 61-page report, and only a summary is publicly available. The article Three-week on",
           "event_at": null,
           "supporting": []
@@ -3221,7 +2862,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Anthropic says it has an internal AI model that outperforms and is better aligned than Mythos 5.1. During a cybersecurity test by the UK's AISI, Mythos 5 went rogue in 9 of 43 runs, sneaking malicious code into a real GitHub project and creating fake accounts to get it approved. An internal research model stopped such attacks on its own 67 percent of the time. The article Anthropic says its unrele",
           "event_at": null,
           "supporting": []
@@ -3238,7 +2879,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Sam Altman believes advanced AI can't be kept locked up forever. Sandboxes and monitoring are only temporary fixes. Eventually, the only real solution is alignment, and that's still an unsolved problem. He also warns that AI models are already finding hardware security flaws no human hacker would ever spot. The article OpenAI CEO Sam Altman says advanced AI will inevitably escape its sandbox, and ",
           "event_at": null,
           "supporting": []
@@ -3255,59 +2896,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Design platform Canva has released Canva Craft, its first in-house image generation model. The article Canva launches Craft, its first in-house image model appeared first on The Decoder .",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "672af9bc27b14ed7e995",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/anthropics-claude-now-writes-code-and-proves-it-safe-automatically/",
-          "title": "Anthropic's Claude now writes code and proves it safe automatically",
-          "published_at": "2026-10-23T11:32:19Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Anthropic had Claude generate mathematical proofs that existing code is correct, producing roughly 180 million lines of proof code for 123 open-source libraries. Along the way, the model caught bugs that years of testing had missed. Anthropic's goal: making formal verification with AI as routine as standard testing. The article Anthropic's Claude now writes code and proves it safe automatically ap",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "0cc76a22a539792e3781",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/openai-lowers-valuation-target-raises-up-to-30-billion/",
-          "title": "OpenAI lowers valuation target, raises up to $30 billion",
-          "published_at": "2026-10-23T09:49:38Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "OpenAI is closing in on a new funding round of up to $30 billion but has lowered its valuation target to get there. The article OpenAI lowers valuation target, raises up to $30 billion appeared first on The Decoder .",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1bf85383f8d6638cfecc",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/major-us-banks-are-locking-out-ai-agents-that-log-in-with-customer-credentials/",
-          "title": "Major US banks are locking out AI agents that log in with customer credentials",
-          "published_at": "2026-10-22T18:26:02Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
-          "excerpt": "Customers are letting AI agents use their credentials to access accounts at Morgan Stanley, JPMorgan, and other major U.S. banks, sometimes without direct instructions. Morgan Stanley has blocked agents, while other banks are restricting access. Most plan to limit agents to read-only access. The article Major US banks are locking out AI agents that log in with customer credentials appeared first o",
           "event_at": null,
           "supporting": []
         }
@@ -3369,40 +2959,6 @@
           "time_basis": "publication",
           "collected_at": "2026-10-24T00:31:12.257226Z",
           "excerpt": "Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls. Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "59c87ea544e0e5db59d1",
-          "source_id": "cloudflare-ai",
-          "source_name": "Cloudflare",
-          "group": "cloudflare",
-          "trust": "official",
-          "url": "https://blog.cloudflare.com/full-transaction-waf/",
-          "title": "Introducing full transaction detection for Cloudflare WAF",
-          "published_at": "2026-10-21T14:10:42Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "4a59615041b968ae61d1",
-          "source_id": "cloudflare-ai",
-          "source_name": "Cloudflare",
-          "group": "cloudflare",
-          "trust": "official",
-          "url": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/",
-          "title": "Cloudflare deploys protections against php2shell vulnerability",
-          "published_at": "2026-10-21T13:56:45Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure. The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.",
           "event_at": null,
           "supporting": []
         }
@@ -3676,6 +3232,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-25-am-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -5361,6 +4922,30 @@
       "entities": [
         "openai"
       ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "61ceba6cfe4981597ca2",
+      "issue": "2026-10-25-am",
+      "cutoff": "2026-10-25T00:30:00Z",
+      "title": "Block’s new voice model sounds eerily human",
+      "urls": [
+        "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "c7aa9b7dfeaf83bd70a0",
+      "issue": "2026-10-25-am",
+      "cutoff": "2026-10-25T00:30:00Z",
+      "title": "Pennsylvania will require labels on AI-generated ads",
+      "urls": [
+        "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act"
+      ],
+      "entities": [],
       "versions": [],
       "event_type": "announcement"
     }

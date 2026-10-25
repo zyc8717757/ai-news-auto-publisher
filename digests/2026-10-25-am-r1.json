@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-25-am",
+  "revision": 1,
+  "created_at": "2026-10-25T00:31:17.207921Z",
+  "cutoff": "2026-10-25T00:30:00Z",
+  "window_start": "2026-10-23T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "61ceba6cfe4981597ca2",
+      "title": "Block推出新语音模型，该公司称可在MacBook上运行",
+      "summary": "媒体报道称，Block推出了一款听起来非常逼真的全新语音模型。该公司称，该语音模型能够在搭载M4 Max芯片的MacBook上进行本地运行。",
+      "impact": "展示了端侧语音模型运行的新进展，可能提升本地设备上的语音交互体验。",
+      "category": "模型",
+      "score": 63.14,
+      "sources": [
+        {
+          "id": "61ceba6cfe4981597ca2",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+          "title": "Block’s new voice model sounds eerily human",
+          "published_at": "2026-10-24T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "模型具体性能细节和泛化能力未知，其本地运行效果有待更多评测。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Block 发布了可本地运行在 MacBook M4 Max 上的新型语音模型 Dessa，引起业界关注。",
+      "backfill": false
+    },
+    {
+      "id": "c7aa9b7dfeaf83bd70a0",
+      "title": "宾夕法尼亚州通过新法案，要求AI生成广告添加标签",
+      "summary": "宾夕法尼亚州长Josh Shapiro签署了《人工智能欺诈性广告法》。该法律要求，任何经过人工智能显著修改或生成的静态图像、视频、音频或文本广告，都必须包含相应格式的标签进行披露。",
+      "impact": "规范了AI生成广告的应用，有助于防范虚假信息传播，对数字广告合规提出新要求。",
+      "category": "安全",
+      "score": 56.8,
+      "sources": [
+        {
+          "id": "c7aa9b7dfeaf83bd70a0",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act",
+          "title": "Pennsylvania will require labels on AI-generated ads",
+          "published_at": "2026-10-24T18:32:21Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "法案的具体执行细则及对跨平台广告监管的实际效果仍需观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "宾夕法尼亚州长签署人工智慧欺诈性广告法案，要求对 AI 生成广告进行强制披露。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
