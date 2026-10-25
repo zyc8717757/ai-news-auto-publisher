@@ -3235,7 +3235,7 @@
     },
     "2026-10-25-am-r1": {
       "deployment": "ready",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
