@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-10-25T12:30:00Z",
+  "last_covered_at": "2026-10-26T00:30:00Z",
   "ai_attempts": [
     "2026-10-24T00:31:40.365720Z",
     "2026-10-24T00:31:48.317641Z",
@@ -946,7 +946,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
           "event_at": null,
           "supporting": []
@@ -963,42 +963,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1a543055a02f9816518c",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-          "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-          "published_at": "2026-10-23T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "891b7e0bbf66f86d27b7",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/decisions-api",
-          "title": "Build more responsive apps with the Decisions API",
-          "published_at": "2026-10-22T19:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "Fast, focused, low-cost decisions for any application.",
           "event_at": null,
           "supporting": []
         }
@@ -1016,29 +982,11 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"cSfbpA\"",
+      "etag": "\"Hlhuvg\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [
-        {
-          "id": "301925b8adfcebab105a",
-          "source_id": "deepmind",
-          "source_name": "Google DeepMind",
-          "group": "google",
-          "trust": "official",
-          "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
-          "title": "Beyond tree cover: mapping the world’s forest types",
-          "published_at": "2026-10-22T14:30:24Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 50,
       "verified": 50
     },
@@ -1073,40 +1021,6 @@
           "excerpt": "",
           "event_at": null,
           "supporting": []
-        },
-        {
-          "id": "2b3f616d26d343fed778",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/torch-neuronx-model-support",
-          "title": "Does Your Model Run on AWS Trainium? Look It Up",
-          "published_at": "2026-10-23T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "51888f116f5b083740bc",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-          "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-          "published_at": "2026-10-22T22:24:34Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
         }
       ],
       "discovered": 50,
@@ -1115,27 +1029,9 @@
     "microsoft-research": {
       "etag": "\"b75a5d015629b95dd32b2d32037235a8\"",
       "modified": "Sun, 25 Oct 2026 08:20:12 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
-      "items": [
-        {
-          "id": "db007afeffa315bee076",
-          "source_id": "microsoft-research",
-          "source_name": "Microsoft Research",
-          "group": "microsoft",
-          "trust": "research",
-          "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-          "title": "Flint-interactive: A language for creating interactive data visualizations",
-          "published_at": "2026-10-22T16:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose. The post Flint-interactive: A language for creating interactive data visualizations appeared first on Microsoft Research .",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 10,
       "verified": 10
     },
@@ -1159,40 +1055,6 @@
           "time_basis": "publication",
           "collected_at": "2026-10-25T00:31:17.207921Z",
           "excerpt": "Kazakhstan’s AI ecosystem is moving from infrastructure plans to deployment. The shift is visible across the full AI stack — from infrastructure to models to applications. The announcements below — coinciding with a visit to Astana by NVIDIA founder and CEO Jensen Huang — point to the nation’s increasing supply of accelerated computing, along with […]",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "af6b159eb6ea2f663c90",
-          "source_id": "nvidia",
-          "source_name": "NVIDIA",
-          "group": "nvidia",
-          "trust": "official",
-          "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure/",
-          "title": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
-          "published_at": "2026-10-22T15:00:02Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
-          "excerpt": "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories productive. It brings together telemetry from infrastructure and AI workloads, then applies purpose-built AI models to turn that data into timely, actionable insight. AI factories are among the most complex operations in the world, with vast […]",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "c3c5d14bfc3aa83f897a",
-          "source_id": "nvidia",
-          "source_name": "NVIDIA",
-          "group": "nvidia",
-          "trust": "official",
-          "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty-modern-warfare-4/",
-          "title": "Cloud Deployment Incoming: ‘Call of Duty: Modern Warfare 4’ Arrives on GeForce NOW",
-          "published_at": "2026-10-22T13:00:20Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
-          "excerpt": "Lock in and load out this GFN Thursday. Call of Duty: Modern Warfare 4 arrives on GeForce NOW at launch, bringing a new campaign, multiplayer action and DMZ, high-stakes extraction mode to supported devices. The campaign also gets an enhanced look: GeForce RTX 5080-class performance arrives for Ultimate members, bringing support for ray-tracing features in […]",
           "event_at": null,
           "supporting": []
         }
@@ -1219,10 +1081,10 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"d3eea670c2d9ed009fc4ff1e66dba91dcf9a9b09567ea7c7ea041b9340db0367\"",
+      "etag": "W/\"5ca357e9613bbfd9c2affa3dabd3ab57621dff8eada0b861ad1dd6b489a80a8e\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
+      "status": "ok",
+      "error_code": "",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1230,17 +1092,17 @@
     "transformers": {
       "etag": "W/\"daeb06c6e4796bba0ea03940bee05533fb43d3df5508e2d9f4cb096457bfa2db\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
+      "status": "ok",
+      "error_code": "",
       "items": [],
       "discovered": 30,
       "verified": 30
     },
     "diffusers": {
-      "etag": "W/\"cd955d33a0eac3cdf33c2937d96e2b24679ddb68873f61eeb11ee186f589a716\"",
+      "etag": "W/\"774e5f762cdc5b1b75e3d256f0d953444ecd026f2bb7e044c72788abc0fc34dc\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
+      "status": "ok",
+      "error_code": "",
       "items": [
         {
           "id": "4dfb62570818f8132ab4",
@@ -1254,7 +1116,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "> [!TIP] > This release brings FLUX.3 Image Klein, Bria Fibo 2.0, Kandinsky 6, SANA-WM, and RFD4-Proteína to Diffusers, alongside new adapter support, hardware integrations, and modular pipelines. > 🚨 Python 3.11 or newer is now required. ## FLUX.3 Image Klein FLUX.3 Image Klein from Black Forest Labs supports text-to-image generation and editing with one or more reference images. Both the base an",
           "event_at": null,
           "supporting": []
@@ -1264,19 +1126,19 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"6e0ad53ad901b9338fda067472840b2204afcdba239b237f873c7fd6fa4b1dee\"",
+      "etag": "W/\"c1e4aa3fa156bbebb8aca72334924cf0486eb5501fe430eff8e57255157a4721\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
+      "status": "ok",
+      "error_code": "",
       "items": [],
       "discovered": 30,
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"81fff6a2e73948a733a3b7d008c7aa20e33bfb5e0d05759f8f73bc84bcc47bec\"",
+      "etag": "W/\"9da54a08d7c827b3ced6838ade383f1a81712c0b5233f48972c4eb2b4b02df3d\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
+      "status": "ok",
+      "error_code": "",
       "items": [
         {
           "id": "173b2ddf9d58603a1734",
@@ -1290,7 +1152,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "## Speech Ollama can now generate [speech](https://docs.ollama.com/capabilities/speech) on macOS. `ollama run` plays text or a chat model's reply aloud as the audio is generated, and apps can stream audio through the OpenAI-compatible `/v1/audio/speech` endpoint. ```sh ollama run phonon \"Hello from Ollama.\" ``` ## d3 decision models [d3](https://ollama.com/library/d3) brings vLLM Semantic Router's",
           "event_at": null,
           "supporting": []
@@ -1307,25 +1169,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "## NVIDIA Nemotron 3.5 Bolt E4B [Nemotron 3.5 Bolt E4B](https://ollama.com/library/nemotron-3.5-bolt) is NVIDIA’s smaller, Gemma 4-based vision-language model for fast local conversations, image understanding, and tool use. It supports a 128K-token context window. The model includes a DFlash draft for speculative decoding. ollama run nemotron-3.5-bolt:e4b **Full Changelog**: https://github.com/oll",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "39a2c26df5548ff5b1c5",
-          "source_id": "ollama",
-          "source_name": "Ollama Releases",
-          "group": "ollama",
-          "trust": "official",
-          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.9",
-          "title": "Ollama Releases: v0.40.9",
-          "published_at": "2026-10-22T01:33:10Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
-          "excerpt": "## Flint on Linux and Windows [Flint](https://ollama.com/library/flint) now runs on Linux and Windows as well as macOS. ## Other improvements - Streaming OpenAI Responses and Anthropic Messages requests now report generation failures instead of ending silently after partial output. - `ollama launch` now passes cloud models' context lengths and capabilities to coding tools, fixing incorrect context",
           "event_at": null,
           "supporting": []
         }
@@ -1337,43 +1182,25 @@
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "http_403",
+      "error_code": "parse_failed",
       "items": [],
       "discovered": 0,
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"4948bccd5ba298dc46b20d4b28d65ad1081f4d10196dfd1f78b6641728f19a28\"",
+      "etag": "W/\"489868431500f68440428101356b1587ed80e7d5c073242a6d9deaea468bd3e1\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
-      "items": [
-        {
-          "id": "b59dab6824688f368205",
-          "source_id": "langchain",
-          "source_name": "LangChain Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.0",
-          "title": "LangChain Releases: langchain-core==1.7.0",
-          "published_at": "2026-10-22T17:47:38Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
-          "excerpt": "Changes since langchain-core==1.6.13 release(core): 1.7.0 (#41418) feat(core): emit `tool-call-delta` for streamed tool-call args (#41257) ## Notes - Tool-call args now stream as `tool-call-delta` slices instead of `block-delta` snapshots of the args so far. If you read raw stream events and their `block-delta` args mid-stream, read `tool-call-delta` instead. `.tool_calls.get()` and `.output` are ",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "status": "ok",
+      "error_code": "",
+      "items": [],
       "discovered": 30,
       "verified": 30
     },
     "langgraph": {
       "etag": "W/\"c8f3935fd3db68a952a8075d7bcffe7a941e1338ef2d22b740ae88d5597c27a9\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
+      "status": "unchanged",
+      "error_code": "",
       "items": [
         {
           "id": "8a58c29f390b93e1d304",
@@ -1431,11 +1258,79 @@
       "verified": 30
     },
     "litellm": {
-      "etag": "W/\"9e1d81b3ec505627e8d1d2580d914fae4aba2dd4425ae60ae2a8862af4b61bf0\"",
+      "etag": "W/\"525f4fef1e9467b9e80c43c1b552bf613636584aae94efd84af041f29c484dc4\"",
       "modified": "",
-      "status": "error",
-      "error_code": "http_403",
+      "status": "ok",
+      "error_code": "",
       "items": [
+        {
+          "id": "8bf6776408f8d7ad49ac",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.4",
+          "title": "LiteLLM Releases: v1.106.4",
+          "published_at": "2026-10-25T09:39:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.106.4 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.106.4 3 PRs. 2 fixed. No action needed to upgrade ### Changes - **Deployment:** Fixed the prox",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "b38ba77c73719f59f0b8",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.105.5",
+          "title": "LiteLLM Releases: v1.105.5",
+          "published_at": "2026-10-25T09:12:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.105.5 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.105.5 2 PRs. 2 fixed. No action needed to upgrade ### Changes - **Deployment:** Fixed the prox",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "ccc48caa46ec0b1214a4",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.104.7",
+          "title": "LiteLLM Releases: v1.104.7",
+          "published_at": "2026-10-25T09:12:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.104.7 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.104.7 2 PRs. 2 fixed. No action needed to upgrade ### Changes - **Deployment:** Fixed the prox",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "ceb4a0cb5010f9bc7f0e",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.103.9",
+          "title": "LiteLLM Releases: v1.103.9",
+          "published_at": "2026-10-25T08:57:32Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.103.9 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.103.9 1 PR. 1 fixed. No action needed to upgrade ### Changes - **Deployment:** Fixed image sca",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "26c451a3ba9575d2f4b6",
           "source_id": "litellm",
@@ -1448,7 +1343,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "> [!IMPORTANT] > **The image-signing key has changed.** Starting with this release, every Docker image and Helm chart is signed with the new cosign key from commit [`e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). Verifying with the previous key from commit `0112e53` will fail. > > Update anything that pins the old `cosign.pub`: `cosign verify` script",
           "event_at": null,
           "supporting": []
@@ -1465,7 +1360,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "> [!IMPORTANT] > **The image-signing key has changed.** Starting with this release, every Docker image and Helm chart is signed with the new cosign key from commit [`e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). Verifying with the previous key from commit `0112e53` will fail. > > Update anything that pins the old `cosign.pub`: `cosign verify` script",
           "event_at": null,
           "supporting": []
@@ -1482,7 +1377,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "> [!IMPORTANT] > **The image-signing key has changed.** Starting with this release, every Docker image and Helm chart is signed with the new cosign key from commit [`e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). Verifying with the previous key from commit `0112e53` will fail. > > Update anything that pins the old `cosign.pub`: `cosign verify` script",
           "event_at": null,
           "supporting": []
@@ -1499,14 +1394,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-24T13:36:17.502999Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "> [!IMPORTANT] > **The image-signing key has changed.** Starting with this release, every Docker image and Helm chart is signed with the new cosign key from commit [`e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). Verifying with the previous key from commit `0112e53` will fail. > > Update anything that pins the old `cosign.pub`: `cosign verify` script",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 18,
-      "verified": 18
+      "discovered": 21,
+      "verified": 21
     },
     "arxiv-ai": {
       "etag": "f21fc5f04cec1e3e72f6460833ef71297d534333549866f6d61221d851362d41",
@@ -1554,11 +1449,62 @@
       "verified": 0
     },
     "techcrunch-ai": {
-      "etag": "W/\"ee0149a13c5b65a722f8d4e2f27ac936\"",
-      "modified": "Sat, 24 Oct 2026 22:25:35 GMT",
-      "status": "unchanged",
+      "etag": "W/\"f1e15c0df1327678e70605cd6ce34542\"",
+      "modified": "Sun, 25 Oct 2026 21:55:34 GMT",
+      "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "08ec5c76056e031d898a",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+          "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+          "published_at": "2026-10-25T21:31:16Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "9a814be9eb368823251c",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+          "title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+          "published_at": "2026-10-25T16:57:32Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "\"Despite massive investments and widespread hype around artificial intelligence, the technology has delivered zero financial payoff to corporate America outside of tech.\"",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "a18a7851efbde35c1b2a",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/25/the-hottest-ai-wearables-and-gadgets-you-should-know-about/",
+          "title": "The hottest AI wearables and gadgets you should know about",
+          "published_at": "2026-10-25T14:10:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "We compiled a list of all the hottest AI wearables, including Muse Charm, Bee, Friend, Plaud, and more.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "43fa73ddaf377eb53f4d",
           "source_id": "techcrunch-ai",
@@ -1571,7 +1517,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
           "event_at": null,
           "supporting": []
@@ -1588,7 +1534,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Block said that the voice model can run locally on a MacBook M4 Max",
           "event_at": null,
           "supporting": []
@@ -1605,7 +1551,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
           "event_at": null,
           "supporting": []
@@ -1622,7 +1568,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
           "event_at": null,
           "supporting": []
@@ -1639,7 +1585,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn't work.",
           "event_at": null,
           "supporting": []
@@ -1656,7 +1602,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.",
           "event_at": null,
           "supporting": []
@@ -1673,7 +1619,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Hosted by TechCrunch in partnership with Fidelity Private Shares, the full-day event goes beyond fundraising and AI to explore the realities of finding customers, building teams, sharpening a pitch, developing founder leadership, and scaling companies both inside and outside traditional startup hubs.",
           "event_at": null,
           "supporting": []
@@ -1690,7 +1636,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "The company plans to begin testing Pony.ai's robotaxis in Kazakhstan's capital in the first half of 2027.",
           "event_at": null,
           "supporting": []
@@ -1707,59 +1653,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "MIT researchers marooned 13 AIs on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "0e6b7b9249b2f7561233",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
-          "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
-          "published_at": "2026-10-22T22:08:24Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
-          "excerpt": "Should OpenAI command an over $1 trillion valuation with this round, it would break records as the most highly valued private company ever.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "264af0525447e45c75f4",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
-          "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
-          "published_at": "2026-10-22T19:07:09Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
-          "excerpt": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1fd5dc2d57e9039460a2",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
-          "title": "Canva releases its first image generation model",
-          "published_at": "2026-10-22T19:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T00:31:17.207921Z",
-          "excerpt": "Canva is making its new image model available to all users, promising better, more customizable performance at lower costs.",
           "event_at": null,
           "supporting": []
         }
@@ -1778,7 +1673,7 @@
     },
     "ars": {
       "etag": "",
-      "modified": "Sun, 25 Oct 2026 01:58:15 GMT",
+      "modified": "Sun, 25 Oct 2026 22:00:12 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1794,7 +1689,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "A new model suggests Mars may host ice-forming physics never directly observed before.",
           "event_at": null,
           "supporting": []
@@ -1811,7 +1706,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "The tiny remains of the Laurentide Ice Sheet began getting somewhat less tiny.",
           "event_at": null,
           "supporting": []
@@ -1828,7 +1723,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "\"We have the mandate, we have the resources, and the support from our stakeholders.\"",
           "event_at": null,
           "supporting": []
@@ -1845,7 +1740,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Pentagon memo: Insider trading gives US enemies key intel on military operations.",
           "event_at": null,
           "supporting": []
@@ -1862,7 +1757,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Turning on Personal Intelligence gives the company more data for ad targeting.",
           "event_at": null,
           "supporting": []
@@ -1879,7 +1774,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Space Force considering options: public-private, federal installation, state land.",
           "event_at": null,
           "supporting": []
@@ -1896,7 +1791,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "If you share Spotify sub with family, you may need to scan QR code to prove it.",
           "event_at": null,
           "supporting": []
@@ -1913,7 +1808,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Birds' compact nervous system seems to help them handle tasks very quickly.",
           "event_at": null,
           "supporting": []
@@ -1930,7 +1825,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Company says foreign-made robotic vehicles are crucial to US chip production.",
           "event_at": null,
           "supporting": []
@@ -1947,7 +1842,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "\"Trust is slow to build and quick to lose,\" board chair Jack Leslie said.",
           "event_at": null,
           "supporting": []
@@ -1964,7 +1859,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Corporate phishing tests are common, but this one was especially cruel.",
           "event_at": null,
           "supporting": []
@@ -1981,7 +1876,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Sound designer lets Half Life-related codename slip at a conference.",
           "event_at": null,
           "supporting": []
@@ -1991,11 +1886,28 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"4af7f79b35135424edb167244d1f6edf\"",
+      "etag": "W/\"1a3186a19592fb3a238a754c775df05e\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "b411fbb2487aa2da4ef9",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
+          "title": "r/opensource just banned AI, non-English speakers, and more",
+          "published_at": "2026-10-25T13:25:32Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
+          "excerpt": "The mods at r/opensource posted new submission rules that, among other things, banned projects that use AI. The post made Saturday evening opens by saying, \"If your project uses AI, is made by AI, or is intended for AI, it's not welcome on r/opensource. AI, as it exists today, is incongruent to this Open Source […]",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "ab1f7cff37722d46d5fd",
           "source_id": "theverge-ai",
@@ -2008,7 +1920,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more about AI's impact on the web, follow Emma Roth. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started The digital publishing industry has relied on […]",
           "event_at": null,
           "supporting": []
@@ -2025,7 +1937,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "BBC's Blue Planet III is looking to prove its authenticity by leaving in the less-than-perfect shots. Previous incarnations of the nature series were defined by their gorgeous, crystal-clear footage that seemed almost too good to be real. But one dead giveaway of AI is when things look too polished and seamless. To counter that, Blue […]",
           "event_at": null,
           "supporting": []
@@ -2042,7 +1954,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "On Thursday, Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law, requiring disclosures on AI-generated ads. The law requires any ad - whether it's a still image, video, audio, or text - that \"has been significantly modified or generated by artificial intelligence\" to include a label in the same format as […]",
           "event_at": null,
           "supporting": []
@@ -2059,7 +1971,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI paused training its frontier […]",
           "event_at": null,
           "supporting": []
@@ -2076,7 +1988,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Jack Dorsey's Block announced an AI model called Dessa that's trained \"from scratch on nothing but human conversation,\" and to show off the model, Block shared chats it has had with humans that can occasionally be a little awkward and uncanny. Take this one, for example, shared by Dessa lead Ragavan Thurairatnam. The conversation between […]",
           "event_at": null,
           "supporting": []
@@ -2093,7 +2005,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "We gave the iPhone Duo a 7 /10. But that wasn't always the score we planned, and it might not be the right score forever. Such are the challenges of reviewing - and assessing - a big, new idea about the most popular smartphone in history. On this episode of The Vergecast, David and Nilay […]",
           "event_at": null,
           "supporting": []
@@ -2110,7 +2022,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Google has updated its privacy policy in a way that could mean you'll start seeing targeted ads based on your personal data if you're using personalized AI features. The update, spotted by Android Authority, adds an exception to its promise about not using your Drive, Gmail, or Google Photos for personalized ads. While the previous […]",
           "event_at": null,
           "supporting": []
@@ -2127,7 +2039,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Meta is delaying the enforcement of its new business terms after publishers raised concerns that they could allow the company to scrape news sites for AI training, as reported earlier by Fast Company. In a statement to The Verge, Meta spokesperson Daniel Roberts says the terms will go into effect on November 20th \"to allow […]",
           "event_at": null,
           "supporting": []
@@ -2144,25 +2056,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Retro video games are everywhere lately - especially in places where they aren't supposed to be. Halo in a web browser, Wind Waker on the iPhone, Super Smash Bros. in mixed reality. Over the past month or so, these kinds of unexpected projects have gone viral with incredible frequency thanks to new AI tools, as […]",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "5eee804247a435ab2dff",
-          "source_id": "theverge-ai",
-          "source_name": "The Verge AI",
-          "group": "vox",
-          "trust": "media",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
-          "title": "Canva’s first AI image model plans designs before generating them",
-          "published_at": "2026-10-22T21:51:25Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google. The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]",
           "event_at": null,
           "supporting": []
         }
@@ -2188,7 +2083,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Paris Marx, author of Hyperscale, has been tracking global data center development for years. The US has a lot to learn from what’s happened everywhere from Ireland to New Zealand.",
           "event_at": null,
           "supporting": []
@@ -2205,42 +2100,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
+          "collected_at": "2026-10-26T00:31:13.866152Z",
           "excerpt": "Security researchers used AI tools to help uncover years-old vulnerabilities in the PHP web scripting language. Then the AI-assisted attacks began.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "dc90f243d13eab4c9751",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/aged-intelligence-society-interview/",
-          "title": "The Social Society Helping Women Join the AI Boom",
-          "published_at": "2026-10-22T19:56:32Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "WIRED spoke with the founders of the Aged Intelligence Society, a fast-growing events startup that brings women together to “solve midlife problems using frontier tools.”",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "e28ffcdc2244f40f5caf",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/meet-mori-a-cute-robot-mushroom-that-doesnt-really-say-or-do-anything/",
-          "title": "Meet Mori, a Cute Robot Mushroom That Doesn’t Really Say (or Do) Anything",
-          "published_at": "2026-10-22T13:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "Step one in convincing people to live with robots with cameras on their faces? Disguise them as cute home decor.",
           "event_at": null,
           "supporting": []
         }
@@ -2474,7 +2335,7 @@
     "juya-discovery": {
       "etag": "W/\"d5475a7245290d376e875b6a88c30a43\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -2491,23 +2352,6 @@
           "time_basis": "publication",
           "collected_at": "2026-10-25T12:31:31.077608Z",
           "excerpt": "Sam Altman believes advanced AI can't be kept locked up forever. Sandboxes and monitoring are only temporary fixes. Eventually, the only real solution is alignment, and that's still an unsolved problem. He also warns that AI models are already findin Plus AI in practice Copy the url to clipboard Share this article Go to comment section OpenAI CEO Sam Altman says advanced AI will inevitably escape ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "e16222d83dd92652e281",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
-          "title": "An alignment assessment of the UK AISI cybertesting incident",
-          "published_at": "2026-10-23T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what they reveal about the model’s alignment. Chapter 01 : Alignment assessment summary An alignment assessment of the UK AISI cybertesting incident 01 Alignment assessment summary 02 Methods 03 Deep dive i",
           "event_at": null,
           "supporting": []
         }
@@ -2529,25 +2373,7 @@
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [
-        {
-          "id": "e16222d83dd92652e281",
-          "source_id": "anthropic-research",
-          "source_name": "Anthropic Research",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
-          "title": "An alignment assessment of the UK AISI cybertesting incident",
-          "published_at": "2026-10-23T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-25T12:31:31.077608Z",
-          "excerpt": "In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what they reveal about the model’s alignment. Chapter 01 : Alignment assessment summary An alignment assessment of the UK AISI cybertesting incident 01 Alignment assessment summary 02 Methods 03 Deep dive i",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 10,
       "verified": 10
     },
@@ -2563,7 +2389,7 @@
     "decoder": {
       "etag": "\"3a5fc85975d0a3e13f9ca91d1393e9fc\"",
       "modified": "Sun, 25 Oct 2026 10:09:36 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -2777,23 +2603,6 @@
           "time_basis": "publication",
           "collected_at": "2026-10-24T00:31:12.257226Z",
           "excerpt": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "405699f87f1c074465d9",
-          "source_id": "cloudflare-ai",
-          "source_name": "Cloudflare",
-          "group": "cloudflare",
-          "trust": "official",
-          "url": "https://blog.cloudflare.com/k-isms/",
-          "title": "Localizing compliance at scale: achieving South Korea’s ISMS certification",
-          "published_at": "2026-10-22T13:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-24T00:31:12.257226Z",
-          "excerpt": "Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls. Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.",
           "event_at": null,
           "supporting": []
         }
@@ -3077,6 +2886,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-10-26-am-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
