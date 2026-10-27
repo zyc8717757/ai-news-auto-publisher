@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-27-am",
+  "revision": 1,
+  "created_at": "2026-10-27T00:31:04.373699Z",
+  "cutoff": "2026-10-27T00:30:00Z",
+  "window_start": "2026-10-25T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "e77549dba84aa9c32f2e",
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
+      "summary": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 84.23,
+      "sources": [
+        {
+          "id": "e77549dba84aa9c32f2e",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+          "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
+          "published_at": "2026-10-26T22:01:23Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [
+        "5.3"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "7d972df501d01ba1f64a",
+      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 81.64,
+      "sources": [
+        {
+          "id": "7d972df501d01ba1f64a",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+          "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+          "published_at": "2026-10-26T13:45:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6.1"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "a9c488820a62ac4adcd9",
+      "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+      "summary": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 72.22,
+      "sources": [
+        {
+          "id": "a9c488820a62ac4adcd9",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/greptile-code-review-codex-astra",
+          "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+          "published_at": "2026-10-26T22:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "1d4bf97b5dd3999cb154",
+      "title": "GPT-6.1 Terra: delivering fast and capable computer use at a lower price",
+      "summary": "GPT-6.1 Terra understands what’s on screen, takes action across apps, writes naturally, and is a more capable model for your whole workday with the efficiency to take on more of it. GPT-6.1 Terra continues to advance the cost-intelligence frontier across our model families. Introducing GPT-6 Terra It’s a significant step up over GPT‑5.6 Terra, with 50% lower standard API prices. In ChatGPT Work and Codex, your usage allowance goes further with GPT‑6.1 Terra than with GPT‑5.6 Terra—and far more t",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.14,
+      "sources": [
+        {
+          "id": "1d4bf97b5dd3999cb154",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/gpt-6-1-terra-delivering-fast-and-capable-computer-use-at-a-lower-price/1409900",
+          "title": "GPT-6.1 Terra: delivering fast and capable computer use at a lower price",
+          "published_at": "2026-10-26T18:32:49.816000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6.1"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "82ca109e520592e23b65",
+      "title": "Transformers Releases: Release: v5.21.0",
+      "summary": "# Release v5.21.0 ## New Model additions ### MiniCPM-OCR MiniCPM-OCR is a document-understanding model from OpenBMB's MiniCPM-V family. It keeps the MiniCPM-V 4.6 architecture, which pairs a SigLIP vision encoder and a window-attention merger with a Qwen3.5 language model. It is specialized for reading text-dense images such as scanned pages, screenshots, receipts and tables. **Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/minicpm_ocr) | [Paper](https://hugg",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.06,
+      "sources": [
+        {
+          "id": "82ca109e520592e23b65",
+          "source_id": "transformers",
+          "source_name": "Transformers Releases",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.21",
+          "title": "Transformers Releases: Release: v5.21.0",
+          "published_at": "2026-10-26T18:17:42Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [
+        "v5.21.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "b1d7eb2dedce5839f589",
+      "title": "Our newest AI Quest: Mapping the human brain",
+      "summary": "An illustration of a planet rotating to show various cartoon figures waving. At the top is the text \"AI Quests\"",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.34,
+      "sources": [
+        {
+          "id": "b1d7eb2dedce5839f589",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+          "title": "Our newest AI Quest: Mapping the human brain",
+          "published_at": "2026-10-26T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8eb6001a836a6e50b8fb",
+      "title": "Working with academic communities to build scientific understanding",
+      "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.88,
+      "sources": [
+        {
+          "id": "8eb6001a836a6e50b8fb",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+          "title": "Working with academic communities to build scientific understanding",
+          "published_at": "2026-10-26T14:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "27334100e818b98514ff",
+      "title": "ChatGPT’s expanding world of work",
+      "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 68.47,
+      "sources": [
+        {
+          "id": "27334100e818b98514ff",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+          "title": "ChatGPT’s expanding world of work",
+          "published_at": "2026-10-26T10:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "742d30efdc4090c11a97",
+      "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+      "summary": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.53,
+      "sources": [
+        {
+          "id": "742d30efdc4090c11a97",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/openai-cut-incident-investigation",
+          "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+          "published_at": "2026-10-26T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "7e73eebe3e909303c4c5",
+      "title": "How Fanatics and OpenAI streamline the fan experience",
+      "summary": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.53,
+      "sources": [
+        {
+          "id": "7e73eebe3e909303c4c5",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+          "title": "How Fanatics and OpenAI streamline the fan experience",
+          "published_at": "2026-10-26T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
