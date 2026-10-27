@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-27-pm",
+  "revision": 1,
+  "created_at": "2026-10-27T12:31:26.118141Z",
+  "cutoff": "2026-10-27T12:30:00Z",
+  "window_start": "2026-10-25T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "7cb522fa07995fb5ac19",
+      "title": "Diffusers Releases: v0.42.1 — fix component resolution in `from_pretrained` to prevent `trust_remote_code` bypass",
+      "summary": "This is a security release. See [GHSA-4prv-5hj7-c2xr](https://github.com/huggingface/diffusers/security/advisories/GHSA-4prv-5hj7-c2xr) for details. This patch release fixes how a component's declared library name is resolved when loading with `from_pretrained`. Pipelines and models declare each component as a `[\" \", \" \"]` pair in `model_index.json` / `config.json`. This release changes how that library name is resolved across the `DiffusionPipeline`, `AutoModel`, and `ModularPipeline` loading p",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.5,
+      "sources": [
+        {
+          "id": "7cb522fa07995fb5ac19",
+          "source_id": "diffusers",
+          "source_name": "Diffusers Releases",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://github.com/huggingface/diffusers/releases/tag/v0.42.1",
+          "title": "Diffusers Releases: v0.42.1 — fix component resolution in `from_pretrained` to prevent `trust_remote_code` bypass",
+          "published_at": "2026-10-27T07:41:43Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [
+        "v0.42.1"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-10-27-am",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "ac1ec69ea046ea68f8c2",
+      "title": "Discover 1000+ services on Vercel Connect from the CLI",
+      "summary": "you can now browse and search the services available in Vercel Connect without leaving your terminal You and your agents can now browse and search more than 1000 services available in Vercel Connect without leaving your terminal. vercel connect discover searches by name, alias, keyword, and description. 1 vercel connect discover crm Results can be filtered by category, connection method (such as mcp or oauth ) or the product a service exposes. You can also limit results to services that forward ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.84,
+      "sources": [
+        {
+          "id": "ac1ec69ea046ea68f8c2",
+          "source_id": "primary-vercel",
+          "source_name": "Vercel",
+          "group": "vercel",
+          "trust": "official",
+          "url": "https://vercel.com/changelog/discover-1000-services-on-vercel-connect-from-the-cli",
+          "title": "Discover 1000+ services on Vercel Connect from the CLI",
+          "published_at": "2026-10-26T20:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
