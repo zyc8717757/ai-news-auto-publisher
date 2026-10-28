@@ -292,3 +292,88 @@ def test_low_budget_frozen_recovery_reserves_one_summary_and_one_review_request(
     assert created
     assert calls == ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
     assert store.state.ai_issue_attempts[base.issue] == 20
+
+
+def test_explicit_test_allowance_repairs_one_batch_and_reviews_without_resetting_production(
+    digest, settings, tmp_path, now, monkeypatch
+):
+    import json
+    from types import SimpleNamespace
+
+    from ai_news.ai import Enhancer
+    from ai_news.models import AIResponse, AIStory
+    from ai_news.pipeline import enhance_frozen
+
+    issue = digest.issue
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", "5")
+    monkeypatch.setenv("GEMINI_RPD", "500")
+    settings.ai_enabled = True
+    settings.ai_run_limit = 20
+    settings.model = "gemini-3.5-flash-lite"
+    settings.backup_model = "gemini-3.1-flash-lite"
+    settings.tertiary_model = "gemini-3.8-flash"
+    base = digest.model_copy(update={"mode": "rules"})
+    store = Store(tmp_path)
+    store.state.ai_issue_attempts[issue] = 18
+    store.save_digest(base)
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["model"])
+            prompt = kwargs["contents"]
+            event_id = base.stories[0].id
+            if "source_passages" in prompt and "numeric_spans" in prompt:
+                return SimpleNamespace(
+                    text=json.dumps(
+                        {
+                            "reviews": [
+                                {
+                                    "event_id": event_id,
+                                    "approved": True,
+                                    "translation_ok": True,
+                                    "failure": "none",
+                                    "reason": "通过",
+                                    "replacement": None,
+                                    "numeric_checks": [],
+                                }
+                            ]
+                        }
+                    )
+                )
+            story = AIStory(
+                event_id=event_id,
+                title="模型更新",
+                summary="公司发布了新的模型版本，效果仍需独立验证。",
+                impact="可为开发者提供参考。",
+                category="模型",
+                value_score=80,
+                evidence_ids=[base.stories[0].sources[0].id],
+            )
+            if calls.count("gemini-3.1-flash-lite") == 1:
+                story.summary += "性能提升99倍。"
+            return SimpleNamespace(text=AIResponse(stories=[story]).model_dump_json())
+
+    client = Client()
+
+    async def no_refresh(events, config):
+        return events
+
+    monkeypatch.setattr("ai_news.pipeline.refresh_frozen_evidence", no_refresh)
+    monkeypatch.setattr(
+        "ai_news.pipeline.Enhancer",
+        lambda *a, **k: Enhancer(
+            settings, store, client, issue=issue, test_extra_limit=k.get("test_extra_limit", 0)
+        ),
+    )
+    result, created = enhance_frozen(settings, store, issue, now=now, test_extra_limit=5, base_key=base.key)
+    assert created and result.mode == "ai" and result.stories
+    assert len(calls) == 3
+    assert store.state.ai_issue_attempts[issue] == 18
+    assert store.state.ai_test_attempts[issue] == 3

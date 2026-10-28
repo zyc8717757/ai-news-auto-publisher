@@ -257,9 +257,9 @@ def enhance_frozen(
         response = processor.enhance(
             events,
             initial_model=settings.backup_model,
-            max_repairs=0,
-            max_provider_retries=0,
-            allow_model_fallback=False,
+            max_repairs=1 if test_extra_limit else 0,
+            max_provider_retries=1 if test_extra_limit else 0,
+            allow_model_fallback=bool(test_extra_limit),
         )
     else:
         response = processor.enhance(events, allow_partial=True, individual=bool(base_key))
@@ -274,9 +274,9 @@ def enhance_frozen(
                 processor.client,
                 response.stories,
                 events,
-                max_repairs=0 if compact_recovery else 1,
-                max_provider_retries=0 if compact_recovery else 1,
-                allow_model_fallback=not compact_recovery,
+                max_repairs=(1 if test_extra_limit else 0) if compact_recovery else 1,
+                max_provider_retries=(1 if test_extra_limit else 0) if compact_recovery else 1,
+                allow_model_fallback=bool(test_extra_limit) if compact_recovery else True,
             )
         )
     if base_key and {s.event_id for s in response.stories if not s.duplicate_of} != {e.id for e in events}:
