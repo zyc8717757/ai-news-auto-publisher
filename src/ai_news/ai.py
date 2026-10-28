@@ -51,6 +51,19 @@ def transient_provider_error(exc: Exception) -> bool:
     )
 
 
+def fallback_model(model: str, settings: Settings) -> str | None:
+    """Walk the configured free-model chain once, without cycling or billing."""
+    chain = list(dict.fromkeys([settings.model, settings.backup_model]))
+    if settings.tertiary_model:
+        if settings.tertiary_model not in chain:
+            chain.append(settings.tertiary_model)
+    try:
+        index = chain.index(model)
+    except ValueError:
+        return None
+    return chain[index + 1] if index + 1 < len(chain) else None
+
+
 def json_output(text: str) -> str:
     """Remove only an enclosing Markdown fence, never extract/rewrite embedded claims."""
     text = text.strip()
@@ -440,18 +453,17 @@ class Enhancer:
                         )
                     )
                     self.audit(active_model, "provider_error", provider_failure(exc))
-                    if (
-                        transient_provider_error(exc)
-                        and active_model == self.settings.model
-                        and active_model != self.settings.backup_model
-                    ):
-                        self.budget.sleep(2)
-                        active_model = self.settings.backup_model
-                        continue
-                    if transient_provider_error(exc) and transient_retries < 1:
-                        transient_retries += 1
-                        self.budget.sleep(4)
-                        continue
+                    if transient_provider_error(exc):
+                        next_model = fallback_model(active_model, self.settings)
+                        if next_model is not None:
+                            self.budget.sleep(2)
+                            active_model = next_model
+                            transient_retries = 0
+                            continue
+                        if transient_retries < 1:
+                            transient_retries += 1
+                            self.budget.sleep(4)
+                            continue
                     raise AIUnavailable(provider_failure(exc)) from None
                 try:
                     if allow_partial:

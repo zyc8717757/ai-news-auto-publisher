@@ -14,10 +14,12 @@ def test_model_daily_admission_does_not_charge_primary_calls_to_backup(settings,
     from ai_news.models import AIRequestAudit
 
     store = Store(tmp_path)
-    primary, backup = "gemini-3.5-flash-lite", "gemini-3.8-flash"
-    times = [now - timedelta(minutes=30-i) for i in range(25)]
+    primary, backup = "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"
+    times = [now - timedelta(minutes=30 - i) for i in range(25)]
     store.state.ai_attempts = times
-    store.state.ai_audit = [AIRequestAudit(at=t + timedelta(seconds=5), model=primary, stage="accepted") for t in times]
+    store.state.ai_audit = [
+        AIRequestAudit(at=t + timedelta(seconds=5), model=primary, stage="accepted") for t in times
+    ]
     assert quota_used(store.state, now, primary) == 25
     assert quota_used(store.state, now, backup) == 0
     Budget(settings, store, now=lambda: now).reserve(100, model=backup)

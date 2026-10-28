@@ -71,7 +71,7 @@ ai-news send --issue 2026-10-10-am --resend
 
 ## 免费约束
 
-使用公共仓库的标准 GitHub Actions 运行器和 GitHub Pages，不使用收费运行器、付费采集、X API 或外部数据库。经用户确认，当前默认 `gemini-3.5-flash-lite`、备用 `gemini-3.8-flash`，官方价格页列有免费层。兼容白名单保留 2.5 系列及 3.1 Flash-Lite；固定 Developer API 地址并明确关闭 Vertex AI。统一使用已通过云端最小测试的 `v1beta/models/{model}:generateContent`，不启用工具，不维护服务器会话。
+使用公共标准GitHub Actions运行器和GitHub Pages，不使用收费运行器、付费采集、X API或外部数据库。默认`gemini-3.5-flash-lite`；瞬时故障依次切换至稳定版`gemini-3.1-flash-lite`、`gemini-3.8-flash`，均列于Gemini API免费层；实际配额按项目额度和本地账本。固定Developer API、关闭Vertex AI，使用`v1beta/models/{model}:generateContent`且不启用工具。
 
 **同一模型也可能在付费项目中计费。程序不能仅凭 API Key 判断项目是否绑定账单。**必须人工确认专用项目无付费账单后，才能设置 `AI_FREE_TIER_CONFIRMED=true`。免费层政策变更时先关闭 AI，重新核验。正常每期按需分阶段处理，正常约 6–10 次（按需）；包括备用、重试及格式修复在内硬上限 20 次、按当前 3.5 免费项目每日最多 500 次（太平洋时间零点重置）。RPM/TPM/RPD 按实际项目配额执行，不足就降级，不切换付费项目。
 

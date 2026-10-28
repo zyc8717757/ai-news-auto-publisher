@@ -49,7 +49,7 @@
 
 官方接口参考：Gemini Developer API `generate_content` + `response_json_schema`、RSS/Atom、GitHub Releases REST、SMTP、GitHub Pages 部署。严格JSON Schema通过新参数直接传送，避免SDK将additionalProperties等字段放入旧版protobuf responseSchema；响应仍经过Pydantic及证据检查。没有 OpenAI API、X API 或私人账号浏览器自动化依赖。
 
-Gemini 调用统一使用 SDK 2.29 的 generateContent，固定 Developer API v1beta 端点。2026-10-10 云端使用当前 Secret、gemini-3.5-flash-lite 和最小单轮请求实测 HTTP 200 / OK；原 Interactions 路径返回 400，但旧日志未保存服务端错误正文，不能定位具体参数。新模型省略自定义思考参数，2.5 兼容路径保留受支持的预算配置。结构化输出仍采用 response_json_schema，本地继续校验证据和事实。SDK 重试设置 attempts=1，并用真实 SDK+MockTransport 验证 503/连接错误仅一次物理请求。应用层 400/403/404 直接停止，429/503 最多切换一次备用、退避重试一次；所有请求先持久化预算。错误只输出白名单字段并脱敏，不输出异常 repr、请求头或完整新闻响应。
+Gemini调用统一使用SDK 2.29的generateContent和Developer API v1beta。默认gemini-3.5-flash-lite；瞬时错误依次切换稳定版gemini-3.1-flash-lite及gemini-3.8-flash，最终模型最多重试一次。各模型配额分别记录，并受每期20次总上限约束。全部型号不可用时才明确降级。结构化输出、本地证据校验和400/403/404立即停止行为保持不变；429/500/502/503/504及网络瞬时错误有限切换和重试。所有尝试先持久化预算并脱敏诊断。
 
 独立 probe-gemini 工作流只执行一次最小 REST generateContent，保留每日和测试预算、共享并发组，不进入新闻/Pages/SMTP。成功只证明 Key、模型和基础端点可用，完整新闻结构化链路需另行验收。
 

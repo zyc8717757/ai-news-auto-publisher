@@ -48,10 +48,15 @@ def test_rank_contract_errors_use_the_bounded_repair_path(
 
 
 @pytest.mark.parametrize("code", [429, 500, 502, 503, 504, "timeout"])
+@pytest.mark.parametrize("failed_model", ["primary", "backup"])
 def test_editorial_transients_switch_backup_and_keep_it_across_phases(
-    settings, tmp_path, now, monkeypatch, code
+    settings, tmp_path, now, monkeypatch, code, failed_model
 ):
-    settings.model, settings.backup_model = "gemini-3.5-flash-lite", "gemini-3.8-flash"
+    settings.model, settings.backup_model, settings.tertiary_model = (
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-3.8-flash",
+    )
     store = Store(tmp_path)
     editor = EditorialEnhancer(
         settings, store, budget=Budget(settings, store, now=lambda: now, sleep=lambda n: None)
@@ -61,7 +66,8 @@ def test_editorial_transients_switch_backup_and_keep_it_across_phases(
     def generate(client, model, prompt, limit):
         calls.append(model)
         assert len(Store(tmp_path).state.ai_attempts) == len(calls)
-        if len(calls) == 1:
+        should_fail = len(calls) == 1 if failed_model == "primary" else len(calls) in {1, 2}
+        if should_fail:
             if code == "timeout":
                 raise httpx.ReadTimeout("offline")
             exc = RuntimeError("offline")
@@ -72,7 +78,12 @@ def test_editorial_transients_switch_backup_and_keep_it_across_phases(
     monkeypatch.setattr(editor, "generate_text", generate)
     editor.call(object(), "first", {}, Ranking, "screen")
     editor.call(object(), "next", {}, Ranking, "rank")
-    assert calls == [settings.model, settings.backup_model, settings.backup_model]
+    expected = (
+        [settings.model, settings.backup_model, settings.backup_model]
+        if failed_model == "primary"
+        else [settings.model, settings.backup_model, settings.tertiary_model, settings.tertiary_model]
+    )
+    assert calls == expected
 
 
 @pytest.mark.parametrize("code", [400, 403, 404])
@@ -91,10 +102,12 @@ def test_editorial_terminal_errors_do_not_retry(settings, tmp_path, now, monkeyp
     assert len(Store(tmp_path).state.ai_attempts) == 1
 
 
-def test_unavailable_primary_and_backup_stop_after_three_reserved_attempts(
-    settings, tmp_path, now, monkeypatch
-):
-    settings.model, settings.backup_model = "gemini-3.5-flash-lite", "gemini-3.8-flash"
+def test_unavailable_fallback_chain_stops_after_one_final_retry(settings, tmp_path, now, monkeypatch):
+    settings.model, settings.backup_model, settings.tertiary_model = (
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-3.8-flash",
+    )
     store = Store(tmp_path)
     editor = EditorialEnhancer(
         settings, store, budget=Budget(settings, store, now=lambda: now, sleep=lambda n: None)
@@ -108,4 +121,14 @@ def test_unavailable_primary_and_backup_stop_after_three_reserved_attempts(
     monkeypatch.setattr(editor, "generate_text", generate)
     with pytest.raises(AIUnavailable, match="504"):
         editor.call(object(), "task", {}, Ranking, "rank")
-    assert len(Store(tmp_path).state.ai_attempts) == 3
+    assert len(Store(tmp_path).state.ai_attempts) == 4
+
+
+def test_fallback_chain_deduplicates_repeated_configured_models(settings):
+    from ai_news.ai import fallback_model
+
+    settings.model = "gemini-3.1-flash-lite"
+    settings.backup_model = "gemini-3.1-flash-lite"
+    settings.tertiary_model = "gemini-3.8-flash"
+    assert fallback_model(settings.model, settings) == settings.tertiary_model
+    assert fallback_model(settings.tertiary_model, settings) is None

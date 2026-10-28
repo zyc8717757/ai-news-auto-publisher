@@ -171,6 +171,39 @@ def test_thirty_candidates_use_one_request_and_backup_on_quota(settings, tmp_pat
     assert calls == ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
 
 
+def test_summary_phase_uses_three_free_models_then_keeps_successful_model(
+    settings, tmp_path, monkeypatch, source_item
+):
+    settings.ai_enabled = True
+    settings.model = "gemini-3.5-flash-lite"
+    settings.backup_model = "gemini-3.1-flash-lite"
+    settings.tertiary_model = "gemini-3.8-flash"
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["model"])
+            if len(calls) < 3:
+                exc = RuntimeError("transient provider failure")
+                exc.code = 503
+                raise exc
+            event = NewsEvent(id="event", evidence=[source_item])
+            return SimpleNamespace(text=response(event).model_dump_json())
+
+    event = NewsEvent(id="event", evidence=[source_item])
+    store = Store(tmp_path)
+    enhancer = Enhancer(settings, store, Client(), Budget(settings, store, sleep=lambda _: None))
+    assert enhancer.enhance([event]).stories[0].event_id == event.id
+    assert calls == ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.8-flash"]
+    assert enhancer.used_model == "gemini-3.8-flash"
+    assert len(Store(tmp_path).state.ai_attempts) == 3
+
+
 def test_fallback_retry_and_repair_share_configured_ceiling(settings, tmp_path, monkeypatch, source_item):
     settings.ai_enabled = True
     settings.ai_run_limit = 3
@@ -209,7 +242,9 @@ def test_absolute_five_request_ceiling(settings, tmp_path, monkeypatch, now):
 
 
 @pytest.mark.parametrize("code", [400, 403, 404])
-def test_terminal_provider_errors_never_retry_or_switch_model(settings, tmp_path, monkeypatch, source_item, code):
+def test_terminal_provider_errors_never_retry_or_switch_model(
+    settings, tmp_path, monkeypatch, source_item, code
+):
     settings.ai_enabled = True
     monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
     calls = []
@@ -319,14 +354,19 @@ def test_modern_generate_content_has_no_hidden_retry(settings, tmp_path, source_
             return httpx.Response(503, json={"error": {"code": 503, "message": "Offline"}})
         if response_kind == "connection_error":
             raise httpx.ConnectError("Offline", request=request)
-        return httpx.Response(200, json={"candidates": [{"content": {
-            "parts": [{"text": response(event).model_dump_json()}]
-        }}]})
+        return httpx.Response(
+            200, json={"candidates": [{"content": {"parts": [{"text": response(event).model_dump_json()}]}}]}
+        )
 
-    client = genai.Client(api_key="DUMMY_NOT_REAL", vertexai=False,
-        http_options=types.HttpOptions(api_version="v1beta",
+    client = genai.Client(
+        api_key="DUMMY_NOT_REAL",
+        vertexai=False,
+        http_options=types.HttpOptions(
+            api_version="v1beta",
             httpx_client=httpx.Client(transport=httpx.MockTransport(handler)),
-            retry_options=types.HttpRetryOptions(attempts=1)))
+            retry_options=types.HttpRetryOptions(attempts=1),
+        ),
+    )
     enhancer = Enhancer(settings, Store(tmp_path))
     if response_kind == "success":
         assert AIResponse.model_validate_json(

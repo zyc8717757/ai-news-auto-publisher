@@ -10,6 +10,7 @@ from pydantic import Field
 from .ai import (
     AIUnavailable,
     Enhancer,
+    fallback_model,
     json_output,
     provider_failure,
     transient_provider_error,
@@ -358,7 +359,7 @@ class EditorialEnhancer(Enhancer):
     def call(self, client, task, data, schema, phase, output_limit=5000, validator=None):
         prompt = RULES + task + "\nJSON结构：" + json.dumps(schema.model_json_schema(), ensure_ascii=False)
         prompt += "\n只返回JSON，不要代码围栏。输入：" + json.dumps(data, ensure_ascii=False)
-        transient = repair = 0
+        transient_retries = repair = 0
         while True:
             model = self.used_model
             try:
@@ -380,14 +381,19 @@ class EditorialEnhancer(Enhancer):
                         }
                     )
                 )
-                if transient_provider_error(exc) and transient < 2:
-                    transient += 1
+                if transient_provider_error(exc):
                     # Keep the successful backup across phases; don't return each
                     # phase to an overloaded primary. Every attempt reserves budget.
-                    if model == self.settings.model:
-                        self.used_model = self.settings.backup_model
-                    self.budget.sleep(2**transient)
-                    continue
+                    next_model = fallback_model(self.used_model, self.settings)
+                    if next_model is not None:
+                        self.used_model = next_model
+                        transient_retries = 0
+                        self.budget.sleep(2)
+                        continue
+                    if transient_retries < 1:
+                        transient_retries += 1
+                        self.budget.sleep(4)
+                        continue
                 raise AIUnavailable(provider_failure(exc)) from None
             try:
                 result = schema.model_validate_json(json_output(text))
@@ -494,10 +500,9 @@ class EditorialEnhancer(Enhancer):
                 "screen",
                 validator=validate_screen,
             )
-            if len(result.decisions) != len(batch) or {x.event_id for x in result.decisions} != {
-                x.id for x in batch
-            }:
-                raise AIUnavailable("ai_output_event_mismatch")
+            # validate_screen is the single owner of event-set checking and
+            # repair. Repeating the same check here previously bypassed that
+            # repair path and could downgrade a valid repaired response.
             for decision in result.decisions:
                 event = by_id[decision.event_id]
                 decision.observation = decision.observation or event.observation
@@ -549,8 +554,8 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
             validator=lambda result: validate_ranking(result, {key: by_id[key] for key in decisions}),
         )
         ordered = ranking.ordered_ids
-        if len(set(ordered)) != len(ordered) or not set(ordered) <= set(decisions):
-            raise AIUnavailable("ai_output_event_mismatch")
+        # validate_ranking has already enforced the exact ID and merge contract
+        # inside call(), where a malformed response gets its bounded repair.
         for event_id in decisions:
             if event_id not in ordered:
                 print(
@@ -563,27 +568,9 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
                         }
                     )
                 )
-        consumed = set()
         for merge in ranking.merges:
             ids = [merge.keep_id, *merge.other_ids]
-            if (
-                merge.keep_id not in ordered
-                or len(ids) != len(set(ids))
-                or not set(ids) <= set(decisions)
-                or set(ids) & consumed
-                or set(merge.other_ids) & set(ordered)
-            ):
-                raise AIUnavailable("ai_output_event_mismatch")
             members = [by_id[x] for x in ids]
-            versions = [set(x.versions) for x in members if x.versions]
-            entities = [set(x.entities) for x in members if x.entities]
-            if (
-                versions
-                and any(v != versions[0] for v in versions)
-                or entities
-                and not set.intersection(*entities)
-            ):
-                raise AIUnavailable("ai_output_merge_conflict")
             keep = by_id[merge.keep_id].model_copy(deep=True)
             evidence = {v.url: v for event in members for v in event.evidence}
             keep.evidence = sorted(
@@ -597,7 +584,6 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
             )
             decisions[keep.id].observation |= keep.observation
             by_id[keep.id] = keep
-            consumed.update(ids)
         chosen, observers, researchers = [], 0, 0
         for key in ordered:
             decision = decisions[key]

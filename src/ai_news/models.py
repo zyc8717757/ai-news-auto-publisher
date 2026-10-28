@@ -31,7 +31,10 @@ class Settings(StrictModel):
     model: Literal["gemini-2.5-flash-lite", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"] = (
         "gemini-3.5-flash-lite"
     )
-    backup_model: Literal["gemini-2.5-flash", "gemini-3.8-flash"] = "gemini-3.8-flash"
+    backup_model: Literal["gemini-2.5-flash", "gemini-3.8-flash", "gemini-3.1-flash-lite"] = (
+        "gemini-3.1-flash-lite"
+    )
+    tertiary_model: Literal["gemini-3.8-flash", "gemini-2.5-flash"] | None = "gemini-3.8-flash"
     morning_time: str = Field(default="08:00", pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
     evening_time: str = Field(default="20:00", pattern=r"^(?:[01]\d|2[0-3]):[0-5]\d$")
     max_items: int = Field(default=15, ge=1, le=15)
