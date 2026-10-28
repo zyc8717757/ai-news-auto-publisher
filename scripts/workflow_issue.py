@@ -9,6 +9,24 @@ from ai_news.pipeline import cutoff_for
 from ai_news.store import Store, atomic_write
 
 
+def build_command(mode: str, issue: str, schedule: str, base_key: str, test_total: int = 0):
+    command = [
+        "ai-news",
+        "--data",
+        ".runtime/data",
+        "--remote",
+        "enhance-issue" if mode in {"enhance-issue", "test-enhance"} else "generate",
+    ]
+    command += ["--schedule", schedule] if schedule else ["--issue", issue]
+    if mode in {"enhance-issue", "test-enhance"} and base_key:
+        command += ["--base-key", base_key]
+    if mode in {"regenerate", "validate-news"}:
+        command += ["--regenerate"]
+    if mode == "test-enhance":
+        command += ["--test-extra-requests", str(test_total)]
+    return command
+
+
 def main():
     mode = os.environ.get("RUN_MODE", "run")
     issue = os.environ.get("REQUESTED_ISSUE", "")
@@ -30,25 +48,15 @@ def main():
         result = {"status": "ready", "issue": issue}
         atomic_write(Path(".runtime/result.json"), json.dumps(result))
     elif mode in {"run", "regenerate", "enhance-issue", "test-enhance", "validate-news"}:
-        command = [
-            "ai-news",
-            "--data",
-            ".runtime/data",
-            "--remote",
-            "enhance-issue" if mode in {"enhance-issue", "test-enhance"} else "generate",
-        ]
-        command += ["--schedule", schedule] if schedule else ["--issue", issue]
-        if mode == "enhance-issue" and os.environ.get("REQUESTED_BASE_KEY"):
-            command += ["--base-key", os.environ["REQUESTED_BASE_KEY"]]
-        if mode in {"regenerate", "validate-news"}:
-            command += ["--regenerate"]
+        test_total = 0
         if mode == "test-enhance":
             if os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != issue:
                 raise ValueError("This test issue was not explicitly authorized")
             total = int(os.environ.get("AI_TEST_AUTHORIZED_TOTAL", "0"))
             if not 1 <= total <= 5:
                 raise ValueError("Explicit cumulative test ceiling required")
-            command += ["--test-extra-requests", str(total)]
+            test_total = total
+        command = build_command(mode, issue, schedule, os.environ.get("REQUESTED_BASE_KEY", ""), test_total)
         subprocess.run(command, check=True)
         result = json.loads(Path(".runtime/result.json").read_text("utf-8"))
     else:

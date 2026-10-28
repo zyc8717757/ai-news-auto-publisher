@@ -3,6 +3,8 @@ from pathlib import Path
 
 import yaml
 
+from scripts.workflow_issue import build_command
+
 
 def test_actions_pinned_and_pr_has_no_secrets():
     for path in Path(".github/workflows").glob("*.yml"):
@@ -31,3 +33,19 @@ def test_live_workflow_gated_and_private_data_not_uploaded():
     assert "inputs.mode != 'validate-news'" in build["if"]
     notify = next(s for s in publish["steps"] if s.get("name") == "Verify deployment and send private email")
     assert "inputs.mode != 'validate-news'" in notify["if"]
+
+
+def test_test_enhance_forwards_explicit_frozen_base_and_test_ceiling():
+    assert build_command("test-enhance", "2026-10-28-am", "", "2026-10-28-am-r1", 2) == [
+        "ai-news",
+        "--data",
+        ".runtime/data",
+        "--remote",
+        "enhance-issue",
+        "--issue",
+        "2026-10-28-am",
+        "--base-key",
+        "2026-10-28-am-r1",
+        "--test-extra-requests",
+        "2",
+    ]
