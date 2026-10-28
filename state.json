@@ -128,14 +128,6 @@
   },
   "ai_audit": [
     {
-      "at": "2026-10-21T00:31:59.252963Z",
-      "issue": "2026-10-21-am",
-      "model": "gemini-3.5-flash-lite",
-      "stage": "accepted",
-      "reason": "",
-      "extra_test": false
-    },
-    {
       "at": "2026-10-21T00:32:03.049297Z",
       "issue": "2026-10-21-am",
       "model": "gemini-3.5-flash-lite",
@@ -926,6 +918,14 @@
       "stage": "provider_error",
       "reason": "ai_provider_http_503",
       "extra_test": true
+    },
+    {
+      "at": "2026-10-28T10:03:58.955583Z",
+      "issue": "2026-10-28-am",
+      "model": "gemini-3.5-flash-lite",
+      "stage": "output_rejected",
+      "reason": "ai_numeric_claim_unsupported",
+      "extra_test": false
     }
   ],
   "ai_reserved_tokens": [
