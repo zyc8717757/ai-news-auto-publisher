@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-28-pm",
+  "revision": 1,
+  "created_at": "2026-10-28T12:31:17.580254Z",
+  "cutoff": "2026-10-28T12:30:00Z",
+  "window_start": "2026-10-26T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "67c6b18b0a76451db874",
+      "title": "Legora正在打造面向法律工作的智能体操作系统",
+      "summary": "该公司称，Legora正在利用OpenAI模型、ChatGPT和Codex来加速法律工作流、扩展合同分析，并解放律师，使其能够专注于更高价值的工作。",
+      "impact": "有望提升法律工作流效率与合同分析能力。",
+      "category": "产品",
+      "score": 69.94,
+      "sources": [
+        {
+          "id": "67c6b18b0a76451db874",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+          "title": "Legora is building the agentic operating system for legal work",
+          "published_at": "2026-10-28T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实际效率提升幅度及系统成熟度尚无详细数据支持。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI官方发布案例，展示Legora利用OpenAI模型与ChatGPT加速法律工作流与合同分析。",
+      "backfill": false
+    },
+    {
+      "id": "77387043f69a853ed6d4",
+      "title": "苹果将为Pages、Keynote和Numbers添加AI聊天机器人",
+      "summary": "苹果正为其生产力应用套件引入AI助手，涵盖Keynote、Pages和Numbers。该公司称，该助手基于苹果和OpenAI的模型构建，能理解文档上下文并执行Keynote幻灯片设计、动画及精修等任务，还能在Pages中进行起草和重构。",
+      "impact": "丰富苹果办公套件的AI功能，提升用户的文档处理效率。",
+      "category": "产品",
+      "score": 54.64,
+      "sources": [
+        {
+          "id": "77387043f69a853ed6d4",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
+          "title": "Apple is adding an AI chatbot to Pages, Keynote, and Numbers",
+          "published_at": "2026-10-27T13:50:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "具体上线时间及各项功能表现有待实际体验验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Apple在Pages、Keynote和Numbers中集成由苹果及OpenAI模型驱动的AI助手，直接影响数亿办公用户。",
+      "backfill": false
+    },
+    {
+      "id": "b67fd02a214f91e2b5ea",
+      "title": "Anthropic正式提交首次公开募股申请",
+      "summary": "媒体报道显示，Anthropic已正式提交IPO申请，披露了高额营收、不断上升的亏损、广泛的企业采用情况，以及一项旨在保持创始人控制权和AI安全使命的不寻常治理结构。",
+      "impact": "标志着头部AI企业向资本市场迈出重要一步。",
+      "category": "商业",
+      "score": 52.56,
+      "sources": [
+        {
+          "id": "b67fd02a214f91e2b5ea",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
+          "title": "Anthropic officially files for its public debut",
+          "published_at": "2026-10-26T14:35:22Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "上市进程及最终估值仍存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic正式提交公开上市（IPO）申请，披露了营收、亏损及企业采用情况，为AI行业重大商业事件。",
+      "backfill": true
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
