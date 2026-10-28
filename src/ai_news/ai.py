@@ -377,7 +377,15 @@ class Enhancer:
         return output.text or ""
 
     def enhance(
-        self, events: list[NewsEvent], *, allow_partial: bool = False, individual: bool = False
+        self,
+        events: list[NewsEvent],
+        *,
+        allow_partial: bool = False,
+        individual: bool = False,
+        initial_model: str | None = None,
+        max_repairs: int = 2,
+        max_provider_retries: int = 1,
+        allow_model_fallback: bool = True,
     ) -> AIResponse:
         if not self.settings.ai_enabled or os.environ.get("AI_FREE_TIER_CONFIRMED") != "true":
             raise AIUnavailable("ai_disabled_or_free_tier_unconfirmed")
@@ -396,7 +404,7 @@ class Enhancer:
         )
         self.client = client
         result = []
-        active_model = self.used_model
+        active_model = initial_model or self.used_model
         # One normal batch for up to 30 candidates. Fallback, retry and repair all share the run cap.
         batches = (
             [[event] for event in events]
@@ -460,13 +468,15 @@ class Enhancer:
                     )
                     self.audit(active_model, "provider_error", provider_failure(exc))
                     if transient_provider_error(exc):
-                        next_model = fallback_model(active_model, self.settings)
+                        next_model = (
+                            fallback_model(active_model, self.settings) if allow_model_fallback else None
+                        )
                         if next_model is not None:
                             self.budget.sleep(2)
                             active_model = next_model
                             transient_retries = 0
                             continue
-                        if transient_retries < 1:
+                        if transient_retries < max_provider_retries:
                             transient_retries += 1
                             self.budget.sleep(4)
                             continue
@@ -490,8 +500,8 @@ class Enhancer:
                                     }
                                 )
                             )
-                            max_repairs = 1 if individual else 2
-                            if repairs < max_repairs:
+                            repair_limit = min(max_repairs, 1) if individual else max_repairs
+                            if repairs < repair_limit:
                                 repairs += 1
                                 prompt += "\n校验失败类型：" + ",".join(sorted(set(failures.values())))
                                 prompt += "\n仅输出符合AIResponse schema的JSON；每个story只包含schema规定字段，禁止增加reason、analysis、diagnostic或其它键。"
@@ -527,8 +537,8 @@ class Enhancer:
                             }
                         )
                     )
-                    max_repairs = 1 if individual else 2
-                    if repairs >= max_repairs:
+                    repair_limit = min(max_repairs, 1) if individual else max_repairs
+                    if repairs >= repair_limit:
                         if allow_partial and accepted:
                             result.extend(accepted[e.id] for e in batch if e.id in accepted)
                             self.audit(active_model, "accepted", "summary_partial")

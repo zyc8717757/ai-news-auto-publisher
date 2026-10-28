@@ -247,18 +247,37 @@ def enhance_frozen(
         # verification; keep the event set, IDs and publication metadata frozen.
         asyncio.run(refresh_frozen_evidence(events, settings))
     processor = enhancer or Enhancer(settings, store, issue=issue, test_extra_limit=test_extra_limit)
-    response = (
-        processor.enhance(events, allow_partial=True, individual=bool(base_key))
-        if enhancer is None
-        else processor.enhance(events)
-    )
+    compact_recovery = False
+    if enhancer is not None:
+        response = processor.enhance(events)
+    elif base_key and store.state.ai_issue_attempts.get(issue, 0) >= settings.ai_run_limit - 2:
+        # Use the final two persisted requests for one complete alternate-model
+        # summary batch and one independent review. Neither phase may retry.
+        compact_recovery = True
+        response = processor.enhance(
+            events,
+            initial_model=settings.backup_model,
+            max_repairs=0,
+            max_provider_retries=0,
+            allow_model_fallback=False,
+        )
+    else:
+        response = processor.enhance(events, allow_partial=True, individual=bool(base_key))
     if enhancer is None:
         from .editorial import EditorialEnhancer
 
+        reviewer = EditorialEnhancer(settings, store, client=processor.client, budget=processor.budget)
+        if compact_recovery:
+            reviewer.used_model = settings.model
         response = AIResponse(
-            stories=EditorialEnhancer(
-                settings, store, client=processor.client, budget=processor.budget
-            ).review_summaries(processor.client, response.stories, events)
+            stories=reviewer.review_summaries(
+                processor.client,
+                response.stories,
+                events,
+                max_repairs=0 if compact_recovery else 1,
+                max_provider_retries=0 if compact_recovery else 1,
+                allow_model_fallback=not compact_recovery,
+            )
         )
     if base_key and {s.event_id for s in response.stories if not s.duplicate_of} != {e.id for e in events}:
         raise AIUnavailable("ai_frozen_coverage_incomplete")

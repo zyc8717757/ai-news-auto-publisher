@@ -184,7 +184,18 @@ def evidence_payload(event):
 
 
 class EditorialEnhancer(Enhancer):
-    def review_summaries(self, client, summaries, events, decisions=None, review_texts=None):
+    def review_summaries(
+        self,
+        client,
+        summaries,
+        events,
+        decisions=None,
+        review_texts=None,
+        *,
+        max_repairs=1,
+        max_provider_retries=1,
+        allow_model_fallback=True,
+    ):
         if not summaries:
             return []
         by_id = {e.id: e for e in events}
@@ -296,7 +307,16 @@ class EditorialEnhancer(Enhancer):
             )
         try:
             review = self.call(
-                client, REVIEW_TASK, payload, VerifiedReviews, "review", 12000, validator=check
+                client,
+                REVIEW_TASK,
+                payload,
+                VerifiedReviews,
+                "review",
+                12000,
+                validator=check,
+                max_repairs=max_repairs,
+                max_provider_retries=max_provider_retries,
+                allow_model_fallback=allow_model_fallback,
             )
         except AIUnavailable as exc:
             if str(exc) != "ai_output_invalid" or not verified_reviews:
@@ -356,7 +376,20 @@ class EditorialEnhancer(Enhancer):
             if s.event_id in approved_by_id and not s.duplicate_of
         ]
 
-    def call(self, client, task, data, schema, phase, output_limit=5000, validator=None):
+    def call(
+        self,
+        client,
+        task,
+        data,
+        schema,
+        phase,
+        output_limit=5000,
+        validator=None,
+        *,
+        max_repairs=1,
+        max_provider_retries=1,
+        allow_model_fallback=True,
+    ):
         prompt = RULES + task + "\nJSON结构：" + json.dumps(schema.model_json_schema(), ensure_ascii=False)
         prompt += "\n只返回JSON，不要代码围栏。输入：" + json.dumps(data, ensure_ascii=False)
         transient_retries = repair = 0
@@ -384,13 +417,15 @@ class EditorialEnhancer(Enhancer):
                 if transient_provider_error(exc):
                     # Keep the successful backup across phases; don't return each
                     # phase to an overloaded primary. Every attempt reserves budget.
-                    next_model = fallback_model(self.used_model, self.settings)
+                    next_model = (
+                        fallback_model(self.used_model, self.settings) if allow_model_fallback else None
+                    )
                     if next_model is not None:
                         self.used_model = next_model
                         transient_retries = 0
                         self.budget.sleep(2)
                         continue
-                    if transient_retries < 1:
+                    if transient_retries < max_provider_retries:
                         transient_retries += 1
                         self.budget.sleep(4)
                         continue
@@ -433,7 +468,7 @@ class EditorialEnhancer(Enhancer):
                     )
                 )
                 self.audit(model, "output_rejected", safe_reason)
-                if repair:
+                if repair >= max_repairs:
                     raise AIUnavailable("ai_output_invalid") from None
                 repair += 1
                 if getattr(self, "last_finish_reason", "") in {"MAX_TOKENS", "max_tokens"}:

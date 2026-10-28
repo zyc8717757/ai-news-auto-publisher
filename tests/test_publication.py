@@ -179,17 +179,31 @@ def test_explicit_frozen_base_requires_all_events_and_keeps_revision_history(
     from ai_news.pipeline import enhance_frozen
 
     store = Store(tmp_path)
-    base = digest.model_copy(update={"mode": "rules", "stories": [digest.stories[0],
-                                    digest.stories[0].model_copy(update={"id": "second"})]})
+    base = digest.model_copy(
+        update={
+            "mode": "rules",
+            "stories": [digest.stories[0], digest.stories[0].model_copy(update={"id": "second"})],
+        }
+    )
     store.save_digest(base)
     store.save_digest(digest.model_copy(update={"revision": 2}))
 
     class AI:
         def enhance(self, events):
-            return AIResponse(stories=[AIStory(event_id=e.id, title="已核实的新闻",
-                summary="这是根据冻结证据生成的中文摘要，保留原始事实。", impact="便于读者理解已发布的消息。",
-                category="模型", value_score=80, evidence_ids=[e.evidence[0].id])
-                for e in (events[:1] if incomplete else events)])
+            return AIResponse(
+                stories=[
+                    AIStory(
+                        event_id=e.id,
+                        title="已核实的新闻",
+                        summary="这是根据冻结证据生成的中文摘要，保留原始事实。",
+                        impact="便于读者理解已发布的消息。",
+                        category="模型",
+                        value_score=80,
+                        evidence_ids=[e.evidence[0].id],
+                    )
+                    for e in (events[:1] if incomplete else events)
+                ]
+            )
 
     if incomplete:
         with pytest.raises(AIUnavailable, match="coverage_incomplete"):
@@ -202,3 +216,79 @@ def test_explicit_frozen_base_requires_all_events_and_keeps_revision_history(
         again, created = enhance_frozen(settings, store, base.issue, AI(), now, base_key=base.key)
         assert not created and again.key == result.key
         assert len(store.digests()) == 3
+
+
+def test_low_budget_frozen_recovery_reserves_one_summary_and_one_review_request(
+    digest, settings, tmp_path, now, monkeypatch
+):
+    import json
+    from types import SimpleNamespace
+
+    from ai_news.ai import Enhancer
+    from ai_news.models import AIResponse, AIStory
+    from ai_news.pipeline import enhance_frozen
+
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    settings.ai_enabled = True
+    settings.ai_run_limit = 20
+    settings.model = "gemini-3.5-flash-lite"
+    settings.backup_model = "gemini-3.1-flash-lite"
+    settings.tertiary_model = "gemini-3.8-flash"
+    base = digest.model_copy(update={"mode": "rules"})
+    store = Store(tmp_path)
+    store.state.ai_issue_attempts[base.issue] = 18
+    store.save_digest(base)
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["model"])
+            prompt = kwargs["contents"]
+            if "source_passages" in prompt and "numeric_spans" in prompt:
+                story = base.stories[0]
+                return SimpleNamespace(
+                    text=json.dumps(
+                        {
+                            "reviews": [
+                                {
+                                    "event_id": story.id,
+                                    "approved": True,
+                                    "translation_ok": True,
+                                    "failure": "none",
+                                    "reason": "通过",
+                                    "replacement": None,
+                                    "numeric_checks": [],
+                                }
+                            ]
+                        }
+                    )
+                )
+            event_id = base.stories[0].id
+            result = AIResponse(
+                stories=[
+                    AIStory(
+                        event_id=event_id,
+                        title="模型更新",
+                        summary="公司发布新的模型版本，效果仍需独立验证。",
+                        impact="可为开发者提供参考。",
+                        category="模型",
+                        value_score=80,
+                        evidence_ids=[base.stories[0].sources[0].id],
+                    )
+                ]
+            )
+            return SimpleNamespace(text=result.model_dump_json())
+
+    client = Client()
+    monkeypatch.setattr(
+        "ai_news.pipeline.Enhancer", lambda *a, **k: Enhancer(settings, store, client, issue=base.issue)
+    )
+    # The fake SDK client is shared by the summary and independent-review calls.
+    _, created = enhance_frozen(settings, store, base.issue, base_key=base.key, now=now)
+    assert created
+    assert calls == ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
+    assert store.state.ai_issue_attempts[base.issue] == 20
