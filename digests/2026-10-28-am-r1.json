@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-28-am",
+  "revision": 1,
+  "created_at": "2026-10-28T00:31:17.398914Z",
+  "cutoff": "2026-10-28T00:30:00Z",
+  "window_start": "2026-10-26T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "1c5b51464767c2ad2949",
+      "title": "Build specialized multimodal models with LFM3",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 82.74,
+      "sources": [
+        {
+          "id": "1c5b51464767c2ad2949",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+          "title": "Build specialized multimodal models with LFM3",
+          "published_at": "2026-10-27T17:16:52Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "1e3ebf94e41ebe19793b",
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 82.03,
+      "sources": [
+        {
+          "id": "1e3ebf94e41ebe19793b",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/retell-ai",
+          "title": "Retell uses OpenAI models to help power 100M monthly calls",
+          "published_at": "2026-10-27T15:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "1d6c5c59e46e52b936cb",
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.41,
+      "sources": [
+        {
+          "id": "1d6c5c59e46e52b936cb",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/allenai/novelty-bench",
+          "title": "Can we trust LLMs to judge whether a research idea is novel?",
+          "published_at": "2026-10-27T16:12:42Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "research",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "393575ee7d83ff0a65d3",
+      "title": "Genie 4: A new generation of world simulation",
+      "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.35,
+      "sources": [
+        {
+          "id": "393575ee7d83ff0a65d3",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+          "title": "Genie 4: A new generation of world simulation",
+          "published_at": "2026-10-27T16:01:38Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "85fdf95f1fdc5eecfcb1",
+      "title": "How AI Is Changing the Pace of Discovery for Millions Living With Dementia",
+      "summary": "There are 57 million people worldwide living with dementia today. For the researchers working to help them, the obstacle isn’t a lack of effort — it’s too much data, too few experts to synthesize it and a pace of discovery that can’t keep up with the disease. The Consortium for Biomedical Research and AI in […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.03,
+      "sources": [
+        {
+          "id": "85fdf95f1fdc5eecfcb1",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/open-source-ai-tools-cbrain-dementia/",
+          "title": "How AI Is Changing the Pace of Discovery for Millions Living With Dementia",
+          "published_at": "2026-10-27T15:00:20Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "c417f8e3d39d0b893c07",
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.53,
+      "sources": [
+        {
+          "id": "c417f8e3d39d0b893c07",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+          "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+          "published_at": "2026-10-27T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
