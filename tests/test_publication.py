@@ -294,6 +294,61 @@ def test_low_budget_frozen_recovery_reserves_one_summary_and_one_review_request(
     assert store.state.ai_issue_attempts[base.issue] == 20
 
 
+def test_failed_free_test_recovery_uses_the_next_free_model_without_reset(
+    digest, settings, tmp_path, now, monkeypatch
+):
+    from ai_news.ai import AIUnavailable, Enhancer
+    from ai_news.models import AIResponse
+    from ai_news.pipeline import enhance_frozen
+
+    issue = digest.issue
+    settings.ai_enabled = True
+    settings.ai_run_limit = 20
+    settings.model = "gemini-3.5-flash-lite"
+    settings.backup_model = "gemini-3.1-flash-lite"
+    settings.tertiary_model = "gemini-3.8-flash"
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", "5")
+    base = digest.model_copy(update={"mode": "rules"})
+    store = Store(tmp_path)
+    store.state.ai_issue_attempts[issue] = 18
+    store.state.ai_test_attempts[issue] = 2
+    store.save_digest(base)
+    selected_models = []
+
+    class AI:
+        def enhance(self, events):
+            return AIResponse(stories=[])
+
+    def fake_enhancer(*args, **kwargs):
+        instance = Enhancer(
+            settings, store, client=object(), issue=issue, test_extra_limit=kwargs.get("test_extra_limit", 0)
+        )
+
+        def capture(events, **options):
+            selected_models.append(options.get("initial_model"))
+            return AI().enhance(events)
+
+        instance.enhance = capture
+        return instance
+
+    async def no_refresh(events, settings):
+        return events
+
+    monkeypatch.setattr("ai_news.pipeline.refresh_frozen_evidence", no_refresh)
+    # The explicit callback is unused by compact recovery, so only capture model selection.
+    monkeypatch.setattr("ai_news.pipeline.Enhancer", fake_enhancer)
+    monkeypatch.setattr(
+        "ai_news.editorial.EditorialEnhancer.review_summaries", lambda self, *args, **kwargs: []
+    )
+    with pytest.raises(AIUnavailable, match="coverage_incomplete"):
+        enhance_frozen(settings, store, issue, now=now, test_extra_limit=5, base_key=base.key)
+    assert selected_models == ["gemini-3.8-flash"]
+    assert store.state.ai_issue_attempts[issue] == 18
+    assert store.state.ai_test_attempts[issue] == 2
+
+
 def test_explicit_test_allowance_repairs_one_batch_and_reviews_without_resetting_production(
     digest, settings, tmp_path, now, monkeypatch
 ):

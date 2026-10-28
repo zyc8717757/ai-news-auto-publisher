@@ -254,9 +254,14 @@ def enhance_frozen(
         # Use the final two persisted requests for one complete alternate-model
         # summary batch and one independent review. Neither phase may retry.
         compact_recovery = True
+        recovery_model = settings.backup_model
+        if test_extra_limit and store.state.ai_test_attempts.get(issue, 0) >= 2 and settings.tertiary_model:
+            # A prior separately-authorized validation attempt already showed
+            # numeric rejection on the first backup. Use the next free model.
+            recovery_model = settings.tertiary_model
         response = processor.enhance(
             events,
-            initial_model=settings.backup_model,
+            initial_model=recovery_model,
             max_repairs=1 if test_extra_limit else 0,
             max_provider_retries=1 if test_extra_limit else 0,
             allow_model_fallback=bool(test_extra_limit),
