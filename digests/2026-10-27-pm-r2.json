@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-27-pm",
+  "revision": 2,
+  "created_at": "2026-10-28T08:59:04.964956Z",
+  "cutoff": "2026-10-27T12:30:00Z",
+  "window_start": "2026-10-25T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "7cb522fa07995fb5ac19",
+      "title": "Diffusers发布v0.42.1安全更新",
+      "summary": "Diffusers发布了v0.42.1安全版本，修复了使用from_pretrained加载时组件声明库名称的解析方式，以防止绕过trust_remote_code。官方建议0.42.0版本用户升级到该版本。",
+      "impact": "修复了潜在安全漏洞，提升了模型加载安全性。",
+      "category": "安全",
+      "score": 72.55,
+      "sources": [
+        {
+          "id": "7cb522fa07995fb5ac19",
+          "source_id": "diffusers",
+          "source_name": "Diffusers Releases",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://github.com/huggingface/diffusers/releases/tag/v0.42.1",
+          "title": "Diffusers Releases: v0.42.1 — fix component resolution in `from_pretrained` to prevent `trust_remote_code` bypass",
+          "published_at": "2026-10-27T07:41:43Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 漏洞具体利用方式和严重程度需参考官方安全公告。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [
+        "v0.42.1"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-10-27-am",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "ac1ec69ea046ea68f8c2",
+      "title": "Vercel Connect CLI支持通过命令行浏览1000多个服务",
+      "summary": "Vercel推出了Vercel Connect CLI功能，允许用户和智能体在终端中浏览和搜索超过1000个服务。新版本支持按类别、连接方式（如mcp或oauth）等进行过滤，并支持JSON格式输出。用户需更新至64.1.0或更高版本。",
+      "impact": "方便开发者在命令行中更高效地查找和集成各类服务与工具。",
+      "category": "开发",
+      "score": 68.49,
+      "sources": [
+        {
+          "id": "ac1ec69ea046ea68f8c2",
+          "source_id": "primary-vercel",
+          "source_name": "Vercel",
+          "group": "vercel",
+          "trust": "official",
+          "url": "https://vercel.com/changelog/discover-1000-services-on-vercel-connect-from-the-cli",
+          "title": "Discover 1000+ services on Vercel Connect from the CLI",
+          "published_at": "2026-10-26T20:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体服务的可用性及生态支持有待实际体验。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
