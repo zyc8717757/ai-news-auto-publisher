@@ -3465,7 +3465,7 @@
     },
     "2026-10-27-pm-r2": {
       "deployment": "ready",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
