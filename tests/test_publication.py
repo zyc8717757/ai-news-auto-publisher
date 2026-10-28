@@ -432,3 +432,92 @@ def test_explicit_test_allowance_repairs_one_batch_and_reviews_without_resetting
     assert len(calls) == 3
     assert store.state.ai_issue_attempts[issue] == 18
     assert store.state.ai_test_attempts[issue] == 3
+
+
+def test_last_production_and_test_slots_are_split_between_complete_summary_and_review(
+    digest, settings, tmp_path, now, monkeypatch
+):
+    import json
+    from types import SimpleNamespace
+
+    from ai_news.ai import AIResponse, AIStory, Enhancer
+    from ai_news.pipeline import enhance_frozen
+
+    issue = digest.issue
+    settings.ai_enabled = True
+    settings.ai_run_limit = 20
+    settings.model, settings.backup_model, settings.tertiary_model = (
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-3.8-flash",
+    )
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", "5")
+    base = digest.model_copy(update={"mode": "rules"})
+    store = Store(tmp_path)
+    store.state.ai_issue_attempts[issue] = 19
+    store.state.ai_test_attempts[issue] = 4
+    store.save_digest(base)
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            story = base.stories[0]
+            calls.append(
+                (
+                    kwargs["model"],
+                    Store(tmp_path).state.ai_issue_attempts[issue],
+                    Store(tmp_path).state.ai_test_attempts[issue],
+                )
+            )
+            prompt = kwargs["contents"]
+            if "source_passages" in prompt and "numeric_spans" in prompt:
+                return SimpleNamespace(
+                    text=json.dumps(
+                        {
+                            "reviews": [
+                                {
+                                    "event_id": story.id,
+                                    "approved": True,
+                                    "translation_ok": True,
+                                    "failure": "none",
+                                    "reason": "通过",
+                                    "replacement": None,
+                                    "numeric_checks": [],
+                                }
+                            ]
+                        }
+                    )
+                )
+            summary = AIStory(
+                event_id=story.id,
+                title="模型更新",
+                summary="公司发布新的模型版本，效果仍需独立验证。",
+                impact="可为开发者提供参考。",
+                category="模型",
+                value_score=80,
+                evidence_ids=[story.sources[0].id],
+            )
+            return SimpleNamespace(text=AIResponse(stories=[summary]).model_dump_json())
+
+    async def no_refresh(events, config):
+        return events
+
+    client = Client()
+    monkeypatch.setattr("ai_news.pipeline.refresh_frozen_evidence", no_refresh)
+    monkeypatch.setattr(
+        "ai_news.pipeline.Enhancer",
+        lambda *a, **k: Enhancer(
+            settings, store, client, issue=issue, test_extra_limit=k.get("test_extra_limit", 0)
+        ),
+    )
+    result, created = enhance_frozen(settings, store, issue, now=now, test_extra_limit=5, base_key=base.key)
+    assert created and result.mode == "ai" and len(result.stories) == 1
+    assert calls == [(settings.model, 20, 4), (settings.model, 20, 5)]
+    assert store.state.ai_issue_attempts[issue] == 20
+    assert store.state.ai_test_attempts[issue] == 5

@@ -7,7 +7,7 @@ from collections import Counter
 from datetime import UTC, datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from .ai import AIUnavailable, Enhancer
+from .ai import AIUnavailable, Budget, Enhancer
 from .collector import Collector, article_metadata, plain
 from .models import (
     AIResponse,
@@ -248,6 +248,7 @@ def enhance_frozen(
         asyncio.run(refresh_frozen_evidence(events, settings))
     processor = enhancer or Enhancer(settings, store, issue=issue, test_extra_limit=test_extra_limit)
     compact_recovery = False
+    split_budget_recovery = False
     if enhancer is not None:
         response = processor.enhance(events)
     elif base_key and store.state.ai_issue_attempts.get(issue, 0) >= settings.ai_run_limit - 2:
@@ -255,23 +256,36 @@ def enhance_frozen(
         # summary batch and one independent review. Neither phase may retry.
         compact_recovery = True
         recovery_model = settings.backup_model
-        if test_extra_limit and store.state.ai_test_attempts.get(issue, 0) >= 2 and settings.tertiary_model:
+        production_remaining = settings.ai_run_limit - store.state.ai_issue_attempts.get(issue, 0)
+        test_remaining = test_extra_limit - store.state.ai_test_attempts.get(issue, 0)
+        split_budget_recovery = bool(test_extra_limit and production_remaining == 1 and test_remaining == 1)
+        if split_budget_recovery:
+            # Pair the final production slot for summaries with the last
+            # separately authorized review slot; each stage is reserved once.
+            processor = Enhancer(settings, store, issue=issue)
+            recovery_model = settings.model
+        elif test_extra_limit and store.state.ai_test_attempts.get(issue, 0) >= 2 and settings.tertiary_model:
             # A prior separately-authorized validation attempt already showed
             # numeric rejection on the first backup. Use the next free model.
             recovery_model = settings.tertiary_model
         response = processor.enhance(
             events,
             initial_model=recovery_model,
-            max_repairs=1 if test_extra_limit else 0,
-            max_provider_retries=1 if test_extra_limit else 0,
-            allow_model_fallback=bool(test_extra_limit),
+            max_repairs=0 if split_budget_recovery else (1 if test_extra_limit else 0),
+            max_provider_retries=0 if split_budget_recovery else (1 if test_extra_limit else 0),
+            allow_model_fallback=bool(test_extra_limit) and not split_budget_recovery,
         )
     else:
         response = processor.enhance(events, allow_partial=True, individual=bool(base_key))
     if enhancer is None:
         from .editorial import EditorialEnhancer
 
-        reviewer = EditorialEnhancer(settings, store, client=processor.client, budget=processor.budget)
+        reviewer_budget = (
+            Budget(settings, store, issue=issue, test_extra_limit=test_extra_limit)
+            if split_budget_recovery
+            else processor.budget
+        )
+        reviewer = EditorialEnhancer(settings, store, client=processor.client, budget=reviewer_budget)
         if compact_recovery:
             reviewer.used_model = settings.model
         response = AIResponse(
@@ -279,9 +293,11 @@ def enhance_frozen(
                 processor.client,
                 response.stories,
                 events,
-                max_repairs=(1 if test_extra_limit else 0) if compact_recovery else 1,
-                max_provider_retries=(1 if test_extra_limit else 0) if compact_recovery else 1,
-                allow_model_fallback=bool(test_extra_limit) if compact_recovery else True,
+                max_repairs=(0 if split_budget_recovery else (1 if test_extra_limit else 0))
+                if compact_recovery
+                else 1,
+                max_provider_retries=0 if split_budget_recovery else (1 if test_extra_limit else 1),
+                allow_model_fallback=not split_budget_recovery,
             )
         )
     if base_key and {s.event_id for s in response.stories if not s.duplicate_of} != {e.id for e in events}:
