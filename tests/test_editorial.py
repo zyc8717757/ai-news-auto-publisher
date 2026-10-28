@@ -183,9 +183,9 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
         settings, store, client=client, budget=Budget(settings, store, now=lambda: now, issue="2026-10-10-pm")
     )
     response, decisions, selected = editor.edit(events, now)
-    assert phases == ["screen", "rank", "summary", *(["summary"] if bad_summary else []), "review"]
+    assert phases == ["screen", "rank", *(["summary"] * 3 if bad_summary else ["summary"]), "review"]
     assert [s.event_id for s in response.stories] == (["4", "5"] if bad_summary else ["2", "4", "5"])
-    assert len(Store(tmp_path).state.ai_attempts) == (5 if bad_summary else 4)
+    assert len(Store(tmp_path).state.ai_attempts) == (6 if bad_summary else 4)
     stories = ai_stories(response, selected, decisions)
     assert [s.section for s in stories] == (["news", "observation"] if bad_summary else ["news", "news", "observation"])
 

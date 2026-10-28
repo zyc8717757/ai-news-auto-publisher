@@ -427,7 +427,7 @@ class Enhancer:
                     for evidence in record["evidence"]:
                         evidence["text"] = evidence["text"][:excerpt_limit]
                 prompt = PROMPT + "\n输入数据：\n" + json.dumps(payload, ensure_ascii=False)
-            repair_used = False
+            repairs = 0
             transient_retries = 0
             accepted = {}
             while True:
@@ -484,10 +484,14 @@ class Enhancer:
                                     }
                                 )
                             )
-                            if not repair_used:
-                                repair_used = True
+                            if repairs < 2:
+                                repairs += 1
                                 prompt += "\n校验失败类型：" + ",".join(sorted(set(failures.values())))
-                                prompt += "\n仅使用引用证据的数字、币种和单位；删掉无法支持的数字，不推算百分比或倍数。每个事件输出完整字段及正确证据ID，使用简体中文。重新输出完整JSON。"
+                                prompt += "\n仅输出符合AIResponse schema的JSON；每个story只包含schema规定字段，禁止增加reason、analysis、diagnostic或其它键。"
+                                prompt += "\n仅使用该事件引用证据中的数字、币种和单位；保持指标与变化基准，删掉无法支持的数字，不推算百分比或倍数。完整输出每个事件及正确evidence_ids，使用简体中文。"
+                                prompt += "\n严格schema：" + json.dumps(
+                                    AIResponse.model_json_schema(), ensure_ascii=False
+                                )
                                 continue
                         if accepted:
                             self.audit(active_model, "accepted", "summary_partial" if failures else "")
@@ -516,13 +520,17 @@ class Enhancer:
                             }
                         )
                     )
-                    if repair_used:
+                    if repairs >= 2:
                         if allow_partial and accepted:
                             result.extend(accepted[e.id] for e in batch if e.id in accepted)
                             self.audit(active_model, "accepted", "summary_partial")
                             break
                         raise AIUnavailable("ai_output_invalid") from None
-                    repair_used = True
+                    repairs += 1
                     prompt += "\n校验失败类型：" + reason
-                    prompt += "\n上次输出未通过字段、中文、数字或证据检查。只使用引用证据明确给出的数字及单位，省略无依据数字。重新从输入生成完整JSON。"
+                    prompt += "\n上次输出未通过校验。只输出严格符合AIResponse schema的JSON；每个story只包含规定字段，禁止增加reason、analysis、diagnostic或其它键。"
+                    prompt += (
+                        "只使用引用证据明确给出的数字及单位，省略无依据数字；按完整schema重新生成全部story："
+                    )
+                    prompt += json.dumps(AIResponse.model_json_schema(), ensure_ascii=False)
         return AIResponse(stories=result)

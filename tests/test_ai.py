@@ -71,8 +71,64 @@ def test_summary_repair_retains_good_siblings_and_persistent_budget(
     store = Store(tmp_path)
     output = Enhancer(settings, store, Client()).enhance(events, allow_partial=True)
     assert [s.event_id for s in output.stories] == (["good", "bad"] if repair_kind == "fixed" else ["good"])
-    assert len(Store(tmp_path).state.ai_attempts) == 2
+    assert len(Store(tmp_path).state.ai_attempts) == (2 if repair_kind == "fixed" else 3)
     assert "ai_numeric_claim_unsupported" in calls[1]
+
+
+def test_numeric_repair_then_schema_repair_preserves_complete_event_set(
+    settings, tmp_path, monkeypatch, source_item
+):
+    settings.ai_enabled = True
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    events = [
+        NewsEvent(id=key, evidence=[source_item.model_copy(update={"id": "e-" + key})])
+        for key in ("good", "needs_repair")
+    ]
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["contents"])
+            stories = [response(event).stories[0].model_dump() for event in events]
+            if len(calls) == 1:
+                stories[1]["summary"] += "提升99倍。"
+            elif len(calls) == 2:
+                stories[1]["debug_note"] = "不可由schema接收"
+            return SimpleNamespace(text=json.dumps({"stories": stories}, ensure_ascii=False))
+
+    store = Store(tmp_path)
+    result = Enhancer(settings, store, Client(), Budget(settings, store, sleep=lambda _: None)).enhance(
+        events
+    )
+    assert {s.event_id for s in result.stories} == {e.id for e in events}
+    assert len(Store(tmp_path).state.ai_attempts) == 3
+    assert '"stories"' in calls[1] and '"event_id"' in calls[1]
+    assert "reason" in calls[2] and "diagnostic" in calls[2]
+
+
+def test_ai_summary_repairs_remain_bounded(settings, tmp_path, monkeypatch, source_item):
+    settings.ai_enabled = True
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    events = [NewsEvent(id="event", evidence=[source_item])]
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["contents"])
+            return SimpleNamespace(text="invalid JSON")
+
+    store = Store(tmp_path)
+    with pytest.raises(AIUnavailable, match="ai_output_invalid"):
+        Enhancer(settings, store, Client(), Budget(settings, store, sleep=lambda _: None)).enhance(events)
+    assert len(calls) == len(Store(tmp_path).state.ai_attempts) == 3
 
 
 def test_reject_unknown_evidence_and_numbers(source_item):
