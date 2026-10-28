@@ -247,7 +247,11 @@ def enhance_frozen(
         # verification; keep the event set, IDs and publication metadata frozen.
         asyncio.run(refresh_frozen_evidence(events, settings))
     processor = enhancer or Enhancer(settings, store, issue=issue, test_extra_limit=test_extra_limit)
-    response = processor.enhance(events)
+    response = (
+        processor.enhance(events, allow_partial=True, individual=bool(base_key))
+        if enhancer is None
+        else processor.enhance(events)
+    )
     if enhancer is None:
         from .editorial import EditorialEnhancer
 

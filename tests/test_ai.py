@@ -131,6 +131,37 @@ def test_ai_summary_repairs_remain_bounded(settings, tmp_path, monkeypatch, sour
     assert len(calls) == len(Store(tmp_path).state.ai_attempts) == 3
 
 
+def test_frozen_recovery_summarizes_each_original_event_independently(
+    settings, tmp_path, monkeypatch, source_item
+):
+    settings.ai_enabled = True
+    settings.ai_run_limit = 20
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    events = [
+        NewsEvent(id=f"event-{i}", evidence=[source_item.model_copy(update={"id": f"e-{i}"})])
+        for i in range(6)
+    ]
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            payload = json.loads(kwargs["contents"].split("\n输入数据：\n")[-1])
+            assert len(payload) == 1
+            calls.append(payload[0]["event_id"])
+            event = next(e for e in events if e.id == payload[0]["event_id"])
+            return SimpleNamespace(text=AIResponse(stories=response(event).stories).model_dump_json())
+
+    store = Store(tmp_path)
+    enhancer = Enhancer(settings, store, Client(), Budget(settings, store, sleep=lambda _: None))
+    result = enhancer.enhance(events, allow_partial=True, individual=True)
+    assert {story.event_id for story in result.stories} == {event.id for event in events}
+    assert len(calls) == len(Store(tmp_path).state.ai_attempts) == 6
+
+
 def test_reject_unknown_evidence_and_numbers(source_item):
     event = NewsEvent(id="event", evidence=[source_item])
     result = response(event)

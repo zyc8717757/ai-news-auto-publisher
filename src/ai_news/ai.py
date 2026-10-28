@@ -376,7 +376,9 @@ class Enhancer:
         )
         return output.text or ""
 
-    def enhance(self, events: list[NewsEvent], *, allow_partial: bool = False) -> AIResponse:
+    def enhance(
+        self, events: list[NewsEvent], *, allow_partial: bool = False, individual: bool = False
+    ) -> AIResponse:
         if not self.settings.ai_enabled or os.environ.get("AI_FREE_TIER_CONFIRMED") != "true":
             raise AIUnavailable("ai_disabled_or_free_tier_unconfirmed")
         key = os.environ.get("GEMINI_API_KEY")
@@ -396,8 +398,12 @@ class Enhancer:
         result = []
         active_model = self.used_model
         # One normal batch for up to 30 candidates. Fallback, retry and repair all share the run cap.
-        for offset in range(0, len(events), 30):
-            batch = events[offset : offset + 30]
+        batches = (
+            [[event] for event in events]
+            if individual
+            else [events[i : i + 30] for i in range(0, len(events), 30)]
+        )
+        for batch in batches:
             payload = [
                 {
                     "event_id": event.id,
@@ -484,7 +490,8 @@ class Enhancer:
                                     }
                                 )
                             )
-                            if repairs < 2:
+                            max_repairs = 1 if individual else 2
+                            if repairs < max_repairs:
                                 repairs += 1
                                 prompt += "\n校验失败类型：" + ",".join(sorted(set(failures.values())))
                                 prompt += "\n仅输出符合AIResponse schema的JSON；每个story只包含schema规定字段，禁止增加reason、analysis、diagnostic或其它键。"
@@ -520,7 +527,8 @@ class Enhancer:
                             }
                         )
                     )
-                    if repairs >= 2:
+                    max_repairs = 1 if individual else 2
+                    if repairs >= max_repairs:
                         if allow_partial and accepted:
                             result.extend(accepted[e.id] for e in batch if e.id in accepted)
                             self.audit(active_model, "accepted", "summary_partial")
