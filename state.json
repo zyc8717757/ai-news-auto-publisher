@@ -3715,7 +3715,7 @@
     },
     "2026-10-29-am-r1": {
       "deployment": "failed",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
