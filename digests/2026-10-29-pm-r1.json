@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-29-pm",
+  "revision": 1,
+  "created_at": "2026-10-29T12:31:41.979513Z",
+  "cutoff": "2026-10-29T12:30:00Z",
+  "window_start": "2026-10-27T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "d2077107e188bd6da054",
+      "title": "谷歌发布Gemini 4 Carbon模型",
+      "summary": "谷歌发布了最新的前沿模型Gemini 4 Carbon，该公司称该模型在编程、智能体任务和网络安全方面取得了显著提升。根据人工智能分析智能指数v5.0评测显示，该模型位居榜首。由于其先进的安全功能，目前访问权限首先限于精选的安全专家。",
+      "impact": "增强了谷歌前沿模型在网络安全与复杂智能体任务上的能力。",
+      "category": "模型",
+      "score": 72.65,
+      "sources": [
+        {
+          "id": "7b5653451a244c2d34ef",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+          "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+          "published_at": "2026-10-28T20:03:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "e96e1135675ce562a446",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/",
+          "title": "Google Deepmind releases Gemini 4 Carbon just two weeks after Argon with gains across the board",
+          "published_at": "2026-10-28T19:17:58Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "评测结果和性能提升幅度由公司声明和特定基准得出，实际表现可能因应用场景而异。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google发布前沿大模型Gemini 4 Carbon，提升编码与网络安全能力。",
+      "backfill": false
+    },
+    {
+      "id": "da27cb2db053180e3565",
+      "title": "谷歌在AI模式中扩展广告业务",
+      "summary": "谷歌宣布将AI模式中的广告扩展到包括加拿大和印度在内的10个新国家。该公司称，随着AI改变搜索方式，用户的查询正变得更加对话化和日常化。研究表明用户对AI模式中的广告接受度良好，且赞助结果的点击率与有机产品列表相似。",
+      "impact": "扩大了谷歌AI搜索服务的商业化变现范围。",
+      "category": "商业",
+      "score": 70.32,
+      "sources": [
+        {
+          "id": "da27cb2db053180e3565",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/",
+          "title": "Ads in AI Mode expand to new markets.",
+          "published_at": "2026-10-28T21:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 广告业务的效果与用户长期接受度仍有待市场进一步检验。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google宣布将AI模式广告扩展到10个新国家，影响实际商业与用户。",
+      "backfill": false
+    },
+    {
+      "id": "e26ac0eef4d158c034dc",
+      "title": "谷歌推出连接应用平台",
+      "summary": "谷歌推出了Connected Apps Platform，旨在为开发者提供一个统一的场所来构建和管理适用于搜索和Gemini应用的应用程序，并同时推出了来自Adobe、Calm和Peloton等合作伙伴的一系列新连接应用。",
+      "impact": "方便开发者统一构建和管理应用，丰富了Gemini与搜索的生态集成。",
+      "category": "开发",
+      "score": 70.83,
+      "sources": [
+        {
+          "id": "e26ac0eef4d158c034dc",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/",
+          "title": "Build and manage Connected Apps in one place",
+          "published_at": "2026-10-28T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "dc7790b3a03a16cfe3a5",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+          "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+          "published_at": "2026-10-28T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 预览版平台的全面生态成熟度尚待观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google推出Connected Apps Platform，方便开发者为Search和Gemini构建应用。",
+      "backfill": false
+    },
+    {
+      "id": "db30df4bb3be374c7021",
+      "title": "谷歌浏览器增强型自动填充功能扩展至Gmail",
+      "summary": "谷歌浏览器的增强型自动填充功能正在扩展，现在将开始使用带有个人智能的Gemini来建议从用户的Gmail中获取的信息，以协助用户填写表单。",
+      "impact": "提升了浏览器表单填写的智能化与便捷程度。",
+      "category": "产品",
+      "score": 56.23,
+      "sources": [
+        {
+          "id": "db30df4bb3be374c7021",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1020626/chrome-enhanced-autofill-gmail-forms-gemini-personal-intelligence",
+          "title": "Chrome’s enhanced autofill can now pull info from Gmail to help you fill out forms",
+          "published_at": "2026-10-28T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "自动填充建议的准确性及用户对隐私数据的顾虑有待实际体验验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "谷歌Chrome增强自动填充功能扩展，利用Gemini及个人智能分析Gmail。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
