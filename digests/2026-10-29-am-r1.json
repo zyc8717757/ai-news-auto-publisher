@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-29-am",
+  "revision": 1,
+  "created_at": "2026-10-29T00:31:12.371920Z",
+  "cutoff": "2026-10-29T00:30:00Z",
+  "window_start": "2026-10-27T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "e8e0cb1d0e685ced8c0e",
+      "title": "Gemini 4 Carbon前沿模型公布",
+      "summary": "谷歌官方公布了其下一代前沿模型Gemini 4 Carbon，该模型暂未披露更多详细的技术规格或性能指标。",
+      "impact": "预示谷歌下一代模型研发进展，未来可能带来新的性能表现。",
+      "category": "模型",
+      "score": 80.36,
+      "sources": [
+        {
+          "id": "e8e0cb1d0e685ced8c0e",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+          "title": "Gemini 4 Carbon: Our next frontier model",
+          "published_at": "2026-10-28T17:00:58Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 官方未提供具体的技术细节、功能特点及上线时间。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google DeepMind 发布了新一代前沿模型 Gemini 4 Carbon，引发行业关注。",
+      "backfill": false
+    },
+    {
+      "id": "372a83984daf59880b08",
+      "title": "OpenAI推出ChatGPT订阅用户API额度申领计划",
+      "summary": "OpenAI官方宣布，符合条件的ChatGPT Pro和Business订阅用户可以申领最高每月500美元的API额度，用于构建应用和智能体。具体的额度根据订阅方案而定，其中Pro方案按层级可获得100美元、200美元或500美元每月，Business方案按付费Standard席位提供20美元或付费Premium席位提供100美元，每个工作区最高可合并至500美元。",
+      "impact": "降低了开发者的API使用成本，有助于推动ChatGPT相关应用和智能体的生态开发。",
+      "category": "商业",
+      "score": 75.51,
+      "sources": [
+        {
+          "id": "372a83984daf59880b08",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/claim-up-to-500-in-api-credits-using-your-chatgpt-pro-or-business-subscription/1410579",
+          "title": "Claim up to 500$ in API credits using your ChatGPT Pro or Business subscription",
+          "published_at": "2026-10-28T23:39:00.062000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 额度受限于不同的订阅计划和资格条件，具体适用范围依官方帮助中心为准。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 宣布符合条件的 ChatGPT Pro 和 Business 订阅用户每月可领取最高 500 美元的 API 额度。",
+      "backfill": false
+    },
+    {
+      "id": "9fa8e4999dc547768cea",
+      "title": "NVIDIA RTX Spark Windows笔记本新品发布",
+      "summary": "NVIDIA官方宣布推出全新的NVIDIA RTX Spark Windows笔记本系列，该系统结合了NVIDIA Blackwell RTX GPU和NVIDIA Grace CPU单芯片超级芯片，最高搭载128GB统一内存，并已在华硕、戴尔、惠普、联想、微软和微星等厂商推出新机型，支持智能体工具和游戏。",
+      "impact": "为开发者、创作者和游戏玩家提供了集成强大图形与计算能力的轻薄笔记本选择。",
+      "category": "产品",
+      "score": 81.42,
+      "sources": [
+        {
+          "id": "9fa8e4999dc547768cea",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+          "title": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+          "published_at": "2026-10-28T15:00:46Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 不同厂商的具体机型配置和实际市场售价可能存在差异。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA 推出搭载 Blackwell 架构和 Grace CPU 的 RTX Spark 笔记本及 Agent 工具。",
+      "backfill": false
+    },
+    {
+      "id": "5b8b12525ad43ea9a68a",
+      "title": "PyTorch 2.15.0正式发布",
+      "summary": "PyTorch发布2.15.0版本，重写了NCCL后端并设为默认，引入NIXL后端与CUDA图捕获传输，改进FSDP2及流水线内存和通信控制，并在NVIDIA Blackwell、Apple Silicon以及AMD、Intel等硬件平台上带来了性能优化和新功能支持。",
+      "impact": "提升了多后端分布式训练效率及跨硬件平台的运行性能，增强了开发者的使用体验。",
+      "category": "开发",
+      "score": 75.0,
+      "sources": [
+        {
+          "id": "5b8b12525ad43ea9a68a",
+          "source_id": "pytorch",
+          "source_name": "PyTorch Releases",
+          "group": "pytorch",
+          "trust": "official",
+          "url": "https://github.com/pytorch/pytorch/releases/tag/v2.15.0",
+          "title": "PyTorch Releases: PyTorch 2.15.0 Release",
+          "published_at": "2026-10-28T17:09:49Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 部分新特性和硬件后端的实际效果取决于具体的运行环境与软硬件配置。",
+      "entities": [
+        "pytorch"
+      ],
+      "versions": [
+        "2.15.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "PyTorch 发布 2.15.0 版本，带来全新 NCCL 后端重写、Blackwell GPU 加速及多项核心性能改进。",
+      "backfill": false
+    },
+    {
+      "id": "a395c7da350b5086cc15",
+      "title": "OpenAI与ServiceNow扩大企业工作流合作",
+      "summary": "OpenAI与ServiceNow宣布扩大双方的合作伙伴关系，将OpenAI的模型和智能体引入ServiceNow平台，同时将ServiceNow的工作流整合到ChatGPT和Codex中。",
+      "impact": "进一步深化了双方在企业级自动化工作流和人工智能应用方面的协同合作。",
+      "category": "商业",
+      "score": 72.04,
+      "sources": [
+        {
+          "id": "a395c7da350b5086cc15",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+          "published_at": "2026-10-28T13:15:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体合作功能的全面落地时间和实际集成效果有待观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 与 ServiceNow 扩大企业级合作，将 AI 模型与工作流深度整合。",
+      "backfill": false
+    },
+    {
+      "id": "d2a63e147caaed88faea",
+      "title": "谷歌开放Android Studio支持第三方AI代理与新Gemini API",
+      "summary": "谷歌正向第三方AI代理开放Android Studio，推出全新的“自带代理”功能。该集成开发环境现已支持超过40种编码代理，包含Anthropic的Claude Agent与OpenAI的Codex。该公司称，全新的终端工具可帮助代理完成UI任务的速度提升77%，同时消耗的token数量最多减少至原来的三分之一。",
+      "impact": "推动Android开发向代理中心化转型，提升开发效率。",
+      "category": "开发",
+      "score": 60.96,
+      "sources": [
+        {
+          "id": "d2a63e147caaed88faea",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+          "title": "Google opens Android development to third-party AI agents and unveils new Gemini APIs",
+          "published_at": "2026-10-28T16:59:59Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "终端工具的性能提升幅度和token减少倍数为该公司称，具体实际效果可能因任务复杂度而异。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google 开放 Android Studio 支持第三方 AI 代理（引入 Claude Agent 和 Codex 等40多种编码代理），并发布新的 Gemini API。",
+      "backfill": false
+    },
+    {
+      "id": "28c7cc4d12419c93f2bf",
+      "title": "英伟达发布开源Nemotron 3.5 Transcribe语音识别模型",
+      "summary": "英伟达发布了开源的Nemotron 3.5 Transcribe语音识别模型，该模型可处理转写、说话人识别和翻译，并接受文本提示词指令。该公司称其在多个基准测试中领先，且仅使用最强开源竞争对手六分之一的活跃参数。此外，英伟达还提供了一份包含超过800,000小时语音的数据集及微调工具。",
+      "impact": "为开发者提供功能全面的开源语音识别和多语言处理工具。",
+      "category": "模型",
+      "score": 61.6,
+      "sources": [
+        {
+          "id": "ec733f799e1aaee3d1ac",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+          "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+          "published_at": "2026-10-28T14:58:17Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "28c7cc4d12419c93f2bf",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/nvidias-open-nemotron-3-5-transcribe-combines-transcription-translation-and-speaker-recognition/",
+          "title": "Nvidia's open Nemotron 3.5 Transcribe combines transcription, translation, and speaker recognition",
+          "published_at": "2026-10-28T15:49:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 基准测试领先及参数效率的相关对比结论来源于英伟达声明，具体应用表现有待社区验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [
+        "3.5"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Nvidia 发布开源语音识别模型 Nemotron 3.5 Transcribe，结合转写、翻译和说话人识别，性能领先且参数高效。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
