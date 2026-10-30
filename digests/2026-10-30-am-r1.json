@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-30-am",
+  "revision": 1,
+  "created_at": "2026-10-30T00:31:36.198002Z",
+  "cutoff": "2026-10-30T00:30:00Z",
+  "window_start": "2026-10-28T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "9349f418e7bc7ab45091",
+      "title": "OpenAI发布更新版模型规范，确立五大核心价值观",
+      "summary": "OpenAI发布了更新版的模型规范（Model Spec），概述了五项核心价值观，旨在引导更具能力的AI展现出健全的判断力、尊重人类自主权，并忠实于人类意图。",
+      "impact": "为未来更强大AI系统的行为规范与对齐方向提供明确的指导框架。",
+      "category": "安全",
+      "score": 80.36,
+      "sources": [
+        {
+          "id": "9349f418e7bc7ab45091",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/updated-model-spec",
+          "title": "An updated Model Spec for more capable and beneficial AI",
+          "published_at": "2026-10-29T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 规范的实际约束效果和执行细节尚待观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI发布了更新的Model Spec，用五大核心价值指导具备更强能力的AI模型。",
+      "backfill": false
+    },
+    {
+      "id": "0f01adb2acab0a67ba71",
+      "title": "OpenAI采用分层监控检测前沿模型失调与未授权行为",
+      "summary": "OpenAI表示，该公司采用分层监控来检测前沿模型的失调情况以及未经授权的智能体行为，以便应急人员能够在事件升级之前进行干预。",
+      "impact": "有助于及时发现并控制前沿AI系统的潜在失控风险，提升安全性。",
+      "category": "安全",
+      "score": 80.11,
+      "sources": [
+        {
+          "id": "0f01adb2acab0a67ba71",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+          "title": "How we detect frontier model misalignment",
+          "published_at": "2026-10-29T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 监控系统在复杂现实场景下的全面拦截率有待独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI详细介绍了用于检测前沿模型失调与未授权智能体行为的分层监控机制。",
+      "backfill": false
+    },
+    {
+      "id": "be6e0c47e1d533a9da25",
+      "title": "OpenAI将付费计划使用额度调整以应对市场竞争",
+      "summary": "随着与Anthropic的竞争加剧，OpenAI将其付费计划的使用额度调整。此前计划削减Pro 200配额的举措在遭到用户反对后已被撤销。同时，更高效的模型有望进一步提升可用容量。",
+      "impact": "显著增加用户的付费计划使用额度，加剧企业级AI市场的竞争。",
+      "category": "商业",
+      "score": 59.52,
+      "sources": [
+        {
+          "id": "be6e0c47e1d533a9da25",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up/",
+          "title": "OpenAI doubles usage limits on Pro plans as competition with Anthropic heats up",
+          "published_at": "2026-10-29T20:01:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "新模型对实际可用容量的提升幅度和市场最终反应仍存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic",
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI调整付费计划使用额度以应对竞争。",
+      "backfill": false
+    },
+    {
+      "id": "4aa6b4f10322be2ed130",
+      "title": "谷歌Gemini聊天支持直接生成和编辑文档与文件",
+      "summary": "谷歌Gemini推出新功能，允许所有Gemini用户直接在聊天中生成、预览和编辑PDF、谷歌文档、谷歌表格、幻灯片、Markdown、TXT文件及代码。其中PDF预览和编辑支持网页端与移动端。",
+      "impact": "大幅提升用户在Gemini中处理各类办公文档与代码的效率。",
+      "category": "产品",
+      "score": 60.44,
+      "sources": [
+        {
+          "id": "4aa6b4f10322be2ed130",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs",
+          "title": "You can generate and edit Google Docs files directly in Gemini chats now",
+          "published_at": "2026-10-29T18:45:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "非PDF文件在移动端的操作支持情况可能存在平台限制。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google Gemini正式推出直接生成、预览和编辑多种文件的功能，对实际用户影响重大。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
