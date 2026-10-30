@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-30-pm",
+  "revision": 1,
+  "created_at": "2026-10-30T12:31:44.614032Z",
+  "cutoff": "2026-10-30T12:30:00Z",
+  "window_start": "2026-10-28T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "e508e29ae812fe586e8d",
+      "title": "Granite Switch 4.1.1 — Update models like you update software",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 77.85,
+      "sources": [
+        {
+          "id": "e508e29ae812fe586e8d",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+          "title": "Granite Switch 4.1.1 — Update models like you update software",
+          "published_at": "2026-10-29T13:37:07Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [
+        "4.1.1"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "d9e57218237adad6574c",
+      "title": "You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini.",
+      "summary": "Generate, edit, and preview PDFs or Docs directly in Gemini. Use the new full-screen editor to refine your files today. See what's new in Gemini. Breadcrumb Home Innovation & AI Products Gemini App You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini. Oct 29, 2026 We’re introducing new ways to create and refine documents, PDFs, presentations, spreadsheets, code, and more in the Gemini app. You can now generate, preview, and edit files ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.67,
+      "sources": [
+        {
+          "id": "d9e57218237adad6574c",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/",
+          "title": "You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini.",
+          "published_at": "2026-10-29T16:15:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "5beef147a7815df46333",
+      "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+      "summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.6,
+      "sources": [
+        {
+          "id": "5beef147a7815df46333",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+          "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+          "published_at": "2026-10-29T16:00:35Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "60134842d45d40231d44",
+      "title": "Gemini Notebook makes hundreds of textbooks available to help students learn even more.",
+      "summary": "Add textbooks from OpenStax and S Chand to Google Gemini Notebook. Generate custom study guides and quizzes now. See the available catalog. Breadcrumb Home Innovation & AI Products Gemini Notebook Gemini Notebook makes hundreds of textbooks available to help students learn even more. Priya Venkatraman Software Engineer, Gemini Notebook Oct 29, 2026 Last month, we introduced Expert Intelligence , a cross-Google initiative that helps you engage with your trusted sources through Google AI products.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.59,
+      "sources": [
+        {
+          "id": "60134842d45d40231d44",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-access-textbooks/",
+          "title": "Gemini Notebook makes hundreds of textbooks available to help students learn even more.",
+          "published_at": "2026-10-29T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "128755116b8b9c05fe32",
+      "title": "Transformers Releases: v5.22.0: Mistral Large 4 (Le Chonk)",
+      "summary": "## New Models ### Mistral Large 4 (Le Chonk) Mistral Large 4 is Mistral's largest and most capable model to date: a 1 trillion-parameter natively multimodal Mixture-of-Experts model with 49 billion active parameters per token (52 billion including embeddings and output layers), trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own datacenters in Europe. Mistral Large 4 unifies instruction following, reasoning, coding, and agentic workflows in a single set of weights. While a",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.05,
+      "sources": [
+        {
+          "id": "128755116b8b9c05fe32",
+          "source_id": "transformers",
+          "source_name": "Transformers Releases",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.0",
+          "title": "Transformers Releases: v5.22.0: Mistral Large 4 (Le Chonk)",
+          "published_at": "2026-10-29T14:15:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "huggingface",
+        "mistral"
+      ],
+      "versions": [
+        "v5.22.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
