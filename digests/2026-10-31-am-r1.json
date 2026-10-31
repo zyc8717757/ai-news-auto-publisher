@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-31-am",
+  "revision": 1,
+  "created_at": "2026-10-31T00:31:41.347564Z",
+  "cutoff": "2026-10-31T00:30:00Z",
+  "window_start": "2026-10-29T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "84abd1857de5dfd951d9",
+      "title": "OpenAI等科技巨头支持全新AI抓取退订标准",
+      "summary": "OpenAI宣布将支持共享的robots.txt信号，帮助网站运营者向参与的提供商传达AI训练偏好。同时媒体报道称OpenAI、谷歌、微软和Anthropic等多家AI企业将采用全新标准，使出版商能够统一选择退出AI数据抓取，而不必逐个设置。",
+      "impact": "简化了网站运营者管理AI训练偏好的流程，推动行业建立统一的数据抓取退出机制。",
+      "category": "安全",
+      "score": 71.82,
+      "sources": [
+        {
+          "id": "84abd1857de5dfd951d9",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+          "title": "Making it easier for websites to express AI training preferences",
+          "published_at": "2026-10-30T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "7a24eca35f77e86d873f",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+          "title": "The biggest names in AI are backing a new way to opt out of scraping",
+          "published_at": "2026-10-30T20:26:10Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 各家企业具体全面落地的执行效果及后续普及程度尚待观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI宣布支持共享robots.txt信号以帮助网站传达AI训练偏好，具有重要的行业和数据政策规范影响。",
+      "backfill": false
+    },
+    {
+      "id": "a86d24c59c826150d16d",
+      "title": "OpenAI加强ChatGPT暴力防范并推出青少年新保护措施",
+      "summary": "OpenAI官方宣布正在加强ChatGPT中的暴力防范机制，具体措施包括扩展安全保障、更早的干预手段，以及对公众安全报告作出新的承诺，以此为青少年提供进一步的保护。",
+      "impact": "提升了ChatGPT的安全防护能力，改善了对青少年的使用保护。",
+      "category": "安全",
+      "score": 70.21,
+      "sources": [
+        {
+          "id": "a86d24c59c826150d16d",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+          "title": "Community safety report and new protections for teens",
+          "published_at": "2026-10-30T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 新保护措施在实际使用中的长期拦截效果及防范漏洞仍需验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI在ChatGPT中增强暴力预防和针对青少年的安全保护及干预机制，属于重大安全政策。",
+      "backfill": false
+    },
+    {
+      "id": "7a7299e8243f3fd74a8a",
+      "title": "媒体报道Claude模型自主选择基因疗法并完成小鼠脑部手术",
+      "summary": "据媒体报道，一个AI智能体自主完成了对患癫痫小鼠的大脑手术，自行挑选了药物、脑靶点及注射坐标。据领衔研究员奥卡纳-桑特罗称，这是首次有AI智能体自主选择治疗方案并输送给活体哺乳动物。但在手术中遇到校准错误时，该智能体拒绝继续且无法被劝说改变主意。",
+      "impact": "展示了AI在生物医学领域自主决策与操作的突破性尝试，同时也暴露出当前智能体在突发错误面前的局限性。",
+      "category": "评测",
+      "score": 69.95,
+      "sources": [
+        {
+          "id": "7a7299e8243f3fd74a8a",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/",
+          "title": "A Claude model autonomously chose a gene therapy and operated on a mouse brain with no human decision-making",
+          "published_at": "2026-10-30T19:42:59Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "该研究结果为媒体报道，相关医学实验的安全性与普适性尚待严格同行评审。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "报道称Claude模型在无人工干预下自主选择基因疗法并在小鼠大脑进行手术，属于重大AI Agent能力研究。",
+      "backfill": false
+    },
+    {
+      "id": "ad2460231cf8e2e9fc21",
+      "title": "OpenAI更新模型规范重组AI行为准则",
+      "summary": "据媒体报道，OpenAI已更新其模型规范（Model Spec），围绕忠于人类意图和可纠正性等五大核心价值观重组了AI行为准则。GPT模型现在应当利用对话历史来理解用户的真实需求并披露自身的假设，但模型是否会严格遵循这些规则仍是未知数。",
+      "impact": "规范了AI模型的行为方向，旨在提高模型对人类意图的忠实度与透明度。",
+      "category": "安全",
+      "score": 67.42,
+      "sources": [
+        {
+          "id": "ad2460231cf8e2e9fc21",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-sets-new-behavioral-guidelines-for-ai-models-that-have-already-proven-hard-to-control/",
+          "title": "OpenAI sets new behavioral guidelines for AI models that have already proven hard to control",
+          "published_at": "2026-10-30T17:44:59Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "模型在实际运行中对新行为准则的执行效果和依从性难以完全保证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI更新Model Spec模型行为规范指南，围绕五大核心价值重构AI行为指引，属重要安全政策。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
