@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "issue": "2026-10-31-pm",
+  "revision": 1,
+  "created_at": "2026-10-31T12:31:38.824089Z",
+  "cutoff": "2026-10-31T12:30:00Z",
+  "window_start": "2026-10-29T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "ed7605e93ca5a9598952",
+      "title": "谷歌Project Suncatcher卫星实现太空TPU首次AI响应",
+      "summary": "谷歌研究团队宣布，其Project Suncatcher原型卫星在轨道上运行的数据中心级TPU成功收到了首个AI响应，达成了“Hello World”里程碑。据媒体报道，该太空TPU运行的是谷歌DeepMind Gemma 4模型。",
+      "impact": "验证了在太空中为AI计算提供算力的可行性。",
+      "category": "模型",
+      "score": 72.33,
+      "sources": [
+        {
+          "id": "ed7605e93ca5a9598952",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/",
+          "title": "We’ve received our first response from the Project Suncatcher prototype satellite.",
+          "published_at": "2026-10-30T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "235bb524b25e51667400",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+          "title": "Google’s first data center satellite is online and writing poetry",
+          "published_at": "2026-10-30T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 目前处于原型卫星的早期测试阶段。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google 官方宣布其 Project Suncatcher 原型卫星成功收到太空数据中心级 TPU 的首个 AI 响应，具有重要科技探索意义。",
+      "backfill": false
+    },
+    {
+      "id": "83890317532bac39e1f2",
+      "title": "媒体称OpenAI最新一轮融资筹集110亿美元",
+      "summary": "据媒体报道，OpenAI在最新一轮融资中仅筹集了约110亿美元，低于其300亿美元的目标。其估值为1.25万亿美元，未达到预期，大投资者在科技股抛售潮背景下表现出谨慎态度。",
+      "impact": "反映出大型投资者对AI领域的态度可能趋于保守。",
+      "category": "商业",
+      "score": 60.42,
+      "sources": [
+        {
+          "id": "83890317532bac39e1f2",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-raises-just-11-billion-of-its-30-billion-target-as-big-investors-lose-their-ai-appetite/",
+          "title": "OpenAI raises just $11 billion of its $30 billion target as big investors lose their AI appetite",
+          "published_at": "2026-10-31T09:22:52Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "融资及估值数据基于媒体报道，市场环境存在变动风险。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "business",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "媒体报道 OpenAI 最新融资额度未达预期及 Anthropic 准备上市的传闻与观察，涉及头部厂商重大资本动态。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
