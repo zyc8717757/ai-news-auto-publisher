@@ -3477,7 +3477,7 @@
     },
     "2026-10-31-pm-r1": {
       "deployment": "ready",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
