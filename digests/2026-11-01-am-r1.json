@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-01-am",
+  "revision": 1,
+  "created_at": "2026-11-01T00:31:20.819579Z",
+  "cutoff": "2026-11-01T00:30:00Z",
+  "window_start": "2026-10-30T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "b0d9b518e1b4ff65758e",
+      "title": "Anthropic的Cursor插件遭后门攻击",
+      "summary": "Anthropic在VS code上的Cursor扩展程序被植入后门，持续近12小时。目前攻击者如何获取Anthropic已验证的Cursor账号权限仍然未知。",
+      "impact": "引发对AI开发工具供应链安全的关注。",
+      "category": "安全",
+      "score": 53.62,
+      "sources": [
+        {
+          "id": "b0d9b518e1b4ff65758e",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+          "published_at": "2026-10-30T21:09:54Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "攻击者如何获取账号权限未知。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic的VS Code扩展/Cursor市场插件遭到长达近12小时的恶意篡改，涉及远程访问与数据窃取，属于重大安全事件。",
+      "backfill": true
+    },
+    {
+      "id": "b9ee8bb30716fa37b159",
+      "title": "谷歌卫星AI服务器成功传回首条响应",
+      "summary": "谷歌搭载AI芯片的卫星成功从太空生成并传回首条响应。谷歌在周五的博客文章中表示，其成功启动了卫星的Tensor Processing Units（TPUs），使搭载的Gemma 4模型完成了关于太空的俳句提示创作。",
+      "impact": "验证了太空环境下的AI芯片与模型运行能力。",
+      "category": "模型",
+      "score": 54.51,
+      "sources": [
+        {
+          "id": "b9ee8bb30716fa37b159",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+          "title": "Google’s satellite AI server transmits its first response to Earth",
+          "published_at": "2026-10-30T18:21:38Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google的AI芯片卫星成功启动，并在太空中运行Gemma 4模型生成回应，属于重大技术与产品进展。",
+      "backfill": true
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
