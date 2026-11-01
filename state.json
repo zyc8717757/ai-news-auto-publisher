@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-01T00:30:00Z",
+  "last_covered_at": "2026-11-01T12:30:00Z",
   "ai_attempts": [
     "2026-10-30T12:32:19.184852Z",
     "2026-10-30T12:32:29.513259Z",
@@ -982,7 +982,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
           "event_at": null,
           "supporting": []
@@ -999,7 +999,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
           "event_at": null,
           "supporting": []
@@ -1016,7 +1016,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation.",
           "event_at": null,
           "supporting": []
@@ -1033,42 +1033,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "0f01adb2acab0a67ba71",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
-          "title": "How we detect frontier model misalignment",
-          "published_at": "2026-10-29T09:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
-          "excerpt": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "d948735545c20cf30721",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/ropes-gray-ai-diligence",
-          "title": "How Ropes & Gray is developing AI for transactional diligence",
-          "published_at": "2026-10-29T07:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
-          "excerpt": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
           "event_at": null,
           "supporting": []
         }
@@ -1086,7 +1052,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"cTxWdw\"",
+      "etag": "\"PDrqlA\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1148,8 +1114,8 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"0db1334fe728bb90dea38c6a42d49f75\"",
-      "modified": "Sun, 01 Nov 2026 00:12:04 GMT",
+      "etag": "\"b341dc4a6509ff9375de388fd5d403c6\"",
+      "modified": "Sun, 01 Nov 2026 10:14:30 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1165,7 +1131,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Evaluating Microsoft Copilot at enterprise scale requires test data that captures the full complexity of real organizations, yet real enterprise data contains sensitive information that cannot be used for evaluation under any circumstances. The post From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence appeared first on Microsoft Research .",
           "event_at": null,
           "supporting": []
@@ -1182,7 +1148,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Host Sowbhagya Suresh shares some of the latest news and cutting-edge research from across Microsoft—from understanding the challenges facing coding agents to uncovering how people use AI at work and improving extended-range weather forecasting. The post Microsoft Research Focus – Edition #97 appeared first on Microsoft Research .",
           "event_at": null,
           "supporting": []
@@ -1271,7 +1237,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"8b82697f6a76fefb8dbafeb7fdcaf3a72c0d3901bfeae45d17fcbbf83f31cb6e\"",
+      "etag": "W/\"502bf422d1b2af2ec5386efa819f6e74179f93852863be8adffae4bf19673b04\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1318,23 +1284,6 @@
           "excerpt": "## New Models ### Mistral Large 4 (Le Chonk) Mistral Large 4 is Mistral's largest and most capable model to date: a 1 trillion-parameter natively multimodal Mixture-of-Experts model with 49 billion active parameters per token (52 billion including embeddings and output layers), trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own datacenters in Europe. Mistral Large 4 unifies",
           "event_at": null,
           "supporting": []
-        },
-        {
-          "id": "bf42268542540e5c5755",
-          "source_id": "transformers",
-          "source_name": "Transformers Releases",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://github.com/huggingface/transformers/releases/tag/v5.21.1",
-          "title": "Transformers Releases: Patch release v5.21.1",
-          "published_at": "2026-10-29T08:35:02Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-30T12:31:44.614032Z",
-          "excerpt": "# Patch release v5.21.1 ** Fix rope_scaling setter for configs that assign it during init (#50080 ) We broke remote code loading in vllm, this fixes it sorry everyone!",
-          "event_at": null,
-          "supporting": []
         }
       ],
       "discovered": 30,
@@ -1350,7 +1299,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"a723512ddac71d117f909c52110cef0c56b5cf005c58cc3bf96381da8a7b6274\"",
+      "etag": "W/\"592ec86141e550721dcaa7b5b3551f7e2d0f3956fdc964659fe5708e7fc58795\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1359,7 +1308,7 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"d34946f0179e7fe0711b86bf05cdad267eac61e6fda89a972610e76fd1ce6b0d\"",
+      "etag": "W/\"667fcd0214a49722a092c2c1e36b026568f5018c1a8551a5d8cfd6964bddd380\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1377,7 +1326,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"0d4bc3a923bdc09e8fd944bbdfe0dc9d9282122b5b34958375eb5a835f4d4e0a\"",
+      "etag": "W/\"7d72138741917059cffa4937cbfc1f62cff3bf12f96c437520001a9a41f16acb\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1394,7 +1343,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Changes since langchain-core==1.7.2 release(core): 1.7.3 (#41564)",
           "event_at": null,
           "supporting": []
@@ -1411,7 +1360,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Changes since langchain-core==1.7.1 release(core): 1.7.2 (#41562) feat(core): add `add_notification_metadata` and `get_notification_metadata` (#41540) fix(core): stop `merge_content` from changing the first message's content (#41502)",
           "event_at": null,
           "supporting": []
@@ -1421,9 +1370,9 @@
       "verified": 30
     },
     "langgraph": {
-      "etag": "W/\"7f865a696a443fb1fc664b6f7a433fc2961b26fa32d83bbb9f7ca20015030a56\"",
+      "etag": "W/\"a6fd4d1e54fd6e9172188e5a648eedc83c2c46d7c4d36d55ac8f6d56dbeb23ee\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
         {
@@ -1438,7 +1387,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Changes since 1.2.18 * release(langgraph): 1.2.19 (#9504) * release(checkpoint-sqlite): 3.1.3 (#9505) * fix(langgraph): keep trace_policy from rewriting streamed node payloads (#9486) * fix(langgraph): give messages and tools events the namespace of their graph (#9458) * chore(deps): bump setuptools from 83.0.0 to 84.1.0 in /libs/langgraph (#9433) * fix(langgraph): emit node-output messages from a",
           "event_at": null,
           "supporting": []
@@ -1455,7 +1404,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Changes since checkpointsqlite==3.1.2 * release(checkpoint-sqlite): 3.1.3 (#9505) * release(checkpoint): 4.3.1 (#9447) * fix(checkpoint): reject NUL bytes in namespace labels (#9383) * chore(deps): bump certifi from 2026.1.4 to 2026.10.19 in /libs/checkpoint-sqlite (#9368)",
           "event_at": null,
           "supporting": []
@@ -1472,7 +1421,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Changes since sdk==0.4.10 * release(langgraph): 1.2.19 (#9504) * release(sdk-py): 0.4.11 (#9503) * test(sdk-py): check that a reconnect loop resumes after the newest event (#9483) * fix(sdk-py): retry runs.wait, join and cancel(wait=True) reconnects with backoff (#9481) * fix(sdk-py): warn when a stream reconnects without a Last-Event-ID (#9482) * fix(sdk-py): preserve SSE data and cursor state ac",
           "event_at": null,
           "supporting": []
@@ -1484,7 +1433,7 @@
     "litellm": {
       "etag": "W/\"a62c7bb6efac5b512c58ad5dd840f12d8c95f55607a073a6dc5c425351dff665\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [],
       "discovered": 24,
@@ -1527,8 +1476,8 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1793492599\"",
-      "modified": "Sun, 01 Nov 2026 00:23:19 GMT",
+      "etag": "\"1793535903\"",
+      "modified": "Sun, 01 Nov 2026 12:25:03 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1544,7 +1493,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Five MIT faculty members and two additional alumni are honored with fellowships to advance research on beneficial AI.",
           "event_at": null,
           "supporting": []
@@ -1561,7 +1510,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "MIT professors Adam Berinsky and Chara Podimata discuss a new project to track how AI chatbots are responding to questions about the 2026 U.S. midterm elections.",
           "event_at": null,
           "supporting": []
@@ -1571,8 +1520,8 @@
       "verified": 50
     },
     "techcrunch-ai": {
-      "etag": "W/\"e9318b87eacc0f6606585fc56e97fd88\"",
-      "modified": "Sat, 31 Oct 2026 21:41:00 GMT",
+      "etag": "W/\"47d280dbc99238f5b90ddb65a4ad88f3\"",
+      "modified": "Sun, 01 Nov 2026 02:22:10 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1588,7 +1537,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Apple's new CEO defended the company's current position in the AI landscape.",
           "event_at": null,
           "supporting": []
@@ -1605,7 +1554,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "On November 4 at Boston’s SoWa Power Station, get ready for a full day packed with meaningful networking opportunities, actionable insights, and connections that could change the trajectory of your idea and startup. Register before all prices go up at the door.",
           "event_at": null,
           "supporting": []
@@ -1622,7 +1571,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.",
           "event_at": null,
           "supporting": []
@@ -1639,7 +1588,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "OpenAI’s latest funding round doesn't seem to be living up to expectations.",
           "event_at": null,
           "supporting": []
@@ -1656,7 +1605,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.",
           "event_at": null,
           "supporting": []
@@ -1673,7 +1622,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting down in a week.",
           "event_at": null,
           "supporting": []
@@ -1690,7 +1639,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise.",
           "event_at": null,
           "supporting": []
@@ -1707,7 +1656,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Blackstone's forecast is just a prediction, but naturally, a high junk rating would make it more difficult and costlier for Anthropic to raise the money to keep funding its massive spending that has undergirded its business.",
           "event_at": null,
           "supporting": []
@@ -1724,7 +1673,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "No Halloween costume? Just be a deceptively cute AI agent icon, a PHP vulnerability, or sleepy time Bryan Johnson.",
           "event_at": null,
           "supporting": []
@@ -1741,7 +1690,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Big Tech is pouring billions into AI infrastructure, but mounting debt, negative cash flow, and growing investor skepticism are raising questions about the sustainability of the AI spending boom.",
           "event_at": null,
           "supporting": []
@@ -1758,7 +1707,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Can't agree on where to eat? Zest's AI concierge can combine everyone's tastes, put restaurant options to a vote, and make the reservation.",
           "event_at": null,
           "supporting": []
@@ -1775,7 +1724,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "The first TPU in space is running a Google DeepMind Gemma 4 model and writing cheesy poetry.",
           "event_at": null,
           "supporting": []
@@ -1796,7 +1745,7 @@
     "ars": {
       "etag": "",
       "modified": "Sat, 31 Oct 2026 20:16:24 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -2010,7 +1959,7 @@
     "theverge-ai": {
       "etag": "W/\"6c3ade0b987eea849154fe7e45f647e5\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -2194,6 +2143,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "3f9a89f38973583cb1a5",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
+          "title": "Chatbots Are Leading Hikers Astray, With Dangerous Consequences",
+          "published_at": "2026-11-01T10:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
+          "excerpt": "Outsourcing planning to AI can lead people to surrender their own critical thinking, which can have potentially deadly results in places like the backcountry.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "be384ac73b2400f413c0",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2205,7 +2171,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.",
           "event_at": null,
           "supporting": []
@@ -2222,7 +2188,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.",
           "event_at": null,
           "supporting": []
@@ -2239,7 +2205,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.",
           "event_at": null,
           "supporting": []
@@ -2256,7 +2222,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "This week on Uncanny Valley, we also discuss Anthropic’s IPO filing and the volunteers gearing up to counter ICE at the midterms.",
           "event_at": null,
           "supporting": []
@@ -2273,7 +2239,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Sources tell WIRED that an Accenture employee’s personal Claude agent ran on a DOD network for two months before it was identified and the vulnerability could be patched.",
           "event_at": null,
           "supporting": []
@@ -2290,7 +2256,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "A new startup called &Truth is joining the race to automate formal verification, a painstaking process that uses math to prove software works as intended.",
           "event_at": null,
           "supporting": []
@@ -2307,25 +2273,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "The French AI lab claims its latest release matches or outperforms even the best models from DeepSeek and Z.ai in coding and cybersecurity.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "41b8b5c1229e4741a093",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/i-gave-an-ai-death-clock-my-blood/",
-          "title": "I Gave My Blood to the AI Death Clock",
-          "published_at": "2026-10-29T10:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
-          "excerpt": "Death Clock promises to predict when you’re going to die and help you extend your time on Earth. After a month, I felt like it was sucking the life out of me.",
           "event_at": null,
           "supporting": []
         }
@@ -2557,11 +2506,45 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"baf73eb7dddc97357ecc2c4ff076fc1c\"",
+      "etag": "W/\"5a2f6ac90939b4f663688486df60294a\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "0ef8b8a3d15d55c403a8",
+          "source_id": "media-decoder",
+          "source_name": "the-decoder.com",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-plans-to-train-models-on-daybreak-blue-cybersecurity-session-data-that-was-previously-off-limits/",
+          "title": "OpenAI plans to train models on Daybreak Blue cybersecurity session data that was previously off-limits",
+          "published_at": "2026-10-31T16:38:37Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
+          "excerpt": "Starting November 29, OpenAI will use data from Daybreak Blue sessions to train its models, even when users have turned off training. After backlash, a follow-up email promised a separate opt-out. The move revives concerns from the dispute with mathe Short News Copy the url to clipboard Share this article Go to comment section OpenAI plans to train models on Daybreak Blue cybersecurity session dat",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "f3e255de2b47ab3f1671",
+          "source_id": "media-techcrunch",
+          "source_name": "techcrunch.com",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+          "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+          "published_at": "2026-10-30T21:52:03Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
+          "excerpt": "Blackstone's forecast is just a prediction, but naturally, a high junk rating would make it more difficult and costlier for Anthropic to raise the money to keep funding its massive spending that has undergirded its business. The FT says the investment giant Blackstone, the anchor investor in a recent $63 billion deal to finance Anthropic’s chips, told investors in the deal that it expects the AI l",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "cc43a7277ed6de8b3b3f",
           "source_id": "primary-anthropic",
@@ -2574,7 +2557,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "The Ultra plan is available for $200 per month. This article explains what the Ultra plan includes, how much it costs, and how its usage limits work. This article is about paid Ultra plans for individual consumers. If you're part of an organization looking to use Claude with your team, refer to Team and Enterprise plans . Key benefits More usage capacity: Get 10 times the Pro plan's usage every we",
           "event_at": null,
           "supporting": []
@@ -2591,82 +2574,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "This week, we reached our \"Hello World\" milestone: the first-ever AI response from a data center class TPU in orbit. Breadcrumb Home Innovation & AI Models & research Google Research We’ve received our first response from the Project Suncatcher prototype satellite. Travis Beals Senior Director, Paradigms of Intelligence Oct 30, 2026 On October 1, we launched our prototype satellite for Project Sun",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "d9e57218237adad6574c",
-          "source_id": "primary-google",
-          "source_name": "Google",
-          "group": "google",
-          "trust": "official",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/",
-          "title": "You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini.",
-          "published_at": "2026-10-29T16:15:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
-          "excerpt": "Generate, edit, and preview PDFs or Docs directly in Gemini. Use the new full-screen editor to refine your files today. See what's new in Gemini. Breadcrumb Home Innovation & AI Products Gemini App You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini. Oct 29, 2026 We’re introducing new ways to create and refine documents, PDFs, presentat",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "60134842d45d40231d44",
-          "source_id": "primary-google",
-          "source_name": "Google",
-          "group": "google",
-          "trust": "official",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-access-textbooks/",
-          "title": "Gemini Notebook makes hundreds of textbooks available to help students learn even more.",
-          "published_at": "2026-10-29T16:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
-          "excerpt": "Add textbooks from OpenStax and S Chand to Google Gemini Notebook. Generate custom study guides and quizzes now. See the available catalog. Breadcrumb Home Innovation & AI Products Gemini Notebook Gemini Notebook makes hundreds of textbooks available to help students learn even more. Priya Venkatraman Software Engineer, Gemini Notebook Oct 29, 2026 Last month, we introduced Expert Intelligence , a",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "bd03e4a483646b8532a8",
-          "source_id": "primary-mistral",
-          "source_name": "Mistral",
-          "group": "mistral",
-          "trust": "official",
-          "url": "https://mistral.ai/news/mistral-large-4-oss/",
-          "title": "Built for Coders, Trusted by Defenders.",
-          "published_at": "2026-10-29T12:00:07Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
-          "excerpt": "The weights of Mistral Large 4 (Le Chonk) are now open. A 1T parameter multimodal model, and best open-weight model for coding, trained in Europe. Starting today, Mistral Large 4 is priced at $0.70 input / M, $0.07 cached input / M, and $2.10 output / M tokens. $0.7 $2.1 Mistral Large 4 (Le Chonk) Built for Coders, Trusted by Defenders. Mistral Large 4 (Le Chonk) Built for Coders, Trusted by Defen",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "db1777bc52884b113d89",
-          "source_id": "primary-google",
-          "source_name": "Google",
-          "group": "google",
-          "trust": "official",
-          "url": "https://blog.google/innovation-and-ai/technology/health/google-for-health-summit-singapore/",
-          "title": "Partnering with Singapore to bring frontier AI to public health",
-          "published_at": "2026-10-29T03:30:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-10-31T12:31:38.824089Z",
-          "excerpt": "Google is opening a new research hub in Singapore to deploy MedGemma and AI tools for clinicians. See how we are advancing healthcare innovation. We are contributing 7 million dollars to support public health intelligence and disease detection across the region. To advance scientific research, Google.org and Google DeepMind are contributing $7 million to the Philanthropy Asia Alliance’s Health for",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 10,
-      "verified": 10
+      "discovered": 5,
+      "verified": 5
     },
     "openai-community": {
       "etag": "",
@@ -2696,11 +2611,62 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"c1834000a72929f36700d24519d20045\"",
-      "modified": "Sat, 31 Oct 2026 19:21:51 GMT",
+      "etag": "\"821556c2f87e573f340e8bd91f325650\"",
+      "modified": "Sun, 01 Nov 2026 12:06:36 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "4096ce5b9e1a83220fdb",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-is-steering-chatgpt-users-toward-more-paid-usage/",
+          "title": "OpenAI is steering ChatGPT users toward more paid usage",
+          "published_at": "2026-11-01T12:05:04Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
+          "excerpt": "OpenAI is now capping the number of paid ChatGPT accounts per device and payment card. Users who hit the limit can't start new subscriptions, and affected accounts can't be used on that device. Logging out doesn't automatically free up a spot. The policy will likely hit users who've been juggling multiple cheap subscriptions to maximize usage, pushing them toward pricier options like buying extra ",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "44ba5b28daf0820b5263",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-wants-video-ai-to-understand-what-people-need-as-they-workgoogle-researchers-are-teaching-a-video-assistant-when-to-offer-help/",
+          "title": "Google wants video AI to understand what people need as they work",
+          "published_at": "2026-11-01T11:25:21Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
+          "excerpt": "A Google-led research team built StreamVibe, a video agent designed to watch people cook or assemble furniture and speak up only when help is needed. A benchmark shows that none of the tested models reliably pick the right moment in longer videos, as errors compound and response quality drops sharply. The article Google wants video AI to understand what people need as they work appeared first on T",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "e024e4df384f768bf836",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing/",
+          "title": "OpenAI's upcoming chat-and-work merger in ChatGPT signals the end of all-you-can-prompt pricing",
+          "published_at": "2026-11-01T09:51:06Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
+          "excerpt": "OpenAI combines the Chat and Work modes into a single interface. Starting in December, Plus, Pro, and Business plans will share a common, token-based quota for ChatGPT and Codex. More complex models consume more of this quota, while simple instant chats do not count toward it. In practice, this is likely to result in a decline in ChatGPT’s quality for heavy users on lower-cost plans. The article O",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "93665dfbd055983cb09a",
           "source_id": "decoder",
@@ -2713,7 +2679,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Anthropic is expanding its text watermark to four more Claude models to meet the EU AI Act's December deadline. On the older models Claude Opus 4.6 and Sonnet 4.6, developers can bypass the watermark by tweaking a single sampling parameter. Anthropic addresses the loophole with just a compliance warning. The article Anthropic's watermark rollout leaves a loophole on two older Claude models appeare",
           "event_at": null,
           "supporting": []
@@ -2730,7 +2696,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Starting November 29, OpenAI will use data from Daybreak Blue sessions to train its models, even when users have turned off training. After backlash, a follow-up email promised a separate opt-out. The move revives concerns from the dispute with mathematicians who suspected OpenAI used their unpublished research for training without consent. The article OpenAI plans to train models on Daybreak Blue",
           "event_at": null,
           "supporting": []
@@ -2747,7 +2713,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Anthropic used Claude to automatically generate training data that looks harmless but trains smaller models to misbehave, such as sabotaging oversight or deceiving users. Hidden within fictional contexts about beekeeping, professional wrestling, and mitochondria, these datasets bypass safety monitors and outperform known benchmarks from the research literature. The article Beekeeping tips and wres",
           "event_at": null,
           "supporting": []
@@ -2764,7 +2730,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Microsoft is offering voluntary severance packages to about 60,000 employees, roughly a quarter of its workforce, in the second such program this year. The company's headcount has held flat at around 223,000 since 2022 even as it plans to spend about $170 billion on AI infrastructure in 2026 alone. The article Microsoft offers a quarter of its workforce voluntary severance while shielding AI-criti",
           "event_at": null,
           "supporting": []
@@ -2781,7 +2747,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Google Deepmind and the World Resources Institute have released ForTy, a global map that classifies forests and other land into six categories, including primary forest, plantations, and tree crops. The map could help track deforestation under EU rules, but it identifies only about half of planted forests and tree-crop areas, and 60% of plantations. The article Google Deepmind creates a global map",
           "event_at": null,
           "supporting": []
@@ -2798,7 +2764,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "OpenAI raised only about $11 billion in its latest funding round, less than half of the $30 billion it was targeting. At $1.25 trillion, the valuation falls short of expectations, and major investors appear to be pulling back amid the recent tech sell-off. Meanwhile, rival Anthropic is pushing to go public as early as November. The article OpenAI raises just $11 billion of its $30 billion target a",
           "event_at": null,
           "supporting": []
@@ -2815,59 +2781,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "An AI agent performed brain surgery on an epileptic mouse, picking the drug, the brain target, and the injection coordinates on its own. According to lead researcher Ocana-Santero, it's the first time an AI agent has autonomously chosen a treatment and delivered it to a living mammal. But when a calibration error hit mid-surgery, the agent refused to continue and couldn't be talked out of it. The ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "05eb8ef979fbb95750e3",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/malicious-claude-code-extension-in-cursors-marketplace-attempted-remote-access-and-data-theft/",
-          "title": "Malicious Claude Code extension in Cursor's marketplace attempted remote access and data theft",
-          "published_at": "2026-10-30T18:16:10Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
-          "excerpt": "A tampered Claude Code extension was live on the Cursor marketplace for about 11 hours, affecting up to 5,000 users. It tried to steal user data and set up remote access. Cursor took the entire marketplace offline and reinstated it after confirming there was no further risk. The article Malicious Claude Code extension in Cursor's marketplace attempted remote access and data theft appeared first on",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "ad2460231cf8e2e9fc21",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/openai-sets-new-behavioral-guidelines-for-ai-models-that-have-already-proven-hard-to-control/",
-          "title": "OpenAI sets new behavioral guidelines for AI models that have already proven hard to control",
-          "published_at": "2026-10-30T17:44:59Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
-          "excerpt": "OpenAI has updated its Model Spec, restructuring its AI behavior guidelines around five core values, including faithfulness to human intent and correctability. GPT models should now draw on conversation history to figure out what users actually want and disclose their own assumptions. Whether the models follow these rules is another matter. The article OpenAI sets new behavioral guidelines for AI ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "35931fe17d7b0680ac5a",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/googles-ai-mode-doesnt-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-entire-web/",
-          "title": "Google's AI Mode doesn't drive traffic \"for anybody,\" Reddit CEO Huffman warns the entire web",
-          "published_at": "2026-10-30T17:15:24Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
-          "excerpt": "Reddit lost over one million Google search referrals per week in October, CEO Steve Huffman said. The stock dropped more than 25 percent despite strong earnings. Huffman blames Google's AI Overviews and AI Mode for driving zero traffic to external sites. Reddit now tests login barriers and wants to become a direct destination, less reliant on the open web. The shift threatens every content-driven ",
           "event_at": null,
           "supporting": []
         }
@@ -2893,7 +2808,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates. Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the rest of the Internet remains exposed.",
           "event_at": null,
           "supporting": []
@@ -2910,7 +2825,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity.",
           "event_at": null,
           "supporting": []
@@ -2927,7 +2842,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-01T00:31:20.819579Z",
+          "collected_at": "2026-11-01T12:31:11.480398Z",
           "excerpt": "Cloudflare mitigated over 8,200 DDoS attacks per hour in Q3 2026 as attackers shifted to shorter, high-frequency strikes. Explore the latest threat data, including the collapse of CLDAP vectors and the impact of recent botnet takedowns.",
           "event_at": null,
           "supporting": []
@@ -3282,6 +3197,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-01-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
