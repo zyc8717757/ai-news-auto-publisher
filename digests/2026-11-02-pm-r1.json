@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-02-pm",
+  "revision": 1,
+  "created_at": "2026-11-02T12:31:14.617761Z",
+  "cutoff": "2026-11-02T12:30:00Z",
+  "window_start": "2026-10-31T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "109261365670d3352ab7",
+      "title": "vLLM发布v0.33.0版本",
+      "summary": "vLLM发布v0.33.0版本，包含来自389名贡献者的927次提交。新版本支持多款新模型，升级至PyTorch 2.14.0，移除CUDA 12.9并转向CUDA 13.0，引入libtorch ABI稳定CUDA包及AWS EFA镜像，并优化了投机解码功能。",
+      "impact": "提升大模型推理框架的性能、硬件兼容性及多节点服务部署能力。",
+      "category": "开发",
+      "score": 76.09,
+      "sources": [
+        {
+          "id": "109261365670d3352ab7",
+          "source_id": "vllm",
+          "source_name": "vLLM Releases",
+          "group": "vllm",
+          "trust": "official",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+          "title": "vLLM Releases: v0.33.0",
+          "published_at": "2026-11-02T10:10:05Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 输入数据文本在投机解码末尾有轻微截断，部分性能测试细节可能不完整。",
+      "entities": [
+        "vllm"
+      ],
+      "versions": [
+        "v0.33.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "vLLM发布v0.33.0版本，带来大量新模型支持、PyTorch 2.14升级以及性能改进。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
