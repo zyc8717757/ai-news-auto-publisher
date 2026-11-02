@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-02-am",
+  "revision": 1,
+  "created_at": "2026-11-02T00:31:52.338221Z",
+  "cutoff": "2026-11-02T00:30:00Z",
+  "window_start": "2026-10-31T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "4096ce5b9e1a83220fdb",
+      "title": "OpenAI限制每台设备和支付卡的付费账户数量",
+      "summary": "OpenAI开始对每个设备和支付卡可绑定的付费ChatGPT账户数量设定上限。达到限制的用户将无法开启新订阅，受影响的账户也无法在该设备上使用，且登出不会自动释放名额。",
+      "impact": "可能对通过多个低价订阅来最大化使用量的用户产生限制，促使其转向更高价的选项。",
+      "category": "商业",
+      "score": 55.38,
+      "sources": [
+        {
+          "id": "4096ce5b9e1a83220fdb",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-is-steering-chatgpt-users-toward-more-paid-usage/",
+          "title": "OpenAI is steering ChatGPT users toward more paid usage",
+          "published_at": "2026-11-01T12:05:04Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "政策具体执行的全面影响范围以及用户的实际应对方式尚存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI限制每个设备和支付卡的付费账户数量，打击多账号订阅，推动用户转向高价套餐。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
