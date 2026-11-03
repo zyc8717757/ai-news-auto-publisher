@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-03-pm",
+  "revision": 1,
+  "created_at": "2026-11-03T12:31:53.105307Z",
+  "cutoff": "2026-11-03T12:30:00Z",
+  "window_start": "2026-11-01T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "0d297090385ad5a72451",
+      "title": "OpenAI筹备内部安全冲刺以测试和强化防御",
+      "summary": "该公司称，OpenAI正与Cathedral Systems合作筹备其下一轮内部安全冲刺，旨在利用人工智能测试并强化其防御能力。",
+      "impact": "有助于进一步提升OpenAI系统的安全性与防御水平。",
+      "category": "安全",
+      "score": 77.95,
+      "sources": [
+        {
+          "id": "0d297090385ad5a72451",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+          "title": "Preparing our next security sprint to harden OpenAI",
+          "published_at": "2026-11-02T18:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体防御效果和测试细节尚待观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI正准备与Cathedral Systems合作进行内部安全冲刺测试，属于重要安全政策动态。",
+      "backfill": false
+    },
+    {
+      "id": "bca108e4c77bd86b238b",
+      "title": "OpenAI提高安全漏洞赏金并引入多项奖励",
+      "summary": "该公司称，OpenAI正在提高安全漏洞赏金奖励，并为独立安全研究人员引入报告质量、忠诚度以及优先活动奖金。",
+      "impact": "有望吸引更多安全研究人员参与漏洞挖掘，改善生态安全。",
+      "category": "安全",
+      "score": 70.45,
+      "sources": [
+        {
+          "id": "bca108e4c77bd86b238b",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+          "title": "Rewarding defenders with bigger bug bounties",
+          "published_at": "2026-11-02T18:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 各项新奖金的具体执行标准与成效尚不明确。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI提高安全漏洞赏金奖励并引入新激励机制，属于重要安全政策更新。",
+      "backfill": false
+    },
+    {
+      "id": "565e6fad1f4c3724a211",
+      "title": "OpenAI宣布推出网格保护计划试点",
+      "summary": "该公司称，OpenAI将在佐治亚州埃芬ham县即将建设的数据中心试点“网格保护计划”，承诺在极端天气或紧急情况下释放高达1000兆瓦的电力，约为大约70万户家庭的空调供电。",
+      "impact": "展示了数据中心在极端情况下对周边电力供应的支持潜力。",
+      "category": "商业",
+      "score": 57.06,
+      "sources": [
+        {
+          "id": "565e6fad1f4c3724a211",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
+          "title": "OpenAI pitches data center power plants as a way to protect nearby areas",
+          "published_at": "2026-11-02T18:01:30Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "该计划在实际运行中的稳定性和对当地电网的影响仍有待验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI宣布将在佐治亚州数据中心试点“网格保护项目”，在紧急情况下释放电力支持居民。",
+      "backfill": false
+    },
+    {
+      "id": "6bdf9143803bb5e59f18",
+      "title": "媒体称Anthropic收入增长但出现巨额亏损",
+      "summary": "媒体报道称，Anthropic在大型首次公开募股（IPO）前夕，其收入实现大幅增长，但同时也录得230亿美元的亏损，并重回营业亏损状态。",
+      "impact": "反映出该公司在快速发展的同时面临较高的财务亏损压力。",
+      "category": "商业",
+      "score": 57.31,
+      "sources": [
+        {
+          "id": "6bdf9143803bb5e59f18",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/",
+          "title": "Anthropic grows revenue twelvefold but posts $23 billion loss",
+          "published_at": "2026-11-02T16:26:03Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "财务数据的具体细节及未来盈利预期存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic营收大幅增长但录得巨额运营亏损，面临IPO前的财务压力。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
