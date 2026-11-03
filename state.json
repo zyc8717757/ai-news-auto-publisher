@@ -2859,8 +2859,8 @@
     },
     "2026-11-03-am-r1": {
       "deployment": "failed",
-      "email": "pending",
-      "email_attempts": 0
+      "email": "sending",
+      "email_attempts": 1
     }
   },
   "history": [
