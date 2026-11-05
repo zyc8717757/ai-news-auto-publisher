@@ -3693,7 +3693,7 @@
       "email_attempts": 1
     },
     "2026-11-05-pm-r1": {
-      "deployment": "pending",
+      "deployment": "ready",
       "email": "pending",
       "email_attempts": 0
     }
