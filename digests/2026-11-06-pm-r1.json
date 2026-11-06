@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-06-pm",
+  "revision": 1,
+  "created_at": "2026-11-06T12:49:07.553679Z",
+  "cutoff": "2026-11-06T12:30:00Z",
+  "window_start": "2026-11-04T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "259ab2eb05b0186eda5b",
+      "title": "Claude推出个人财务管理功能",
+      "summary": "Claude推出了名为Personal Finance的新功能，允许用户安全连接银行和信用卡账户，用日常语言查询财务状况。该功能提供只读访问权限，无法移动、管理或投资资金，且不含广告或赞助推荐。例如，用户查询本月花销时，会按类别排序总计4,309.37美元，其中超半数用于房租和水电气，1,024.51美元用于食品和饮料，发薪日前剩余1,393.22美元。",
+      "impact": "帮助用户直接通过日常对话安全跟踪和管理银行账户支出。",
+      "category": "产品",
+      "score": 67.12,
+      "sources": [
+        {
+          "id": "259ab2eb05b0186eda5b",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+          "title": "Introducing Personal Finance in Claude",
+          "published_at": "2026-11-05T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-05",
+          "time_basis": "publication"
+        },
+        {
+          "id": "3690b3a90a0c8a484ebc",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-adds-bank-account-access-to-claude-so-users-can-track-their-spending/",
+          "title": "Anthropic adds bank account access to Claude so users can track their spending",
+          "published_at": "2026-11-06T11:33:13Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 账户连接与数据查询的实际隐私与安全性尚待市场检验。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic在Claude中推出Personal Finance（个人财务）功能，允许用户安全连接银行账户并用自然语言获取财务洞察，属于重要消费级产品更新。",
+      "backfill": true
+    },
+    {
+      "id": "2165b65a40c289be1bb3",
+      "title": "Perplexity推出工作场景AI代理Teammates",
+      "summary": "Perplexity推出了面向工作场景的全新常驻AI代理Teammates，可承担工作区中的多重角色，并调用用户已使用的Perplexity工具中的项目、技能和记忆。Teammates集成了Perplexity Computer，这是一种可在用户设备上部署代理的AI系统。",
+      "impact": "为用户提供跨工具协作的常驻办公AI代理支持。",
+      "category": "产品",
+      "score": 56.53,
+      "sources": [
+        {
+          "id": "2165b65a40c289be1bb3",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+          "title": "Perplexity launches its own take on AI agents for work",
+          "published_at": "2026-11-05T22:26:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "其在实际复杂办公环境中的多角色协作表现尚未完全验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Perplexity推出面向工作场所的常驻AI Agent“Teammates”，拓展企业市场。",
+      "backfill": false
+    },
+    {
+      "id": "1bb8fb574784724261cb",
+      "title": "百度发布2800亿参数开源基础模型ERNIE 5.5 Flash Base",
+      "summary": "百度发布了ERNIE 5.5 Flash Base，这是一个包含2800亿参数的混合专家（MoE）模型，在33.5万亿个token上进行了预训练。该模型故意在没有经过微调的情况下发布，以便开发者可以将其应用到需要的地方。",
+      "impact": "为开发者提供具备大规模参数与预训练的基础开源模型选择。",
+      "category": "模型",
+      "score": 66.04,
+      "sources": [
+        {
+          "id": "1bb8fb574784724261cb",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/baidu-releases-ernie-5-5-flash-base-with-280-billion-parameters-as-an-open-source-foundation-model/",
+          "title": "Baidu releases ERNIE 5.5 Flash Base with 280 billion parameters as an open-source foundation model",
+          "published_at": "2026-11-05T17:56:41Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "由于未经过微调直接发布，其在具体下游任务中的表现依赖于开发者的后续调优。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [
+        "5.5"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "百度发布ERNIE 5.5 Flash Base，这是一款2800亿参数的MoE开源基础模型，在开源大模型领域具有重要影响。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
