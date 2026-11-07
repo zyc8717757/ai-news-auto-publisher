@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-07-am",
+  "revision": 1,
+  "created_at": "2026-11-07T00:31:20.929928Z",
+  "cutoff": "2026-11-07T00:30:00Z",
+  "window_start": "2026-11-05T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "a0a44ed09dc9a1089b4e",
+      "title": "OpenAI与Hacktron达成安全合作",
+      "summary": "OpenAI宣布与Hacktron建立合作伙伴关系。双方将合作识别OpenAI系统中的安全漏洞，测试与第三方服务的连接，并利用前沿人工智能技术加强整体安全防御体系。",
+      "impact": "通过外部协作增强系统安全防御能力。",
+      "category": "安全",
+      "score": 69.99,
+      "sources": [
+        {
+          "id": "a0a44ed09dc9a1089b4e",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/partnering-with-hacktron",
+          "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+          "published_at": "2026-11-06T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI宣布与Hacktron合作寻找系统漏洞、加强防御，涉及重大安全政策。",
+      "backfill": false
+    },
+    {
+      "id": "4f73a72deb0853d3a564",
+      "title": "Perplexity推出常驻AI代理Teammates",
+      "summary": "Perplexity推出名为“Teammates”的常驻AI代理功能，允许代理在虚拟机器上独立执行项目。此服务包含在每月200美元的Max计划中。",
+      "impact": "拓展了AI代理在自动化任务处理领域的应用。",
+      "category": "产品",
+      "score": 59.41,
+      "sources": [
+        {
+          "id": "4f73a72deb0853d3a564",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/perplexity-now-has-its-own-always-on-ai-agent/",
+          "title": "Perplexity now has its own always-on AI agent",
+          "published_at": "2026-11-06T16:47:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Perplexity推出全天候运行的AI长期任务Agent“Teammates”，定价每月200美元。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
