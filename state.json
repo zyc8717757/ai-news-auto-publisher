@@ -2936,7 +2936,7 @@
       "email_attempts": 1
     },
     "2026-11-09-am-r1": {
-      "deployment": "pending",
+      "deployment": "ready",
       "email": "pending",
       "email_attempts": 0
     }
