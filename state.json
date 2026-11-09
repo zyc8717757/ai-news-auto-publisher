@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-09T00:30:00Z",
+  "last_covered_at": "2026-11-09T12:30:00Z",
   "ai_attempts": [
     "2026-11-07T12:32:01.212482Z",
     "2026-11-07T12:32:08.386037Z",
@@ -983,25 +983,7 @@
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [
-        {
-          "id": "a0a44ed09dc9a1089b4e",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/partnering-with-hacktron",
-          "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
-          "published_at": "2026-11-06T08:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
-          "excerpt": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 50,
       "verified": 50
     },
@@ -1015,7 +997,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"HiVZ4A\"",
+      "etag": "\"v2X1yQ\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1060,8 +1042,8 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"031533c69b5985e3e343644e6b1fc025\"",
-      "modified": "Mon, 09 Nov 2026 00:23:10 GMT",
+      "etag": "\"0277d630a383ad4f5c4bcd27c750a1d7\"",
+      "modified": "Mon, 09 Nov 2026 08:31:12 GMT",
       "status": "ok",
       "error_code": "",
       "items": [],
@@ -1069,11 +1051,96 @@
       "verified": 10
     },
     "nvidia": {
-      "etag": "\"c986be0f415560d01e1db43fce99cb0a-gzip\"",
-      "modified": "Fri, 06 Nov 2026 16:00:35 GMT",
-      "status": "unchanged",
+      "etag": "\"e6a054ee42fe9371cafaae7caf38b037-gzip\"",
+      "modified": "Mon, 09 Nov 2026 08:00:53 GMT",
+      "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "78a38ab1bb2e5e3a2eb9",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
+          "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
+          "published_at": "2026-11-09T08:00:53Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "Korea’s Ministry of Science and ICT and NVIDIA hosted the MSIT-NVIDIA AI Startup Partnership Forum at COEX. Ryu Je-myung, vice minister of science and ICT, joined NVIDIA leaders to meet with over 20 Korean startups across foundation models, physical AI, AI infrastructure and AI semiconductors. NVIDIA also announced an investment in Korean startup Point2, with […]",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "59b779471e81fefef54a",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
+          "title": "Korea Advances Physical AI Across Industries With NVIDIA",
+          "published_at": "2026-11-09T05:00:40Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "Tapping into the country’s strengths in manufacturing and engineering, NVIDIA is helping advance Korea’s physical AI ecosystem. The country’s industry leaders are applying accelerated computing, AI and simulation to everything from semiconductor manufacturing to robotics and autonomous vehicles. These efforts are helping bring physical AI from development into real-world production. Samsung Advanc",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "d7c73c4b9a79782fc5fe",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/",
+          "title": "Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA",
+          "published_at": "2026-11-09T05:00:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "As AI agents take on more work, they need capable open models and security that advances alongside them. Hyundai Motor Group is exploring NVIDIA NemoClaw blueprints and the NVIDIA OpenShell runtime, while AIM Intelligence is integrating its Starfort platform with NVIDIA OpenShell to support secure AI agents for employee productivity and enterprise workflows. A key […]",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "51e504680490a66d88e4",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/",
+          "title": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
+          "published_at": "2026-11-09T05:00:04Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "NVIDIA and Korea’s Ministry of Science and ICT (MSIT) are expanding their collaboration across the country’s sovereign AI ecosystem, from AI semiconductors and data center infrastructure to talent, startups, models, agents and security. The collaboration lays the groundwork for Korean NPU and XPU companies to explore participation in the NVIDIA NVLink Fusion ecosystem, and includes […]",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "1d980cecae4ce0aab063",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/",
+          "title": "NVIDIA Dynamo Recipes Bring Korea’s Leading Open Models to Production",
+          "published_at": "2026-11-09T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "NVIDIA is releasing Dynamo-optimized deployment recipes for Korea’s leading open models: A.X K2 from SK Telecom, K-EXAONE 2.0 from LG AI Research, Solar Open 2 from Upstage and Motif-3 from Motif Technologies. As models grow beyond the capacity of a single GPU, they must be split across multiple GPUs, requiring careful coordination of request routing […]",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "47b292a5d1f7f3dd3e0f",
           "source_id": "nvidia",
@@ -1086,7 +1153,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-07T00:31:20.929928Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "A year ago, NVIDIA open sourced its Aerial wireless software, joining Sionna and a broader suite of open source tools for accelerating next-generation 6G network development. Together, they give researchers a foundation for testing ideas, comparing results and building on each other’s work — connecting simulation and AI training with experiments on real over-the-air wireless […]",
           "event_at": null,
           "supporting": []
@@ -1114,7 +1181,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"a10f3301e47adc90b31cf006ae591bfafa5179ef95ab6cfd59e12a53aa041374\"",
+      "etag": "W/\"1ec73bc9354fadd5c9f4aa31c6029576fe054527219e6ec47f6639fdd04b9a72\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1159,7 +1226,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"c33b035e088b3667ee22590b8e96530f5f3e2ab2b1b930e64d83f76b883939df\"",
+      "etag": "W/\"b6715358bf9a106362b03c649b961cb976d2ca92723f0299a1069b9e2b91d476\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1168,7 +1235,7 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"f5cd9e76c71d86b8da39b1b037d8a5d096f7148b142b1570e3bfabcc33f29cbf\"",
+      "etag": "W/\"2f57ac6d67fa0132691ff16c3077ce62e747a740a9a7acbf60b7952ac976f3ce\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1186,7 +1253,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"9afc0b88823c79fda0a9dce9ba7272cd6c41aa5ca05402063623ee0a7c8e4c4b\"",
+      "etag": "W/\"afff2cebf720f9e09ee3f07772e7e669db91d670a62411c098e9a820940e5085\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1199,42 +1266,7 @@
       "modified": "",
       "status": "unchanged",
       "error_code": "",
-      "items": [
-        {
-          "id": "d9dbdb581f79f750ac49",
-          "source_id": "langgraph",
-          "source_name": "LangGraph Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.42",
-          "title": "LangGraph Releases: langgraph-cli==0.4.42",
-          "published_at": "2026-11-06T03:04:13Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-06T12:49:07.553679Z",
-          "excerpt": "Changes since cli==0.4.41 * release(cli): 0.4.42 (#9611) * feat(cli): add deploy metrics command (#9479) * chore(deps): bump filelock and langgraph-api for security fixes (#9606)",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "66af235e424759843221",
-          "source_id": "langgraph",
-          "source_name": "LangGraph Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.14",
-          "title": "LangGraph Releases: langgraph-sdk==0.4.14",
-          "published_at": "2026-11-06T03:03:34Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-06T12:49:07.553679Z",
-          "excerpt": "Changes since sdk==0.4.13 * release(sdk-py): 0.4.14 (#9610) * feat(sdk-py): add strict_resume to runs.create, stream and wait (#9599) * feat(sdk-py): add tools and lifecycle to StreamMode (#9601)",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 30,
       "verified": 30
     },
@@ -1319,11 +1351,45 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1794183944\"",
-      "modified": "Mon, 09 Nov 2026 00:25:44 GMT",
+      "etag": "\"1794226908\"",
+      "modified": "Mon, 09 Nov 2026 12:21:48 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "6fbb9cbc09ce7eb4c3ad",
+          "source_id": "mit-ai",
+          "source_name": "MIT News AI",
+          "group": "mit",
+          "trust": "research",
+          "url": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
+          "title": "A single AI model simulates the behavior of many substances, from sliding sand to folding proteins",
+          "published_at": "2026-11-09T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "By learning how matter moves, the WorldParticle system could assist with developing soft robots, medicines, and more.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "f2b130fea883df692eb4",
+          "source_id": "mit-ai",
+          "source_name": "MIT News AI",
+          "group": "mit",
+          "trust": "research",
+          "url": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109",
+          "title": "AI-assisted learning platform helps robots reason beyond literal commands",
+          "published_at": "2026-11-09T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "The new approach, known as FLEX, could lead to more intuitive, interactive household and assistive robots.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "0bb49f96544d94ecd80e",
           "source_id": "mit-ai",
@@ -1336,7 +1402,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "A machine-learning approach called CheMeleon provides a practical way to develop new drugs or other molecules with much less detailed, expensive experimentation.",
           "event_at": null,
           "supporting": []
@@ -1346,11 +1412,28 @@
       "verified": 50
     },
     "techcrunch-ai": {
-      "etag": "W/\"0bdcaa284173cac97f6590587b51236c\"",
-      "modified": "Sun, 08 Nov 2026 20:25:08 GMT",
+      "etag": "W/\"e146305de0a7d0cd650c3b9611cda5ea\"",
+      "modified": "Mon, 09 Nov 2026 12:16:02 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "e120b878a12761b045e2",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
+          "title": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s “about a 50-50”",
+          "published_at": "2026-11-09T05:26:29Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "Nvidia’s board is investigating Jensen Huang over his relationship with a suspected Chinese spy, and Yale’s Jeffrey Sonnenfeld thinks it’s roughly a coin flip whether Huang stays on as CEO.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "ab3c0090fa33621fad65",
           "source_id": "techcrunch-ai",
@@ -1363,7 +1446,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "In a memo to the company, Huang admitted that he had an affair.",
           "event_at": null,
           "supporting": []
@@ -1380,7 +1463,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "On Equity, we unpacked what the midterms mean for the tech industry.",
           "event_at": null,
           "supporting": []
@@ -1397,7 +1480,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
           "event_at": null,
           "supporting": []
@@ -1414,7 +1497,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "The deal highlights the challenges of developing massive AI data centers.",
           "event_at": null,
           "supporting": []
@@ -1431,7 +1514,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expected to in the coming weeks.",
           "event_at": null,
           "supporting": []
@@ -1448,7 +1531,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
           "event_at": null,
           "supporting": []
@@ -1465,7 +1548,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
           "event_at": null,
           "supporting": []
@@ -1482,7 +1565,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot directly, they were a […]",
           "event_at": null,
           "supporting": []
@@ -1499,7 +1582,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot directly, they were a […]",
           "event_at": null,
           "supporting": []
@@ -1516,7 +1599,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "AI usage keeps climbing, but spending has stalled. Price cuts and smarter cost controls among the biggest spenders could challenge investor assumptions about AI hypergrowth.",
           "event_at": null,
           "supporting": []
@@ -1533,25 +1616,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Amazon said that the feature will roll out to millions of users in coming weeks.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "76d77f901fa0710485d8",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
-          "title": "Underdog shows off a 32MB speech model in new demo",
-          "published_at": "2026-11-06T13:02:16Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
-          "excerpt": "Despite its small size, Underdog's new model can generate both speech and music.",
           "event_at": null,
           "supporting": []
         }
@@ -1570,10 +1636,27 @@
     },
     "ars": {
       "etag": "",
-      "modified": "Sun, 8 Nov 2026 13:04:24 GMT",
+      "modified": "Mon, 9 Nov 2026 12:19:11 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "baf5400148dd2082c008",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/space/2026/11/new-democratic-congress-will-likely-strip-the-gilding-from-trumps-golden-dome/",
+          "title": "New Democratic Congress will likely strip the gilding from Trump's Golden Dome",
+          "published_at": "2026-11-09T12:00:05Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "\"There’s no doubt that whatever it’s going to be called, it won’t be called Golden Dome.\"",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "9e3feb6bb8fadf243e72",
           "source_id": "ars",
@@ -1586,7 +1669,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Tuning in to electronic noise can tell us whether electrons have paired up or not.",
           "event_at": null,
           "supporting": []
@@ -1603,7 +1686,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Genes and archaeology are revealing how Bantu speakers spread across much of Africa.",
           "event_at": null,
           "supporting": []
@@ -1620,7 +1703,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Soldier told repeatedly to lock down devices before deploying, got sextorted, court-martialed.",
           "event_at": null,
           "supporting": []
@@ -1637,7 +1720,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "It's the exact path, not the apparent severity that matters most, doctors say.",
           "event_at": null,
           "supporting": []
@@ -1654,7 +1737,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Iran threatened to attack subsea cables if US escalates military strikes again.",
           "event_at": null,
           "supporting": []
@@ -1671,7 +1754,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "It's mostly bad news from EA lately, but preservation efforts are nice to see.",
           "event_at": null,
           "supporting": []
@@ -1688,7 +1771,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Company said a \"multifront cyberattack\" included AI agents and an on-path data snatch.",
           "event_at": null,
           "supporting": []
@@ -1705,7 +1788,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Explaining the Great Unconformity, where Cambrian deposits sit on top of older rocks.",
           "event_at": null,
           "supporting": []
@@ -1722,7 +1805,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "6 pallets of hardware vanished en route to Texas, with no arrests 2 months later.",
           "event_at": null,
           "supporting": []
@@ -1739,7 +1822,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Developer: “I can’t be part of the Fox world.”",
           "event_at": null,
           "supporting": []
@@ -1756,25 +1839,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "FAA information display systems to be floppy-free at 435 sites by end of 2028.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "7e8114761040ce5e4022",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/culture/2026/11/the-folks-behind-john-wick-are-back-with-karoshi-trailer/",
-          "title": "The folks behind John Wick are back with Karōshi trailer",
-          "published_at": "2026-11-06T18:30:19Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
-          "excerpt": "Stuntman/director Chad Stahelski and 87Eleven bring us an action-packed dystopian, futuristic thriller.",
           "event_at": null,
           "supporting": []
         }
@@ -1783,7 +1849,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"f96a3f29929a9fd2e143553d4c4f5d6f\"",
+      "etag": "W/\"d98106894753c9a3e6fc0a6f34a04987\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1800,7 +1866,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government. In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair. You can read the full text below. To my […]",
           "event_at": null,
           "supporting": []
@@ -1812,12 +1878,12 @@
           "group": "vox",
           "trust": "media",
           "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
-          "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+          "title": "Nvidia is investigating Jensen Huang’s relationship with an alleged Chinese spy",
           "published_at": "2026-11-08T20:22:39Z",
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company. A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light […]",
           "event_at": null,
           "supporting": []
@@ -1834,7 +1900,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's […]",
           "event_at": null,
           "supporting": []
@@ -1851,7 +1917,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Suno is facing yet another pair of lawsuits. A group of rights holders of Elvis Presley's music and the publisher of some of Eminem's biggest records are suing the AI music company, claiming it illegally generates music and lyrics that mimic those artists. The lawyers in the Presley suit claim that Suno has violated Tennessee's […]",
           "event_at": null,
           "supporting": []
@@ -1868,7 +1934,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Around 7PM each weeknight, I find myself standing in front of the fridge, trying to decide on something for dinner that won't make my husband complain, \"Chicken again?\" Yes, I should meal plan more, but I don't, so this is where I'm at. A nightly battle in which the chicken usually wins. Recently, my best […]",
           "event_at": null,
           "supporting": []
@@ -1885,7 +1951,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company's H200 AI chips. According to The New York Times, New Matrix is on the list of approved firms, yet its offices are empty, \"a hollow gray shell […]",
           "event_at": null,
           "supporting": []
@@ -1902,7 +1968,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Today, I’m talking with Alex Stamos, chief security officer at Cognition and longtime cybersecurity expert, about what a mess cybersecurity is right now. This episode is part one of a special series looking at AI in real life. I’ve always enjoyed talking to Alex because he’s so direct, and you’re going to hear him say […]",
           "event_at": null,
           "supporting": []
@@ -1919,7 +1985,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation […]",
           "event_at": null,
           "supporting": []
@@ -1936,7 +2002,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "OpenAI is now valued at $1.25 trillion in a new round of funding that has raised another $11 billion, according to Bloomberg. That would make it one of the world's most valuable companies, not long after raising $122 billion from investors in March at a valuation of $852 billion. Echoing FT and Wall Street Journal […]",
           "event_at": null,
           "supporting": []
@@ -1953,7 +2019,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "China's intelligence agency recruited Megaspeed executive Alice Huang to spy on Nvidia CEO Jensen Huang, according to The New York Times. The Ministry of State Security (MSS) enlisted her to glean information about American AI chips and \"potentially influence the company to push for its most advanced chips to be made available to China.\" Megaspeed […]",
           "event_at": null,
           "supporting": []
@@ -1969,6 +2035,40 @@
       "error_code": "",
       "items": [
         {
+          "id": "8874dd7b5668dbac712c",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+          "title": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+          "published_at": "2026-11-09T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "As the publishing industry wrestles with paranoia over the provenance of manuscripts, writers are caught in an impossible bind.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "88c8ad35cbbf4c7a401d",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/bug-activists-and-biker-gang-members-are-teaming-up-to-protest-data-centers/",
+          "title": "Bikers and Bug-Lovers Join Forces to Fight a New Google Data Center",
+          "published_at": "2026-11-09T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "As data center protests break out across Europe, a mismatched band of campaigners is trying to block Google from building a sprawling new facility east of London.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "30544039ab2b1feb0e6e",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -1980,7 +2080,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark.",
           "event_at": null,
           "supporting": []
@@ -1997,7 +2097,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Moving AI from text to 3D space, world models simulate real-world physics to teach robots and autonomous cars how to navigate reality.",
           "event_at": null,
           "supporting": []
@@ -2014,7 +2114,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "The apps and platforms that help family caregivers manage their loved ones’ needs are becoming more capable, but the broader issue of caregivers’ well-being remains unsolved.",
           "event_at": null,
           "supporting": []
@@ -2031,7 +2131,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "An experiment in which AI models were asked to break into simulated networks showed the hacking skills of DeepSeek and GLM to be not far behind OpenAI’s most advanced cyber model, which isn’t public.",
           "event_at": null,
           "supporting": []
@@ -2048,7 +2148,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Data brokers are collecting all sorts of internal corporate files to help train AI models. Not everyone is thrilled.",
           "event_at": null,
           "supporting": []
@@ -2281,13 +2381,13 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"2106d2e1cfefca2b2a26ff5708035208\"",
+      "etag": "W/\"cf1f8164183fe042fdf515c489f1b9a7\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [],
-      "discovered": 2,
-      "verified": 2
+      "discovered": 0,
+      "verified": 0
     },
     "openai-community": {
       "etag": "",
@@ -2317,11 +2417,28 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"9a57697ba457fb12ca56fdd6eebe3ab1\"",
-      "modified": "Sun, 08 Nov 2026 14:24:30 GMT",
+      "etag": "\"67728993cc17507d9a20d9d52c48a2f5\"",
+      "modified": "Mon, 09 Nov 2026 11:38:47 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "77e14a7f41e67d9dc624",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/nvidia-espionage-scandal-weakens-huangs-lobby-against-tighter-ai-chip-export-controls/",
+          "title": "Nvidia espionage scandal weakens Huang's lobby against tighter AI chip export controls",
+          "published_at": "2026-11-09T11:38:43Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
+          "excerpt": "Nvidia CEO Jensen Huang has admitted to an extramarital affair with a woman US intelligence agencies classify as a suspected Chinese informant. The board has launched an independent investigation. The affair weakens Huang's lobbying efforts against stricter AI chip export controls, with a newly elected Democratic Congress poised to ramp up scrutiny of AI chip smuggling to China and push for tighte",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "998b24524a9c31d5aa6b",
           "source_id": "decoder",
@@ -2334,7 +2451,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "OpenAI co-founder Andrej Karpathy used Claude's Opus 5.5 to filter 43 million Hacker News comments into 6,454 curated videos. The result beats YouTube's own recommendations, he says. The article Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2351,7 +2468,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Consciousness researchers Anil Seth, Ned Block, and Giulio Tononi argue in a Nature commentary that today's AI systems aren't conscious and won't become so on silicon hardware. They consider the assumption that consciousness depends on computation alone \"fatally flawed\" and warn against granting rights to AI systems. The article The brain-as-computer metaphor shaped modern AI but may be misleading",
           "event_at": null,
           "supporting": []
@@ -2368,7 +2485,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Turing Award winner Richard Sutton reaffirms that raw compute alone isn't enough for intelligence and that fundamentally new learning methods are needed. Ex-OpenAI researcher Tworek agrees, saying blind transformer scaling \"has reward hacked brains of a whole generation of scientists.\" A growing wave of startups is already betting on exactly this gap. The article The inventor of the bitter lesson ",
           "event_at": null,
           "supporting": []
@@ -2385,7 +2502,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Alibaba's new coding-agent benchmark, Co-Design Bench, tests AI agents on real user requests that already tripped them up in practice. Even GPT-6 Astra, the top performer, fully solves only 26.4 percent of tasks. On older benchmarks, the same models score above 99 percent. The article AI coding agents still need human cleanup on nearly three out of four tasks in a real-world test appeared first on",
           "event_at": null,
           "supporting": []
@@ -2402,7 +2519,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Despite the tech selloff, Anthropic is pressing ahead with its IPO at a valuation of $1.25 to $1.75 trillion, well below the hoped-for $2 trillion. The Claude developer aims to raise $80 to $100 billion before Thanksgiving. Rival OpenAI has also recently had to cut its valuation. The article Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff, accepts lower valuation appeared fir",
           "event_at": null,
           "supporting": []
@@ -2419,7 +2536,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "AI models can often spot problematic behavior by other AI agents in logs, according to a study by Anthropic researcher Andy Hall. GPT-5 found about 98 percent of reward-hacking cases, but the more exhaustively the search is tuned, the more false alarms pile up. That's not yet enough for reliable safety checks. The article AI auditors catch most agent misbehavior but flood reviewers with false alar",
           "event_at": null,
           "supporting": []
@@ -2436,7 +2553,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Thinking Machines' AI model Inkling 2 Small swears during its internal reasoning, 316 times across 2,655 benchmark runs, according to an analysis by Vals AI. The profanity typically shows up late in long runs that fail anyway. But it doesn't work as a warning signal: 96 percent of failed runs contained no cursing at all. The article Thinking Machines' Inkling 2 Small drops 316 F-bombs across bench",
           "event_at": null,
           "supporting": []
@@ -2453,7 +2570,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "In the Vals AI benchmark, OpenAI's GPT-6 Sol Daybreak hits 80.8 percent of attack objectives in simulated corporate networks. Worse, the open-weight model DeepSeek V4.1 Flash reaches 72.8 percent at a tenth of the cost. Because open models can no longer be restricted, analysts say the window for defenders is shrinking fast. The article The gap between open and closed AI models in cyber capabilitie",
           "event_at": null,
           "supporting": []
@@ -2470,25 +2587,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Nous Research retrained Alibaba's Qwen3.8-27B to produce Arete-27B, largely stripping out its pro-Chinese bias. The propaganda rate dropped from 22 percent to less than one percent, while general capabilities remained intact in tests. The method relied on 53 million tokens of supervised fine-tuning. The political bias is \"applied late, it is applied thin,\" the team writes. The article State propag",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "8318f13dc852ae5a525a",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/",
-          "title": "Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts' bar",
-          "published_at": "2026-11-07T11:13:42Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
-          "excerpt": "The \"Into the Unknown\" benchmark tasks nine AI agents with tackling open research questions from U.S. national laboratories. None of the 135 submissions meets all requirements. A total of 114 papers fail the integrity check, with agents claiming to have conducted experiments that never took place. GPT-6 Astra performs best but still doesn't meet the experts' standards. The article Nine AI agents t",
           "event_at": null,
           "supporting": []
         }
@@ -2514,7 +2614,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-09T00:31:19.055310Z",
+          "collected_at": "2026-11-09T12:30:45.866665Z",
           "excerpt": "Cryptographic protocols like Privacy Pass help keep web sites safe from abuse while keeping their users private. This post looks at the quantum threat to these protocols, and some new post-quantum cryptography that may help close the gap.",
           "event_at": null,
           "supporting": []
@@ -2949,6 +3049,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-09-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -5919,6 +6024,76 @@
         "https://the-decoder.com/perplexity-now-has-its-own-always-on-ai-agent/"
       ],
       "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "1d980cecae4ce0aab063",
+      "issue": "2026-11-09-pm",
+      "cutoff": "2026-11-09T12:30:00Z",
+      "title": "NVIDIA Dynamo Recipes Bring Korea’s Leading Open Models to Production",
+      "urls": [
+        "https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "51e504680490a66d88e4",
+      "issue": "2026-11-09-pm",
+      "cutoff": "2026-11-09T12:30:00Z",
+      "title": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
+      "urls": [
+        "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "78a38ab1bb2e5e3a2eb9",
+      "issue": "2026-11-09-pm",
+      "cutoff": "2026-11-09T12:30:00Z",
+      "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
+      "urls": [
+        "https://blogs.nvidia.com/blog/korean-startup-investments-msit/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "59b779471e81fefef54a",
+      "issue": "2026-11-09-pm",
+      "cutoff": "2026-11-09T12:30:00Z",
+      "title": "Korea Advances Physical AI Across Industries With NVIDIA",
+      "urls": [
+        "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "d7c73c4b9a79782fc5fe",
+      "issue": "2026-11-09-pm",
+      "cutoff": "2026-11-09T12:30:00Z",
+      "title": "Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA",
+      "urls": [
+        "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
       "versions": [],
       "event_type": "announcement"
     }

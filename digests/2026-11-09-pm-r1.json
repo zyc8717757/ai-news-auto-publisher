@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-09-pm",
+  "revision": 1,
+  "created_at": "2026-11-09T12:30:45.866665Z",
+  "cutoff": "2026-11-09T12:30:00Z",
+  "window_start": "2026-11-07T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "1d980cecae4ce0aab063",
+      "title": "英伟达推出Dynamo优化部署方案支持韩国开源模型",
+      "summary": "英伟达公司宣布推出针对韩国领先开源模型的Dynamo优化部署方案，涵盖SK Telecom的A.X K2、LG AI Research的K-EXAONE 2.0、Upstage的Solar Open 2以及Motif Technologies的Motif-3。该方案旨在应对大模型超出单GPU容量时跨多个GPU拆分及请求路由的协调需求。",
+      "impact": "帮助韩国多款领先开源模型顺利投入生产环境，提升跨GPU运行的协作效率。",
+      "category": "产品",
+      "score": 80.36,
+      "sources": [
+        {
+          "id": "1d980cecae4ce0aab063",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/",
+          "title": "NVIDIA Dynamo Recipes Bring Korea’s Leading Open Models to Production",
+          "published_at": "2026-11-09T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实际生产环境中的多GPU性能表现和稳定性仍有待观察。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Nvidia发布了针对韩国领先开源模型（如SK Telecom的A.X K2等）的Dynamo优化部署方案，推动开源大模型在实际生产中的应用。",
+      "backfill": false
+    },
+    {
+      "id": "51e504680490a66d88e4",
+      "title": "英伟达与韩国科学技术信息通信部深化主权AI合作",
+      "summary": "英伟达与韩国科学技术信息通信部（MSIT）宣布扩大在韩国主权AI生态系统方面的合作，范围涵盖AI半导体、数据中心基础设施、人才培养、初创企业、模型、智能体及安全。该合作还为韩国NPU和XPU公司探索参与英伟达NVLink Fusion生态系统奠定了基础。",
+      "impact": "进一步拓展英伟达在韩国的技术生态布局，推动当地主权AI基础设施与半导体产业发展。",
+      "category": "商业",
+      "score": 73.46,
+      "sources": [
+        {
+          "id": "51e504680490a66d88e4",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/",
+          "title": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
+          "published_at": "2026-11-09T05:00:04Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体合作项目的落地进度和成效取决于后续政策与市场执行情况。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Nvidia与韩国科学技术信息通信部扩大主权AI生态系统合作，涵盖半导体、基础设施及模型安全。",
+      "backfill": false
+    },
+    {
+      "id": "78a38ab1bb2e5e3a2eb9",
+      "title": "英伟达在韩宣布对初创企业的新投资计划",
+      "summary": "韩国科学技术信息通信部与英伟达在COEX共同举办了MSIT-NVIDIA AI Startup Partnership Forum。韩国科学技术信息通信部副部长Ryu Je-myung与英伟达领导层会见了来自基础模型、物理AI、AI基础设施及AI半导体等领域的20多家韩国初创企业，并宣布英伟达将对韩国初创企业Point2进行投资。",
+      "impact": "加强了英伟达对韩国AI初创企业的资金与生态支持，促进当地技术创新。",
+      "category": "商业",
+      "score": 72.62,
+      "sources": [
+        {
+          "id": "78a38ab1bb2e5e3a2eb9",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
+          "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
+          "published_at": "2026-11-09T08:00:53Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 投资的具体金额及对其他初创企业的实质性支持范围未详细说明。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Nvidia在韩国MSIT-NVIDIA人工智能创业伙伴论坛上宣布对韩国初创公司Point2等进行新的投资。",
+      "backfill": false
+    },
+    {
+      "id": "59b779471e81fefef54a",
+      "title": "英伟达助力韩国各行业推进物理AI应用",
+      "summary": "依托韩国在制造和工程领域的优势，英伟达正协助推进当地的物理AI生态系统。韩国行业领导者正将加速计算、AI和仿真技术应用到半导体制造、机器人及自动驾驶汽车等领域，帮助物理AI从开发阶段迈入现实世界的生产。",
+      "impact": "加速韩国传统制造与工程产业向物理AI和现实生产力的转化。",
+      "category": "产品",
+      "score": 72.86,
+      "sources": [
+        {
+          "id": "59b779471e81fefef54a",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
+          "title": "Korea Advances Physical AI Across Industries With NVIDIA",
+          "published_at": "2026-11-09T05:00:40Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 各行业在实际生产中全面普及物理AI的周期和规模尚存在不确定性。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Nvidia与韩国合作在制造和工程等领域推动物理AI（Physical AI）生态系统的实际落地。",
+      "backfill": false
+    },
+    {
+      "id": "d7c73c4b9a79782fc5fe",
+      "title": "韩国AI生态系统借助英伟达技术推进智能体安全",
+      "summary": "韩国现代汽车集团正探索英伟达NemoClaw蓝图与OpenShell运行时，AIM Intelligence则将其Starfort平台与英伟达OpenShell集成，以支持员工生产力和企业工作流中的安全AI智能体，推动韩国AI生态系统在智能体安全领域的发展。",
+      "impact": "提升韩国企业级AI智能体应用的安全性与工作流效率，推动智能体落地。",
+      "category": "安全",
+      "score": 72.26,
+      "sources": [
+        {
+          "id": "d7c73c4b9a79782fc5fe",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/",
+          "title": "Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA",
+          "published_at": "2026-11-09T05:00:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 企业在实际生产环境中大规模部署智能体安全方案的实际效果有待验证。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "韩国生态系统结合Nvidia NemoClaw和OpenShell等技术推进Agentic AI的安全性与实际应用。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
