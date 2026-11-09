@@ -3052,7 +3052,7 @@
     },
     "2026-11-09-pm-r1": {
       "deployment": "failed",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
