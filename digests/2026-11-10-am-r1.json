@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-10-am",
+  "revision": 1,
+  "created_at": "2026-11-10T00:30:57.108319Z",
+  "cutoff": "2026-11-10T00:30:00Z",
+  "window_start": "2026-11-08T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "952d2516af2e905436ad",
+      "title": "OpenAI推出Control Room中央系统以追踪和停止模型工作负载",
+      "summary": "OpenAI介绍了Control Room系统，该系统用于跨研究基础设施追踪模型的工作负载，并能够在出现安全或保障隐患时迅速叫停。",
+      "impact": "增强了研究基础设施中AI模型运行的安全管控能力。",
+      "category": "安全",
+      "score": 79.48,
+      "sources": [
+        {
+          "id": "952d2516af2e905436ad",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/control-room",
+          "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+          "published_at": "2026-11-09T13:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "research",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI推出Control Room系统，用于追踪并快速停止研究基础设施中的模型工作负载，属于重大安全政策。",
+      "backfill": false
+    },
+    {
+      "id": "fe2250bf8ac946844c8a",
+      "title": "OpenAI联合Modretro推出Codex版Chromatic掌机",
+      "summary": "OpenAI Supply Co.推出ModRetro Chromatic的Codex版本，允许用户通过Codex插件设计游戏关卡、制作精灵动画，并将其写入卡带直接在经典掌机上进行游玩测试。",
+      "impact": "拓展了AI编程工具在复古掌机游戏开发与创意制作领域的应用。",
+      "category": "产品",
+      "score": 71.05,
+      "sources": [
+        {
+          "id": "fe2250bf8ac946844c8a",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/build-your-own-games-on-the-codex-edition-modretro-chromatic/1414530",
+          "title": "Build your own games on the Codex edition Modretro Chromatic",
+          "published_at": "2026-11-09T19:42:41.373000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI推出结合ModRetro Chromatic掌机的Codex游戏开发插件，属于影响实际用户的编程与产品发布。",
+      "backfill": false
+    },
+    {
+      "id": "caa9073cefb43725f1a5",
+      "title": "ChatGPT Enterprise现已登陆AWS Marketplace",
+      "summary": "ChatGPT Enterprise正式上线AWS Marketplace，各类组织能够通过现有的AWS采购与账单关系来简化购买流程。",
+      "impact": "简化了企业级客户采购ChatGPT Enterprise的流程。",
+      "category": "商业",
+      "score": 73.3,
+      "sources": [
+        {
+          "id": "caa9073cefb43725f1a5",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+          "title": "ChatGPT Enterprise now available in AWS Marketplace",
+          "published_at": "2026-11-09T19:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI宣布ChatGPT Enterprise正式登陆AWS Marketplace，简化企业采购与结算。",
+      "backfill": false
+    },
+    {
+      "id": "02e9abf47eaf3fa01f98",
+      "title": "CodeRabbit借助OpenAI模型扩大智能软件开发规模",
+      "summary": "CodeRabbit采用OpenAI模型来监管和信任AI生成的代码，并利用Codex在保持相同工程团队规模的情况下，使软件交付量提升了20倍。",
+      "impact": "显著提升了工程团队的软件交付效率与自动化开发规模。",
+      "category": "开发",
+      "score": 71.49,
+      "sources": [
+        {
+          "id": "02e9abf47eaf3fa01f98",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/coderabbit-codex-daybreak",
+          "title": "CodeRabbit scales agentic software development and ships 20x more",
+          "published_at": "2026-11-09T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "CodeRabbit结合OpenAI模型扩展智能软件开发，展示了实际Agent编程工具的生产力提升。",
+      "backfill": false
+    },
+    {
+      "id": "4ac969e472ffa4e93659",
+      "title": "Meta发布小型AI模型Muse Ember",
+      "summary": "Meta推出其最小且最高效的AI模型Muse Ember，优化用于工具调用、路由和数据提取等重复性智能体任务。该公司称，该模型在每美元的智能回报上超过Claude Haiku 5.5或GPT-6 Luna，但在实际编程任务上存在不足。",
+      "impact": "为开发者提供更具成本效益的重复任务处理选择。",
+      "category": "模型",
+      "score": 68.45,
+      "sources": [
+        {
+          "id": "4ac969e472ffa4e93659",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do/",
+          "title": "Meta launches Muse Ember, a small AI model built for the repetitive work agents actually do",
+          "published_at": "2026-11-09T19:41:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "性能对比及编程能力不足的结论来源于该公司声明及媒体报道，未经验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "meta"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Meta推出面向代理重复任务的小型模型Muse Ember的前瞻观察报道。",
+      "backfill": false
+    },
+    {
+      "id": "5ef93d9981a0db1c3c84",
+      "title": "Apple推出49.99美元智能功能使用包",
+      "summary": "苹果公司在Logic Pro中更新了“购买更多使用量”选项，提供一次性购买价格为49.99美元的智能功能使用包，以扩展某些AI功能的使用权限。此前该公司曾在9月上旬发布支持文章概述了部分Apple Intelligence功能的使用限制。",
+      "impact": "为高频使用AI功能的专业用户提供了付费扩展途径。",
+      "category": "商业",
+      "score": 58.43,
+      "sources": [
+        {
+          "id": "5ef93d9981a0db1c3c84",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
+          "title": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
+          "published_at": "2026-11-09T19:09:58Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "价格与具体功能扩展范围以苹果公司更新为准。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Apple推出Logic Pro的AI使用额度扩充包（50美元），属于重要的订阅与额度商业变动。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
