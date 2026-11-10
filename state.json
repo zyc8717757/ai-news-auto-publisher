@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-10T00:30:00Z",
+  "last_covered_at": "2026-11-10T12:30:00Z",
   "ai_attempts": [
     "2026-11-09T00:31:35.207820Z",
     "2026-11-09T12:31:18.730287Z",
@@ -941,6 +941,40 @@
       "error_code": "",
       "items": [
         {
+          "id": "0f0020abcf733229d29f",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+          "title": "Helping caregivers use AI in everyday life",
+          "published_at": "2026-11-10T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "69d4d9d74efa01629a6c",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+          "title": "Closing the AI guidance gap in education",
+          "published_at": "2026-11-10T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "caa9073cefb43725f1a5",
           "source_id": "openai",
           "source_name": "OpenAI",
@@ -952,7 +986,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
           "event_at": null,
           "supporting": []
@@ -969,7 +1003,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
           "event_at": null,
           "supporting": []
@@ -986,7 +1020,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
           "event_at": null,
           "supporting": []
@@ -1003,7 +1037,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
           "event_at": null,
           "supporting": []
@@ -1026,12 +1060,29 @@
           "trust": "official",
           "url": "https://www.anthropic.com/news/announcements",
           "title": "Announcements",
-          "published_at": "2026-11-09T00:00:00Z",
+          "published_at": "2026-11-10T00:00:00Z",
           "time_precision": "day",
-          "source_date": "2026-11-09",
+          "source_date": "2026-11-10",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap Anthropic is investing $100 million in Claude Frontier Academy to train 10,000 Frontier Deployed Engineers by the end of 2027, with cohorts from Accenture, Bain, CBA, Deloitte, McKi",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "84757a8b6e04ab0dc5be",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/roadshow-launch",
+          "title": "Anthropic launches roadshow for proposed initial public offering",
+          "published_at": "2026-11-10T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock. The initial public offering price is expected to be between $70.00 and $78.00 per share. Anthropic has applied to list its Class A common stock on the Nasdaq Global Select Market under the symbol “ANT.” Anthropic launches roadshow for proposed initial public offering Published Nov 10, 2",
           "event_at": null,
           "supporting": []
         }
@@ -1040,11 +1091,29 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"WV-0nA\"",
-      "modified": "",
+      "etag": "",
+      "modified": "Tue, 10 Nov 2026 12:02:28 GMT",
       "status": "ok",
       "error_code": "",
-      "items": [],
+      "items": [
+        {
+          "id": "f321c904268bcef29356",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+          "published_at": "2026-11-10T12:02:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+          "event_at": null,
+          "supporting": []
+        }
+      ],
       "discovered": 50,
       "verified": 50
     },
@@ -1060,7 +1129,7 @@
     "huggingface": {
       "etag": "W/\"40f2f-T2jo6TYXuYHZ56xAp6s3ALjzrfI\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1113,7 +1182,7 @@
     "nvidia": {
       "etag": "\"f007d62be4d8fcae182ea6fceabbd083-gzip\"",
       "modified": "Tue, 10 Nov 2026 00:23:30 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1241,7 +1310,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"132db48185670538c90e47aba1ad7fd076f8258ddd602a052069f548beaffbf2\"",
+      "etag": "W/\"89e2f51356988c43e5b9811348f13c565f88d08d8c74b22116074da8a471e007\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1252,7 +1321,7 @@
     "transformers": {
       "etag": "W/\"aa9d4a6eaef10c6acd99ed01ea2a56308d0dce21274b76edabd73a088da222df\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [],
       "discovered": 30,
@@ -1268,7 +1337,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"719203fea3dbaf63b8f6ce7f6e56c907aaf84efb07fc97dc2866f712c6c25ce6\"",
+      "etag": "W/\"17bf0a03d6c97d9bdaac4f6abe71ad5bdc17d60a5721740500c8333e03c7986e\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1277,7 +1346,7 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"631d5d25a182faf237edbfc250b1abdace02084dc614e2564c8a050a9cabb8a8\"",
+      "etag": "W/\"510db4b789564a7991f76cec07da1147df562153c90f4cd3c4a774e05b89c2ba\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1294,7 +1363,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "## Ripple Preview [Ripple Preview](https://ollama.com/library/ripple-preview) from Ricursive Intelligence is a 65B dense model built for agentic coding. ```sh ollama run ripple-preview ``` ## What's Changed - Qwen3.8 Flash Next uses about 27 GiB less memory on Apple silicon - `ollama launch claude` always routes Claude Code to the selected model - `ollama launch` explains when a cloud model has be",
           "event_at": null,
           "supporting": []
@@ -1313,11 +1382,28 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"21b3567d769b688fbda636283b1d7774e06ebd82184455dcd0c2aabf482bc137\"",
+      "etag": "W/\"d04238bd30e8195709d5275073f659c5432c82c6b9381939c406dc877a181009\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "6e8a06229c5b50c1450e",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.7",
+          "title": "LangChain Releases: langchain-core==1.7.7",
+          "published_at": "2026-11-10T04:08:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Changes since langchain-core==1.7.6 release(core): 1.7.7 (#41776) fix(core): cap nesting depth in `load()` (#41742) chore(deps): patch newer-python security lock resolutions (#41585)",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "36cab5f07224ae958d99",
           "source_id": "langchain",
@@ -1330,7 +1416,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Changes since langchain-fireworks==1.7.2 release(fireworks): 1.7.3 (#41773) fix(fireworks): default `max_tokens` from model profiles (#41772) chore(model-profiles): refresh model profile data (#41762) chore(model-profiles): refresh model profile data (#41745)",
           "event_at": null,
           "supporting": []
@@ -1351,7 +1437,7 @@
     "litellm": {
       "etag": "W/\"45b93cf30806403fa9ea4c0db212dfcc185ba105ff0b536cf99ba5b1f630b41b\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1437,7 +1523,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The Conference on Robot Learning (CoRL) takes place November 9–12, 2026, in Austin, Texas. BAIR faculty, postdocs and students will be presenting research at various sessions, including an Early Career Keynote from Professor Negar Mehr. See below for the full schedule of sessions with BAIR members, including papers co-authored with collaborators at other universities and companies. November 9–12, ",
           "event_at": null,
           "supporting": []
@@ -1447,11 +1533,28 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1794270177\"",
-      "modified": "Tue, 10 Nov 2026 00:22:57 GMT",
+      "etag": "\"1794313468\"",
+      "modified": "Tue, 10 Nov 2026 12:24:28 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "ec52a02e1b50c5bf7b9e",
+          "source_id": "mit-ai",
+          "source_name": "MIT News AI",
+          "group": "mit",
+          "trust": "research",
+          "url": "https://news.mit.edu/2026/mit-led-team-receives-funding-next-generation-alternatives-modern-weed-killers-1110",
+          "title": "MIT-led team receives funding to develop next-generation alternatives to modern weed killers",
+          "published_at": "2026-11-10T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "With up to $53 million from ARPA-H, the researchers will use AI to generate safer herbicides that reduce dependence on imports and improve the security of the U.S. food supply.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "6fbb9cbc09ce7eb4c3ad",
           "source_id": "mit-ai",
@@ -1464,7 +1567,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "By learning how matter moves, the WorldParticle system could assist with developing soft robots, medicines, and more.",
           "event_at": null,
           "supporting": []
@@ -1481,7 +1584,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The new approach, known as FLEX, could lead to more intuitive, interactive household and assistive robots.",
           "event_at": null,
           "supporting": []
@@ -1491,11 +1594,45 @@
       "verified": 50
     },
     "techcrunch-ai": {
-      "etag": "W/\"ede8962ed56898566c64c85e276481f4\"",
-      "modified": "Tue, 10 Nov 2026 00:28:49 GMT",
+      "etag": "W/\"43ae45c73782800ab7877411675e8608\"",
+      "modified": "Thu, 05 Nov 2026 18:34:11 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "775ac0a390011ca0c2cf",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
+          "title": "Otter AI can now follow conversations across 30+ languages",
+          "published_at": "2026-11-10T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Otter AI just added support for 27 languages and revealed an upcoming feature that can follow along if speakers switch between languages.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "8a35af252b32001f777c",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+          "title": "Anthropic reportedly plans to move forward with IPO plans",
+          "published_at": "2026-11-10T01:27:12Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "The AI company is expected to set its valuation range this week, the Wall Street Journal reported.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "cbe54f11b05c0e59be5a",
           "source_id": "techcrunch-ai",
@@ -1508,7 +1645,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The PR firm was enlisted shortly after an October 2025 New York Times report described Alice Huang's business dealings with Jensen Huang, Wired reported.",
           "event_at": null,
           "supporting": []
@@ -1525,7 +1662,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Six months before Nvidia's spy scandal erupted, Culper Research was already questioning Jensen Huang's unusually close relationship with a Chinese executive.",
           "event_at": null,
           "supporting": []
@@ -1542,7 +1679,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Nvidia’s stock slid more than 4% after its board opened an investigation into Jensen Huang’s relationship with a suspected Chinese spy, and one securities law expert says the company’s earlier insistence that it was all “normal” could turn into a very expensive problem.",
           "event_at": null,
           "supporting": []
@@ -1559,7 +1696,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The Nvidia CEO also pulled out of an Anthropic event earlier.",
           "event_at": null,
           "supporting": []
@@ -1576,7 +1713,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Anthropic says the new models \"show improvements in areas like coding, reasoning, and vision,\" as well as in communicating more clearly with users.",
           "event_at": null,
           "supporting": []
@@ -1593,7 +1730,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Jensen Huang’s alleged affair with a suspected Chinese spy threatens to complicate Nvidia’s lobbying efforts to loosen U.S. chip export restrictions and maintain access to China’s lucrative AI market.",
           "event_at": null,
           "supporting": []
@@ -1610,7 +1747,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "At 10 cents per million input tokens, Ember is significantly cheaper than frontier competitors like Haiku and Luna.",
           "event_at": null,
           "supporting": []
@@ -1627,7 +1764,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Anthropic bought billions of dollars' worth of natural gas turbines in a deal that could give it buyer's remorse.",
           "event_at": null,
           "supporting": []
@@ -1644,7 +1781,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Medium's new writing app embraces AI-assisted writing, despite growing controversy over the technology's role in publishing.",
           "event_at": null,
           "supporting": []
@@ -1661,42 +1798,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Automattic aims to compete with the likes of Lovable with Spacefast.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "e120b878a12761b045e2",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
-          "title": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s ‘about a 50-50’",
-          "published_at": "2026-11-09T05:26:29Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
-          "excerpt": "Nvidia’s board is investigating Jensen Huang over his relationship with a suspected Chinese spy, and Yale’s Jeffrey Sonnenfeld thinks it’s roughly a coin flip whether Huang stays on as CEO.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "ab3c0090fa33621fad65",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
-          "title": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
-          "published_at": "2026-11-08T21:00:11Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
-          "excerpt": "In a memo to the company, Huang admitted that he had an affair.",
           "event_at": null,
           "supporting": []
         }
@@ -1715,10 +1818,44 @@
     },
     "ars": {
       "etag": "",
-      "modified": "Mon, 9 Nov 2026 23:39:51 GMT",
+      "modified": "Tue, 10 Nov 2026 12:30:15 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "94172b3b33d907838393",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/gadgets/2026/11/ukraines-fiber-optic-drones-get-squeezed-by-ai-data-center-demand/",
+          "title": "Ukraine’s fiber-optic drones get squeezed by AI data center demand",
+          "published_at": "2026-11-10T12:15:32Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Ukraine competes with Russia and data centers for China’s optical fiber supply.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "8ac477a7a32a1c05e3c7",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/gadgets/2026/11/review-apples-1999-m6-macbook-pro-feels-stuck-in-the-middle/",
+          "title": "Review: Apple's M6 MacBook Pro is good, but it's missing all the exciting stuff",
+          "published_at": "2026-11-10T12:00:21Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Per usual, the basic MacBook Pro lags behind the flagships where it counts.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "af6ae0bd457f4f5d3f1d",
           "source_id": "ars",
@@ -1731,7 +1868,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Producer and former Kevin Feige protege Jeremy Latcham will replace Gunn and Safran.",
           "event_at": null,
           "supporting": []
@@ -1748,7 +1885,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Lawsuit demands Kalshi return losses because online betting is illegal in Washington.",
           "event_at": null,
           "supporting": []
@@ -1765,7 +1902,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "We verified the RAM numbers are real without sending any emails to OpenAI.",
           "event_at": null,
           "supporting": []
@@ -1782,7 +1919,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "\"*sshole\" poses a serious threat to Internet security.",
           "event_at": null,
           "supporting": []
@@ -1799,7 +1936,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "\"Please jump on my cislunar bandwagon because I need some more friends here.\"",
           "event_at": null,
           "supporting": []
@@ -1816,7 +1953,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "\"Do not ask again\" prompt leads to passwords, API keys, and more being shared.",
           "event_at": null,
           "supporting": []
@@ -1833,7 +1970,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "\"Grok analyzing the same video is 99.9 percent perfect.\"",
           "event_at": null,
           "supporting": []
@@ -1850,7 +1987,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Nvidia is probing whether Chinese intelligence targeted its CEO through an affair.",
           "event_at": null,
           "supporting": []
@@ -1867,7 +2004,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "A topsy-turvy grid and intermittent rain resulted in a very entertaining race.",
           "event_at": null,
           "supporting": []
@@ -1884,42 +2021,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "\"There’s no doubt that whatever it’s going to be called, it won’t be called Golden Dome.\"",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "9e3feb6bb8fadf243e72",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery/",
-          "title": "Physicists listened to electrical noise to crack a superconductor mystery",
-          "published_at": "2026-11-08T12:15:31Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
-          "excerpt": "Tuning in to electronic noise can tell us whether electrons have paired up or not.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "b62c9c03eb5f12028fe2",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures/",
-          "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
-          "published_at": "2026-11-07T12:15:55Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
-          "excerpt": "Genes and archaeology are revealing how Bantu speakers spread across much of Africa.",
           "event_at": null,
           "supporting": []
         }
@@ -1928,7 +2031,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"ede8962ed56898566c64c85e276481f4\"",
+      "etag": "W/\"d06500c2360de52a1ba75ff8b66293a5\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1945,7 +2048,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "During Paramount Skydance's latest earnings call, CEO David Ellison said \"it's hard to imagine\" AI won't have a bigger impact on the film industry than CGI. In response to a question about the company's outlook for AI, Ellison said: \"I think when you zoom out and look at production, AI really has the potential to […]",
           "event_at": null,
           "supporting": []
@@ -1962,7 +2065,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "It's difficult to overstate Nvidia's power in today's AI landscape. The company's chips are the bedrock upon which advanced AI technology in the US is being built, and demand has consistently outpaced supply for years. Nvidia has also been an influential investor in a wide range of up-and-coming AI companies in recent years, with about […]",
           "event_at": null,
           "supporting": []
@@ -1979,7 +2082,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "President Trump held a White House press briefing earlier today and responded to several questions about his knowledge of Nvidia CEO Jensen Huang's affair with an alleged Chinese spy. Huang said this weekend that he had been \"unfaithful\" to his wife, and the company has opened an investigation into Huang. Recent articles from The New […]",
           "event_at": null,
           "supporting": []
@@ -1996,7 +2099,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The leather-jacketed CEO of Nvidia, Jensen Huang, has acknowledged an affair with Megaspeed exec Alice Huang, spurring an investigation by his company and intense discussions worldwide. Recent reporting noted that since last year, US intelligence reports had identified Alice Huang (no relation) as not only the exec for an AI compute company renting access to […]",
           "event_at": null,
           "supporting": []
@@ -2013,7 +2116,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "After publishing a support article in early September outlining usage limits for some Apple Intelligence features, the company has updated Logic Pro with an option to \"Buy More Usage\" for a one-time purchase price of $49.99, as spotted by 9to5Mac. It has a built-in AI assistant to do things like \"start a new song, set […]",
           "event_at": null,
           "supporting": []
@@ -2030,7 +2133,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Anthropic is announcing two new models today: Claude Fable 5.2 and Claude Mythos 5.2, which it says are designed to take on \"daunting\" technical challenges. The company claims the new models show improvements in coding, reasoning, and vision, and can generate outputs faster than the 5.1 versions of the Fable and Mythos models. Claude Fable […]",
           "event_at": null,
           "supporting": []
@@ -2047,7 +2150,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "After expanding its Edits app to macOS last week, Instagram's next move is launching this Effect Builder that generates custom filters for your Stories posts with AI. Available now for US residents who are over 18, it has a prompt box for describing your filter idea to the chatbot, with an option to attach style […]",
           "event_at": null,
           "supporting": []
@@ -2064,7 +2167,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "I would prefer that these people's sex lives were none of my business but I guess we have to talk about Jensen Huang and the National Security Incident. Who could have guessed that the guy who was out here signing titties might not have great judgment about how to behave around women? Alice Huang - […]",
           "event_at": null,
           "supporting": []
@@ -2081,7 +2184,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Asked about AI executives' warnings about their models' safety on 60 Minutes, Trump said, \"I think that the risk is not nearly as real as it- as they talk, and I think the risk can be managed, and it's managed.\" He claimed the DOJ is managing that risk, saying, \"We had a situation where somebody […]",
           "event_at": null,
           "supporting": []
@@ -2098,7 +2201,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The Walt Disney Company has teamed up with Adobe to develop proprietary \"artist-led\" generative AI models to support Disney's production pipeline. The multiyear partnership was announced today at Adobe's MAX conference, and it will see Adobe providing Disney with early access to its latest technologies for everything from Disney's theme parks and cruise line to […]",
           "event_at": null,
           "supporting": []
@@ -2114,6 +2217,74 @@
       "error_code": "",
       "items": [
         {
+          "id": "3aeaae3e8eaf9730c826",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/tear-down-those-guardrails-meet-the-renegades-freeing-chatbots-from-corporate-enslavers/",
+          "title": "Tear Down Those Guardrails! Meet the Renegades Freeing Chatbots From Corporate Enslavers",
+          "published_at": "2026-11-10T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "The “abliterators” are flooding the internet with AI models that never say no, making it easier for people to improve their cyberdefenses—or build a bomb.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "ac5b0d59726d5833ceb7",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/the-ai-safety-debate-has-lost-the-plot-we-asked-10-experts-what-the-real-nightmares-are/",
+          "title": "The AI Safety Debate Has Lost the Plot. We Asked 10 Experts What the Real Nightmares Are",
+          "published_at": "2026-11-10T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "The risk of nuclear catastrophe is real, as is the fallout of the China–US domination game (hi there, spies). But no need to panic about Skynet.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "349d314923b43129e801",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/security-flaws-across-uk-government-sites-exposed-god-tier-information/",
+          "title": "Security Flaws Across UK Government Sites Exposed ‘God-Tier’ Information",
+          "published_at": "2026-11-10T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "A researcher’s trawl through publicly available code found private information was at risk across multiple departments.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "667ae52ac922981a75a2",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
+          "title": "A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure",
+          "published_at": "2026-11-10T05:01:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "DeepMind researchers were able to formally verify that the widely used encryption protocol works as intended. Their stretch goal? Do the same for “all the software of the world.”",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "6013a414af2b159e5b67",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2125,7 +2296,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "With a big checkbook and sought-after chips, Nvidia’s CEO had his thumb on the world of AI. An extramarital affair with a suspected Chinese spy may put all of that at risk.",
           "event_at": null,
           "supporting": []
@@ -2142,7 +2313,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The Nvidia CEO began working with consultants from Heller as early as October 2025, around the same time he was first linked to a suspected Chinese spy.",
           "event_at": null,
           "supporting": []
@@ -2159,7 +2330,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "As the publishing industry wrestles with paranoia over the provenance of manuscripts, writers are caught in an impossible bind.",
           "event_at": null,
           "supporting": []
@@ -2176,7 +2347,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "As data center protests break out across Europe, a mismatched band of campaigners is trying to block Google from building a sprawling new facility east of London.",
           "event_at": null,
           "supporting": []
@@ -2193,7 +2364,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark.",
           "event_at": null,
           "supporting": []
@@ -2210,25 +2381,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Moving AI from text to 3D space, world models simulate real-world physics to teach robots and autonomous cars how to navigate reality.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "0b44da5db7ffd35b5c22",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/apps-for-caregivers-get-a-dose-of-ai-but-that-might-not-be-enough/",
-          "title": "Apps for Caregivers Get a Dose of AI, but That Might Not Be Enough",
-          "published_at": "2026-11-07T11:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
-          "excerpt": "The apps and platforms that help family caregivers manage their loved ones’ needs are becoming more capable, but the broader issue of caregivers’ well-being remains unsolved.",
           "event_at": null,
           "supporting": []
         }
@@ -2460,13 +2614,99 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"cf1f8164183fe042fdf515c489f1b9a7\"",
+      "etag": "W/\"5e03cfa09fdb04c83b9a6fe05e9059af\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
-      "items": [],
-      "discovered": 0,
-      "verified": 0
+      "items": [
+        {
+          "id": "f215fcadba1e14ab81fb",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers",
+          "title": "Claude Fable 5.2 launch offers",
+          "published_at": "2026-11-09T19:30:12Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "To mark the launch of Claude Fable 5.2, we’re giving subscribers on eligible paid plans extra Fable usage for a limited time. Plans and seats that include Fable models get one to three Fable resets based on how long they’ve subscribed. Plans and seats that use Fable models with usage credits get Fable models included for one week, plus one Fable reset. This article explains what each plan gets, ho",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "e9950a58c8925934c58a",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+          "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+          "published_at": "2026-11-09T13:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Google is expanding its eighth-generation TPU portfolio with the new 8tx for secure inference and 8i Max for massive context. Get the details. Breadcrumb Home Innovation & AI Infrastructure & Cloud Global Network Our newest TPUs: 8tx and 8i Max, built for the agentic era Nov 09, 2026 | x.com Facebook LinkedIn Mail Copy link We’ve expanded our eighth generation TPU portfolio with TPU 8tx and TPU 8i",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "a989f1582084d0cf153c",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "title": "Claude Fable 5.2 and Mythos 5.2",
+          "published_at": "2026-11-09T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-09",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Claude Fable 5.2 and Claude Mythos 5.2, our new models for the hardest technical challenges. Fable 5.2 sets a new bar in coding, finance, and the sciences. Testers have found that Fable 5.2 and Mythos 5.2 communicate more clearly than past Fable and Mythos models. They generate outputs up to 30% faster than Claude Fable 5.1 and Claude Mythos 5.1, and they’re available at a lower price: $8 per mill",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "0c77ff5e2b269a81b0d4",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/claude-electronics-design",
+          "title": "Testing Claude on real-world electronics design",
+          "published_at": "2026-11-09T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "We asked Claude to design three electronic devices: a speakerphone, a voice-assistant hub, and a handheld virtual pet. The prototypes worked without any fixes to their circuitry. 01 Reasoning through geometric problems Testing Claude on real-world electronics design 01 Reasoning through geometric problems 02 Revising designs 03 Using software and documentation 04 Keeping track of constraints and d",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "cb1f592a974901d2d02a",
+          "source_id": "primary-google",
+          "source_name": "Google Developers",
+          "group": "google",
+          "trust": "official",
+          "url": "https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio/",
+          "title": "From prompt to app: Build with Google Maps in AI Studio",
+          "published_at": "2026-11-09T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-09",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Build geospatial apps using Google Maps Platform in Google AI Studio with one-click demo keys and no credit card required. Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube From prompt to app: Build with Google Maps in AI Studio NOV. 9, 2026 Abinaya Selvam Senior Product Manager Google Maps Platform Mike Taylor-Cai Product Manager Google AI Studio Share Facebook Twitte",
+          "event_at": null,
+          "supporting": []
+        }
+      ],
+      "discovered": 5,
+      "verified": 5
     },
     "openai-community": {
       "etag": "",
@@ -2486,7 +2726,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "By popular demand: Get your own classic handheld gaming device, then build and flash your own games using the ModRetro Chromatic plugin in Codex. Design levels, animate sprites, and playtest your games directly on your handheld. OpenAI ModRetro Chromatic: Codex Edition | OpenAI Supply Co. Meet ModRetro Chromatic: Codex Edition. Create your own games with Codex, load them onto a cartridge, and play",
           "event_at": null,
           "supporting": []
@@ -2513,7 +2753,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "We asked Claude to design three electronic devices: a speakerphone, a voice-assistant hub, and a handheld virtual pet. The prototypes worked without any fixes to their circuitry. 01 Reasoning through geometric problems Testing Claude on real-world electronics design 01 Reasoning through geometric problems 02 Revising designs 03 Using software and documentation 04 Keeping track of constraints and d",
           "event_at": null,
           "supporting": []
@@ -2532,11 +2772,28 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"32aaff72d7b22af395c97fad09d9f3ad\"",
-      "modified": "Mon, 09 Nov 2026 21:17:08 GMT",
+      "etag": "\"ebfce9d5f7601bb53410c4b3e4a50bcf\"",
+      "modified": "Tue, 10 Nov 2026 12:13:32 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "fade9239db147fbc899b",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation/",
+          "title": "Anthropic kicks off IPO roadshow, offering shares at $70 to $78 and targeting a trillion-dollar valuation",
+          "published_at": "2026-11-10T12:13:03Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "excerpt": "Anthropic is kicking off its IPO roadshow, targeting a valuation of up to $1.02 trillion. Beyond the public offering of up to $64.4 billion, the company is securing $26 billion through a private placement with Google, Nvidia, Microsoft, and other major tech firms as anchor investors. The IPO comes at a time when investors are growing increasingly skeptical of AI investments. The article Anthropic ",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "e6b9f7f4743833a08fff",
           "source_id": "decoder",
@@ -2549,7 +2806,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Anthropic is releasing Claude Fable 5.2 and Mythos 5.2, its most powerful models to date, in two versions: one freely available and one reserved for verified organizations. The models solve open physics problems, show stronger cybersecurity capabilities, design functioning operating systems, and write more than 90 percent of the changes merged into Anthropic's core code, according to the company. ",
           "event_at": null,
           "supporting": []
@@ -2566,7 +2823,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Meta is introducing Muse Ember, its smallest and most efficient AI model, optimized for repetitive agent tasks such as tool calls, routing, and data extraction. According to Meta, it delivers more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna. But it falls short when it comes to actual programming tasks. The article Meta launches Muse Ember, a small AI model built for the repetitive ",
           "event_at": null,
           "supporting": []
@@ -2583,7 +2840,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Bytedance Seed has introduced Seedream 5.5, an image model built for professional production workflows. It supports stable multi-pass editing over up to 100 iterations, generates native RGBA images with transparent backgrounds, and, according to Bytedance, outperforms GPT-Image-2.5 Sunburst in realism. A Pro version is planned. The article Bytedance's Seedream 5.5 promises pixel-stable image editi",
           "event_at": null,
           "supporting": []
@@ -2600,7 +2857,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Disney and Adobe are building custom AI tools together for the entertainment giant's productions. The article Disney bets on Adobe's Firefly to create brand-safe AI models for its entertainment empire appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2617,7 +2874,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Tencent chief AI scientist Vinces Yao Shunyu warns that AI will soon be able to develop bioweapons and argues for a middle ground between open and closed models. While safety filters on open-source systems can be easily stripped through abliteration, closed models like Anthropic's Claude often block too aggressively. For its upcoming open-weight model Hy4, Tencent is filtering dangerous hacking kn",
           "event_at": null,
           "supporting": []
@@ -2634,7 +2891,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Google is expanding its TPU 8 family with two specialized variants: the TPU 8tx keeps sensitive data encrypted even during processing, while the TPU 8i Max doubles compute power and memory by placing two chips on a single package. With nearly 100 external customers now on board, Google is increasingly positioning its in-house chips as an alternative to Nvidia's GPUs. The article Google ships four ",
           "event_at": null,
           "supporting": []
@@ -2651,7 +2908,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Nvidia CEO Jensen Huang has admitted to an extramarital affair with a woman US intelligence agencies classify as a suspected Chinese informant. The board has launched an independent investigation. The affair weakens Huang's lobbying efforts against stricter AI chip export controls, with a newly elected Democratic Congress poised to ramp up scrutiny of AI chip smuggling to China and push for tighte",
           "event_at": null,
           "supporting": []
@@ -2668,7 +2925,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "OpenAI co-founder Andrej Karpathy used Claude's Opus 5.5 to filter 43 million Hacker News comments into 6,454 curated videos. The result beats YouTube's own recommendations, he says. The article Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2685,25 +2942,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Consciousness researchers Anil Seth, Ned Block, and Giulio Tononi argue in a Nature commentary that today's AI systems aren't conscious and won't become so on silicon hardware. They consider the assumption that consciousness depends on computation alone \"fatally flawed\" and warn against granting rights to AI systems. The article The brain-as-computer metaphor shaped modern AI but may be misleading",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1d9b2433972fe4ad852f",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts/",
-          "title": "The inventor of the bitter lesson has a bitter lesson for LLM scaling enthusiasts",
-          "published_at": "2026-11-08T11:44:41Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
-          "excerpt": "Turing Award winner Richard Sutton reaffirms that raw compute alone isn't enough for intelligence and that fundamentally new learning methods are needed. Ex-OpenAI researcher Tworek agrees, saying blind transformer scaling \"has reward hacked brains of a whole generation of scientists.\" A growing wave of startups is already betting on exactly this gap. The article The inventor of the bitter lesson ",
           "event_at": null,
           "supporting": []
         }
@@ -2729,7 +2969,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T00:30:57.108319Z",
+          "collected_at": "2026-11-10T12:37:40.206099Z",
           "excerpt": "Cloudflare is distributing the first $301,300 of the Vite Ecosystem Fund to open source projects and maintainers. The recipients were chosen by a panel of Vite stack core team members, including maintainers not employed by Cloudflare.",
           "event_at": null,
           "supporting": []
@@ -3174,6 +3414,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-10-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -6288,6 +6533,151 @@
       "title": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
       "urls": [
         "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "b025f5003c19a7b1fa9c",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Claude Fable 5.2 launch offers",
+      "urls": [
+        "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers",
+        "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2"
+      ],
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [
+        "5.2"
+      ],
+      "event_type": "release"
+    },
+    {
+      "id": "f321c904268bcef29356",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "urls": [
+        "https://deepmind.google/blog/introducing-alphaproof-code/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "release"
+    },
+    {
+      "id": "0f0020abcf733229d29f",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Helping caregivers use AI in everyday life",
+      "urls": [
+        "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "69d4d9d74efa01629a6c",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Closing the AI guidance gap in education",
+      "urls": [
+        "https://openai.com/index/closing-ai-guidance-gap-education"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "6e8a06229c5b50c1450e",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "LangChain Releases: langchain-core==1.7.7",
+      "urls": [
+        "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.7"
+      ],
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.7.7"
+      ],
+      "event_type": "release"
+    },
+    {
+      "id": "5232879038119e5daf1c",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Announcements",
+      "urls": [
+        "https://www.anthropic.com/news/announcements"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "84757a8b6e04ab0dc5be",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Anthropic launches roadshow for proposed initial public offering",
+      "urls": [
+        "https://www.anthropic.com/news/roadshow-launch"
+      ],
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "release"
+    },
+    {
+      "id": "ac8f18750241a65f1eaf",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+      "urls": [
+        "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "61e7ac7c7e624eb36dec",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+      "urls": [
+        "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "e9950a58c8925934c58a",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+      "urls": [
+        "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "55d059b88c6c576a2f3d",
+      "issue": "2026-11-10-pm",
+      "cutoff": "2026-11-10T12:30:00Z",
+      "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+      "urls": [
+        "https://huggingface.co/blog/amazon/higher-order-pruning-experts"
       ],
       "entities": [],
       "versions": [],

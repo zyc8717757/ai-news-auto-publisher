@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-10-pm",
+  "revision": 1,
+  "created_at": "2026-11-10T12:37:40.206099Z",
+  "cutoff": "2026-11-10T12:30:00Z",
+  "window_start": "2026-11-08T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "b025f5003c19a7b1fa9c",
+      "title": "Claude Fable 5.2 launch offers",
+      "summary": "To mark the launch of Claude Fable 5.2, we’re giving subscribers on eligible paid plans extra Fable usage for a limited time. Plans and seats that include Fable models get one to three Fable resets based on how long they’ve subscribed. Plans and seats that use Fable models with usage credits get Fable models included for one week, plus one Fable reset. This article explains what each plan gets, how a Fable reset works, and how to use one. These offers are available on Pro plans, Max plans, Ultra",
+      "impact": "",
+      "category": "来源原文",
+      "score": 75.19,
+      "sources": [
+        {
+          "id": "f215fcadba1e14ab81fb",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers",
+          "title": "Claude Fable 5.2 launch offers",
+          "published_at": "2026-11-09T19:30:12Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "ea9e2270122931419f9b",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+          "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+          "published_at": "2026-11-09T19:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [
+        "5.2"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "f321c904268bcef29356",
+      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 72.86,
+      "sources": [
+        {
+          "id": "f321c904268bcef29356",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+          "published_at": "2026-11-10T12:02:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "0f0020abcf733229d29f",
+      "title": "Helping caregivers use AI in everyday life",
+      "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 72.84,
+      "sources": [
+        {
+          "id": "0f0020abcf733229d29f",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+          "title": "Helping caregivers use AI in everyday life",
+          "published_at": "2026-11-10T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "69d4d9d74efa01629a6c",
+      "title": "Closing the AI guidance gap in education",
+      "summary": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.91,
+      "sources": [
+        {
+          "id": "69d4d9d74efa01629a6c",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+          "title": "Closing the AI guidance gap in education",
+          "published_at": "2026-11-10T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "6e8a06229c5b50c1450e",
+      "title": "LangChain Releases: langchain-core==1.7.7",
+      "summary": "Changes since langchain-core==1.7.6 release(core): 1.7.7 (#41776) fix(core): cap nesting depth in `load()` (#41742) chore(deps): patch newer-python security lock resolutions (#41585)",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.39,
+      "sources": [
+        {
+          "id": "6e8a06229c5b50c1450e",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.7",
+          "title": "LangChain Releases: langchain-core==1.7.7",
+          "published_at": "2026-11-10T04:08:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.7.7"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "5232879038119e5daf1c",
+      "title": "Announcements",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap Anthropic is investing $100 million in Claude Frontier Academy to train 10,000 Frontier Deployed Engineers by the end of 2027, with cohorts from Accenture, Bain, CBA, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk already underway. Oct 2, 2026 Oct 2, 2026 Anthropic invests $1",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.09,
+      "sources": [
+        {
+          "id": "5232879038119e5daf1c",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/announcements",
+          "title": "Announcements",
+          "published_at": "2026-11-10T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-10",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "84757a8b6e04ab0dc5be",
+      "title": "Anthropic launches roadshow for proposed initial public offering",
+      "summary": "Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock. The initial public offering price is expected to be between $70.00 and $78.00 per share. Anthropic has applied to list its Class A common stock on the Nasdaq Global Select Market under the symbol “ANT.” Anthropic launches roadshow for proposed initial public offering Published Nov 10, 2026 Category Announcements Today Anthropic, PBC launched the roadshow for its proposed initial publi",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.09,
+      "sources": [
+        {
+          "id": "84757a8b6e04ab0dc5be",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/roadshow-launch",
+          "title": "Anthropic launches roadshow for proposed initial public offering",
+          "published_at": "2026-11-10T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "ac8f18750241a65f1eaf",
+      "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.31,
+      "sources": [
+        {
+          "id": "ac8f18750241a65f1eaf",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+          "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+          "published_at": "2026-11-09T15:05:57Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "61e7ac7c7e624eb36dec",
+      "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+      "summary": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.97,
+      "sources": [
+        {
+          "id": "61e7ac7c7e624eb36dec",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+          "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+          "published_at": "2026-11-09T14:00:01Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "e9950a58c8925934c58a",
+      "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+      "summary": "Google is expanding its eighth-generation TPU portfolio with the new 8tx for secure inference and 8i Max for massive context. Get the details. Breadcrumb Home Innovation & AI Infrastructure & Cloud Global Network Our newest TPUs: 8tx and 8i Max, built for the agentic era Nov 09, 2026 | x.com Facebook LinkedIn Mail Copy link We’ve expanded our eighth generation TPU portfolio with TPU 8tx and TPU 8i Max, marking four new TPU systems in a single year. Amin Vahdat SVP and Chief Technologist, AI and ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.66,
+      "sources": [
+        {
+          "id": "e9950a58c8925934c58a",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+          "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+          "published_at": "2026-11-09T13:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "55d059b88c6c576a2f3d",
+      "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.52,
+      "sources": [
+        {
+          "id": "55d059b88c6c576a2f3d",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+          "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+          "published_at": "2026-11-09T12:34:29Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
