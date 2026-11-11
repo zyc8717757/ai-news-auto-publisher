@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-11T00:30:00Z",
+  "last_covered_at": "2026-11-11T12:30:00Z",
   "ai_attempts": [
     "2026-11-10T00:31:21.896325Z",
     "2026-11-10T00:31:28.812595Z",
@@ -953,6 +953,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "ac94b61a25ade5edbf71",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+          "title": "ChatGPT Plus for veterans and servicemembers",
+          "published_at": "2026-11-11T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "0f0020abcf733229d29f",
           "source_id": "openai",
           "source_name": "OpenAI",
@@ -964,7 +981,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
           "event_at": null,
           "supporting": []
@@ -981,7 +998,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT.",
           "event_at": null,
           "supporting": []
@@ -998,8 +1015,25 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "9092d5eb66f29547408d",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "published_at": "2026-11-10T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
           "event_at": null,
           "supporting": []
         },
@@ -1015,8 +1049,25 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "37e4452e64c861cffe83",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/cogent-security",
+          "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+          "published_at": "2026-11-10T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
           "event_at": null,
           "supporting": []
         },
@@ -1032,7 +1083,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
           "event_at": null,
           "supporting": []
@@ -1049,7 +1100,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
           "event_at": null,
           "supporting": []
@@ -1066,7 +1117,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
           "event_at": null,
           "supporting": []
@@ -1083,14 +1134,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 50,
-      "verified": 50
+      "discovered": 49,
+      "verified": 49
     },
     "anthropic": {
       "etag": "",
@@ -1110,7 +1161,7 @@
           "time_precision": "day",
           "source_date": "2026-11-10",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap Anthropic is investing $100 million in Claude Frontier Academy to train 10,000 Frontier Deployed Engineers by the end of 2027, with cohorts from Accenture, Bain, CBA, Deloitte, McKi",
           "event_at": null,
           "supporting": []
@@ -1127,7 +1178,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock. The initial public offering price is expected to be between $70.00 and $78.00 per share. Anthropic has applied to list its Class A common stock on the Nasdaq Global Select Market under the symbol “ANT.” Anthropic launches roadshow for proposed initial public offering Published Nov 10, 2",
           "event_at": null,
           "supporting": []
@@ -1137,7 +1188,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"PYLD9A\"",
+      "etag": "\"nvw-sw\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1154,7 +1205,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1171,7 +1222,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
           "event_at": null,
           "supporting": []
@@ -1188,7 +1239,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
           "event_at": null,
           "supporting": []
@@ -1204,6 +1255,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "8e8e851f9ac38a1986e4",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+          "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+          "published_at": "2026-11-11T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "A portrait of Dr Nontobeko Ntombela, Senior Lecturer, Department of Curatorial, Public and Visual Cultures, Wits School of Arts, University of the Witwatersrand",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "c0101f36ad82bf9132fd",
           "source_id": "google-ai",
           "source_name": "Google AI",
@@ -1215,7 +1283,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "A man speaks into a phone. Text on the screen reads 'Gemini Intelligence'",
           "event_at": null,
           "supporting": []
@@ -1232,7 +1300,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See what’s new in this partnership.",
           "event_at": null,
           "supporting": []
@@ -1249,7 +1317,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
           "event_at": null,
           "supporting": []
@@ -1259,11 +1327,28 @@
       "verified": 20
     },
     "huggingface": {
-      "etag": "W/\"41149-4QvSq//BGeVj0brTue1KdKO2rSA\"",
+      "etag": "W/\"4127f-VjEhocQHDLknzJOwN0mZ2sU0jmE\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "19b4fcb1faac9c9bdbcc",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/qvac/botpsy",
+          "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+          "published_at": "2026-11-11T05:01:16Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "cb93d68b445c05b0e3dc",
           "source_id": "huggingface",
@@ -1276,7 +1361,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1293,7 +1378,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1310,7 +1395,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1327,7 +1412,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1337,8 +1422,8 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"be73d8e68b283321c3d9ea6e96cf9122\"",
-      "modified": "Tue, 10 Nov 2026 23:22:24 GMT",
+      "etag": "\"bdc8618630f60b213a957ef9a8d57594\"",
+      "modified": "Wed, 11 Nov 2026 08:08:33 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1354,7 +1439,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Microsoft researchers have discovered “Lazarus,” a backdoor technique that can reprogram dormant neurons in an AI model, causing an otherwise normal AI agent to execute malicious commands when a hidden trigger appears. The threat is especially serious for AI agents with tool or terminal access. A triggered model could quietly download and run attacker code, […] The post Lazare, veni foras: Reprogr",
           "event_at": null,
           "supporting": []
@@ -1364,11 +1449,28 @@
       "verified": 10
     },
     "nvidia": {
-      "etag": "\"f66ebf3cde264e96faac0bd80032b1df-gzip\"",
-      "modified": "Tue, 10 Nov 2026 19:19:20 GMT",
+      "etag": "\"2b0fdd9669e35db3b5b2ad1fcd332498-gzip\"",
+      "modified": "Wed, 11 Nov 2026 04:33:18 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "0a9ebdb63db3687d3463",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/ai-recycling-startups/",
+          "title": "How AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
+          "published_at": "2026-11-11T03:00:20Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Vision AI and robotics pick what’s worth recovering out of conveyor belts of used clothing, bottles and mixed recyclables, diverting thousands of tons of materials from landfills.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "9ccf20ad200fc0ba5e4f",
           "source_id": "nvidia",
@@ -1381,7 +1483,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Kubernetes, the open source system that manages how applications run across thousands of AI factories, has become the foundation for AI, and the demands on it are only growing. To help meet them, NVIDIA is deepening its commitment to open source at KubeCon + CloudNativeCon, the flagship conference for the Kubernetes and cloud-native communities. NVIDIA […]",
           "event_at": null,
           "supporting": []
@@ -1398,7 +1500,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in […]",
           "event_at": null,
           "supporting": []
@@ -1415,7 +1517,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Korea’s Ministry of Science and ICT and NVIDIA hosted the MSIT-NVIDIA AI Startup Partnership Forum at COEX. Representatives from the Ministry of Science and ICT and NVIDIA met with over 20 Korean startups across foundation models, physical AI, AI infrastructure and AI semiconductors. NVIDIA also announced an investment in Korean startup Point2, with additional investments […]",
           "event_at": null,
           "supporting": []
@@ -1432,7 +1534,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Tapping into the country’s strengths in manufacturing and engineering, NVIDIA is helping advance Korea’s physical AI ecosystem. The country’s industry leaders are applying accelerated computing, AI and simulation to everything from semiconductor manufacturing to robotics and autonomous vehicles. These efforts are helping bring physical AI from development into real-world production. Samsung Advanc",
           "event_at": null,
           "supporting": []
@@ -1449,7 +1551,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "As AI agents take on more work, they need capable open models and security that advances alongside them. Hyundai Motor Group is exploring NVIDIA NemoClaw blueprints and the NVIDIA OpenShell runtime, while AIM Intelligence is integrating its Starfort platform with NVIDIA OpenShell to support secure AI agents for employee productivity and enterprise workflows. A key […]",
           "event_at": null,
           "supporting": []
@@ -1466,7 +1568,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "NVIDIA and Korea’s Ministry of Science and ICT (MSIT) are expanding their collaboration across the country’s sovereign AI ecosystem, from AI semiconductors and data center infrastructure to talent, startups, models, agents and security. The collaboration lays the groundwork for Korean NPU and XPU companies to explore participation in the NVIDIA NVLink Fusion ecosystem, and includes […]",
           "event_at": null,
           "supporting": []
@@ -1483,7 +1585,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "NVIDIA is releasing Dynamo-optimized deployment recipes for Korea’s leading open models: A.X K2 from SK Telecom, K-EXAONE 2.0 from LG AI Research, Solar Open 2 from Upstage and Motif-3 from Motif Technologies. As models grow beyond the capacity of a single GPU, they must be split across multiple GPUs, requiring careful coordination of request routing […]",
           "event_at": null,
           "supporting": []
@@ -1511,7 +1613,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"b0547f4d258933786ac7b59347cba1519115c3bbd4a612f01d6cb1e37710e4b8\"",
+      "etag": "W/\"4defaf39638651a3179236346dcba2d6998b4f96d1382e0d59f5f7f763c51d06\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1538,7 +1640,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"8111694303a7a1352ab2a9be25344f67ed0c9fd0c8fb35b54220aaa976cab53c\"",
+      "etag": "W/\"5832fa36eee0ea866f460e9804a42ca62faaef3c9e2a2a6d5cecc03b300f7a56\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1547,7 +1649,7 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"a73e08d242a59e2d23ec167b07688f6994589cd56dfef6631d2d8e67353afca7\"",
+      "etag": "W/\"c5b68568ad45fba93301e1ff16554c0302c714b1892b3bd1547fd284531d66f9\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1564,7 +1666,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "## Ripple Preview [Ripple Preview](https://ollama.com/library/ripple-preview) from Ricursive Intelligence is a 65B dense model built for agentic coding. ```sh ollama run ripple-preview ``` ## What's Changed - Qwen3.8 Flash Next uses about 27 GiB less memory on Apple silicon - `ollama launch claude` always routes Claude Code to the selected model - `ollama launch` explains when a cloud model has be",
           "event_at": null,
           "supporting": []
@@ -1583,7 +1685,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"3d0efacd0b5f460406f536077b61c35434746b5268f0cb604fc4a2dec8ba76d6\"",
+      "etag": "W/\"b9064774fa292e793a498ea4c15176e0d57de4f20000a5126a09eea5805af91d\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1600,7 +1702,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Changes since langchain==1.4.9 release(langchain): 1.4.10 (#41778) fix(langchain): keep middleware-internal model calls off the `messages` stream (#41579) chore(deps): patch newer-python security lock resolutions (#41585) fix(langchain): omit trace inputs from `ModelRefusalMiddleware` (#41689)",
           "event_at": null,
           "supporting": []
@@ -1617,7 +1719,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Changes since langchain-core==1.7.6 release(core): 1.7.7 (#41776) fix(core): cap nesting depth in `load()` (#41742) chore(deps): patch newer-python security lock resolutions (#41585)",
           "event_at": null,
           "supporting": []
@@ -1634,7 +1736,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Changes since langchain-fireworks==1.7.2 release(fireworks): 1.7.3 (#41773) fix(fireworks): default `max_tokens` from model profiles (#41772) chore(model-profiles): refresh model profile data (#41762) chore(model-profiles): refresh model profile data (#41745)",
           "event_at": null,
           "supporting": []
@@ -1653,11 +1755,45 @@
       "verified": 30
     },
     "litellm": {
-      "etag": "W/\"309f7a8fc14a3345a8e8a2e8b4e994b84d37530f32697a13f4f8c3de3037e618\"",
+      "etag": "W/\"d1af31553205f9f68432c72a9f0af18b6b13e64dea242685ae23bd6c7483d913\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "9b15785399e30f5376c5",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.8",
+          "title": "LiteLLM Releases: v1.106.8",
+          "published_at": "2026-11-11T03:23:36Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.106.8 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.106.8 2 PRs. 1 fixed, 1 changed. No action needed to upgrade ### Changes - **Cost tracking and",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "569a35504d8a0adf11b6",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.109.0",
+          "title": "LiteLLM Releases: v1.109.0",
+          "published_at": "2026-11-11T00:56:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.109.0 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.109.0 982 PRs. 144 added, 424 fixed, 60 changed, 17 improved, 9 removed. 5 need action ### Act",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "118295c90711bc89ec4d",
           "source_id": "litellm",
@@ -1670,7 +1806,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "> [!TIP] > The `lts` image tag always points to the latest LTS release. Pull `ghcr.io/berriai/litellm:lts` to stay on the newest LTS patch ## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.108.5 ``` Same command for `litellm-database`, `litellm-non_root` and the `do",
           "event_at": null,
           "supporting": []
@@ -1687,8 +1823,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
-          "excerpt": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). This release is signed with the key introduced in [commit `e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is the s",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.104.9 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.104.9 4 PRs. 1 improved. No action needed to upgrade ### Changes - **Logging and observability",
           "event_at": null,
           "supporting": []
         },
@@ -1704,8 +1840,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
-          "excerpt": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). This release is signed with the key introduced in [commit `e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is the s",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.103.11 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.103.11 10 PRs. 2 improved. No action needed to upgrade ### Changes - **Logging and observabil",
           "event_at": null,
           "supporting": []
         },
@@ -1721,7 +1857,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "> [!TIP] > The `lts` image tag always points to the latest LTS release. Pull `ghcr.io/berriai/litellm:lts` to stay on the newest LTS patch ## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.108.4 ``` Same command for `litellm-database`, `litellm-non_root` and the `do",
           "event_at": null,
           "supporting": []
@@ -1775,7 +1911,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The Conference on Robot Learning (CoRL) takes place November 9–12, 2026, in Austin, Texas. BAIR faculty, postdocs and students will be presenting research at various sessions, including an Early Career Keynote from Professor Negar Mehr. See below for the full schedule of sessions with BAIR members, including papers co-authored with collaborators at other universities and companies. November 9–12, ",
           "event_at": null,
           "supporting": []
@@ -1785,8 +1921,8 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1794356746\"",
-      "modified": "Wed, 11 Nov 2026 00:25:46 GMT",
+      "etag": "\"1794399726\"",
+      "modified": "Wed, 11 Nov 2026 12:22:06 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1802,7 +1938,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "With up to $53 million from ARPA-H, the researchers will use AI to generate safer herbicides that reduce dependence on imports and improve the security of the U.S. food supply.",
           "event_at": null,
           "supporting": []
@@ -1819,7 +1955,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "By learning how matter moves, the WorldParticle system could assist with developing soft robots, medicines, and more.",
           "event_at": null,
           "supporting": []
@@ -1836,7 +1972,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The new approach, known as FLEX, could lead to more intuitive, interactive household and assistive robots.",
           "event_at": null,
           "supporting": []
@@ -1846,11 +1982,28 @@
       "verified": 50
     },
     "techcrunch-ai": {
-      "etag": "W/\"ac32d75eeb3b6a74d2b499ec59590f50\"",
-      "modified": "Tue, 10 Nov 2026 23:27:39 GMT",
+      "etag": "W/\"60a749d79e032472f2cb9f8f0b58a211\"",
+      "modified": "Wed, 11 Nov 2026 10:53:59 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "d1951b7785beef233efa",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
+          "title": "Nvidia’s crisis has corporate governance experts reaching for the popcorn",
+          "published_at": "2026-11-11T07:30:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "The governance experts we talked to say nobody has seen anything like what's unfolding right now.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "612bc333be177914040d",
           "source_id": "techcrunch-ai",
@@ -1863,7 +2016,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known figure in the travel industry.",
           "event_at": null,
           "supporting": []
@@ -1880,7 +2033,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "New York is preparing to enforce its sweeping AI safety law, requiring major developers like OpenAI and Anthropic to register, disclose safety practices, and report critical incidents or face fines.",
           "event_at": null,
           "supporting": []
@@ -1897,7 +2050,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Each of the seven co-founders plans to sell exactly the same number of shares in the IPO, which would bring each of them about $250 million in cash at the midpoint of the price range while leaving the group in control of the company.",
           "event_at": null,
           "supporting": []
@@ -1914,7 +2067,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The deal comes a few weeks after Oura postponed its up to $2.2 billion IPO indefinitely, citing “uncertainty in the IPO market.”",
           "event_at": null,
           "supporting": []
@@ -1931,7 +2084,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "PSI used an unreleased Anthropic model to answer a fundamental question about quantum computing that scientists have pursued for nearly two decades.",
           "event_at": null,
           "supporting": []
@@ -1948,7 +2101,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "OpenAI is looking to make ChatGPT a more robust consumer discovery engine, and a host of new features seek to empower businesses to help it do that.",
           "event_at": null,
           "supporting": []
@@ -1965,7 +2118,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "As participants talk, Claude can draft the plan being discussed, map out a timeline on a whiteboard, answer questions in the meeting chat, and access connected work apps to retrieve information, such as last year's figures.",
           "event_at": null,
           "supporting": []
@@ -1982,7 +2135,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The affair could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
           "event_at": null,
           "supporting": []
@@ -1999,7 +2152,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Google's new tensor processing units (TPUs) broaden its chip portfolio to more use cases: confidential model training and more memory capacity.",
           "event_at": null,
           "supporting": []
@@ -2016,7 +2169,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Users can now interact with Meta’s AI assistant through voice calls, text messages, or dictation on their Apple Watch.",
           "event_at": null,
           "supporting": []
@@ -2033,25 +2186,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Adobe is taking on Figma with a new prototype builder tool in Firefly.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1a56c99530ddc4c22fe1",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/",
-          "title": "Anthropic sets IPO price range of $70 to $78 per share to reach an implied valuation of $1.404 trillion",
-          "published_at": "2026-11-10T14:01:39Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
-          "excerpt": "The company could end up being worth a hefty $1.404 trillion if its shares list at the top of the price range, on a fully diluted basis.",
           "event_at": null,
           "supporting": []
         }
@@ -2070,7 +2206,7 @@
     },
     "ars": {
       "etag": "",
-      "modified": "Wed, 11 Nov 2026 00:13:46 GMT",
+      "modified": "Wed, 11 Nov 2026 02:11:23 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -2086,7 +2222,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The FireCuda Forge revisits an old idea, with some familiar questions.",
           "event_at": null,
           "supporting": []
@@ -2103,7 +2239,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "\"Launch is extremely constrained and that is exactly the situation we predicted.\"",
           "event_at": null,
           "supporting": []
@@ -2120,7 +2256,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Amazon's roaming Ring Robotics devices will debut in late 2026 and early 2027.",
           "event_at": null,
           "supporting": []
@@ -2137,7 +2273,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Democrats accuse FCC nominee of evading questions about Carr, her current boss.",
           "event_at": null,
           "supporting": []
@@ -2154,7 +2290,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Researcher finds 35,000 Grok Build apps wide open to anyone who looked for them.",
           "event_at": null,
           "supporting": []
@@ -2171,7 +2307,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Mathematician Steven Strogatz discusses his new book, Big Math: The Hidden Codes That Run Our World .",
           "event_at": null,
           "supporting": []
@@ -2188,7 +2324,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Fi has always supported T-Mobile, but the new one? Google won't say.",
           "event_at": null,
           "supporting": []
@@ -2205,7 +2341,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Spruce up your home screen with expanded custom icons and AI-generated widgets.",
           "event_at": null,
           "supporting": []
@@ -2222,7 +2358,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "User-based recommendations could make it easier to find stuff to watch on Tubi.",
           "event_at": null,
           "supporting": []
@@ -2239,7 +2375,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Benchmark tools for generic gaming rigs could be coming soon.",
           "event_at": null,
           "supporting": []
@@ -2256,7 +2392,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Bucking recent trends, fossil fuel emissions look to be down 0.4 percent.",
           "event_at": null,
           "supporting": []
@@ -2273,7 +2409,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "\"NASA advised that Vast’s submission in some locations substituted 'the PAM Provider' for Axiom\"",
           "event_at": null,
           "supporting": []
@@ -2283,7 +2419,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"52514d4d42540cbdfa57d8aee9bb2ef6\"",
+      "etag": "W/\"4a4fbd13f69495725ff059b61ecbd513\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -2300,7 +2436,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "As espionage targets go, Jensen Huang is perhaps one of the least surprising on Earth. The Nvidia CEO runs one of the world's most valuable companies, controls the in-demand technology fueling the AI boom, and is cozy with presidents, CEOs, and all manner of important people. He also wears a cool leather jacket. Which makes […]",
           "event_at": null,
           "supporting": []
@@ -2317,7 +2453,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "ChatGPT is going to let you chat with verified \"Business Agents\" that represent a brand to help you with things like comparison shopping. The feature, available first to \"eligible\" e-commerce and online service businesses in the US, is launching as part of a suite of business-focused features in ChatGPT being announced today in beta. You […]",
           "event_at": null,
           "supporting": []
@@ -2334,7 +2470,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Some Independent Games Festival (IGF) jurors published a statement yesterday saying they would not vote for games that use generative AI in \"any capacity.\" Soon after, the developer of indie hit Big Walk has published a statement saying it \"sparingly\" used AI in the \"final stretch\" of the game's development to \"help work through difficult […]",
           "event_at": null,
           "supporting": []
@@ -2351,7 +2487,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "For years, Anthropic has been known for its focus on enterprise and coding tools that attract high-flying corporate clients, inspiring competing frontier labs - like OpenAI, SpaceXSI, and Meta - to copy its strategies. Earlier this year, Claude Code went through its own particular hype cycle. And now, Anthropic is trying to expand its footprint […]",
           "event_at": null,
           "supporting": []
@@ -2368,7 +2504,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "eBay appears to have blocked AI agents, including Meta's Muse, from browsing on the platform - the latest speed bump in the AI agent race. A reader tells The Verge that for several weeks he's had his Muse agent browse and curate a daily digest of watches for sale on platforms like eBay, including a […]",
           "event_at": null,
           "supporting": []
@@ -2385,7 +2521,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Google is rolling out its latest AI model, Gemini 4 Carbon, to the general public after releasing it to a select group of \"cybersecurity defenders\" two weeks ago. Google claims Carbon is its \"strongest model\" yet, and capable of competing with the very best systems from Anthropic and OpenAI. Google says Gemini 4 Carbon \"pushes […]",
           "event_at": null,
           "supporting": []
@@ -2402,7 +2538,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Anthropic confirmed on Tuesday that its IPO could be one of the biggest ever, even while falling short of previous expectations. Its IPO price is expected to be between $70.00 and $78.00 per share, which would put its valuation as high as $1.4 trillion, according to the The New York Times. The Wall Street Journal […]",
           "event_at": null,
           "supporting": []
@@ -2419,7 +2555,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Adobe is committing itself to the notion that chatbots and AI agents could be your next design assistant, or even automate creative workflows and repetitive tasks on your behalf. Some of the tools and features announced today at Adobe's Max conference in Miami, Florida, include allowing your preferred third-party AI agents to access and change […]",
           "event_at": null,
           "supporting": []
@@ -2436,7 +2572,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Adobe is expanding its Creative Cloud apps and Firefly AI platform with new capabilities that aim to make design and editing projects faster and less complicated. Some of the announcements from Adobe's Max event today include features for automatically removing objects, blemishes, and other unwanted distractions in Premiere, Photoshop, and Lightroom, alongside new generative AI […]",
           "event_at": null,
           "supporting": []
@@ -2453,7 +2589,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Ring is finally shipping a flying indoor drone camera. For real this time. The Ring Drone Cam will arrive on January 27th, 2027, for $249.99, Ring founder Jamie Siminoff said at a launch event in New York City this week. If it does actually ship, it will arrive almost six years after the company announced […]",
           "event_at": null,
           "supporting": []
@@ -2469,6 +2605,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "a745694614414e512052",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/teen-girl-asked-gemini-about-suicide-for-months-until-it-was-flagged/",
+          "title": "A 13-Year-Old Asked AI About Suicide on Her School Laptop. It Didn’t Get Flagged for Weeks",
+          "published_at": "2026-11-11T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "The young girl’s parents allege that she used Gemini via her school Chromebook to plan her suicide, but the school’s monitoring systems didn’t know until it was almost too late.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "d81e2d3ca52a3408bf02",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2480,7 +2633,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Built by Cyanogen’s cofounder, Kora is a next-gen alternative to Windows and macOS built for power users running local AI models.",
           "event_at": null,
           "supporting": []
@@ -2497,7 +2650,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The “abliterators” are flooding the internet with AI models that never say no, making it easier for people to improve their cyberdefenses—or build a bomb.",
           "event_at": null,
           "supporting": []
@@ -2514,7 +2667,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The risk of nuclear catastrophe is real, as is the fallout of the China–US domination game (hi there, spies). But no need to panic about Skynet.",
           "event_at": null,
           "supporting": []
@@ -2531,7 +2684,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "A researcher’s trawl through publicly available code found private information was at risk across multiple departments.",
           "event_at": null,
           "supporting": []
@@ -2548,7 +2701,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "DeepMind researchers were able to formally verify that the widely used encryption protocol works as intended. Their stretch goal? Do the same for “all the software of the world.”",
           "event_at": null,
           "supporting": []
@@ -2565,7 +2718,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "With a big checkbook and sought-after chips, Nvidia’s CEO had his thumb on the world of AI. An extramarital affair with a suspected Chinese spy may put all of that at risk.",
           "event_at": null,
           "supporting": []
@@ -2582,7 +2735,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "The Nvidia CEO began working with consultants from Heller as early as October 2025, around the same time he was first linked to a suspected Chinese spy.",
           "event_at": null,
           "supporting": []
@@ -2599,7 +2752,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "As the publishing industry wrestles with paranoia over the provenance of manuscripts, writers are caught in an impossible bind.",
           "event_at": null,
           "supporting": []
@@ -2616,25 +2769,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "As data center protests break out across Europe, a mismatched band of campaigners is trying to block Google from building a sprawling new facility east of London.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "30544039ab2b1feb0e6e",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
-          "title": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
-          "published_at": "2026-11-08T12:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
-          "excerpt": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark.",
           "event_at": null,
           "supporting": []
         }
@@ -2866,11 +3002,198 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"5e03cfa09fdb04c83b9a6fe05e9059af\"",
+      "etag": "W/\"f08d3e6579edd50b655e3dfe9ab33273\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "0e365028518c38e91ece",
+          "source_id": "primary-minimax",
+          "source_name": "MiniMax",
+          "group": "minimax",
+          "trust": "official",
+          "url": "https://www.minimax.io/blog/minimax-h3-image",
+          "title": "MiniMax H3-Image: Bringing 4K Image Generation into the 10-Second Era",
+          "published_at": "2026-11-10T16:23:20Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Today, we're releasing MiniMax H3-Image, an open-weight image generation model built on H3. It supports text-to-image generation, reference-based generation, and image editing. MiniMax H3-Image: Bringing 4K Image Generation into the 10-Second Era 2026-11-11 Today, we're releasing MiniMax H3-Image, an open-weight image generation model built on H3. It supports text-to-image generation, reference-ba",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "5d3f1a46c035f064c1e8",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "title": "Gemini 4 Carbon is now available",
+          "published_at": "2026-11-10T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers. Gemini 4 Carbon is available via the API in Google AI Studio and Gemini for business for all paying developers and enterprises, at the same introductory price 1 as Gemini 4 Argon ($2 per million input tokens and $10 per million output tokens). It is also rolling out to all Google AI Ultra subscribe",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "172ae3f5f4b569c4d80c",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
+          "title": "Introducing the Multimodal Knowledge Agent benchmark",
+          "published_at": "2026-11-10T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Google introduces the MKA benchmark to evaluate how agents reason across complex visual tasks. See how Gemini 4 Carbon performs. Read the report. Breadcrumb Home Innovation & AI Models & research Gemini Models Introducing the Multimodal Knowledge Agent benchmark Nov 10, 2026 | x.com Facebook LinkedIn Mail Copy link The Multimodal Knowledge Agent (MKA) benchmark, developed with Artificial Analysis,",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "8827aad4505e69ef98eb",
+          "source_id": "primary-google",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+          "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+          "published_at": "2026-11-10T15:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Introducing Gemini Robotics 2.5, our most capable vision-language-action model enhancing dexterity, reliability, and safety for real-world environments. Gemini 4 Argon for Robotics October 2026 Models Learn more",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "5ac8836f0ba144b39fd6",
+          "source_id": "media-techcrunch",
+          "source_name": "techcrunch.com",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
+          "title": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
+          "published_at": "2026-11-10T14:05:10Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Adobe is taking on Figma with a new prototype builder tool in Firefly. Harbinger raises $240M after expanding into defense Sean O'Kane Harbinger raises $240M after expanding into defense Adobe is pouring more AI into its products, including Photoshop, Premiere, Illustrator, and InDesign, in a major product feature announcement at its MAX event in Miami. The company is also expanding AI capabilitie",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "59a8a5dd3afc5312ddae",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+          "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+          "published_at": "2026-11-10T14:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See what’s new in this partnership. Breadcrumb Home Company News Inside Google Company Announcements We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps. Nov 10, 2026 Today at Adobe MAX, we announced we’re expanding our partnership with Adobe. Swit",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "029532486be3d7c3a122",
+          "source_id": "primary-elevenlabs",
+          "source_name": "ElevenLabs",
+          "group": "elevenlabs",
+          "trust": "official",
+          "url": "https://elevenlabs.io/blog/scribe-v3",
+          "title": "Introducing Scribe v3 and v3 Live, our most accurate speech to text models",
+          "published_at": "2026-11-10T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Scribe v3 and Scribe v3 Live are our most accurate speech to text models for recorded and realtime audio, with 27% fewer word errors than Scribe v2. Voice agents feel this most, because a single misheard digit can fail the check that starts the call. Eneco, which supplies energy to more than 2 million homes and businesses in the Netherlands, runs its voice agent on ElevenAgents and tested Scribe v",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "f321c904268bcef29356",
+          "source_id": "primary-google",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+          "published_at": "2026-11-10T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "AlphaProof Code agents wrote over three million lines of machine-checked proof in Lean to verify the core cryptographic protections in Signal down to machine instructions. Introducing CodeMender: an AI agent for code security October 2025 Responsibility & Safety Learn more",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "39358eeccb703a6614c0",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+          "title": "More ways to work with Claude: Sheets, Whiteboards, and Interactive Connectors",
+          "published_at": "2026-11-10T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-10",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Anthropic introduces Claude Sheets and Claude Whiteboards, and an upgrade to interactive connectors. More ways to work with Claude: Sheets, Whiteboards, and Interactive Connectors Work at the speed of thought Category Product updates Product Claude apps Date November 10, 2026 Reading time 5 min Share Copy link Contents All your connectors and context Bring ideas to life faster, together Teams alre",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "19f8bc589a9b194da0da",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://claude.com/resources/articles/interactive-connectors-full-tool",
+          "title": "Your apps can now open in Claude, and Claude can work in them",
+          "published_at": "2026-11-10T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-10",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Interactive connectors can now open beside your chat or full screen, so you and Claude can work in the same tool, where the connector supports it. Your apps can now open in Claude, and Claude can work in them Our partners can now embed their apps directly in Claude, so you and Claude can work in the same tool, on the same screen, without switching tabs. Category Product updates Product Claude apps",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "657e032c519b1e296305",
+          "source_id": "primary-google",
+          "source_name": "Google Cloud",
+          "group": "google",
+          "trust": "official",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare",
+          "title": "Introducing Gemini for healthcare",
+          "published_at": "2026-11-10T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-10",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "Today, we are announcing Gemini for healthcare. This purpose-built industry solution extends the universal Gemini agent, we introduced last month at Gemini at Work. AI & Machine Learning Introducing Gemini for healthcare November 10, 2026 Thomas Kurian CEO, Google Cloud Try Gemini today The front door to AI in the workplace Try now Every healthcare organization is working to deliver great care to ",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "f215fcadba1e14ab81fb",
           "source_id": "primary-anthropic",
@@ -2883,82 +3206,14 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-10T12:37:40.206099Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "To mark the launch of Claude Fable 5.2, we’re giving subscribers on eligible paid plans extra Fable usage for a limited time. Plans and seats that include Fable models get one to three Fable resets based on how long they’ve subscribed. Plans and seats that use Fable models with usage credits get Fable models included for one week, plus one Fable reset. This article explains what each plan gets, ho",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "e9950a58c8925934c58a",
-          "source_id": "primary-google",
-          "source_name": "Google",
-          "group": "google",
-          "trust": "official",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
-          "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
-          "published_at": "2026-11-09T13:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T12:37:40.206099Z",
-          "excerpt": "Google is expanding its eighth-generation TPU portfolio with the new 8tx for secure inference and 8i Max for massive context. Get the details. Breadcrumb Home Innovation & AI Infrastructure & Cloud Global Network Our newest TPUs: 8tx and 8i Max, built for the agentic era Nov 09, 2026 | x.com Facebook LinkedIn Mail Copy link We’ve expanded our eighth generation TPU portfolio with TPU 8tx and TPU 8i",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "a989f1582084d0cf153c",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-          "title": "Claude Fable 5.2 and Mythos 5.2",
-          "published_at": "2026-11-09T00:00:00Z",
-          "time_precision": "day",
-          "source_date": "2026-11-09",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T12:37:40.206099Z",
-          "excerpt": "Claude Fable 5.2 and Claude Mythos 5.2, our new models for the hardest technical challenges. Fable 5.2 sets a new bar in coding, finance, and the sciences. Testers have found that Fable 5.2 and Mythos 5.2 communicate more clearly than past Fable and Mythos models. They generate outputs up to 30% faster than Claude Fable 5.1 and Claude Mythos 5.1, and they’re available at a lower price: $8 per mill",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "0c77ff5e2b269a81b0d4",
-          "source_id": "primary-anthropic",
-          "source_name": "Anthropic",
-          "group": "anthropic",
-          "trust": "official",
-          "url": "https://www.anthropic.com/research/claude-electronics-design",
-          "title": "Testing Claude on real-world electronics design",
-          "published_at": "2026-11-09T00:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T12:37:40.206099Z",
-          "excerpt": "We asked Claude to design three electronic devices: a speakerphone, a voice-assistant hub, and a handheld virtual pet. The prototypes worked without any fixes to their circuitry. 01 Reasoning through geometric problems Testing Claude on real-world electronics design 01 Reasoning through geometric problems 02 Revising designs 03 Using software and documentation 04 Keeping track of constraints and d",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "cb1f592a974901d2d02a",
-          "source_id": "primary-google",
-          "source_name": "Google Developers",
-          "group": "google",
-          "trust": "official",
-          "url": "https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio/",
-          "title": "From prompt to app: Build with Google Maps in AI Studio",
-          "published_at": "2026-11-09T00:00:00Z",
-          "time_precision": "day",
-          "source_date": "2026-11-09",
-          "time_basis": "publication",
-          "collected_at": "2026-11-10T12:37:40.206099Z",
-          "excerpt": "Build geospatial apps using Google Maps Platform in Google AI Studio with one-click demo keys and no credit card required. Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube From prompt to app: Build with Google Maps in AI Studio NOV. 9, 2026 Abinaya Selvam Senior Product Manager Google Maps Platform Mike Taylor-Cai Product Manager Google AI Studio Share Facebook Twitte",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 5,
-      "verified": 5
+      "discovered": 16,
+      "verified": 16
     },
     "openai-community": {
       "etag": "",
@@ -2978,7 +3233,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Claim your business, manage your information, and get insights on how people engage with you. Eligible businesses can also build a Business Agent to answer customers’ questions and help them explore what you offer. OpenAI Introducing Businesses in ChatGPT Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT. You can also publish ",
           "event_at": null,
           "supporting": []
@@ -2995,7 +3250,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "By popular demand: Get your own classic handheld gaming device, then build and flash your own games using the ModRetro Chromatic plugin in Codex. Design levels, animate sprites, and playtest your games directly on your handheld. OpenAI ModRetro Chromatic: Codex Edition | OpenAI Supply Co. Meet ModRetro Chromatic: Codex Edition. Create your own games with Codex, load them onto a cartridge, and play",
           "event_at": null,
           "supporting": []
@@ -3022,7 +3277,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "We asked Claude to design three electronic devices: a speakerphone, a voice-assistant hub, and a handheld virtual pet. The prototypes worked without any fixes to their circuitry. 01 Reasoning through geometric problems Testing Claude on real-world electronics design 01 Reasoning through geometric problems 02 Revising designs 03 Using software and documentation 04 Keeping track of constraints and d",
           "event_at": null,
           "supporting": []
@@ -3041,11 +3296,45 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"476a8d58e5d1cd1447dff9749446d910\"",
-      "modified": "Tue, 10 Nov 2026 20:36:39 GMT",
+      "etag": "\"bd351d19dae1a195a9290b81125f842b\"",
+      "modified": "Wed, 11 Nov 2026 12:12:47 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "8fe702b2db7803b82e28",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/",
+          "title": "Enterprise sales push OpenAI's quarterly revenue to $10 billion, though it still trails Anthropic",
+          "published_at": "2026-11-11T12:12:47Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "OpenAI grew its quarterly revenue 50 percent to $10 billion but is still burning more cash than it brings in. Adjusted operating losses climbed to $10.9 billion, while rival Anthropic operates far more efficiently on $17 billion in revenue. To close the gap, OpenAI is now fueling a price war for enterprise customers. The article Enterprise sales push OpenAI's quarterly revenue to $10 billion, thou",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "54f3f71dbbbdb55b7f1a",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/uk-regulator-threatens-universities-with-sanctions-unless-they-adopt-ai-proof-exam-formats/",
+          "title": "UK regulator threatens universities with sanctions unless they adopt AI-proof exam formats",
+          "published_at": "2026-11-11T11:54:46Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
+          "excerpt": "England's higher education regulator, the Office for Students, says AI has made it \"nearly impossible\" to fairly assess student coursework. An investigation found that students are having ChatGPT write entire papers undetected, without being able to recall basic content afterward. To save the credibility of degrees, universities now have to return to traditional exams or face sanctions. The articl",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "f42776c8962d0d62afb4",
           "source_id": "decoder",
@@ -3058,7 +3347,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "OpenAI is opening up ChatGPT as a business platform: through a new Business Hub, companies can claim their profile, add product data, and track how users interact with them. \"Business Agents\" let eligible US e-commerce providers talk to customers directly inside ChatGPT. The article OpenAI turns ChatGPT into a business directory with AI agents that handle customer questions appeared first on The D",
           "event_at": null,
           "supporting": []
@@ -3075,7 +3364,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Anthropic is expanding Claude with Sheets, Whiteboards, and Interactive Connectors, letting partners like Adobe and Atlassian embed their apps directly inside Claude. Anthropic says Claude Meetings, which can join calls and take notes, is coming soon. Step by step, Anthropic is turning Claude into a central work platform for teams that brings many other apps together in one place. The article Anth",
           "event_at": null,
           "supporting": []
@@ -3092,7 +3381,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Nvidia's new AI model GR00T 2 is designed to teach robots new tasks without laborious teleoperation. Instead, the system transfers human hand movements from videos to robotic arms, trained on about 400,000 hours of video footage. Success rates still vary widely, though, ranging from 10 to 80 percent depending on the task. The article Nvidia's model GR00T 2 watches humans on video, then imagines it",
           "event_at": null,
           "supporting": []
@@ -3109,7 +3398,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Google is making Gemini 4 Carbon generally available after a two-week testing phase. The model ranks first in several benchmarks, in some cases ahead of Anthropic's new Fable 5.2, at less than half the per-task cost. Google is also previewing coordinated agent teams through the \"/swarm\" feature, which split up complex tasks in real time. The article Gemini 4 Carbon arrives just in time to feel lik",
           "event_at": null,
           "supporting": []
@@ -3126,7 +3415,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Google Deepmind introduced Gemini Robotics 2.5, a new control model for robots, and tested it with Apptronik on active Mercedes-Benz production lines in Hungary and Germany. The humanoid robot Apollo 2 sorted metal parts there with a reported success rate of 96 percent. The article Google DeepMind's Gemini Robotics 2.5 scores 96 percent sorting metal parts in a Mercedes-Benz assembly pilot appeare",
           "event_at": null,
           "supporting": []
@@ -3143,7 +3432,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Anthropic's Fable 5.2 completes 41.3 percent of real freelance jobs at professional quality on the Remote Labor Index, more than double the next-best systems Opus 5.5 and GPT 6 Astra. A year ago the top score was 2.5 percent. Areas like product design and animation remain a weak spot. The article Anthropic's Fable 5.2 completes 41 percent of real freelance jobs, up from 2.5 percent a year ago appe",
           "event_at": null,
           "supporting": []
@@ -3160,7 +3449,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Eight countries along with representatives from OpenAI, Anthropic, Microsoft, and Mistral AI have signed the \"Paris Call for AI Safety and Security\" at Emmanuel Macron's initiative. The companies commit to shutdown mechanisms, independent audits, and disclosing known risks, but the agreement lacks binding sanctions or deadlines. The article Eight countries and top AI labs agree to shutdown mechani",
           "event_at": null,
           "supporting": []
@@ -3177,42 +3466,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Anthropic is kicking off its IPO roadshow, targeting a valuation of up to $1.02 trillion. Beyond the public offering of up to $64.4 billion, the company is securing $26 billion through a private placement with Google, Nvidia, Microsoft, and other major tech firms as anchor investors. The IPO comes at a time when investors are growing increasingly skeptical of AI investments. The article Anthropic ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "e6b9f7f4743833a08fff",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
-          "title": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic's AI lead just before its IPO",
-          "published_at": "2026-11-09T21:15:23Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
-          "excerpt": "Anthropic is releasing Claude Fable 5.2 and Mythos 5.2, its most powerful models to date, in two versions: one freely available and one reserved for verified organizations. The models solve open physics problems, show stronger cybersecurity capabilities, design functioning operating systems, and write more than 90 percent of the changes merged into Anthropic's core code, according to the company. ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "4ac969e472ffa4e93659",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do/",
-          "title": "Meta launches Muse Ember, a small AI model built for the repetitive work agents actually do",
-          "published_at": "2026-11-09T19:41:51Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
-          "excerpt": "Meta is introducing Muse Ember, its smallest and most efficient AI model, optimized for repetitive agent tasks such as tool calls, routing, and data extraction. According to Meta, it delivers more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna. But it falls short when it comes to actual programming tasks. The article Meta launches Muse Ember, a small AI model built for the repetitive ",
           "event_at": null,
           "supporting": []
         }
@@ -3238,7 +3493,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-11T00:31:02.251590Z",
+          "collected_at": "2026-11-11T12:31:14.878296Z",
           "excerpt": "Cloudflare is distributing the first $301,300 of the Vite Ecosystem Fund to open source projects and maintainers. The recipients were chosen by a panel of Vite stack core team members, including maintainers not employed by Cloudflare.",
           "event_at": null,
           "supporting": []
@@ -3693,6 +3948,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-11-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -7070,6 +7330,100 @@
       ],
       "entities": [],
       "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "19b4fcb1faac9c9bdbcc",
+      "issue": "2026-11-11-pm",
+      "cutoff": "2026-11-11T12:30:00Z",
+      "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "urls": [
+        "https://huggingface.co/blog/qvac/botpsy"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "8e8e851f9ac38a1986e4",
+      "issue": "2026-11-11-pm",
+      "cutoff": "2026-11-11T12:30:00Z",
+      "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "urls": [
+        "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "ac94b61a25ade5edbf71",
+      "issue": "2026-11-11-pm",
+      "cutoff": "2026-11-11T12:30:00Z",
+      "title": "ChatGPT Plus for veterans and servicemembers",
+      "urls": [
+        "https://openai.com/index/chatgpt-plus-for-veterans"
+      ],
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "0a9ebdb63db3687d3463",
+      "issue": "2026-11-11-pm",
+      "cutoff": "2026-11-11T12:30:00Z",
+      "title": "How AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
+      "urls": [
+        "https://blogs.nvidia.com/blog/ai-recycling-startups/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "569a35504d8a0adf11b6",
+      "issue": "2026-11-11-pm",
+      "cutoff": "2026-11-11T12:30:00Z",
+      "title": "LiteLLM Releases: v1.109.0",
+      "urls": [
+        "https://github.com/BerriAI/litellm/releases/tag/v1.109.0"
+      ],
+      "entities": [
+        "litellm"
+      ],
+      "versions": [
+        "v1.109.0"
+      ],
+      "event_type": "release"
+    },
+    {
+      "id": "172ae3f5f4b569c4d80c",
+      "issue": "2026-11-11-pm",
+      "cutoff": "2026-11-11T12:30:00Z",
+      "title": "Introducing the Multimodal Knowledge Agent benchmark",
+      "urls": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "release"
+    },
+    {
+      "id": "8827aad4505e69ef98eb",
+      "issue": "2026-11-11-pm",
+      "cutoff": "2026-11-11T12:30:00Z",
+      "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+      "urls": [
+        "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+      ],
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "2.5"
+      ],
       "event_type": "announcement"
     }
   ]

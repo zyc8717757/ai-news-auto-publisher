@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-11-pm",
+  "revision": 1,
+  "created_at": "2026-11-11T12:31:14.878296Z",
+  "cutoff": "2026-11-11T12:30:00Z",
+  "window_start": "2026-11-09T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "19b4fcb1faac9c9bdbcc",
+      "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 82.66,
+      "sources": [
+        {
+          "id": "19b4fcb1faac9c9bdbcc",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/qvac/botpsy",
+          "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+          "published_at": "2026-11-11T05:01:16Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8e8e851f9ac38a1986e4",
+      "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "summary": "A portrait of Dr Nontobeko Ntombela, Senior Lecturer, Department of Curatorial, Public and Visual Cultures, Wits School of Arts, University of the Witwatersrand",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.91,
+      "sources": [
+        {
+          "id": "8e8e851f9ac38a1986e4",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+          "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+          "published_at": "2026-11-11T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "ac94b61a25ade5edbf71",
+      "title": "ChatGPT Plus for veterans and servicemembers",
+      "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.59,
+      "sources": [
+        {
+          "id": "ac94b61a25ade5edbf71",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+          "title": "ChatGPT Plus for veterans and servicemembers",
+          "published_at": "2026-11-11T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "0a9ebdb63db3687d3463",
+      "title": "How AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
+      "summary": "Vision AI and robotics pick what’s worth recovering out of conveyor belts of used clothing, bottles and mixed recyclables, diverting thousands of tons of materials from landfills.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.03,
+      "sources": [
+        {
+          "id": "0a9ebdb63db3687d3463",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/ai-recycling-startups/",
+          "title": "How AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
+          "published_at": "2026-11-11T03:00:20Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "569a35504d8a0adf11b6",
+      "title": "LiteLLM Releases: v1.109.0",
+      "summary": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.109.0 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.109.0 982 PRs. 144 added, 424 fixed, 60 changed, 17 improved, 9 removed. 5 need action ### Action required - **Routing and fallbacks:** Change string fallback targets to lists of model names (#4",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.39,
+      "sources": [
+        {
+          "id": "569a35504d8a0adf11b6",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.109.0",
+          "title": "LiteLLM Releases: v1.109.0",
+          "published_at": "2026-11-11T00:56:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "litellm"
+      ],
+      "versions": [
+        "v1.109.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "172ae3f5f4b569c4d80c",
+      "title": "Introducing the Multimodal Knowledge Agent benchmark",
+      "summary": "Google introduces the MKA benchmark to evaluate how agents reason across complex visual tasks. See how Gemini 4 Carbon performs. Read the report. Breadcrumb Home Innovation & AI Models & research Gemini Models Introducing the Multimodal Knowledge Agent benchmark Nov 10, 2026 | x.com Facebook LinkedIn Mail Copy link The Multimodal Knowledge Agent (MKA) benchmark, developed with Artificial Analysis, evaluates how agents reason across visually complex files to solve real-world knowledge work tasks.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.59,
+      "sources": [
+        {
+          "id": "172ae3f5f4b569c4d80c",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
+          "title": "Introducing the Multimodal Knowledge Agent benchmark",
+          "published_at": "2026-11-10T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8827aad4505e69ef98eb",
+      "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+      "summary": "Introducing Gemini Robotics 2.5, our most capable vision-language-action model enhancing dexterity, reliability, and safety for real-world environments. Gemini 4 Argon for Robotics October 2026 Models Learn more",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.28,
+      "sources": [
+        {
+          "id": "8827aad4505e69ef98eb",
+          "source_id": "primary-google",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+          "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+          "published_at": "2026-11-10T15:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "2.5"
+      ],
+      "event_type": "announcement",
+      "previous_issue": "2026-11-11-am",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
