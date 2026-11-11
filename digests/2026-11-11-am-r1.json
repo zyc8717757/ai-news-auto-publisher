@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-11-am",
+  "revision": 1,
+  "created_at": "2026-11-11T00:31:02.251590Z",
+  "cutoff": "2026-11-11T00:30:00Z",
+  "window_start": "2026-11-09T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "c67f79cfa85489be5b52",
+      "title": "Introducing Businesses in ChatGPT in beta",
+      "summary": "Claim your business, manage your information, and get insights on how people engage with you. Eligible businesses can also build a Business Agent to answer customers’ questions and help them explore what you offer. OpenAI Introducing Businesses in ChatGPT Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT. You can also publish a Business Agent to help people explore what you offer. Customers can ask questions, compare product",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.99,
+      "sources": [
+        {
+          "id": "a9b6d5a41b948ae2a7f5",
+          "source_id": "openai-community",
+          "source_name": "OpenAI 官方开发者公告",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://community.openai.com/t/introducing-businesses-in-chatgpt-in-beta/1414865",
+          "title": "Introducing Businesses in ChatGPT in beta",
+          "published_at": "2026-11-10T21:16:54.481000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "991ad48e8559b2fefa9f",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt",
+          "title": "Introducing Businesses in ChatGPT",
+          "published_at": "2026-11-10T10:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "c0101f36ad82bf9132fd",
+      "title": "Gemini Intelligence: New features, on more devices",
+      "summary": "A man speaks into a phone. Text on the screen reads 'Gemini Intelligence'",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.28,
+      "sources": [
+        {
+          "id": "c0101f36ad82bf9132fd",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+          "title": "Gemini Intelligence: New features, on more devices",
+          "published_at": "2026-11-10T19:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "0bb116f4895a4ed5bfe2",
+      "title": "LangChain Releases: langchain==1.4.10",
+      "summary": "Changes since langchain==1.4.9 release(langchain): 1.4.10 (#41778) fix(langchain): keep middleware-internal model calls off the `messages` stream (#41579) chore(deps): patch newer-python security lock resolutions (#41585) fix(langchain): omit trace inputs from `ModelRefusalMiddleware` (#41689)",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.16,
+      "sources": [
+        {
+          "id": "0bb116f4895a4ed5bfe2",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.10",
+          "title": "LangChain Releases: langchain==1.4.10",
+          "published_at": "2026-11-10T18:37:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.4.10"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-11-10-pm",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "6d8eb3bcd497222db158",
+      "title": "Gemini 4 Carbon is now available",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.36,
+      "sources": [
+        {
+          "id": "6d8eb3bcd497222db158",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "title": "Gemini 4 Carbon is now available",
+          "published_at": "2026-11-10T16:03:47Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "9ccf20ad200fc0ba5e4f",
+      "title": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
+      "summary": "Kubernetes, the open source system that manages how applications run across thousands of AI factories, has become the foundation for AI, and the demands on it are only growing. To help meet them, NVIDIA is deepening its commitment to open source at KubeCon + CloudNativeCon, the flagship conference for the Kubernetes and cloud-native communities. NVIDIA […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.34,
+      "sources": [
+        {
+          "id": "9ccf20ad200fc0ba5e4f",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/",
+          "title": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
+          "published_at": "2026-11-10T16:00:03Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "59a8a5dd3afc5312ddae",
+      "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+      "summary": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See what’s new in this partnership.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.72,
+      "sources": [
+        {
+          "id": "59a8a5dd3afc5312ddae",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+          "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+          "published_at": "2026-11-10T14:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "ef83b8dc18b1604dec2e",
+      "title": "Google Cloud launches Gemini for healthcare.",
+      "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.41,
+      "sources": [
+        {
+          "id": "ef83b8dc18b1604dec2e",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "published_at": "2026-11-10T13:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "f3fc54cd1d78c100d666",
+      "title": "Work at the Frontier: AI’s effect on freelance work",
+      "summary": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.53,
+      "sources": [
+        {
+          "id": "f3fc54cd1d78c100d666",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/ai-effect-on-freelance-work",
+          "title": "Work at the Frontier: AI’s effect on freelance work",
+          "published_at": "2026-11-10T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
