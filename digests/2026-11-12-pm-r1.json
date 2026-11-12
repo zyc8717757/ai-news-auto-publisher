@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-12-pm",
+  "revision": 1,
+  "created_at": "2026-11-12T12:31:34.500532Z",
+  "cutoff": "2026-11-12T12:30:00Z",
+  "window_start": "2026-11-10T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "ab896b3f94b1c56b7c0b",
+      "title": "Gemini登陆Apple CarPlay",
+      "summary": "谷歌宣布Gemini现已登陆Apple CarPlay平台，用户可通过Gemini Live在驾驶时进行免提对话、头脑风暴、收件箱整理和日常简报，管理日常出行与日程。",
+      "impact": "提升车机端AI交互体验，拓展谷歌语音助手在车载场景的应用。",
+      "category": "产品",
+      "score": 69.33,
+      "sources": [
+        {
+          "id": "ab896b3f94b1c56b7c0b",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-on-apple-carplay/",
+          "title": "Talk it through with Gemini, now on Apple CarPlay",
+          "published_at": "2026-11-11T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 语音助手功能的实际车机适配表现与网络环境依赖尚待观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "谷歌正式宣布将 Gemini Live 引入 Apple CarPlay，拓展了语音AI助手在车载场景的实际应用。",
+      "backfill": false
+    },
+    {
+      "id": "16d1d30dcd8fe22bce6b",
+      "title": "Hugging Face Diffusers 0.43.0发布",
+      "summary": "Diffusers 0.43.0版本发布，新增了MiniMax-H3-Image、Pika H3 Flex、P-H3-Image、Kandinsky S2V和PAN 2等五项模块化模型集成，涵盖图像生成、编辑、带音频视频、语音动画和世界模拟，并改进了注意力后端、张量并行、LoRA处理和检查点保存。",
+      "impact": "丰富了开源多模态生成模型的集成能力，提升了开发效率与训练性能。",
+      "category": "模型",
+      "score": 73.54,
+      "sources": [
+        {
+          "id": "16d1d30dcd8fe22bce6b",
+          "source_id": "diffusers",
+          "source_name": "Diffusers Releases",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://github.com/huggingface/diffusers/releases/tag/v0.43.0",
+          "title": "Diffusers Releases: Diffusers 0.43.0: MiniMax-H3-Image, Pika H3 Flex, P-H3-Image, Kandinsky S2V, and PAN 2",
+          "published_at": "2026-11-12T05:22:22Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 各新模型的实际效果与硬件资源开销需要结合具体应用评估。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [
+        "0.43.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Diffusers 0.43.0发布，整合了MiniMax-H3-Image、Pika H3 Flex等多个重要模块化多模态与视频模型，对开发者有实际价值。",
+      "backfill": false
+    },
+    {
+      "id": "c51d2c942ff404e602f6",
+      "title": "AlphaProof Code验证Signal加密核心",
+      "summary": "谷歌DeepMind的AlphaProof Code在四周内数学验证了Signal的加密核心代码。由Gemini Carbon驱动的AI代理编写了超600万行证明代码，仅标记约百分之一供人工复核，DeepMind计划将该方法扩展至电网和医疗设备等关键基础设施。",
+      "impact": "展示了AI在复杂代码形式化验证上的巨大潜力，有望大幅缩短安全审计周期。",
+      "category": "模型",
+      "score": 60.12,
+      "sources": [
+        {
+          "id": "c51d2c942ff404e602f6",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
+          "title": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years",
+          "published_at": "2026-11-11T18:18:25Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "推广至其他关键基础设施时的通用性与可靠性仍有待实际验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google DeepMind利用AlphaProof Code在四周内完成了Signal加密核心代码的数学形式化验证，展现了AI在软件安全与验证领域的重大进展。",
+      "backfill": false
+    },
+    {
+      "id": "22d6799f13a3486d4568",
+      "title": "英国Fractile获得7.2亿美元融资",
+      "summary": "英国AI芯片初创公司Fractile在新一轮融资中获得7.2亿美元，成为AI专用芯片领域资金最充足的参与者之一。",
+      "impact": "充沛的资金将助力其加速专用AI芯片的研发与市场竞争。",
+      "category": "商业",
+      "score": 58.9,
+      "sources": [
+        {
+          "id": "22d6799f13a3486d4568",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
+          "title": "With $720M round, Britain’s Fractile gets a leg up in the race for AI chips",
+          "published_at": "2026-11-11T19:34:55Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "在竞争激烈的AI芯片市场中能否实现商业化量产仍存不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "英国AI芯片初创公司Fractile获得7.2亿美元融资，成为AI芯片领域的重要资金动态。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
