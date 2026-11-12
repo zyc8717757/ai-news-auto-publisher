@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-12-am",
+  "revision": 1,
+  "created_at": "2026-11-12T01:00:45.291055Z",
+  "cutoff": "2026-11-12T00:30:00Z",
+  "window_start": "2026-11-10T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "833534b672b8daa32ace",
+      "title": "谷歌发布AlphaGenome 2模型，探索DNA与细胞及疾病的关系",
+      "summary": "谷歌DeepMind研究人员推出了全新的AI模型AlphaGenome 2，旨在揭示DNA序列及其变异如何影响特定人类细胞类型和疾病。该模型继承前代产品，为科学家提供了更细致的视角，以理解复杂的细胞机制，并可能为寻找疾病病因及开发新疗法指明方向。",
+      "impact": "有助于深入解析DNA变异对细胞的影响，推动疾病研究和新疗法开发。",
+      "category": "模型",
+      "score": 74.52,
+      "sources": [
+        {
+          "id": "833534b672b8daa32ace",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+          "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+          "published_at": "2026-11-11T15:00:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "943bd9ebdd36c5629d76",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
+          "title": "Google’s AlphaGenome 2 zooms in on the cellular roots of disease",
+          "published_at": "2026-11-11T15:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实际临床治疗效果及对新疗法的具体推动作用仍有待验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google DeepMind 发布了 AlphaGenome 2，用于解析细胞读取DNA的方式，属重大科学与AI应用突破。",
+      "backfill": false
+    },
+    {
+      "id": "c06fca3b9549fb95708d",
+      "title": "谷歌推出Gemini Decisions API",
+      "summary": "谷歌推出了全新的Gemini Decisions API，该接口由其先进的Gemini Decision模型驱动，旨在提供快速且经过校准的多模态决策支持能力，满足多样化应用场景下的高效决策需求。",
+      "impact": "为开发者提供快速的多模态决策支持，提升应用处理复杂任务的效率。",
+      "category": "产品",
+      "score": 72.18,
+      "sources": [
+        {
+          "id": "c06fca3b9549fb95708d",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+          "published_at": "2026-11-11T18:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体性能表现及应用落地效果尚无详细评测数据支持。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google 发布了面向多模态快速决策的 Gemini Decisions API 及其底层模型。",
+      "backfill": false
+    },
+    {
+      "id": "f31248890af40385bfab",
+      "title": "媒体称OpenAI季度营收达100亿美元，但亏损依然存在",
+      "summary": "媒体报道称，OpenAI的季度营收增长了50%，达到100亿美元，创下新高，较第二季度的67亿美元有所提升。不过，该公司调整后营业亏损攀升至109亿美元，现金消耗仍高于收入。为缩小与竞争对手的差距，该公司正推动企业级客户价格战。",
+      "impact": "显示出企业级市场的强劲增长与高额运营成本并存，行业竞争加剧。",
+      "category": "商业",
+      "score": 61.69,
+      "sources": [
+        {
+          "id": "8fe702b2db7803b82e28",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/",
+          "title": "Enterprise sales push OpenAI's quarterly revenue to $10 billion, though it still trails Anthropic",
+          "published_at": "2026-11-11T12:12:47Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "f31248890af40385bfab",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
+          "title": "OpenAI’s quarterly revenue reportedly crosses $10B for the first time",
+          "published_at": "2026-11-11T16:14:44Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "财务数据的准确性及价格战对未来盈利的具体影响存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8eb0b79eb927fc499fbc",
+      "title": "Anthropic称利用AI将AMD芯片适配时间缩短至三天",
+      "summary": "Anthropic称其利用内部模型Mythos，在几乎不需要人工干预的情况下，将Claude模型移植到AMD GPU上的时间从数月缩短至三天。该公司目前在四个芯片系列上运行Claude，旨在降低成本并减少对单一供应商的依赖。",
+      "impact": "表明AI辅助芯片迁移具备可行性，可能对英伟达的CUDA生态优势产生冲击。",
+      "category": "开发",
+      "score": 59.5,
+      "sources": [
+        {
+          "id": "8eb0b79eb927fc499fbc",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+          "title": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
+          "published_at": "2026-11-11T14:25:20Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "该技术的实际规模化应用效果及对市场格局的长期影响仍需观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic",
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic称其内部模型Mythos在三天内将Claude迁移至AMD GPU，宣称有效降低英伟达CUDA技术壁垒的依赖。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
