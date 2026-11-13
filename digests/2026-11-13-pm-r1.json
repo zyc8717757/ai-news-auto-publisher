@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-13-pm",
+  "revision": 1,
+  "created_at": "2026-11-13T13:00:57.867620Z",
+  "cutoff": "2026-11-13T12:30:00Z",
+  "window_start": "2026-11-11T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "c3d1bbdfab443c537394",
+      "title": "Anthropic推出自托管Claude Managed Agents服务",
+      "summary": "Anthropic宣布推出自托管Claude Managed Agents的私有测试版，允许开发者在自有云环境或本地环境中运行代理，并自行托管相关凭据与会话历史。",
+      "impact": "增强了企业在自身安全边界内使用AI代理的控制能力与数据安全性。",
+      "category": "产品",
+      "score": 75.52,
+      "sources": [
+        {
+          "id": "c3d1bbdfab443c537394",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+          "title": "Operate Claude Managed Agents inside your security perimeter",
+          "published_at": "2026-11-12T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-12",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 目前仅处于私有测试阶段。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic推出自托管的Claude Managed Agents内测版，允许企业在自身云端或本地安全边界内运行AI Agent。",
+      "backfill": true
+    },
+    {
+      "id": "feb34ac37e8e9bbc9efe",
+      "title": "谷歌与合作伙伴发布集成Gemini的智能眼镜",
+      "summary": "谷歌联合Warby Parker、Gentle Monster及三星推出新款智能眼镜，支持Gemini语音助手，配备12MP摄像头。产品售价方面，Warby Parker款式起价395美元，Gentle Monster款式起价449美元。",
+      "impact": "智能眼镜品类进一步整合生成式AI能力，提供免提式AI交互体验。",
+      "category": "产品",
+      "score": 68.68,
+      "sources": [
+        {
+          "id": "feb34ac37e8e9bbc9efe",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/",
+          "title": "See our intelligent eyewear lineup and pre-order your pair",
+          "published_at": "2026-11-12T14:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "f890f008ac13960a0c72",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/",
+          "title": "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395",
+          "published_at": "2026-11-12T14:50:17Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 暂无。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google联合Warby Parker、Gentle Monster等推出内置Gemini的智能眼镜产品线并开启预售。",
+      "backfill": false
+    },
+    {
+      "id": "548fe94a79cba56aecf8",
+      "title": "Jensen Huang同意出席国会听证会",
+      "summary": "媒体报道称，Jensen Huang在面对议员传唤威胁后，同意出席国会听证会进行作证。",
+      "impact": "该事件引发外界对企业领导人个人变动及相关合规性问题的关注。",
+      "category": "商业",
+      "score": 50.75,
+      "sources": [
+        {
+          "id": "548fe94a79cba56aecf8",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
+          "title": "Jensen Huang agrees to testify before Congress",
+          "published_at": "2026-11-12T16:36:37Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "报道中涉及的离职原因及事件性质未经官方确认。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Nvidia CEO Jensen Huang离职事件属行业地震，涉及全球最大AI算力厂商，对产业链影响极大。",
+      "backfill": false
+    },
+    {
+      "id": "3d6ff74227a41f977de5",
+      "title": "Anthropic推出Claude Meetings会议协作功能",
+      "summary": "Anthropic推出Claude Meetings测试版，支持Claude以参与者身份加入视频会议，通过实时语音或聊天互动生成笔记、构建文档及白板内容。",
+      "impact": "自动化会议记录与文档协作流程，提升团队办公效率。",
+      "category": "产品",
+      "score": 56.09,
+      "sources": [
+        {
+          "id": "779abe288b1c01daf6b7",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://claude.com/resources/articles/claude-meetings",
+          "title": "Introducing Claude Meetings",
+          "published_at": "2026-11-12T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-12",
+          "time_basis": "publication"
+        },
+        {
+          "id": "3d6ff74227a41f977de5",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/",
+          "title": "Claude Meetings lets Anthropic's AI join your video calls",
+          "published_at": "2026-11-12T20:26:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 目前处于测试阶段，仅支持部分企业计划。 未经官方确认，仅供前瞻观察。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic发布Claude Meetings，允许AI直接接入视频会议生成笔记和白板，是生产力工具的重要升级。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
