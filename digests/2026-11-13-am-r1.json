@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-13-am",
+  "revision": 1,
+  "created_at": "2026-11-13T00:31:04.066147Z",
+  "cutoff": "2026-11-13T00:30:00Z",
+  "window_start": "2026-11-11T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "56a45817e28ca34748d7",
+      "title": "Introducing Gemini 4 Hydrogen",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 79.09,
+      "sources": [
+        {
+          "id": "c7a410ad3b8628097c72",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+          "title": "Introducing Gemini 4 Hydrogen",
+          "published_at": "2026-11-12T18:00:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "bdf244a7628e8bd2869a",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
+          "title": "Google's Gemini 4 Hydrogen outscores the bigger Argon just four weeks after its launch",
+          "published_at": "2026-11-12T19:58:43Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "67672a694e389b29af55",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.59,
+      "sources": [
+        {
+          "id": "67672a694e389b29af55",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/business/customer-stories/amplitude",
+          "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+          "published_at": "2026-11-12T20:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "84ec87286cb35a64f463",
+      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.32,
+      "sources": [
+        {
+          "id": "84ec87286cb35a64f463",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+          "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+          "published_at": "2026-11-12T19:07:35Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [
+        "4.1"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "affd8b38317038d7d684",
+      "title": "LangGraph Releases: langgraph==1.2.21",
+      "summary": "Changes since 1.2.20 * release(langgraph): 1.2.21 (#9683) * chore(deps): bump the minor-and-patch group across 1 directory with 9 updates (#9530) * fix(langgraph): match whole namespace segments in get_subgraphs (#9615) * fix(langgraph): read an undeclared subgraph namespace with the parent graph (#9614) * docs(langgraph): say each interrupt() call has its own id in UnknownInterruptError (#9600) * chore(deps): bump filelock and langgraph-api for security fixes (#9606)",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.0,
+      "sources": [
+        {
+          "id": "affd8b38317038d7d684",
+          "source_id": "langgraph",
+          "source_name": "LangGraph Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.21",
+          "title": "LangGraph Releases: langgraph==1.2.21",
+          "published_at": "2026-11-12T18:06:43Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.2.21"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-11-11-am",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "f19cddd04797ae7d9ed5",
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "summary": "Rotating carousel of cards with text \"Gemini 4 Hydrogen\" \"Now in Google Search\" and examples from the Google Search UI",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.97,
+      "sources": [
+        {
+          "id": "f19cddd04797ae7d9ed5",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+          "published_at": "2026-11-12T18:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "announcement",
+      "previous_issue": "2026-11-11-pm",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "b9840fd67063a36a400d",
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.09,
+      "sources": [
+        {
+          "id": "b9840fd67063a36a400d",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/business/customer-stories/gondola",
+          "title": "Gondola doubles revenue as its team builds more with Codex",
+          "published_at": "2026-11-12T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "4922ca6fb0dd92994c34",
+      "title": "Holiday Extras is rethinking what it can build with Codex",
+      "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 68.31,
+      "sources": [
+        {
+          "id": "4922ca6fb0dd92994c34",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+          "title": "Holiday Extras is rethinking what it can build with Codex",
+          "published_at": "2026-11-12T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "0258ef134fc324e9353d",
+      "title": "LiteLLM Releases: v1.109.1",
+      "summary": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). This release is signed with the key introduced in [commit `e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is the strongest way to ensure you are using the published signing key: ```bash cosign verify \\ --key https:",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.01,
+      "sources": [
+        {
+          "id": "0258ef134fc324e9353d",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.109.1",
+          "title": "LiteLLM Releases: v1.109.1",
+          "published_at": "2026-11-12T02:07:01Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "litellm"
+      ],
+      "versions": [
+        "v1.109.1"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-11-11-pm",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "842b208913c4074d6338",
+      "title": "LiteLLM Releases: v1.106.9",
+      "summary": "## Verify Docker Image Signature All LiteLLM Docker images are signed with [cosign](https://docs.sigstore.dev/cosign/overview/). This release is signed with the key introduced in [commit `e82a3c6`](https://github.com/BerriAI/litellm/commit/e82a3c646908ba0a6ee0beddc4310d7a6cac4065). **Verify using the pinned commit hash (recommended):** A commit hash is cryptographically immutable, so this is the strongest way to ensure you are using the published signing key: ```bash cosign verify \\ --key https:",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.69,
+      "sources": [
+        {
+          "id": "842b208913c4074d6338",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.9",
+          "title": "LiteLLM Releases: v1.106.9",
+          "published_at": "2026-11-12T01:06:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "litellm"
+      ],
+      "versions": [
+        "v1.106.9"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-11-11-pm",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
