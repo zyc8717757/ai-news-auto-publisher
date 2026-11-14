@@ -463,20 +463,19 @@ class EditorialEnhancer(Enhancer):
             # A validation failure is not an outage. First repair the isolated
             # item on the model that just responded; call() still performs the
             # bounded fallback if that model keeps failing or is unavailable.
-            for story in missing:
-                approved.extend(
-                    self.review_summaries(
-                        client,
-                        [story],
-                        events,
-                        decisions,
-                        review_texts,
-                        max_repairs=max_repairs,
-                        max_provider_retries=max_provider_retries,
-                        allow_model_fallback=allow_model_fallback,
-                        recover_failed=False,
-                    )
+            approved.extend(
+                self.review_summaries(
+                    client,
+                    missing,
+                    events,
+                    decisions,
+                    review_texts,
+                    max_repairs=max_repairs,
+                    max_provider_retries=max_provider_retries,
+                    allow_model_fallback=allow_model_fallback,
+                    recover_failed=False,
                 )
+            )
         if (
             len(approved) != len(summaries)
             or any(s.duplicate_of for s in approved)

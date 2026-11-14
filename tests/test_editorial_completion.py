@@ -104,9 +104,11 @@ def test_complete_editorial_flow_repairs_only_failed_events(
                 "reviews": [
                     {
                         "event_id": key,
-                        "approved": not (key == "b" and len(keys) > 1),
+                        "approved": not (key in {"b", "c"} and len(review_batches) == 1),
                         "translation_ok": True,
-                        "failure": "translation" if key == "b" and len(keys) > 1 else "none",
+                        "failure": "translation"
+                        if key in {"b", "c"} and len(review_batches) == 1
+                        else "none",
                         "reason": "已核对原文与中文表达",
                         "numeric_checks": [],
                     }
@@ -147,7 +149,7 @@ def test_complete_editorial_flow_repairs_only_failed_events(
     assert created and digest.mode == "ai"
     assert [s.id for s in digest.stories] == [e.id for e in editor.selected_events] == ["a", "b", "c"]
     assert summary_batches == [["a", "b", "c"], ["b"]]
-    assert review_batches == [["a", "b", "c"], ["b"]]
+    assert review_batches == [["a", "b", "c"], ["b", "c"]]
     assert set(models) == {settings.model}
     assert len(store.state.ai_attempts) == store.state.ai_issue_attempts["2026-10-10-am"] == 6
     assert Store(store.root).latest(digest.issue).model_dump() == digest.model_dump()
