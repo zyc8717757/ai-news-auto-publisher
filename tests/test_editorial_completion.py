@@ -77,9 +77,10 @@ def test_complete_editorial_flow_repairs_only_failed_events(
         sleep=lambda _: None,
     )
     editor = EditorialEnhancer(settings, store, client=object(), budget=budget)
-    summary_batches, review_batches = [], []
+    summary_batches, review_batches, models = [], [], []
 
     def respond(self, client, model, prompt, limit):
+        models.append(model)
         if "阶段1：" in prompt:
             result = {
                 "decisions": [
@@ -147,6 +148,7 @@ def test_complete_editorial_flow_repairs_only_failed_events(
     assert [s.id for s in digest.stories] == [e.id for e in editor.selected_events] == ["a", "b", "c"]
     assert summary_batches == [["a", "b", "c"], ["b"]]
     assert review_batches == [["a", "b", "c"], ["b"]]
+    assert set(models) == {settings.model}
     assert len(store.state.ai_attempts) == store.state.ai_issue_attempts["2026-10-10-am"] == 6
     assert Store(store.root).latest(digest.issue).model_dump() == digest.model_dump()
     output = tmp_path / "site"

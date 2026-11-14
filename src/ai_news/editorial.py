@@ -447,8 +447,9 @@ class EditorialEnhancer(Enhancer):
         missing = [s for s in summaries if s.event_id not in {x.event_id for x in approved}]
         if missing and recover_failed:
             # Keep independently verified siblings and repair only unresolved events.
-            if allow_model_fallback:
-                self.used_model = fallback_model(self.used_model, self.settings) or self.used_model
+            # A validation failure is not an outage. First repair the isolated
+            # item on the model that just responded; call() still performs the
+            # bounded fallback if that model keeps failing or is unavailable.
             for story in missing:
                 approved.extend(
                     self.review_summaries(
@@ -801,7 +802,7 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
                     )
                 )
                 summarizer = Enhancer(self.settings, self.store, client=client, budget=self.budget)
-                summarizer.used_model = fallback_model(self.used_model, self.settings) or self.used_model
+                summarizer.used_model = self.used_model
                 try:
                     repaired = summarizer.enhance([event], max_repairs=1)
                     summaries.extend(repaired.stories)
