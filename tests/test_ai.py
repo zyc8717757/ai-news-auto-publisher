@@ -549,34 +549,37 @@ def test_new_single_grant_keeps_old_two_test_calls(settings, tmp_path, now, monk
         Budget(settings, Store(tmp_path), now=lambda: now, issue=issue, test_extra_limit=3).reserve(100)
 
 
-def test_additional_five_calls_preserve_old_five_and_production_counter(settings, tmp_path, now, monkeypatch):
+@pytest.mark.parametrize("old_used,ceiling", [(5, 10), (10, 13)])
+def test_additional_calls_preserve_old_test_and_production_counter(
+    settings, tmp_path, now, monkeypatch, old_used, ceiling
+):
     issue = "2026-11-14-pm"
     settings.model = "gemini-3.5-flash-lite"
     monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
-    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", "10")
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", str(ceiling))
     store = Store(tmp_path)
     store.state.ai_issue_attempts[issue] = 19
-    store.state.ai_test_attempts[issue] = 5
+    store.state.ai_test_attempts[issue] = old_used
     store.save_state()
-    for i in range(5):
+    for i in range(ceiling - old_used):
         Budget(
             settings,
             Store(tmp_path),
             issue=issue,
-            test_extra_limit=10,
+            test_extra_limit=ceiling,
             now=lambda i=i: now + timedelta(minutes=i * 2),
         ).reserve(100)
     saved = Store(tmp_path)
     assert saved.state.ai_issue_attempts[issue] == 19
-    assert saved.state.ai_test_attempts[issue] == 10
-    assert len(saved.state.ai_attempts) == 5
+    assert saved.state.ai_test_attempts[issue] == ceiling
+    assert len(saved.state.ai_attempts) == ceiling - old_used
     with pytest.raises(AIUnavailable, match="issue_budget_exhausted"):
         Budget(
-            settings, saved, issue=issue, test_extra_limit=10, now=lambda: now + timedelta(minutes=12)
+            settings, saved, issue=issue, test_extra_limit=ceiling, now=lambda: now + timedelta(minutes=12)
         ).reserve(100)
-    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", "5")
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", str(old_used))
     with pytest.raises(AIUnavailable, match="not_authorized"):
-        Budget(settings, saved, issue=issue, test_extra_limit=10).reserve(100)
+        Budget(settings, saved, issue=issue, test_extra_limit=ceiling).reserve(100)
 
 
 @pytest.mark.parametrize("model", ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.8-flash"])

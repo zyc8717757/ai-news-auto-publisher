@@ -40,7 +40,7 @@ def parser() -> argparse.ArgumentParser:
     upgrade.add_argument(
         "--test-extra-requests",
         type=int,
-        choices=list(range(11)),
+        choices=list(range(14)),
         default=0,
         help="Explicit cumulative test ceiling; all historical counters remain",
     )
