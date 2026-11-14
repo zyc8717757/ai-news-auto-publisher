@@ -86,6 +86,8 @@ def test_summary_repair_retains_good_siblings_and_persistent_budget(
     assert [s.event_id for s in output.stories] == (["good", "bad"] if repair_kind == "fixed" else ["good"])
     assert len(Store(tmp_path).state.ai_attempts) == (2 if repair_kind == "fixed" else 3)
     assert "ai_numeric_claim_unsupported" in calls[1]
+    assert "需要修正的字段" in calls[1] and '"field": "summary"' in calls[1]
+    assert '"unit": "multiple"' in calls[1] and "不是事实证明" in calls[1]
     assert [record["event_id"] for record in request_payload(calls[0])] == ["good", "bad"]
     assert all([record["event_id"] for record in request_payload(prompt)] == ["bad"] for prompt in calls[1:])
 

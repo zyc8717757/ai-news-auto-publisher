@@ -412,7 +412,9 @@ def validate_quantities(text: str, evidence_texts: list[str]) -> None:
                 if not any(source.unit == claim.unit for source in available):
                     raise ValueError("Unsupported monetary currency")
                 raise ValueError("Unsupported numeric magnitude")
-            raise ValueError("Unsupported numeric claim")
+            error = ValueError("Unsupported numeric claim")
+            error.numeric_unit = claim.unit
+            raise error
 
 
 def numeric_spans(fields: dict[str, str]) -> dict[str, list[dict]]:
