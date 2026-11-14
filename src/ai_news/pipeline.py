@@ -259,7 +259,7 @@ def enhance_frozen(
         # Use the final two persisted requests for one complete alternate-model
         # summary batch and one independent review. Neither phase may retry.
         compact_recovery = True
-        recovery_model = settings.backup_model
+        recovery_model = settings.model if validate_only else settings.backup_model
         production_remaining = settings.ai_run_limit - store.state.ai_issue_attempts.get(issue, 0)
         test_remaining = test_extra_limit - store.state.ai_test_attempts.get(issue, 0)
         split_budget_recovery = bool(test_extra_limit and production_remaining == 1 and test_remaining == 1)
@@ -286,6 +286,10 @@ def enhance_frozen(
             allow_partial=True,
             individual=bool(base_key) and not validate_only and remaining >= len(events) * 2 + 1,
         )
+    # A frozen baseline is the authority for membership. Duplicate suggestions
+    # are advisory and cannot delete a separately verified original event.
+    for story in response.stories:
+        story.duplicate_of = None
     if enhancer is None:
         from .editorial import EditorialEnhancer
 

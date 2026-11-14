@@ -779,6 +779,10 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
                     summaries.extend(repaired.stories)
                 finally:
                     self.used_model = summarizer.used_model
+        # Global selection/merges have already fixed membership. A drafting
+        # suggestion cannot undo that choice or remove another product version.
+        for story in summaries:
+            story.duplicate_of = None
         if len(summaries) != len(chosen) or {s.event_id for s in summaries if not s.duplicate_of} != {
             e.id for e in chosen
         }:

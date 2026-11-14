@@ -246,6 +246,7 @@ def test_explicit_frozen_base_requires_all_events_and_keeps_revision_history(
                         category="模型",
                         value_score=80,
                         evidence_ids=[e.evidence[0].id],
+                        duplicate_of=events[0].id if e.id == "second" else None,
                     )
                     for e in (events[:1] if incomplete else events)
                 ]

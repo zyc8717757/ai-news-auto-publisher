@@ -127,6 +127,7 @@ def test_complete_editorial_flow_repairs_only_failed_events(
                         "category": "产品",
                         "value_score": 90,
                         "evidence_ids": [source_item.id],
+                        "duplicate_of": "a" if key == "c" and len(keys) > 1 else None,
                     }
                     for key in keys
                 ]
