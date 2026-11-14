@@ -3963,7 +3963,7 @@
       "email_attempts": 1
     },
     "2026-11-14-am-r1": {
-      "deployment": "failed",
+      "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
     }
