@@ -609,8 +609,8 @@ def test_date_claims_use_the_supplied_publication_evidence(source_item):
 
 
 def test_generate_text_uses_phase_output_schema(settings, tmp_path, monkeypatch):
-    settings.model = "gemini-3.5-flash-lite"
-    monkeypatch.setenv("AI_NATIVE_SCHEMA_MODELS", "gemini-3.5-flash-lite")
+    settings.model = "gemini-3.1-flash-lite"
+    monkeypatch.setenv("AI_NATIVE_SCHEMA_MODELS", "gemini-3.1-flash-lite")
     schema = {
         "type": "object",
         "properties": {"reviews": {"type": "array", "items": {"type": "string"}}},

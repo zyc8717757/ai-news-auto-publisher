@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, model_validator
 
 from .ai import (
     AIUnavailable,
@@ -30,6 +30,27 @@ class Decision(StrictModel):
     major_research: bool = False
     observation: bool = False
     reason: str = Field(max_length=160)
+
+    @model_validator(mode="before")
+    @classmethod
+    def unused_excluded_category(cls, value):
+        # Excluded rows are never published or ranked. Their unused label must
+        # not reject valid decisions for other events in the same batch.
+        if (
+            isinstance(value, dict)
+            and value.get("include") is False
+            and value.get("category")
+            not in {
+                "模型",
+                "开发",
+                "产品",
+                "商业",
+                "安全",
+                "评测",
+            }
+        ):
+            value = {**value, "category": "产品"}
+        return value
 
 
 class Screening(StrictModel):

@@ -16,6 +16,30 @@ from ai_news.models import NewsEvent
 from ai_news.store import Store
 
 
+def test_unused_excluded_category_cannot_reject_valid_included_decisions():
+    rows = [
+        {
+            "event_id": "excluded",
+            "include": False,
+            "category": "其他",
+            "importance": 10,
+            "reason": "不符合选题",
+        },
+        {
+            "event_id": "included",
+            "include": True,
+            "category": "模型",
+            "importance": 90,
+            "reason": "重要模型发布",
+        },
+    ]
+    result = Screening.model_validate({"decisions": rows})
+    assert not result.decisions[0].include and result.decisions[1].category == "模型"
+    rows[0] = {**rows[0], "include": True}
+    with pytest.raises(ValueError):
+        Screening.model_validate({"decisions": rows})
+
+
 @pytest.mark.parametrize("phase", ["screen", "rank", "review"])
 def test_native_phase_schema_binds_only_trusted_event_ids(phase):
     ids = ["a", "b"]
