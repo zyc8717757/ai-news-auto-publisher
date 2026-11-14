@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-14-am",
+  "revision": 1,
+  "created_at": "2026-11-14T00:30:52.182756Z",
+  "cutoff": "2026-11-14T00:30:00Z",
+  "window_start": "2026-11-12T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "7d4d71d056da02862d0b",
+      "title": "OpenAI推出ChatGPT Wallet",
+      "summary": "OpenAI推出了ChatGPT Wallet，旨在为ChatGPT Work、Codex和Dots等平台中的智能体提供安全的购物支付方式，在用户批准和现有信用卡保护下完成购买。该功能面向美国18岁及以上的ChatGPT Pro订阅用户逐步推出。",
+      "impact": "为AI智能体提供了安全的支付工具，推动AI自主消费场景落地。",
+      "category": "产品",
+      "score": 74.52,
+      "sources": [
+        {
+          "id": "7d4d71d056da02862d0b",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/introducing-chatgpt-wallet",
+          "title": "Introducing ChatGPT Wallet",
+          "published_at": "2026-11-13T15:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "754f24889ed9e00a6da8",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+          "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+          "published_at": "2026-11-13T20:45:10Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 适用范围目前仅限美国特定订阅用户及部分支持的信用卡。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI推出ChatGPT Wallet，支持Agent在用户批准下安全完成支付。",
+      "backfill": false
+    },
+    {
+      "id": "176a9ceb17b44efc7662",
+      "title": "Google AI Studio集成Google Cloud积分",
+      "summary": "Google AI Studio现在支持直接领取每月Google Cloud积分。Google AI Pro和Ultra订阅用户可以在同一工作区内设置账单、领取每月积分并管理Gemini API使用情况。使用Gemini API与云账单结合需要5美元的最低预付款和余额以提取促销积分。",
+      "impact": "简化了开发者在工作区内管理API积分与账单的流程。",
+      "category": "商业",
+      "score": 72.72,
+      "sources": [
+        {
+          "id": "176a9ceb17b44efc7662",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-cloud-credits-gdp-ai-studio/",
+          "title": "Claim your Google Cloud Credits in Google AI Studio",
+          "published_at": "2026-11-13T20:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 功能需要符合特定订阅身份及预付款条件。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google在AI Studio中直接集成云端额度，简化Gemini API结算与管理。",
+      "backfill": false
+    },
+    {
+      "id": "5ab783dcdbdb11e34d6e",
+      "title": "AI智能体浏览器引擎Kitesurf宣布开源",
+      "summary": "官方宣布其面向AI智能体的实验性浏览器引擎Kitesurf现已开源。开发者可以检查代码、在本地运行，或者在Cloudflare Workers上部署自己的实例。",
+      "impact": "为开发者提供了用于AI智能体的开源浏览器引擎选择。",
+      "category": "开发",
+      "score": 74.19,
+      "sources": [
+        {
+          "id": "5ab783dcdbdb11e34d6e",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/kitesurf-open-source/",
+          "title": "Kitesurf is now open source",
+          "published_at": "2026-11-13T20:20:21Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 该浏览器引擎目前处于实验性阶段。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Cloudflare将专为AI Agent设计的实验性浏览器引擎Kitesurf开源。",
+      "backfill": false
+    },
+    {
+      "id": "2b6ceace85f3ec57a1d0",
+      "title": "Vercel Token Pass升级每月额度",
+      "summary": "Vercel Token Pass宣布在团队每月保持30美元费用的前提下，将每月包含的Token额度从80美元提升至150美元。该额度适用于通过AI Gateway提供的精选开源权重模型，额度用尽后请求将停止且无超额费用。",
+      "impact": "降低了开发团队使用精选开源模型的成本。",
+      "category": "商业",
+      "score": 73.23,
+      "sources": [
+        {
+          "id": "2b6ceace85f3ec57a1d0",
+          "source_id": "primary-vercel",
+          "source_name": "Vercel",
+          "group": "vercel",
+          "trust": "official",
+          "url": "https://vercel.com/changelog/vercel-token-pass-now-includes-one-hundred-fifty-dollars-of-monthly-tokens",
+          "title": "Token Pass now includes $150 in tokens for $30/month",
+          "published_at": "2026-11-13T18:42:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 属于Pro团队的抢先体验附加组件，名额有限并设有候补名单。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Vercel Token Pass升级订阅额度，同等价格下每月提供150美元开源模型代币。",
+      "backfill": false
+    },
+    {
+      "id": "7deafdaefb224d33bdc9",
+      "title": "Gemini支持连接Google Wallet获取财务洞察",
+      "summary": "所有美国Gemini应用用户现在可以将Google Wallet连接至Gemini，以获取根据其消费习惯生成的个性化财务洞察。用户可以通过对话追踪支出、管理预算、查找订阅以及生成动态图表。",
+      "impact": "增强了Gemini在个人财务管理和日常智能助手场景的应用能力。",
+      "category": "产品",
+      "score": 73.46,
+      "sources": [
+        {
+          "id": "7deafdaefb224d33bdc9",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/",
+          "title": "Connect Google Wallet to Gemini for personal finance insights",
+          "published_at": "2026-11-13T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 目前该功能仅限美国用户。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Gemini App宣布全美用户可连接Google Wallet获取个人财务洞察。",
+      "backfill": false
+    },
+    {
+      "id": "a009bbdbfbe6de47102d",
+      "title": "Cloudflare分享对AI渗透测试编排器的观察与应对建议",
+      "summary": "Cloudflare分享了关于AI驱动的渗透测试平台（如ARTEX）的观察与推荐应对措施。这些平台正成为日益强大的工具，能够对暴露的基础设施进行有效攻击。",
+      "impact": "帮助安全团队了解AI渗透测试工具带来的威胁并采取防护措施。",
+      "category": "安全",
+      "score": 80.89,
+      "sources": [
+        {
+          "id": "a009bbdbfbe6de47102d",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/",
+          "title": "Adapting to AI penetration testing orchestrators: The Modern Security Model",
+          "published_at": "2026-11-13T19:26:07Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体攻击细节及应对措施的效果有待进一步实践检验。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Cloudflare发布关于AI渗透测试编排工具（如ARTEX）的安全分析与防护对策。",
+      "backfill": false
+    },
+    {
+      "id": "a1c4ce12170e4f18f3a7",
+      "title": "Transformers发布v5.23.0版本并新增Inkling2等多款模型与决策头",
+      "summary": "Transformers发布v5.23.0版本，新增了来自Thinking Machines Lab的多模态模型Inkling2的小型版本，该模型接受文本和图像输入并生成文本输出，包含5940亿总参数和170亿活跃参数。同时新增了用于对单token标签进行评分的决策头JEV。",
+      "impact": "丰富了开源生态中多模态模型与决策头的功能选择。",
+      "category": "模型",
+      "score": 72.84,
+      "sources": [
+        {
+          "id": "a1c4ce12170e4f18f3a7",
+          "source_id": "transformers",
+          "source_name": "Transformers Releases",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.23.0",
+          "title": "Transformers Releases: Release v5.23.0",
+          "published_at": "2026-11-13T14:10:57Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 新模型与决策头的实际性能表现尚未披露。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [
+        "v5.23.0"
+      ],
+      "event_type": "release",
+      "previous_issue": "2026-11-12-pm",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "Transformers开源库集成Thinking Machines Lab的多模态模型Inkling2。",
+      "backfill": false
+    },
+    {
+      "id": "6841e619fcd7e8d93702",
+      "title": "llama.cpp发布v1.0.0版本",
+      "summary": "llama.cpp发布了v1.0.0版本，旨在为本地AI生态系统提供更强大的基础支持。",
+      "impact": "进一步巩固和提升了本地AI生态的基础设施能力。",
+      "category": "开发",
+      "score": 69.82,
+      "sources": [
+        {
+          "id": "6841e619fcd7e8d93702",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+          "published_at": "2026-11-13T14:05:22Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体更新日志与功能改进未在证据中详细说明。",
+      "entities": [
+        "meta"
+      ],
+      "versions": [
+        "v1.0.0"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "llama.cpp发布v1.0.0版本，为本地AI生态提供更强基础。",
+      "backfill": false
+    },
+    {
+      "id": "a99dfdd20d85acbbb850",
+      "title": "Shield利用OpenAI技术帮助技术人员处理旧系统门户工作",
+      "summary": "Shield利用OpenAI技术帮助IT技术人员接管旧系统门户中的工作。其Forge智能体能够导航系统，使技术人员能够专注于需要人工判断的问题。",
+      "impact": "提升了IT技术人员处理遗留系统工作的效率。",
+      "category": "产品",
+      "score": 67.89,
+      "sources": [
+        {
+          "id": "a99dfdd20d85acbbb850",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/business/customer-stories/shield",
+          "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+          "published_at": "2026-11-13T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 智能体在复杂遗留系统中的稳定性和准确性有待观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI技术被Shield用于帮助IT技术人员通过Forge Agent自动化处理遗留门户任务。",
+      "backfill": false
+    },
+    {
+      "id": "fbf25131bffc5cd5b2b9",
+      "title": "Anthropic发布制造专用插件，将AI接入工厂软件",
+      "summary": "Anthropic推出了面向制造业的Claude for Manufacturing插件，可将人工智能直接连接至Autodesk Fusion、Oracle NetSuite和Infor等工厂软件。该插件包含17项专业技能，在获得人工批准后，能够起草报价单、比较供应商以及在交付延迟时下达备用订单。该公司称，该插件目前尚无法控制实体机器，但Anthropic正在为此单独开发模型硬件标准。",
+      "impact": "提升工业制造工作流的自动化水平，推动AI技术在工厂管理和供应链中的实际应用。",
+      "category": "产品",
+      "score": 57.88,
+      "sources": [
+        {
+          "id": "fbf25131bffc5cd5b2b9",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/",
+          "title": "Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflows",
+          "published_at": "2026-11-13T16:37:01Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "插件目前尚无法控制实体机器，其实际落地效果和安全性仍需在复杂工业环境中验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic 发布 Claude for Manufacturing 插件，直接接入工厂软件（如Autodesk Fusion等）自动化工业工作流。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
