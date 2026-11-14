@@ -405,9 +405,7 @@ def test_primary_model_rpm_does_not_consume_backup_model_rpm(settings, tmp_path,
     assert len(state.ai_model_attempts[backup]) == 1
 
 
-def test_same_model_rpm_waits_until_enough_calls_leave_the_window(
-    settings, tmp_path, monkeypatch, now
-):
+def test_same_model_rpm_waits_until_enough_calls_leave_the_window(settings, tmp_path, monkeypatch, now):
     monkeypatch.setenv("GEMINI_RPM", "5")
     model = "gemini-3.1-flash-lite"
     previous = [
@@ -442,9 +440,7 @@ def test_unknown_legacy_attempts_conservatively_block_every_model(settings, tmp_
     assert Store(tmp_path).state.ai_model_attempts == {}
 
 
-def test_global_tpm_reservations_still_block_cross_model_overcommit(
-    settings, tmp_path, monkeypatch, now
-):
+def test_global_tpm_reservations_still_block_cross_model_overcommit(settings, tmp_path, monkeypatch, now):
     monkeypatch.setenv("GEMINI_TPM", "500")
     store = Store(tmp_path)
     store.state.ai_reserved_tokens = [(now, 450)]
@@ -551,6 +547,36 @@ def test_new_single_grant_keeps_old_two_test_calls(settings, tmp_path, now, monk
     assert len(store.state.ai_attempts) == 8
     with pytest.raises(AIUnavailable):
         Budget(settings, Store(tmp_path), now=lambda: now, issue=issue, test_extra_limit=3).reserve(100)
+
+
+def test_additional_five_calls_preserve_old_five_and_production_counter(settings, tmp_path, now, monkeypatch):
+    issue = "2026-11-14-pm"
+    settings.model = "gemini-3.5-flash-lite"
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_ISSUE", issue)
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", "10")
+    store = Store(tmp_path)
+    store.state.ai_issue_attempts[issue] = 19
+    store.state.ai_test_attempts[issue] = 5
+    store.save_state()
+    for i in range(5):
+        Budget(
+            settings,
+            Store(tmp_path),
+            issue=issue,
+            test_extra_limit=10,
+            now=lambda i=i: now + timedelta(minutes=i * 2),
+        ).reserve(100)
+    saved = Store(tmp_path)
+    assert saved.state.ai_issue_attempts[issue] == 19
+    assert saved.state.ai_test_attempts[issue] == 10
+    assert len(saved.state.ai_attempts) == 5
+    with pytest.raises(AIUnavailable, match="issue_budget_exhausted"):
+        Budget(
+            settings, saved, issue=issue, test_extra_limit=10, now=lambda: now + timedelta(minutes=12)
+        ).reserve(100)
+    monkeypatch.setenv("AI_TEST_AUTHORIZED_TOTAL", "5")
+    with pytest.raises(AIUnavailable, match="not_authorized"):
+        Budget(settings, saved, issue=issue, test_extra_limit=10).reserve(100)
 
 
 @pytest.mark.parametrize("model", ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.8-flash"])

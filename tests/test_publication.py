@@ -216,6 +216,24 @@ def test_live_validation_keeps_budget_but_never_creates_publishable_revision(dig
     assert store.latest(base.issue).key == result.key and len(store.digests()) == 2
 
 
+def test_validation_with_one_test_slot_does_not_borrow_production(digest, settings, tmp_path):
+    from ai_news.ai import AIUnavailable
+    from ai_news.pipeline import enhance_frozen
+
+    settings.ai_run_limit = 20
+    store = Store(tmp_path)
+    base = digest.model_copy(update={"mode": "rules"})
+    store.state.ai_issue_attempts[base.issue] = 19
+    store.state.ai_test_attempts[base.issue] = 9
+    store.save_digest(base)
+    with pytest.raises(AIUnavailable, match="summary_and_review_slots"):
+        enhance_frozen(
+            settings, store, base.issue, base_key=base.key, test_extra_limit=10, validate_only=True
+        )
+    assert store.state.ai_issue_attempts[base.issue] == 19
+    assert store.state.ai_test_attempts[base.issue] == 9 and not store.state.ai_attempts
+
+
 @pytest.mark.parametrize("incomplete", [False, True])
 def test_explicit_frozen_base_requires_all_events_and_keeps_revision_history(
     digest, settings, tmp_path, now, incomplete

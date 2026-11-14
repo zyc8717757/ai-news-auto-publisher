@@ -229,6 +229,14 @@ def enhance_frozen(
         return existing, False
     if settings.paused:
         raise ValueError("publisher_paused")
+    if enhancer is None and validate_only:
+        remaining = (
+            test_extra_limit - store.state.ai_test_attempts.get(issue, 0)
+            if test_extra_limit
+            else settings.ai_run_limit - store.state.ai_issue_attempts.get(issue, 0)
+        )
+        if remaining < 2:
+            raise AIUnavailable("ai_validation_needs_summary_and_review_slots")
     now = now or datetime.now(UTC)
     events = [
         NewsEvent(
@@ -268,7 +276,9 @@ def enhance_frozen(
         recovery_model = settings.model if validate_only or native_primary else settings.backup_model
         production_remaining = settings.ai_run_limit - store.state.ai_issue_attempts.get(issue, 0)
         test_remaining = test_extra_limit - store.state.ai_test_attempts.get(issue, 0)
-        split_budget_recovery = bool(test_extra_limit and production_remaining == 1 and test_remaining == 1)
+        split_budget_recovery = bool(
+            not validate_only and test_extra_limit and production_remaining == 1 and test_remaining == 1
+        )
         if split_budget_recovery:
             # Pair the final production slot for summaries with the last
             # separately authorized review slot; each stage is reserved once.

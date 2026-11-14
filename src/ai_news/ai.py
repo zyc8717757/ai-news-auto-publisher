@@ -210,8 +210,8 @@ class Budget:
         self.sleep = sleep
         self.run_calls = 0
         self.issue = issue
-        if not 0 <= test_extra_limit <= 5:
-            raise ValueError("Cumulative test allowance must be within 0..5")
+        if not 0 <= test_extra_limit <= 10:
+            raise ValueError("Cumulative test allowance must be within 0..10")
         self.test_extra_limit = test_extra_limit
 
     def reserve(self, estimated_tokens: int, model: str | None = None) -> None:

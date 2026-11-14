@@ -114,7 +114,7 @@ def main():
             if os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != issue:
                 raise ValueError("This test issue was not explicitly authorized")
             total = int(os.environ.get("AI_TEST_AUTHORIZED_TOTAL", "0"))
-            if not 1 <= total <= 5:
+            if not 1 <= total <= 10:
                 raise ValueError("Explicit cumulative test ceiling required")
             test_total = total
         recovery_key = None
