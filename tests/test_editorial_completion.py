@@ -62,8 +62,9 @@ def test_screen_schema_failure_repairs_then_changes_model_with_exact_feedback(
     assert len(store.state.ai_attempts) == 3
 
 
+@pytest.mark.parametrize("validate_only", [False, True])
 def test_complete_editorial_flow_repairs_only_failed_events(
-    settings, official, tmp_path, source_item, now, monkeypatch
+    settings, official, tmp_path, source_item, now, monkeypatch, validate_only
 ):
     settings.ai_enabled, settings.ai_run_limit = True, 20
     monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
@@ -145,13 +146,28 @@ def test_complete_editorial_flow_repairs_only_failed_events(
         async def collect(self, *args):
             return [source_item], {official.id: SourceCache()}
 
-    digest, created = generate(settings, [official], store, "2026-10-10-am", now=now, collector=Collector())
-    assert created and digest.mode == "ai"
+    digest, created = generate(
+        settings,
+        [official],
+        store,
+        "2026-10-10-am",
+        now=now,
+        collector=Collector(),
+        validate_only=validate_only,
+    )
+    assert created is not validate_only and digest.mode == "ai"
     assert [s.id for s in digest.stories] == [e.id for e in editor.selected_events] == ["a", "b", "c"]
     assert summary_batches == [["a", "b", "c"], ["b"]]
     assert review_batches == [["a", "b", "c"], ["b", "c"]]
     assert set(models) == {settings.model}
     assert len(store.state.ai_attempts) == store.state.ai_issue_attempts["2026-10-10-am"] == 6
+    if validate_only:
+        assert not Store(store.root).digests() and not store.state.issues
+        assert (
+            store.state.last_covered_at is None and not store.state.source_cache and not store.state.history
+        )
+        assert all(a.validation_only for a in store.state.ai_audit)
+        return
     assert Store(store.root).latest(digest.issue).model_dump() == digest.model_dump()
     output = tmp_path / "site"
     build_site([digest], output, settings.base_url)

@@ -66,6 +66,7 @@ def parser() -> argparse.ArgumentParser:
     gen.add_argument("--issue")
     gen.add_argument("--schedule", help="Cron matching one of the configured Beijing report times")
     gen.add_argument("--regenerate", action="store_true")
+    gen.add_argument("--validate-only", action="store_true", help=argparse.SUPPRESS)
     gen.add_argument("--result", type=Path, default=Path(".runtime/result.json"))
     site = sub.add_parser("build-site")
     site.add_argument("--output", type=Path, default=Path("site"))
@@ -215,16 +216,18 @@ def execute(args) -> int:
             atomic_write(args.result, '{"status":"skipped"}')
             print('{"status":"skipped"}')
             return 0
-        if args.schedule == "17 * * * *":
+        if args.schedule == "17 * * * *" and not args.validate_only:
             existing = store.latest(issue)
             state = store.state.issues.get(existing.key) if existing else None
             if state and state.deployment == "ready" and state.email in {"sent", "disabled"}:
                 atomic_write(args.result, '{"status":"skipped"}')
                 print('{"status":"already_completed"}')
                 return 0
-        digest, created = generate(settings, sources, store, issue, args.regenerate)
+        digest, created = generate(
+            settings, sources, store, issue, args.regenerate, validate_only=args.validate_only
+        )
         result = {
-            "status": "ready",
+            "status": "validated" if args.validate_only else "ready",
             "issue": digest.issue,
             "key": digest.key,
             "mode": digest.mode,
@@ -238,8 +241,12 @@ def execute(args) -> int:
             "created": created,
             "count": len(digest.stories),
         }
+        if args.validate_only:
+            result.pop("key")
         atomic_write(args.result, json.dumps(result))
         print(json.dumps(result))
+        if args.validate_only and "ai_unavailable" in digest.warnings:
+            return 1
     elif args.command == "build-site":
         if not args.allow_sample_url:
             check_base(settings.base_url)

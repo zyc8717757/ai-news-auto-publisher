@@ -364,13 +364,14 @@ def generate(
     now: datetime | None = None,
     collector=None,
     enhancer=None,
+    validate_only: bool = False,
 ) -> tuple[Digest, bool]:
     now = now or datetime.now(UTC)
     cutoff = cutoff_for(issue, settings.morning_time, settings.evening_time)
     if cutoff > now:
         raise ValueError("Cannot generate an unfinished future period")
     existing = store.latest(issue)
-    if existing and not regenerate:
+    if existing and not regenerate and not validate_only:
         return existing, False
     if settings.paused:
         raise ValueError("publisher_paused")
@@ -378,7 +379,7 @@ def generate(
     # authoritative for already-published events; a coverage watermark is not rejection.
     start = cutoff - timedelta(hours=48)
     backfill = bool(store.state.last_covered_at and cutoff < store.state.last_covered_at)
-    cache = {} if regenerate or backfill else store.state.source_cache
+    cache = {} if regenerate or backfill or validate_only else store.state.source_cache
     items, caches = asyncio.run(
         (collector or Collector(settings, cutoff=cutoff)).collect(sources, cache, now)
     )
@@ -425,6 +426,7 @@ def generate(
                             latest[d.issue] = d
                 counts = Counter(s.category for d in latest.values() for s in d.news)
                 editor = EditorialEnhancer(settings, store, issue=issue)
+                editor.budget.validation_only = validate_only
                 response, decisions, selected = editor.edit(events, cutoff, dict(counts))
                 stories = ai_stories(response, selected, decisions)
             else:
@@ -432,6 +434,8 @@ def generate(
                 # limit before drafting so a complete AI result is never sliced.
                 events = events[: settings.max_items]
                 processor = enhancer or Enhancer(settings, store, issue=issue)
+                if enhancer is None:
+                    processor.budget.validation_only = validate_only
                 response = processor.enhance(events)
                 if enhancer is None:
                     from .editorial import EditorialEnhancer
@@ -506,6 +510,8 @@ def generate(
         warnings=warnings,
         editorial_version=2 if settings.editorial_enabled else 1,
     )
+    if validate_only:
+        return digest, False
     store.state.issues[digest.key] = IssueState()
     # Backfills must not consume ETags or move coverage for later live periods.
     if store.state.last_covered_at is None or cutoff >= store.state.last_covered_at:

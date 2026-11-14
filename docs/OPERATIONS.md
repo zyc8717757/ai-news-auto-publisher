@@ -23,7 +23,7 @@
 | `enhance-issue` | 将已有规则日报补做AI并生成新修订、部署和邮件；不重新采集、不改截止时间，计入同一期额度 |
 | `test-enhance` | 仅仓库Owner人工授权的独立联调，最多额外5次（需明确授权），单独持久化计数，仍计入当前模型免费日配额；不会自动用于生产 |
 
-运行结果的 `quality` 区分 `ai_complete`、`rules_degraded` 和 `rules_only`。工作流执行成功只证明所选操作完成，不能替代AI完整校验、Pages部署和SMTP投递各自的状态。冻结基线的只验证操作返回 `validated`，不会进入发布步骤；不带 `base_key` 的 `validate-news` 仍保留原有重新采集并生成待审核修订行为。
+运行结果的 `quality` 区分 `ai_complete`、`rules_degraded` 和 `rules_only`。工作流执行成功只证明所选操作完成，不能替代AI完整校验、Pages部署和SMTP投递各自的状态。`validate-news`返回`validated`，不会创建可发布修订：带`base_key`验证固定条目；不带时验证真实采集、初筛、排序、摘要与终审，仍只保存调用账本。需要创建待审核修订时使用`regenerate`。
 
 原生结构化输出按模型逐个验收：`validate-news` 携带冻结 `base_key` 时单独试验 Gemini 3.5 的 JSON Schema 配置，不设置旧思考参数；生产只有仓库变量 `AI_NATIVE_SCHEMA_MODELS` 精确列出的模型启用该配置，其他 Gemini 3 模型保留已验证的纯文本路径。通过真实摘要与终审后才将相应模型加入变量；不得因格式限制放宽事实和完整集合校验。诊断调用标记 `validation_only`，仍计入原账本，但不会抹掉生产故障的恢复原因。
 

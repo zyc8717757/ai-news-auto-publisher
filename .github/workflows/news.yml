@@ -136,7 +136,7 @@ jobs:
           SCHEDULE_CRON: ${{ github.event.schedule }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AI_FREE_TIER_CONFIRMED: ${{ vars.AI_FREE_TIER_CONFIRMED || 'false' }}
-          AI_NATIVE_SCHEMA_MODELS: ${{ inputs.mode == 'validate-news' && inputs.base_key != '' && 'gemini-3.5-flash-lite' || vars.AI_NATIVE_SCHEMA_MODELS || '' }}
+          AI_NATIVE_SCHEMA_MODELS: ${{ inputs.mode == 'validate-news' && 'gemini-3.5-flash-lite' || vars.AI_NATIVE_SCHEMA_MODELS || '' }}
           GEMINI_RPM: ${{ vars.GEMINI_RPM || '15' }}
           GEMINI_TPM: ${{ vars.GEMINI_TPM || '250000' }}
           GEMINI_RPD: ${{ vars.GEMINI_RPD || '500' }}

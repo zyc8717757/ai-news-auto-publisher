@@ -32,6 +32,8 @@ def build_command(mode: str, issue: str, schedule: str, base_key: str, test_tota
         command += ["--validate-only"]
     if mode == "regenerate" or (mode == "validate-news" and not frozen_validation):
         command += ["--regenerate"]
+    if mode == "validate-news" and not frozen_validation:
+        command += ["--validate-only"]
     if mode == "test-enhance" or (frozen_validation and test_total):
         command += ["--test-extra-requests", str(test_total)]
     return command
