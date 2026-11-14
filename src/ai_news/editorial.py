@@ -93,6 +93,29 @@ class Review(StrictModel):
     reason: str = Field(max_length=160)
 
 
+def validate_or_separate_merges(ranking: Ranking, candidates) -> None:
+    """Cancel evidence-conflicting merges without discarding either known event."""
+    retained = []
+    restored = []
+    for merge in ranking.merges:
+        trial = Ranking(ordered_ids=ranking.ordered_ids, merges=[merge])
+        try:
+            validate_ranking(trial, candidates)
+        except ValueError as exc:
+            if str(exc) != "Ranking merge evidence conflict":
+                raise
+            restored.extend(merge.other_ids)
+        else:
+            retained.append(merge)
+    ordered = list(dict.fromkeys([*ranking.ordered_ids, *restored]))
+    # Never satisfy the fifteen-item limit by truncating restored events.
+    repaired = Ranking(ordered_ids=ordered, merges=retained)
+    validate_ranking(repaired, candidates)
+    ranking.ordered_ids, ranking.merges = repaired.ordered_ids, repaired.merges
+    if restored:
+        print(json.dumps({"status": "editorial_merge_separated", "restored_ids": restored}))
+
+
 class Reviews(StrictModel):
     reviews: list[Review] = Field(max_length=15)
 
@@ -195,6 +218,7 @@ class EditorialEnhancer(Enhancer):
         max_repairs=1,
         max_provider_retries=1,
         allow_model_fallback=True,
+        recover_failed=True,
     ):
         if not summaries:
             return []
@@ -278,6 +302,23 @@ class EditorialEnhancer(Enhancer):
                 else:
                     verified_reviews[review.event_id] = review
             if errors:
+                if recover_failed and verified_reviews:
+                    # Do not regenerate verified siblings just because another
+                    # item's anchor is invalid. The unresolved item is repaired
+                    # separately below and full coverage still gates the return.
+                    result.reviews = [
+                        verified_reviews.get(key)
+                        or VerifiedReview(
+                            event_id=key,
+                            approved=False,
+                            reason="待单独修复数字或证据校验",
+                            translation_ok=False,
+                            failure="evidence",
+                        )
+                        for key in original
+                    ]
+                    print(json.dumps({"status": "editorial_review_pending", "count": len(errors)}))
+                    return
                 raise errors[0]
 
         payload = []
@@ -368,13 +409,34 @@ class EditorialEnhancer(Enhancer):
                 if decisions:
                     decisions[result.event_id].reason = reason
             approved.append(story)
+        missing = [s for s in summaries if s.event_id not in {x.event_id for x in approved}]
+        if missing and recover_failed:
+            # Keep independently verified siblings and repair only unresolved events.
+            if allow_model_fallback:
+                self.used_model = fallback_model(self.used_model, self.settings) or self.used_model
+            for story in missing:
+                approved.extend(
+                    self.review_summaries(
+                        client,
+                        [story],
+                        events,
+                        decisions,
+                        review_texts,
+                        max_repairs=max_repairs,
+                        max_provider_retries=max_provider_retries,
+                        allow_model_fallback=allow_model_fallback,
+                        recover_failed=False,
+                    )
+                )
+        if (
+            len(approved) != len(summaries)
+            or any(s.duplicate_of for s in approved)
+            or {s.event_id for s in approved} != set(original)
+        ):
+            raise AIUnavailable("ai_review_coverage_incomplete")
         # Preserve ranking; reviewer response ordering is not a new editorial decision.
         approved_by_id = {s.event_id: s for s in approved}
-        return [
-            approved_by_id[s.event_id]
-            for s in summaries
-            if s.event_id in approved_by_id and not s.duplicate_of
-        ]
+        return [approved_by_id[s.event_id] for s in summaries if s.event_id in approved_by_id]
 
     def call(
         self,
@@ -469,11 +531,25 @@ class EditorialEnhancer(Enhancer):
                 )
                 self.audit(model, "output_rejected", safe_reason)
                 if repair >= max_repairs:
-                    raise AIUnavailable("ai_output_invalid") from None
-                repair += 1
+                    next_model = fallback_model(model, self.settings) if allow_model_fallback else None
+                    if next_model is None:
+                        raise AIUnavailable("ai_output_invalid") from None
+                    self.used_model = next_model
+                    repair = 0
+                else:
+                    repair += 1
                 if getattr(self, "last_finish_reason", "") in {"MAX_TOKENS", "max_tokens"}:
                     output_limit = min(12000, output_limit * 2)
                 prompt += "\n上次结构或事件集合错误。仅按最外层event_id逐条输出完整结果，绝不将evidence[].id当成事件，不增加也不遗漏事件；理由一句话，不要示例或代码围栏。"
+                # Only trusted schema paths/types and input IDs enter repair feedback.
+                # Never echo rejected model text or Pydantic's untrusted input/context.
+                if errors:
+                    prompt += "\n字段错误位置和类型：" + json.dumps(
+                        [{"loc": e["loc"], "type": e["type"]} for e in errors[:16]]
+                    )
+                if phase == "screen":
+                    prompt += "\n必须完整覆盖事件ID：" + json.dumps([x["event_id"] for x in data])
+                    prompt += "。category只能是模型、开发、产品、商业、安全、评测。"
                 if phase == "review":
                     prompt += (
                         "\n失败类型："
@@ -490,6 +566,8 @@ class EditorialEnhancer(Enhancer):
 
         from google import genai
         from google.genai import types
+
+        self.selected_events = []
 
         if not self.settings.ai_enabled or os.getenv("AI_FREE_TIER_CONFIRMED") != "true":
             raise AIUnavailable("ai_disabled_or_free_tier_unconfirmed")
@@ -586,7 +664,9 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
             Ranking,
             "rank",
             3000,
-            validator=lambda result: validate_ranking(result, {key: by_id[key] for key in decisions}),
+            validator=lambda result: validate_or_separate_merges(
+                result, {key: by_id[key] for key in decisions}
+            ),
         )
         ordered = ranking.ordered_ids
         # validate_ranking has already enforced the exact ID and merge contract
@@ -648,16 +728,20 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
                 continue
             observers += decision.observation
             researchers += decision.major_research
-            chosen.append(by_id[key])
+            chosen.append(by_id[key].model_copy(update={"observation": decision.observation}))
         # Ordinary news always precedes observations, including in the image and long draft.
         chosen.sort(key=lambda x: decisions[x.id].observation)
+        chosen = chosen[: self.settings.max_items]
+        # This set is fixed before drafting. The caller can retain these exact
+        # source events on failure instead of publishing a smaller AI edition.
+        self.selected_events = chosen
         summaries = []
         for offset in range(0, len(chosen), 5):
             # Reuse the existing validated summary path and the SAME persistent budget.
             summarizer = Enhancer(self.settings, self.store, client=client, budget=self.budget)
             summarizer.used_model = self.used_model
             try:
-                response = summarizer.enhance(chosen[offset : offset + 5], allow_partial=True)
+                response = summarizer.enhance(chosen[offset : offset + 5], allow_partial=True, max_repairs=0)
             except AIUnavailable as exc:
                 if str(exc) != "ai_output_invalid":
                     raise
@@ -679,6 +763,19 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
                         }
                     )
                 )
+                summarizer = Enhancer(self.settings, self.store, client=client, budget=self.budget)
+                summarizer.used_model = fallback_model(self.used_model, self.settings) or self.used_model
+                try:
+                    repaired = summarizer.enhance([event], max_repairs=1)
+                    summaries.extend(repaired.stories)
+                finally:
+                    self.used_model = summarizer.used_model
+        if len(summaries) != len(chosen) or {s.event_id for s in summaries if not s.duplicate_of} != {
+            e.id for e in chosen
+        }:
+            raise AIUnavailable("ai_summary_coverage_incomplete")
+        by_summary = {s.event_id: s for s in summaries}
+        summaries = [by_summary[e.id] for e in chosen]
         if not summaries:
             if chosen:
                 raise AIUnavailable("ai_output_invalid")
@@ -694,6 +791,8 @@ ordered_ids最多15个，不需凑满。merges用keep_id和other_ids表示同一
                 # Optional screening prose cannot introduce unsupported numbers/links.
                 decisions[story.event_id].reason = ""
         summaries = self.review_summaries(client, summaries, chosen, decisions)
+        if {s.event_id for s in summaries} != {e.id for e in chosen}:
+            raise AIUnavailable("ai_review_coverage_incomplete")
         print(
             json.dumps(
                 {

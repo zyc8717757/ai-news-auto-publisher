@@ -136,7 +136,9 @@ def test_frozen_ai_upgrade_preserves_period_and_is_idempotent(digest, settings, 
     from ai_news.pipeline import enhance_frozen
 
     store = Store(tmp_path)
-    old = digest.model_copy(update={"mode": "rules", "warnings": ["ai_unavailable", "source_errors"]})
+    old = digest.model_copy(
+        update={"mode": "rules", "warnings": ["ai_unavailable", "ai_coverage_incomplete", "source_errors"]}
+    )
     store.state.last_covered_at = old.cutoff
     store.state.ai_attempts = [now]
     store.state.ai_issue_attempts[old.issue] = 4
@@ -168,6 +170,50 @@ def test_frozen_ai_upgrade_preserves_period_and_is_idempotent(digest, settings, 
     assert result.warnings == ["source_errors"]
     again, created = enhance_frozen(settings, store, old.issue, AI(), now)
     assert not created and again.key == result.key and len(calls) == 1
+
+
+def test_live_validation_keeps_budget_but_never_creates_publishable_revision(digest, settings, tmp_path, now):
+    from ai_news.ai import Budget
+    from ai_news.models import AIResponse, AIStory
+    from ai_news.pipeline import enhance_frozen
+
+    store = Store(tmp_path)
+    base = digest.model_copy(update={"mode": "rules"})
+    store.save_digest(base)
+    before = (store.root / "digests" / f"{base.key}.json").read_bytes()
+    states = store.state.model_dump(include={"issues", "last_covered_at"})
+
+    class AI:
+        def enhance(self, events):
+            Budget(settings, store, issue=base.issue, now=lambda: now).reserve(100)
+            return AIResponse(
+                stories=[
+                    AIStory(
+                        event_id=e.id,
+                        title="产品更新",
+                        summary="公司宣布了产品更新，效果仍需独立验证。",
+                        impact="可能为用户提供更多选择。",
+                        category="产品",
+                        value_score=80,
+                        evidence_ids=[e.evidence[0].id],
+                    )
+                    for e in events
+                ]
+            )
+
+    result, created = enhance_frozen(
+        settings, store, base.issue, AI(), now, base_key=base.key, validate_only=True
+    )
+    assert result.mode == "ai" and not created
+    assert store.latest(base.issue).key == base.key and len(store.digests()) == 1
+    assert (store.root / "digests" / f"{base.key}.json").read_bytes() == before
+    assert store.state.model_dump(include={"issues", "last_covered_at"}) == states
+    assert Store(tmp_path).state.ai_issue_attempts[base.issue] == 1
+    # Explicit revalidation must not silently reuse an earlier successful AI revision.
+    store.save_digest(result)
+    enhance_frozen(settings, store, base.issue, AI(), now, base_key=base.key, validate_only=True)
+    assert Store(tmp_path).state.ai_issue_attempts[base.issue] == 2
+    assert store.latest(base.issue).key == result.key and len(store.digests()) == 2
 
 
 @pytest.mark.parametrize("incomplete", [False, True])

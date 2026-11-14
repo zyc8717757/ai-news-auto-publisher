@@ -201,8 +201,11 @@ def enhance_frozen(
     now=None,
     test_extra_limit: int = 0,
     base_key: str | None = None,
+    validate_only: bool = False,
 ) -> tuple[Digest, bool]:
     """Upgrade frozen source information without recollecting, moving coverage or clearing budgets."""
+    if validate_only and not base_key:
+        raise ValueError("Live validation requires an explicit frozen base")
     latest = store.latest(issue)
     existing = (
         next((d for d in store.digests() if d.issue == issue and d.key == base_key), None)
@@ -213,6 +216,7 @@ def enhance_frozen(
         raise ValueError("A nonempty frozen digest is required")
     if (
         base_key
+        and not validate_only
         and latest
         and latest.mode == "ai"
         and latest.revision > existing.revision
@@ -276,7 +280,12 @@ def enhance_frozen(
             allow_model_fallback=bool(test_extra_limit) and not split_budget_recovery,
         )
     else:
-        response = processor.enhance(events, allow_partial=True, individual=bool(base_key))
+        remaining = settings.ai_run_limit - store.state.ai_issue_attempts.get(issue, 0)
+        response = processor.enhance(
+            events,
+            allow_partial=True,
+            individual=bool(base_key) and not validate_only and remaining >= len(events) * 2 + 1,
+        )
     if enhancer is None:
         from .editorial import EditorialEnhancer
 
@@ -298,9 +307,12 @@ def enhance_frozen(
                 else 1,
                 max_provider_retries=0 if split_budget_recovery else (1 if test_extra_limit else 1),
                 allow_model_fallback=not split_budget_recovery,
+                recover_failed=not compact_recovery,
             )
         )
-    if base_key and {s.event_id for s in response.stories if not s.duplicate_of} != {e.id for e in events}:
+    if len(response.stories) != len(events) or {
+        s.event_id for s in response.stories if not s.duplicate_of
+    } != {e.id for e in events}:
         raise AIUnavailable("ai_frozen_coverage_incomplete")
     stories = sorted(ai_stories(response, events), key=lambda story: (-story.score, story.id))
     digest = existing.model_copy(
@@ -309,9 +321,15 @@ def enhance_frozen(
             "created_at": now,
             "mode": "ai",
             "stories": stories,
-            "warnings": [w for w in existing.warnings if w != "ai_unavailable"],
+            "warnings": [
+                w for w in existing.warnings if w not in {"ai_unavailable", "ai_coverage_incomplete"}
+            ],
         }
     )
+    if validate_only:
+        # Reservations/audits remain durable; a live validation must never
+        # create a pending revision that a later scheduled run could publish.
+        return digest, False
     store.state.issues[digest.key] = IssueState()
     store.save_digest(digest)
     logging.getLogger(__name__).warning(
@@ -372,6 +390,8 @@ def generate(
     warnings = ["source_errors"] if any(cache.status == "error" for cache in caches.values()) else []
     stories = []
     mode = "rules"
+    frozen_selection = False
+    editor = None
     if events and settings.ai_enabled:
         try:
             if settings.editorial_enabled and enhancer is None:
@@ -387,11 +407,13 @@ def generate(
                         if d.issue not in latest or d.revision > latest[d.issue].revision:
                             latest[d.issue] = d
                 counts = Counter(s.category for d in latest.values() for s in d.news)
-                response, decisions, selected = EditorialEnhancer(settings, store, issue=issue).edit(
-                    events, cutoff, dict(counts)
-                )
+                editor = EditorialEnhancer(settings, store, issue=issue)
+                response, decisions, selected = editor.edit(events, cutoff, dict(counts))
                 stories = ai_stories(response, selected, decisions)
             else:
+                # With no editorial ranking, apply the configured selection
+                # limit before drafting so a complete AI result is never sliced.
+                events = events[: settings.max_items]
                 processor = enhancer or Enhancer(settings, store, issue=issue)
                 response = processor.enhance(events)
                 if enhancer is None:
@@ -402,16 +424,24 @@ def generate(
                             settings, store, client=processor.client, budget=processor.budget
                         ).review_summaries(processor.client, response.stories, events)
                     )
+                if len(response.stories) != len(events) or {
+                    s.event_id for s in response.stories if not s.duplicate_of
+                } != {e.id for e in events}:
+                    raise AIUnavailable("ai_summary_coverage_incomplete")
                 stories = ai_stories(response, events)
             mode = "ai"
         except AIUnavailable as exc:
             logging.getLogger(__name__).warning("AI degraded: %s", exc)
             warnings.append("ai_unavailable")
+            if editor is not None and getattr(editor, "selected_events", None):
+                events = editor.selected_events
+                frozen_selection = True
+                warnings.append("ai_coverage_incomplete")
     if mode == "rules":
         observers = 0
         for event in events:
             primary = event.evidence[0]
-            if settings.editorial_enabled:
+            if settings.editorial_enabled and not frozen_selection:
                 if (
                     primary.trust == "research"
                     or event.rule_score < settings.importance_threshold

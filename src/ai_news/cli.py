@@ -44,6 +44,12 @@ def parser() -> argparse.ArgumentParser:
         default=0,
         help="Explicit cumulative test ceiling; all historical counters remain",
     )
+    upgrade.add_argument(
+        "--fallback-to-existing-rules",
+        action="store_true",
+        help=argparse.SUPPRESS,
+    )
+    upgrade.add_argument("--validate-only", action="store_true", help=argparse.SUPPRESS)
     ai_check = sub.add_parser("check-ai")
     ai_check.add_argument(
         "--issue", required=True, help="Check frozen public evidence without deploying or emailing"
@@ -136,17 +142,36 @@ def execute(args) -> int:
     store = Store(args.data, remote=args.remote)
     if args.command == "enhance-issue":
         cutoff_for(args.issue)
-        digest, created = enhance_frozen(
-            settings, store, args.issue, test_extra_limit=args.test_extra_requests, base_key=args.base_key
-        )
+        recovery = None
+        try:
+            digest, created = enhance_frozen(
+                settings,
+                store,
+                args.issue,
+                test_extra_limit=args.test_extra_requests,
+                base_key=args.base_key,
+                validate_only=args.validate_only,
+            )
+        except AIUnavailable:
+            if args.validate_only or not args.fallback_to_existing_rules or not args.base_key:
+                raise
+            digest = store.latest(args.issue)
+            if digest is None or digest.key != args.base_key or digest.mode != "rules" or not digest.stories:
+                raise
+            created = False
+            recovery = "rules_fallback"
+            print("AI recovery unavailable; retaining the original rules digest", file=sys.stderr)
         result = {
-            "status": "ready",
+            "status": "validated" if args.validate_only else "ready",
             "issue": digest.issue,
             "key": digest.key,
             "mode": digest.mode,
+            "quality": "ai_complete" if digest.mode == "ai" else "rules_degraded",
             "created": created,
             "count": len(digest.stories),
         }
+        if recovery:
+            result["recovery"] = recovery
         atomic_write(args.result, json.dumps(result))
         print(json.dumps(result))
         return 0
@@ -200,6 +225,13 @@ def execute(args) -> int:
             "issue": digest.issue,
             "key": digest.key,
             "mode": digest.mode,
+            "quality": (
+                "ai_complete"
+                if digest.mode == "ai"
+                else "rules_degraded"
+                if "ai_unavailable" in digest.warnings
+                else "rules_only"
+            ),
             "created": created,
             "count": len(digest.stories),
         }

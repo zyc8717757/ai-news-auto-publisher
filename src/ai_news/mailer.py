@@ -14,7 +14,7 @@ from typing import Protocol
 from .drafts import make_drafts
 from .models import Digest, IssueState
 from .overview import overview_png
-from .site import digest_url, source_time
+from .site import WARNING_TEXT, digest_url, source_time
 from .store import Store
 
 
@@ -64,7 +64,10 @@ def make_message(digest: Digest, config: MailConfig, base_url: str, deployment_r
                 + "\n".join(f"{i}. {s.title}" for i, s in enumerate(digest.news[:3], 1))
             )
     if digest.warnings:
-        sections.append("本期处理提示：" + ", ".join(digest.warnings))
+        sections.append(
+            "本期处理提示："
+            + " ".join(WARNING_TEXT.get(code, "本期部分处理能力受限。") for code in digest.warnings)
+        )
     for i, story in enumerate(digest.stories, 1):
         prefix = "【前瞻观察·未经官方确认】" if story.section == "observation" else ""
         prefix += "【重要补录】" if story.backfill else ""

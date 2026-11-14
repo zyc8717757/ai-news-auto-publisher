@@ -108,7 +108,7 @@ def test_approval_flag_alone_cannot_bypass_numeric_or_translation_review(
         ]
     monkeypatch.setattr(editor, "generate_text", lambda *args: json.dumps({"reviews": [review]}))
     with pytest.raises(AIUnavailable, match="ai_output_invalid"):
-        editor.review_summaries(object(), [story], [event])
+        editor.review_summaries(object(), [story], [event], allow_model_fallback=False)
     assert len(Store(tmp_path).state.ai_attempts) == 2
 
 
@@ -129,9 +129,21 @@ def test_bad_numeric_audit_does_not_erase_an_independently_verified_sibling(
         }
         for key in ("fund", "other")
     ]
-    monkeypatch.setattr(editor, "generate_text", lambda *args: json.dumps({"reviews": rows}))
-    assert [s.event_id for s in editor.review_summaries(object(), [story, safe], [event, other])] == ["other"]
-    assert len(Store(tmp_path).state.ai_attempts) == 2
+    prompts = []
+
+    def generate(*args):
+        prompts.append(args[2])
+        data = json.JSONDecoder().raw_decode(args[2].split("\n只返回JSON，不要代码围栏。输入：")[1])[0]
+        requested = {x["story"]["event_id"] for x in data}
+        return json.dumps({"reviews": [r for r in rows if r["event_id"] in requested]})
+
+    monkeypatch.setattr(editor, "generate_text", generate)
+    with pytest.raises(AIUnavailable, match="ai_output_invalid"):
+        editor.review_summaries(object(), [story, safe], [event, other], allow_model_fallback=False)
+    # The verified sibling is retained internally, but cannot become a partial publication.
+    assert len(Store(tmp_path).state.ai_attempts) == 3
+    final = json.JSONDecoder().raw_decode(prompts[-1].split("\n只返回JSON，不要代码围栏。输入：")[1])[0]
+    assert [x["story"]["event_id"] for x in final] == ["fund"]
 
 
 def test_numbered_source_passages_resolve_to_immutable_original_text(

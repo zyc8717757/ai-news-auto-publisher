@@ -13,7 +13,6 @@ from ai_news.discovery import discover
 from ai_news.editorial import EditorialEnhancer
 from ai_news.models import AIResponse, AIStory, NewsEvent, Source, SourceCache
 from ai_news.network import Page
-from ai_news.pipeline import ai_stories
 from ai_news.selection import select_events
 from ai_news.store import Store
 
@@ -139,10 +138,17 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
             phases.append("review")
             result = {
                 "reviews": [
-                    {"event_id": str(i), "approved": i != 3, "reason": "证据足够",
-                     "translation_ok": True, "failure": "none" if i != 3 else "fact",
-                     "replacement": None, "numeric_checks": []}
-                    for i in range(2, 6) if i != 2 or not bad_summary
+                    {
+                        "event_id": str(i),
+                        "approved": i != 3,
+                        "reason": "证据足够",
+                        "translation_ok": True,
+                        "failure": "none" if i != 3 else "fact",
+                        "replacement": None,
+                        "numeric_checks": [],
+                    }
+                    for i in range(2, 6)
+                    if i != 2 or not bad_summary
                 ]
             }
         else:
@@ -180,14 +186,22 @@ def test_editorial_rejects_low_value_and_final_review_vetoes(
     )
     store = Store(tmp_path)
     editor = EditorialEnhancer(
-        settings, store, client=client, budget=Budget(settings, store, now=lambda: now, issue="2026-10-10-pm")
+        settings,
+        store,
+        client=client,
+        budget=Budget(
+            settings,
+            store,
+            now=lambda: now + timedelta(minutes=len(store.state.ai_attempts)),
+            issue="2026-10-10-pm",
+        ),
     )
-    response, decisions, selected = editor.edit(events, now)
-    assert phases == ["screen", "rank", *(["summary"] * 3 if bad_summary else ["summary"]), "review"]
-    assert [s.event_id for s in response.stories] == (["4", "5"] if bad_summary else ["2", "4", "5"])
-    assert len(Store(tmp_path).state.ai_attempts) == (6 if bad_summary else 4)
-    stories = ai_stories(response, selected, decisions)
-    assert [s.section for s in stories] == (["news", "observation"] if bad_summary else ["news", "news", "observation"])
+    # Selected stories may be repaired, but a failed summary/review cannot be
+    # silently removed from an edition still labelled AI-complete.
+    with pytest.raises(AIUnavailable):
+        editor.edit(events, now)
+    assert [e.id for e in editor.selected_events] == ["2", "3", "4", "5"]
+    assert "screen" in phases and "rank" in phases and "summary" in phases
 
 
 def test_twenty_request_cap_is_persistent(settings, tmp_path, now, monkeypatch):

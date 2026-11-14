@@ -61,6 +61,7 @@ WARNING_TEXT = {
     "fact_correction_reviewed": "本版已根据原始来源更正金额和事件表述，并完成事实终审。",
     "source_errors": "部分新闻源暂不可用，本期覆盖可能不完整。",
     "ai_unavailable": "免费 AI 增强未完成。",
+    "ai_coverage_incomplete": "AI 核验未能覆盖全部已选资讯，以下保留完整来源条目。",
     "no_new_items": "本期没有符合要求的新资讯。",
 }
 
