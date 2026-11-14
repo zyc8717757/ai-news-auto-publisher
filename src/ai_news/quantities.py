@@ -173,11 +173,7 @@ def quantities(text: str) -> list[Quantity]:
                 name = storage[1].lower()
                 powers = {"tb": 12, "gb": 9, "mb": 6, "kb": 3}
                 binary = {"tib": 40, "gib": 30, "mib": 20, "kib": 10}
-                value *= (
-                    Decimal(2) ** binary[name]
-                    if name in binary
-                    else Decimal(10) ** powers.get(name, 0)
-                )
+                value *= Decimal(2) ** binary[name] if name in binary else Decimal(10) ** powers.get(name, 0)
                 unit, end = "bytes", end + storage.end()
                 result.append(Quantity(start, end, value, unit))
                 consumed_until = end
@@ -251,9 +247,7 @@ def equivalent(left: Quantity, right: Quantity) -> bool:
     return left.value == right.value
 
 
-RANGE_SEPARATOR = re.compile(
-    r"\s*(?:to|through|[-–—~～至到])\s*(?:over|about|超过|约)?\s*", re.I
-)
+RANGE_SEPARATOR = re.compile(r"\s*(?:to|through|[-–—~～至到])\s*(?:over|about|超过|约)?\s*", re.I)
 CLAUSE_BOUNDARY = re.compile(r"[!?！？。;；，]|,(?!\d)|(?<!\d)\.(?!\d)")
 METRIC_COORDINATION = re.compile(r"[\s,，、]*(?:and/or|and|or|以及|与|及|和|或)[\s,，、]*", re.I)
 
@@ -376,9 +370,9 @@ def _range_unit_factor(text: str, quantity: Quantity, raw_value: Decimal) -> Dec
     if quantity.unit == "ratio":
         if raw[1].group().startswith("百分之"):
             return Decimal("0.01")
-        if re.match(r"\s*(?:%|percent\b|per cent\b)", suffix, re.I) or text[
-            : match.start()
-        ].endswith("百分之"):
+        if re.match(r"\s*(?:%|percent\b|per cent\b)", suffix, re.I) or text[: match.start()].endswith(
+            "百分之"
+        ):
             return Decimal("0.01")
         if suffix.startswith("成"):
             return Decimal("0.1")
@@ -454,10 +448,13 @@ METRICS = {
 }
 
 
-def validate_metric_context(output_quote: str, source_quote: str) -> None:
+def validate_metric_context(
+    output_quote: str, source_quote: str, claims: list[Quantity] | None = None
+) -> None:
     # Catch common, unambiguous metric substitutions deterministically. Open-ended
     # subjects and other statistical meanings remain mandatory semantic-review work.
-    claims, originals = quantities(output_quote), quantities(source_quote)
+    claims = quantities(output_quote) if claims is None else claims
+    originals = quantities(source_quote)
     for claim in claims:
         if claim.unit in {"date", "identifier", "version"}:
             continue
@@ -490,7 +487,9 @@ def validate_metric_context(output_quote: str, source_quote: str) -> None:
 
         target_basis = _change_basis(output_quote, claim)
         source_bases = [_change_basis(source_quote, original) for original in basis_sources]
-        conflicts = [basis for basis in source_bases if target_basis and basis and target_basis.isdisjoint(basis)]
+        conflicts = [
+            basis for basis in source_bases if target_basis and basis and target_basis.isdisjoint(basis)
+        ]
         if conflicts and not any(target_basis & basis for basis in source_bases):
             raise ValueError("Numeric anchor change basis mismatch")
 
@@ -541,8 +540,37 @@ def validate_anchors(fields: dict[str, str], sources: dict[str, str], anchors) -
         source = " ".join(source.split())
         if not quote or quote not in text or not passage or passage not in source:
             raise ValueError("Unverified numeric anchor")
-        validate_metric_context(quote, passage)
-        claims, originals = quantities(quote), quantities(passage)
+        output_index = getattr(anchor, "output_index", None)
+        selected = None
+        if output_index is not None:
+            field_quantities = quantities(text)
+            if not 0 <= output_index < len(field_quantities):
+                raise ValueError("Unverified numeric anchor")
+            selected = field_quantities[output_index]
+            occurrence = next(
+                (
+                    match
+                    for match in re.finditer(re.escape(quote), text)
+                    if match.start() <= selected.start and selected.end <= match.end()
+                ),
+                None,
+            )
+            if occurrence is None:
+                raise ValueError("Unverified numeric anchor")
+            # The clause supplies semantic context; this anchor certifies only
+            # its indexed quantity, not every other number in the same clause.
+            claims = [
+                Quantity(
+                    selected.start - occurrence.start(),
+                    selected.end - occurrence.start(),
+                    selected.value,
+                    selected.unit,
+                )
+            ]
+        else:
+            claims = quantities(quote)
+        validate_metric_context(quote, passage, claims)
+        originals = quantities(passage)
         if not claims or any(not any(equivalent(q, p) for p in originals) for q in claims):
             raise ValueError("Numeric anchor quantity mismatch")
         if any(q.unit not in {"date", "identifier", "version"} for q in claims):
@@ -561,6 +589,9 @@ def validate_anchors(fields: dict[str, str], sources: dict[str, str], anchors) -
             if key[0] != "date"
         ):
             raise ValueError("Numeric anchor multiplicity mismatch")
+        if selected is not None:
+            covered[anchor.field].add((selected.start, selected.end))
+            continue
         for occurrence in re.finditer(re.escape(quote), text):
             covered[anchor.field].update(
                 (q.start, q.end)

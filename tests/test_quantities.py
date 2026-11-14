@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from ai_news.quantities import validate_anchors, validate_quantities
+from ai_news.quantities import claim_clause, validate_anchors, validate_quantities
 
 
 @pytest.mark.parametrize(
@@ -84,6 +84,33 @@ def test_chinese_numeral_currency_amount_still_requires_arabic_digits():
 
 def anchor(output="融资8.7亿美元", source="Raised $870 million", evidence_id="e"):
     return SimpleNamespace(field="summary", output_quote=output, source_quote=source, evidence_id=evidence_id)
+
+
+@pytest.mark.parametrize("missing_index", [None, 0, 1, 2])
+def test_indexed_anchor_checks_only_its_number_but_requires_every_number(missing_index):
+    text = "模型Gemini 4的输入价格为1.5美元且输出价格为7.5美元。"
+    excerpts = [
+        "Introducing Gemini 4.",
+        "Input costs $1.50 per million tokens.",
+        "Output costs $7.50 per million tokens.",
+    ]
+    sources = {str(i): value for i, value in enumerate(excerpts)}
+    anchors = [
+        SimpleNamespace(
+            field="summary",
+            output_index=i,
+            output_quote=claim_clause(text, i),
+            source_quote=excerpts[i],
+            evidence_id=str(i),
+        )
+        for i in range(3)
+        if i != missing_index
+    ]
+    if missing_index is None:
+        validate_anchors({"summary": text}, sources, anchors)
+    else:
+        with pytest.raises(ValueError, match="missing semantic audit"):
+            validate_anchors({"summary": text}, sources, anchors)
 
 
 def test_semantic_audit_requires_cited_verbatim_metric_passages_and_complete_coverage():
