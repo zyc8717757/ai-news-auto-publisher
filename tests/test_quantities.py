@@ -2,7 +2,13 @@ from types import SimpleNamespace
 
 import pytest
 
-from ai_news.quantities import claim_clause, validate_anchors, validate_quantities
+from ai_news.quantities import (
+    claim_clause,
+    quantities,
+    source_passages,
+    validate_anchors,
+    validate_quantities,
+)
 
 
 @pytest.mark.parametrize(
@@ -44,6 +50,52 @@ from ai_news.quantities import claim_clause, validate_anchors, validate_quantiti
 )
 def test_exact_translations_and_unit_conversions(source, translation):
     validate_quantities(translation, [source])
+
+
+@pytest.mark.parametrize("ending", [".", ". Next sentence.", "。", ",", ")"])
+def test_sentence_punctuation_cannot_truncate_release_version(ending):
+    parsed = quantities("The langchain-core version is 1.8.0" + ending)
+    assert parsed[0].unit == "version" and parsed[0].value == "1.8.0"
+    validate_quantities(
+        "最低langchain-core版本为1.8.0。", ["The minimum langchain-core version is 1.8.0" + ending]
+    )
+
+
+def test_actual_langchain_minimum_versions_have_resolvable_indexed_anchors():
+    source = "The minimum supported version is now Python 3.11, and the minimum `langchain-core` version is now 1.8.0."
+    text = "最低支持Python3.11，langchain-core最低版本为1.8.0。"
+    passage = source_passages({"e": source})[0]
+    anchors = [
+        SimpleNamespace(
+            field="summary",
+            output_index=i,
+            output_quote=claim_clause(text, i),
+            evidence_id="e",
+            source_quote=passage["text"],
+        )
+        for i in range(2)
+    ]
+    validate_anchors({"summary": text}, {"e": source}, anchors)
+
+
+def test_named_python_versions_preserve_trailing_zero_and_ignore_spacing():
+    validate_quantities("仍支持Python3.10。", ["Still supports Python 3.10."])
+    validate_quantities("最低支持版本为3.11。", ["The minimum supported version is now Python 3.11."])
+    validate_quantities("Python版本为3.11。", ["Requires Python 3.11."])
+    validate_quantities("版本2.0已发布。", ["Released v2.0."])
+    with pytest.raises(ValueError):
+        validate_quantities("仍支持Python 3.1。", ["Still supports Python 3.10."])
+    with pytest.raises(ValueError):
+        validate_quantities("最低版本为3.1。", ["Requires Python 3.10."])
+
+
+@pytest.mark.parametrize("suffix", ["-rc.1", "+build.12", "-alpha.1+build.12"])
+def test_version_qualifiers_are_not_erased_with_sentence_punctuation(suffix):
+    source = "Release 1.8.0" + suffix + "."
+    assert quantities(source)[0].value == "1.8.0" + suffix
+    validate_quantities("版本1.8.0" + suffix + "已发布。", [source])
+    with pytest.raises(ValueError):
+        validate_quantities("版本1.8.0已发布。", [source])
 
 
 @pytest.mark.parametrize(

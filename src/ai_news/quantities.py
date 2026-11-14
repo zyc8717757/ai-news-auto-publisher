@@ -49,10 +49,18 @@ CURRENCY = {
     "人民币": "CNY",
     "元": "CNY",
 }
+VERSION_SUFFIX = r"(?:-[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
+VERSION = r"(?:v\d+(?:\.\d+)+|\d+(?:\.\d+){2,})" + VERSION_SUFFIX
+CONTEXT_VERSION = (
+    r"(?:Python\s*(?:版本(?:为|是)?\s*)?v?|version\s*(?:(?:is|:)\s*)?v?|"
+    r"版本(?:号)?\s*(?:为|是|升至|提升至|更新至|[:：])?\s*v?)"
+    r"(\d+(?:\.\d+)+" + VERSION_SUFFIX + ")"
+)
 TOKEN = re.compile(
     r"\d{4}-\d{2}-\d{2}(?:T[\d:.]+(?:Z|[+-]\d{2}:\d{2})?)?"
     r"|(?:\d{4}年)?\d{1,2}月\d{1,2}日"
-    r"|(?<![a-z0-9_.])\d+(?:\.\d+){2,}(?![a-z0-9_.])"
+    r"|(?<![a-z0-9_])" + CONTEXT_VERSION + r"(?![a-z0-9_]|\.[a-z0-9_])"
+    r"|(?<![a-z0-9_.])" + VERSION + r"(?![a-z0-9_]|\.[a-z0-9_])"
     r"|(?<![A-Za-z0-9_.-])[A-Za-z][A-Za-z0-9_.-]*\d[A-Za-z0-9_.-]*(?![A-Za-z0-9_.-])"
     r"|百分之[零一二两三四五六七八九十百千万亿点]+"
     r"|(?<![\d.])\d+(?:,\d{3})*(?:\.\d+)?"
@@ -119,7 +127,14 @@ def quantities(text: str) -> list[Quantity]:
             result.append(Quantity(start, end, value, "date"))
             consumed_until = end
             continue
-        if re.fullmatch(r"v?\d+(?:\.\d+){2,}", token, re.I):
+        context_version = re.fullmatch(CONTEXT_VERSION, token, re.I)
+        if context_version:
+            # Explicit software/version context preserves each component:
+            # Python 3.10 is not decimal 3.1, even when translated without spaces.
+            result.append(Quantity(start, end, context_version[1], "version"))
+            consumed_until = end
+            continue
+        if re.fullmatch(VERSION, token, re.I):
             result.append(Quantity(start, end, token.lstrip("vV"), "version"))
             consumed_until = end
             continue
