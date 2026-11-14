@@ -55,7 +55,8 @@
     "2026-11-14T12:31:58.455859Z",
     "2026-11-14T12:32:07.947698Z",
     "2026-11-14T12:33:11.533841Z",
-    "2026-11-14T12:33:20.152782Z"
+    "2026-11-14T12:33:20.152782Z",
+    "2026-11-14T14:59:05.287693Z"
   ],
   "ai_model_attempts": {
     "gemini-3.5-flash-lite": [
@@ -95,7 +96,8 @@
       "2026-11-14T11:35:56.845923Z",
       "2026-11-14T11:36:03.781930Z",
       "2026-11-14T12:31:25.250335Z",
-      "2026-11-14T12:31:40.856193Z"
+      "2026-11-14T12:31:40.856193Z",
+      "2026-11-14T14:59:05.287693Z"
     ],
     "gemini-3.8-flash": [
       "2026-11-14T11:11:23.325295Z",
@@ -197,7 +199,7 @@
     "2026-11-13-am": 19,
     "2026-11-13-pm": 16,
     "2026-11-14-am": 11,
-    "2026-11-14-pm": 6
+    "2026-11-14-pm": 7
   },
   "ai_test_attempts": {
     "2026-10-10-am": 5,
@@ -210,7 +212,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_numeric_magnitude_unsupported",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-08T12:32:00.660592Z",
@@ -218,7 +221,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "summary_partial",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-08T12:32:04.405090Z",
@@ -226,7 +230,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "numeric_anchor_ambiguous_metrics",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-08T12:32:07.843549Z",
@@ -234,7 +239,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-09T00:31:41.096916Z",
@@ -242,7 +248,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-09T12:31:25.508171Z",
@@ -250,7 +257,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-09T12:31:33.473532Z",
@@ -258,7 +266,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-09T12:31:37.020300Z",
@@ -266,7 +275,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_rank",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-09T12:31:42.875682Z",
@@ -274,7 +284,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-09T12:31:46.675958Z",
@@ -282,7 +293,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "numeric_audit_incomplete",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-09T12:31:50.729019Z",
@@ -290,7 +302,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:31:27.680098Z",
@@ -298,7 +311,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:31:34.346938Z",
@@ -306,7 +320,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:31:38.255212Z",
@@ -314,7 +329,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:31:41.745770Z",
@@ -322,7 +338,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_rank",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:31:46.807686Z",
@@ -330,7 +347,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_numeric_magnitude_unsupported",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:31:51.432084Z",
@@ -338,7 +356,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:31:54.956104Z",
@@ -346,7 +365,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:32:00.264068Z",
@@ -354,7 +374,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "numeric_anchor_mismatch",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T00:32:06.107499Z",
@@ -362,7 +383,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "numeric_anchor_mismatch",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T12:38:07.108521Z",
@@ -370,7 +392,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-10T12:38:14.519994Z",
@@ -378,7 +401,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T00:31:41.454690Z",
@@ -386,7 +410,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T00:31:53.754292Z",
@@ -394,7 +419,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T00:31:56.852779Z",
@@ -402,7 +428,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "provider_error",
       "reason": "ai_provider_http_503",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T00:32:07.771344Z",
@@ -410,7 +437,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "provider_error",
       "reason": "ai_provider_http_503",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T00:33:09.883121Z",
@@ -418,7 +446,8 @@
       "model": "gemini-3.8-flash",
       "stage": "provider_error",
       "reason": "ai_provider_http_504",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T00:34:14.788942Z",
@@ -426,7 +455,8 @@
       "model": "gemini-3.8-flash",
       "stage": "provider_error",
       "reason": "ai_provider_http_504",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T12:31:46.585905Z",
@@ -434,7 +464,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T12:31:56.375605Z",
@@ -442,7 +473,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-11T12:32:07.172863Z",
@@ -450,7 +482,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T00:32:13.767281Z",
@@ -458,7 +491,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T01:01:08.433770Z",
@@ -466,7 +500,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T01:01:15.889568Z",
@@ -474,7 +509,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T01:01:22.518322Z",
@@ -482,7 +518,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T01:01:25.255492Z",
@@ -490,7 +527,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T01:01:28.650316Z",
@@ -498,7 +536,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_rank",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T01:01:33.600977Z",
@@ -506,7 +545,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T01:01:37.413101Z",
@@ -514,7 +554,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T12:32:12.062729Z",
@@ -522,7 +563,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T12:32:19.423150Z",
@@ -530,7 +572,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T12:32:26.056287Z",
@@ -538,7 +581,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T12:32:30.653581Z",
@@ -546,7 +590,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_rank",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T12:32:37.807171Z",
@@ -554,7 +599,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-12T12:32:45.798771Z",
@@ -562,7 +608,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T00:31:26.950889Z",
@@ -570,7 +617,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T00:31:33.811172Z",
@@ -578,7 +626,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T00:31:45.790337Z",
@@ -586,7 +635,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T00:31:53.082043Z",
@@ -594,7 +644,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T00:31:56.501538Z",
@@ -602,7 +653,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T00:32:00.062055Z",
@@ -610,7 +662,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ranking_merge_conflict",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T00:32:03.730549Z",
@@ -618,7 +671,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ranking_merge_conflict",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T12:31:21.470419Z",
@@ -626,7 +680,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T12:31:29.284367Z",
@@ -634,7 +689,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T12:31:37.067075Z",
@@ -642,7 +698,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T12:31:44.313965Z",
@@ -650,7 +707,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T12:31:48.474985Z",
@@ -658,7 +716,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ranking_merge_ids_invalid",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T12:31:52.674168Z",
@@ -666,7 +725,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:01:27.826708Z",
@@ -674,7 +734,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:02:29.620287Z",
@@ -682,7 +743,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "provider_error",
       "reason": "ai_provider_http_504",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:03:20.804107Z",
@@ -690,7 +752,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:03:28.209025Z",
@@ -698,7 +761,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:04:23.340488Z",
@@ -706,7 +770,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "accepted",
       "reason": "editorial_rank",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:04:35.856454Z",
@@ -714,7 +779,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_numeric_claim_unsupported",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:04:49.235229Z",
@@ -722,7 +788,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_numeric_claim_unsupported",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:04:58.447605Z",
@@ -730,7 +797,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:05:19.292503Z",
@@ -738,7 +806,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-13T13:05:27.724696Z",
@@ -746,7 +815,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "output_rejected",
       "reason": "numeric_anchor_invalid",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:19.722939Z",
@@ -754,7 +824,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:27.201240Z",
@@ -762,7 +833,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:33.886816Z",
@@ -770,7 +842,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:37.261025Z",
@@ -778,7 +851,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:40.921556Z",
@@ -786,7 +860,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_rank",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:46.466239Z",
@@ -794,7 +869,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:52.109946Z",
@@ -802,7 +878,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_numeric_claim_unsupported",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:31:56.864021Z",
@@ -810,7 +887,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_numeric_claim_unsupported",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:32:02.520205Z",
@@ -818,7 +896,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_numeric_claim_unsupported",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:32:03.755458Z",
@@ -826,7 +905,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "summary_partial",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:32:07.579891Z",
@@ -834,7 +914,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T00:32:14.702184Z",
@@ -842,7 +923,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:10:57.897780Z",
@@ -850,7 +932,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:11:03.533925Z",
@@ -858,7 +941,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:11:17.861220Z",
@@ -866,7 +950,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "output_rejected",
       "reason": "numeric_anchor_mismatch",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:11:22.342643Z",
@@ -874,7 +959,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "output_rejected",
       "reason": "numeric_anchor_mismatch",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:12:22.417737Z",
@@ -882,7 +968,8 @@
       "model": "gemini-3.8-flash",
       "stage": "provider_error",
       "reason": "ai_provider_http_504",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:12:31.918335Z",
@@ -890,7 +977,8 @@
       "model": "gemini-3.8-flash",
       "stage": "provider_error",
       "reason": "ai_provider_http_503",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:19:36.281358Z",
@@ -898,7 +986,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:19:42.450923Z",
@@ -906,7 +995,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:19:49.049523Z",
@@ -914,7 +1004,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:27:12.526210Z",
@@ -922,7 +1013,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:27:27.836209Z",
@@ -930,7 +1022,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "editorial_review",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:32:51.198997Z",
@@ -938,7 +1031,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_event_mismatch",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:36:02.582548Z",
@@ -946,7 +1040,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_field_invalid",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T11:36:09.025863Z",
@@ -954,7 +1049,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "accepted",
       "reason": "",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T12:31:39.819125Z",
@@ -962,7 +1058,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T12:31:57.388353Z",
@@ -970,7 +1067,8 @@
       "model": "gemini-3.5-flash-lite",
       "stage": "output_rejected",
       "reason": "ai_output_validation_failed",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T12:32:06.936160Z",
@@ -978,7 +1076,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "accepted",
       "reason": "editorial_screen",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T12:33:08.390574Z",
@@ -986,7 +1085,8 @@
       "model": "gemini-3.1-flash-lite",
       "stage": "provider_error",
       "reason": "ai_provider_http_504",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T12:33:15.084148Z",
@@ -994,7 +1094,8 @@
       "model": "gemini-3.8-flash",
       "stage": "provider_error",
       "reason": "ai_provider_http_503",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     },
     {
       "at": "2026-11-14T12:33:29.827877Z",
@@ -1002,17 +1103,14 @@
       "model": "gemini-3.8-flash",
       "stage": "provider_error",
       "reason": "ai_provider_http_503",
-      "extra_test": false
+      "extra_test": false,
+      "validation_only": false
     }
   ],
   "ai_reserved_tokens": [
     [
-      "2026-11-14T12:33:11.533841Z",
-      23043
-    ],
-    [
-      "2026-11-14T12:33:20.152782Z",
-      23043
+      "2026-11-14T14:59:05.287693Z",
+      17412
     ]
   ],
   "source_cache": {
