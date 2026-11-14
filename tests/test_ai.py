@@ -567,6 +567,30 @@ def test_generate_text_uses_phase_output_schema(settings, tmp_path, monkeypatch)
     assert enhancer.output_schema == schema
 
 
+def test_live_incompatible_numeric_review_keeps_plain_transport_and_full_local_schema(
+    settings, tmp_path, monkeypatch
+):
+    from ai_news.editorial import VerifiedReviews
+
+    monkeypatch.setenv("AI_NATIVE_SCHEMA_MODELS", "gemini-3.5-flash-lite")
+    schema = VerifiedReviews.model_json_schema()
+    captured = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            captured.append(kwargs["config"])
+            return SimpleNamespace(text='{"reviews":[]}')
+
+    enhancer = Enhancer(settings, Store(tmp_path), Client(), output_schema=schema)
+    enhancer.generate_text(enhancer.client, "gemini-3.5-flash-lite", "review", 12000)
+    assert captured[0].response_json_schema is None and captured[0].thinking_config is None
+    assert enhancer.output_schema == schema and "NumericAnchor" in schema["$defs"]
+
+
 def test_real_sdk_sends_json_schema_instead_of_legacy_proto_schema(
     settings, tmp_path, monkeypatch, source_item
 ):

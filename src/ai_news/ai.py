@@ -374,7 +374,11 @@ class Enhancer:
         native_schema_models = {
             item.strip() for item in os.environ.get("AI_NATIVE_SCHEMA_MODELS", "").split(",") if item.strip()
         }
-        if model.startswith("gemini-3.") and model not in native_schema_models:
+        # Live 3.5 accepts the summary schema but rejects the nested numeric
+        # review schema with INVALID_ARGUMENT. Its complete local validators
+        # still run with the proven plain transport for this phase.
+        review_compatibility = model == "gemini-3.5-flash-lite" and "NumericAnchor" in schema.get("$defs", {})
+        if model.startswith("gemini-3.") and (model not in native_schema_models or review_compatibility):
             # Keep the previously verified plain path until this exact model is opted in.
             config = types.GenerateContentConfig(max_output_tokens=output_limit)
         elif model.startswith("gemini-3."):
