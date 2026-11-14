@@ -254,6 +254,7 @@ class AIRequestAudit(StrictModel):
     stage: Literal["provider_error", "output_rejected", "accepted", "budget_blocked"]
     reason: str = Field(default="", pattern=r"^[a-z0-9_]*$")
     extra_test: bool = False
+    validation_only: bool = False
 
 
 class QuotaSnapshot(StrictModel):

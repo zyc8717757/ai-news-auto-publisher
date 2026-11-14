@@ -114,6 +114,123 @@ test("completed/ambiguous mail never dispatched; missing issue dispatched with c
   assert.equal(dispatches, 2);
 });
 
+function recoveryState(now, { email = "sent", emailAttempts = 1, used = 18 } = {}) {
+  const issue = "2026-10-11-am";
+  const at = new Date(now.getTime() - 16 * 60 * 1000).toISOString();
+  return {
+    schema_version: 1,
+    issues: { [`${issue}-r1`]: { deployment: "ready", email, email_attempts: emailAttempts } },
+    ai_issue_attempts: { [issue]: used },
+    ai_attempts: Array(used).fill(at),
+    ai_audit: [{
+      at,
+      issue,
+      stage: "provider_error",
+      reason: "ai_provider_http_503",
+      extra_test: false,
+    }],
+  };
+}
+
+async function watchdogResult(state, digestMode, now) {
+  const dispatches = [], writes = [];
+  const env = {
+    ENABLED: "true",
+    GITHUB_DISPATCH_TOKEN: "TEST_ONLY",
+    DISPATCH_STATE: {
+      get: async () => null,
+      put: async (key, value) => writes.push([key, JSON.parse(value)]),
+    },
+  };
+  const request = async (url, options) => {
+    if (url.includes("api.github.com")) {
+      dispatches.push(JSON.parse(options.body).inputs);
+      return new Response(null, { status: 204 });
+    }
+    assert.equal(options.headers?.Authorization, undefined);
+    if (url.includes("settings.yaml")) return new Response("morning_time: '08:30'\nevening_time: '20:30'\n");
+    if (url.includes("news-data/state.json")) return Response.json(state);
+    if (url.includes("news-data/digests/2026-10-11-am-r1.json")) {
+      return Response.json({ issue: "2026-10-11-am", revision: 1, mode: digestMode, stories: [{}] });
+    }
+    throw new Error("unexpected_public_read");
+  };
+  const status = await check(env, now, request);
+  return { status, dispatches, writes };
+}
+
+test("completed rules digest can dispatch delayed recovery without a send operation", async () => {
+  const now = new Date("2026-10-11T05:00:00Z");
+  const state = recoveryState(now, { emailAttempts: 3 });
+  const result = await watchdogResult(state, "rules", now);
+  assert.equal(result.status, "dispatched");
+  assert.deepEqual(result.dispatches, [{ mode: "run", issue: "2026-10-11-am" }]);
+  assert.equal(result.writes.length, 1);
+  assert.equal(result.writes[0][0], "2026-10-11-am");
+  assert.equal(state.ai_issue_attempts["2026-10-11-am"], 18);
+  assert.equal(state.ai_audit.length, 1);
+});
+
+test("validation-only audit does not hide a delayed production provider failure", async () => {
+  const now = new Date("2026-10-11T05:00:00Z");
+  const state = recoveryState(now);
+  const validationAt = new Date(now.getTime() - 16 * 60 * 1000).toISOString();
+  state.ai_audit.push({
+    at: validationAt,
+    issue: "2026-10-11-am",
+    stage: "output_rejected",
+    reason: "ai_output_invalid",
+    extra_test: false,
+    validation_only: true,
+  });
+  state.ai_audit.push({
+    at: validationAt,
+    issue: "2026-10-11-am",
+    stage: "output_rejected",
+    reason: "ai_output_invalid",
+    extra_test: true,
+  });
+  const result = await watchdogResult(state, "rules", now);
+  assert.equal(result.status, "dispatched");
+  assert.deepEqual(result.dispatches, [{ mode: "run", issue: "2026-10-11-am" }]);
+});
+
+test("legacy budget uses the surviving global attempt count conservatively", async () => {
+  const now = new Date("2026-10-11T05:00:00Z");
+  const state = recoveryState(now);
+  delete state.ai_issue_attempts;
+  const result = await watchdogResult(state, "rules", now);
+  assert.equal(result.status, "dispatched");
+  assert.deepEqual(result.dispatches, [{ mode: "run", issue: "2026-10-11-am" }]);
+});
+
+test("completed issue recovery remains gated by digest mode, failure type, budget and mail state", async () => {
+  const now = new Date("2026-10-11T05:00:00Z");
+  const cases = [
+    { name: "AI digest", state: recoveryState(now), digestMode: "ai", status: "completed" },
+    { name: "terminal provider failure", state: recoveryState(now), reason: "ai_provider_http_400", status: "completed" },
+    { name: "evidence rejection", state: recoveryState(now), stage: "output_rejected", reason: "ai_output_invalid", status: "completed" },
+    { name: "recent last request", state: recoveryState(now), status: "completed", recentCall: true },
+    { name: "recent production audit", state: recoveryState(now), status: "completed", recentAudit: true },
+    { name: "one request remaining", state: recoveryState(now, { used: 19 }), status: "completed" },
+    { name: "legacy near cap", state: recoveryState(now, { used: 19 }), legacy: true, status: "completed" },
+    { name: "legacy unknown budget", state: recoveryState(now), legacy: true, noCalls: true, status: "completed" },
+    { name: "unknown email", state: recoveryState(now, { email: "unknown" }), status: "mail_needs_review" },
+  ];
+  for (const scenario of cases) {
+    if (scenario.stage) scenario.state.ai_audit[0].stage = scenario.stage;
+    if (scenario.reason) scenario.state.ai_audit[0].reason = scenario.reason;
+    if (scenario.legacy) delete scenario.state.ai_issue_attempts;
+    if (scenario.noCalls) scenario.state.ai_attempts = [];
+    if (scenario.recentCall) scenario.state.ai_attempts = [new Date(now.getTime() - 14 * 60 * 1000).toISOString()];
+    if (scenario.recentAudit) scenario.state.ai_audit[0].at = new Date(now.getTime() - 14 * 60 * 1000).toISOString();
+    const result = await watchdogResult(scenario.state, scenario.digestMode || "rules", now);
+    assert.equal(result.status, scenario.status, scenario.name);
+    assert.deepEqual(result.dispatches, [], scenario.name);
+    assert.equal(result.writes.length, 0, scenario.name);
+  }
+});
+
 test("288 daily checks use only 48 heartbeat writes on a fresh namespace", async t => {
   t.mock.method(console, "log", () => {});
   const start = Date.parse("2026-10-12T00:00:00Z");

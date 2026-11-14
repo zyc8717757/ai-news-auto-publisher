@@ -1,6 +1,52 @@
 // Cron-only watchdog. Secrets never leave the fixed GitHub dispatch endpoint.
 const REPO = "zyc8717757/ai-news-auto-publisher";
 const RAW = `https://raw.githubusercontent.com/${REPO}`;
+const AI_RUN_LIMIT = 20;
+const AUTO_RECOVERY_MIN_REQUESTS = 2;
+const AUTO_RECOVERY_DELAY_MS = 15 * 60 * 1000;
+
+function recoverableProductionFailure(state, issue, now) {
+  if (!Array.isArray(state.ai_audit)) return false;
+  let latest = null;
+  for (const audit of state.ai_audit) {
+    if (audit?.issue !== issue || audit.extra_test === true || audit.validation_only === true) continue;
+    const at = Date.parse(audit.at);
+    if (!Number.isFinite(at)) return false;
+    if (!latest || at > latest.at) latest = { audit, at };
+  }
+  if (!latest || latest.audit.stage !== "provider_error"
+      || !/^ai_provider_http_(429|500|502|503|504)$/.test(latest.audit.reason || "")) return false;
+
+  const calls = state.ai_attempts ?? [];
+  if (!Array.isArray(calls)) return false;
+  let lastCallAt = latest.at;
+  for (const value of calls) {
+    const at = Date.parse(value);
+    if (!Number.isFinite(at)) return false;
+    lastCallAt = Math.max(lastCallAt, at);
+  }
+  if (now.getTime() - lastCallAt < AUTO_RECOVERY_DELAY_MS) return false;
+
+  const counters = state.ai_issue_attempts;
+  let used;
+  if (counters && Object.prototype.hasOwnProperty.call(counters, issue)) {
+    used = counters[issue];
+  } else {
+    // Legacy records lack a per-issue count. Treat all surviving calls as this issue's usage.
+    if (calls.length === 0) return false;
+    used = calls.length;
+  }
+  return Number.isSafeInteger(used) && used >= 0
+    && AI_RUN_LIMIT - used >= AUTO_RECOVERY_MIN_REQUESTS;
+}
+
+async function latestDigestIsRules(read, issue, key) {
+  const match = /^(\d{4}-\d{2}-\d{2}-(?:am|pm))-r([1-9]\d*)$/.exec(key || "");
+  if (!match || match[1] !== issue) return false;
+  const digest = await read(`news-data/digests/${encodeURIComponent(key)}.json`, true);
+  return digest?.issue === issue && digest.revision === Number(match[2])
+    && digest.mode === "rules" && Array.isArray(digest.stories) && digest.stories.length > 0;
+}
 
 async function dispatch(env, request, inputs) {
   const credential = env.GITHUB_DISPATCH_TOKEN.trim();
@@ -46,12 +92,17 @@ export async function check(env, now = new Date(), request = (url, options) => g
   const issue = dueIssue(now, morning, evening);
   const state = await read("news-data/state.json", true);
   if (state.schema_version !== 1 || !state.issues) throw new Error("invalid_public_state");
-  const keys = Object.keys(state.issues).filter(k => k.startsWith(`${issue}-r`))
+  const keys = Object.keys(state.issues).filter(k => new RegExp(`^${issue}-r[1-9]\\d*$`).test(k))
     .sort((a, b) => Number(b.split("-r")[1]) - Number(a.split("-r")[1]));
-  const current = state.issues[keys[0]];
-  if (current?.deployment === "ready" && ["sent", "disabled"].includes(current.email)) return "completed";
+  const latestKey = keys[0];
+  const current = state.issues[latestKey];
+  const completed = current?.deployment === "ready" && ["sent", "disabled"].includes(current.email);
+  if (completed) {
+    if (!recoverableProductionFailure(state, issue, now)
+        || !(await latestDigestIsRules(read, issue, latestKey))) return "completed";
+  }
   if (["sending", "unknown"].includes(current?.email)) return "mail_needs_review";
-  if ((current?.email_attempts || 0) >= 3) return "mail_attempt_limit";
+  if (!completed && (current?.email_attempts || 0) >= 3) return "mail_attempt_limit";
   const previous = await env.DISPATCH_STATE.get(issue, "json");
   if (previous && (previous.count >= 4 || now.getTime() - previous.at < 1800000)) return "cooldown";
   // Reserve before dispatch. KV is eventually consistent; the GitHub concurrency

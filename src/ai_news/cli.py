@@ -172,6 +172,9 @@ def execute(args) -> int:
         }
         if recovery:
             result["recovery"] = recovery
+        if args.validate_only:
+            result.pop("key")
+            result["base_key"] = args.base_key
         atomic_write(args.result, json.dumps(result))
         print(json.dumps(result))
         return 0

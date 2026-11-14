@@ -116,6 +116,33 @@ def validate_or_separate_merges(ranking: Ranking, candidates) -> None:
         print(json.dumps({"status": "editorial_merge_separated", "restored_ids": restored}))
 
 
+def phase_output_schema(schema, phase, data):
+    """Constrain syntax/IDs at generation; semantic validators remain authoritative."""
+    result = schema.model_json_schema()
+    ids = (
+        [row["event_id"] for row in data]
+        if phase == "screen" and isinstance(data, list)
+        else [row["story"]["event_id"] for row in data]
+        if phase == "review" and isinstance(data, list)
+        else [row["event_id"] for row in data.get("candidates", [])]
+        if phase == "rank" and isinstance(data, dict)
+        else []
+    )
+    if not ids:
+        return result
+    if phase in {"screen", "review"}:
+        field = "decisions" if phase == "screen" else "reviews"
+        items = result["properties"][field]
+        items["minItems"] = items["maxItems"] = len(ids)
+        definition = items["items"]["$ref"].rsplit("/", 1)[-1]
+        result["$defs"][definition]["properties"]["event_id"]["enum"] = ids
+    elif phase == "rank":
+        result["properties"]["ordered_ids"]["items"]["enum"] = ids
+        result["$defs"]["Merge"]["properties"]["keep_id"]["enum"] = ids
+        result["$defs"]["Merge"]["properties"]["other_ids"]["items"]["enum"] = ids
+    return result
+
+
 class Reviews(StrictModel):
     reviews: list[Review] = Field(max_length=15)
 
@@ -461,7 +488,8 @@ class EditorialEnhancer(Enhancer):
         allow_model_fallback=True,
     ):
         base_rules = REVIEW_RULES if phase == "review" else RULES
-        prompt = base_rules + task + "\nJSON结构：" + json.dumps(schema.model_json_schema(), ensure_ascii=False)
+        self.output_schema = phase_output_schema(schema, phase, data)
+        prompt = base_rules + task + "\nJSON结构：" + json.dumps(self.output_schema, ensure_ascii=False)
         prompt += "\n只返回JSON，不要代码围栏。输入：" + json.dumps(data, ensure_ascii=False)
         transient_retries = repair = 0
         while True:

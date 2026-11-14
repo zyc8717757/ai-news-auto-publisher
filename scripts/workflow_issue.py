@@ -58,7 +58,11 @@ def automatic_recovery_base_key(mode: str, issue: str, store: Store, now: dateti
     if ai_run_limit - attempts < AUTO_RECOVERY_MIN_REMAINING:
         return None
 
-    audits = [audit for audit in store.state.ai_audit if audit.issue == issue]
+    audits = [
+        audit
+        for audit in store.state.ai_audit
+        if audit.issue == issue and not audit.validation_only and not audit.extra_test
+    ]
     if not audits:
         return None
     latest_audit = max(audits, key=lambda audit: audit.at)

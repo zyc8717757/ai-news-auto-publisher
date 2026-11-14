@@ -144,6 +144,27 @@ def test_recent_production_attempt_resets_the_delay(digest, now):
     )
 
 
+@pytest.mark.parametrize("extra_test", [False, True])
+def test_validation_audit_does_not_erase_production_recovery_reason(digest, now, extra_test):
+    store, rules = rules_store(digest, now)
+    store.state.ai_audit.append(
+        AIRequestAudit(
+            at=now,
+            issue=rules.issue,
+            model="gemini-3.5-flash-lite",
+            stage="accepted",
+            reason="editorial_review",
+            validation_only=not extra_test,
+            extra_test=extra_test,
+        )
+    )
+    store.state.ai_attempts.append(now)
+    assert automatic_recovery_base_key("run", rules.issue, store, now, 20) is None
+    assert (
+        automatic_recovery_base_key("run", rules.issue, store, now + timedelta(minutes=15), 20) == rules.key
+    )
+
+
 def test_automatic_recovery_requires_two_production_slots_and_is_idempotent(digest, now):
     store, rules = rules_store(digest, now, attempts=19)
     assert automatic_recovery_base_key("run", rules.issue, store, now, 20) is None
@@ -225,9 +246,11 @@ def test_cli_ai_unavailable_fallback_only_keeps_exact_nonempty_rules(digest, now
 
     monkeypatch.setattr(cli, "enhance_frozen", validated)
     args.validate_only = True
+    result.clear()
     assert cli.execute(args) == 0
     assert captured["validate_only"] is True
     assert result["status"] == "validated" and result["quality"] == "ai_complete"
+    assert result["base_key"] == rules.key and "key" not in result
 
     monkeypatch.setattr(
         cli,

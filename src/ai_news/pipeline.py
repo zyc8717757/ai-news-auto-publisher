@@ -251,6 +251,8 @@ def enhance_frozen(
         # verification; keep the event set, IDs and publication metadata frozen.
         asyncio.run(refresh_frozen_evidence(events, settings))
     processor = enhancer or Enhancer(settings, store, issue=issue, test_extra_limit=test_extra_limit)
+    if enhancer is None:
+        processor.budget.validation_only = validate_only
     compact_recovery = False
     split_budget_recovery = False
     if enhancer is not None:
@@ -298,6 +300,7 @@ def enhance_frozen(
             if split_budget_recovery
             else processor.budget
         )
+        reviewer_budget.validation_only = validate_only
         reviewer = EditorialEnhancer(settings, store, client=processor.client, budget=reviewer_budget)
         if compact_recovery:
             reviewer.used_model = settings.model

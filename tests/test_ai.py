@@ -25,6 +25,10 @@ def response(event):
     )
 
 
+def request_payload(prompt):
+    return json.loads(prompt.rsplit("\n输入数据：\n", 1)[1])
+
+
 @pytest.mark.parametrize("bad_kind", ["number", "field", "evidence", "missing", "duplicate"])
 def test_partial_summary_keeps_only_independently_valid_events(source_item, bad_kind):
     events = [NewsEvent(id=k, evidence=[source_item]) for k in ("good", "bad")]
@@ -45,6 +49,14 @@ def test_partial_summary_keeps_only_independently_valid_events(source_item, bad_
     assert set(failures) == {"bad"}
 
 
+def test_strict_summary_rejects_unrequested_raw_event_even_if_expected_stories_are_valid(source_item):
+    events = [NewsEvent(id=key, evidence=[source_item]) for key in ("a", "b")]
+    stories = [response(event).stories[0].model_dump() for event in events]
+    stories.append({**stories[0], "event_id": "alien"})
+    with pytest.raises(ValueError, match="event set mismatch"):
+        checked_stories(json.dumps({"stories": stories}), events, reject_unknown=True)
+
+
 @pytest.mark.parametrize("repair_kind", ["invalid_number", "malformed", "fixed"])
 def test_summary_repair_retains_good_siblings_and_persistent_budget(
     settings, tmp_path, monkeypatch, source_item, repair_kind
@@ -63,9 +75,10 @@ def test_summary_repair_retains_good_siblings_and_persistent_budget(
             calls.append(kwargs["contents"])
             if len(calls) == 2 and repair_kind == "malformed":
                 return SimpleNamespace(text="invalid JSON")
-            stories = [response(e).stories[0] for e in events]
+            requested = {record["event_id"] for record in request_payload(kwargs["contents"])}
+            stories = [response(e).stories[0] for e in events if e.id in requested]
             if len(calls) == 1 or repair_kind != "fixed":
-                stories[1].summary += "性能提升999倍。"
+                next(story for story in stories if story.event_id == "bad").summary += "性能提升999倍。"
             return SimpleNamespace(text=AIResponse(stories=stories).model_dump_json())
 
     store = Store(tmp_path)
@@ -73,6 +86,43 @@ def test_summary_repair_retains_good_siblings_and_persistent_budget(
     assert [s.event_id for s in output.stories] == (["good", "bad"] if repair_kind == "fixed" else ["good"])
     assert len(Store(tmp_path).state.ai_attempts) == (2 if repair_kind == "fixed" else 3)
     assert "ai_numeric_claim_unsupported" in calls[1]
+    assert [record["event_id"] for record in request_payload(calls[0])] == ["good", "bad"]
+    assert all([record["event_id"] for record in request_payload(prompt)] == ["bad"] for prompt in calls[1:])
+
+
+def test_validation_only_audits_are_marked(settings, tmp_path):
+    enhancer = Enhancer(settings, Store(tmp_path))
+    enhancer.budget.validation_only = True
+    enhancer.audit(settings.model, "accepted")
+    assert Store(tmp_path).state.ai_audit[-1].validation_only is True
+
+
+def test_default_summary_mode_never_returns_partial_batch_coverage(
+    settings, tmp_path, monkeypatch, source_item
+):
+    settings.ai_enabled = True
+    monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
+    events = [NewsEvent(id=key, evidence=[source_item]) for key in ("good", "bad")]
+    calls = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["contents"])
+            if len(calls) == 2:
+                return SimpleNamespace(text=json.dumps({"stories": []}))
+            stories = [response(event).stories[0] for event in events]
+            stories[1].summary += "性能提升999倍。"
+            return SimpleNamespace(text=AIResponse(stories=stories).model_dump_json())
+
+    enhancer = Enhancer(settings, Store(tmp_path), Client())
+    with pytest.raises(AIUnavailable, match="ai_output_invalid"):
+        enhancer.enhance(events, max_repairs=1)
+    assert len(calls) == 2
+    assert [record["event_id"] for record in request_payload(calls[1])] == ["bad"]
 
 
 def test_numeric_repair_then_schema_repair_preserves_complete_event_set(
@@ -93,11 +143,16 @@ def test_numeric_repair_then_schema_repair_preserves_complete_event_set(
 
         def generate_content(self, **kwargs):
             calls.append(kwargs["contents"])
-            stories = [response(event).stories[0].model_dump() for event in events]
+            requested = {record["event_id"] for record in request_payload(kwargs["contents"])}
+            stories = [response(event).stories[0].model_dump() for event in events if event.id in requested]
             if len(calls) == 1:
-                stories[1]["summary"] += "提升99倍。"
+                next(story for story in stories if story["event_id"] == "needs_repair")["summary"] += (
+                    "提升99倍。"
+                )
             elif len(calls) == 2:
-                stories[1]["debug_note"] = "不可由schema接收"
+                next(story for story in stories if story["event_id"] == "needs_repair")["debug_note"] = (
+                    "不可由schema接收"
+                )
             return SimpleNamespace(text=json.dumps({"stories": stories}, ensure_ascii=False))
 
     store = Store(tmp_path)
@@ -108,6 +163,10 @@ def test_numeric_repair_then_schema_repair_preserves_complete_event_set(
     assert len(Store(tmp_path).state.ai_attempts) == 3
     assert '"stories"' in calls[1] and '"event_id"' in calls[1]
     assert "reason" in calls[2] and "diagnostic" in calls[2]
+    assert [record["event_id"] for record in request_payload(calls[0])] == ["good", "needs_repair"]
+    assert all(
+        [record["event_id"] for record in request_payload(prompt)] == ["needs_repair"] for prompt in calls[1:]
+    )
 
 
 def test_ai_summary_repairs_remain_bounded(settings, tmp_path, monkeypatch, source_item):
@@ -199,6 +258,8 @@ def test_attempt_reserved_before_request(settings, tmp_path, monkeypatch, source
             assert len(Store(tmp_path).state.ai_attempts) == 1
             assert kwargs["model"] == "gemini-2.5-flash-lite"
             assert not kwargs["config"].tools
+            assert kwargs["config"].thinking_config.thinking_budget == 0
+            assert kwargs["config"].response_json_schema["properties"]["stories"]["maxItems"] == 1
             return SimpleNamespace(text=response(event).model_dump_json())
 
     enhancer = Enhancer(settings, store, Client(), Budget(settings, store, now=lambda: now))
@@ -426,8 +487,11 @@ def test_new_single_grant_keeps_old_two_test_calls(settings, tmp_path, now, monk
         Budget(settings, Store(tmp_path), now=lambda: now, issue=issue, test_extra_limit=3).reserve(100)
 
 
+@pytest.mark.parametrize("model", ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.8-flash"])
 @pytest.mark.parametrize("response_kind", ["success", "http_503", "connection_error"])
-def test_modern_generate_content_has_no_hidden_retry(settings, tmp_path, source_item, response_kind):
+def test_modern_generate_content_has_no_hidden_retry(
+    settings, tmp_path, monkeypatch, source_item, model, response_kind
+):
     import httpx
     from google import genai
     from google.genai import types
@@ -455,15 +519,14 @@ def test_modern_generate_content_has_no_hidden_retry(settings, tmp_path, source_
         ),
     )
     enhancer = Enhancer(settings, Store(tmp_path))
+    monkeypatch.delenv("AI_NATIVE_SCHEMA_MODELS", raising=False)
     if response_kind == "success":
-        assert AIResponse.model_validate_json(
-            enhancer.generate_text(client, "gemini-3.5-flash-lite", "Offline", 6000)
-        ).stories
+        assert AIResponse.model_validate_json(enhancer.generate_text(client, model, "Offline", 6000)).stories
     else:
         with pytest.raises(Exception):
-            enhancer.generate_text(client, "gemini-3.5-flash-lite", "Offline", 6000)
+            enhancer.generate_text(client, model, "Offline", 6000)
     assert len(captured) == 1
-    assert captured[0].url.path == "/v1beta/models/gemini-3.5-flash-lite:generateContent"
+    assert captured[0].url.path == f"/v1beta/models/{model}:generateContent"
     body = json.loads(captured[0].content)
     assert not body.get("tools")
     assert "thinkingConfig" not in body["generationConfig"]
@@ -479,6 +542,31 @@ def test_date_claims_use_the_supplied_publication_evidence(source_item):
     validate_response(result, [event])
 
 
+def test_generate_text_uses_phase_output_schema(settings, tmp_path, monkeypatch):
+    settings.model = "gemini-3.5-flash-lite"
+    monkeypatch.setenv("AI_NATIVE_SCHEMA_MODELS", "gemini-3.5-flash-lite")
+    schema = {
+        "type": "object",
+        "properties": {"reviews": {"type": "array", "items": {"type": "string"}}},
+        "required": ["reviews"],
+    }
+    captured = []
+
+    class Client:
+        @property
+        def models(self):
+            return self
+
+        def generate_content(self, **kwargs):
+            captured.append(kwargs)
+            return SimpleNamespace(text='{"reviews":[]}')
+
+    enhancer = Enhancer(settings, Store(tmp_path), Client(), output_schema=schema)
+    assert enhancer.generate_text(enhancer.client, settings.model, "prompt", 1000) == '{"reviews":[]}'
+    assert captured[0]["config"].response_json_schema == schema
+    assert enhancer.output_schema == schema
+
+
 def test_real_sdk_sends_json_schema_instead_of_legacy_proto_schema(
     settings, tmp_path, monkeypatch, source_item
 ):
@@ -487,8 +575,13 @@ def test_real_sdk_sends_json_schema_instead_of_legacy_proto_schema(
     from google.genai import types
 
     settings.ai_enabled = True
+    settings.model = "gemini-3.5-flash-lite"
     monkeypatch.setenv("AI_FREE_TIER_CONFIRMED", "true")
-    event = NewsEvent(id="event", evidence=[source_item])
+    monkeypatch.setenv("AI_NATIVE_SCHEMA_MODELS", "gemini-3.5-flash-lite")
+    events = [
+        NewsEvent(id=event_id, evidence=[source_item.model_copy(update={"id": f"e-{event_id}"})])
+        for event_id in ("event-a", "event-b")
+    ]
     captured = []
 
     def transport(request):
@@ -499,7 +592,16 @@ def test_real_sdk_sends_json_schema_instead_of_legacy_proto_schema(
             json={
                 "candidates": [
                     {
-                        "content": {"role": "model", "parts": [{"text": response(event).model_dump_json()}]},
+                        "content": {
+                            "role": "model",
+                            "parts": [
+                                {
+                                    "text": AIResponse(
+                                        stories=[response(event).stories[0] for event in events]
+                                    ).model_dump_json()
+                                }
+                            ],
+                        },
                         "finishReason": "STOP",
                     }
                 ]
@@ -511,8 +613,17 @@ def test_real_sdk_sends_json_schema_instead_of_legacy_proto_schema(
         vertexai=False,
         http_options=types.HttpOptions(httpx_client=httpx.Client(transport=httpx.MockTransport(transport))),
     )
-    output = Enhancer(settings, Store(tmp_path), client).enhance([event])
-    assert output.stories[0].event_id == "event"
+    output = Enhancer(settings, Store(tmp_path), client).enhance(events)
+    assert {story.event_id for story in output.stories} == {"event-a", "event-b"}
     assert "responseSchema" not in captured[0]
-    assert captured[0]["responseJsonSchema"]["additionalProperties"] is False
-    assert "additional_properties" not in json.dumps(captured[0]["responseJsonSchema"])
+    assert captured[0]["responseMimeType"] == "application/json"
+    assert "thinkingConfig" not in captured[0]
+    schema = captured[0]["responseJsonSchema"]
+    assert schema["additionalProperties"] is False
+    assert "additional_properties" not in json.dumps(schema)
+    stories = schema["properties"]["stories"]
+    assert stories["minItems"] == stories["maxItems"] == 2
+    story_ref = stories["items"]["$ref"].rsplit("/", 1)[1]
+    story_schema = schema["$defs"][story_ref]
+    assert story_schema["properties"]["event_id"]["enum"] == ["event-a", "event-b"]
+    assert "enum" not in story_schema["properties"]["evidence_ids"]["items"]

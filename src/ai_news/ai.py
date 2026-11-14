@@ -4,6 +4,7 @@ import json
 import os
 import re
 import time
+from copy import deepcopy
 from datetime import UTC, datetime, timedelta
 from typing import Callable
 from zoneinfo import ZoneInfo
@@ -92,7 +93,7 @@ def validation_reason(exc: Exception) -> str:
     }.get(str(exc), "ai_output_validation_failed")
 
 
-def checked_stories(text: str, events: list[NewsEvent]):
+def checked_stories(text: str, events: list[NewsEvent], *, reject_unknown: bool = False):
     """Keep independently valid summaries; never admit extra or duplicate event IDs."""
     raw = json.loads(json_output(text))
     if not isinstance(raw, dict) or set(raw) != {"stories"} or not isinstance(raw["stories"], list):
@@ -101,6 +102,10 @@ def checked_stories(text: str, events: list[NewsEvent]):
         raise ValueError("Too many stories")
     accepted, failures = {}, {}
     expected = {e.id for e in events}
+    if reject_unknown and any(
+        not isinstance(story, dict) or story.get("event_id") not in expected for story in raw["stories"]
+    ):
+        raise ValueError("AI response event set mismatch")
     for event in events:
         matches = [s for s in raw["stories"] if isinstance(s, dict) and s.get("event_id") == event.id]
         if len(matches) != 1:
@@ -116,6 +121,34 @@ def checked_stories(text: str, events: list[NewsEvent]):
         except ValueError as exc:
             failures[event.id] = validation_reason(exc)
     return accepted, failures
+
+
+def batch_output_schema(schema: dict, events: list[NewsEvent]) -> dict:
+    """Copy a response schema and bind its story count and IDs to one request."""
+    result = deepcopy(schema)
+    stories = result.get("properties", {}).get("stories")
+    if not isinstance(stories, dict):
+        return result
+    stories["minItems"] = len(events)
+    stories["maxItems"] = len(events)
+    story = stories.get("items")
+    seen = set()
+    while isinstance(story, dict) and "$ref" in story:
+        reference = story["$ref"]
+        if reference in seen or not reference.startswith("#/"):
+            return result
+        seen.add(reference)
+        target = result
+        for part in reference[2:].split("/"):
+            part = part.replace("~1", "/").replace("~0", "~")
+            if not isinstance(target, dict) or part not in target:
+                return result
+            target = target[part]
+        story = target
+    event_id = story.get("properties", {}).get("event_id") if isinstance(story, dict) else None
+    if isinstance(event_id, dict):
+        event_id["enum"] = [event.id for event in events]
+    return result
 
 
 def provider_failure(exc: Exception) -> str:
@@ -308,11 +341,15 @@ class Enhancer:
         budget: Budget | None = None,
         issue: str | None = None,
         test_extra_limit: int = 0,
+        output_schema: dict | None = None,
     ):
         self.settings, self.store = settings, store
         self.client = client
         self.budget = budget or Budget(settings, store, issue=issue, test_extra_limit=test_extra_limit)
         self.used_model = settings.model
+        self.output_schema = (
+            deepcopy(output_schema) if output_schema is not None else AIResponse.model_json_schema()
+        )
 
     def audit(self, model: str, stage: str, reason: str = "") -> None:
         self.store.state.ai_audit.append(
@@ -323,29 +360,37 @@ class Enhancer:
                 stage=stage,
                 reason=reason,
                 extra_test=bool(self.budget.test_extra_limit),
+                validation_only=bool(getattr(self.budget, "validation_only", False)),
             )
         )
         self.store.state.ai_audit = self.store.state.ai_audit[-100:]
         self.store.save_state()
         print(json.dumps({"status": "ai_request_result", "model": model, "stage": stage, "reason": reason}))
 
-    def generate_text(self, client, model: str, prompt: str, output_limit: int) -> str:
-        # Use the same stateless endpoint proven by the one-request cloud probe.
-        # New models choose their own thinking defaults; 2.5 retains its supported budget.
-        # This project's 3.5 endpoint accepts plain generation but rejects the configured
-        # structured request with generic INVALID_ARGUMENT. Keep the contract in the
-        # prompt and validate locally; never silently resend a rejected 400 request.
-        config = (
-            types.GenerateContentConfig(max_output_tokens=output_limit)
-            if model.startswith("gemini-3.")
-            else types.GenerateContentConfig(
+    def generate_text(
+        self, client, model: str, prompt: str, output_limit: int, output_schema: dict | None = None
+    ) -> str:
+        schema = deepcopy(self.output_schema if output_schema is None else output_schema)
+        native_schema_models = {
+            item.strip() for item in os.environ.get("AI_NATIVE_SCHEMA_MODELS", "").split(",") if item.strip()
+        }
+        if model.startswith("gemini-3.") and model not in native_schema_models:
+            # Keep the previously verified plain path until this exact model is opted in.
+            config = types.GenerateContentConfig(max_output_tokens=output_limit)
+        elif model.startswith("gemini-3."):
+            config = types.GenerateContentConfig(
                 response_mime_type="application/json",
-                response_json_schema=AIResponse.model_json_schema(),
+                response_json_schema=schema,
+                max_output_tokens=output_limit,
+            )
+        else:
+            config = types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_json_schema=schema,
                 temperature=0.1,
                 max_output_tokens=output_limit,
                 thinking_config=types.ThinkingConfig(thinking_budget=0),
             )
-        )
         output = client.models.generate_content(
             model=model,
             contents=prompt,
@@ -412,8 +457,9 @@ class Enhancer:
             else [events[i : i + 30] for i in range(0, len(events), 30)]
         )
         for batch in batches:
-            payload = [
-                {
+            base_output_schema = deepcopy(self.output_schema)
+            payload_by_id = {
+                event.id: {
                     "event_id": event.id,
                     "evidence": [
                         {
@@ -429,21 +475,43 @@ class Enhancer:
                     ],
                 }
                 for event in batch
-            ]
-            prompt = PROMPT + "\n输入数据：\n" + json.dumps(payload, ensure_ascii=False)
+            }
+            payload = list(payload_by_id.values())
             # Fit the verified TPM budget before reserving. Never make an unaccounted count_tokens call.
             output_limit = 12000 if len(batch) > 15 else 6000
             capacity = int(os.environ.get("GEMINI_TPM", "250000")) - output_limit - 500
+
+            def make_request(request_events, failures=None):
+                request_schema = batch_output_schema(base_output_schema, request_events)
+                event_ids = [event.id for event in request_events]
+                prompt = PROMPT
+                prompt += f"\n本次必须且只能输出{len(event_ids)}条story，event_id只能来自："
+                prompt += json.dumps(event_ids, ensure_ascii=False)
+                if failures:
+                    prompt += "\n校验失败类型：" + ",".join(sorted(set(failures.values())))
+                    prompt += "\n只重写未通过校验的事件；不要重复已接受事件。"
+                    prompt += "\n仅使用该事件引用证据中的数字、币种和单位；保持指标与变化基准，删掉无法支持的数字，不推算百分比或倍数。"
+                    prompt += (
+                        "\n每个story只包含schema规定字段，禁止增加reason、analysis、diagnostic或其它键。"
+                    )
+                prompt += "\n本次响应schema：" + json.dumps(request_schema, ensure_ascii=False)
+                prompt += "\n输入数据：\n" + json.dumps(
+                    [payload_by_id[event.id] for event in request_events], ensure_ascii=False
+                )
+                return prompt, request_schema
+
+            pending = list(batch)
+            accepted = {}
+            prompt, request_schema = make_request(pending)
             for excerpt_limit in (500, 300, 150, 60, 0):
                 if len(prompt.encode("utf-8")) <= capacity:
                     break
                 for record in payload:
                     for evidence in record["evidence"]:
                         evidence["text"] = evidence["text"][:excerpt_limit]
-                prompt = PROMPT + "\n输入数据：\n" + json.dumps(payload, ensure_ascii=False)
+                prompt, request_schema = make_request(pending)
             repairs = 0
             transient_retries = 0
-            accepted = {}
             while True:
                 # UTF-8 bytes are a deliberately conservative upper bound for input tokens.
                 estimate = len(prompt.encode("utf-8")) + output_limit
@@ -453,9 +521,12 @@ class Enhancer:
                     self.audit(active_model, "budget_blocked", str(exc))
                     raise
                 self.used_model = active_model
+                original_schema = self.output_schema
+                self.output_schema = request_schema
                 try:
                     output_text = self.generate_text(client, active_model, prompt, output_limit)
                 except Exception as exc:
+                    self.output_schema = original_schema
                     print(
                         json.dumps(
                             {
@@ -481,74 +552,58 @@ class Enhancer:
                             self.budget.sleep(4)
                             continue
                     raise AIUnavailable(provider_failure(exc)) from None
+                else:
+                    self.output_schema = original_schema
                 try:
-                    if allow_partial:
-                        valid, failures = checked_stories(output_text, batch)
-                        accepted.update(valid)
-                        if failures:
-                            reason = next(iter(failures.values()))
-                            self.audit(active_model, "output_rejected", reason)
-                            print(
-                                json.dumps(
-                                    {
-                                        "status": "ai_output_diagnostic",
-                                        "phase": "summary",
-                                        "reasons": sorted(set(failures.values())),
-                                        "accepted": len(accepted),
-                                        "rejected": len(failures),
-                                        "finish_reason": getattr(self, "last_finish_reason", "unknown"),
-                                    }
-                                )
-                            )
-                            repair_limit = min(max_repairs, 1) if individual else max_repairs
-                            if repairs < repair_limit:
-                                repairs += 1
-                                prompt += "\n校验失败类型：" + ",".join(sorted(set(failures.values())))
-                                prompt += "\n仅输出符合AIResponse schema的JSON；每个story只包含schema规定字段，禁止增加reason、analysis、diagnostic或其它键。"
-                                prompt += "\n仅使用该事件引用证据中的数字、币种和单位；保持指标与变化基准，删掉无法支持的数字，不推算百分比或倍数。完整输出每个事件及正确evidence_ids，使用简体中文。"
-                                prompt += "\n严格schema：" + json.dumps(
-                                    AIResponse.model_json_schema(), ensure_ascii=False
-                                )
-                                continue
-                        if accepted:
-                            self.audit(active_model, "accepted", "summary_partial" if failures else "")
-                        result.extend(accepted[e.id] for e in batch if e.id in accepted)
-                        break
-                    parsed = AIResponse.model_validate_json(json_output(output_text))
-                    validate_response(parsed, batch)
-                    self.audit(active_model, "accepted")
-                    result.extend(parsed.stories)
-                    break
+                    valid, failures = checked_stories(output_text, pending, reject_unknown=not allow_partial)
                 except (ValueError, TypeError) as exc:
                     reason = validation_reason(exc)
-                    self.audit(active_model, "output_rejected", reason)
+                    valid = {}
+                    failures = {event.id: reason for event in pending}
                     errors = getattr(exc, "errors", lambda **k: [])(
                         include_input=False, include_context=False, include_url=False
                     )
-                    print(
-                        json.dumps(
-                            {
-                                "status": "ai_output_diagnostic",
-                                "phase": "summary",
-                                "reason": reason,
-                                "characters": len(output_text),
-                                "finish_reason": getattr(self, "last_finish_reason", "unknown"),
-                                "validation_types": [e["type"] for e in errors[:8]],
-                            }
-                        )
+                    validation_types = [error["type"] for error in errors[:8]]
+                else:
+                    validation_types = []
+                accepted.update(valid)
+                if not failures:
+                    if set(accepted) == {event.id for event in batch}:
+                        self.audit(active_model, "accepted")
+                        result.extend(accepted[event.id] for event in batch)
+                        break
+                    if allow_partial and accepted:
+                        self.audit(active_model, "accepted", "summary_partial")
+                        result.extend(accepted[event.id] for event in batch if event.id in accepted)
+                        break
+                    raise AIUnavailable("ai_output_invalid") from None
+
+                reason = next(iter(failures.values()))
+                self.audit(active_model, "output_rejected", reason)
+                print(
+                    json.dumps(
+                        {
+                            "status": "ai_output_diagnostic",
+                            "phase": "summary",
+                            "reasons": sorted(set(failures.values())),
+                            "characters": len(output_text),
+                            "accepted": len(accepted),
+                            "rejected": len(failures),
+                            "finish_reason": getattr(self, "last_finish_reason", "unknown"),
+                            "validation_types": validation_types,
+                        }
                     )
-                    repair_limit = min(max_repairs, 1) if individual else max_repairs
-                    if repairs >= repair_limit:
-                        if allow_partial and accepted:
-                            result.extend(accepted[e.id] for e in batch if e.id in accepted)
-                            self.audit(active_model, "accepted", "summary_partial")
-                            break
-                        raise AIUnavailable("ai_output_invalid") from None
+                )
+                repair_limit = min(max_repairs, 1) if individual else max_repairs
+                if repairs < repair_limit:
                     repairs += 1
-                    prompt += "\n校验失败类型：" + reason
-                    prompt += "\n上次输出未通过校验。只输出严格符合AIResponse schema的JSON；每个story只包含规定字段，禁止增加reason、analysis、diagnostic或其它键。"
-                    prompt += (
-                        "只使用引用证据明确给出的数字及单位，省略无依据数字；按完整schema重新生成全部story："
-                    )
-                    prompt += json.dumps(AIResponse.model_json_schema(), ensure_ascii=False)
+                    pending = [event for event in pending if event.id in failures]
+                    prompt, request_schema = make_request(pending, failures)
+                    continue
+                if allow_partial:
+                    if accepted:
+                        self.audit(active_model, "accepted", "summary_partial")
+                    result.extend(accepted[event.id] for event in batch if event.id in accepted)
+                    break
+                raise AIUnavailable("ai_output_invalid") from None
         return AIResponse(stories=result)

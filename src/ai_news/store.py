@@ -2,11 +2,58 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
+import sys
 import time
 from pathlib import Path
 
 from .models import Digest, RunState
+
+_TRANSIENT_PUSH_MARKERS = (
+    "timed out",
+    "timeout",
+    "connection reset",
+    "connection aborted",
+    "broken pipe",
+    "could not resolve",
+    "remote end hung up",
+    "unexpected disconnect while reading sideband packet",
+    "unexpected disconnect",
+    "early eof",
+    "unexpected eof",
+    "http stream",
+    "http/2 stream",
+    "http2 stream",
+    "tls connection",
+    "server aborted the ssl handshake",
+    "http 429",
+    "error: 429",
+    "error: 500",
+    "error: 502",
+    "error: 503",
+    "error: 504",
+)
+_AUTH_PUSH_MARKERS = ("authentication failed", "permission denied", "could not read username", "http 403")
+_NON_FAST_FORWARD_MARKERS = ("non-fast-forward", "fetch first", "stale info")
+
+
+def _is_transient_push_failure(stderr: str) -> bool:
+    error = stderr.lower()
+    return any(marker in error for marker in _TRANSIENT_PUSH_MARKERS) or bool(
+        re.search(r"curl\s+\(?\s*(18|52|55|56|92)\b", error)
+    )
+
+
+def _push_failure_class(stderr: str) -> str:
+    error = stderr.lower()
+    if any(marker in error for marker in _NON_FAST_FORWARD_MARKERS):
+        return "non_fast_forward"
+    if any(marker in error for marker in _AUTH_PUSH_MARKERS):
+        return "authentication"
+    if _is_transient_push_failure(stderr):
+        return "transport_exhausted"
+    return "unclassified"
 
 
 def atomic_write(path: Path, body: str) -> None:
@@ -72,26 +119,42 @@ class Store:
             )
             if result.returncode == 0:
                 return
-            transient = any(
-                marker in result.stderr.lower()
-                for marker in (
-                    "timed out",
-                    "timeout",
-                    "connection reset",
-                    "could not resolve",
-                    "remote end hung up",
-                    "http 429",
-                    "error: 429",
-                    "error: 500",
-                    "error: 502",
-                    "error: 503",
-                    "error: 504",
-                    "tls connection",
-                )
-            )
+            if self._remote_head_matches_local():
+                return
+            failure_class = _push_failure_class(result.stderr)
+            transient = failure_class == "transport_exhausted"
             if not transient or attempt == 2:
+                print(
+                    f"public_data_git_push_failure={failure_class}",
+                    file=sys.stderr,
+                )
                 raise RuntimeError("public_data_git_push_failed")
             time.sleep(2 ** (attempt + 1))
+
+    def _remote_head_matches_local(self) -> bool:
+        """Confirm an ambiguous push only when the remote branch has this exact commit."""
+        try:
+            local_head = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], cwd=self.root, text=True, stderr=subprocess.DEVNULL
+            ).strip().lower()
+            if not re.fullmatch(r"[0-9a-f]{40,64}", local_head):
+                return False
+            remote = subprocess.run(
+                ["git", "ls-remote", "--heads", "origin", "refs/heads/news-data"],
+                cwd=self.root,
+                capture_output=True,
+                text=True,
+            )
+        except (OSError, subprocess.CalledProcessError):
+            return False
+        if remote.returncode != 0:
+            return False
+        matches = [
+            fields[0].lower()
+            for line in remote.stdout.splitlines()
+            if len(fields := line.split()) == 2 and fields[1] == "refs/heads/news-data"
+        ]
+        return len(matches) == 1 and matches[0] == local_head
 
     def save_state(self) -> None:
         # Validate again in case a caller mutated a nested container in place.

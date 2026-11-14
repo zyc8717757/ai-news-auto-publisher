@@ -4,9 +4,37 @@ import httpx
 import pytest
 
 from ai_news.ai import AIUnavailable, Budget
-from ai_news.editorial import EditorialEnhancer, Ranking, validate_ranking
+from ai_news.editorial import (
+    EditorialEnhancer,
+    Ranking,
+    Screening,
+    VerifiedReviews,
+    phase_output_schema,
+    validate_ranking,
+)
 from ai_news.models import NewsEvent
 from ai_news.store import Store
+
+
+@pytest.mark.parametrize("phase", ["screen", "rank", "review"])
+def test_native_phase_schema_binds_only_trusted_event_ids(phase):
+    ids = ["a", "b"]
+    schema, data, field = {
+        "screen": (Screening, [{"event_id": key} for key in ids], "decisions"),
+        "rank": (Ranking, {"candidates": [{"event_id": key} for key in ids]}, "ordered_ids"),
+        "review": (VerifiedReviews, [{"story": {"event_id": key}} for key in ids], "reviews"),
+    }[phase]
+    bound = phase_output_schema(schema, phase, data)
+    if phase == "rank":
+        assert bound["properties"][field]["items"]["enum"] == ids
+        assert bound["$defs"]["Merge"]["properties"]["keep_id"]["enum"] == ids
+    else:
+        container = bound["properties"][field]
+        assert container["minItems"] == container["maxItems"] == 2
+        model = container["items"]["$ref"].rsplit("/", 1)[-1]
+        assert bound["$defs"][model]["properties"]["event_id"]["enum"] == ids
+        # Calling schema generation cannot mutate Pydantic's original contract.
+        assert "minItems" not in schema.model_json_schema()["properties"][field]
 
 
 @pytest.mark.parametrize("kind", ["unknown", "duplicate", "merge_id", "merge_conflict"])
