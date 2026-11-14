@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-14-pm",
+  "revision": 1,
+  "created_at": "2026-11-14T12:30:58.891488Z",
+  "cutoff": "2026-11-14T12:30:00Z",
+  "window_start": "2026-11-12T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "cdc8eef67bc55a0d0fa5",
+      "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.22,
+      "sources": [
+        {
+          "id": "cdc8eef67bc55a0d0fa5",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+          "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+          "published_at": "2026-11-13T18:00:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "96c7f67bef86f8316048",
+      "title": "XYBench: Helping with the problem behind the question",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.92,
+      "sources": [
+        {
+          "id": "96c7f67bef86f8316048",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/allenai/xybench",
+          "title": "XYBench: Helping with the problem behind the question",
+          "published_at": "2026-11-13T17:02:35Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "3003d0e4ec081578c927",
+      "title": "LangChain Releases: langchain-openai==1.8.0",
+      "summary": "**`langchain-openai` 1.8.0 drops support for Python 3.10**, which has reached end-of-life. The minimum supported version is now Python 3.11, and the minimum `langchain-core` version is now 1.8.0. Users on Python 3.10 will continue to resolve `langchain-openai` 1.7.x. Changes since langchain-openai==1.7.4 release(openai): 1.8.0 (#41841) feat(openai): add OpenAIClassifier for the GA Decisions API (#41787) chore(model-profiles): refresh model profile data (#41828) feat(partners): Remove EOL'd Pytho",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.85,
+      "sources": [
+        {
+          "id": "3003d0e4ec081578c927",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.8.0",
+          "title": "LangChain Releases: langchain-openai==1.8.0",
+          "published_at": "2026-11-13T16:48:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain",
+        "openai"
+      ],
+      "versions": [
+        "1.8.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "a0730e6c360a165831b4",
+      "title": "How AI Is Helping Care Teams Get Patients the Right Care, Sooner",
+      "summary": "From pediatric research to smart hospitals, AI is helping care teams spend less time on routine tasks and more time with patients. Health systems and startups are putting it to work across healthcare, from matching patients to clinical trials to supporting radiologists, hospital teams and patients at home. Clinicians stay at the center, reviewing AI […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 65.66,
+      "sources": [
+        {
+          "id": "a0730e6c360a165831b4",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
+          "title": "How AI Is Helping Care Teams Get Patients the Right Care, Sooner",
+          "published_at": "2026-11-13T13:00:42Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
