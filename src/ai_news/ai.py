@@ -4,6 +4,7 @@ import json
 import os
 import re
 import time
+from collections import Counter
 from copy import deepcopy
 from datetime import UTC, datetime, timedelta
 from typing import Callable
@@ -234,13 +235,47 @@ class Budget:
         counters = state.ai_test_attempts if self.test_extra_limit else state.ai_issue_attempts
         if self.issue and counters.get(self.issue, 0) >= run_limit:
             raise AIUnavailable("ai_issue_budget_exhausted")
-        recent = [t for t in state.ai_attempts if t > now - timedelta(minutes=1)]
-        if len(recent) >= rpm or sum(n for _, n in state.ai_reserved_tokens) + estimated_tokens > tpm:
-            wait_times = [t for t in recent] + [t for t, _ in state.ai_reserved_tokens]
-            delay = max(0.0, (min(wait_times) + timedelta(seconds=61) - now).total_seconds())
+        def recent_model_attempts(at: datetime) -> list[datetime]:
+            cutoff = at - timedelta(minutes=1)
+            global_recent = [stamp for stamp in state.ai_attempts if stamp > cutoff]
+            model_recent = [stamp for stamp in state.ai_model_attempts.get(model, []) if stamp > cutoff]
+            global_counts = Counter(global_recent)
+            mapped_counts = Counter(
+                stamp
+                for attempts in state.ai_model_attempts.values()
+                for stamp in attempts
+                if stamp > cutoff
+            )
+            # Old ledgers may lack per-model attribution. Charge those calls to
+            # every model so a missing map can never bypass a provider RPM cap.
+            legacy_recent = [
+                stamp
+                for stamp, count in global_counts.items()
+                for _ in range(max(0, count - mapped_counts[stamp]))
+            ]
+            return model_recent + legacy_recent
+
+        recent = recent_model_attempts(now)
+        reserved = list(state.ai_reserved_tokens)
+        reserved_tokens = sum(tokens for _, tokens in reserved)
+        if len(recent) >= rpm or reserved_tokens + estimated_tokens > tpm:
+            delays = []
+            if len(recent) >= rpm:
+                expirations_needed = len(recent) - rpm + 1
+                oldest_needed = sorted(recent)[expirations_needed - 1]
+                delays.append((oldest_needed + timedelta(seconds=61) - now).total_seconds())
+            if reserved_tokens + estimated_tokens > tpm:
+                tokens_to_expire = reserved_tokens + estimated_tokens - tpm
+                expired_tokens = 0
+                for stamp, tokens in sorted(reserved):
+                    expired_tokens += tokens
+                    if expired_tokens >= tokens_to_expire:
+                        delays.append((stamp + timedelta(seconds=61) - now).total_seconds())
+                        break
+            delay = max(0.0, max(delays, default=0.0))
             self.sleep(delay)
             now = self.now()
-            recent = [t for t in state.ai_attempts if t > now - timedelta(minutes=1)]
+            recent = recent_model_attempts(now)
             state.ai_reserved_tokens = [
                 (t, n) for t, n in state.ai_reserved_tokens if t > now - timedelta(minutes=1)
             ]

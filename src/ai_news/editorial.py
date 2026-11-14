@@ -18,7 +18,7 @@ from .ai import (
 )
 from .diagnostics import provider_error_details
 from .models import AIResponse, AIStory, StrictModel
-from .quantities import claim_clause, numeric_spans, source_passages, validate_anchors
+from .quantities import claim_clause, equivalent, numeric_spans, quantities, source_passages, validate_anchors
 from .selection import independent_groups
 
 
@@ -192,6 +192,9 @@ approved/translation_ok针对修正后的最终文本；无法依据证据修正
 检查每个字段（包括标题和入选理由），可以用一条引文覆盖同句多个数值，不能漏掉正文任何数字。
 output_quote也留空。程序按output_index从最终文字取出包含该数字和指标的分句，避免重抄文字。若有replacement，序号按修正后的字段重新从0计数。
 先判断每一数值与原文具有相同语义，再提供引用；没有数字时numeric_checks为空。
+numeric_spans的compatible_source_passages只列数值和单位兼容的候选编号，不是事实证明；还必须核对主体、指标、口径和基准。
+从语义正确的候选中选择source_passage，禁止选择数值或单位不兼容的片段；没有候选时先修正文句，不得硬填approved=true。
+候选仅适用于输入稿当前数值；replacement改变数值或序号后，必须按最终文字从完整source_passages重新选择，不得沿用旧候选。
 保留原有事实门槛：拒绝证据不支持的核心结论、时态、错误归因和把传闻当事实；
 影响可明确表达为可能性。不要仅因缺少第二来源而拒绝有归因的官方声明。
 """
@@ -372,11 +375,21 @@ class EditorialEnhancer(Enhancer):
                 for e in by_id[story.event_id].evidence
                 if e.id in story.evidence_ids
             ]
+            fields = final_fields(story, reasons[story.event_id])
+            spans = numeric_spans(fields)
+            passages = passages_by_id[story.event_id]
+            for name, entries in spans.items():
+                for entry, quantity in zip(entries, quantities(fields[name]), strict=True):
+                    entry["compatible_source_passages"] = [
+                        passage["passage_id"]
+                        for passage in passages
+                        if any(equivalent(quantity, original) for original in quantities(passage["text"]))
+                    ]
             payload.append(
                 {
                     "story": story.model_dump(),
                     "selection_reason": reasons[story.event_id],
-                    "numeric_spans": numeric_spans(final_fields(story, reasons[story.event_id])),
+                    "numeric_spans": spans,
                     "source_passages": passages_by_id[story.event_id],
                     "input": source_input,
                 }

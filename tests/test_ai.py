@@ -389,6 +389,70 @@ def test_absolute_five_request_ceiling(settings, tmp_path, monkeypatch, now):
     assert len(Store(tmp_path).state.ai_attempts) == 5
 
 
+def test_primary_model_rpm_does_not_consume_backup_model_rpm(settings, tmp_path, now, monkeypatch):
+    monkeypatch.setenv("GEMINI_RPM", "100")
+    store = Store(tmp_path)
+    primary = "gemini-3.5-flash-lite"
+    backup = "gemini-3.1-flash-lite"
+    for _ in range(6):
+        Budget(settings, store, now=lambda: now).reserve(100, model=primary)
+
+    Budget(settings, Store(tmp_path), now=lambda: now).reserve(100, model=backup)
+    state = Store(tmp_path).state
+    assert len(state.ai_model_attempts[primary]) == 6
+    assert len(state.ai_model_attempts[backup]) == 1
+
+
+def test_same_model_rpm_waits_until_enough_calls_leave_the_window(
+    settings, tmp_path, monkeypatch, now
+):
+    monkeypatch.setenv("GEMINI_RPM", "5")
+    model = "gemini-3.1-flash-lite"
+    previous = [
+        now - timedelta(seconds=40),
+        *(now - timedelta(seconds=offset) for offset in (20, 19, 18, 17, 16)),
+    ]
+    store = Store(tmp_path)
+    store.state.ai_attempts = list(previous)
+    store.state.ai_model_attempts[model] = list(previous)
+    store.save_state()
+    clock = {"now": now}
+    delays = []
+
+    def sleep(delay):
+        delays.append(delay)
+        clock["now"] += timedelta(seconds=delay)
+
+    Budget(settings, store, now=lambda: clock["now"], sleep=sleep).reserve(100, model=model)
+    assert len(delays) == 1 and delays[0] == pytest.approx(41)
+    assert len(Store(tmp_path).state.ai_model_attempts[model]) == 7
+
+
+def test_unknown_legacy_attempts_conservatively_block_every_model(settings, tmp_path, monkeypatch, now):
+    monkeypatch.setenv("GEMINI_RPM", "5")
+    store = Store(tmp_path)
+    store.state.ai_attempts = [now] * 5
+    store.save_state()
+    budget = Budget(settings, store, now=lambda: now, sleep=lambda _: None)
+    with pytest.raises(AIUnavailable, match="ai_rate_limit"):
+        budget.reserve(100, model="gemini-3.1-flash-lite")
+    assert len(Store(tmp_path).state.ai_attempts) == 5
+    assert Store(tmp_path).state.ai_model_attempts == {}
+
+
+def test_global_tpm_reservations_still_block_cross_model_overcommit(
+    settings, tmp_path, monkeypatch, now
+):
+    monkeypatch.setenv("GEMINI_TPM", "500")
+    store = Store(tmp_path)
+    store.state.ai_reserved_tokens = [(now, 450)]
+    store.save_state()
+    budget = Budget(settings, store, now=lambda: now, sleep=lambda _: None)
+    with pytest.raises(AIUnavailable, match="ai_rate_limit"):
+        budget.reserve(100, model="gemini-3.1-flash-lite")
+    assert len(Store(tmp_path).state.ai_attempts) == 0
+
+
 @pytest.mark.parametrize("code", [400, 403, 404])
 def test_terminal_provider_errors_never_retry_or_switch_model(
     settings, tmp_path, monkeypatch, source_item, code

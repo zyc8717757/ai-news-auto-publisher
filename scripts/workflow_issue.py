@@ -32,7 +32,7 @@ def build_command(mode: str, issue: str, schedule: str, base_key: str, test_tota
         command += ["--validate-only"]
     if mode == "regenerate" or (mode == "validate-news" and not frozen_validation):
         command += ["--regenerate"]
-    if mode == "test-enhance":
+    if mode == "test-enhance" or (frozen_validation and test_total):
         command += ["--test-extra-requests", str(test_total)]
     return command
 
@@ -102,7 +102,13 @@ def main():
         atomic_write(Path(".runtime/result.json"), json.dumps(result))
     elif mode in {"run", "regenerate", "enhance-issue", "test-enhance", "validate-news"}:
         test_total = 0
-        if mode == "test-enhance":
+        authorized_validation = (
+            mode == "validate-news"
+            and bool(os.environ.get("REQUESTED_BASE_KEY"))
+            and os.environ.get("AI_TEST_AUTHORIZED_ISSUE") == issue
+            and os.environ.get("AI_TEST_AUTHORIZED_TOTAL", "0") != "0"
+        )
+        if mode == "test-enhance" or authorized_validation:
             if os.environ.get("AI_TEST_AUTHORIZED_ISSUE") != issue:
                 raise ValueError("This test issue was not explicitly authorized")
             total = int(os.environ.get("AI_TEST_AUTHORIZED_TOTAL", "0"))

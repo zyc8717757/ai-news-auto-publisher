@@ -82,6 +82,10 @@ def test_semantic_review_corrects_swapped_metrics_and_mainland_chinese(
     assert "中国大陆" in captured[0] and "numeric_spans" in captured[0]
     assert "输入条目已经选定" in captured[0]
     assert "普通arXiv论文、例行补丁" not in captured[0]
+    data = json.JSONDecoder().raw_decode(captured[0].split("\n只返回JSON，不要代码围栏。输入：")[1])[0]
+    candidates = data[0]["numeric_spans"]["summary"][0]["compatible_source_passages"]
+    assert candidates and set(candidates) <= {p["passage_id"] for p in data[0]["source_passages"]}
+    assert "不是事实证明" in captured[0] and "不得沿用旧候选" in captured[0]
     assert len(Store(tmp_path).state.ai_attempts) == 1
 
 

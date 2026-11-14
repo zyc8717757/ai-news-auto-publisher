@@ -76,6 +76,9 @@ def test_validate_news_with_base_key_uses_nonpublishing_frozen_validation():
         f"{issue}-r1",
         "--validate-only",
     ]
+    authorized = build_command("validate-news", issue, "", f"{issue}-r1", 5)
+    assert authorized[-3:] == ["--validate-only", "--test-extra-requests", "5"]
+    assert "--test-extra-requests" not in build_command("run", issue, "", "", 5)
 
 
 class MemoryStore:

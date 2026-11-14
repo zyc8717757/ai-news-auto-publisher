@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import os
 from collections import Counter
 from datetime import UTC, datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -261,7 +262,10 @@ def enhance_frozen(
         # Use the final two persisted requests for one complete alternate-model
         # summary batch and one independent review. Neither phase may retry.
         compact_recovery = True
-        recovery_model = settings.model if validate_only else settings.backup_model
+        native_primary = settings.model in {
+            model.strip() for model in os.environ.get("AI_NATIVE_SCHEMA_MODELS", "").split(",")
+        }
+        recovery_model = settings.model if validate_only or native_primary else settings.backup_model
         production_remaining = settings.ai_run_limit - store.state.ai_issue_attempts.get(issue, 0)
         test_remaining = test_extra_limit - store.state.ai_test_attempts.get(issue, 0)
         split_budget_recovery = bool(test_extra_limit and production_remaining == 1 and test_remaining == 1)
@@ -270,7 +274,13 @@ def enhance_frozen(
             # separately authorized review slot; each stage is reserved once.
             processor = Enhancer(settings, store, issue=issue)
             recovery_model = settings.model
-        elif test_extra_limit and store.state.ai_test_attempts.get(issue, 0) >= 2 and settings.tertiary_model:
+        elif (
+            not validate_only
+            and not native_primary
+            and test_extra_limit
+            and store.state.ai_test_attempts.get(issue, 0) >= 2
+            and settings.tertiary_model
+        ):
             # A prior separately-authorized validation attempt already showed
             # numeric rejection on the first backup. Use the next free model.
             recovery_model = settings.tertiary_model
@@ -314,7 +324,7 @@ def enhance_frozen(
                 else 1,
                 max_provider_retries=0 if split_budget_recovery else (1 if test_extra_limit else 1),
                 allow_model_fallback=not split_budget_recovery,
-                recover_failed=not compact_recovery,
+                recover_failed=not compact_recovery or (bool(test_extra_limit) and not split_budget_recovery),
             )
         )
     if len(response.stories) != len(events) or {
