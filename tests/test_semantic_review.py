@@ -80,6 +80,8 @@ def test_semantic_review_corrects_swapped_metrics_and_mainland_chinese(
     assert result[0].summary == review["replacement"]["summary"]
     assert story.summary != result[0].summary
     assert "中国大陆" in captured[0] and "numeric_spans" in captured[0]
+    assert "输入条目已经选定" in captured[0]
+    assert "普通arXiv论文、例行补丁" not in captured[0]
     assert len(Store(tmp_path).state.ai_attempts) == 1
 
 
