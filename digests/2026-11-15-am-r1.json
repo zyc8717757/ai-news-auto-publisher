@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-15-am",
+  "revision": 1,
+  "created_at": "2026-11-15T00:31:02.520188Z",
+  "cutoff": "2026-11-15T00:30:00Z",
+  "window_start": "2026-11-13T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "a34b7e14e5c2dad4aeb0",
+      "title": "Runway发布开源机器人模型Praxis-1",
+      "summary": "Runway发布了采用Apache 2.0许可证开放权重和源代码的机器人模型Praxis-1。该模型利用视频训练的知识来进行机器人控制，并在Nvidia的RoboLab-120基准测试的世界动作模型类别中处于领先地位。",
+      "impact": "为视频AI赋能机器人控制提供了新的开源方案，性能在特定基准测试中表现领先。",
+      "category": "模型",
+      "score": 59.38,
+      "sources": [
+        {
+          "id": "a34b7e14e5c2dad4aeb0",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/",
+          "title": "Runway's open-source Praxis-1 turns video AI into a robot controller",
+          "published_at": "2026-11-14T09:45:45Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "该模型目前还无法独立规划复杂的动作序列。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Runway开源视频转机器人控制模型Praxis-1。",
+      "backfill": false
+    },
+    {
+      "id": "9bcf5b71412aba7c81c2",
+      "title": "Anthropic称过时的提示词习惯拖慢了Claude Opus 5.5",
+      "summary": "Anthropic已将Claude Opus 5.5设为所有付费计划的默认模型，并发布了一份指南，旨在摒弃旧的提示词习惯。核心建议是放弃类似“仔细思考”的提示，从“中等”努力程度开始。",
+      "impact": "帮助用户调整提示词习惯，以更好地发挥该模型的性能。",
+      "category": "模型",
+      "score": 57.9,
+      "sources": [
+        {
+          "id": "9bcf5b71412aba7c81c2",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/",
+          "title": "Anthropic says outdated prompting habits are slowing down Claude Opus 5.5",
+          "published_at": "2026-11-14T16:42:56Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [
+        "5.5"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic将Claude Opus 5.5设为默认模型并发布提示词优化指南。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
