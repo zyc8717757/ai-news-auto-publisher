@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-15-pm",
+  "revision": 1,
+  "created_at": "2026-11-15T12:30:53.270497Z",
+  "cutoff": "2026-11-15T12:30:00Z",
+  "window_start": "2026-11-13T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "db313f233dd8bfe1c08d",
+      "title": "Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU",
+      "summary": "Meituan has released the weights for LongCat-2.5, a 1.6-trillion-parameter model built for AI agents and trained entirely on Chinese hardware. On Terminal Bench, it scores 88.4 points, landing just behind Claude Opus 5. The sample deployment runs on 194 Huawei Ascend chips, and Meituan makes no mention of Nvidia GPUs. The article Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU appeared first on The Decoder .",
+      "impact": "",
+      "category": "来源原文",
+      "score": 64.25,
+      "sources": [
+        {
+          "id": "db313f233dd8bfe1c08d",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+          "title": "Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU",
+          "published_at": "2026-11-15T10:06:06Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [
+        "1.6-trillion"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "cd336cbdb7962f39cc94",
+      "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+      "summary": "ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribers.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 39.09,
+      "sources": [
+        {
+          "id": "cd336cbdb7962f39cc94",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+          "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+          "published_at": "2026-11-13T16:00:12Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": true
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable",
+    "ai_coverage_incomplete"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
