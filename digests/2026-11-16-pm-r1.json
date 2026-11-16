@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-16-pm",
+  "revision": 1,
+  "created_at": "2026-11-16T12:31:47.027860Z",
+  "cutoff": "2026-11-16T12:30:00Z",
+  "window_start": "2026-11-14T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "ff7833693fa2a06713dc",
+      "title": "LVMH媒体部门与OpenAI达成战略合作",
+      "summary": "LVMH的媒体部门与OpenAI宣布建立战略合作伙伴关系，旨在利用人工智能技术支持新闻业，并通过ChatGPT让相关出版物更易于访问和阅读。",
+      "impact": "有助于推动AI技术在新闻出版领域的应用与传播。",
+      "category": "商业",
+      "score": 72.83,
+      "sources": [
+        {
+          "id": "ff7833693fa2a06713dc",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/lvmh-media-division-partnership",
+          "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+          "published_at": "2026-11-16T09:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI与LVMH媒体部门达成战略合作，通过ChatGPT支持新闻并使其出版物更易访问。",
+      "backfill": false
+    },
+    {
+      "id": "60f3c7381bc61eae5e3d",
+      "title": "英国国王信托基金与OpenAI合作开展100万英镑AI技能项目",
+      "summary": "英国国王信托基金与OpenAI宣布启动一项价值100万英镑的合作伙伴关系，旨在帮助英国各地多达25000名年轻人培养用于工作的实用人工智能技能。",
+      "impact": "为英国年轻人提供实用的AI技能培训，助力就业。",
+      "category": "商业",
+      "score": 71.77,
+      "sources": [
+        {
+          "id": "60f3c7381bc61eae5e3d",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/the-kings-trust-and-openai",
+          "title": "The King’s Trust and OpenAI launch £1m partnership",
+          "published_at": "2026-11-16T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI与The King’s Trust启动100万英镑合作，帮助英国年轻人培养AI技能。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
