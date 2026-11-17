@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-17T00:30:00Z",
+  "last_covered_at": "2026-11-17T12:30:00Z",
   "ai_attempts": [
     "2026-11-16T00:32:03.583612Z",
     "2026-11-16T00:32:10.088258Z",
@@ -1072,6 +1072,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "0e7f690aa4ff229bd2e8",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+          "title": "Strengthening NATO and allied cyber defenses with AI",
+          "published_at": "2026-11-17T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "2d7a5d6b20fff3cd431e",
           "source_id": "openai",
           "source_name": "OpenAI",
@@ -1083,7 +1100,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
           "event_at": null,
           "supporting": []
@@ -1100,7 +1117,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse.",
           "event_at": null,
           "supporting": []
@@ -1117,8 +1134,25 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "b82b64ef90f76e66fb00",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/business/customer-stories/revolut",
+          "title": "How Revolut raises ambition without lowering the bar",
+          "published_at": "2026-11-16T09:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
           "event_at": null,
           "supporting": []
         },
@@ -1134,7 +1168,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
           "event_at": null,
           "supporting": []
@@ -1151,25 +1185,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "21b4758ab52123ac78ff",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-          "title": "Advancing computer-use agents for healthcare teams",
-          "published_at": "2026-11-16T06:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
-          "excerpt": "",
           "event_at": null,
           "supporting": []
         },
@@ -1185,8 +1202,25 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "21b4758ab52123ac78ff",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+          "title": "Advancing computer-use agents for healthcare teams",
+          "published_at": "2026-11-16T06:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "",
           "event_at": null,
           "supporting": []
         },
@@ -1202,7 +1236,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
           "event_at": null,
           "supporting": []
@@ -1219,7 +1253,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Dots deliver launch reports unprompted, flag issues people might miss, and talk through upcoming meetings on the commute to work.",
           "event_at": null,
           "supporting": []
@@ -1236,25 +1270,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "33b95c2112c46efd0955",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "title": "Our new blog for science",
-          "published_at": "2026-11-15T22:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
-          "excerpt": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
           "event_at": null,
           "supporting": []
         }
@@ -1272,7 +1289,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"Y5Zgrg\"",
+      "etag": "\"SncGKg\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1298,7 +1315,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "tbd",
           "event_at": null,
           "supporting": []
@@ -1310,7 +1327,7 @@
     "huggingface": {
       "etag": "W/\"4186f-XN9Hnkw5PokMlbvDxN8o8EGt6PQ\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1335,8 +1352,8 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"330deca91cc5f8aac8eea85fe37a25d9\"",
-      "modified": "Mon, 16 Nov 2026 23:34:26 GMT",
+      "etag": "\"9ab98e2319aae876e8ecc248cab17a4b\"",
+      "modified": "Tue, 17 Nov 2026 11:21:29 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1352,7 +1369,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "AI coding agents can waste time and tokens relearning the same lessons. TokenEconomizer is an open-source plugin that builds on past sessions to cut costs while maintaining task success. It’s a path toward coding agents that learn not only how to solve tasks, but also how to spend computation more effectively. The post TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficie",
           "event_at": null,
           "supporting": []
@@ -1362,8 +1379,8 @@
       "verified": 10
     },
     "nvidia": {
-      "etag": "\"9f320cbcbcb5064118e909ea240762d1-gzip\"",
-      "modified": "Tue, 17 Nov 2026 00:05:30 GMT",
+      "etag": "\"7252edf93bb6b9280f21bb40f8edbae1-gzip\"",
+      "modified": "Tue, 17 Nov 2026 05:12:10 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1379,7 +1396,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark HPC Developer Kit for researchers, academics and developers. The kit is a four-node cluster of NVIDIA DGX Spark systems, each connected directly to its two neighbors in a ring, with an NVIDIA HPC SDK installation playbook coming […]",
           "event_at": null,
           "supporting": []
@@ -1396,7 +1413,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms. That description sums up the job, but it doesn’t begin to encompass what Shoquist has made possible over decades. Shoquist, her team and their global network of manufacturing partners enable NVIDIA to introduce world-leading technologies year-round. Much of the […]",
           "event_at": null,
           "supporting": []
@@ -1413,7 +1430,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "To train an AI model, thousands of GPUs have to work together, requiring a network that’s fast, efficient and resilient. Lambda is tackling the network piece of the puzzle with NVIDIA Photonics co-packaged optics (CPO) switches. The cloud provider is using the switches to connect NVIDIA GB300 NVL72 racks with more than 10,000 GPUs, delivering […]",
           "event_at": null,
           "supporting": []
@@ -1430,7 +1447,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Quantum processor deployments at supercomputing centers have grown nearly sevenfold over the past five years, with nearly 30 supercomputing centers around the world now in the process of deploying over 50 quantum processors. Many of these centers use Slurm to run scientific supercomputing workloads, so expanding its support for quantum processors builds on familiar workflows […]",
           "event_at": null,
           "supporting": []
@@ -1447,7 +1464,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "In its MLPerf benchmarks debut, with results released today, the NVIDIA Vera Rubin platform delivers leading performance across training, post-training and agentic inference. NVIDIA swept every MLPerf Training v6.1 benchmark and, in its first MLPerf Endpoints submission, delivered more than 10x generational gains in throughput per watt for agentic AI — measuring how much agentic […]",
           "event_at": null,
           "supporting": []
@@ -1464,7 +1481,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "With expanded NVIDIA CUDA-X libraries, including cuPhoton, cuPotential and cuSpa, researchers can sift through vast amounts of data to accelerate research, from astrophysics and materials science to single-cell biology. The speedups are helping scientists analyze larger datasets and model more complex systems. The new libraries give AI agents the tools to help researchers make discoveries […]",
           "event_at": null,
           "supporting": []
@@ -1481,7 +1498,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "This week at SC26, NVIDIA is marking two decades of CUDA by honoring the researchers, developers and engineers who helped make GPU computing a foundation for modern science and AI. CUDA’s 20th anniversary presents an occasion to reflect across computing eras, from the people who wrote the very first CUDA programs to the AI developers […]",
           "event_at": null,
           "supporting": []
@@ -1498,7 +1515,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Announced today at SC26, NVIDIA Rubin HPC is a new GPU in the NVIDIA Vera Rubin platform designed to accelerate simulation and data processing for science, engineering and analytics workflows. As agents help scientists and engineers explore more candidate materials, molecules and designs, they rely on simulations to test those ideas and guide their next […]",
           "event_at": null,
           "supporting": []
@@ -1515,7 +1532,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Over two days at COEX, more than 2,000 attendees converged for AI Day Seoul, bringing together Korea’s industry leaders, startups and developer communities advancing physical AI and AI agents. At the plenary sessions, Deepu Talla, vice president of robotics and edge AI at NVIDIA, said Korea is “punching above its weight,” with Doosan Robotics, Hyundai […]",
           "event_at": null,
           "supporting": []
@@ -1543,7 +1560,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"606f96f78d279d7dfbb475b428ff51021e3d0b3f5e659c93e2aefd51b20939f5\"",
+      "etag": "W/\"c6e2fa19dae2796ce266ed34afe9fc672ddfcc7677113108d88760b173706aac\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1554,7 +1571,7 @@
     "transformers": {
       "etag": "W/\"77ba6e9148d78d7a6f6ac7f5c393ebac69cf843dacb5d3bb6213a3010db88887\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [],
       "discovered": 30,
@@ -1570,7 +1587,7 @@
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"8eb9fa614bd1663752176768c7c4e948dcb8db46b90f9730258e36a3defd8fcc\"",
+      "etag": "W/\"d1324e10d4c5ea8ceb24da4beac4e36d7d271a95def79c0101e20f3adf4022ce\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1587,7 +1604,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "# v0.34.0 **1,061 commits from 412 contributors (120 new).** Thank you! ## TL;DR - **10 new models** (Mistral Large 4, MiniMax-M3.1-Flash, Nemotron-3.5-Transcribe, and more!) - **Extensible KV cache is on by default:** vLLM sizes the KV cache from memory actually free after warmup, so most models get a bigger cache and more throughput. - **Model Runner V1 is gone.** Model Runner V2 is now the only",
           "event_at": null,
           "supporting": []
@@ -1597,7 +1614,7 @@
       "verified": 30
     },
     "ollama": {
-      "etag": "W/\"bc4b9e72805ddc7affd3712beaaf32ca97b6f36baebc6f2a9fe0263b45e39c0b\"",
+      "etag": "W/\"5950e8128688ff8c87c7a2cbe55154338490954bed62cc26abd13be6e2e594e5\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1615,7 +1632,7 @@
       "verified": 0
     },
     "langchain": {
-      "etag": "W/\"61490b73f217b5909559b1e5d7c2af9b7aa8d689f04c2c342af0ce3867caa676\"",
+      "etag": "W/\"8435a3feaa0fa00bd78cb75218aa1c85385cd70b1c9a4f6bc09bfc5d7ad02b58\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1632,7 +1649,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Changes since langchain-mistralai==1.1.6 fix(mistralai): fix streaming behavior for reasoning models (#41887) fix(groq,mistralai,xai): bump deps (#41884) chore(model-profiles): refresh model profile data (#41861) release(mistralai): 1.2.0 (#41859) feat(mistralai): route `ChatMistralAI` through LangSmith gateway (#41840) chore(model-profiles): refresh model profile data (#41828) feat(partners): Rem",
           "event_at": null,
           "supporting": []
@@ -1649,7 +1666,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Changes since langchain-groq==1.1.3 fix(groq): specify reasoning_effort in integration tests (#41886) fix(groq,mistralai,xai): bump deps (#41884) release(groq): 1.2.0 (#41856) feat(groq): route `ChatGroq` through LangSmith gateway (#41837) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268) chore(model-profiles): refresh model profile data (#41432) chore(infra): relax third-par",
           "event_at": null,
           "supporting": []
@@ -1666,7 +1683,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Changes since langchain-xai==1.3.0 fix(groq,mistralai,xai): bump deps (#41884) release(xai): 1.4.0 (#41857) feat(xai): route `ChatXAI` through LangSmith gateway (#41838) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268) chore(model-profiles): refresh model profile data (#41651) chore(infra): relax third-party dependency upper bounds (#41407) chore(deps): bump aiohttp from 3.1",
           "event_at": null,
           "supporting": []
@@ -1683,7 +1700,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Changes since langchain-deepseek==1.1.1 release(deepseek): 1.2.0 (#41858) feat(deepseek): route `ChatDeepSeek` through LangSmith gateway (#41839) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268) chore(infra): relax third-party dependency upper bounds (#41407) chore(deps): bump certifi from 2025.8.3 to 2026.10.19 in /libs/partners/deepseek (#41389) chore(model-profiles): refr",
           "event_at": null,
           "supporting": []
@@ -1700,7 +1717,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Changes since langchain-core==1.8.0 release(core): 1.8.1 (#41855) chore(deps): bump soupsieve from 4.0 to 4.1 in /libs/core (#41850) feat(core): per-context LangSmith gateway override via `langsmith_gateway` (#41836) chore(deps): bump soupsieve from 2.9 to 4.0 in /libs/core (#41833)",
           "event_at": null,
           "supporting": []
@@ -1714,83 +1731,14 @@
       "modified": "",
       "status": "unchanged",
       "error_code": "",
-      "items": [
-        {
-          "id": "1b011fa040f80893f7b6",
-          "source_id": "langgraph",
-          "source_name": "LangGraph Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.22",
-          "title": "LangGraph Releases: langgraph==1.2.22",
-          "published_at": "2026-11-14T01:43:55Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-14T12:30:58.891488Z",
-          "excerpt": "Changes since 1.2.21 * release(langgraph): 1.2.22 (#9702) * release(checkpoint-postgres): 3.2.1 (#9700) * release(prebuilt): 1.1.2 (#9701) * release(checkpoint): 4.3.2 (#9699) * fix(langgraph): stream a child graph on its own thread to a caller streaming subgraphs (#9698) * perf(langgraph): skip message conversion in add_messages for plain messages (#9631) * perf(langgraph): filter pending writes ",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "0b1d1845805b77e2c93b",
-          "source_id": "langgraph",
-          "source_name": "LangGraph Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpointpostgres%3D%3D3.2.1",
-          "title": "LangGraph Releases: langgraph-checkpoint-postgres==3.2.1",
-          "published_at": "2026-11-14T01:39:04Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-14T12:30:58.891488Z",
-          "excerpt": "Changes since checkpointpostgres==3.2.0 * release(checkpoint-postgres): 3.2.1 (#9700) * release(checkpoint): 4.3.2 (#9699) * perf(checkpoint-postgres): run a lone store read outside a pipeline (#9635) * perf(checkpoint-postgres): skip the async saver's lock for connection pools (#9638) * perf(checkpoint-postgres): load no pending writes without a thread hop (#9639) * release(checkpoint): 4.3.1 (#9",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "9f19fc4c652319faf8ae",
-          "source_id": "langgraph",
-          "source_name": "LangGraph Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langgraph/releases/tag/prebuilt%3D%3D1.1.2",
-          "title": "LangGraph Releases: langgraph-prebuilt==1.1.2",
-          "published_at": "2026-11-14T01:33:52Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-14T12:30:58.891488Z",
-          "excerpt": "Changes since prebuilt==1.1.1 * release(langgraph): 1.2.22 (#9702) * release(checkpoint-postgres): 3.2.1 (#9700) * release(prebuilt): 1.1.2 (#9701) * release(checkpoint): 4.3.2 (#9699) * perf(prebuilt): only format the call_model error message when raising (#9628) * release(langgraph): 1.2.21 (#9683) * chore(deps): bump the minor-and-patch group across 1 directory with 9 updates (#9530) * chore(de",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "fc2ba48bea4dc06f91e3",
-          "source_id": "langgraph",
-          "source_name": "LangGraph Releases",
-          "group": "langchain",
-          "trust": "official",
-          "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpoint%3D%3D4.3.2",
-          "title": "LangGraph Releases: langgraph-checkpoint==4.3.2",
-          "published_at": "2026-11-14T01:31:16Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-14T12:30:58.891488Z",
-          "excerpt": "Changes since checkpoint==4.3.1 * release(checkpoint): 4.3.2 (#9699) * perf(checkpoint): stop InMemoryStore search at the requested page (#9633) * perf(checkpoint): dedupe batched store reads with a dict (#9636) * chore(deps): bump the minor-and-patch group in /libs/checkpoint with 6 updates (#9529) * chore(deps-dev): bump pycryptodome from 3.23.0 to 4.2.0 in /libs/checkpoint in the major group (#",
-          "event_at": null,
-          "supporting": []
-        }
-      ],
+      "items": [],
       "discovered": 30,
       "verified": 30
     },
     "litellm": {
       "etag": "W/\"59551655665113f247c0289ddd9f6df9e489247a410f96ee6dd61ffd24676cd6\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1824,23 +1772,6 @@
           "time_basis": "publication",
           "collected_at": "2026-11-17T00:31:49.935641Z",
           "excerpt": "> [!TIP] > The `lts` image tag always points to the latest LTS release. Pull `ghcr.io/berriai/litellm:lts` to stay on the newest LTS patch ## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.108.9 ``` Same command for `litellm-database`, `litellm-non_root` and the `do",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1068e0d69d96ed6e02fb",
-          "source_id": "litellm",
-          "source_name": "LiteLLM Releases",
-          "group": "berriai",
-          "trust": "official",
-          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.10",
-          "title": "LiteLLM Releases: v1.106.10",
-          "published_at": "2026-11-14T00:34:35Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
-          "excerpt": "## Verify this release ```bash cosign verify \\ --key https://raw.githubusercontent.com/BerriAI/litellm/e82a3c646908ba0a6ee0beddc4310d7a6cac4065/cosign.pub \\ ghcr.io/berriai/litellm:v1.106.10 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` images ## What's new in 1.106.10 2 PRs. 1 fixed. No action needed to upgrade ### Changes - **MCP:** Fixed Google MCP se",
           "event_at": null,
           "supporting": []
         }
@@ -1885,18 +1816,53 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1794874202\"",
-      "modified": "Tue, 17 Nov 2026 00:10:02 GMT",
+      "etag": "\"1794918089\"",
+      "modified": "Tue, 17 Nov 2026 12:21:29 GMT",
       "status": "ok",
       "error_code": "",
-      "items": [],
+      "items": [
+        {
+          "id": "685512f6ef114dea767c",
+          "source_id": "mit-ai",
+          "source_name": "MIT News AI",
+          "group": "mit",
+          "trust": "research",
+          "url": "https://news.mit.edu/2026/qa-why-building-math-muscles-remains-important-ai-era-1117",
+          "title": "Q&A: Why building math muscles remains important in the AI era",
+          "published_at": "2026-11-17T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "Assistant Professor John Urschel explains why learning the fundamental skills of mathematics is still essential despite the evolution of AI tools.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "c294f20baa0eb9528141",
+          "source_id": "mit-ai",
+          "source_name": "MIT News AI",
+          "group": "mit",
+          "trust": "research",
+          "url": "https://news.mit.edu/2026/learning-language-of-machine-learning-jacob-andreas-1117",
+          "title": "Learning the language of machine learning",
+          "published_at": "2026-11-17T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "By studying the computational foundations of language learning, Associate Professor Jacob Andreas builds intelligent systems that can communicate effectively with humans.",
+          "event_at": null,
+          "supporting": []
+        }
+      ],
       "discovered": 50,
       "verified": 50
     },
     "techcrunch-ai": {
       "etag": "W/\"54131a063136fb39b3cc2bf7780f1371\"",
       "modified": "Tue, 17 Nov 2026 00:24:52 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -2117,11 +2083,28 @@
       "verified": 0
     },
     "ars": {
-      "etag": "\"a2b58bf333d6ec6a9f3dc7db4c503168\"",
-      "modified": "Mon, 16 Nov 2026 22:58:27 GMT",
+      "etag": "\"e90d03a2042296c01da3a0dd026f672f\"",
+      "modified": "Tue, 17 Nov 2026 12:26:06 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "619719b3299c0cc03f0a",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/space/2026/11/how-an-artist-gave-shape-to-a-space-shuttles-new-towering-exhibit/",
+          "title": "Artist brings old Space Shuttle tank back to life",
+          "published_at": "2026-11-17T12:15:54Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "\"It's definitely the largest art project I've ever worked on.\"",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "5672c177889c4ac2f213",
           "source_id": "ars",
@@ -2134,7 +2117,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Robotics startup misses payroll a year after CEO used funds for luxury home.",
           "event_at": null,
           "supporting": []
@@ -2151,7 +2134,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "A hidden bug, shifting traffic, and reduced capacity led to cascading failures.",
           "event_at": null,
           "supporting": []
@@ -2168,7 +2151,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Study attempts to tally hyperscalers’ energy use and emissions.",
           "event_at": null,
           "supporting": []
@@ -2185,7 +2168,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "The PC sales slump \"more than offset” AI boom gains, shareholders say.",
           "event_at": null,
           "supporting": []
@@ -2202,7 +2185,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "AT&T demands Comcast give AT&T profits it made from advertising cable as fiber.",
           "event_at": null,
           "supporting": []
@@ -2219,7 +2202,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Appeals court ruling rejected grant cancellations on First Amendment grounds.",
           "event_at": null,
           "supporting": []
@@ -2236,7 +2219,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "All estimates of human spaceflight on Starship should be taken with a gigantic grain of salt.",
           "event_at": null,
           "supporting": []
@@ -2253,7 +2236,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Producers cite \"his fearlessness as an actor, his self-deprecating wit\" and continual reinvention as factors.",
           "event_at": null,
           "supporting": []
@@ -2270,7 +2253,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Trump bets China won’t mind US blocking remote access to AI chips.",
           "event_at": null,
           "supporting": []
@@ -2287,7 +2270,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "International authorities will announce US lost its elimination status Tuesday.",
           "event_at": null,
           "supporting": []
@@ -2304,25 +2287,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Huang is weighing a return just days after resigning amid a deepening scandal.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "c989c4b5508109ed8a65",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/cars/2026/11/mercedes-clever-new-driving-assist-handles-complex-traffic-like-a-champ/",
-          "title": "Mercedes' clever new driving assist handles complex traffic like a champ",
-          "published_at": "2026-11-16T14:00:05Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
-          "excerpt": "The point-to-point driver assist is coming to the US and Germany in 2027.",
           "event_at": null,
           "supporting": []
         }
@@ -2331,7 +2297,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"6f4300220e7e4de16dc1c8b14e74b4d0\"",
+      "etag": "W/\"8f34911513a3cbc9525cb8dccf614d4e\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -2348,7 +2314,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Jensen Huang's stunning resignation from Nvidia after more than 33 years has sent shockwaves throughout the tech industry. Now prominent figures are calling for Huang's reinstatement, and many are also hopping on board with a theory spreading throughout Silicon Valley: that the scandal is the result of a plot against the former CEO. At the […]",
           "event_at": null,
           "supporting": []
@@ -2365,7 +2331,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as reported earlier by Reuters. The lawsuit claims the […]",
           "event_at": null,
           "supporting": []
@@ -2382,7 +2348,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "OpenAI CEO Sam Altman is once again addressing his controversial comments on PC RAM purchases. \"I want to be clear, I want people to have a lot of RAM, I think everybody should be able to buy a lot of RAM for their own computer,\" Altman said today. \"I think the home tinkering is great.\" […]",
           "event_at": null,
           "supporting": []
@@ -2399,7 +2365,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Constellation Energy - America's largest operator of nuclear power plants - does not share Wall Street's concerns that the Democrats will slow down data center development. On the company's third-quarter earnings call last week, CEO Joe Dominguez was, for lack of a better word, unbothered as he addressed the blue wave. \"I do think we've […]",
           "event_at": null,
           "supporting": []
@@ -2416,7 +2382,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Fossil fuels are still the biggest source of electricity for hyperscale data centers in the US, a new paper published in the journal Nature Sustainability shows. They likely burn through more electricity collectively than many countries do, resulting in a serious amount of greenhouse gas emissions. The study homes in on hyperscale facilities - the […]",
           "event_at": null,
           "supporting": []
@@ -2433,7 +2399,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Apple released betas of iOS 27.3, iPadOS 27.3, and macOS 27.3 today, and the company is using the update to test new per device daily usage limits for some Siri AI and Apple Intelligence features, according to MacRumors. Basic Siri commands and requests will remain free and unlimited, but more advanced features that rely on […]",
           "event_at": null,
           "supporting": []
@@ -2450,7 +2416,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "OpenAI is announcing a tool that it says will help child sexual abuse investigators cut through the noise to find harmful material they can act on quickly. At a Monday press briefing in Washington, DC, OpenAI announced a classifier it says can better detect abusive imagery of kids, including whether it's AI-generated. It's also offering […]",
           "event_at": null,
           "supporting": []
@@ -2467,7 +2433,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Nvidia's board of directors \"isn't considering\" having Jensen Huang return as CEO, according to a report from CNBC. A source tells the outlet the board \"is focused on an investigation into Huang, and is not in discussions to bring him back.\" Since Huang's resignation last week, tech executives, along with current and former Nvidia employees, […]",
           "event_at": null,
           "supporting": []
@@ -2484,7 +2450,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Audible is introducing an AI-assisted synopsis feature that's designed to help users determine whether they'll enjoy an audiobook before they jump in and start listening to it. The new audio discovery feature combines audiobook samples, AI overviews, and author commentary to give users more information before choosing their next story, in addition to recommended audiobook […]",
           "event_at": null,
           "supporting": []
@@ -2501,7 +2467,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Google is launching a new AI trip-planning feature for Maps that allows the app to create custom itineraries for you and provide real-time details about each stop. The update, which is rolling out to the Gemini-powered Ask Maps chatbot inside the app, lets you plan a one-day outing or a trip spanning several days. As […]",
           "event_at": null,
           "supporting": []
@@ -2517,6 +2483,57 @@
       "error_code": "",
       "items": [
         {
+          "id": "d8921ccd466002b9c9fa",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/apple-watch-audio-intelligence-live-rewind-siri-recap/",
+          "title": "The Apple Watch’s Live Rewind Can Record and Rewind Spoken Conversations. It’s Pretty Awkward",
+          "published_at": "2026-11-17T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "Live Rewind and Siri Recap can transcribe missed moments and summarize your day—if you don’t mind a little social clumsiness.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "bb08f751f9e541c550cf",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/wired-yearbook-2026-clement-delangue/",
+          "title": "Rogue Agents Hacked His Company. Why Is Clément Delangue So Optimistic About AI?",
+          "published_at": "2026-11-17T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "The French CEO of Hugging Face, a mega-hub of open-source AI software, says the attack by OpenAI models earlier this year proved one thing: Humanity can’t let AI be controlled by the few.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "3606ad6df559c53d18b1",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/ai-told-these-ex-google-guys-how-to-build-a-billion-dollar-weapons-business/",
+          "title": "AI Told These Ex-Google Guys How to Build a Billion-Dollar Weapons Business",
+          "published_at": "2026-11-17T10:47:45Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "Google and Apple alumni Chad Steelberg and Andy Baynes are applying what they learned running software companies and designing iPhones to manufacturing lethal munitions.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "e59f883e66735049fc10",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2528,7 +2545,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "After a shocking downfall, Nvidia’s CEO is out of a job. WIRED’s Lauren Goode explains what that means for the world’s most critical chip company, the AI industry, and Jensen Huang himself.",
           "event_at": null,
           "supporting": []
@@ -2545,7 +2562,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "AI competitors are catching up to Nvidia—and poised to take advantage of the chaos.",
           "event_at": null,
           "supporting": []
@@ -2562,7 +2579,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "YouTube Music and Spotify want synthetic hosts to curate your playlists. Their awkward banter and bogus song trivia are ruining the vibe.",
           "event_at": null,
           "supporting": []
@@ -2579,7 +2596,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "A Carnegie Mellon student’s tiny E Ink gadgets, called OATs, give houseplants, skateboards, and dumbbells expressive personalities to nudge you toward better habits.",
           "event_at": null,
           "supporting": []
@@ -2596,25 +2613,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "Fully automated ransomware hasn’t arrived—yet. But seemingly unsophisticated attackers are using AI tools to wreak havoc.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "d05bc9050dc3e1c31621",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/no-pilots-few-air-traffic-controllers-what-could-go-wrong/",
-          "title": "No Pilots. Few Air Traffic Controllers. What Could Go Wrong?",
-          "published_at": "2026-11-14T11:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
-          "excerpt": "Normally, aviation is slow to embrace new technology—but AI has come for the skies.",
           "event_at": null,
           "supporting": []
         }
@@ -2846,13 +2846,82 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"e3a501cf1f81eea70ea2492b853e5908\"",
+      "etag": "W/\"855bc32e93e6dfc8e32975f9fbf8baad\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
-      "items": [],
-      "discovered": 3,
-      "verified": 3
+      "items": [
+        {
+          "id": "5cdbb0432c2d7f9c1194",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/",
+          "title": "Regional voices are rolling out in the Gemini app.",
+          "published_at": "2026-11-16T18:45:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "Gemini now offers 66 regional voices on Android and iOS. Choose a natural, local dialect for your app interactions. Pick your favorite voice today. Breadcrumb Home Innovation & AI Products Gemini App Regional voices are rolling out in the Gemini app. Neel Joshi Director of Product Management, Gemini Live Nov 16, 2026 At Google I/O, we shared plans to bring local dialects to Gemini, so you can choo",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "05fe485b609dbaed5cc7",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/",
+          "title": "Transform notes, research, and sources into interactive sites with Gemini Notebook.",
+          "published_at": "2026-11-16T16:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "Gemini Notebook now turns your research into interactive sites. Build project trackers and visual dashboards with Google. Create your site today. Breadcrumb Home Innovation & AI Products Gemini Notebook Transform notes, research, and sources into interactive sites with Gemini Notebook. Maria Ines Aranguren Software Engineer, Google Labs Nov 16, 2026 Starting today, Gemini Notebook can turn your so",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "fdb3c1f197ba522b4f23",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+          "title": "How the Claude Code team thinks about verification",
+          "published_at": "2026-11-16T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-16",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "How end-to-end, property and differential tests let coding agents verify their work with evidence, and what the Claude Code team does to keep its verifiers honest. [ H ] HOME [ M ] MODS [ D ] DOCS [ T ] TERMINAL Try Claude Code [ H ] HOME [ M ] MODS [ D ] DOCS [ T ] TERMINAL Engineering How the Claude Code team thinks about verification How end-to-end, property and differential tests let coding ag",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "19ffc913dde56b3a27cf",
+          "source_id": "primary-google",
+          "source_name": "Google Cloud",
+          "group": "google",
+          "trust": "official",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+          "title": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold",
+          "published_at": "2026-11-16T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-16",
+          "time_basis": "publication",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "excerpt": "This AI threat update provides GTIG’s findings on adversarial misuse of AI including Gemini and other non-Google tools. Throughout 2026, Mandiant responded to several LLMJacking incidents where financially motivated actors compromised cloud environments to consume targeted organizations’ cloud compute and/or LLM resource quotas. As seen in the image below, LLMJacking can generate significant usage",
+          "event_at": null,
+          "supporting": []
+        }
+      ],
+      "discovered": 4,
+      "verified": 4
     },
     "openai-community": {
       "etag": "",
@@ -2881,7 +2950,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T00:31:49.935641Z",
+          "collected_at": "2026-11-17T12:31:34.203399Z",
           "excerpt": "We’re shortening our vulnerability disclosure window from 90 days to 30 days for high- and critical-severity issues, and to 45 days for all other issues. 01 Responding to AI-enabled vulnerability discovery Updating our coordinated vulnerability disclosure policy timelines 01 Responding to AI-enabled vulnerability discovery Published Nov 16, 2026 Team Frontier Red Team Topics Cybersecurity Open sou",
           "event_at": null,
           "supporting": []
@@ -2902,7 +2971,7 @@
     "decoder": {
       "etag": "\"aed610a18ef20b4119f49c848bcc4a1d\"",
       "modified": "Mon, 16 Nov 2026 19:43:50 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -3594,6 +3663,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-17-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -7778,6 +7852,164 @@
       "title": "Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten",
       "urls": [
         "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "0e7f690aa4ff229bd2e8",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "Strengthening NATO and allied cyber defenses with AI",
+      "urls": [
+        "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "0f13e34240505e908ad0",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab",
+      "urls": [
+        "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "4c9c656647cd3a23c71c",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
+      "urls": [
+        "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "5cdbb0432c2d7f9c1194",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "Regional voices are rolling out in the Gemini app.",
+      "urls": [
+        "https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/"
+      ],
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "dd659f011024f04f24b0",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+      "urls": [
+        "https://openai.com/index/strengthening-online-child-safety"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "970d377277e32883700d",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "NVIDIA CUDA-X Libraries Give Agents the Tools to Accelerate Scientific Discovery",
+      "urls": [
+        "https://blogs.nvidia.com/blog/cuda-x-libraries-agents-accelerate-scientific-discovery/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "c046784cf46697f9446f",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing",
+      "urls": [
+        "https://blogs.nvidia.com/blog/slurm-quantum-computing-supercomputing/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "fc3a56c14a550ef5b6bc",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "Lambda Boosts AI Factory Resiliency and Efficiency With NVIDIA Photonics",
+      "urls": [
+        "https://blogs.nvidia.com/blog/lambda-photonics/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "05fe485b609dbaed5cc7",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "Transform notes, research, and sources into interactive sites with Gemini Notebook.",
+      "urls": [
+        "https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/"
+      ],
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "research"
+    },
+    {
+      "id": "1d9f84a1774659ade8b8",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "CUDA at 20: How the Platform Transformed Scientific Computing",
+      "urls": [
+        "https://blogs.nvidia.com/blog/20-years-cuda/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "9332b18c5744f2a0ae4c",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "NVIDIA Announces Rubin HPC — A New GPU to Accelerate Agents for Science, Engineering and Analytics",
+      "urls": [
+        "https://blogs.nvidia.com/blog/rubin-hpc/"
+      ],
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "dfc32ad6652396f06f7a",
+      "issue": "2026-11-17-pm",
+      "cutoff": "2026-11-17T12:30:00Z",
+      "title": "New Ask Maps features to help with holiday travel and prep",
+      "urls": [
+        "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/"
       ],
       "entities": [],
       "versions": [],
