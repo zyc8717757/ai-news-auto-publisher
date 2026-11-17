@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-17-am",
+  "revision": 1,
+  "created_at": "2026-11-17T00:31:49.935641Z",
+  "cutoff": "2026-11-17T00:30:00Z",
+  "window_start": "2026-11-15T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "21e886491b30cfff0403",
+      "title": "OpenAI发布医疗版ChatGPT及计算机使用代理",
+      "summary": "OpenAI宣布推出面向医疗领域的ChatGPT功能扩展，引入了计算机使用代理、改进的临床回答以及可在医疗软件中跨应用运行的新医疗插件，旨在协助处理实际工作。",
+      "impact": "提升医疗软件智能化水平，优化临床工作流程。",
+      "category": "产品",
+      "score": 72.55,
+      "sources": [
+        {
+          "id": "21e886491b30cfff0403",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+          "title": "More ways to move care forward with ChatGPT for Healthcare",
+          "published_at": "2026-11-16T06:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 推出 ChatGPT for Healthcare，包含计算机使用（computer-use）代理及改进的临床答案和插件。",
+      "backfill": false
+    },
+    {
+      "id": "c876496118766282bf93",
+      "title": "vLLM发布 v0.34.0 版本",
+      "summary": "开源推理加速框架 vLLM 发布 v0.34.0 版本，包含来自 412 位贡献者的 1,061 次提交。新版本支持 10 款新模型，将可扩展 KV 缓存设为默认，全面停用 Model Runner V1 并带来显著的硬件性能提速。",
+      "impact": "提升大模型推理吞吐量与硬件加速效率。",
+      "category": "开发",
+      "score": 77.85,
+      "sources": [
+        {
+          "id": "c876496118766282bf93",
+          "source_id": "vllm",
+          "source_name": "vLLM Releases",
+          "group": "vllm",
+          "trust": "official",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+          "title": "vLLM Releases: v0.34.0",
+          "published_at": "2026-11-16T23:22:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 升级可能导致现有配置中断，需注意相关参数调整。",
+      "entities": [
+        "vllm"
+      ],
+      "versions": [
+        "v0.34.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "vLLM 发布 v0.34.0 版本，带来 10 款新模型支持、默认启用可扩展 KV 缓存以及硬件性能提升，对大模型推理开发有重要影响。",
+      "backfill": false
+    },
+    {
+      "id": "2d7a5d6b20fff3cd431e",
+      "title": "OpenAI扩大学术研究人员免费访问前沿模型计划",
+      "summary": "OpenAI宣布扩展其ChatGPT学术研究人员计划，向全球 200,000 名研究人员免费提供其前沿模型的访问权限，以拓宽科学研究领域对人工智能的使用。",
+      "impact": "助力全球科研人员利用先进 AI 模型开展研究。",
+      "category": "商业",
+      "score": 74.06,
+      "sources": [
+        {
+          "id": "2d7a5d6b20fff3cd431e",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+          "title": "Broadening access to AI for scientists",
+          "published_at": "2026-11-16T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "b696bf684c37a1c04a6f",
+      "title": "英伟达Vera Rubin平台在MLPerf基准测试中表现优异",
+      "summary": "英伟达Vera Rubin平台在最新发布的MLPerf训练 v6.1 基准测试中表现优异，并在其首次MLPerf Endpoints提交中实现显著的智能代理能效吞吐量提升。",
+      "impact": "展示了新一代硬件平台在 AI 训练与推理方面的领先性能。",
+      "category": "评测",
+      "score": 75.64,
+      "sources": [
+        {
+          "id": "b696bf684c37a1c04a6f",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
+          "title": "NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance",
+          "published_at": "2026-11-16T16:00:25Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 性能结果基于官方提交的基准测试声明。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA Vera Rubin 平台在 MLPerf 训练与端点测试中首次亮相并取得领先表现，展示了新一代硬件的推理和训练能力。",
+      "backfill": false
+    },
+    {
+      "id": "9fe6d2ae73e55f52b807",
+      "title": "OpenAI与多家机构开展嵌入式安全评估",
+      "summary": "OpenAI宣布开始与 Apollo Research、METR、Transluce 和 Goodfire 展开第一阶段的嵌入式评估，以独立评估模型的对齐性、安全防护和监控系统。",
+      "impact": "加强第三方对前沿 AI 模型安全与对齐的独立审查。",
+      "category": "安全",
+      "score": 73.29,
+      "sources": [
+        {
+          "id": "9fe6d2ae73e55f52b807",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+          "title": "Our first phase of embedded assessments",
+          "published_at": "2026-11-16T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI 启动第一阶段独立嵌入评估，引入多家第三方机构对模型对齐与安全监控进行评估。",
+      "backfill": false
+    },
+    {
+      "id": "d548ba364b61b0f622d8",
+      "title": "阿里巴巴发布旗舰大模型Qwen4-Max",
+      "summary": "阿里巴巴推出了全新的旗舰模型Qwen4-Max，拥有2.4万亿参数但每个token仅激活710亿参数。该模型采用混合架构大幅降低了长文本的处理成本。根据相关排名，其表现位居Kimi K3.1 Pro之后，且该公司计划后续开源较小的Qwen4模型。",
+      "impact": "以更低成本和高效架构切入市场，对同类大模型形成竞争。",
+      "category": "模型",
+      "score": 60.95,
+      "sources": [
+        {
+          "id": "d548ba364b61b0f622d8",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/alibabas-qwen4-max-takes-on-opus-5-5-gpt-6-and-kimi-k3-1-pro-at-much-lower-prices/",
+          "title": "Alibaba's Qwen4-Max takes on Opus 5.5, GPT-6, and Kimi K3.1 Pro at much lower prices",
+          "published_at": "2026-11-16T16:56:04Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "部分性能排名及成本降低幅度来源于媒体报道，有待更多评测验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai",
+        "qwen"
+      ],
+      "versions": [
+        "5.5",
+        "gpt-6"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "阿里巴巴发布旗舰模型 Qwen4-Max，采用混合架构降低长文本成本，具行业影响力。",
+      "backfill": false
+    },
+    {
+      "id": "4995a6ed66062d4f3718",
+      "title": "月之暗面将Kimi模型战略重心转向科学研究",
+      "summary": "北京初创公司月之暗面表示，随着代码评测得分增长趋于平缓，公司将不再追逐代码基准测试。该初创企业正将Kimi语言模型的研发重心转向生物学、化学和制药研究领域，并认为科学研究对人工智能的要求比法律、金融或编程更高。",
+      "impact": "调整模型研发方向，赋能生物医药等专业科研领域。",
+      "category": "模型",
+      "score": 68.27,
+      "sources": [
+        {
+          "id": "4995a6ed66062d4f3718",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+          "title": "Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten",
+          "published_at": "2026-11-16T18:52:55Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "转型科学领域的实际效果尚需时间检验。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Moonshot AI 宣布将 Kimi 模型重心从代码转向生物、化学与制药等科学研究，标志着大模型应用方向的重要战略调整。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
