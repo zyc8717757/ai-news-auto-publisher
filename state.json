@@ -3611,7 +3611,7 @@
     },
     "2026-11-17-am-r1": {
       "deployment": "failed",
-      "email": "sending",
+      "email": "sent",
       "email_attempts": 1
     }
   },
