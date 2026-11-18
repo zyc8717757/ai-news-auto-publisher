@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-18-pm",
+  "revision": 1,
+  "created_at": "2026-11-18T12:48:52.873809Z",
+  "cutoff": "2026-11-18T12:30:00Z",
+  "window_start": "2026-11-16T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "a1de396d3910fa2e0f79",
+      "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+      "summary": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 69.09,
+      "sources": [
+        {
+          "id": "a1de396d3910fa2e0f79",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+          "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+          "published_at": "2026-11-18T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8a4e13d86b040a3849fd",
+      "title": "Anyone can create a personal avatar of themselves in Google Vids, at no cost.",
+      "summary": "Create custom avatars in Google Vids for free. Design your digital likeness using a selfie and voice recording to narrate videos. Try it out today. Breadcrumb Home Products & Platforms Products Google Workspace Anyone can create a personal avatar of themselves in Google Vids, at no cost. Nov 17, 2026 Personal avatars in Google Vids lets you create a custom digital avatar to star in your videos. Starting today, we’re bringing personal avatars to everyone with a personal Google account, at no cost",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.91,
+      "sources": [
+        {
+          "id": "8a4e13d86b040a3849fd",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/products/workspace/vids-personal-avatars-no-cost/",
+          "title": "Anyone can create a personal avatar of themselves in Google Vids, at no cost.",
+          "published_at": "2026-11-17T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "e4dfcc8c4cc7d973905e",
+      "title": "Temporary threads are now available in AI Mode in Search.",
+      "summary": "Google AI Mode now offers temporary threads for private searches. Keep your history clean and avoid personalization. Try this new feature today. Breadcrumb Home Products & Platforms Products Search Temporary threads are now available in AI Mode in Search. Nov 17, 2026 We’re introducing temporary threads in AI Mode, where you can explore and ask questions — whether that’s brainstorming a surprise gift or looking something up you don’t want resurfaced later like in your history or recommendations.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.91,
+      "sources": [
+        {
+          "id": "e4dfcc8c4cc7d973905e",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/",
+          "title": "Temporary threads are now available in AI Mode in Search.",
+          "published_at": "2026-11-17T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "ffd771bb9531a4b78077",
+      "title": "Reports of AI-generated child sexual abuse material have surged more than 8,400 percent in two years",
+      "summary": "Edinburgh's Childlight Institute reports a more than 8,400 percent increase in AI-generated child sexual abuse material over two years, from about 4,700 reports in 2023 to over 400,000 in 2025. Abusers are using tools like nudify apps for blackmail. Childlight CEO Paul Stanfield wants governments to classify the problem as a preventable public health emergency. The article Reports of AI-generated child sexual abuse material have surged more than 8,400 percent in two years appeared first on The D",
+      "impact": "",
+      "category": "来源原文",
+      "score": 46.28,
+      "sources": [
+        {
+          "id": "ffd771bb9531a4b78077",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/reports-of-ai-generated-child-sexual-abuse-material-have-surged-more-than-8400-percent-in-two-years/",
+          "title": "Reports of AI-generated child sexual abuse material have surged more than 8,400 percent in two years",
+          "published_at": "2026-11-17T14:59:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "ae3d9685f670ac125fb3",
+      "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
+      "summary": "Jensen Huang's stunning resignation from Nvidia after more than 33 years has sent shockwaves throughout the tech industry. Now prominent figures are calling for Huang's reinstatement, and many are also hopping on board with a theory spreading throughout Silicon Valley: that the scandal is the result of a plot against the former CEO. At the […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 41.37,
+      "sources": [
+        {
+          "id": "ae3d9685f670ac125fb3",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories",
+          "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
+          "published_at": "2026-11-16T23:17:34Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": true
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable",
+    "ai_coverage_incomplete"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}

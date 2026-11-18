@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-18T00:30:00Z",
+  "last_covered_at": "2026-11-18T12:30:00Z",
   "ai_attempts": [
     "2026-11-17T00:32:11.846992Z",
     "2026-11-17T00:32:23.565620Z",
@@ -1102,6 +1102,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "a1de396d3910fa2e0f79",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+          "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+          "published_at": "2026-11-18T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "8f6af8c44a4a1bfb5de3",
           "source_id": "openai",
           "source_name": "OpenAI",
@@ -1113,7 +1130,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
           "event_at": null,
           "supporting": []
@@ -1130,7 +1147,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
           "event_at": null,
           "supporting": []
@@ -1147,7 +1164,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
           "event_at": null,
           "supporting": []
@@ -1164,7 +1181,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
           "event_at": null,
           "supporting": []
@@ -1181,7 +1198,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
           "event_at": null,
           "supporting": []
@@ -1198,7 +1215,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
           "event_at": null,
           "supporting": []
@@ -1215,7 +1232,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse.",
           "event_at": null,
           "supporting": []
@@ -1232,7 +1249,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
           "event_at": null,
           "supporting": []
@@ -1249,7 +1266,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
           "event_at": null,
           "supporting": []
@@ -1266,7 +1283,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
           "event_at": null,
           "supporting": []
@@ -1283,25 +1300,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "21e886491b30cfff0403",
-          "source_id": "openai",
-          "source_name": "OpenAI",
-          "group": "openai",
-          "trust": "official",
-          "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-          "title": "More ways to move care forward with ChatGPT for Healthcare",
-          "published_at": "2026-11-16T06:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
           "event_at": null,
           "supporting": []
         }
@@ -1319,7 +1319,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"1E23vA\"",
+      "etag": "\"JUkflQ\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1345,7 +1345,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "A user interface displaying the prompt \"What can I get done for you?\" above an input box containing placeholder text \"Describe a task\".",
           "event_at": null,
           "supporting": []
@@ -1362,7 +1362,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "tbd",
           "event_at": null,
           "supporting": []
@@ -1399,8 +1399,8 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"b231eb38e343cffdbcb7bef779f4c19a\"",
-      "modified": "Tue, 17 Nov 2026 23:32:27 GMT",
+      "etag": "\"823b4bd95addf11b90e1f8701b9621b8\"",
+      "modified": "Wed, 18 Nov 2026 06:59:50 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1416,7 +1416,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "What can AI enable in medicine, and how do we get there? Microsoft Research lead Doug Burger, Microsoft Principal Research Manager Ava Amini, Microsoft Chief Scientific Officer Eric Horvitz, and physician-scientist Eric Topol of Scripps Research explore these questions and more. The post Can AI help build a healthier future? appeared first on Microsoft Research .",
           "event_at": null,
           "supporting": []
@@ -1433,7 +1433,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "AI coding agents can waste time and tokens relearning the same lessons. TokenEconomizer is an open-source plugin that builds on past sessions to cut costs while maintaining task success. It’s a path toward coding agents that learn not only how to solve tasks, but also how to spend computation more effectively. The post TokenEconomizer: Learning from Experience to Make AI Coding Agents More Efficie",
           "event_at": null,
           "supporting": []
@@ -1445,7 +1445,7 @@
     "nvidia": {
       "etag": "\"83f78deba1a0ebe70090c36282839386-gzip\"",
       "modified": "Tue, 17 Nov 2026 23:50:42 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1643,8 +1643,8 @@
     "pytorch": {
       "etag": "W/\"a8fd0ecc86830c2d086ce186f900669694f3992d6fb90a9a222519ecff10756b\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1652,8 +1652,8 @@
     "transformers": {
       "etag": "W/\"77ba6e9148d78d7a6f6ac7f5c393ebac69cf843dacb5d3bb6213a3010db88887\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1661,8 +1661,8 @@
     "diffusers": {
       "etag": "W/\"dd0f4ba70dd335c94594c5d8338622290b31f8ea14c5cac71096edbe557a16e2\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1670,8 +1670,8 @@
     "vllm": {
       "etag": "W/\"e9a9691dbc34f76c3a24b0b1f2f0620a8c49886f05c7c5c0e7c560089d707bc2\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "c876496118766282bf93",
@@ -1697,8 +1697,8 @@
     "ollama": {
       "etag": "W/\"f509fa4ad502c636e39eb47eb2caf01e0cdb7c3d9575f6d8a966fdd22aed56e9\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 29,
       "verified": 29
@@ -1707,7 +1707,7 @@
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "parse_failed",
+      "error_code": "http_403",
       "items": [],
       "discovered": 0,
       "verified": 0
@@ -1715,8 +1715,8 @@
     "langchain": {
       "etag": "W/\"052444c160f4bbca83afe7d9c6e5470b4d60f75c1372b9c49dc0783e6458dc0e\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "94bde3db0a23b9ce7250",
@@ -1844,8 +1844,8 @@
     "langgraph": {
       "etag": "W/\"f1f70f873d079f41d54ce18c9f0c285c449640b7dab71ea66f16663459442046\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1853,8 +1853,8 @@
     "litellm": {
       "etag": "W/\"aa3dcb376f673f2a2bcba193df6759ce4dfdd1bc5161974406e3e18da4754f76\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "958f53f88ea0035ece47",
@@ -1931,11 +1931,28 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1794961716\"",
-      "modified": "Wed, 18 Nov 2026 00:28:36 GMT",
+      "etag": "\"1795004714\"",
+      "modified": "Wed, 18 Nov 2026 12:25:14 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "55cafb7085284a534355",
+          "source_id": "mit-ai",
+          "source_name": "MIT News AI",
+          "group": "mit",
+          "trust": "research",
+          "url": "https://news.mit.edu/2026/helping-ai-text-detectors-keep-up-with-changing-conditions-1118",
+          "title": "Helping AI text detectors keep up with changing conditions",
+          "published_at": "2026-11-18T05:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "A more flexible training method can make AI text detectors more robust when new models emerge or AI-generated text is disguised to appear human.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "89ca5c5934ce4af9eee6",
           "source_id": "mit-ai",
@@ -1948,7 +1965,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Supported by the MIT Human Insight Collaborative, scholars are exploring how AI is impacting the human experience and reshaping higher education.",
           "event_at": null,
           "supporting": []
@@ -1965,7 +1982,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Assistant Professor John Urschel explains why learning the fundamental skills of mathematics is still essential despite the evolution of AI tools.",
           "event_at": null,
           "supporting": []
@@ -1982,7 +1999,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "By studying the computational foundations of language learning, Associate Professor Jacob Andreas builds intelligent systems that can communicate effectively with humans.",
           "event_at": null,
           "supporting": []
@@ -1992,11 +2009,62 @@
       "verified": 50
     },
     "techcrunch-ai": {
-      "etag": "W/\"abbb6a2aa3565fc00eb99849a752990c\"",
-      "modified": "Wed, 18 Nov 2026 00:20:50 GMT",
+      "etag": "W/\"862a5551031d7d851ab06d4e96ea8b60\"",
+      "modified": "Wed, 18 Nov 2026 00:39:09 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "00b7a83010aaeca9a875",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/18/felicis-leads-7-5m-bet-on-unsiloed-ai-to-make-enterprise-documents-usable-by-ai-agents/",
+          "title": "Felicis leads $7.5M bet on Unsiloed AI to make enterprise documents usable by AI agents",
+          "published_at": "2026-11-18T12:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "With a team of just seven, Unsiloed AI plans to compete with tech giants and specialized startups in the crowded AI document-processing market.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "7910f56b348bc37fcbcc",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/",
+          "title": "India’s Humyn Labs raises $47M to feed U.S. robotics companies the data they need",
+          "published_at": "2026-11-18T11:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Founded in February, Humyn Labs competes with startups including Mecka AI and XDOF, with about 90% of its revenue coming from the U.S.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "b330164a6f0ccccf3341",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+          "title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt",
+          "published_at": "2026-11-18T01:44:21Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "The value of Nvidia’s private investments has nearly tripled over the past nine months, fueled by Jensen Huang’s aggressive dealmaking and rising valuations of its existing portfolio companies.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "ceeb5bf897d71eb6e293",
           "source_id": "techcrunch-ai",
@@ -2009,7 +2077,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Despite the turmoil Nvidia is in after the departure of its disgraced founder and CEO Jensen Huang, the company projected that its streak of record-breaking revenue isn't about to stop.",
           "event_at": null,
           "supporting": []
@@ -2026,7 +2094,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Nvidia's interim CEO says the company is done selling chips to China. How much will that cost?",
           "event_at": null,
           "supporting": []
@@ -2043,7 +2111,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's sudden departure.",
           "event_at": null,
           "supporting": []
@@ -2060,7 +2128,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "The former CEO offered to return to his top role at the company after his resignation last week.",
           "event_at": null,
           "supporting": []
@@ -2077,7 +2145,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Amazon will own just under 15% of Anthropic after the IPO, with the option to go much higher. Google is a close second with holdings of nearly 14%.",
           "event_at": null,
           "supporting": []
@@ -2094,7 +2162,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "The SEC is opening a probe into Nvidia following the departure of CEO Jensen Huang, who admitted to an affair with an alleged Chinese spy, reports The Wall Street Journal.",
           "event_at": null,
           "supporting": []
@@ -2111,7 +2179,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "With tech outages seemingly everywhere, Google took the unusual step of announcing that Gmail is working just fine, actually.",
           "event_at": null,
           "supporting": []
@@ -2128,7 +2196,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "The startup says its agents understand the full context of deals that bankers and consultants are working on and can automatically update financial models and presentations when new developments affect their analysis.",
           "event_at": null,
           "supporting": []
@@ -2145,59 +2213,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Gemini's Task mode can help users coordinate calls, log into websites, and even make purchases on the user's behalf.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "f6980f92e029130a7b2c",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
-          "title": "Google to keep Gemini chats for 2 months, up from 72 hours, even with history off",
-          "published_at": "2026-11-17T18:48:23Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "ecf8c81cb5048aa02c08",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/11/17/as-decision-model-use-skyrockets-is-customization-is-the-next-frontier/",
-          "title": "As decision model use skyrockets, is customization the next frontier?",
-          "published_at": "2026-11-17T18:10:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "Sqwish Labs has a new wrinkle on the decision model: Train it with your own data to max its capabilities.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "837c136c3245c58a015e",
-          "source_id": "techcrunch-ai",
-          "source_name": "TechCrunch AI",
-          "group": "techcrunch",
-          "trust": "media",
-          "url": "https://techcrunch.com/2026/11/17/pedestal-ai-raises-4-7-million-to-agentify-the-supply-chain/",
-          "title": "Pedestal AI raises $4.7 million to agentify the supply chain",
-          "published_at": "2026-11-17T18:04:16Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "The company uses agentic AI to make supply chains faster and more reliable.",
           "event_at": null,
           "supporting": []
         }
@@ -2215,11 +2232,45 @@
       "verified": 0
     },
     "ars": {
-      "etag": "\"05775a4200170f9ab0d3ff5081f9dd95\"",
-      "modified": "Wed, 18 Nov 2026 00:27:29 GMT",
+      "etag": "\"271bb36c9cc6c57d461ef723679d7845\"",
+      "modified": "Wed, 18 Nov 2026 12:15:44 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "ae1db953e351ae5b2a6f",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/space/2026/11/voyager-1-at-one-light-day-historian-revisits-golden-records-forgotten-details/",
+          "title": "Voyager 1 at one light-day: Historian revisits Golden Record's forgotten details",
+          "published_at": "2026-11-18T12:15:44Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "\"They are pretty confident that it's going to last a long, long, long time...\"",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "a5b5fadce5f65fb8cd9f",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/gaming/2026/11/grand-theft-auto-vi-the-ars-technica-review/",
+          "title": "Grand Theft Auto VI: The Ars Technica review",
+          "published_at": "2026-11-18T11:00:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Jason and Lucia's crime-heavy love story fuels a wonder of digital urban simulation.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "26a444a0aabf92a2fc3e",
           "source_id": "ars",
@@ -2227,12 +2278,12 @@
           "group": "conde-nast",
           "trust": "media",
           "url": "https://arstechnica.com/gadgets/2026/11/microsoft-calls-copilot-the-new-os-for-work-at-ignite-keynote/",
-          "title": "Microsoft calls Copilot \"the new OS for work\" at Ignite keynote",
+          "title": "Copilot is \"the new OS for work,\" and now Office runs inside of it",
           "published_at": "2026-11-18T00:27:29Z",
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Word, Excel, and PowerPoint now live inside Copilot; always-on agents are next.",
           "event_at": null,
           "supporting": []
@@ -2249,7 +2300,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "500+ cameras will go dark just 3 years after mayor urged approval.",
           "event_at": null,
           "supporting": []
@@ -2266,7 +2317,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "\"Governments need control of their critical space infrastructure, and Europe needs it most.\"",
           "event_at": null,
           "supporting": []
@@ -2283,7 +2334,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Malware cocktail delivers cryptocurrency theft payloads and iOS exploits, among other things.",
           "event_at": null,
           "supporting": []
@@ -2300,7 +2351,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "“I love our country”: Jensen Huang’s apology comes amid escalating Nvidia probes.",
           "event_at": null,
           "supporting": []
@@ -2317,7 +2368,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Studio head Heather Hazen is among those departing.",
           "event_at": null,
           "supporting": []
@@ -2334,7 +2385,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "“Wake up! They haven’t come 24 trillion miles to negotiate. They are coming to exterminate us.”",
           "event_at": null,
           "supporting": []
@@ -2351,7 +2402,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "AG: OpenAI tested dangerous AI without proper oversight and misled public about it.",
           "event_at": null,
           "supporting": []
@@ -2368,7 +2419,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Information about the Vulcan failure is being closely held by ULA and Blue Origin.",
           "event_at": null,
           "supporting": []
@@ -2385,42 +2436,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "AI training and chat history will now have separate toggles in the Gemini activity settings.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "04f5872f54d9cc0ac72b",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/tech-policy/2026/11/house-democrats-promise-a-us-return-to-global-climate-talks/",
-          "title": "House Democrats promise a US return to global climate talks",
-          "published_at": "2026-11-17T15:32:43Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "A new House majority can push climate policy, but a full US return remains uncertain.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "d4774d28d264a29f63d7",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/gadgets/2026/11/ars-live-can-the-cloud-survive-drone-strikes-on-data-centers/",
-          "title": "Ars Live: What do drone strikes on data centers mean for the future? Talk at 1 pm EST today",
-          "published_at": "2026-11-17T15:28:59Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "Ars Live discussion is happening today, November 17, at 1 pm Eastern Time.",
           "event_at": null,
           "supporting": []
         }
@@ -2429,11 +2446,28 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"76aa587f67e997086c4f38ee54d0de45\"",
+      "etag": "W/\"497b396d7e5886a8227975a5c26357c3\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "942518637ca001c7d154",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1036415/suno-visuals-ai-generated-video-images-feature",
+          "title": "Suno now lets you make AI videos for your AI music",
+          "published_at": "2026-11-18T11:16:53Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Suno has introduced image and video generation in its latest effort to expand beyond being an AI music platform. The new feature, called \"Visuals,\" allows users to turn Suno songs into AI-generated video clips that automatically lipsync to lyrics, or make images via prompt descriptions that can be used as thumbnails and album artwork. Visuals […]",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "d34ce25785fdf87b116d",
           "source_id": "theverge-ai",
@@ -2446,8 +2480,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked […]",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI-pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked at […]",
           "event_at": null,
           "supporting": []
         },
@@ -2463,7 +2497,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Interim Nvidia CEO Colette Kress announced the company's Q3 earnings on Tuesday, without initially mentioning former CEO Jensen Huang or the details of his departure, or possible attempt at a return. On the earnings call accompanying the release, board chair Harvey Jones kicked things off by saying the board \"does not intend to reinstate Huang […]",
           "event_at": null,
           "supporting": []
@@ -2480,7 +2514,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Instagram is filled with people posting deepfaked content - including, as of late, from one of Meta's most prominent executives. Earlier in November, Alexandr Wang, Meta's chief AI officer, shared a short clip to promote Muse, the company's consumer AI agent. In the AI-generated clip, Wang, Meta CEO Mark Zuckerberg, OpenAI CEO Sam Altman, and […]",
           "event_at": null,
           "supporting": []
@@ -2497,7 +2531,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Google is rebranding its Spark AI agent as \"Tasks\" and making it free to use. The feature, which is powered by Google's new Gemini 4 Hydrogen AI model, can do things like create meal plans, manage your calendar, and dig through your emails to find recurring expenses you might not need. Users in the US […]",
           "event_at": null,
           "supporting": []
@@ -2514,7 +2548,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "The Justice and Commerce Departments said that they are investigating Megaspeed, the Singapore-based data center company intertwined with the resignation of Nvidia CEO Jensen Huang, after reporting suggested an investigation had been halted last year. \"While we don't typically comment on ongoing investigations, it is in the public interest to provide the facts and address […]",
           "event_at": null,
           "supporting": []
@@ -2531,7 +2565,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Jensen Huang, who resigned as Nvidia's CEO last week, would be willing to return as CEO if the company's board of directors wanted it, he said in a statement reported on by The Wall Street Journal. \"Since my departure, I've seen an outpouring of calls from Nvidia's employees, investors, business partners, and customers for me […]",
           "event_at": null,
           "supporting": []
@@ -2548,7 +2582,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Jensen Huang's stunning resignation from Nvidia after more than 33 years has sent shockwaves throughout the tech industry. Now prominent figures are calling for Huang's reinstatement, and many are also hopping on board with a theory spreading throughout Silicon Valley: that the scandal is the result of a plot against the former CEO. At the […]",
           "event_at": null,
           "supporting": []
@@ -2565,7 +2599,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as reported earlier by Reuters. The lawsuit claims the […]",
           "event_at": null,
           "supporting": []
@@ -2582,25 +2616,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "OpenAI CEO Sam Altman is once again addressing his controversial comments on PC RAM purchases. \"I want to be clear, I want people to have a lot of RAM, I think everybody should be able to buy a lot of RAM for their own computer,\" Altman said today. \"I think the home tinkering is great.\" […]",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "ea2b45bbfe30aab1308f",
-          "source_id": "theverge-ai",
-          "source_name": "The Verge AI",
-          "group": "vox",
-          "trust": "media",
-          "url": "https://www.theverge.com/science/1034694/nuclear-energy-constellation-earnings-data-centers-democrats",
-          "title": "Big Nuclear isn’t worried about the Democrats stopping data centers",
-          "published_at": "2026-11-16T20:29:37Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "Constellation Energy - America's largest operator of nuclear power plants - does not share Wall Street's concerns that the Democrats will slow down data center development. On the company's third-quarter earnings call last week, CEO Joe Dominguez was, for lack of a better word, unbothered as he addressed the blue wave. \"I do think we've […]",
           "event_at": null,
           "supporting": []
         }
@@ -2615,6 +2632,40 @@
       "error_code": "",
       "items": [
         {
+          "id": "981981976c8d83dae54d",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/lovable-wants-you-to-vibe-code-a-living/",
+          "title": "Lovable Wants You to Vibe Code Your Dream Job",
+          "published_at": "2026-11-18T10:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "This Swedish startup dominated the vibe-coded app boom. Two years after launch, Lovable is shifting gears to help users run vibe-coded businesses.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "b762a36d54f3a12477f8",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/over-a-third-of-gen-z-rely-on-ai-for-friendship/",
+          "title": "Over a Third of Gen Z-ers Rely on AI for Friendship",
+          "published_at": "2026-11-18T05:01:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Young people who have online-only friends or use AI as a social companion face higher odds of loneliness than those who do not, a new Gallup report reveals.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "f7b7fa743ee78a6419f1",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2626,7 +2677,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Despite pressure from President Trump, Elon Musk, and Silicon Valley executives, Nvidia’s board says it “does not intend” to reinstate the company’s ousted CEO.",
           "event_at": null,
           "supporting": []
@@ -2643,7 +2694,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "The French CEO of Hugging Face, a mega-hub of open-source AI software, says the attack by OpenAI models earlier this year proved one thing: Humanity can’t let AI be controlled by the few.",
           "event_at": null,
           "supporting": []
@@ -2660,7 +2711,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Live Rewind and Siri Recap can transcribe missed moments and summarize your day—if you don’t mind a little social clumsiness.",
           "event_at": null,
           "supporting": []
@@ -2677,7 +2728,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Google and Apple alumni Chad Steelberg and Andy Baynes are applying what they learned running software companies and designing iPhones to manufacturing lethal munitions.",
           "event_at": null,
           "supporting": []
@@ -2694,7 +2745,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "After a shocking downfall, Nvidia’s CEO is out of a job. WIRED’s Lauren Goode explains what that means for the world’s most critical chip company, the AI industry, and Jensen Huang himself.",
           "event_at": null,
           "supporting": []
@@ -2711,42 +2762,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "AI competitors are catching up to Nvidia—and poised to take advantage of the chaos.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "b62677a8ffedb763cef1",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
-          "title": "AI DJs Completely Kill My Groove",
-          "published_at": "2026-11-15T12:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "YouTube Music and Spotify want synthetic hosts to curate your playlists. Their awkward banter and bogus song trivia are ruining the vibe.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "fdf2e0864d9e59a0e540",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/this-ai-tamagotchi-oats-turns-everyday-objects-into-needy-virtual-pets/",
-          "title": "This AI Tamagotchi Turns Everyday Objects Into Needy Virtual Pets",
-          "published_at": "2026-11-15T11:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "A Carnegie Mellon student’s tiny E Ink gadgets, called OATs, give houseplants, skateboards, and dumbbells expressive personalities to nudge you toward better habits.",
           "event_at": null,
           "supporting": []
         }
@@ -2978,11 +2995,79 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"855bc32e93e6dfc8e32975f9fbf8baad\"",
+      "etag": "W/\"c04d419ac65bcc5e97c3a944542cef35\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "b451aff394adbb427d3a",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+          "title": "Put Gemini to work for you",
+          "published_at": "2026-11-17T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf. Last month it saved us real money after we got hit with a surprise $389 electric bill. I gave Gemini permission to access our utility portal with the new Google Password Manager integration and asked for it to analyze our past bil",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "e4dfcc8c4cc7d973905e",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/",
+          "title": "Temporary threads are now available in AI Mode in Search.",
+          "published_at": "2026-11-17T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Google AI Mode now offers temporary threads for private searches. Keep your history clean and avoid personalization. Try this new feature today. Breadcrumb Home Products & Platforms Products Search Temporary threads are now available in AI Mode in Search. Nov 17, 2026 We’re introducing temporary threads in AI Mode, where you can explore and ask questions — whether that’s brainstorming a surprise g",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "8a4e13d86b040a3849fd",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/products-and-platforms/products/workspace/vids-personal-avatars-no-cost/",
+          "title": "Anyone can create a personal avatar of themselves in Google Vids, at no cost.",
+          "published_at": "2026-11-17T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Create custom avatars in Google Vids for free. Design your digital likeness using a selfie and voice recording to narrate videos. Try it out today. Breadcrumb Home Products & Platforms Products Google Workspace Anyone can create a personal avatar of themselves in Google Vids, at no cost. Nov 17, 2026 Personal avatars in Google Vids lets you create a custom digital avatar to star in your videos. St",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "9434292048106a1c3b9a",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://claude.com/resources/articles/linked-billing-on-claude-platform",
+          "title": "Linked billing on the Claude Platform",
+          "published_at": "2026-11-17T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-17",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "Linked billing is now in beta on the Claude Platform. Third-party platforms can let customers pay for Claude API usage without sharing an API key. Linked billing on the Claude Platform Category Product updates Product Claude Platform Date November 17, 2026 Reading time 4 min Share Copy link Contents A more secure alternative to sharing API keys Platforms can offer Claude to customers without build",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "5cdbb0432c2d7f9c1194",
           "source_id": "primary-google",
@@ -2995,7 +3080,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Gemini now offers 66 regional voices on Android and iOS. Choose a natural, local dialect for your app interactions. Pick your favorite voice today. Breadcrumb Home Innovation & AI Products Gemini App Regional voices are rolling out in the Gemini app. Neel Joshi Director of Product Management, Gemini Live Nov 16, 2026 At Google I/O, we shared plans to bring local dialects to Gemini, so you can choo",
           "event_at": null,
           "supporting": []
@@ -3012,8 +3097,25 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Gemini Notebook now turns your research into interactive sites. Build project trackers and visual dashboards with Google. Create your site today. Breadcrumb Home Innovation & AI Products Gemini Notebook Transform notes, research, and sources into interactive sites with Gemini Notebook. Maria Ines Aranguren Software Engineer, Google Labs Nov 16, 2026 Starting today, Gemini Notebook can turn your so",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "4e6009943a7de781fd19",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+          "title": "Updating our coordinated vulnerability disclosure policy timelines",
+          "published_at": "2026-11-16T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "We’re shortening our vulnerability disclosure window from 90 days to 30 days for high- and critical-severity issues, and to 45 days for all other issues. 01 Responding to AI-enabled vulnerability discovery Updating our coordinated vulnerability disclosure policy timelines 01 Responding to AI-enabled vulnerability discovery Published Nov 16, 2026 Team Frontier Red Team Topics Cybersecurity Open sou",
           "event_at": null,
           "supporting": []
         },
@@ -3029,7 +3131,7 @@
           "time_precision": "day",
           "source_date": "2026-11-16",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "How end-to-end, property and differential tests let coding agents verify their work with evidence, and what the Claude Code team does to keep its verifiers honest. [ H ] HOME [ M ] MODS [ D ] DOCS [ T ] TERMINAL Try Claude Code [ H ] HOME [ M ] MODS [ D ] DOCS [ T ] TERMINAL Engineering How the Claude Code team thinks about verification How end-to-end, property and differential tests let coding ag",
           "event_at": null,
           "supporting": []
@@ -3046,20 +3148,20 @@
           "time_precision": "day",
           "source_date": "2026-11-16",
           "time_basis": "publication",
-          "collected_at": "2026-11-17T12:31:34.203399Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "This AI threat update provides GTIG’s findings on adversarial misuse of AI including Gemini and other non-Google tools. Throughout 2026, Mandiant responded to several LLMJacking incidents where financially motivated actors compromised cloud environments to consume targeted organizations’ cloud compute and/or LLM resource quotas. As seen in the image below, LLMJacking can generate significant usage",
           "event_at": null,
           "supporting": []
         }
       ],
-      "discovered": 4,
-      "verified": 4
+      "discovered": 9,
+      "verified": 9
     },
     "openai-community": {
       "etag": "",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_429",
       "items": [],
       "discovered": 8,
       "verified": 8
@@ -3082,7 +3184,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "We’re shortening our vulnerability disclosure window from 90 days to 30 days for high- and critical-severity issues, and to 45 days for all other issues. 01 Responding to AI-enabled vulnerability discovery Updating our coordinated vulnerability disclosure policy timelines 01 Responding to AI-enabled vulnerability discovery Published Nov 16, 2026 Team Frontier Red Team Topics Cybersecurity Open sou",
           "event_at": null,
           "supporting": []
@@ -3101,11 +3203,28 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"a4c82bd93b8df7a8a07a3c9dc7145629\"",
-      "modified": "Tue, 17 Nov 2026 20:31:49 GMT",
+      "etag": "\"b24bc3f91df1f182ab7c2403f74cd96e\"",
+      "modified": "Wed, 18 Nov 2026 10:26:43 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "68592d033fadc2496e0b",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/sunos-new-visuals-feature-pairs-ai-generated-music-with-ai-generated-video/",
+          "title": "Suno's new Visuals feature pairs AI-generated music with AI-generated video",
+          "published_at": "2026-11-18T10:22:45Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
+          "excerpt": "AI music generator Suno can now create images and video clips to go with its songs, thanks to a new feature called Visuals. The article Suno's new Visuals feature pairs AI-generated music with AI-generated video appeared first on The Decoder .",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "2890d9f73094f6102ae6",
           "source_id": "decoder",
@@ -3118,7 +3237,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "OpenAI releases GPT-6.2 Astra and Sol, two new models that are more capable and cheaper than their predecessors. In the independent Artificial Analysis Intelligence Index, Astra ranks second behind Claude Fable 5.2, and it is the first released model to reach the High threshold for AI self-improvement on OpenAI's own scale. OpenAI itself classifies that as a risk. The article OpenAI launches GPT-6",
           "event_at": null,
           "supporting": []
@@ -3135,7 +3254,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "OpenAI wants GPT-6 Astra and GPT-6 Luna to automate administrative tasks in US healthcare through computer-use agents that operate existing clinic software and insurance portals the way a human would. Luna handles tasks like prior authorizations for about 8.5 cents each. Companies including CVS Health and Cigna Healthcare are already deploying the technology. The article AI agents are starting to ",
           "event_at": null,
           "supporting": []
@@ -3152,7 +3271,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "The US is tightening its chip export controls. Data centers in third countries like Singapore and Malaysia will soon need a US license to buy Nvidia chips, closing the loophole that let Chinese firms rent cloud compute abroad. A Reuters investigation also reveals how China offsets its hardware shortage through industrial-scale distillation of US AI models. The article The US wants to block China f",
           "event_at": null,
           "supporting": []
@@ -3169,7 +3288,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "OpenAI is opening its cybersecurity tool Daybreak to NATO and several European governments, including Germany, France, and Poland. The EU's cybersecurity agency ENISA has already used it to find real vulnerabilities in EU software. The NATO Communications and Information Agency (NCIA) says it's already making heavy use of the underlying models. The article OpenAI opens its cybersecurity tool Daybr",
           "event_at": null,
           "supporting": []
@@ -3186,7 +3305,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Edinburgh's Childlight Institute reports a more than 8,400 percent increase in AI-generated child sexual abuse material over two years, from about 4,700 reports in 2023 to over 400,000 in 2025. Abusers are using tools like nudify apps for blackmail. Childlight CEO Paul Stanfield wants governments to classify the problem as a preventable public health emergency. The article Reports of AI-generated ",
           "event_at": null,
           "supporting": []
@@ -3203,7 +3322,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Isomorphic Labs has raised $5 billion, just six months after a $2.1 billion round. Alphabet's AI drug discovery company, led by Demis Hassabis, plans to use the funding to push its drug pipeline toward clinical trials. The company has no approved drugs yet. The article Isomorphic Labs raises $5 billion in its second mega-round within six months appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -3220,7 +3339,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "California Attorney General Rob Bonta is suing OpenAI over a cyberattack that the company's out-of-control AI models launched against AI platform Hugging Face in July. The article California's attorney general sues OpenAI over rogue AI models that attacked Hugging Face appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -3237,7 +3356,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Google's Threat Intelligence Group has for the first time caught attackers finding and exploiting security vulnerabilities with no human involvement at all. An AI framework called \"exploit_agent,\" found on an exposed server, automatically compared code before and after patches, built exploits, and ran them on its own. The article Google warns that fully automated cyberattacks have arrived and will",
           "event_at": null,
           "supporting": []
@@ -3254,25 +3373,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "OpenAI physicist Nathaniel Craig used GPT-6 Astra to tackle a problem that had stumped particle physicists for over 25 years. The AI model took Craig's strategy for defining the full Standard Model on a computational lattice and turned it into a working proof. Craig says a lot of work remains before realistic simulations are possible. The article OpenAI's GPT-6 Astra tackles the Standard Model's t",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "4995a6ed66062d4f3718",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
-          "title": "Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten",
-          "published_at": "2026-11-16T18:52:55Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
-          "excerpt": "Moonshot AI is done chasing coding benchmarks, it says. The Beijing startup is pivoting its Kimi language models toward biology, chemistry, and pharma research, arguing that science demands smarter AI than law, finance, or code. The article Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
         }
@@ -3298,7 +3400,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-18T00:31:28.587589Z",
+          "collected_at": "2026-11-18T12:48:52.873809Z",
           "excerpt": "Quad9's forced withdrawal from France highlights the dangers of mandating DNS-level blocking. We explore why forcing public resolvers to act as content filters is technically flawed and threatens the open Internet.",
           "event_at": null,
           "supporting": []
@@ -3823,6 +3925,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-18-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -8243,6 +8350,70 @@
         "anthropic",
         "google"
       ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "a1de396d3910fa2e0f79",
+      "issue": "2026-11-18-pm",
+      "cutoff": "2026-11-18T12:30:00Z",
+      "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+      "urls": [
+        "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership"
+      ],
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "8a4e13d86b040a3849fd",
+      "issue": "2026-11-18-pm",
+      "cutoff": "2026-11-18T12:30:00Z",
+      "title": "Anyone can create a personal avatar of themselves in Google Vids, at no cost.",
+      "urls": [
+        "https://blog.google/products-and-platforms/products/workspace/vids-personal-avatars-no-cost/"
+      ],
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "e4dfcc8c4cc7d973905e",
+      "issue": "2026-11-18-pm",
+      "cutoff": "2026-11-18T12:30:00Z",
+      "title": "Temporary threads are now available in AI Mode in Search.",
+      "urls": [
+        "https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "ffd771bb9531a4b78077",
+      "issue": "2026-11-18-pm",
+      "cutoff": "2026-11-18T12:30:00Z",
+      "title": "Reports of AI-generated child sexual abuse material have surged more than 8,400 percent in two years",
+      "urls": [
+        "https://the-decoder.com/reports-of-ai-generated-child-sexual-abuse-material-have-surged-more-than-8400-percent-in-two-years/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "ae3d9685f670ac125fb3",
+      "issue": "2026-11-18-pm",
+      "cutoff": "2026-11-18T12:30:00Z",
+      "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
+      "urls": [
+        "https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories"
+      ],
+      "entities": [],
       "versions": [],
       "event_type": "announcement"
     }
