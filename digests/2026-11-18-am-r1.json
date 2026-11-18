@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-18-am",
+  "revision": 1,
+  "created_at": "2026-11-18T00:31:28.587589Z",
+  "cutoff": "2026-11-18T00:30:00Z",
+  "window_start": "2026-11-16T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "91fea439f8428bb18e88",
+      "title": "OpenAI发布GPT-6.2 Astra与Sol模型",
+      "summary": "OpenAI推出了GPT-6.2 Astra和Sol两款新模型，在专业输出、编程、计算机操作及运行效率方面有所提升，同时降低了API使用成本。在独立的人工智能指数排名中，Astra位居第二，并且是首款达到OpenAI自我评估中高风险自我提升门槛的机型。",
+      "impact": "降低了API价格并提升了模型的多项能力。",
+      "category": "模型",
+      "score": 81.88,
+      "sources": [
+        {
+          "id": "8f6af8c44a4a1bfb5de3",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "title": "Introducing GPT-6.2 Astra and Sol",
+          "published_at": "2026-11-17T17:45:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "2890d9f73094f6102ae6",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+          "title": "OpenAI launches GPT-6.2 Astra and Sol with lower API prices and some benchmark gains",
+          "published_at": "2026-11-17T20:30:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 关于自我提升风险的评估由OpenAI自身分类界定。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6.2"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI发布了全新GPT-6.2 Astra与Sol模型，提供更低API价格与更强性能。",
+      "backfill": false
+    },
+    {
+      "id": "49e988fe944963bc5d35",
+      "title": "英伟达在SC26推出科学AI代理及硬件平台",
+      "summary": "英伟达在芝加哥举行的SC26大会上推出了针对AI代理的新工具以及可用于科学研究的软件，该软件能够协助研究人员在自有系统上规划实验、运行代码并检查结果。同时，该公司还宣布了面向科学领域的Nemotron、Rubin HPC GPU以及扩展的Vera CPU平台。",
+      "impact": "为科学研究领域提供了新的AI代理与高性能硬件平台。",
+      "category": "开发",
+      "score": 74.3,
+      "sources": [
+        {
+          "id": "49e988fe944963bc5d35",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/",
+          "title": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+          "published_at": "2026-11-17T14:00:10Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA在SC26大会上发布了面向科学研究的AI Agent工具、Nemotron for Science及Rubin HPC GPU。",
+      "backfill": false
+    },
+    {
+      "id": "3047d7657748ea760feb",
+      "title": "ChatGPT推出面向销售的插件及功能",
+      "summary": "ChatGPT推出了全新的销售插件以及30多个新扩展的合作伙伴插件，旨在帮助用户研究潜在客户、准备销售简报、更新客户关系管理系统并推进业务交易。",
+      "impact": "扩展了ChatGPT在销售领域的具体应用场景。",
+      "category": "产品",
+      "score": 69.99,
+      "sources": [
+        {
+          "id": "3047d7657748ea760feb",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "title": "Introducing ChatGPT for Sales",
+          "published_at": "2026-11-17T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI推出了ChatGPT for Sales插件及30多项合作伙伴插件。",
+      "backfill": false
+    },
+    {
+      "id": "20774146b79ca781277a",
+      "title": "谷歌Spark AI代理更名为Tasks并宣布免费使用",
+      "summary": "谷歌将其Spark AI代理更名为Tasks并向用户免费开放。该功能由谷歌的Gemini 4 Hydrogen模型驱动，能够制定餐饮计划、管理日历、查找不必要的重复订阅费用，并可协助美国用户处理通话、网站登录以及代购等任务。",
+      "impact": "提升了AI代理的易用性并扩展了其在日常任务中的应用。",
+      "category": "产品",
+      "score": 60.49,
+      "sources": [
+        {
+          "id": "b451aff394adbb427d3a",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+          "title": "Put Gemini to work for you",
+          "published_at": "2026-11-17T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "20774146b79ca781277a",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+          "title": "Google’s Spark AI agent becomes ‘Tasks’ — and now it’s free",
+          "published_at": "2026-11-17T18:58:01Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "534361927951e2d99a3b",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/",
+          "title": "Google expands access to Gemini Tasks, which can help with calls, purchases",
+          "published_at": "2026-11-17T19:02:20Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 部分高级功能目前主要面向美国用户。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "谷歌将Spark AI agent更名为Tasks并免费提供，搭载Gemini 4 Hydrogen模型。",
+      "backfill": false
+    },
+    {
+      "id": "c55f92969fc4ef13b604",
+      "title": "亚马逊与谷歌预计在Anthropic IPO后共计持有近30%股份",
+      "summary": "媒体报道显示，在Anthropic进行首次公开募股后，亚马逊预计将持有该公司略低于15%的股份并保留进一步增持的选项，而谷歌则以近14%的持股比例紧随其后，两者合计将拥有近30%的股份。",
+      "impact": "显示出科技巨头对Anthropic的持续资本布局。",
+      "category": "商业",
+      "score": 60.66,
+      "sources": [
+        {
+          "id": "c55f92969fc4ef13b604",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/",
+          "title": "Amazon and Google will together own nearly 30% of Anthropic after its IPO",
+          "published_at": "2026-11-17T22:29:05Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "具体持股比例基于媒体报道的上市后预测。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic",
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "亚马逊和谷歌将在Anthropic IPO后共计持有近30%股份，属重大商业股权变动。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
