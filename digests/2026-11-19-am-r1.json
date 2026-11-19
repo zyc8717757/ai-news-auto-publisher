@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-19-am",
+  "revision": 1,
+  "created_at": "2026-11-19T01:41:32.263890Z",
+  "cutoff": "2026-11-19T00:30:00Z",
+  "window_start": "2026-11-17T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "1bff35906eb5137e3509",
+      "title": "谷歌推出 Gemini 4 Neon 模型",
+      "summary": "谷歌推出了 Gemini 4 Neon 模型，旨在为复杂编程和分析任务提供前沿水平的智能。该模型定价为每百万输入 tokens 3 美元、缓存输入 tokens 每百万 0.15 美元（提供 95% 折扣）、输出 tokens 每百万 15 美元，并支持 100 万 tokens 的上下文窗口。根据独立评测，该模型在多个基准测试中表现优异。",
+      "impact": "为开发者和企业提供高性价比的高性能大模型分析与编程支持。",
+      "category": "模型",
+      "score": 75.96,
+      "sources": [
+        {
+          "id": "f539fcdaf975fdb95a5b",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+          "title": "Introducing Gemini 4 Neon",
+          "published_at": "2026-11-18T21:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 评测结果基于独立评测声称，其实际性能在不同应用场景下可能存在差异。",
+      "entities": [
+        "google"
+      ],
+      "versions": [
+        "gemini-4"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google DeepMind发布Gemini 4 Neon，提供100万上下文窗口及高性价比企业级能力。",
+      "backfill": false
+    },
+    {
+      "id": "03e8ab4994eca645bcf8",
+      "title": "谷歌面向AI Ultra订阅用户推出Genie 4",
+      "summary": "谷歌DeepMind推出了Genie 4，向Google AI Ultra订阅用户开放。该世界模型能够生成支持实时音频和编辑的互动世界，用户可通过自然语言实时修改环境、添加原生音频，并在全新的社区画廊中分享和重混所创建的世界。",
+      "impact": "丰富了AI世界生成的互动性与实时编辑能力，提升了用户的创作体验。",
+      "category": "产品",
+      "score": 75.23,
+      "sources": [
+        {
+          "id": "52f6bc9a43b3606d3a01",
+          "source_id": "primary-google",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+          "title": "Genie 4 is now available",
+          "published_at": "2026-11-18T18:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "cac57b5217ba2caa29c8",
+          "source_id": "deepmind",
+          "source_name": "Google DeepMind",
+          "group": "google",
+          "trust": "official",
+          "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+          "title": "Genie 4 is now available",
+          "published_at": "2026-11-18T18:13:42Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "e65a5f96846a3a779995",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-deepminds-project-genie-update-brings-genie-4-chainable-worlds-and-a-community-gallery-for-remixing/",
+          "title": "Google Deepmind's Project Genie update brings Genie 4, chainable worlds, and a community gallery for remixing",
+          "published_at": "2026-11-18T19:26:25Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 目前仅限Google AI Ultra订阅用户使用。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google DeepMind推出Genie 4，面向订阅用户提供实时交互式世界生成与编辑功能。",
+      "backfill": false
+    },
+    {
+      "id": "15f029e3fc4e50d9535e",
+      "title": "谷歌实验室推出Stitch Loop产品代理",
+      "summary": "谷歌实验室（Google Labs）推出了Stitch Loop实验性项目，这是一个常驻的产品代理，能够连接用户的代码库和实时指标，持续优化已发布的产品和代码。",
+      "impact": "帮助开发团队自动化维护代码库与实时指标，提升产品迭代效率。",
+      "category": "开发",
+      "score": 73.46,
+      "sources": [
+        {
+          "id": "15f029e3fc4e50d9535e",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/?ref=testingcatalog.com",
+          "title": "Introducing Stitch Loop: A new way to build and evolve products",
+          "published_at": "2026-11-18T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 属于实验性项目，目前处于等待名单阶段。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google Labs推出Stitch Loop，支持持续优化代码库与实时指标的产品智能体。",
+      "backfill": false
+    },
+    {
+      "id": "68ddb817fe4001c0fc7b",
+      "title": "OpenAI模型助力AMD芯片设计优化",
+      "summary": "根据OpenAI与媒体报道，OpenAI模型在不到五个月的时间内，帮助AMD在其旗舰GPU IP上实现了高达14%的PPA（功耗、性能和面积）改善。OpenAI称这相当于一年的工程进展，AMD已将相关修改应用到投入生产的设计中。",
+      "impact": "展示了人工智能在加速半导体芯片设计和优化方面的巨大潜力。",
+      "category": "模型",
+      "score": 80.54,
+      "sources": [
+        {
+          "id": "68ddb817fe4001c0fc7b",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+          "title": "Advancing chip design with OpenAI models",
+          "published_at": "2026-11-18T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "dc4d5320076940f6f0af",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/",
+          "title": "OpenAI says its models delivered a year's worth of chip optimization on top of AMD's own engineering",
+          "published_at": "2026-11-18T18:00:33Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体优化幅度和开发周期的声明主要来自OpenAI官方及相关报道。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI展示使用模型优化电路和RISC-V核心设计的进展。",
+      "backfill": true
+    },
+    {
+      "id": "cca2e65f66f1ec400e56",
+      "title": "OpenAI阐述前沿AI风险管理机制",
+      "summary": "OpenAI发布了关于如何管理前沿人工智能风险的说明，详细介绍了从模型训练到部署的全流程管理措施，包括模型对齐、沙盒环境测试、阻止性安全防护以及持续监控机制。",
+      "impact": "提升了前沿人工智能系统在训练和部署阶段的安全性与透明度。",
+      "category": "安全",
+      "score": 72.71,
+      "sources": [
+        {
+          "id": "99be0c0a7e074380d1a5",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/managing-frontier-ai-risk",
+          "title": "Managing frontier AI risk: From training to deployment",
+          "published_at": "2026-11-18T06:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "9fcc06b5f6248614cb9b",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "group": "hackernews",
+          "trust": "community",
+          "url": "https://openai.com/index/managing-frontier-ai-risk/",
+          "title": "Managing frontier AI risk: From training to deployment",
+          "published_at": "2026-11-18T20:27:10Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 防范措施的实际执行效果取决于具体的业务落地场景。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI发布关于从训练到部署管理前沿AI风险的系统说明。",
+      "backfill": false
+    },
+    {
+      "id": "a9ef6dbadc6b0013c70d",
+      "title": "华硕、戴尔与微星推出搭载英伟达技术的RTX Spark迷你主机",
+      "summary": "华硕、戴尔和微星推出了全新的英伟达RTX Spark迷你台式机，将本地AI代理、图像与视频生成以及模型微调功能引入专用的Windows个人电脑中。这些系统最高配备128GB统一内存和英伟达AI软件栈，为运行更大的本地模型以及进行RTX加速的创意和开发工作提供了空间。",
+      "impact": "为Windows个人电脑用户带来本地AI代理与大模型支持。",
+      "category": "产品",
+      "score": 71.31,
+      "sources": [
+        {
+          "id": "a9ef6dbadc6b0013c70d",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/",
+          "title": "NVIDIA RTX Spark Compact Desktops Out Now",
+          "published_at": "2026-11-18T14:00:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA发布RTX Spark紧凑型桌面电脑，带来本地AI代理与微调支持。",
+      "backfill": false
+    },
+    {
+      "id": "00a064e6720eae62fd0b",
+      "title": "谷歌Gemini应用现在支持低内存安卓设备",
+      "summary": "谷歌Gemini应用宣布现已支持较低内存的安卓设备。用户可以在手机上访问Gemini Live并使用自定义图像创作功能。官方已在应用商店提供该应用程序的下载。",
+      "impact": "扩展了Gemini应用在安卓低内存设备上的用户覆盖面。",
+      "category": "产品",
+      "score": 70.46,
+      "sources": [
+        {
+          "id": "00a064e6720eae62fd0b",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "published_at": "2026-11-18T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google Gemini应用开始支持低内存Android设备，扩大用户覆盖。",
+      "backfill": false
+    },
+    {
+      "id": "e308a84a77ae00d83193",
+      "title": "Anthropic公布A类普通股首次公开募股发行价",
+      "summary": "Anthropic, PBC宣布为其A类普通股首次公开募股定价，每股价格为83.00美元。本次发行包括980,000,000股A类普通股，其中956,351,354股由Anthropic出售，23,648,646股由部分出售股东出售。股票预计在纳斯达克全球精选市场开始交易，代码为ANT。",
+      "impact": "Anthropic推进首次公开募股并确定股票发行价格。",
+      "category": "商业",
+      "score": 71.24,
+      "sources": [
+        {
+          "id": "e308a84a77ae00d83193",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+          "title": "Anthropic prices initial public offering",
+          "published_at": "2026-11-18T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "aed3ea0dfc61854d1cd6",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
+          "title": "Anthropic reportedly prices IPO at $83 a share, above projected range",
+          "published_at": "2026-11-18T22:11:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 部分媒体报道称该IPO完全摊薄后估值达1.5万亿美元，但官方公告主要披露了发行价和股份数量。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic正式为其首次公开募股（IPO）定价，Class A普通股定价每股83.00美元。",
+      "backfill": true
+    },
+    {
+      "id": "b14a9940e16fe5780583",
+      "title": "微软在产品中以自研更便宜的替代模型替换外部AI模型",
+      "summary": "微软AI部门MAI在Ignite大会上推出了七个用于代码、安全、图像、语言和路由的新模型。微软称MAI Code 2的代码性能达到了GPT-6.1 Sol的98%，而成本仅为40%。这些模型旨在为企业中全天候运行AI代理提供支持。",
+      "impact": "微软推出多款自研替代模型以降低企业AI代理的运行成本。",
+      "category": "产品",
+      "score": 68.25,
+      "sources": [
+        {
+          "id": "b14a9940e16fe5780583",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/microsoft-is-replacing-outside-ai-models-in-its-own-products-with-cheaper-in-house-alternatives/",
+          "title": "Microsoft is replacing outside AI models in its own products with cheaper in-house alternatives",
+          "published_at": "2026-11-18T18:47:36Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "性能数据来源于微软官方说法，未提供独立第三方评测结果。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "microsoft"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "微软MAI在Ignite上发布七款内部替代模型，旨在降低成本并驱动企业AI代理。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
