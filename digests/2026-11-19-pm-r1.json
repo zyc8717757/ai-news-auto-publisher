@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-19-pm",
+  "revision": 1,
+  "created_at": "2026-11-19T12:33:23.094504Z",
+  "cutoff": "2026-11-19T12:30:00Z",
+  "window_start": "2026-11-17T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "5232879038119e5daf1c",
+      "title": "Anthropic投资1亿美元推出Claude Frontier Academy",
+      "summary": "Anthropic宣布投资1亿美元推出Claude Frontier Academy，计划在2027年底前培训1万名工程师，以弥补企业级AI人才缺口。首批参与机构包括埃森哲、贝恩、联邦银行、德勤、麦肯锡、摩根士丹利和诺和诺德等。此外，该公司还宣布为全球1万名科学家免费提供Claude使用权限，并为其A类普通股进行了首次公开募股定价。",
+      "impact": "有助于缓解企业AI人才短缺，扩大Claude在科研与企业市场的应用。",
+      "category": "商业",
+      "score": 68.62,
+      "sources": [
+        {
+          "id": "5232879038119e5daf1c",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/announcements",
+          "title": "Announcements",
+          "published_at": "2026-11-18T00:00:00Z",
+          "time_precision": "day",
+          "source_date": "2026-11-18",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 相关计划及上市进展以官方后续披露为准。 来源仅提供日期，时区及准确发布时间未知。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic正式定价首次公开募股（IPO），是AI行业的重大商业事件。",
+      "backfill": true
+    },
+    {
+      "id": "fcf93c416202eb38a45d",
+      "title": "英伟达称已停止向中国市场供应先进AI芯片",
+      "summary": "英伟达临时首席执行官科莱特·克雷斯在财报电话会议上宣布，尽管此前在去年十二月获得了白宫的批准，但该公司已经停止向中国市场运送其先进的AI芯片。这一举措标志着该公司战略发生了显著变化。",
+      "impact": "英伟达停止向中国供应先进AI芯片，或将对相关区域的市场布局产生影响。",
+      "category": "商业",
+      "score": 57.46,
+      "sources": [
+        {
+          "id": "fcf93c416202eb38a45d",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling",
+          "title": "Nvidia isn’t selling any more AI chips to China",
+          "published_at": "2026-11-18T13:01:05Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "停止供应的具体原因及长期后续影响尚待观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "NVIDIA高管在财报电话会议上宣布停止向中国运送高级AI芯片，属重大行业商业与政策事件。",
+      "backfill": false
+    },
+    {
+      "id": "d9dfce9d2a4e24b1ca47",
+      "title": "谷歌发布Gemini 4 Neon模型",
+      "summary": "谷歌DeepMind发布了Gemini 4 Neon，这是其七周内的第四个模型。据报道，该模型速度接近其同类模型Carbon的2倍，在多数基准测试中表现更优，且价格显著降低。",
+      "impact": "丰富了谷歌的AI模型产品线，提升了处理速度并降低了使用成本。",
+      "category": "模型",
+      "score": 69.84,
+      "sources": [
+        {
+          "id": "d9dfce9d2a4e24b1ca47",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/googles-latest-ai-model-is-faster-cheaper-and-smarter-than-its-flagship-predecessor-from-just-weeks-ago/",
+          "title": "Google's latest AI model is faster, cheaper and smarter than its flagship predecessor from just weeks ago",
+          "published_at": "2026-11-19T11:18:18Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "性能和价格对比结论来源于媒体报道。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google发布Gemini 4 Neon模型，性能提升且价格更低，属于重要的主流厂商模型发布。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
