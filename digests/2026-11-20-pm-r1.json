@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-20-pm",
+  "revision": 1,
+  "created_at": "2026-11-20T12:31:36.100377Z",
+  "cutoff": "2026-11-20T12:30:00Z",
+  "window_start": "2026-11-18T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "3489b7908e190e958144",
+      "title": "LiteLLM Releases: 1.108.13 (LTS)",
+      "summary": "> [!TIP] > The `lts` image tag always points to the latest LTS release. Pull `ghcr.io/berriai/litellm:lts` to stay on the newest LTS patch ## Verify this release ```bash cosign verify \\ --certificate-identity https://github.com/BerriAI/project-releaser/.github/workflows/release.yml@refs/heads/main \\ --certificate-oidc-issuer https://token.actions.githubusercontent.com \\ ghcr.io/berriai/litellm:v1.108.13 ``` Same command for `litellm-database`, `litellm-non_root` and the `docker.io/litellm/*` ima",
+      "impact": "",
+      "category": "来源原文",
+      "score": 70.35,
+      "sources": [
+        {
+          "id": "3489b7908e190e958144",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.108.13",
+          "title": "LiteLLM Releases: 1.108.13 (LTS)",
+          "published_at": "2026-11-20T04:00:54Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "litellm"
+      ],
+      "versions": [
+        "1.108.13"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "402324a8363799571b28",
+      "title": "Genie 4 is now available on the Gemini API.",
+      "summary": "Build interactive 720p worlds with Genie 4 on the Google Gemini API. Generate coherent environments with native audio and real-time controls. Get started. Breadcrumb Home Innovation & AI Technology Developer tools Genie 4 is now available on the Gemini API. Nov 19, 2026 Following yesterday's Genie 4 launch , Genie 4 is now available for developers through the Gemini API (via the Interactions API) and Google AI Studio . Starting from a text prompt, a reference image, or both, developers can exper",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.91,
+      "sources": [
+        {
+          "id": "402324a8363799571b28",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/",
+          "title": "Genie 4 is now available on the Gemini API.",
+          "published_at": "2026-11-19T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "69d162e3003a2077ca17",
+      "title": "Let Gemini tackle repetitive chores on your Mac",
+      "summary": "Gemini for Mac now automates repetitive tasks by navigating apps and websites for you. Streamline your workflow and get the app to start saving time. Breadcrumb Home Innovation & AI Products Gemini App Let Gemini tackle repetitive chores on your Mac Nov 19, 2026 | x.com Facebook LinkedIn Mail Copy link Gemini can now navigate Mac apps and websites in the background to finish complex tasks. Michael Friedman Group Product Manager, Gemini App Share x.com Facebook LinkedIn Mail Copy link Your browse",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.91,
+      "sources": [
+        {
+          "id": "69d162e3003a2077ca17",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+          "title": "Let Gemini tackle repetitive chores on your Mac",
+          "published_at": "2026-11-19T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "d47c74f9a7ce43a8bb22",
+      "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+      "summary": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.91,
+      "sources": [
+        {
+          "id": "d47c74f9a7ce43a8bb22",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+          "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+          "published_at": "2026-11-19T17:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "fa2689f1fbd1cba21c28",
+      "title": "LangChain Releases: langchain-openrouter==0.3.0",
+      "summary": "**`langchain-openrouter` 0.3.0 drops support for Python 3.10**, which has reached end-of-life. The minimum supported version is now Python 3.11, and the minimum `langchain-core` version is now 1.8.3. Users on Python 3.10 will continue to resolve `langchain-openrouter` 0.2.x. Changes since langchain-openrouter==0.2.9 release(openrouter): 0.3.0 (#41957) chore(model-profiles): refresh model profile data (#41934) chore(model-profiles): refresh model profile data (#41917) chore(model-profiles): refre",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.3,
+      "sources": [
+        {
+          "id": "fa2689f1fbd1cba21c28",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.3.0",
+          "title": "LangChain Releases: langchain-openrouter==0.3.0",
+          "published_at": "2026-11-19T15:03:19Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "0.3.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
