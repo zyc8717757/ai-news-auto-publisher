@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-20-am",
+  "revision": 1,
+  "created_at": "2026-11-20T00:31:26.662436Z",
+  "cutoff": "2026-11-20T00:30:00Z",
+  "window_start": "2026-11-18T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "36bc207225e9e41f8c82",
+      "title": "英伟达与微软扩大加速计算合作",
+      "summary": "英伟达与微软正在扩展其全栈合作，旨在帮助各类组织构建、定制和部署智能应用。双方在微软Ignite大会上宣布，扩大访问由英伟达Vera Rubin NVL72系统驱动的Azure虚拟机，并将合作范围从Azure的下一代基础设施延伸至工业系统和Windows个人电脑。",
+      "impact": "推动企业级AI应用与下一代基础设施的深度融合。",
+      "category": "产品",
+      "score": 75.62,
+      "sources": [
+        {
+          "id": "36bc207225e9e41f8c82",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/",
+          "title": "NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs",
+          "published_at": "2026-11-19T20:00:15Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体落地效果和客户采纳规模尚待观察。",
+      "entities": [
+        "microsoft",
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA与Microsoft扩展全栈合作，将加速计算从Azure推向Windows PC。",
+      "backfill": false
+    },
+    {
+      "id": "1b3aafed7dd5d45c6822",
+      "title": "Gemini API引入工具检索功能",
+      "summary": "谷歌在Gemini API中引入了全新的工具检索功能，旨在帮助开发者更高效地处理复杂的应用场景。该功能通过优化模型对外部工具的调用和检索机制，进一步提升了开发人员在构建智能应用时的灵活性与集成效率。",
+      "impact": "增强Gemini API在复杂工作流中的工具调用能力。",
+      "category": "开发",
+      "score": 72.18,
+      "sources": [
+        {
+          "id": "1b3aafed7dd5d45c6822",
+          "source_id": "google-ai",
+          "source_name": "Google AI",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+          "title": "Introducing Tool Retrieval in the Gemini API",
+          "published_at": "2026-11-19T18:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 官方未披露更多关于功能特性的详细技术文档。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Google AI在Gemini API中引入Tool Retrieval功能，提升开发效率。",
+      "backfill": false
+    },
+    {
+      "id": "5beef147a7815df46333",
+      "title": "开发者利用前沿AI代理将创意转化为仿真应用",
+      "summary": "开发者正通过将前沿AI模型与英伟达Omniverse库相结合，把仿真创意转化为实际可用的应用程序。开发人员能够直接通过AI代理来组装资产、连接物理与渲染效果并检查场景行为，从而更高效地开展探索场景、排查故障以及优化设计等工作。",
+      "impact": "提升开发者在仿真和工业设计领域的效率。",
+      "category": "开发",
+      "score": 73.46,
+      "sources": [
+        {
+          "id": "5beef147a7815df46333",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+          "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+          "published_at": "2026-11-19T17:00:35Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 实际生产环境中的大规模普及程度仍需检验。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "NVIDIA展示开发者结合前沿AI Agent与Omniverse库进行仿真应用开发。",
+      "backfill": false
+    },
+    {
+      "id": "9342dbf934e428aa00c1",
+      "title": "OpenAI介绍其用于保持ChatGPT速度的性能工厂",
+      "summary": "OpenAI近日介绍了其构建的性能工厂系统，该系统利用由Codex驱动的工作流来自动发现和修复性能问题。通过这一系统，OpenAI能够持续维护并提升ChatGPT的运行速度，确保用户获得流畅的交互体验。",
+      "impact": "有助于维持ChatGPT产品的高性能与稳定性。",
+      "category": "开发",
+      "score": 70.89,
+      "sources": [
+        {
+          "id": "9342dbf934e428aa00c1",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+          "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+          "published_at": "2026-11-19T08:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 未公开该系统在处理更复杂漏洞时的具体局限性。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI介绍利用Codex工作流构建Performance Factory以保持ChatGPT高速运行。",
+      "backfill": false
+    },
+    {
+      "id": "294f494c3d9f12c91107",
+      "title": "Anthropic在华尔街正式挂牌上市",
+      "summary": "根据媒体报道，Anthropic已正式登陆公开市场，在纳斯达克以“ANT”为股票代码开始交易。其开盘价为每股111.50美元，高于此前每股83美元的定价，此前该公司的估值约为1.5万亿美元。此次上市距离其披露上市计划近一个月，并在长篇的S-1文件中披露了相关信息。",
+      "impact": "标志着又一家领先的AI企业正式走向公开资本市场。",
+      "category": "商业",
+      "score": 63.03,
+      "sources": [
+        {
+          "id": "294f494c3d9f12c91107",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+          "title": "Anthropic starts trading on Wall Street",
+          "published_at": "2026-11-19T16:52:01Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "ddb4b8e8befa63e4944c",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
+          "title": "Anthropic’s IPO puts AI’s circular financing boom to the test",
+          "published_at": "2026-11-19T14:54:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "媒体指出该公司面临巨大的算力承诺考验。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Anthropic正式登陆纳斯达克挂牌上市，股票代码ANT，标志着头部大模型厂商迎来重大商业里程碑。",
+      "backfill": false
+    },
+    {
+      "id": "9f19183b29edeb233beb",
+      "title": "ChatGPT推出实时听写功能",
+      "summary": "ChatGPT推出全新的实时听写（Live Dictation）功能，支持用户通过麦克风输入语音时进行实时转录，而无需等待录音结束。该功能目前正在全球范围内向网页端、桌面端以及iOS和Android应用上的所有ChatGPT订阅计划逐步推出。",
+      "impact": "提升了语音交互的实时性与便利性。",
+      "category": "产品",
+      "score": 57.58,
+      "sources": [
+        {
+          "id": "9f19183b29edeb233beb",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
+          "title": "ChatGPT can transcribe as you speak now with Live Dictation",
+          "published_at": "2026-11-19T15:16:45Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI 推出 ChatGPT 实时听写（Live Dictation）功能并全球推送，直接影响普通用户",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
