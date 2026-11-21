@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-21-pm",
+  "revision": 1,
+  "created_at": "2026-11-21T12:31:27.650253Z",
+  "cutoff": "2026-11-21T12:30:00Z",
+  "window_start": "2026-11-19T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "4bdb6d39f683fd871529",
+      "title": "Transformers Releases: Release v5.24.0",
+      "summary": "# Release v5.24.0 ## New Model additions ### Inkling 2 Mini Inkling 2 Mini is a multimodal model from Thinking Machines Lab that takes text and images as input and generates text. It is based on Inkling 2 Small, but has 24 decoder layers instead of 48. To make up for the smaller depth, layers 6 to 17 are looped three times, and a learned message-passing mechanism mixes the residuals of the previous pass into the attention and MoE inputs of each loop layer. The decoder routes each token to 8 of 1",
+      "impact": "",
+      "category": "来源原文",
+      "score": 72.99,
+      "sources": [
+        {
+          "id": "4bdb6d39f683fd871529",
+          "source_id": "transformers",
+          "source_name": "Transformers Releases",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.24.0",
+          "title": "Transformers Releases: Release v5.24.0",
+          "published_at": "2026-11-21T12:28:26Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "1b8efb1a8b4ef88bceb9",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
+          "title": "New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop",
+          "published_at": "2026-11-21T10:33:02Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "huggingface"
+      ],
+      "versions": [
+        "v5.24.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "675650dffca0c9d45983",
+      "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+      "summary": "Anthropic mathematician Levent Alpöge claims he has proved the Riemann hypothesis, one of mathematics's most notoriously difficult problems, with the help of Claude, cracking a puzzle that has eluded some of the world's best mathematicians for decades. If verified, it would mark yet another seismic achievement for AI in mathematics and add to the upheaval […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 46.77,
+      "sources": [
+        {
+          "id": "675650dffca0c9d45983",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+          "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+          "published_at": "2026-11-20T16:34:13Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "327354b7a28e2854b8fd",
+      "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "summary": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 41.82,
+      "sources": [
+        {
+          "id": "327354b7a28e2854b8fd",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+          "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+          "published_at": "2026-11-20T00:43:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "c12b546d5a71cb458f54",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+          "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+          "published_at": "2026-11-19T16:59:23Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": true
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable",
+    "ai_coverage_incomplete"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
