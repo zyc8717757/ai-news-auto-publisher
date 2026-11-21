@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-21-am",
+  "revision": 1,
+  "created_at": "2026-11-21T00:31:35.921214Z",
+  "cutoff": "2026-11-21T00:30:00Z",
+  "window_start": "2026-11-19T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "fd109fdc361c3cd3d582",
+      "title": "Anthropic宣布完成首次公开募股与同步私募",
+      "summary": "Anthropic宣布完成了总计1,127,000,000股A类普通股的首次公开募股，发行价为每股83.00美元，其中包括承销商行使超额配售权购买额外147,000,000股。此外，该公司还完成了向Advanced Micro Devices、Broadcom、Google、Micron Technology、Microsoft和NVIDIA等机构同步私募发行总计313,253,007股N类普通股。",
+      "impact": "Anthropic完成了大规模的IPO与私募融资，扩大了其资本规模。",
+      "category": "商业",
+      "score": 72.74,
+      "sources": [
+        {
+          "id": "fd109fdc361c3cd3d582",
+          "source_id": "anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://www.anthropic.com/news/ipo-close",
+          "title": "Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement",
+          "published_at": "2026-11-20T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 部分媒体报道与官方公布的融资金额和细节存在差异，具体财务数据以官方公告为准。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Anthropic宣布首次公开募股（IPO）完成，包含承购商行使超额配售选择权及同步进行的私募发行。",
+      "backfill": true
+    },
+    {
+      "id": "7ad44f990f0c53ef2e2a",
+      "title": "OpenAI采取多层方法应对对抗性蒸馏",
+      "summary": "OpenAI采用了多层方法来应对对抗性蒸馏，该方法结合了模型训练、安全防护、检测和执法机制，旨在防范模型能力被非法提取。",
+      "impact": "有助于保护AI模型的核心能力不被恶意提取。",
+      "category": "安全",
+      "score": 73.43,
+      "sources": [
+        {
+          "id": "7ad44f990f0c53ef2e2a",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/combatting-adversarial-distillation",
+          "title": "Combatting adversarial distillation",
+          "published_at": "2026-11-20T10:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 具体防护效果和实际运行表现需要进一步观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "OpenAI公布对抗性蒸馏的多层防护方法，涵盖模型训练、安全保障、检测和执行，保护模型免受能力提取。",
+      "backfill": false
+    },
+    {
+      "id": "20c57fb82fd66b15a7d3",
+      "title": "谷歌Gemini为Mac推出计算机使用功能",
+      "summary": "谷歌正在为Mac上的Gemini引入“计算机 use”（计算机使用）功能，允许人工智能在隔离的后台窗口中操作桌面应用程序、本地文件和网站，并提供实时预览，以便用户在工作时处理多步骤任务。",
+      "impact": "提升了Mac用户处理日常桌面和多步骤任务的自动化效率。",
+      "category": "产品",
+      "score": 62.26,
+      "sources": [
+        {
+          "id": "20c57fb82fd66b15a7d3",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/googles-gemini-can-now-run-mac-apps-and-finish-desktop-chores-in-the-background-while-you-keep-working/",
+          "title": "Google's Gemini can now run Mac apps and finish desktop chores in the background while you keep working",
+          "published_at": "2026-11-20T18:50:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "534016fa5cae687038b3",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+          "title": "Gemini on Mac can now use your computer",
+          "published_at": "2026-11-19T18:21:13Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "该功能的实际运行稳定性和安全性尚待广泛用户验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "谷歌为Mac版Gemini引入“电脑使用”（Computer Use）功能，允许AI在后台独立操作桌面应用。",
+      "backfill": false
+    },
+    {
+      "id": "eaebba57ed4200fcf144",
+      "title": "Signal应用屏蔽截屏以防止AI代理读取聊天内容",
+      "summary": "Signal正在Android和iOS设备上限制截屏功能，旨在防止苹果Siri、谷歌Gemini和微软等操作系统内置的AI代理读取用户的私密聊天和屏幕数据。Signal总裁认为这种读取行为构成了生存威胁，不过该公司承认其保护措施仍不完整，例如在macOS上尚未完善。",
+      "impact": "增强了用户在面对操作系统级AI代理时的隐私保护，但也反映出跨平台防护的局限性。",
+      "category": "安全",
+      "score": 60.68,
+      "sources": [
+        {
+          "id": "af7d30f58230f92314a9",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+          "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+          "published_at": "2026-11-20T12:30:47Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "eaebba57ed4200fcf144",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/signal-blocks-screenshots-on-ios-27-and-android-to-stop-ai-agents-from-reading-private-chats/",
+          "title": "Signal blocks screenshots on iOS 27 and Android to stop AI agents from reading private chats",
+          "published_at": "2026-11-20T19:50:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "Signal承认其防范措施在部分平台如macOS上依然不完整。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Signal在iOS和Android上屏蔽截图功能，以防止苹果Siri AI、谷歌Gemini等AI代理读取私密聊天。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
