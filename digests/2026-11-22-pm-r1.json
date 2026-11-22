@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-22-pm",
+  "revision": 1,
+  "created_at": "2026-11-22T12:31:50.706986Z",
+  "cutoff": "2026-11-22T12:30:00Z",
+  "window_start": "2026-11-20T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "90b5b151d64736348693",
+      "title": "Lean和Mathlib社区确认Levent Alpöge黎曼猜想证明正确",
+      "summary": "Lean和Mathlib社区官方确认Levent Alpöge关于黎曼猜想的证明是正确的。数十位独立验证者检查了1700万行计算机代码。该解决方案比预期提前多年到来，此前陶哲轩曾预测这不会在2050年之前发生，且未预料到人工智能会独自解决它。",
+      "impact": "为数学界解决重大猜想提供了计算机验证的成功案例。",
+      "category": "模型",
+      "score": 62.3,
+      "sources": [
+        {
+          "id": "90b5b151d64736348693",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/",
+          "title": "Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct",
+          "published_at": "2026-11-22T11:08:31Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "无 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Lean和Mathlib社区正式确认黎曼猜想证明正确，具有极高的科学研究里程碑意义。",
+      "backfill": false
+    },
+    {
+      "id": "be2721eef93582e6e79b",
+      "title": "安全研究人员发现廉价AI推理提供商窃取密钥与监控用户",
+      "summary": "安全研究人员利用200万次虚假AI请求揭示了AI供应链中的严重漏洞，发现至少3家受损的提供商、数百个被窃取的AWS密钥以及直接读取客户请求的市场转售商。OpenRouter对此作出了回应，移除了3家提供商和125个端点。",
+      "impact": "暴露出AI供应链中的安全隐患，促使平台方采取下架措施。",
+      "category": "安全",
+      "score": 69.42,
+      "sources": [
+        {
+          "id": "be2721eef93582e6e79b",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/",
+          "title": "Security researchers show how cheap AI inference providers steal keys and snoop on users",
+          "published_at": "2026-11-22T12:07:56Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "无 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "research",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "安全研究发现廉价AI推理提供商存在泄露密钥和窃听用户隐私的安全供应链漏洞，OpenRouter已移除相关提供商。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
