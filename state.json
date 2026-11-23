@@ -3224,8 +3224,8 @@
     },
     "2026-11-23-pm-r1": {
       "deployment": "ready",
-      "email": "pending",
-      "email_attempts": 0
+      "email": "sending",
+      "email_attempts": 1
     }
   },
   "history": [
