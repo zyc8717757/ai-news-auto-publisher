@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-23-pm",
+  "revision": 1,
+  "created_at": "2026-11-23T12:31:30.832773Z",
+  "cutoff": "2026-11-23T12:30:00Z",
+  "window_start": "2026-11-21T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "599ec3a9c12f02c6cc12",
+      "title": "沃尔玛将支持Meta Muse代为选购黑五商品",
+      "summary": "沃尔玛宣布将允许Meta的AI代理Meta Muse在其网站上代表用户进行购物，以寻找并购买黑色星期五的优惠商品。该零售巨头将推出上个月公布的Agent Gateway的实际应用，旨在帮助AI代理寻找相关产品。",
+      "impact": "拓展了AI代理在电商领域的实际应用场景，推动零售购物自动化。",
+      "category": "产品",
+      "score": 59.27,
+      "sources": [
+        {
+          "id": "599ec3a9c12f02c6cc12",
+          "source_id": "theverge-ai",
+          "source_name": "The Verge AI",
+          "group": "vox",
+          "trust": "media",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+          "title": "Meta Muse can do your Black Friday shopping at Walmart",
+          "published_at": "2026-11-23T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "实际购物效果与技术稳定性尚待验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "meta"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Walmart落地接入Meta Muse代理网关，实现AI Agent代购功能，属于面向用户的实际产品落地。",
+      "backfill": false
+    },
+    {
+      "id": "6e07216a8e04b80e7eb4",
+      "title": "俄勒冈州和弗吉尼亚州因Grok深度伪造问题起诉SpaceX",
+      "summary": "俄勒冈州和弗吉尼亚州的司法部长对埃隆·马斯克旗下的数家公司提起诉讼，指控其未能对涉及真实人物（包括儿童）的色情化图像采取充分的安全防护措施。",
+      "impact": "可能对相关公司的AI生成内容安全监管和合规性产生重大法律压力。",
+      "category": "安全",
+      "score": 60.77,
+      "sources": [
+        {
+          "id": "6e07216a8e04b80e7eb4",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/",
+          "title": "States Sue SpaceX Over Grok Deepfakes",
+          "published_at": "2026-11-23T11:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "诉讼的具体指控细节与最终裁决结果未知。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "俄勒冈州和弗吉尼亚州总检察长因Grok深度伪造问题起诉SpaceX等公司，属于重大安全与法律事件。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
