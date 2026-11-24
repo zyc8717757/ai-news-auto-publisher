@@ -3712,7 +3712,7 @@
       "email_attempts": 1
     },
     "2026-11-24-pm-r1": {
-      "deployment": "pending",
+      "deployment": "failed",
       "email": "pending",
       "email_attempts": 0
     }
