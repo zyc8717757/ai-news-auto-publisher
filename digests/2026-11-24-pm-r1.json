@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-24-pm",
+  "revision": 1,
+  "created_at": "2026-11-24T12:31:35.232008Z",
+  "cutoff": "2026-11-24T12:30:00Z",
+  "window_start": "2026-11-22T12:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "c36030c5dc637b1c4cf3",
+      "title": "LangChain Releases: langchain-huggingface==1.3.0",
+      "summary": "Changes since langchain-huggingface==1.2.3 fix(huggingface): correct forced tool choice and streaming token counts (#42043) test(huggingface): accumulate pipeline streaming output (#42039) test(huggingface): use Together’s GPT-OSS for standard chat coverage (#42035) test(huggingface): use live Novita routing for chat tests (#42033) release(huggingface): 1.3.0 (#41999) release(standard-tests): 1.2.0 (#41996) chore(model-profiles): refresh model profile data (#42013) chore(model-profiles): refresh",
+      "impact": "",
+      "category": "来源原文",
+      "score": 68.1,
+      "sources": [
+        {
+          "id": "c36030c5dc637b1c4cf3",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-huggingface%3D%3D1.3.0",
+          "title": "LangChain Releases: langchain-huggingface==1.3.0",
+          "published_at": "2026-11-23T20:48:58Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "huggingface",
+        "langchain"
+      ],
+      "versions": [
+        "1.3.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "edc42486e47bc2841fd2",
+      "title": "LangChain Releases: langchain-nomic==1.1.0",
+      "summary": "Changes since langchain-nomic==1.0.1 fix(nomic): run integration tests serially to avoid credentials file race (#42034) release(nomic): 1.1.0 (#41993) release(standard-tests): 1.2.0 (#41996) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268) chore(deps): patch newer-python security lock resolutions (#41585) revert: patch vulnerable integration dependencies (#41481) build(deps): patch vulnerable integration dependencies (#41473) chore(infra): relax third-party dependency uppe",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.02,
+      "sources": [
+        {
+          "id": "2566fc35e31229f455b8",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-nomic%3D%3D1.1.0",
+          "title": "LangChain Releases: langchain-nomic==1.1.0",
+          "published_at": "2026-11-23T17:21:22Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "02b2b448edb3218729c5",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-classic%3D%3D1.1.0",
+          "title": "LangChain Releases: langchain-classic==1.1.0",
+          "published_at": "2026-11-23T16:45:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.1.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "eb2701ff66febea27293",
+      "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+      "summary": "来源未提供可用摘要，请阅读原文。",
+      "impact": "",
+      "category": "来源原文",
+      "score": 67.01,
+      "sources": [
+        {
+          "id": "eb2701ff66febea27293",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/allenai/robotrack",
+          "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+          "published_at": "2026-11-23T17:20:37Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "f9bd82dcc84144a976df",
+      "title": "LangChain Releases: langchain-fireworks==1.8.0",
+      "summary": "Changes since langchain-fireworks==1.7.3 test(fireworks): replace retired serverless test model (#42032) release(fireworks): 1.8.0 (#42000) release(standard-tests): 1.2.0 (#41996) chore(langchain): require `langgraph` 1.2.16 or newer (#41959) chore(model-profiles): refresh model profile data (#41861) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268)",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.98,
+      "sources": [
+        {
+          "id": "f9bd82dcc84144a976df",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.8.0",
+          "title": "LangChain Releases: langchain-fireworks==1.8.0",
+          "published_at": "2026-11-23T17:13:23Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.8.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "0a841a8a7acb4de7831a",
+      "title": "LangChain Releases: langchain-exa==1.2.0",
+      "summary": "Changes since langchain-exa==1.1.0 fix(exa): stop asserting removed `highlight_scores` in integration test (#42031) release(exa): 1.2.0 (#41990) release(standard-tests): 1.2.0 (#41996) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268) chore(infra): relax third-party dependency upper bounds (#41407) chore(deps): bump certifi from 2025.8.3 to 2026.10.19 in /libs/partners/exa (#41388) fix: fix dependencies in some partner packages (#41266) chore(deps): bump urllib3 from 2.7.0 ",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.96,
+      "sources": [
+        {
+          "id": "c518a03fea920a1bf861",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-exa%3D%3D1.2.0",
+          "title": "LangChain Releases: langchain-exa==1.2.0",
+          "published_at": "2026-11-23T17:09:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "b9d1053164c006049b09",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-chroma%3D%3D1.2.0",
+          "title": "LangChain Releases: langchain-chroma==1.2.0",
+          "published_at": "2026-11-23T17:04:52Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "c8eaebd134c28ca82bbe",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-qdrant%3D%3D1.2.0",
+          "title": "LangChain Releases: langchain-qdrant==1.2.0",
+          "published_at": "2026-11-23T17:04:39Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "9cf1ea8eacb8cd7776b3",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.2.0",
+          "title": "LangChain Releases: langchain-tests==1.2.0",
+          "published_at": "2026-11-23T16:14:24Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "2136e68d2ef62a428433",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-text-splitters%3D%3D1.2.0",
+          "title": "LangChain Releases: langchain-text-splitters==1.2.0",
+          "published_at": "2026-11-23T16:11:44Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.2.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "54f2316ecc01fa7ace1e",
+      "title": "Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season",
+      "summary": "The elves don’t have to be the only ones busy in the workshop this holiday season. With the lights twinkling and the gift wrap out, it’s the perfect time to give someone — or yourself — a spark to take a hobby to the next level. For some, that means diving into a new game. […]",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.91,
+      "sources": [
+        {
+          "id": "54f2316ecc01fa7ace1e",
+          "source_id": "nvidia",
+          "source_name": "NVIDIA",
+          "group": "nvidia",
+          "trust": "official",
+          "url": "https://blogs.nvidia.com/blog/nvidia-technologies-holidays-2026/",
+          "title": "Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season",
+          "published_at": "2026-11-23T17:00:08Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "8079982904ab531b9cf0",
+      "title": "LangChain Releases: langchain-perplexity==1.5.0",
+      "summary": "Changes since langchain-perplexity==1.4.2 release(perplexity): 1.5.0 (#42001) release(standard-tests): 1.2.0 (#41996) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268) build(infra): patch test-only Pillow without dropping Python 3.10 (#41484) revert: patch vulnerable integration dependencies (#41481) build(deps): patch vulnerable integration dependencies (#41473) chore(deps): bump certifi from 2026.10.19 to 2026.10.23 in /libs/partners/perplexity (#41438) chore(infra): rela",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.86,
+      "sources": [
+        {
+          "id": "8079982904ab531b9cf0",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.5.0",
+          "title": "LangChain Releases: langchain-perplexity==1.5.0",
+          "published_at": "2026-11-23T16:51:03Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain"
+      ],
+      "versions": [
+        "1.5.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "0335b321851d3c972319",
+      "title": "LangChain Releases: langchain-ollama==1.2.0",
+      "summary": "Changes since langchain-ollama==1.1.0 release(ollama): 1.2.0 (#41997) release(standard-tests): 1.2.0 (#41996) feat(partners): Remove EOL'd Python 3.10 from partner packages (#41268) chore(infra): relax third-party dependency upper bounds (#41407) chore(deps): bump certifi from 2025.8.3 to 2026.10.19 in /libs/partners/ollama (#41381) fix: fix dependencies in some partner packages (#41266) fix(ollama): raise ollama floor to 0.6.3 for thinking levels (#40986) chore(deps): bump urllib3 from 2.7.0 to",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.68,
+      "sources": [
+        {
+          "id": "0335b321851d3c972319",
+          "source_id": "langchain",
+          "source_name": "LangChain Releases",
+          "group": "langchain",
+          "trust": "official",
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-ollama%3D%3D1.2.0",
+          "title": "LangChain Releases: langchain-ollama==1.2.0",
+          "published_at": "2026-11-23T16:16:05Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "langchain",
+        "meta",
+        "ollama"
+      ],
+      "versions": [
+        "1.2.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "33079c28b3e18d3a64a4",
+      "title": "Introducing file slicing controls in the Gemini API",
+      "summary": "New file slicing controls and native Office file support in the Gemini API let agents inspect targeted slices across Google AI Studio and Vertex AI while paying only for the tokens inspected. Breadcrumb Home Innovation & AI Technology Developer tools Introducing file slicing controls in the Gemini API Nov 23, 2026 | x.com Facebook LinkedIn Mail Copy link The Gemini API now features native file slicing controls, allowing developers to specify targeted pages, sheet ranges, and media segments for t",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.66,
+      "sources": [
+        {
+          "id": "33079c28b3e18d3a64a4",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/file-slicing-controls/",
+          "title": "Introducing file slicing controls in the Gemini API",
+          "published_at": "2026-11-23T16:12:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "5477d151f28fdd68ca8f",
+      "title": "Claude Duet promotional credit",
+      "summary": "$500 USD each week, up to $3,000 USD in total. The total counts credit you've used. You may get less than the total if you start later or leave weekly credit unused. From November 23, 2026 to December 31, 2026 at 11:59 PM PT, select eligible Claude Duet users get promotional credit to use in Claude Duet. There's nothing to claim or buy. We're adding it in stages. You have it if you see it in Settings > Usage on the web, which is also where to check your balance. Switch to the account or Team tha",
+      "impact": "",
+      "category": "来源原文",
+      "score": 66.66,
+      "sources": [
+        {
+          "id": "5477d151f28fdd68ca8f",
+          "source_id": "primary-anthropic",
+          "source_name": "Anthropic",
+          "group": "anthropic",
+          "trust": "official",
+          "url": "https://support.claude.com/en/articles/18518702-claude-duet-promotional-credit",
+          "title": "Claude Duet promotional credit",
+          "published_at": "2026-11-23T16:12:14Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
