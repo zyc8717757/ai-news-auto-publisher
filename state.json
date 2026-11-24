@@ -3748,7 +3748,7 @@
       "email_attempts": 1
     },
     "2026-11-24-pm-r1": {
-      "deployment": "ready",
+      "deployment": "failed",
       "email": "sent",
       "email_attempts": 1
     }
