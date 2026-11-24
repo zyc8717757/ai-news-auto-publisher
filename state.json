@@ -3740,7 +3740,7 @@
       "email_attempts": 1
     },
     "2026-11-24-pm-r1": {
-      "deployment": "failed",
+      "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
     }
