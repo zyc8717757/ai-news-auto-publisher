@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-25T00:30:00Z",
+  "last_covered_at": "2026-11-25T12:30:00Z",
   "ai_attempts": [
     "2026-11-24T00:31:52.491581Z",
     "2026-11-24T00:32:02.070025Z",
@@ -1143,7 +1143,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
           "event_at": null,
           "supporting": []
@@ -1160,7 +1160,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
           "event_at": null,
           "supporting": []
@@ -1177,7 +1177,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
           "event_at": null,
           "supporting": []
@@ -1194,7 +1194,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1211,7 +1211,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
           "event_at": null,
           "supporting": []
@@ -1228,7 +1228,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
           "event_at": null,
           "supporting": []
@@ -1245,7 +1245,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can help in-house legal teams connect business context, build reusable workflows and get more from outside counsel.",
           "event_at": null,
           "supporting": []
@@ -1262,7 +1262,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
           "event_at": null,
           "supporting": []
@@ -1281,7 +1281,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"0wFiLg\"",
+      "etag": "\"r6hNpA\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1298,7 +1298,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
           "event_at": null,
           "supporting": []
@@ -1325,7 +1325,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center. See the news.",
           "event_at": null,
           "supporting": []
@@ -1342,7 +1342,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Google Search bar with the text \"Personal Intelligence\" surrounded by the Google Wallet, Google Drive, GMail, Google Photos, Google Calendar, and Google G logo icons",
           "event_at": null,
           "supporting": []
@@ -1352,11 +1352,28 @@
       "verified": 20
     },
     "huggingface": {
-      "etag": "W/\"42297-gdOLeX4aOiXgJqDSfT5VUj3SY3k\"",
+      "etag": "W/\"42270-nBN9iWdlDnwd4w3GFi9PEhpuLOE\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "0077e07924e43bf73f6b",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+          "title": "An Indic Voice Agent with CUGA",
+          "published_at": "2026-11-25T10:22:09Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
+          "excerpt": "",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "6a28e842b3bf4bfd8400",
           "source_id": "huggingface",
@@ -1369,7 +1386,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1386,7 +1403,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1403,7 +1420,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "",
           "event_at": null,
           "supporting": []
@@ -1413,8 +1430,8 @@
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"9b0542bc36745b16899f68500fefee05\"",
-      "modified": "Tue, 24 Nov 2026 21:50:10 GMT",
+      "etag": "\"d472fa3409ff25166860b8f95b4b703d\"",
+      "modified": "Wed, 25 Nov 2026 06:03:08 GMT",
       "status": "ok",
       "error_code": "",
       "items": [],
@@ -1469,8 +1486,8 @@
     "pytorch": {
       "etag": "W/\"712d8697cd15f9d93fc26be0d409db7b6b0f5f894ab2ceb396c61ced5af5d452\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1478,8 +1495,8 @@
     "transformers": {
       "etag": "W/\"d5860fa50906ae2554c5db276247491fd62cdbce82e48c0d7fb363e6c77097f9\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "417be228cec59f8a2ed9",
@@ -1505,8 +1522,8 @@
     "diffusers": {
       "etag": "W/\"dd0f4ba70dd335c94594c5d8338622290b31f8ea14c5cac71096edbe557a16e2\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1514,8 +1531,8 @@
     "vllm": {
       "etag": "W/\"38cb7fabb48c8d7207844a9753699c9bdec6b44293103834d07309d005b2069e\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1523,8 +1540,8 @@
     "ollama": {
       "etag": "W/\"ffabe99e4448cc75073e2e20e14dd075115135b0ba2eb18892940e1336954602\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "dbf3279a2f3448f95b8e",
@@ -1551,7 +1568,7 @@
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "parse_failed",
+      "error_code": "http_403",
       "items": [],
       "discovered": 0,
       "verified": 0
@@ -1559,8 +1576,8 @@
     "langchain": {
       "etag": "W/\"5c560e305567a4073adda8b233e61b020d26c3ed95aa55881335e2409d0c0773\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "c36030c5dc637b1c4cf3",
@@ -1756,8 +1773,8 @@
     "langgraph": {
       "etag": "W/\"a2c3cbdfccb74464afb50ff29365d5836ceff44b7abbc4d31cd049ec8f3fdd3c\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1765,8 +1782,8 @@
     "litellm": {
       "etag": "W/\"835dabaef0e3fbacfb034890b0f03bdb08dbbc2b7bf170cc3d95eccd02279891\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "33b577176b8ad3feee4a",
@@ -1911,8 +1928,8 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1795568992\"",
-      "modified": "Wed, 25 Nov 2026 01:09:52 GMT",
+      "etag": "\"1795609548\"",
+      "modified": "Wed, 25 Nov 2026 12:25:48 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1928,7 +1945,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "“TangiMap” uses an AI agent to reprogram how buttons, knobs, and sliders are used, helping users do things like edit photos and perform music in a more dynamic, tactile way.",
           "event_at": null,
           "supporting": []
@@ -1945,7 +1962,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Analyzing speakers of 21 languages, an MIT study using multilingual AI finds the human brain may represent meaning in much the same way.",
           "event_at": null,
           "supporting": []
@@ -1962,7 +1979,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The “SLIC” training method enables a small LLM to compete with much more resource-intensive models in complex circuit design tasks.",
           "event_at": null,
           "supporting": []
@@ -1972,8 +1989,8 @@
       "verified": 50
     },
     "techcrunch-ai": {
-      "etag": "W/\"96e28f8c1a1701ff2f3d7b9187ab26bb\"",
-      "modified": "Wed, 25 Nov 2026 00:26:00 GMT",
+      "etag": "W/\"079a4a3786c8f1e3ba4677d8b3f8843b\"",
+      "modified": "Wed, 25 Nov 2026 03:15:10 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
@@ -1984,12 +2001,12 @@
           "group": "techcrunch",
           "trust": "media",
           "url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
-          "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to U.S. industrial might — not a champion",
+          "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
           "published_at": "2026-11-25T00:12:02Z",
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvidia's CEO and board member, could prove a giant mistake, exposing the directors to \"historic\" personal liability from a growing pile of lawsuits and raising the question of whether the country is celebrating a company that has helped put advanced chips in its adversaries' hands.",
           "event_at": null,
           "supporting": []
@@ -2006,7 +2023,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.",
           "event_at": null,
           "supporting": []
@@ -2023,7 +2040,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
           "event_at": null,
           "supporting": []
@@ -2040,7 +2057,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems.",
           "event_at": null,
           "supporting": []
@@ -2057,7 +2074,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
           "event_at": null,
           "supporting": []
@@ -2074,7 +2091,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data.",
           "event_at": null,
           "supporting": []
@@ -2091,7 +2108,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Anthropic’s post-IPO slump could put pressure on AI startup valuations.",
           "event_at": null,
           "supporting": []
@@ -2108,7 +2125,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The British cyber agency says that \"building strong foundations has never mattered more\" as AI hacking tools rely on exploiting simple security flaws.",
           "event_at": null,
           "supporting": []
@@ -2125,7 +2142,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The new integration gets rid of the need for users to toggle between Instagram and the Muse app when they want to interact with the AI agent.",
           "event_at": null,
           "supporting": []
@@ -2142,7 +2159,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The company said it will still accept songs that were made with AI assistance, but not fully generated.",
           "event_at": null,
           "supporting": []
@@ -2159,7 +2176,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Next-generation data centers will need tens of gigawatts of power every year. One of Crusoe's investors thinks solar and energy storage are the obvious choice.",
           "event_at": null,
           "supporting": []
@@ -2176,7 +2193,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "While other social platforms have focused on restricting teens' access to AI chatbots, Pinterest is addressing the AI content filling their feeds.",
           "event_at": null,
           "supporting": []
@@ -2195,11 +2212,28 @@
       "verified": 0
     },
     "ars": {
-      "etag": "\"cb0a74f3a475a03dc7b10e3f255e2209\"",
-      "modified": "Tue, 24 Nov 2026 22:50:11 GMT",
+      "etag": "\"448e418ce047562fd37e00a3cc8f6b1f\"",
+      "modified": "Wed, 25 Nov 2026 12:10:49 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "5f071a5fc3a63b13a363",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next/",
+          "title": "AI may soon change what it means to be a theoretical physicist",
+          "published_at": "2026-11-25T12:00:28Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
+          "excerpt": "Frontier AI is already solving problems that once took top physicists a full day.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "85a1920569177742d08a",
           "source_id": "ars",
@@ -2212,7 +2246,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Perseverance is having trouble transmitting to Earth. Odyssey is rapidly burning through its waning fuel supply.",
           "event_at": null,
           "supporting": []
@@ -2229,7 +2263,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Internal memos reveal a “Code Red” overhaul and ambitious one-hour recovery goals.",
           "event_at": null,
           "supporting": []
@@ -2246,7 +2280,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "A new AI-assisted proof seems to be solid, but we're not sure what it tells us.",
           "event_at": null,
           "supporting": []
@@ -2263,7 +2297,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Wisconsin reports 3rd measles death today; Pennsylvania reported its 9th yesterday.",
           "event_at": null,
           "supporting": []
@@ -2280,7 +2314,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Amazon says Prime Air drones made “hundreds of thousands” of deliveries in 2026.",
           "event_at": null,
           "supporting": []
@@ -2297,7 +2331,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Amazon has hundreds of satellites in storage waiting for rides to space.",
           "event_at": null,
           "supporting": []
@@ -2314,7 +2348,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Study: Brewers can still use up to 50% of smoke-tainted hops without affecting beer taste and aroma.",
           "event_at": null,
           "supporting": []
@@ -2331,7 +2365,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Kalshi’s pause in Utah draws cheers as critics bash ads and boo insider trading.",
           "event_at": null,
           "supporting": []
@@ -2348,7 +2382,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "AI songs account for 6.3 percent of Tidal's catalog, but it's about to be zero.",
           "event_at": null,
           "supporting": []
@@ -2365,7 +2399,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Technical details are still limited, but we already know it's fun to drive.",
           "event_at": null,
           "supporting": []
@@ -2382,25 +2416,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Services with “ongoing costs” are a pretty big loophole in the new law.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "d153a6cb5c99a964a2e9",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/space/2026/11/nasa-may-get-2-billion-boost-as-white-house-seeks-to-accelerate-artemis/",
-          "title": "NASA may get $2 billion boost as White House seeks to accelerate Artemis",
-          "published_at": "2026-11-24T16:12:46Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
-          "excerpt": "\"Without this funding, activities would be delayed.\"",
           "event_at": null,
           "supporting": []
         }
@@ -2409,7 +2426,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"38365d1503cb9b0482931b64b46a69aa\"",
+      "etag": "W/\"2a9fa0988523dcec476613c26e51bcc4\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -2426,7 +2443,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. During the meeting, Huang […]",
           "event_at": null,
           "supporting": []
@@ -2443,7 +2460,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Though David Fincher's fans had been eagerly anticipating The Further Mis-Adventures of Cliff Booth, early screenings of the Once Upon a Time in Hollywood sequel starring Brad Pitt have raised questions about whether generative AI was used in the film. People have claimed that the movie is chock-full of uncanny, inconsistent visuals that make it […]",
           "event_at": null,
           "supporting": []
@@ -2460,7 +2477,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Tidal is officially banning AI-generated music on December 9th. As a result of this change, Tidal will delete around 29 million AI-generated songs and reject an estimated 80,000 to 85,000 tracks per day, according to Tidal music lead Robert Andersen. The move comes just months after Tidal began labeling and demonetizing tracks identified as 100 […]",
           "event_at": null,
           "supporting": []
@@ -2477,7 +2494,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Jensen Huang is partying it up in Ibiza. In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket. Suddenly, from behind him, Alice Huang - the Chinese technology executive and suspected spy he […]",
           "event_at": null,
           "supporting": []
@@ -2494,7 +2511,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The New York Times is asking freelance photographers not to use the newest version of Adobe Photoshop because features in the 2027 update use AI \"in ways that may not be apparent to users.\" In an email seen by The Verge and posted on Threads, two of the Times' photography leaders, Meaghan Looram and Josh […]",
           "event_at": null,
           "supporting": []
@@ -2511,7 +2528,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "After Nvidia's board accepted Jensen Huang's resignation as CEO, following reports that Huang had an affair with an alleged Chinese spy, President Donald Trump, too, appeared to submit to the new reality. Appearing on Stephen A. Smith's radio show shortly after the news came out, Trump said that Huang would \"end up on his feet.\" […]",
           "event_at": null,
           "supporting": []
@@ -2528,7 +2545,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation. However, after The New York Times reported there was evidence of another affair, this time with an Nvidia executive who reported directly to him, a board meeting that night ended […]",
           "event_at": null,
           "supporting": []
@@ -2545,7 +2562,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "I suppose I must issue a hearty congratulations to Jensen Huang. Huang is CEO of Nvidia again, to the surprise of basically everyone except President Donald Trump and Vice President JD Vance, who made sure it happened. Now, those of us who had some kind of basic education on what a \"free market\" is might […]",
           "event_at": null,
           "supporting": []
@@ -2562,7 +2579,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The clean energy revolution hinges on electrifying the entire global economy just as power-hungry data centers are surging. It's a challenge delegates from all over the world had to grapple with during the United Nations climate conference, called COP31, that came to a chaotic and unsatisfying close in Antalya, Turkey, on Sunday. Each year, attendees […]",
           "event_at": null,
           "supporting": []
@@ -2579,7 +2596,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Anthropic is launching some new Claude AI features to help software engineers ship code. As part of a new Claude Ship product being announced today, Claude now can review, fix, and approve pull requests. Engineers have already been able to take advantage of Claude's code review capabilities thanks to the Code Review feature, which was […]",
           "event_at": null,
           "supporting": []
@@ -2595,6 +2612,23 @@
       "error_code": "",
       "items": [
         {
+          "id": "598e81a411e720c3ace1",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/airplane-turbulence-is-extremely-hard-to-predict-and-avoid/",
+          "title": "Airplane Turbulence Is Extremely Hard to Predict, but Maybe Not for Long",
+          "published_at": "2026-11-25T11:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
+          "excerpt": "The “hardest remaining problem in classical physics” gets a boost from terabytes of crowdsourced data and new ways of using machine learning and AI.",
+          "event_at": null,
+          "supporting": []
+        },
+        {
           "id": "7d3fb794a80591791ea3",
           "source_id": "wired-ai",
           "source_name": "WIRED AI",
@@ -2606,7 +2640,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Nvidia’s place at the center of the US economy may have outweighed concerns about its CEO’s ties to a suspected Chinese intelligence asset, national security and foreign policy experts say.",
           "event_at": null,
           "supporting": []
@@ -2623,7 +2657,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The Nvidia CEO opened up about his personal life, defended his reinstatement, and acknowledged that his intense management style had hurt his staff.",
           "event_at": null,
           "supporting": []
@@ -2640,7 +2674,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "A new test assumes AI agents can go rogue—and asks whether they can resist temptation.",
           "event_at": null,
           "supporting": []
@@ -2657,7 +2691,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Young people anxious about their futures say they’re increasingly frustrated with their pro-AI parents. They’re worried it’s going to make holiday gatherings very tense.",
           "event_at": null,
           "supporting": []
@@ -2674,7 +2708,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "It will take mathematicians months to understand the “alien” 17-million-line solution an Anthropic researcher produced for the Riemann hypothesis.",
           "event_at": null,
           "supporting": []
@@ -2691,7 +2725,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Jensen Huang comes back, numbers go up. Maybe the reason behind the CEO’s return is just that simple?",
           "event_at": null,
           "supporting": []
@@ -2708,7 +2742,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "The company’s board of directors has reinstated Huang a little more than a week after the CEO resigned amid allegations of multiple affairs, including with a direct report.",
           "event_at": null,
           "supporting": []
@@ -2725,7 +2759,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Brain-computer interface company Paradromics is using Nvidia’s computing hardware and software to process brain data.",
           "event_at": null,
           "supporting": []
@@ -2742,25 +2776,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Experts agree that AI, in one way or another, poses real danger. Will the industry do anything about it? Join our livestream on December 2 to hear your questions answered.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "6e07216a8e04b80e7eb4",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/",
-          "title": "States Sue SpaceX Over Grok Deepfakes",
-          "published_at": "2026-11-23T11:00:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
-          "excerpt": "The attorneys general of Oregon and Virginia are suing several of Elon Musk’s companies, alleging they implemented weak safeguards against sexualized imagery of real people, including children.",
           "event_at": null,
           "supporting": []
         }
@@ -2780,8 +2797,8 @@
     "hackernews": {
       "etag": "",
       "modified": "Wed, 25 Nov 2026 01:33:53 GMT",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_502",
       "items": [
         {
           "id": "5e58ba2b4b2b4e343495",
@@ -2994,7 +3011,7 @@
     "juya-discovery": {
       "etag": "W/\"493af60959fbcac88d57684151c9fce1\"",
       "modified": "",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -3194,8 +3211,8 @@
       "status": "ok",
       "error_code": "",
       "items": [],
-      "discovered": 8,
-      "verified": 8
+      "discovered": 6,
+      "verified": 6
     },
     "anthropic-research": {
       "etag": "",
@@ -3215,7 +3232,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "We interviewed people at 58 companies that use Claude about how AI is changing their work. They described few layoffs but reduced hiring, and said the most valuable uses of AI often involved reorganizing roles and workplaces around it. However, even the most dramatic success stories were often limited to changes that could be made from the bottom up. An employee at a manufacturing company explaine",
           "event_at": null,
           "supporting": []
@@ -3234,11 +3251,45 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"ad2a004a157589033c2a04838728362a\"",
-      "modified": "Tue, 24 Nov 2026 20:43:06 GMT",
+      "etag": "\"280d418b60bc9ae7ddec151ce943cbf7\"",
+      "modified": "Wed, 25 Nov 2026 11:58:58 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "dce698bd81a273bc2ef8",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/",
+          "title": "PrismML shrinks a 54 GB language model to 5.9 GB by reducing every weight to just three possible values",
+          "published_at": "2026-11-25T11:51:49Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
+          "excerpt": "Startup PrismML has released Ternary Bonsai 2.5 27B, an updated version of its aggressively compressed language model. The article PrismML shrinks a 54 GB language model to 5.9 GB by reducing every weight to just three possible values appeared first on The Decoder .",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "5ecec70ad6c1593042f3",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/mit-team-discovers-that-unrealistic-training-data-makes-ai-climate-predictions-more-reliable/",
+          "title": "MIT team discovers that unrealistic training data makes AI climate predictions more reliable",
+          "published_at": "2026-11-25T10:47:51Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
+          "excerpt": "MIT researchers have developed a method that lets AI climate models get by with a single training run instead of the usual six to eight. An algorithm generates deliberately unrealistic scenarios with extreme CO2 or methane swings that make the model more robust. Until now, these emulators were often outdated by the time they were finished, according to the researchers. The article MIT team discove",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "c5bcb0d383eaa590578f",
           "source_id": "decoder",
@@ -3251,7 +3302,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Anthropic now lets you install Claude Artifacts as desktop apps on Mac and Windows, and a free account is enough. You build one in chat without writing code, and it can add menu bar items, send notifications, and create transparent windows. The article Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -3268,7 +3319,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Two years after launch, Anthropic reports more than 700 million monthly downloads for its MCP interface standard. New features such as background tasks, follow-up questions for users, and file uploads are meant to let Claude work more independently. The article Anthropic tops 700 million monthly MCP SDK downloads and expands the protocol for more autonomous AI agents appeared first on The Decoder ",
           "event_at": null,
           "supporting": []
@@ -3285,7 +3336,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Novartis CEO Vas Narasimhan, who also sits on Anthropic's board, is pushing back on the cure-all promises from Anthropic CEO Amodei and DeepMind founder Hassabis. AI will speed up drug development, he says, but it won't beat cancer in a decade. The real value lies \"somewhere in the middle.\" The article Novartis CEO says AI will shave four years off drug development, not cure all disease appeared f",
           "event_at": null,
           "supporting": []
@@ -3302,7 +3353,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "OpenAI researcher Noam Brown is urging promising students to drop out, saying it's \"not a great time to sit on the sidelines.\" The o1 co-creator says AI is still in a \"centaur period\" and struggles with planning and self-correction, though he expects a \"very steep rate of progress\" soon. According to Brown, language models are already being used to build the next generation of models. The article ",
           "event_at": null,
           "supporting": []
@@ -3319,7 +3370,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Anthropic researcher Levent Alpöge is walking back parts of his announcement of an AI-assisted proof of the generalized Riemann hypothesis. The claim that it ran to more than 250,000 pages was a joke, he says, and the published Lean code is \"full of garbage.\" He still stands by the math. The article Anthropic researcher stands by his AI-assisted Riemann proof but owns up to \"stupid things\" in the ",
           "event_at": null,
           "supporting": []
@@ -3336,7 +3387,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "According to an Axios report, many employees at OpenAI and Anthropic believe the companies' own unreleased frontier models can no longer be safely controlled. Both companies are internally debating whether to halt releases or even stop training altogether, while employee trust in leadership is eroding. The article Dozens of insiders say OpenAI and Anthropic's unreleased models have outgrown their ",
           "event_at": null,
           "supporting": []
@@ -3353,7 +3404,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "In a position paper, TU Darmstadt researchers call for redefining computer science as \"Computer and AI Science.\" Their biggest concern is code generated on the fly at runtime, which they say upends today's safety and correctness guarantees. The article German researchers call for computer science to reinvent itself as \"Computer and AI Science\" appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -3370,42 +3421,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "Anthropic has introduced Claude Ship, a new tool currently in beta that automatically reviews, corrects, and approves suggestions for code changes in accordance with team guidelines. The article Anthropic's Claude Ship lets AI agents review, fix, and approve pull requests on their own appeared first on The Decoder .",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "1e06c864dfd5027db871",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/",
-          "title": "OpenAI updates ChatGPT to handle complex everyday questions, web searches, and images more reliably",
-          "published_at": "2026-11-23T20:39:18Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
-          "excerpt": "OpenAI is making GPT-6.2 Sol the new default model in ChatGPT's chat tab, rolling it out worldwide. In internal tests, image understanding jumped from 47.4 to 71.7 percent, and the model now handles difficult instructions correctly 78.1 percent of the time. It also sticks to safety policies more consistently. The article OpenAI updates ChatGPT to handle complex everyday questions, web searches, an",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "76318393d56eed596220",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/anthropics-appetite-for-compute-is-pushing-xai-toward-a-rent-over-build-strategy/",
-          "title": "Anthropic's appetite for compute is pushing xAI toward a rent-over-build strategy",
-          "published_at": "2026-11-23T18:47:53Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
-          "excerpt": "Since May, SpaceXSI has been renting compute to competitors like Anthropic and Google while scaling back its own AI projects. Anthropic pays about $3.1 billion a month, Google $800 million, the New York Times reports. After its June IPO, SpaceXSI disbanded the 60-person Grok Imagine team, among other cuts. The article Anthropic's appetite for compute is pushing xAI toward a rent-over-build strateg",
           "event_at": null,
           "supporting": []
         }
@@ -3431,7 +3448,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-25T01:36:28.416932Z",
+          "collected_at": "2026-11-25T12:31:51.841539Z",
           "excerpt": "At Cloudflare we’ve built tools to enable teams to extend our internal testing framework and build test tooling for networking protocols. This is the story of how this was used for DNS.",
           "event_at": null,
           "supporting": []
@@ -4026,6 +4043,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-25-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -9290,6 +9312,44 @@
         "https://www.wired.com/story/ai-solved-maths-most-famous-problem/"
       ],
       "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "0077e07924e43bf73f6b",
+      "issue": "2026-11-25-pm",
+      "cutoff": "2026-11-25T12:30:00Z",
+      "title": "An Indic Voice Agent with CUGA",
+      "urls": [
+        "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "6a28e842b3bf4bfd8400",
+      "issue": "2026-11-25-pm",
+      "cutoff": "2026-11-25T12:30:00Z",
+      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "urls": [
+        "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "0d108e7b71c406494d2f",
+      "issue": "2026-11-25-pm",
+      "cutoff": "2026-11-25T12:30:00Z",
+      "title": "How Gemini is changing the game for Golden State's organization and fans.",
+      "urls": [
+        "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/"
+      ],
+      "entities": [
+        "google"
+      ],
       "versions": [],
       "event_type": "announcement"
     }
