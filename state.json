@@ -4083,7 +4083,7 @@
       "email_attempts": 1
     },
     "2026-11-25-pm-r1": {
-      "deployment": "failed",
+      "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
     }
