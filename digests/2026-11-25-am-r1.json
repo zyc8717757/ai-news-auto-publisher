@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-25-am",
+  "revision": 1,
+  "created_at": "2026-11-25T01:36:28.416932Z",
+  "cutoff": "2026-11-25T00:30:00Z",
+  "window_start": "2026-11-23T00:30:00Z",
+  "mode": "rules",
+  "stories": [
+    {
+      "id": "ac2f786b30f6d45772c4",
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 81.41,
+      "sources": [
+        {
+          "id": "ac2f786b30f6d45772c4",
+          "source_id": "openai",
+          "source_name": "OpenAI",
+          "group": "openai",
+          "trust": "official",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+          "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+          "published_at": "2026-11-24T13:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6"
+      ],
+      "event_type": "announcement",
+      "previous_issue": "2026-11-24-am",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "e7f7857605a40d83ddd1",
+      "title": "We’re launching Humanity’s First Exam and a Kaggle hackathon to test LLM reliability.",
+      "summary": "Google launches Humanity’s First Exam to test LLM reliability across 544 prompts. Breadcrumb Home Innovation & AI Models & research Google DeepMind We’re launching Humanity’s First Exam and a Kaggle hackathon to test LLM reliability. Oran Kelly Research Scientist, Google DeepMind Nov 24, 2026 Today, we’re launching the Humanity’s First Exam (HFE) benchmark on Kaggle to measure how reliably LLMs answer straightforward, everyday questions. Current frontier models excel at complex math, coding, and",
+      "impact": "",
+      "category": "来源原文",
+      "score": 71.44,
+      "sources": [
+        {
+          "id": "e7f7857605a40d83ddd1",
+          "source_id": "primary-google",
+          "source_name": "Google",
+          "group": "google",
+          "trust": "official",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/",
+          "title": "We’re launching Humanity’s First Exam and a Kaggle hackathon to test LLM reliability.",
+          "published_at": "2026-11-24T19:30:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "f8b1d4edd913d164fe64",
+      "title": "Anthropic tops 700 million monthly MCP SDK downloads and expands the protocol for more autonomous AI agents",
+      "summary": "Two years after launch, Anthropic reports more than 700 million monthly downloads for its MCP interface standard. New features such as background tasks, follow-up questions for users, and file uploads are meant to let Claude work more independently. The article Anthropic tops 700 million monthly MCP SDK downloads and expands the protocol for more autonomous AI agents appeared first on The Decoder .",
+      "impact": "",
+      "category": "来源原文",
+      "score": 51.4,
+      "sources": [
+        {
+          "id": "f8b1d4edd913d164fe64",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/",
+          "title": "Anthropic tops 700 million monthly MCP SDK downloads and expands the protocol for more autonomous AI agents",
+          "published_at": "2026-11-24T19:23:41Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [
+        "anthropic"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": false
+    },
+    {
+      "id": "c46b31f9c6eda433db5e",
+      "title": "AI Solved Math’s Most Famous Problem. Now Humans Are Struggling to Understand It",
+      "summary": "It will take mathematicians months to understand the “alien” 17-million-line solution an Anthropic researcher produced for the Riemann hypothesis.",
+      "impact": "",
+      "category": "来源原文",
+      "score": 48.55,
+      "sources": [
+        {
+          "id": "c46b31f9c6eda433db5e",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/ai-solved-maths-most-famous-problem/",
+          "title": "AI Solved Math’s Most Famous Problem. Now Humans Are Struggling to Understand It",
+          "published_at": "2026-11-24T10:15:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "AI 增强未完成；以下为来源信息，不代表已经完成事实复核。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors",
+    "ai_unavailable",
+    "ai_coverage_incomplete"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
