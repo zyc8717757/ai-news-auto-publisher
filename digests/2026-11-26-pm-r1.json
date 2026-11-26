@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-26-pm",
+  "revision": 1,
+  "created_at": "2026-11-26T12:31:28.235267Z",
+  "cutoff": "2026-11-26T12:30:00Z",
+  "window_start": "2026-11-24T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "fb19c642f1b755843408",
+      "title": "OpenAI将合并Chat与Work体验并引入单一使用额度计量",
+      "summary": "OpenAI表示，随着其将Chat与Work体验进行合并，未来将为ChatGPT引入统一的使用额度计量表。该公司称，重度ChatGPT用户可能会更快触及使用限制。",
+      "impact": "高频用户的使用量可能更快达到上限。",
+      "category": "产品",
+      "score": 54.5,
+      "sources": [
+        {
+          "id": "fb19c642f1b755843408",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+          "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+          "published_at": "2026-11-25T20:03:27Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "具体的使用限制标准和合并实施细则尚未明确。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI宣布合并ChatGPT的Chat和Work体验并引入单一使用额度计量，直接影响大量日常和工作用户的订阅额度。",
+      "backfill": false
+    },
+    {
+      "id": "085ceb0b7225da71e5b0",
+      "title": "OpenAI测试名为Private Inference的新功能以保护企业数据",
+      "summary": "据报道，OpenAI正在测试一项名为Private Inference的新功能。该公司称，该功能允许企业在其最强大的模型上运行查询，同时OpenAI无法访问这些数据，旨在赢得企业对处理敏感工作的信任。",
+      "impact": "有助于提升企业对敏感数据处理的信任度。",
+      "category": "安全",
+      "score": 55.63,
+      "sources": [
+        {
+          "id": "085ceb0b7225da71e5b0",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/",
+          "title": "OpenAI wants companies to trust it with sensitive work by promising not to look at their data",
+          "published_at": "2026-11-25T18:22:02Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "该功能的具体技术实现细节及最终上线时间尚待确认。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI测试“Private Inference”私密推理功能，承诺不查看企业用户数据，对企业级AI安全与隐私有重大影响。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
