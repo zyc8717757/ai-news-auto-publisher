@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-26-am",
+  "revision": 1,
+  "created_at": "2026-11-26T00:31:32.922856Z",
+  "cutoff": "2026-11-26T00:30:00Z",
+  "window_start": "2026-11-24T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "a9bc069d7df2112171f7",
+      "title": "Search for Agents推出面向AI代理的搜索功能",
+      "summary": "该官方公告推出名为Search for Agents的功能，只需开启一个开关，即可让网站支持被AI代理搜索。该功能包含自动内容索引、可发现的搜索API以及原生HTTP QUERY支持。",
+      "impact": "简化网站对AI代理的适配，提升AI检索和内容发现效率。",
+      "category": "开发",
+      "score": 71.3,
+      "sources": [
+        {
+          "id": "a9bc069d7df2112171f7",
+          "source_id": "cloudflare-ai",
+          "source_name": "Cloudflare",
+          "group": "cloudflare",
+          "trust": "official",
+          "url": "https://blog.cloudflare.com/search-for-agents/",
+          "title": "Introducing Search for Agents",
+          "published_at": "2026-11-25T14:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [],
+      "versions": [],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Cloudflare推出针对AI Agent的搜索功能（Search for Agents），方便站点被Agent检索。",
+      "backfill": false
+    },
+    {
+      "id": "cbf46f891ea775e1989c",
+      "title": "LiteLLM发布v1.111.0版本",
+      "summary": "LiteLLM发布了v1.111.0版本更新，主要变更包括添加OpenSearch索引直通并带有按键读写权限、重新将Together推理重放后端固定至MiniMax-M3.1-Flash、在fips_mode下构建FIPS提供商服务的插件会话声明，以及新增claude-fable-5-2及相关AWS镜像等功能。",
+      "impact": "扩展了LiteLLM对多模型和检索后端的功能支持，完善了企业级与安全性配置。",
+      "category": "开发",
+      "score": 67.12,
+      "sources": [
+        {
+          "id": "cbf46f891ea775e1989c",
+          "source_id": "litellm",
+          "source_name": "LiteLLM Releases",
+          "group": "berriai",
+          "trust": "official",
+          "url": "https://github.com/BerriAI/litellm/releases/tag/v1.111.0",
+          "title": "LiteLLM Releases: v1.111.0",
+          "published_at": "2026-11-25T01:42:50Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。",
+      "entities": [
+        "litellm"
+      ],
+      "versions": [
+        "v1.111.0"
+      ],
+      "event_type": "release",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "LiteLLM发布v1.111.0版本，更新了多项Anthropic和Azure等大模型代理与路由功能。",
+      "backfill": false
+    },
+    {
+      "id": "4f8d724efa6652fd0327",
+      "title": "Google DeepMind让AI代理控制部分Gemini实验算力",
+      "summary": "根据报道，Google DeepMind使用AI代理自主运行即将推出的Gemini模型实验。研究主管Koray Kavukcuoglu表示，该实验室距离递归自我改进仍有很大距离，且为了监管，实验室故意不训练代理的内部思维链以便审查。同时，Kavukcuoglu倾向于通过日常用户信任来衡量AGI而非基准测试。",
+      "impact": "展示了AI代理在模型实验中的应用探索，但递归自我改进尚未实现。",
+      "category": "模型",
+      "score": 60.17,
+      "sources": [
+        {
+          "id": "4f8d724efa6652fd0327",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+          "title": "AI agents now control part of Deepmind's compute for Gemini experiments, but recursive self-improvement remains distant",
+          "published_at": "2026-11-25T13:23:36Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "递归自我改进仍很遥远，思维链保持未训练状态以供人工审查。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google DeepMind透露AI代理已用于控制Gemini部分实验算力，反映研发前沿进展。",
+      "backfill": false
+    },
+    {
+      "id": "dce698bd81a273bc2ef8",
+      "title": "PrismML发布Ternary Bonsai 2.5 27B压缩语言模型",
+      "summary": "初创公司PrismML发布了更新版压缩语言模型Ternary Bonsai 2.5 27B。该模型通过将每个权重减少为仅三个可能的值，将一个54 GB的语言模型压缩至5.9 GB。",
+      "impact": "大幅压缩大语言模型体积，可能降低部署和硬件门槛。",
+      "category": "模型",
+      "score": 66.74,
+      "sources": [
+        {
+          "id": "dce698bd81a273bc2ef8",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/",
+          "title": "PrismML shrinks a 54 GB language model to 5.9 GB by reducing every weight to just three possible values",
+          "published_at": "2026-11-25T11:51:49Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [
+        "5.9"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "PrismML发布Ternary Bonsai 2.5 27B，将语言模型权重压缩至三值以大幅缩小体积。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
