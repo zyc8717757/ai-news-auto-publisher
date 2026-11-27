@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-27-am",
+  "revision": 1,
+  "created_at": "2026-11-27T00:31:27.315598Z",
+  "cutoff": "2026-11-27T00:30:00Z",
+  "window_start": "2026-11-25T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "3d2697b636d74b834fc0",
+      "title": "Nemotron 3.5 Parse进展",
+      "summary": "根据官方发布的公告显示，Nemotron 3.5 Parse在开源数据、微调以及更快推理速度方面取得了新的构建与进展，相关技术细节和改进受到开发者的广泛关注。",
+      "impact": "有助于提升相关模型在开源社区的应用效率与推理表现。",
+      "category": "开发",
+      "score": 69.35,
+      "sources": [
+        {
+          "id": "3d2697b636d74b834fc0",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+          "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+          "published_at": "2026-11-26T05:05:36Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 官方未提供详细的技术参数指标与具体的性能跑分数据。",
+      "entities": [],
+      "versions": [
+        "3.5"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "英伟达发布Nemotron 3.5 Parse相关开源数据、微调及推理加速更新，对开发者有价值。",
+      "backfill": false
+    },
+    {
+      "id": "340510e97a865e493fd5",
+      "title": "OpenAI修复计费错误后GPT-6.2 Astra用户使用限额触发速度加快",
+      "summary": "OpenAI表示，此前的一个计费错误曾给予GPT-6.2用户不正确的折扣。在修复该错误后，Astra和Sol用户触发使用限额的速度分别比上周快了40%和25%。作为补偿，订阅用户将获得额外的重置次数，商业用户在年底前可免费使用快速模式。同时，OpenAI正在测试聊天和工作模式的合并。",
+      "impact": "调整计费错误后用户触顶速度加快，可能影响订阅者的使用体验。",
+      "category": "产品",
+      "score": 59.56,
+      "sources": [
+        {
+          "id": "340510e97a865e493fd5",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/",
+          "title": "GPT-6.2 Astra users now hit limits 40% faster after OpenAI patched a pricing error",
+          "published_at": "2026-11-26T17:28:56Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "计费错误修复的具体波及范围和补偿落实情况有待进一步观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [
+        "gpt-6.2"
+      ],
+      "event_type": "announcement",
+      "previous_issue": "2026-11-25-am",
+      "update_note": "与上一期相比，来源公布了新的明确版本。",
+      "section": "observation",
+      "selection_reason": "OpenAI修复计费错误后GPT-6.2 Astra用户使用限额大幅收紧，并推出补偿和测试新模式。",
+      "backfill": false
+    },
+    {
+      "id": "979e22972f743c1451fe",
+      "title": "英伟达暂停向东南亚四国运送服务器芯片",
+      "summary": "受美国收紧对中国云访问的新出口管制影响，英伟达已通知戴尔和超微等合作伙伴以及制造伙伴，暂停向马来西亚、新加坡、泰国和印度尼西亚运送服务器。经销商正在为数千枚B300芯片寻找买家，东南亚数据中心的贷款和重大交易面临不确定性。",
+      "impact": "美国出口管制收紧将对东南亚地区的AI服务器供应链和数据中心项目造成冲击。",
+      "category": "商业",
+      "score": 63.13,
+      "sources": [
+        {
+          "id": "9107c78c006910f465f5",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/",
+          "title": "Nvidia halts server shipments to Malaysia, Singapore, Thailand, and Indonesia after tighter US export controls",
+          "published_at": "2026-11-26T11:21:16Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        },
+        {
+          "id": "979e22972f743c1451fe",
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "group": "techcrunch",
+          "trust": "media",
+          "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+          "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+          "published_at": "2026-11-26T20:03:54Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "相关出口管制的长期影响及供应链后续调整存在变数。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "nvidia"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "受美国出口管制影响，英伟达暂停向东南亚多国发货服务器，对供应链影响重大。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
