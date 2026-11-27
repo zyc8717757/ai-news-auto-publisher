@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-27-pm",
+  "revision": 1,
+  "created_at": "2026-11-27T12:31:38.694483Z",
+  "cutoff": "2026-11-27T12:30:00Z",
+  "window_start": "2026-11-25T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "c2bd7953104652e48b06",
+      "title": "Trainium3与LTX-2.5视频生成技术探索",
+      "summary": "根据官方信息，相关方正在将Trainium3芯片应用于视频生成模型LTX-2.5的运行与测试中，相关动态引发了业界的关注。",
+      "impact": "展示了新款硬件在复杂视频生成任务中的应用潜力。",
+      "category": "模型",
+      "score": 67.87,
+      "sources": [
+        {
+          "id": "c2bd7953104652e48b06",
+          "source_id": "huggingface",
+          "source_name": "Hugging Face",
+          "group": "huggingface",
+          "trust": "official",
+          "url": "https://huggingface.co/blog/video-trainium3",
+          "title": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+          "published_at": "2026-11-27T00:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "来自官方声明，性能与效果尚需独立验证。 输入信息极少，具体性能数据与技术合作细节暂未披露。",
+      "entities": [],
+      "versions": [
+        "2.5"
+      ],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "news",
+      "selection_reason": "Hugging Face官方发布了基于Trainium3使用LTX-2.5生成视频的进展，属于重要的模型与硬件应用落地。",
+      "backfill": false
+    },
+    {
+      "id": "6affdf6d526265136f07",
+      "title": "德国企业Q.ANT探索利用光波运行AI模型以降低能耗",
+      "summary": "据媒体报道，德国公司Q.ANT正尝试通过光波执行最艰巨的计算任务，以减少运行AI模型所需的电能消耗，寻找降低能耗的新途径。",
+      "impact": "若成功可能为未来人工智能硬件的绿色节能方向提供创新路径。",
+      "category": "模型",
+      "score": 65.3,
+      "sources": [
+        {
+          "id": "6affdf6d526265136f07",
+          "source_id": "wired-ai",
+          "source_name": "WIRED AI",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+          "title": "A New Breed of Chip Runs AI Models Using Waves of Light",
+          "published_at": "2026-11-27T07:00:00Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "属于尝试阶段，其实际能效和商业化落地效果仍待验证。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "德国公司Q.ANT采用光波运行AI模型以降低能耗，属于前瞻观察性质的技术探索。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
