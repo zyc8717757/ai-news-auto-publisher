@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_covered_at": "2026-11-28T00:30:00Z",
+  "last_covered_at": "2026-11-28T12:30:00Z",
   "ai_attempts": [
     "2026-11-26T12:32:20.618980Z",
     "2026-11-26T12:32:26.259105Z",
@@ -1106,7 +1106,7 @@
       "verified": 10
     },
     "deepmind": {
-      "etag": "\"vHxfFg\"",
+      "etag": "\"RdTHxg\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1213,31 +1213,14 @@
           "excerpt": "",
           "event_at": null,
           "supporting": []
-        },
-        {
-          "id": "0077e07924e43bf73f6b",
-          "source_id": "huggingface",
-          "source_name": "Hugging Face",
-          "group": "huggingface",
-          "trust": "official",
-          "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
-          "title": "An Indic Voice Agent with CUGA",
-          "published_at": "2026-11-25T10:22:09Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-27T12:31:38.694483Z",
-          "excerpt": "",
-          "event_at": null,
-          "supporting": []
         }
       ],
       "discovered": 50,
       "verified": 50
     },
     "microsoft-research": {
-      "etag": "\"92300383785bfed626f74be7176eae1d\"",
-      "modified": "Fri, 27 Nov 2026 03:44:24 GMT",
+      "etag": "\"a9f83ee40cf2a9fc9ff27b558da9638c\"",
+      "modified": "Sat, 28 Nov 2026 12:11:02 GMT",
       "status": "ok",
       "error_code": "",
       "items": [],
@@ -1290,7 +1273,7 @@
       "verified": 0
     },
     "pytorch": {
-      "etag": "W/\"938a87d711b210938b09099f9878de0bb61e2633dbd6d6f6c6c5b2ed53143acd\"",
+      "etag": "W/\"077d01789dee10dbad699f495fce787fce4ce4bc9701ecfd16e80fe09d8c6ae6\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1301,8 +1284,8 @@
     "transformers": {
       "etag": "W/\"d5860fa50906ae2554c5db276247491fd62cdbce82e48c0d7fb363e6c77097f9\"",
       "modified": "",
-      "status": "unchanged",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
@@ -1310,14 +1293,14 @@
     "diffusers": {
       "etag": "W/\"dd0f4ba70dd335c94594c5d8338622290b31f8ea14c5cac71096edbe557a16e2\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [],
       "discovered": 30,
       "verified": 30
     },
     "vllm": {
-      "etag": "W/\"be637f6a750bbd3d6bcd122e31f0e6f83e90c33b931a0cb2564f6ce4b0d8c9de\"",
+      "etag": "W/\"68b00aeacb0593cfefc8151fb9313dc974e30c64359cc7433d561c298ce6d8ea\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -1328,8 +1311,8 @@
     "ollama": {
       "etag": "W/\"7384c2c6a49a05de2bd5eb0f54224bd627135dcfdc73b3597a9df15785bdbe83\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "5e7004317a04e455b2d7",
@@ -1356,7 +1339,7 @@
       "etag": "",
       "modified": "",
       "status": "error",
-      "error_code": "parse_failed",
+      "error_code": "http_403",
       "items": [],
       "discovered": 0,
       "verified": 0
@@ -1364,8 +1347,8 @@
     "langchain": {
       "etag": "W/\"ff2c7c402c4b5a634cbc55b72846b1d3e2c24ce13ca99d6e13f9fe5adf099358\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "b05cb6b9da022bcabbbe",
@@ -1408,8 +1391,8 @@
     "langgraph": {
       "etag": "W/\"5a8d8fdd24230318b304d4ae4fbdfac754117ae5a1101eaf07774655150f2d60\"",
       "modified": "",
-      "status": "unchanged",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "b5192911b2bfdbd383b0",
@@ -1435,8 +1418,8 @@
     "litellm": {
       "etag": "W/\"9d5e42bb0012ababa01675f2811358b8437506d21fd6d7c53a6f362cf634e8e9\"",
       "modified": "",
-      "status": "ok",
-      "error_code": "",
+      "status": "error",
+      "error_code": "http_403",
       "items": [
         {
           "id": "b49f2f9239a32873d0d0",
@@ -1564,8 +1547,8 @@
       "verified": 10
     },
     "mit-ai": {
-      "etag": "\"1795825366\"",
-      "modified": "Sat, 28 Nov 2026 00:22:46 GMT",
+      "etag": "\"1795868628\"",
+      "modified": "Sat, 28 Nov 2026 12:23:48 GMT",
       "status": "ok",
       "error_code": "",
       "items": [],
@@ -1575,7 +1558,7 @@
     "techcrunch-ai": {
       "etag": "W/\"295f33c386134188603235972bd1fc1e\"",
       "modified": "Fri, 27 Nov 2026 17:09:46 GMT",
-      "status": "ok",
+      "status": "unchanged",
       "error_code": "",
       "items": [
         {
@@ -1779,11 +1762,28 @@
       "verified": 0
     },
     "ars": {
-      "etag": "\"685d12e9a8df14415dd5e055bd3bcade\"",
-      "modified": "Fri, 27 Nov 2026 21:53:41 GMT",
+      "etag": "\"3809dace6e9f8747f953f7cd9f5f72cc\"",
+      "modified": "Sat, 28 Nov 2026 12:00:20 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "abea36543caa503afae7",
+          "source_id": "ars",
+          "source_name": "Ars Technica",
+          "group": "conde-nast",
+          "trust": "media",
+          "url": "https://arstechnica.com/gadgets/2026/11/2026-kindle-paperwhite-review-page-turn-buttons-are-back-for-a-price/",
+          "title": "2026 Kindle Paperwhite review: Page-turn buttons are back, for a price",
+          "published_at": "2026-11-28T12:00:20Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
+          "excerpt": "Kindles are getting costlier faster than they're getting better.",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "02ae5ce9e9ae4c4c3ec5",
           "source_id": "ars",
@@ -1796,7 +1796,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Perhaps some commerce, to help all the Turkey Day leftovers go down easier?",
           "event_at": null,
           "supporting": []
@@ -1813,7 +1813,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Intel faced pressure to surrender a 10% stake to unlock billions in promised grants.",
           "event_at": null,
           "supporting": []
@@ -1830,7 +1830,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "We polled the Ars staff about their favorite pickups this year; here's the list.",
           "event_at": null,
           "supporting": []
@@ -1847,7 +1847,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "There’s just one thing we still don’t know: How much will they cost?",
           "event_at": null,
           "supporting": []
@@ -1864,7 +1864,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Ford enters the World Endurance Championship in 2027 with the new prototype.",
           "event_at": null,
           "supporting": []
@@ -1881,7 +1881,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Detailed estimate going back to 1800 shows how much carbon is being liberated.",
           "event_at": null,
           "supporting": []
@@ -1898,7 +1898,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Our home offices range from tasteful to \"please explain yourself.\"",
           "event_at": null,
           "supporting": []
@@ -1915,7 +1915,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "\"DART made a really, really large mess. However, we didn’t really know what kind of mess.\"",
           "event_at": null,
           "supporting": []
@@ -1932,7 +1932,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "The pitch is an unusual combination of privacy promises and AI features.",
           "event_at": null,
           "supporting": []
@@ -1949,7 +1949,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Backblaze tells Ars it won't share users' backup, storage files with advertisers.",
           "event_at": null,
           "supporting": []
@@ -1966,25 +1966,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "This constellation would increase the number of satellites in orbit by roughly 50-fold.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "813e247692e2053f9403",
-          "source_id": "ars",
-          "source_name": "Ars Technica",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://arstechnica.com/gadgets/2026/11/ladybirds-new-alpha-shows-theres-life-beyond-chromium/",
-          "title": "Ladybird browser's first downloadable alpha is surprisingly capable",
-          "published_at": "2026-11-25T17:33:30Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
-          "excerpt": "An independent browser engine arrives on Linux and macOS, and we've tried it.",
           "event_at": null,
           "supporting": []
         }
@@ -1993,7 +1976,7 @@
       "verified": 20
     },
     "theverge-ai": {
-      "etag": "W/\"62a790a0218f00732334cca6e22e870f\"",
+      "etag": "W/\"70a907ee9fdde16c662fb283e7064e93\"",
       "modified": "",
       "status": "ok",
       "error_code": "",
@@ -2010,7 +1993,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right app and […]",
           "event_at": null,
           "supporting": []
@@ -2027,7 +2010,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings. In a deluge of nearly identical press releases, the various AGs accuse the company of planning to auction off \"the private chat histories of more than 21 million U.S. accounts - […]",
           "event_at": null,
           "supporting": []
@@ -2044,7 +2027,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]",
           "event_at": null,
           "supporting": []
@@ -2061,7 +2044,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "In an announcement on Wednesday, the FCC says it authorized SpaceX to deploy up to 1 million AI chip-equipped satellites as part of the Elon Musk-owned company's \"Starmind\" initiative. With several others also pursuing the idea of putting AI data centers in space, including Google and Blue Origin, this is the first approval the agency […]",
           "event_at": null,
           "supporting": []
@@ -2078,7 +2061,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Nothing is showing off a much more detailed look at its upcoming AI earbuds ahead of their December 8th release. The Ear Note buds can record your calls, while their charging case can record, transcribe, and summarize your conversations. Like the Ear 3, the Ear Note's microphone-equipped case comes with a \"Talk\" button that you […]",
           "event_at": null,
           "supporting": []
@@ -2095,7 +2078,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Amazon has held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent recommends and the potential impact on the ecommerce giant's advertising revenue. As reported by Fortune, […]",
           "event_at": null,
           "supporting": []
@@ -2112,7 +2095,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "The emergence of powerful vibe-coding agents and tools like Reverse Engineer Anything has caused chaos in the music gear world, leaving companies scrambling to figure out how to respond. While some, like Roland, have remained silent for now, others have embraced the modding community. In the last several weeks, as it's become clear that no […]",
           "event_at": null,
           "supporting": []
@@ -2139,7 +2122,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.",
           "event_at": null,
           "supporting": []
@@ -2156,25 +2139,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "The FCA warned against “another force of attack” from agents after the company declined a request to work on joint testing ahead of rolling out its personal agent in the UK on Tuesday.",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "598e81a411e720c3ace1",
-          "source_id": "wired-ai",
-          "source_name": "WIRED AI",
-          "group": "conde-nast",
-          "trust": "media",
-          "url": "https://www.wired.com/story/airplane-turbulence-is-extremely-hard-to-predict-and-avoid/",
-          "title": "Airplane Turbulence Is Extremely Hard to Predict, but Maybe Not for Long",
-          "published_at": "2026-11-25T11:30:00Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
-          "excerpt": "The “hardest remaining problem in classical physics” gets a boost from terabytes of crowdsourced data and new ways of using machine learning and AI.",
           "event_at": null,
           "supporting": []
         }
@@ -2406,11 +2372,29 @@
       "verified": 50
     },
     "juya-discovery": {
-      "etag": "W/\"aefe1dba50b8333f34c913443f28fdae\"",
+      "etag": "W/\"0a1ee3aa6db026a8ee7c8884d4fa063c\"",
       "modified": "",
-      "status": "unchanged",
+      "status": "ok",
       "error_code": "",
-      "items": [],
+      "items": [
+        {
+          "id": "013dbdf70321d85071d9",
+          "source_id": "primary-moonshot",
+          "source_name": "Kimi",
+          "group": "moonshot",
+          "trust": "official",
+          "url": "https://www.kimi.com/news/kimi-for-science-program",
+          "title": "Kimi for Science 让更多科学想法成为可能",
+          "published_at": "2026-11-26T13:05:36.017000Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
+          "excerpt": "Kimi for Science 科研支持计划正式开放申请。面向自然科学、工程学及相关交叉学科，提供最高 15 万元 Kimi API 额度（约合 70 亿 tokens）、专属技术资源与长期合作机会。 让探索拥有更多资源 入选申请者将获得最高 15 万元 Kimi API 额度（约合 70 亿 tokens），具体额度根据研究需求与评审结果确定",
+          "event_at": null,
+          "supporting": []
+        }
+      ],
       "discovered": 1,
       "verified": 1
     },
@@ -2442,11 +2426,45 @@
       "verified": 0
     },
     "decoder": {
-      "etag": "\"c62dbbcb462156a55399e3cf9d158010\"",
-      "modified": "Fri, 27 Nov 2026 19:39:16 GMT",
+      "etag": "\"0d8a724e7b14631725d50c504b3a63e1\"",
+      "modified": "Sat, 28 Nov 2026 11:14:17 GMT",
       "status": "ok",
       "error_code": "",
       "items": [
+        {
+          "id": "38e1d9e08b5e8d47de96",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-deepminds-humanitys-first-exam-shows-top-ai-models-still-fail-simple-everyday-tasks-under-repeated-runs/",
+          "title": "Google Deepmind's \"Humanity's First Exam\" shows top AI models still fail simple everyday tasks under repeated runs",
+          "published_at": "2026-11-28T11:12:30Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
+          "excerpt": "Google Deepmind tests the reliability of 18 AI models with \"Humanity's First Exam.\" Top models solve nearly every task family at least once, but even leaders like OpenAI's GPT-6.2 Astra stumble when asked for 16 straight correct answers. Visual perception accounts for 73 percent of errors, and more compute time doesn't fix the problem. The article Google Deepmind's \"Humanity's First Exam\" shows to",
+          "event_at": null,
+          "supporting": []
+        },
+        {
+          "id": "1988b1d8f85e11478449",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/robotics-startup-embo-raises-110-million-in-seed-funding-to-build-world-model-ai-for-robots/",
+          "title": "Robotics startup Embo raises $110 million in seed funding to build world-model AI for robots",
+          "published_at": "2026-11-28T10:48:18Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
+          "excerpt": "Embo raised $110 million in seed funding to build a universal robot brain with world models. Its AI learns how the physical world works from internet video and practices motor skills in simulation. Google Deepmind, Meta, and MIT researchers are behind the startup as the race for general-purpose robotics AI accelerates. The article Robotics startup Embo raises $110 million in seed funding to build ",
+          "event_at": null,
+          "supporting": []
+        },
         {
           "id": "0af379395f0e91baf47b",
           "source_id": "decoder",
@@ -2459,7 +2477,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "OpenAI is suing Apple in a California court, accusing it of trade secret theft and of coercing shared suppliers. The countersuit follows Apple's own lawsuit from the summer. Just two years ago, the two companies teamed up to bring ChatGPT to the iPhone. Now OpenAI is building its own devices to compete directly with Apple. The article OpenAI countersues Apple over trade secret theft and alleged co",
           "event_at": null,
           "supporting": []
@@ -2476,7 +2494,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Two Chinese companies installed Nvidia's powerful Blackwell chips at a Shanghai data center linked to Alice Huang, according to a Bloomberg investigation. A serial number led Bloomberg to Taiwanese manufacturer Gigabyte. Exporting these chips to China without a US license is illegal. The article Banned Nvidia Blackwell chips turn up in a Shanghai data center linked to Alice Huang, Bloomberg report",
           "event_at": null,
           "supporting": []
@@ -2493,7 +2511,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Yann LeCun is pushing forward with his alternative to language models through his startup AMI Labs. The JEPA architecture aims to give machines an internal world model that captures cause and effect. Three new studies show progress in robot planning, more efficient training, and error correction, though the pieces still need to grow together. The article Three studies from Meta and AMI Labs back Y",
           "event_at": null,
           "supporting": []
@@ -2510,7 +2528,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Hackers breached the US Air Force's flagship cloud platform. The article Hackers breached the US Air Force's flagship Cloud One platform, report says appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2527,7 +2545,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "OpenAI's data agent in ChatGPT Work still isn't accurate enough. Under the codename \"Athena,\" the company is building a semantic layer that gives agents standardized definitions for business metrics. The tool could also put OpenAI in direct competition with Snowflake and Databricks. The article OpenAI is building \"Athena\" data platform to cut down on AI agent guesswork appeared first on The Decode",
           "event_at": null,
           "supporting": []
@@ -2544,7 +2562,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "More than 40 projects are working to bring a leaked Xbox build of GTA 6 to PC through reverse engineering just days after its $3.79 billion record console launch. AI coding agents like Claude Code are speeding up the process so much that an early unofficial multiplayer mode is already running. Rockstar's delayed PC business model is coming under pressure. The article Rockstar's AI dilemma: Can GTA",
           "event_at": null,
           "supporting": []
@@ -2561,7 +2579,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "SAP is preparing to eliminate at least 10,000 positions as part of a sweeping AI restructuring, Bloomberg reports, citing people familiar with the matter. The article SAP plans to cut at least 10,000 jobs as it pivots to AI appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
@@ -2578,42 +2596,8 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Complexity theorist and former OpenAI researcher Scott Aaronson argues that AI's recent math breakthroughs matter far beyond academia. The possible consequences, he writes, range from reshaping the global economy to threatening all life on Earth. He's also \"virtually certain\" that AI labs are sitting on \"one or more bombshells\" in cryptography. The article Former OpenAI researcher says the Riemann",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "340510e97a865e493fd5",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/",
-          "title": "GPT-6.2 Astra users now hit limits 40% faster after OpenAI patched a pricing error",
-          "published_at": "2026-11-26T17:28:56Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
-          "excerpt": "OpenAI says a billing bug gave GPT-6.2 users incorrect discounts. After the fix, Astra and Sol users hit their limits 40 and 25 percent faster than last week. As an apology, subscribers get an extra reset, and business users get free Fast Mode through year-end. OpenAI is also testing a Chat and Work mode merger. The article GPT-6.2 Astra users now hit limits 40% faster after OpenAI patched a prici",
-          "event_at": null,
-          "supporting": []
-        },
-        {
-          "id": "16676cf068304ef6b854",
-          "source_id": "decoder",
-          "source_name": "The Decoder",
-          "group": "decoder",
-          "trust": "media",
-          "url": "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead/",
-          "title": "After OpenAI and Anthropic shut the door on their data, a Chinese AI developer is turning to Google and Meta instead",
-          "published_at": "2026-11-26T15:45:08Z",
-          "time_precision": "exact",
-          "source_date": "",
-          "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
-          "excerpt": "Chinese AI companies Z.AI and Moonshot AI have to delay their next flagship models and are looking for new sources of training data. The article After OpenAI and Anthropic shut the door on their data, a Chinese AI developer is turning to Google and Meta instead appeared first on The Decoder .",
           "event_at": null,
           "supporting": []
         }
@@ -2639,7 +2623,7 @@
           "time_precision": "exact",
           "source_date": "",
           "time_basis": "publication",
-          "collected_at": "2026-11-28T00:31:27.150040Z",
+          "collected_at": "2026-11-28T12:31:47.278049Z",
           "excerpt": "Flip one toggle to make your site searchable by AI agents — complete with automatic content indexing, a discoverable search API, and native HTTP QUERY support.",
           "event_at": null,
           "supporting": []
@@ -3264,6 +3248,11 @@
       "deployment": "ready",
       "email": "sent",
       "email_attempts": 1
+    },
+    "2026-11-28-pm-r1": {
+      "deployment": "pending",
+      "email": "pending",
+      "email_attempts": 0
     }
   },
   "history": [
@@ -8737,6 +8726,32 @@
       ],
       "versions": [],
       "event_type": "announcement"
+    },
+    {
+      "id": "38e1d9e08b5e8d47de96",
+      "issue": "2026-11-28-pm",
+      "cutoff": "2026-11-28T12:30:00Z",
+      "title": "Google Deepmind's \"Humanity's First Exam\" shows top AI models still fail simple everyday tasks under repeated runs",
+      "urls": [
+        "https://the-decoder.com/google-deepminds-humanitys-first-exam-shows-top-ai-models-still-fail-simple-everyday-tasks-under-repeated-runs/"
+      ],
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement"
+    },
+    {
+      "id": "1988b1d8f85e11478449",
+      "issue": "2026-11-28-pm",
+      "cutoff": "2026-11-28T12:30:00Z",
+      "title": "Robotics startup Embo raises $110 million in seed funding to build world-model AI for robots",
+      "urls": [
+        "https://the-decoder.com/robotics-startup-embo-raises-110-million-in-seed-funding-to-build-world-model-ai-for-robots/"
+      ],
+      "entities": [],
+      "versions": [],
+      "event_type": "business"
     }
   ]
 }

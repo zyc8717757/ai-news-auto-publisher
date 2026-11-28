@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-28-pm",
+  "revision": 1,
+  "created_at": "2026-11-28T12:31:47.278049Z",
+  "cutoff": "2026-11-28T12:30:00Z",
+  "window_start": "2026-11-26T12:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "38e1d9e08b5e8d47de96",
+      "title": "Google DeepMind测试显示顶级AI模型在重复简单任务时仍会失败",
+      "summary": "Google DeepMind通过“人类首场考试”对18个AI模型进行了可靠性测试。结果显示，虽然顶级模型几乎能解开所有任务类别，但在被要求连续给出16个正确答案时，诸如OpenAI的GPT-6.2 Astra等领先模型也会出现失误。其中，视觉感知错误占到了73%，且增加计算时间并不能解决该问题。",
+      "impact": "反映出当前顶级AI模型在连续执行简单任务时仍存在稳定性与视觉感知方面的明显短板。",
+      "category": "评测",
+      "score": 69.82,
+      "sources": [
+        {
+          "id": "38e1d9e08b5e8d47de96",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/google-deepminds-humanitys-first-exam-shows-top-ai-models-still-fail-simple-everyday-tasks-under-repeated-runs/",
+          "title": "Google Deepmind's \"Humanity's First Exam\" shows top AI models still fail simple everyday tasks under repeated runs",
+          "published_at": "2026-11-28T11:12:30Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "测试结果基于特定评测集，具体任务环境下的表现可能存在差异。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "google"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "Google Deepmind 发布最新评测显示顶尖大模型在日常任务上仍会重复出错，具有重要行业参考价值",
+      "backfill": false
+    },
+    {
+      "id": "1988b1d8f85e11478449",
+      "title": "机器人初创公司Embo获得1.1亿美元种子轮融资用于开发世界模型",
+      "summary": "机器人初创公司Embo在种子轮融资中获得了1.1亿美元，用于构建具备世界模型的通用机器人大脑。其AI技术通过互联网视频学习物理世界的工作原理，并在仿真环境中练习运动技能。来自Google DeepMind、Meta和MIT的研究人员参与了该初创公司的创立，通用机器人AI领域的竞争正在加速。",
+      "impact": "充裕的资金支持有助于加速通用机器人世界模型的研发与仿真技术突破。",
+      "category": "商业",
+      "score": 70.63,
+      "sources": [
+        {
+          "id": "1988b1d8f85e11478449",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/robotics-startup-embo-raises-110-million-in-seed-funding-to-build-world-model-ai-for-robots/",
+          "title": "Robotics startup Embo raises $110 million in seed funding to build world-model AI for robots",
+          "published_at": "2026-11-28T10:48:18Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "通用机器人世界模型从仿真走向实际物理世界的泛化效果尚待观察。 未经官方确认，仅供前瞻观察。",
+      "entities": [],
+      "versions": [],
+      "event_type": "business",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
