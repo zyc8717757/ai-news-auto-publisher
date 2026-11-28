@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "issue": "2026-11-28-am",
+  "revision": 1,
+  "created_at": "2026-11-28T00:31:27.150040Z",
+  "cutoff": "2026-11-28T00:30:00Z",
+  "window_start": "2026-11-26T00:30:00Z",
+  "mode": "ai",
+  "stories": [
+    {
+      "id": "e30506be0d329087e736",
+      "title": "OpenAI据传正研发代号Athena的数据平台以优化AI智能体",
+      "summary": "据报道，由于ChatGPT Work中的数据智能体准确度尚显不足，OpenAI正在内部代号为“Athena”的项目下构建语义层，为智能体提供企业指标的标准化定义，旨在减少AI智能体的不确定性。该工具未来可能使OpenAI与Snowflake和Databricks形成直接竞争。",
+      "impact": "该平台若推出，可能增强企业级AI智能体的准确性，并拓展OpenAI在数据基础设施领域的业务边界。",
+      "category": "产品",
+      "score": 57.76,
+      "sources": [
+        {
+          "id": "e30506be0d329087e736",
+          "source_id": "decoder",
+          "source_name": "The Decoder",
+          "group": "decoder",
+          "trust": "media",
+          "url": "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/",
+          "title": "OpenAI is building \"Athena\" data platform to cut down on AI agent guesswork",
+          "published_at": "2026-11-27T16:05:23Z",
+          "time_precision": "exact",
+          "source_date": "",
+          "time_basis": "publication"
+        }
+      ],
+      "uncertainty": "报道中提及的功能及竞争关系属于媒体披露的研发计划，最终形态与推出时间尚存在不确定性。 未经官方确认，仅供前瞻观察。",
+      "entities": [
+        "openai"
+      ],
+      "versions": [],
+      "event_type": "announcement",
+      "previous_issue": null,
+      "update_note": "",
+      "section": "observation",
+      "selection_reason": "OpenAI正在构建代号为Athena的数据平台以改进AI Agent，属于重要内部测试与前瞻观察。",
+      "backfill": false
+    }
+  ],
+  "warnings": [
+    "source_errors"
+  ],
+  "template_version": 1,
+  "editorial_version": 2
+}
